@@ -20,6 +20,9 @@ function math:power/score {"base_score":"generic_b","exponent_score":"generic_d"
 scoreboard players operation @s generic_a = @s generic_b
 $function math:sqrt/find_closest_square {"input_score":"$(input_score)"}
 
+# once closest square is found, do calculation here
+# then multiply by scale, THEN divide by 100 or whatever
+
 # $scoreboard players operation @s generic_a = @s $(input_score)
 # $scoreboard players set @s generic_e $(scale)
 
