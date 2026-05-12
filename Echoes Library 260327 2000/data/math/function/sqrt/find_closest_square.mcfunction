@@ -1,3 +1,5 @@
+function parse:score_unended {"function":"ss_lib:output_test","score":"generic_b"}
+
 scoreboard players operation @s generic_a = @s generic_b
 scoreboard players operation @s generic_a *= @s generic_b
 
