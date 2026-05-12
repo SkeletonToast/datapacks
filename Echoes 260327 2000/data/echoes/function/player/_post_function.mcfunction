@@ -11,9 +11,9 @@ execute as @a[scores={ItemSelected=0,proficiency=1..},tag=InCombat] run function
         {"score":"proficiency","prepend":"","append":".","prepend_position":0,"append_position":4,"function":"echoes:player/combat/proficiency/apply_damage"}
 
 execute as @a[scores={WeaponType=1..6,proficiency=1..},tag=InCombat,tag=Dexterity_feat_2] run \
-        function round:100_reduce {"score":"proficiency_dex"}
+        function math:round/100_reduce {"score":"proficiency_dex"}
 execute as @a[scores={WeaponType=1..6,proficiency=1..},tag=InCombat,tag=Dexterity_feat_2] run \
-        function round:10_reduce {"score":"proficiency_dex"}
+        function math:round/10_reduce {"score":"proficiency_dex"}
 execute as @a[scores={WeaponType=1..6,proficiency=1..},tag=InCombat,tag=Dexterity_feat_2] run function parse:score \
         {"score":"proficiency_dex","prepend":"","append":".","prepend_position":0,"append_position":2,"function":"echoes:player/combat/proficiency/apply_speed"}
 

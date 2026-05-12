@@ -100,9 +100,9 @@ execute if score @s proficiency_recursion >= @s minprof \
     run scoreboard players set @s proficiency_inc_sum 0
 
 $execute if score @s proficiency_recursion >= @s minprof \
-    run function round:100_reduce {"score":"proficiency_$(statabbr)"}
+    run function math:round/100_reduce {"score":"proficiency_$(statabbr)"}
 $execute if score @s proficiency_recursion >= @s minprof \
-    run function round:100_reduce {"score":"proficiency_$(statabbr)"}
+    run function math:round/100_reduce {"score":"proficiency_$(statabbr)"}
 
 # recursion
 $execute unless score @s proficiency_recursion >= @s minprof \

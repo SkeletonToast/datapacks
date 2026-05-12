@@ -111,6 +111,6 @@ scoreboard players operation @s proficiency += @s proficiency_mind
 
 scoreboard players operation @s gun_base_damage = @s proficiency_dex
 scoreboard players operation @s gun_base_damage += @s proficiency_tact
-function round:100_reduce {"score":"gun_base_damage"}
+function math:round/100_reduce {"score":"gun_base_damage"}
 
 # remember proficiency application is in post function!

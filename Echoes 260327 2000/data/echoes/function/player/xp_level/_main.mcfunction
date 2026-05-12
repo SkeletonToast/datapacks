@@ -20,4 +20,4 @@ execute as @a[scores={xp_level=1..,BootsType=4}] if score @s xp_level > @s Mind 
 # stored xp death reset
 scoreboard players add @a generic_a 30
 execute as @a[scores={TimeSinceDeath=1,generic_a=..99}] run scoreboard players operation @s xp_stored *= @s Mind
-execute as @a[scores={TimeSinceDeath=1,generic_a=..99}] run function round:100_reduce {"score":"xp_stored"}
+execute as @a[scores={TimeSinceDeath=1,generic_a=..99}] run function math:round/100_reduce {"score":"xp_stored"}

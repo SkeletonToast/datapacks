@@ -150,7 +150,7 @@
         scoreboard players operation @s generic_attribute *= @s 3
             scoreboard players operation @s generic_attribute /= @s 2
         scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
-        function round:10_reduce {"score":"generic_attribute"}
+        function math:round/10_reduce {"score":"generic_attribute"}
     execute unless score @s generic_attribute = @s tact_interaction_range run function parse:score \
         {"score":"generic_attribute","prepend":"","append":".","prepend_position":0,"append_position":2,"function":"echoes:stats/set_interaction_range"}
 
