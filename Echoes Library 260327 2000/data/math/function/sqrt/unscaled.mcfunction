@@ -1,0 +1,1 @@
+$function math:sqrt/scaled {"input_score":"$(input_score)","output_score":"$(output_score)","scale":"1"}
