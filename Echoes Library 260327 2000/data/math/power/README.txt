@@ -1,0 +1,1 @@
+- the power module only takes scores for the base. the calculation is performed on the base score.

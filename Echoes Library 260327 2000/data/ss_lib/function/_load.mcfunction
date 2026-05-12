@@ -9,6 +9,11 @@ scoreboard objectives add generic_b dummy
 scoreboard objectives add generic_c dummy
 scoreboard objectives add generic_d dummy
 scoreboard objectives add generic_e dummy
+scoreboard objectives add generic_f dummy
+scoreboard objectives add generic_g dummy
+scoreboard objectives add generic_h dummy
+scoreboard objectives add generic_i dummy
+scoreboard objectives add generic_j dummy
 scoreboard objectives add generic_max dummy
 scoreboard objectives add generic_min dummy
 
@@ -21,6 +26,8 @@ scoreboard objectives add parse_score_digits dummy
 scoreboard objectives add parse_score_append_position dummy
 scoreboard objectives add parse_score_prepend_position dummy
 scoreboard objectives add parse_score_input dummy
+
+scoreboard objectives add digit_counter dummy
 
 # health / food
 scoreboard objectives add Health dummy
