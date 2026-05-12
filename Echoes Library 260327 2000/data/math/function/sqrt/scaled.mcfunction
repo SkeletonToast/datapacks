@@ -41,6 +41,7 @@ scoreboard players operation @s generic_a *= @s 10
 $scoreboard players set @s generic_e $(scale)
     scoreboard players operation @s generic_a *= @s generic_e
 scoreboard players operation @s generic_a /= @s generic_b
+    scoreboard players operation @s generic_a /= @s generic_b
 
 scoreboard players operation @s generic_b *= @s 10
     scoreboard players operation @s generic_b *= @s 10
