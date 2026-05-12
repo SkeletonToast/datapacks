@@ -1,0 +1,1 @@
+$attribute @s minecraft:gravity modifier add mind.elytra_gravity $(value) add_multiplied_base

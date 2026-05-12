@@ -1,0 +1,1 @@
+$attribute @s jump_strength modifier add encumbrance_jump_strength $(value) add_multiplied_total

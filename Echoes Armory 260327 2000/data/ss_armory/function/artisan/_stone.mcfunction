@@ -1,0 +1,1 @@
+execute if items entity @s weapon.mainhand stone_hoe run function ss_armory:artisan/stone_sickle

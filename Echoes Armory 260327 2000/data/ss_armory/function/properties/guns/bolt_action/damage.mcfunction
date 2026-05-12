@@ -1,0 +1,1 @@
+$damage @n $(value) minecraft:arrow by @s

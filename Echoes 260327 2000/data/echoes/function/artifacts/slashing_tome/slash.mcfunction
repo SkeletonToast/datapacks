@@ -1,0 +1,1 @@
+execute store result score @s generic_b run attribute @s entity_interaction_range get 4

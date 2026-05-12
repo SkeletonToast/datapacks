@@ -1,0 +1,3 @@
+execute as @s[scores={tormented_random=1..}] as @s[scores={tormented_random=..2}] run playsound minecraft:entity.lightning_bolt.impact player @s ~10 ~ ~ 2 0.5
+execute as @s[scores={tormented_random=3..}] as @s[scores={tormented_random=..4}] run playsound minecraft:entity.lightning_bolt.impact player @s ~-10 ~ ~ 2 0.5
+execute as @s[scores={tormented_random=5..}] as @s[scores={tormented_random=..6}] run playsound minecraft:entity.lightning_bolt.impact player @s ~ ~ ~10 2 0.5

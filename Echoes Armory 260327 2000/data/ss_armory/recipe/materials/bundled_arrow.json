@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": "minecraft:arrow",
+    "S": "minecraft:string"
+  },
+  "pattern": [
+    "AAA",
+    "ASA",
+    "AAA"
+  ],
+  "result": {
+    "components": {
+      "minecraft:item_name": "Bundled Arrow",
+      "minecraft:item_model": "arrow",
+      "minecraft:consumable": {
+        "consume_seconds": 0.25,
+        "animation": "bow",
+        "sound": "minecraft:item.crossbow.shoot"
+      },
+      "minecraft:use_remainder": {
+        "id": "minecraft:arrow",
+        "count": 8
+      }
+    },
+    "count": 1,
+    "id": "minecraft:clock"
+  }
+}

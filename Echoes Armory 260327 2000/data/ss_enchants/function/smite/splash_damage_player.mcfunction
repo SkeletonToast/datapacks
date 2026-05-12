@@ -1,0 +1,1 @@
+$execute as @e[type=!#ss_lib:not_alive,distance=0.1..3] unless entity @s[nbt={UUID:$(UUID)}] run damage @s 2 player_attack by @p[nbt={UUID:$(UUID)}]

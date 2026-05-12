@@ -1,0 +1,2 @@
+execute if block ~ ~ ~ campfire at @s anchored eyes positioned ^ ^ ^ positioned ~ ~-0.5 ~ run function echoes:campfires/particles_campfire
+execute if block ~ ~ ~ soul_campfire at @s anchored eyes positioned ^ ^ ^ positioned ~ ~-0.5 ~ run function echoes:campfires/particles_soul_campfire

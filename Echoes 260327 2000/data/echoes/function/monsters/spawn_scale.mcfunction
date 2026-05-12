@@ -1,0 +1,1 @@
+$attribute @s scale modifier add echoes_spawn.scale $(value) add_multiplied_total

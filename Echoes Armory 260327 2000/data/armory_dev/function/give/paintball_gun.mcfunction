@@ -1,0 +1,2 @@
+give @s crossbow[custom_model_data={strings:["paintball"]},item_name="Paintball Gun",unbreakable={},tooltip_display={hidden_components:["unbreakable"]}, \
+    custom_data={weapon:{special:1b,gun:{type:"paintball"},properties:{active:["mainhand","offhand"]}}}]

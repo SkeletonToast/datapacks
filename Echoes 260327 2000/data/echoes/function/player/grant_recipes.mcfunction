@@ -1,0 +1,1 @@
+recipe give @s echoes:misc/ichor_bottle

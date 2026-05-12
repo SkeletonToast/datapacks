@@ -1,0 +1,16 @@
+execute as @s[scores={PaintballType=1}] run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 lime_stained_glass replace #ss_lib:glass
+execute as @s[scores={PaintballType=1}] run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 lime_stained_glass_pane replace #ss_lib:glass_panes
+execute as @s[scores={PaintballType=2}] run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 yellow_stained_glass replace #ss_lib:glass
+execute as @s[scores={PaintballType=2}] run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 yellow_stained_glass_pane replace #ss_lib:glass_panes
+execute as @s[scores={PaintballType=3}] run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 blue_stained_glass replace #ss_lib:glass
+execute as @s[scores={PaintballType=3}] run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 blue_stained_glass_pane replace #ss_lib:glass_panes
+execute as @s[scores={PaintballType=4}] run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 red_stained_glass replace #ss_lib:glass
+execute as @s[scores={PaintballType=4}] run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 red_stained_glass_pane replace #ss_lib:glass_panes
+execute as @s[scores={PaintballType=5}] run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 purple_stained_glass replace #ss_lib:glass
+execute as @s[scores={PaintballType=5}] run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 purple_stained_glass_pane replace #ss_lib:glass_panes
+execute as @s[scores={PaintballType=6}] run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 pink_stained_glass replace #ss_lib:glass
+execute as @s[scores={PaintballType=6}] run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 pink_stained_glass_pane replace #ss_lib:glass_panes
+execute as @s[scores={PaintballType=7}] run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 light_blue_stained_glass replace #ss_lib:glass
+execute as @s[scores={PaintballType=7}] run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 light_blue_stained_glass_pane replace #ss_lib:glass_panes
+execute as @s[scores={PaintballType=8}] run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 cyan_stained_glass replace #ss_lib:glass
+execute as @s[scores={PaintballType=8}] run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 cyan_stained_glass_pane replace #ss_lib:glass_panes

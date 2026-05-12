@@ -1,0 +1,66 @@
+{
+  "description": {
+    "text": "Hexblade"
+  },
+  "exclusive_set": "#ss_enchants:exclusive_set/hexblade",
+  "supported_items": "#ss_enchants:enchantable/hexblade",
+  "primary_items": "#minecraft:enchantable/sword",
+  "weight": 5,
+  "max_level": 5,
+  "min_cost": {
+    "base": 12,
+    "per_level_above_first": 5
+  },
+  "max_cost": {
+    "base": 30,
+    "per_level_above_first": 5
+  },
+  "anvil_cost": 3,
+  "slots": [
+    "mainhand"
+  ],
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:play_sound",
+          "sound": "minecraft:entity.allay.ambient_without_item",
+          "volume": 0.3,
+          "pitch": {
+            "type": "minecraft:uniform",
+            "min_inclusive": 1.9,
+            "max_exclusive": 2.0
+          }
+        }
+      },
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "ss_enchants:hexblade/particles"
+        }
+      },
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:damage_entity",
+          "damage_type": "minecraft:magic",
+          "min_damage": {
+            "type": "minecraft:linear",
+            "base": 0.5,
+            "per_level_above_first": 0.5
+          },
+          "max_damage": {
+            "type": "minecraft:linear",
+            "base": 0.5,
+            "per_level_above_first": 0.5
+          }
+        }
+      }
+    ]
+  }
+}

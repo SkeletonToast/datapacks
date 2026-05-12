@@ -1,0 +1,3 @@
+execute at @s run tellraw @a[distance=..10] [""]
+execute at @s run tellraw @a[distance=..10] [{"text":"❖ ","color":"gray"},{"selector":"@s","color":"white"},{"text":" has ","color":"gray"},{"score":{"name":"@s","objective":"Charm"},"color":"light_purple"},{"text":" Charm","color":"light_purple"},{"text":".","color":"gray"}]
+execute at @s run tellraw @a[distance=..10] [{"text":"❖ ","color":"gray"},{"selector":"@s","color":"white"},{"text":" has ","color":"gray"},{"score":{"name":"@s","objective":"Tact"},"color":"blue"},{"text":" Tact","color":"blue"},{"text":".","color":"gray"}]

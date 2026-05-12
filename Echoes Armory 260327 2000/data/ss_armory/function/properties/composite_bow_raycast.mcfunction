@@ -1,0 +1,1 @@
+$execute at @s anchored eyes positioned ^ ^ ^0.25 run function raycast:either {"particle":"particle crit ~ ~ ~ 0 0 0 0 1 normal @a","increment_distance":"0.25","max_lifetime":"$(value)","run_on_block_success":"function ss_armory:properties/composite_bow_hit_block","run_on_entity_success":"function ss_armory:properties/composite_bow_damage"}

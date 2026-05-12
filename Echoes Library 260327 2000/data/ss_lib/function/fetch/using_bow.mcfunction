@@ -1,0 +1,2 @@
+$execute as $(s) run scoreboard players add @s[advancements={ss_lib:lib/using_bow=true}] UsingBow 1
+$execute as $(s) run scoreboard players set @s[scores={UsingBow=1..},advancements={ss_lib:lib/using_bow=false}] UsingBow 0

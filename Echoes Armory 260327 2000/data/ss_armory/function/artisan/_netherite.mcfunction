@@ -1,0 +1,1 @@
+execute if items entity @s weapon.mainhand netherite_hoe run function ss_armory:artisan/netherite_sickle

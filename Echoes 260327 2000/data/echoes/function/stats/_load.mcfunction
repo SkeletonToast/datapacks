@@ -1,0 +1,79 @@
+# primary stats
+scoreboard objectives add EchoLevel dummy
+scoreboard objectives add Renown dummy
+
+scoreboard objectives add Strength dummy
+scoreboard objectives add Dexterity dummy
+scoreboard objectives add Mind dummy
+    scoreboard objectives add MindSigned dummy
+scoreboard objectives add Tact dummy
+scoreboard objectives add Resolve dummy
+    scoreboard objectives add ResolveHealth dummy
+    scoreboard objectives add ResolveArmor dummy
+scoreboard objectives add Vitality dummy
+scoreboard objectives add Soul dummy
+    scoreboard objectives add SoulSigned dummy
+
+    # primary stat modifiers
+    scoreboard objectives add StrengthModifier dummy
+    scoreboard objectives add DexterityModifier dummy
+    scoreboard objectives add MindModifier dummy
+    scoreboard objectives add TactModifier dummy
+    scoreboard objectives add ResolveModifier dummy
+    scoreboard objectives add VitalityModifier dummy
+    scoreboard objectives add SoulModifier dummy
+
+# signed stats
+scoreboard objectives add Faith dummy
+scoreboard objectives add Humanity dummy
+scoreboard objectives add Glory dummy
+
+# secondary stats
+scoreboard objectives add Initiative dummy
+scoreboard objectives add Charm dummy
+
+# universal stats
+scoreboard objectives add Tenacity dummy
+scoreboard objectives add Fortitude dummy
+scoreboard objectives add Potential dummy
+scoreboard objectives add Prowess dummy
+    # modify universal stats in echoes:stats/_tick
+
+# stored stats
+scoreboard objectives add generic_attribute dummy
+
+scoreboard objectives add res_max_health dummy
+scoreboard objectives add res_armor_health dummy
+
+scoreboard objectives add smooth_sprint_multiplier dummy
+scoreboard objectives add dex_movement_speed dummy
+scoreboard objectives add dex_jump_strength dummy
+scoreboard objectives add dex_step_height dummy
+scoreboard objectives add tact_sneaking_speed dummy
+
+scoreboard objectives add dex_tact_fall_damage_multiplier dummy
+scoreboard objectives add dex_tact_safe_fall_distance dummy
+
+scoreboard objectives add str_block_break_speed dummy
+scoreboard objectives add str_knockback_resistance dummy
+
+scoreboard objectives add tact_interaction_range dummy
+scoreboard objectives add tact_movement_efficiency dummy
+scoreboard objectives add tact_water_movement_efficiency dummy
+scoreboard objectives add tact_submerged_mining_speed dummy
+scoreboard objectives add tact_camera_distance dummy
+
+scoreboard objectives add tact_armor dummy
+scoreboard objectives add tact_armor_toughness dummy
+
+scoreboard objectives add soul_burning_time dummy
+scoreboard objectives add soul_oxygen_bonus dummy
+scoreboard objectives add soul_luck dummy
+
+# strafing
+scoreboard objectives add StrafeTime dummy
+scoreboard objectives add SuperSprintTime dummy
+    # scoreboard objectives add strafe_input dummy
+    # scoreboard objectives add strafe_direction dummy
+    # scoreboard objectives add strafe_direction_stored dummy
+    # scoreboard objectives add strafe_flag dummy

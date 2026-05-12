@@ -1,0 +1,1 @@
+execute at @s anchored eyes run particle ominous_spawning ^ ^ ^ 0.4 0.4 0.4 0 10

@@ -1,0 +1,1 @@
+give @s shield[item_name="Haligsundr Shellshield",attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"offhand"},{id:"armor",type:"armor",amount:4,operation:"add_value",slot:"offhand"}]]

@@ -1,0 +1,10 @@
+{
+  "values": [
+    "#minecraft:illager",
+    "minecraft:vex",
+    "minecraft:ravager",
+    "minecraft:hoglin",
+    "minecraft:piglin",
+    "minecraft:piglin_brute"
+  ]
+}

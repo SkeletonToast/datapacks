@@ -1,0 +1,72 @@
+# timers
+scoreboard objectives remove aggressive_timer
+scoreboard objectives remove bleeding_timer
+scoreboard objectives remove bouncy_timer
+scoreboard objectives remove encumbered_timer
+scoreboard objectives remove enshrouded_timer
+scoreboard objectives remove disarmed_timer
+scoreboard objectives remove disabled_timer
+scoreboard objectives remove disoriented_timer
+scoreboard objectives remove fragile_timer
+scoreboard objectives remove frenzied_timer
+scoreboard objectives remove frightened_timer
+scoreboard objectives remove frightening_timer
+scoreboard objectives remove hesitant_timer
+scoreboard objectives remove hobbled_timer
+scoreboard objectives remove incendiary_timer
+scoreboard objectives remove recover_timer
+scoreboard objectives remove rooted_timer
+scoreboard objectives remove satiated_timer
+scoreboard objectives remove surgical_timer
+scoreboard objectives remove terrified_timer
+scoreboard objectives remove terrifying_timer
+scoreboard objectives remove tormented_timer
+scoreboard objectives remove unnerved_timer
+scoreboard objectives remove unnerving_timer
+scoreboard objectives remove vulnerable_timer
+scoreboard objectives remove wet_timer
+scoreboard objectives remove webbed_timer
+
+# activity
+scoreboard objectives remove HasStatus
+
+scoreboard objectives remove alert_active
+scoreboard objectives remove aggressive_active
+scoreboard objectives remove bleeding_active
+scoreboard objectives remove bouncy_active
+scoreboard objectives remove disabled_active
+scoreboard objectives remove disarmed_active
+scoreboard objectives remove disoriented_active
+scoreboard objectives remove encumbered_active
+scoreboard objectives remove enshrouded_active
+scoreboard objectives remove fortified_active
+scoreboard objectives remove feeble_active
+scoreboard objectives remove fragile_active
+scoreboard objectives remove frenzied_active
+scoreboard objectives remove frightened_active
+scoreboard objectives remove frozen_active
+scoreboard objectives remove hesitant_active
+scoreboard objectives remove hobbled_active
+    # scoreboard objectives remove incendiary_active
+scoreboard objectives remove lightweight_active
+scoreboard objectives remove recover_active
+scoreboard objectives remove rooted_active
+scoreboard objectives remove satiated_active
+scoreboard objectives remove surgical_active
+scoreboard objectives remove terrified_active
+scoreboard objectives remove tormented_active
+scoreboard objectives remove unnerved_active
+scoreboard objectives remove vulnerable_active
+    # scoreboard objectives remove wet_active
+scoreboard objectives remove webbed_active
+
+# other variables
+scoreboard objectives remove bleeding_damage
+scoreboard objectives remove bouncy_amount
+scoreboard objectives remove disabled_multiply
+scoreboard objectives remove disoriented_random
+scoreboard objectives remove frenzied_damage
+scoreboard objectives remove hobbled_amount
+scoreboard objectives remove recover_amount
+scoreboard objectives remove surgical_hit_timer
+scoreboard objectives remove tormented_random

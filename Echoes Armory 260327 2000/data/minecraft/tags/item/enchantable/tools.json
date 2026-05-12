@@ -1,0 +1,8 @@
+{
+    "values": [
+      "#minecraft:enchantable/weapon",
+      "#minecraft:pickaxes",
+      "#minecraft:shovels",
+      "#minecraft:hoes"
+    ]
+  }

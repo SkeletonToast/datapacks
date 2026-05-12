@@ -1,0 +1,1 @@
+$attribute @s attack_damage modifier add proficiency_attack_damage $(value) add_multiplied_total

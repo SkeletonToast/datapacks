@@ -1,0 +1,1 @@
+execute if entity @a[scores={Class=1}] run function echoes:classes/foudroyant

@@ -1,0 +1,9 @@
+$execute as @e[type=!#ss_lib:not_alive,type=!#ss_lib:hostile,type=!player,distance=1..8] facing entity @s eyes run particle dust{color:[0.600,1.000,0.000],scale:$(base)7} ^ ^ ^$(base)85 0 0 0 0 1 normal @p
+$execute as @e[type=!#ss_lib:not_alive,type=!#ss_lib:hostile,type=!player,distance=8..16] facing entity @s eyes run particle dust{color:[0.000,1.000,0.000],scale:$(base)6} ^ ^ ^$(base)9 0 0 0 0 1 normal @p
+$execute as @e[type=!#ss_lib:not_alive,type=!#ss_lib:hostile,type=!player,distance=16..24] facing entity @s eyes run particle dust{color:[0.000,0.500,0.000],scale:$(base)5} ^ ^ ^$(base)95 0 0 0 0 1 normal @p
+$execute as @e[type=#ss_lib:hostile,distance=1..10] facing entity @s eyes run particle dust{color:[0.000,0.900,1.000],scale:$(base)7} ^ ^ ^$(base)85 0 0 0 0 1 normal @p
+$execute as @e[type=#ss_lib:hostile,distance=10..20] facing entity @s eyes run particle dust{color:[0.000,0.400,1.000],scale:$(base)6} ^ ^ ^$(base)9 0 0 0 0 1 normal @p
+$execute as @e[type=#ss_lib:hostile,distance=20..30] facing entity @s eyes run particle dust{color:[0.600,0.000,1.000],scale:$(base)5} ^ ^ ^$(base)95 0 0 0 0 1 normal @p
+$execute as @a[gamemode=!creative,gamemode=!spectator,distance=5..12,predicate=!ss_lib:is/hiding] facing entity @s eyes run function ss_statuses:alert_player {"dust_color":"color:[1.000,0.000,0.000]","dust_scale":"$(base)7","pos":"^ ^ ^$(base)85"}
+$execute as @a[gamemode=!creative,gamemode=!spectator,distance=12..24,predicate=!ss_lib:is/hiding] facing entity @s eyes run function ss_statuses:alert_player {"dust_color":"color:[1.000,0.333,0.000]","dust_scale":"$(base)6","pos":"^ ^ ^$(base)9"}
+$execute as @a[gamemode=!creative,gamemode=!spectator,distance=24..36,predicate=!ss_lib:is/hiding] facing entity @s eyes run function ss_statuses:alert_player {"dust_color":"color:[1.000,0.667,0.000]","dust_scale":"$(base)5","pos":"^ ^ ^$(base)95"}

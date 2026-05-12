@@ -1,0 +1,3 @@
+execute positioned ^ ^ ^0.5 run particle small_flame ~ ~-0.3 ~ 0.1 0.1 0.1 0 10 normal @a
+execute positioned ^ ^ ^0.7 run particle small_flame ~ ~-0.3 ~ 0.2 0.2 0.2 0 10 normal @a
+$execute positioned ^ ^ ^1 positioned ~ ~-0.3 ~ run function raycast:either {"particle":"function echoes:artifacts/fire_tome/raycast_particles","increment_distance":"0.25","max_lifetime":"$(value)","run_on_block_success":"execute positioned ^ ^ ^-0.25 run function echoes:artifacts/fire_tome/hit_block","run_on_entity_success":"function echoes:artifacts/fire_tome/hit_entity"}

@@ -1,0 +1,2 @@
+$execute as $(s) run scoreboard players add @s[advancements={ss_lib:lib/using_shield=true}] UsingShield 1
+$execute as $(s) run scoreboard players set @s[scores={UsingShield=1..},advancements={ss_lib:lib/using_shield=false}] UsingShield 0

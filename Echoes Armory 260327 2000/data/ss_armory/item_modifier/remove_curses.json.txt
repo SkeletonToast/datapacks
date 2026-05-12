@@ -1,0 +1,15 @@
+[
+    {
+      "function": "minecraft:set_components",
+      "components": {
+        "minecraft:enchantments": {
+          "levels": {
+            "minecraft:binding_curse": 0,
+            "minecraft:vanishing_curse": 0
+          }
+        },
+        "!minecraft:enchantments": {}
+      }
+    }
+  ]
+  

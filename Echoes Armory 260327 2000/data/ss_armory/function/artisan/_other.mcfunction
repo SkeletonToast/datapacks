@@ -1,0 +1,1 @@
+execute if items entity @s weapon.mainhand lead run function ss_armory:artisan/whip

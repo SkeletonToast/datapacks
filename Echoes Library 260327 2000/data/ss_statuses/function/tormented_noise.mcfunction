@@ -1,0 +1,2 @@
+execute as @s[scores={tormented_random=1..}] as @s[scores={tormented_random=..3}] run playsound minecraft:particle.soul_escape player @s ^ ^ ^3 1 1
+execute as @s[scores={tormented_random=4..}] as @s[scores={tormented_random=..6}] run playsound minecraft:ambient.soul_sand_valley.mood player @s ^ ^ ^3 0.5 0.1

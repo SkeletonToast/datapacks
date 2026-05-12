@@ -1,0 +1,1 @@
+$damage @n $(value) minecraft:in_fire by @s

@@ -1,0 +1,55 @@
+{
+  "condition": "minecraft:all_of",
+  "terms": [
+    {
+      "condition": "minecraft:inverted",
+      "term": {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "stepping_on": {
+            "block": {
+              "blocks": "#ss_lib:flammable"
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:value_check",
+      "value": {
+        "type": "minecraft:score",
+        "target": "this",
+        "score": "OnGround"
+      },
+      "range": 1
+    },
+    {
+      "condition": "minecraft:value_check",
+      "value": {
+        "type": "minecraft:score",
+        "target": "this",
+        "score": "Fire"
+      },
+      "range": {
+        "min": 1,
+        "max": 200
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "block": {
+            "blocks": "#minecraft:air"
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "ss_lib:is/on_fire"
+    }
+  ]
+}

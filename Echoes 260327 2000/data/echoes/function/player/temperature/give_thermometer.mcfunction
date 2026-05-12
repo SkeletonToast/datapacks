@@ -1,0 +1,1 @@
+give @s clock[item_model="minecraft:sea_pickle",item_name='Thermometer',lore=[{"text":"When in your hotbar, this item displays","italic":false,"color":"gray"},{"text":"your current temperature and the ambient","italic":false,"color":"gray"},{"text":"temperature.","italic":false,"color":"gray"}],custom_data={thermometer:1b}]

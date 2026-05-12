@@ -1,0 +1,73 @@
+{
+    "description": {
+        "text": "Frenzy",
+        "color": "yellow"
+    },
+    "exclusive_set": "#minecraft:exclusive_set/damage",
+    "supported_items": "#minecraft:enchantable/melee_weapon",
+    "weight": 3,
+    "max_level": 7,
+    "min_cost": {
+      "base": 20,
+      "per_level_above_first": 11
+    },
+    "max_cost": {
+      "base": 31,
+      "per_level_above_first": 11
+    },
+    "anvil_cost": 1,
+    "slots": [
+      "mainhand"
+    ],
+    "effects": {
+      "minecraft:damage": [
+        {
+          "effect": {
+            "type": "minecraft:add",
+            "value": {
+              "type": "minecraft:linear",
+              "base": 1.5,
+              "per_level_above_first": 1.5
+            }
+          }
+        }
+      ],
+      "minecraft:post_attack": [
+        {
+          "enchanted": "attacker",
+          "affected": "attacker",
+          "effect": {
+            "type": "minecraft:damage_entity",
+            "damage_type": "minecraft:magic",
+            "min_damage": {
+              "type": "minecraft:fraction",
+              "numerator": {
+                "type": "minecraft:linear",
+                "base": 0,
+                "per_level_above_first": 1
+              },
+              "denominator": {
+                "type": "minecraft:linear",
+                "base": 2,
+                "per_level_above_first": 1
+              }
+            },
+            "max_damage": {
+              "type": "minecraft:fraction",
+              "numerator": {
+                "type": "minecraft:linear",
+                "base": 0,
+                "per_level_above_first": 1
+              },
+              "denominator": {
+                "type": "minecraft:linear",
+                "base": 2,
+                "per_level_above_first": 1
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+  

@@ -1,0 +1,1 @@
+$attribute @s water_movement_efficiency modifier add encumbrance_water_movement_efficiency $(value) add_multiplied_total

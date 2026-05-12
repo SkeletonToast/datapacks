@@ -1,0 +1,8 @@
+particle dust{color:[1,1,1],scale:2} ~00.50 ~-0.7 ~00.00 0 0 0 0 1 normal @a[distance=.1..]
+particle dust{color:[1,1,1],scale:2} ~00.35 ~-0.7 ~00.35 0 0 0 0 1 normal @a[distance=.1..]
+particle dust{color:[1,1,1],scale:2} ~00.00 ~-0.7 ~00.50 0 0 0 0 1 normal @a[distance=.1..]
+particle dust{color:[1,1,1],scale:2} ~-0.35 ~-0.7 ~00.35 0 0 0 0 1 normal @a[distance=.1..]
+particle dust{color:[1,1,1],scale:2} ~-0.50 ~-0.7 ~00.00 0 0 0 0 1 normal @a[distance=.1..]
+particle dust{color:[1,1,1],scale:2} ~-0.35 ~-0.7 ~-0.35 0 0 0 0 1 normal @a[distance=.1..]
+particle dust{color:[1,1,1],scale:2} ~00.00 ~-0.7 ~-0.50 0 0 0 0 1 normal @a[distance=.1..]
+particle dust{color:[1,1,1],scale:2} ~00.35 ~-0.7 ~-0.35 0 0 0 0 1 normal @a[distance=.1..]

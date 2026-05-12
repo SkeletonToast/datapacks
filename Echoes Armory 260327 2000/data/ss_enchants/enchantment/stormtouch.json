@@ -1,0 +1,62 @@
+{
+  "description": {
+    "text": "Storm Touch"
+  },
+  "exclusive_set": "#ss_enchants:exclusive_set/elemental",
+  "supported_items": "#ss_enchants:enchantable/elemental",
+  "primary_items": "#minecraft:enchantable/sword",
+  "weight": 2,
+  "max_level": 2,
+  "min_cost": {
+    "base": 9,
+    "per_level_above_first": 10
+  },
+  "max_cost": {
+    "base": 60,
+    "per_level_above_first": 10
+  },
+  "anvil_cost": 3,
+  "slots": [
+    "mainhand"
+  ],
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:play_sound",
+          "sound": "minecraft:entity.lightning_bolt.thunder",
+          "volume": 0.2,
+          "pitch": {
+            "type": "minecraft:uniform",
+            "min_inclusive": 1.2,
+            "max_exclusive": 1.4
+          }
+        }
+      },
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:play_sound",
+          "sound": "minecraft:entity.zombie.attack_iron_door",
+          "volume": 0.2,
+          "pitch": {
+            "type": "minecraft:uniform",
+            "min_inclusive": 1.0,
+            "max_exclusive": 1.2
+          }
+        }
+      },
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "ss_enchants:stormtouch/main"
+        }
+      }
+    ]
+  }
+}

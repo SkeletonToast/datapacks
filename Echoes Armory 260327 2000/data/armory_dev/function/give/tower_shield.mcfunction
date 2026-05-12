@@ -1,0 +1,1 @@
+give @s shield[blocks_attacks={block_delay_seconds:0.5,disable_cooldown_scale:0.5},item_name="Tower Shield"]

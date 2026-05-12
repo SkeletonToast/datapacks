@@ -1,0 +1,1 @@
+$attribute @s attack_speed modifier add attack_speed_cap $(sign)$(value) add_value

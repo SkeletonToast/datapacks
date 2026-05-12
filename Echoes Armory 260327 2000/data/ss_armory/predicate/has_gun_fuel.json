@@ -1,0 +1,64 @@
+{
+    "condition": "minecraft:any_of",
+    "terms": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "slots": {
+            "weapon.offhand": {
+              "count": {
+                "min": 1
+              },
+              "predicates": {
+                "minecraft:custom_data": "{\"weapon\":{\"gun\":{\"fuel\":\"true\"}}}"
+              }
+            }
+          }
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "slots": {
+            "inventory.*": {
+              "count": {
+                "min": 1
+              },
+              "predicates": {
+                "minecraft:custom_data": "{\"weapon\":{\"gun\":{\"fuel\":\"true\"}}}"
+              }
+            }
+          }
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "slots": {
+            "hotbar.*": {
+              "count": {
+                "min": 1
+              },
+              "predicates": {
+                "minecraft:custom_data": "{\"weapon\":{\"gun\":{\"fuel\":\"true\"}}}"
+              }
+            }
+          }
+        }
+      },
+      {
+        "condition": "minecraft:inverted",
+        "term": {
+          "condition": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "InfinitePowderslingAmmo": 0
+          }
+        }
+      }  
+    ]
+  }
+  

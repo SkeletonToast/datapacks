@@ -1,0 +1,1 @@
+$execute as @e[type=!#ss_lib:not_alive,dx=0,dy=0,dz=0,nbt={UUID:$(UUID)}] run scoreboard players set @s raycast_lifetime 0

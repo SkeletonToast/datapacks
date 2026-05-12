@@ -1,0 +1,17 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "movement": {
+        "vertical_speed": {
+          "min": -20
+        },
+        "fall_distance": {
+          "max": 0
+        }
+      },
+      "flags": {
+        "is_on_ground": false
+      }
+    }
+  }

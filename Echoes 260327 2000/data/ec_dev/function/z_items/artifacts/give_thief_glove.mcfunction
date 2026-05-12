@@ -1,0 +1,1 @@
+give @s clock[minecraft:custom_data={artifact:{type:"thief_glove"}},minecraft:custom_model_data={strings:["thief_glove"]},item_name='Thief\'s Glove',rarity=uncommon]

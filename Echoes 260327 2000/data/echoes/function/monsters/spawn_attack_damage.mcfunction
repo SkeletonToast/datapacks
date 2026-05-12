@@ -1,0 +1,1 @@
+$attribute @s attack_damage modifier add echoes_spawn.attack_damage 0.$(value) add_multiplied_total

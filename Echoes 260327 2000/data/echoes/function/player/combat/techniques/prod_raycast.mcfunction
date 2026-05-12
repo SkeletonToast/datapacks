@@ -1,0 +1,2 @@
+$execute at @s anchored eyes run function raycast:entity {"run_on_success":"execute as @e[type=!#ss_lib:not_alive,dx=0,dy=0,dz=0] run function echoes:player/combat/techniques/prod_raycast_hit",\
+    "increment_distance":"0.25","max_lifetime":"$(value)","particle":"execute unless entity @s"}

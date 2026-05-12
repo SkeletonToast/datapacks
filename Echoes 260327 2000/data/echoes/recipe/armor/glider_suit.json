@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": [
+      "minecraft:phantom_membrane"
+    ],
+    "E": [
+      "minecraft:elytra"
+    ],
+    "C": [
+      "minecraft:leather_chestplate"
+    ]
+  },
+  "pattern": [
+    "M M",
+    "MEM",
+    "MCM"
+  ],
+  "result": {
+    "components": {
+      "minecraft:item_name": "Glider Suit",
+      "minecraft:glider": {},
+      "minecraft:trim": {
+        "material": "minecraft:quartz",
+        "pattern": "minecraft:bolt"
+      },
+      "minecraft:tooltip_display": {
+        "hide_tooltip": false,
+        "hidden_components": [
+          "minecraft:trim"
+        ]
+      },
+      "minecraft:max_damage": 200,
+      "minecraft:rarity": "epic"
+    },
+    "count": 1,
+    "id": "minecraft:leather_chestplate"
+  }
+}

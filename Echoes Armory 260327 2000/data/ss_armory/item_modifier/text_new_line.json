@@ -1,0 +1,11 @@
+[
+    {
+      "function": "minecraft:set_lore",
+      "lore": [
+        {
+          "text": ""
+        }
+      ],
+      "mode": "append"
+    }
+  ] 

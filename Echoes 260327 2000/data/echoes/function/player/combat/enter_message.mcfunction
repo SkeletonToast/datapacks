@@ -1,0 +1,1 @@
+title @s actionbar [{"text":"[⚔] You have entered combat.","color":"red"}]

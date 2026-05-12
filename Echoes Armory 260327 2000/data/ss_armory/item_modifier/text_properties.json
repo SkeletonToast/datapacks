@@ -1,0 +1,14 @@
+[
+    {
+      "function": "minecraft:set_lore",
+      "lore": [
+
+        {
+          "text": "Properties",
+          "italic": false,
+          "color": "gray"
+        }
+      ],
+      "mode": "append"
+    }
+  ] 

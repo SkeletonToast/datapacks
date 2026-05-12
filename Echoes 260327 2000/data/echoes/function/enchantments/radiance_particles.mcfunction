@@ -1,0 +1,1 @@
+execute at @s anchored eyes run particle end_rod ^ ^ ^ 0.4 0.4 0.4 0 10

@@ -1,0 +1,21 @@
+{
+    "values": [
+        "#minecraft:logs_that_burn",
+        "#ss_lib:planks_that_burn",
+        "#ss_lib:wood_that_burns",
+        "#ss_lib:stripped_wood_that_burns",
+        "#ss_lib:stripped_logs_that_burn",
+        "#minecraft:leaves",
+        "#minecraft:flowers",
+        "#minecraft:wool_carpets",
+        "#minecraft:wooden_trapdoors",
+        "#minecraft:wooden_doors",
+        "#minecraft:wooden_fences",
+        "#minecraft:wooden_slabs",
+        "#minecraft:fence_gates",
+        "minecraft:bookshelf",
+        "minecraft:crafting_table",
+        "minecraft:chest",
+        "minecraft:trapped_chest"
+    ]
+}

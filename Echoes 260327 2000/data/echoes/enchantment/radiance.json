@@ -1,0 +1,52 @@
+{
+  "description": {
+    "text": "Radiance"
+  },
+  "exclusive_set": "#minecraft:exclusive_set/damage",
+  "supported_items": "#minecraft:enchantable/melee_weapon",
+  "primary_items": "#minecraft:enchantable/sword",
+  "weight": 5,
+  "max_level": 5,
+  "min_cost": {
+    "base": 12,
+    "per_level_above_first": 5
+  },
+  "max_cost": {
+    "base": 30,
+    "per_level_above_first": 5
+  },
+  "anvil_cost": 3,
+  "slots": [
+    "mainhand"
+  ],
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "echoes:enchantments/radiance_particles"
+        }
+      },
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:damage_entity",
+          "damage_type": "echoes:light",
+          "min_damage": {
+            "type": "minecraft:linear",
+            "base": 0.5,
+            "per_level_above_first": 0.5
+          },
+          "max_damage": {
+            "type": "minecraft:linear",
+            "base": 0.5,
+            "per_level_above_first": 0.5
+          }
+        }
+      }
+    ]
+  }
+}

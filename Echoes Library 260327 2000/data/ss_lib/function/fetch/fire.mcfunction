@@ -1,0 +1,1 @@
+$execute as $(s) if entity @s[scores={Fire=0}] store result score @s Fire run data get entity @s Fire

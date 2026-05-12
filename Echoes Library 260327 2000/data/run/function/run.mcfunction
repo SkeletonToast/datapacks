@@ -1,0 +1,5 @@
+scoreboard objectives add run_recursions dummy
+$$(f)
+scoreboard players add @s run_recursions 1
+$execute unless entity @s[scores={run_recursions=$(r)..}] run function ss_lib:run {"f":"$(f)","r":"$(r)"}
+$execute as @s[scores={run_recursions=$(r)..}] run scoreboard objectives remove run_recursions

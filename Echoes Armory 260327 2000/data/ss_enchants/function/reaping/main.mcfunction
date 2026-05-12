@@ -1,0 +1,2 @@
+execute as @s[type=!#ss_lib:not_alive,type=!minecraft:player] on attacker run effect give @s regeneration 1 3 true
+execute as @s[type=minecraft:player] on attacker run effect give @s saturation 1 0 true

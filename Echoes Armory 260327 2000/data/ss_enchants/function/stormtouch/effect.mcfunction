@@ -1,0 +1,3 @@
+execute as @s[type=player] unless entity @s[scores={shocked_timer=100..}] run scoreboard players add @s shocked_timer 15
+execute as @s[type=!player] unless entity @s[scores={shocked_timer=100..}] run scoreboard players add @s shocked_timer 30
+execute unless items entity @s weapon.mainhand *[minecraft:custom_data~{weapon:{properties:{studded_grip:true}}}] run scoreboard players add @s disarmed_timer 5

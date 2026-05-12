@@ -1,0 +1,1 @@
+execute at @s run function urid:assign with entity @s

@@ -1,0 +1,1 @@
+give @s diamond_helmet[tooltip_display={hidden_components:["trim","unbreakable","attribute_modifiers"]},trim={pattern:spire,material:gold},custom_name=[{"text":"Devi's Halo","italic":false}],unbreakable={},glider={}]

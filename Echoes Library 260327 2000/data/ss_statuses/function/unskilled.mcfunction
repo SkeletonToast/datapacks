@@ -1,0 +1,9 @@
+scoreboard players set @s[scores={class002=1..}] class002 0
+scoreboard players set @s[scores={class003=1..}] class003 0
+scoreboard players set @s[scores={class004=1..}] class004 0
+scoreboard players set @s[scores={class005=1..}] class005 0
+scoreboard players set @s[scores={class006=1..}] class006 0
+scoreboard players set @s[scores={class007=1..}] class007 0
+scoreboard players set @s[scores={class008=1..}] class008 0
+scoreboard players set @s[scores={class009=1..}] class009 0
+scoreboard players set @s[scores={class010=1..}] class009 0

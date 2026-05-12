@@ -1,0 +1,1 @@
+# execute if items entity @s weapon.mainhand crossbow run function ss_armory:siege/shotgun

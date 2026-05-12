@@ -1,0 +1,232 @@
+{
+    "description": {
+      "translate": "enchantment.minecraft.smite"
+    },
+    "exclusive_set": "#minecraft:exclusive_set/damage",
+    "supported_items": "#minecraft:enchantable/any_weapon",
+    "primary_items": "#minecraft:enchantable/sword",
+    "weight": 5,
+    "max_level": 5,
+    "min_cost": {
+      "base": 5,
+      "per_level_above_first": 8
+    },
+    "max_cost": {
+      "base": 25,
+      "per_level_above_first": 8
+    },
+    "anvil_cost": 2,
+    "slots": [
+      "mainhand"
+    ],
+    "effects": {
+      "minecraft:damage": [
+        {
+          "effect": {
+            "type": "minecraft:add",
+            "value": {
+              "type": "minecraft:linear",
+              "base": 2.5,
+              "per_level_above_first": 2.5
+            }
+          },
+          "requirements": {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:sensitive_to_smite"
+            }
+          }
+        },
+        {
+          "effect": {
+            "type": "minecraft:add",
+            "value": {
+              "type": "minecraft:linear",
+              "base": 3,
+              "per_level_above_first": 3
+            }
+          },
+          "requirements": {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "nbt": "{Tags:[\"Fogtouched\"]}"
+            }
+          }
+        },
+        {
+          "effect": {
+            "type": "minecraft:add",
+            "value": {
+              "type": "minecraft:linear",
+              "base": 0.5,
+              "per_level_above_first": 0.5
+            }
+          },
+          "requirements": {
+            "condition": "minecraft:any_of",
+            "terms": [
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "effects": {
+                    "minecraft:hunger": {
+                      "duration": {
+                        "min": 1
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "effects": {
+                    "minecraft:weakness": {
+                      "duration": {
+                        "min": 1
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "effects": {
+                    "minecraft:slowness": {
+                      "duration": {
+                        "min": 1
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "effects": {
+                    "minecraft:mining_fatigue": {
+                      "duration": {
+                        "min": 1
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "effects": {
+                    "minecraft:poison": {
+                      "duration": {
+                        "min": 1
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "effects": {
+                    "minecraft:wither": {
+                      "duration": {
+                        "min": 1
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "effects": {
+                    "minecraft:unluck": {
+                      "duration": {
+                        "min": 1
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "minecraft:post_attack": [
+        {
+          "enchanted": "attacker",
+          "affected": "victim",
+          "effect": {
+            "type": "minecraft:play_sound",
+            "sound": "minecraft:entity.blaze.hurt",
+            "volume": 0.2,
+            "pitch": {
+              "type": "minecraft:uniform",
+              "min_inclusive": 0.8,
+              "max_exclusive": 1.0
+            }
+          }
+        },
+        {
+          "enchanted": "attacker",
+          "affected": "victim",
+          "effect": {
+            "type": "minecraft:play_sound",
+            "sound": "minecraft:block.anvil.place",
+            "volume": 0.2,
+            "pitch": {
+              "type": "minecraft:uniform",
+              "min_inclusive": 1.2,
+              "max_exclusive": 1.4
+            }
+          }
+        },
+        {
+          "enchanted": "attacker",
+          "affected": "victim",
+          "effect": {
+            "type": "minecraft:play_sound",
+            "sound": "minecraft:entity.zombie.attack_iron_door",
+            "volume": 0.2,
+            "pitch": {
+              "type": "minecraft:uniform",
+              "min_inclusive": 1.8,
+              "max_exclusive": 2.0
+            }
+          }
+        },
+        {
+          "enchanted": "attacker",
+          "affected": "victim",
+          "effect": {
+            "type": "minecraft:play_sound",
+            "sound": "minecraft:block.bell.use",
+            "volume": 0.4,
+            "pitch": {
+              "type": "minecraft:uniform",
+              "min_inclusive": 0.4,
+              "max_exclusive": 0.6
+            }
+          }
+        },
+        {
+          "enchanted": "attacker",
+          "affected": "victim",
+          "effect": {
+            "type": "minecraft:run_function",
+            "function": "ss_enchants:smite/main"
+          }
+        }
+      ]
+    }
+  }

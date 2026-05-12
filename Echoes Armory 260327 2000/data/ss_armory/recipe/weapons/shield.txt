@@ -1,0 +1,1 @@
+shield[blocks_attacks={block_delay_seconds:0,disable_cooldown_scale:1,bypassed_by:"#bypasses_shield",damage_reductions:[{base:1,factor:0.9,horizontal_blocking_angle:90,type:"generic"}],block_sound:"item.shield.block",disable_sound:"item.shield.break"}]

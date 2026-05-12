@@ -1,0 +1,15 @@
+{
+    "values": [
+        "minecraft:vindicator",
+        "minecraft:piglin_brute",
+        "minecraft:vex",
+        "minecraft:drowned",
+        "minecraft:phantom",
+        "minecraft:guardian",
+        "minecraft:elder_guardian",
+        "minecraft:enderman",
+        "minecraft:ender_dragon",
+        "minecraft:wither",
+        "minecraft:wither_skeleton"
+    ]
+}

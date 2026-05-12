@@ -1,0 +1,10 @@
+$execute as @s[scores={generic_b=0}] run function parse:score_increment {"function":"$(function)","prepend":"$(prepend)","append":"$(append)","value":"0$(value)"}
+$execute as @s[scores={generic_b=1}] run function parse:score_increment {"function":"$(function)","prepend":"$(prepend)","append":"$(append)","value":"1$(value)"}
+$execute as @s[scores={generic_b=2}] run function parse:score_increment {"function":"$(function)","prepend":"$(prepend)","append":"$(append)","value":"2$(value)"}
+$execute as @s[scores={generic_b=3}] run function parse:score_increment {"function":"$(function)","prepend":"$(prepend)","append":"$(append)","value":"3$(value)"}
+$execute as @s[scores={generic_b=4}] run function parse:score_increment {"function":"$(function)","prepend":"$(prepend)","append":"$(append)","value":"4$(value)"}
+$execute as @s[scores={generic_b=5}] run function parse:score_increment {"function":"$(function)","prepend":"$(prepend)","append":"$(append)","value":"5$(value)"}
+$execute as @s[scores={generic_b=6}] run function parse:score_increment {"function":"$(function)","prepend":"$(prepend)","append":"$(append)","value":"6$(value)"}
+$execute as @s[scores={generic_b=7}] run function parse:score_increment {"function":"$(function)","prepend":"$(prepend)","append":"$(append)","value":"7$(value)"}
+$execute as @s[scores={generic_b=8}] run function parse:score_increment {"function":"$(function)","prepend":"$(prepend)","append":"$(append)","value":"8$(value)"}
+$execute as @s[scores={generic_b=9}] run function parse:score_increment {"function":"$(function)","prepend":"$(prepend)","append":"$(append)","value":"9$(value)"}

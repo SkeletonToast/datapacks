@@ -1,0 +1,14 @@
+{
+    "values": [
+      "minecraft:wither",
+      "minecraft:ender_dragon",
+      "minecraft:elder_guardian",
+      "minecraft:warden",
+      "minecraft:breeze",
+      "minecraft:evoker",
+      "minecraft:illusioner",
+      "minecraft:wither_skeleton",
+      "minecraft:player",
+      "#ss_lib:not_alive"
+    ]
+  }

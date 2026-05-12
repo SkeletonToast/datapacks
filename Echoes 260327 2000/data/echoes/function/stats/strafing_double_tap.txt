@@ -1,0 +1,41 @@
+# direction 1 = right, direction 2 = back, direction 3 = left
+
+# default values
+scoreboard players add @s StrafeTime 0
+
+scoreboard players set @s strafe_input 0
+scoreboard players set @s[predicate=echoes:strafing] strafe_input 1
+
+scoreboard players set @s[scores={Food=..6}] strafe_flag 0
+
+scoreboard players set @s[scores={StrafeTime=0}] strafe_flag 0
+scoreboard players set @s[scores={StrafeTime=0}] strafe_direction 0
+scoreboard players set @s[scores={StrafeTime=0}] strafe_direction_stored 0
+scoreboard players set @s[scores={strafe_input=0,StrafeTime=1..}] StrafeTime 0
+
+scoreboard players add @s[scores={StrafeTime=..-1}] StrafeTime 1
+
+scoreboard players set @s strafe_direction 0
+scoreboard players set @s[scores={strafe_input=1},predicate=ss_lib:input/right] strafe_direction 1
+scoreboard players set @s[scores={strafe_input=1},predicate=ss_lib:input/backward] strafe_direction 2
+scoreboard players set @s[scores={strafe_input=1},predicate=ss_lib:input/left] strafe_direction 3
+    # scoreboard players set @s[scores={strafe_flag=3},predicate=ss_lib:input/forward] strafe_flag 0
+
+# set flag to 1 and timer to -5 if player has any input with flag = 0
+    # flag = 1 means player has pressed the strafe key the first time
+scoreboard players operation @s[scores={strafe_flag=0,strafe_input=1}] strafe_direction_stored = @s strafe_direction
+scoreboard players set @s[scores={strafe_flag=0,strafe_input=1}] StrafeTime -10
+scoreboard players set @s[scores={strafe_flag=0,strafe_input=1}] strafe_flag 1
+
+# set flag to 2 if player is NOT strafing with flag = 1
+    # flag = 2 means player has released the strafe key
+scoreboard players set @s[scores={strafe_flag=1,strafe_input=0,StrafeTime=..-1}] strafe_flag 2
+
+# set flag to 3 if player IS strafing with flag = 2, AND strafe direction matches stored
+    # flag = 3 means strafing is active
+    # this requires double tap
+scoreboard players set @s[scores={strafe_flag=2,strafe_input=1,StrafeTime=..-1}] strafe_flag 3
+
+# execute as @s[scores={strafe_flag=3}] unless score @s strafe_direction = @s strafe_direction_stored run scoreboard players set @s strafe_flag 0
+scoreboard players set @s[scores={strafe_flag=3,strafe_input=1,StrafeTime=..-1}] StrafeTime 1
+scoreboard players add @s[scores={strafe_flag=3,strafe_input=1,StrafeTime=1..}] StrafeTime 1

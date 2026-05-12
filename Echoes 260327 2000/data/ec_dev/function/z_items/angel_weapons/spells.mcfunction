@@ -1,0 +1,2 @@
+$execute if items entity @s weapon.$(hand)hand clock[custom_data~{weapon:{seraphic:{type:"sword"}}}] run scoreboard players set @s artifact_type $(sign)4
+$execute if items entity @s weapon.$(hand)hand clock[custom_data~{weapon:{seraphic:{type:"spear"}}}] run scoreboard players set @s artifact_type $(sign)5

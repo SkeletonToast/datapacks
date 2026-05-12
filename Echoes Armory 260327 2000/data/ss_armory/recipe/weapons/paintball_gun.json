@@ -1,0 +1,35 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+      "pmr",
+      "bco",
+      "tgy"
+    ],
+    "key": {
+      "c": "minecraft:crossbow",
+      "p": "minecraft:purple_dye",
+      "m": "minecraft:magenta_dye",
+      "r": "minecraft:red_dye",
+      "o": "minecraft:orange_dye",
+      "y": "minecraft:yellow_dye",
+      "g": "minecraft:lime_dye",
+      "t": "minecraft:cyan_dye",
+      "b": "minecraft:blue_dye"
+    },
+    "result": {
+      "id": "minecraft:crossbow",
+      "count": 1,
+      "components": {
+        "minecraft:item_name": "Paintball Gun",
+        "minecraft:custom_data": {"weapon":{"special":true,"gun":{"type":"paintball"},"properties":{"active":["mainhand","offhand"]}}},
+        "minecraft:unbreakable": {},
+        "minecraft:tooltip_display": {
+          "hidden_components": [
+            "minecraft:unbreakable"
+          ]
+        }
+      }
+    }
+  }
+  

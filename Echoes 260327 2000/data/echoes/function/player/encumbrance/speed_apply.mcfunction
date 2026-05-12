@@ -1,0 +1,1 @@
+$attribute @s movement_speed modifier add encumbrance_movement_speed $(value) add_multiplied_total

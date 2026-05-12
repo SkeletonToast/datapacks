@@ -1,0 +1,4 @@
+scoreboard objectives add used_wind_charge minecraft.used:wind_charge
+scoreboard objectives add used_blaze_powder minecraft.used:blaze_powder
+scoreboard objectives add used_iron_sword minecraft.used:iron_sword
+scoreboard objectives add used_gunpowder minecraft.used:minecraft.gunpowder

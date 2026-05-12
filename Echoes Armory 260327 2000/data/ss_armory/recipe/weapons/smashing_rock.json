@@ -1,0 +1,78 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+      "###",
+      "#I#",
+      "###"
+    ],
+    "key": {
+      "#": "minecraft:stone",
+      "I": "minecraft:iron_ingot"
+    },
+    "result": {
+      "id": "minecraft:stone_axe",
+      "count": 1,
+      "components": {
+        "minecraft:item_model": "minecraft:stone",
+        "minecraft:item_name": "Smashing Rock",
+        "minecraft:lore": [
+          "",
+          {
+            "text": "Properties",
+            "color": "gray",
+            "italic": false
+          },
+          {
+            "text": "+Two-Handed",
+            "color": "blue",
+            "italic": false
+          },
+          {
+            "text": "-Hefty",
+            "color": "red",
+            "italic": false
+          },
+          "",
+          {
+            "text": "When in Main Hand:",
+            "color": "gray",
+            "italic": false
+          },
+          {
+            "text": " 11 Attack Damage",
+            "color": "dark_green",
+            "italic": false
+          },
+          {
+            "text": " 0.5 Attack Speed",
+            "color": "dark_green",
+            "italic": false
+          }
+        ],
+        "minecraft:custom_data": {"weapon":{"weight":4,"properties":{"two_handed":true,"hefty":true,"active":["mainhand"]}}},
+        "minecraft:attribute_modifiers": [
+          {
+            "type": "minecraft:attack_damage",
+            "id": "mainhand.attack_damage",
+            "amount": 10,
+            "operation": "add_value",
+            "slot": "mainhand"
+          },
+          {
+            "type": "minecraft:attack_speed",
+            "id": "mainhand.attack_speed",
+            "amount": -3.5,
+            "operation": "add_value",
+            "slot": "mainhand"
+          }
+        ],
+        "minecraft:tooltip_display": {
+          "hidden_components": [
+            "minecraft:attribute_modifiers"
+          ]
+        }
+      }
+    }
+  }
+  

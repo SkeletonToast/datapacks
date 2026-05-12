@@ -1,0 +1,80 @@
+{
+    "description": {
+      "text": "Divinity"
+    },
+    "supported_items": "#minecraft:enchantable/durability",
+    "weight": 1,
+    "max_level": 5,
+    "min_cost": {
+      "base": 12,
+      "per_level_above_first": 5
+    },
+    "max_cost": {
+      "base": 30,
+      "per_level_above_first": 5
+    },
+    "anvil_cost": 3,
+    "slots": [
+      "mainhand",
+      "head",
+      "chest",
+      "legs",
+      "feet"
+    ],
+    "effects": {
+      "minecraft:post_attack": [
+        {
+          "enchanted": "attacker",
+          "affected": "victim",
+          "effect": {
+            "type": "minecraft:play_sound",
+            "sound": "minecraft:entity.allay.ambient_without_item",
+            "volume": 0.3,
+            "pitch": {
+              "type": "minecraft:uniform",
+              "min_inclusive": 1.9,
+              "max_exclusive": 2.0
+            }
+          }
+        },
+        {
+          "enchanted": "attacker",
+          "affected": "victim",
+          "effect": {
+            "type": "minecraft:run_function",
+            "function": "ss_enchants:divinity/particles"
+          }
+        },
+        {
+          "enchanted": "attacker",
+          "affected": "victim",
+          "effect": {
+            "type": "minecraft:damage_entity",
+            "damage_type": "minecraft:generic_kill",
+            "min_damage": {
+              "type": "minecraft:linear",
+              "base": 1,
+              "per_level_above_first": 1
+            },
+            "max_damage": {
+              "type": "minecraft:linear",
+              "base": 1,
+              "per_level_above_first": 1
+            }
+          }
+        }
+      ],
+      "minecraft:damage_immunity": [
+        {
+          "requirements": {
+            "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type": "minecraft:player"
+              }
+          },
+          "effect": {}
+        }
+      ]
+    }
+  }

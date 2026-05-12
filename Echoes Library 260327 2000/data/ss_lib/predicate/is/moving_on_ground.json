@@ -1,0 +1,14 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "movement": {
+      "horizontal_speed": {
+        "min": 0.5
+      }
+    },
+    "flags": {
+      "is_on_ground": true
+    }
+  }
+}

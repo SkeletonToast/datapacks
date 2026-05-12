@@ -1,0 +1,1 @@
+execute at @s anchored eyes run particle small_flame ^ ^ ^ 0.4 0.4 0.4 0 10

@@ -1,0 +1,1 @@
+$attribute @s movement_speed modifier add elytra_visual_speed 0.$(value) add_multiplied_total

@@ -1,0 +1,3 @@
+execute as @a[scores={Dimension=4},tag=!near_campfire] at @s if dimension eochrin:erdefret run particle white_ash ~ ~5 ~ 10 10 10 1 100 normal @s
+execute as @a[scores={Dimension=4},tag=near_campfire] at @s if dimension eochrin:erdefret run particle white_ash ~ ~5 ~ 10 10 10 1 10 normal @s
+# execute as @a[predicate=echoes:in_cold_biome,predicate=ss_lib:in_rain] run particle white_ash ~ ~5 ~ 5 5 5 1 1000 normal @s

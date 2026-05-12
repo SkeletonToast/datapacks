@@ -1,0 +1,9 @@
+{
+    "values": [
+        "minecraft:wooden_sword",
+        "minecraft:golden_sword",
+        "#minecraft:pickaxes",
+        "#minecraft:shovels",
+        "#minecraft:hoes"
+    ]
+}

@@ -1,0 +1,1 @@
+$attribute @s armor base set $(value)

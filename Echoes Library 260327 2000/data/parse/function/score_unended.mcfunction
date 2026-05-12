@@ -1,0 +1,1 @@
+$function parse:score {"function":"$(function)","prepend":"","append":"","prepend_position":"0","append_position":"0","score":"$(score)"}

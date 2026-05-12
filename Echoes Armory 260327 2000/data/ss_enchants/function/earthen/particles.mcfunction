@@ -1,0 +1,1 @@
+execute at @s anchored eyes run particle block{block_state:"minecraft:dirt"} ^ ^ ^ 0.4 0.4 0.4 0 10

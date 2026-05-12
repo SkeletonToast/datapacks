@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+      "SFS",
+      "SRS",
+      "SBS"
+    ],
+    "key": {
+      "S": "minecraft:stone",
+      "F": "minecraft:fire_charge",
+      "R": "minecraft:redstone",
+      "B": "minecraft:snowball"
+    },
+    "result": {
+      "id": "minecraft:clock",
+      "components": {
+        "item_model": "minecraft:sea_pickle",
+        "minecraft:item_name": "Thermometer",
+        "minecraft:lore": [
+          "When in your hand, this item displays",
+          "your current temperature and the ambient",
+          "temperature."
+        ],
+        "minecraft:custom_data": {"thermometer":true}
+      }
+    }
+  }
+  

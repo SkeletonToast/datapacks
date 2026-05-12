@@ -1,0 +1,21 @@
+{
+    "type": "eochrin:lacuna",
+    "generator": {
+      "type": "minecraft:flat",
+      "settings": {
+        "biome": "eochrin:lacuna",
+        "lakes": false,
+        "features": false,
+        "layers": [
+          {
+            "height": 32,
+            "block": "minecraft:air"
+          },
+          {
+            "height": 1,
+            "block": "minecraft:barrier"
+          }
+        ]
+      }
+    }
+  }

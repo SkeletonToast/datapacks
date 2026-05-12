@@ -1,0 +1,11 @@
+{
+    "values": [
+      "echoes:explosion_no_cooldown",
+      "echoes:ichor",
+      "echoes:kinetic_no_cooldown",
+      "echoes:light",
+      "echoes:magic_no_cooldown",
+      "echoes:no_cooldown",
+      "echoes:true"
+    ]
+}

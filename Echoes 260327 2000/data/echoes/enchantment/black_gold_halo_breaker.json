@@ -1,0 +1,43 @@
+{
+  "anvil_cost": 1,
+  "description": {
+    "translate": "Black Gold Halo Breaker",
+    "color": "yellow"
+  },
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "echoes:enchantments/halo_breaker/black_gold_victim"
+        },
+        "enchanted": "attacker",
+        "affected": "victim"
+      }
+    ],
+    "minecraft:tick": [
+      {
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "echoes:enchantments/halo_breaker/black_gold_self"
+        }
+      }
+    ]
+  },
+  "exclusive_set": "#ss_enchants:exclusive_set/elemental",
+  "max_cost": {
+    "base": 21,
+    "per_level_above_first": 11
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 11
+  },
+  "primary_items": "#minecraft:enchantable/sword",
+  "slots": [
+    "mainhand"
+  ],
+  "supported_items": "#minecraft:enchantable/melee_weapon",
+  "weight": 4
+}

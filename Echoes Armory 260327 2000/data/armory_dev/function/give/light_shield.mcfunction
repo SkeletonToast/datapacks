@@ -1,0 +1,1 @@
+give @s shield[custom_data={weapon:{negate_shield_penalty:true}},blocks_attacks={block_delay_seconds:0,damage_reductions:[{base:1,factor:0.9,horizontal_blocking_angle:90}]},item_name="Light Shield"]

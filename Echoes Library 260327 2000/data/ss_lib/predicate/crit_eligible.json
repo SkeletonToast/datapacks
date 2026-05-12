@@ -1,0 +1,19 @@
+
+
+{
+  "condition": "minecraft:all_of",
+  "terms": [
+    {
+      "condition": "minecraft:reference",
+      "name": "ss_lib:is/falling"
+    },
+    {
+      "condition": "minecraft:inverted",
+      "term": {
+        "condition": "minecraft:reference",
+        "name": "ss_lib:is/sprinting"
+      }
+    }
+  ]
+}
+  

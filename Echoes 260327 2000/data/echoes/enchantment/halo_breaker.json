@@ -1,0 +1,151 @@
+{
+  "anvil_cost": 1,
+  "description": {
+    "translate": "Halo Breaker"
+  },
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "requirements": {
+          "condition": "minecraft:damage_source_properties",
+          "predicate": {
+            "tags": [],
+            "source_entity": {
+              "equipment": {
+                "mainhand": {
+                  "components": {
+                    "minecraft:enchantments": {
+                      "echoes:halo_breaker": 1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "echoes:enchantments/halo_breaker/1"
+        },
+        "enchanted": "attacker",
+        "affected": "victim"
+      },
+      {
+        "requirements": {
+          "condition": "minecraft:damage_source_properties",
+          "predicate": {
+            "tags": [],
+            "source_entity": {
+              "equipment": {
+                "mainhand": {
+                  "components": {
+                    "minecraft:enchantments": {
+                      "echoes:halo_breaker": 2
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "echoes:enchantments/halo_breaker/2"
+        },
+        "enchanted": "attacker",
+        "affected": "victim"
+      },
+      {
+        "requirements": {
+          "condition": "minecraft:damage_source_properties",
+          "predicate": {
+            "tags": [],
+            "source_entity": {
+              "equipment": {
+                "mainhand": {
+                  "components": {
+                    "minecraft:enchantments": {
+                      "echoes:halo_breaker": 3
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "echoes:enchantments/halo_breaker/3"
+        },
+        "enchanted": "attacker",
+        "affected": "victim"
+      },
+      {
+        "requirements": {
+          "condition": "minecraft:damage_source_properties",
+          "predicate": {
+            "tags": [],
+            "source_entity": {
+              "equipment": {
+                "mainhand": {
+                  "components": {
+                    "minecraft:enchantments": {
+                      "echoes:halo_breaker": 4
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "echoes:enchantments/halo_breaker/4"
+        },
+        "enchanted": "attacker",
+        "affected": "victim"
+      },
+      {
+        "requirements": {
+          "condition": "minecraft:damage_source_properties",
+          "predicate": {
+            "tags": [],
+            "source_entity": {
+              "equipment": {
+                "mainhand": {
+                  "components": {
+                    "minecraft:enchantments": {
+                      "echoes:halo_breaker": 5
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "echoes:enchantments/halo_breaker/5"
+        },
+        "enchanted": "attacker",
+        "affected": "victim"
+      }
+    ]
+  },
+  "exclusive_set": "#ss_enchants:exclusive_set/elemental",
+  "max_cost": {
+    "base": 21,
+    "per_level_above_first": 11
+  },
+  "max_level": 5,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 11
+  },
+  "primary_items": "#minecraft:enchantable/sword",
+  "slots": [
+    "mainhand"
+  ],
+  "supported_items": "#minecraft:enchantable/melee_weapon",
+  "weight": 4
+}
