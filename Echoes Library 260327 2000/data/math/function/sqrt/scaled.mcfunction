@@ -39,9 +39,11 @@ $execute if score @s generic_a = @s $(input_score) run scoreboard players operat
 
 $scoreboard players operation @s generic_a -= @s $(input_score)
 scoreboard players operation @s generic_a *= @s -1
-scoreboard players operation @s generic_a *= @s 10
-    scoreboard players operation @s generic_a *= @s 10
-$scoreboard players set @s generic_e $(scale)
+# scoreboard players operation @s generic_a *= @s 10
+#     scoreboard players operation @s generic_a *= @s 10
+scoreboard players set @s generic_e 10
+$function math:power/integer {"base_score":"generic_e","exponent":"$(decimal_places)"}
+    # changed this so that scale is just 100 if unscaled
     scoreboard players operation @s generic_a *= @s generic_e
 scoreboard players operation @s generic_a /= @s generic_b
     scoreboard players operation @s generic_a /= @s generic_b
