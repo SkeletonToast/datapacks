@@ -18,5 +18,6 @@ execute unless data storage gamerule_creative_encumbrance toggle run data modify
 execute unless data storage gamerule_combat_jump_scaling toggle run data modify storage gamerule_combat_jump_scaling toggle set value 0
 execute unless data storage gamerule_ambient_particles toggle run data modify storage gamerule_ambient_particles toggle set value 1
 execute unless data storage gamerule_incremental_proficiency_scaling toggle run data modify storage gamerule_incremental_proficiency_scaling toggle set value 0
+execute unless data storage gamerule_hungry_damage_reduction toggle run data modify storage gamerule_hungry_damage_reduction toggle set value 1
 
 scoreboard objectives add aegis_display_level dummy
