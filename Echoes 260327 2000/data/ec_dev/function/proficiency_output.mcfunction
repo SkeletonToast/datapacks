@@ -14,8 +14,14 @@ tellraw @s [{"text":"❖ Adjusted Tact: ","color":"gray"},{"score":{"name":"@s",
 tellraw @s [{"text":"❖ Adjusted Soul: ","color":"gray"},{"score":{"name":"@s","objective":"proficiency_soul"},"color":"light_purple"}]
 tellraw @s [{"text":"❖ Adjusted Mind: ","color":"gray"},{"score":{"name":"@s","objective":"proficiency_soul"},"color":"green"}]
 tellraw @s [""]
-tellraw @s [{"text":"❖ Active Modifiers: ","color":"gray"}]
 
+tellraw @s [{"text":"❖ Active Modifiers: ","color":"gray"}]
+    scoreboard players set @s generic_a 18
+        scoreboard players operation @s generic_b = @s Vitality
+        scoreboard players operation @s generic_b /= @s 7
+    scoreboard players operation @s generic_a -= @s generic_b
+execute if score @s Food <= @s generic_a run tellraw @s [{"text":"Low Hunger: -Proficiency","color":"gray"}]
+tellraw @s [""]
 tellraw @s [{"text":"Strength: ","color":"gray"}]
 execute if items entity @s weapon.mainhand #echoes:netherite_weapon run tellraw @s [{"text":" Netherite Weapon: +Str","color":"red"}]
 execute as @s[tag=Strength_feat_2] unless items entity @s weapon.offhand * run tellraw @s [{"text":" Two Handing: +Str","color":"red"}]

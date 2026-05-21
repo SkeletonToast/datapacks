@@ -1,6 +1,6 @@
 execute as @s[scores={WeaponType=0}] if items entity @s weapon.mainhand #minecraft:swords run scoreboard players set @s WeaponType 1
 execute as @s[scores={WeaponType=0}] if items entity @s weapon.mainhand #minecraft:axes run scoreboard players set @s WeaponType 2
-execute as @s[scores={WeaponType=0}] if items entity @s weapon.mainhand #minecraft:spears run scoreboard players set @s WeaponType 3
+# execute as @s[scores={WeaponType=0}] if items entity @s weapon.mainhand #minecraft:spears run scoreboard players set @s WeaponType 3
 execute as @s[scores={WeaponType=0}] if items entity @s weapon.mainhand #minecraft:shovels[minecraft:custom_data~{weapon:{special:true}}] run scoreboard players set @s WeaponType 3
 execute as @s[scores={WeaponType=0}] if items entity @s weapon.mainhand #minecraft:hoes[minecraft:custom_data~{weapon:{special:true}}] run scoreboard players set @s WeaponType 4
 execute as @s[scores={WeaponType=0}] if items entity @s weapon.mainhand trident run scoreboard players set @s WeaponType 5

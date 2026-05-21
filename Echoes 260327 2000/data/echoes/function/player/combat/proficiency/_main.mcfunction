@@ -10,7 +10,8 @@ scoreboard players set @s prof_tact_unadj 0
 scoreboard players set @s prof_soul_unadj 0
 
 function ss_lib:fetch/weapon {"s":"@s"}
-function ss_lib:fetch/item_selected {"s":"@s"}
+# function ss_lib:fetch/item_selected {"s":"@s"}
+    # not necessary because weapon fetches selected item
 
 # note 8/6/2025 - All proficiencies have been increased by 50%. I'm still trying to figure out the balance between Mind and physical builds
 
@@ -45,8 +46,7 @@ scoreboard players add @s[scores={WeaponType=9}] proficiency_dex 30
 scoreboard players add @s[scores={WeaponType=9}] proficiency_tact 120
 
 # unarmed
-scoreboard players add @s[scores={ItemSelected=0}] proficiency_str 75
-scoreboard players add @s[scores={ItemSelected=0}] proficiency_dex 75
+execute as @s[scores={ItemSelected=0}] run function echoes:player/combat/proficiency/profile/balanced_weak
 
 # golden weapons
     execute as @s[scores={WeaponType=1..4}] if items entity @s weapon.mainhand #echoes:golden_weapon run scoreboard players remove @s proficiency_str 10
@@ -108,6 +108,17 @@ scoreboard players operation @s proficiency += @s proficiency_dex
 scoreboard players operation @s proficiency += @s proficiency_tact
 scoreboard players operation @s proficiency += @s proficiency_soul
 scoreboard players operation @s proficiency += @s proficiency_mind
+
+# hungry damage reduction
+scoreboard players set @s generic_a 18
+scoreboard players operation @s generic_a -= @s Food
+    scoreboard players operation @s generic_b = @s Vitality
+    scoreboard players operation @s generic_b /= @s 7
+scoreboard players operation @s generic_a -= @s generic_b
+scoreboard players operation @s generic_a *= @s 10
+    scoreboard players operation @s generic_a *= @s 5
+
+execute if score $hungryDamageReduction true matches 1 run scoreboard players operation @s[scores={generic_a=1..}] proficiency -= @s generic_a
 
 scoreboard players operation @s gun_base_damage = @s proficiency_dex
 scoreboard players operation @s gun_base_damage += @s proficiency_tact
