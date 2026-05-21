@@ -48,8 +48,13 @@ execute as @a[scores={hungryDamageReduction=0..}] store result score $hungryDama
 execute as @a[scores={hungryDamageReduction=0..}] run data get storage gamerule_hungry_damage_reduction toggle
 scoreboard players set @a hungryDamageReduction -2
 
+execute as @a unless entity @s[scores={aegisSelfVisibility=0..}] run scoreboard players set @s aegisSelfVisibility 1
 scoreboard players set @a[scores={aegisSelfVisibility=2..}] aegisSelfVisibility 0
 scoreboard players set @a[scores={aegisSelfVisibility=..-1}] aegisSelfVisibility 0
+
+execute as @a unless entity @s[scores={attackBuffVisibility=0..}] run scoreboard players set @s attackBuffVisibility 1
+scoreboard players set @a[scores={attackBuffVisibility=2..}] attackBuffVisibility 0
+scoreboard players set @a[scores={attackBuffVisibility=..-1}] attackBuffVisibility 0
 
 scoreboard players set @a[scores={tactCameraDistance=2..}] tactCameraDistance 0
 scoreboard players set @a[scores={tactCameraDistance=..-1}] tactCameraDistance 0

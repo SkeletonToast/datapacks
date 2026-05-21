@@ -1,2 +1,2 @@
-particle dust_color_transition{from_color:[1.0,0.0,0.0],to_color:[0.0,0.0,0.0],scale:1} ~ ~1 ~ 0.2 0.2 0.2 0.01 10 normal @a
-particle dust_color_transition{from_color:[1.0,0.0,0.0],to_color:[0.0,0.0,0.0],scale:1} ~ ~1 ~ 0.2 0.2 0.2 0.01 40 normal @a[distance=.1..]
+particle dust_color_transition{from_color:[1.0,0.0,0.0],to_color:[0.0,0.0,0.0],scale:1} ~ ~1 ~ 0.2 0.2 0.2 0.01 10 normal @a[scores={attackBuffVisibility=1}]
+particle dust_color_transition{from_color:[1.0,0.0,0.0],to_color:[0.0,0.0,0.0],scale:1} ~ ~1 ~ 0.2 0.2 0.2 0.01 40 normal @a[scores={attackBuffVisibility=1},distance=.1..]

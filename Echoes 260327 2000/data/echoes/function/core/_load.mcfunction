@@ -4,7 +4,7 @@ function ss_statuses:_load
 
 function ec_dev:_load
 
-# function echoes:monsters/_load
+function echoes:monsters/_load
 # function echoes:classes/_load
 function echoes:campfires/_load
 
