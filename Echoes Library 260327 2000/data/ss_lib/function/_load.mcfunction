@@ -125,6 +125,8 @@ scoreboard objectives add ss_gen_3 dummy
 scoreboard objectives add ss_gen_4 dummy
 scoreboard objectives add ss_gen_5 dummy
 
+scoreboard objectives add attack_particle_timer dummy
+
 function ss_lib:whitelist {"name":"SkeletonToast"}
 
 # scheduled functions

@@ -10,7 +10,7 @@ function echoes:campfires/_load
 
 function echoes:stats/_load
 function echoes:player/_load
-function echoes:artifacts/_load
+# function echoes:artifacts/_load
 
 gamerule playersSleepingPercentage 101
 gamerule keepInventory true

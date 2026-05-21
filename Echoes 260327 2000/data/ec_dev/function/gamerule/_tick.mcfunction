@@ -43,6 +43,11 @@ execute as @a[scores={incrementalProficiencyScaling=0..}] store result score $in
 execute as @a[scores={incrementalProficiencyScaling=0..}] run data get storage gamerule_incremental_proficiency_scaling toggle
 scoreboard players set @a incrementalProficiencyScaling -2
 
+execute as @a[scores={hungryDamageReduction=-1..}] run function ec_dev:gamerule/hungry_damage_reduction
+execute as @a[scores={hungryDamageReduction=0..}] store result score $hungryDamageReduction true run data get storage gamerule_hungry_damage_reduction toggle
+execute as @a[scores={hungryDamageReduction=0..}] run data get storage gamerule_hungry_damage_reduction toggle
+scoreboard players set @a hungryDamageReduction -2
+
 scoreboard players set @a[scores={aegisSelfVisibility=2..}] aegisSelfVisibility 0
 scoreboard players set @a[scores={aegisSelfVisibility=..-1}] aegisSelfVisibility 0
 

@@ -6,6 +6,7 @@ scoreboard objectives add combatJumpScaling trigger
 scoreboard objectives add ambientParticles trigger
 scoreboard objectives add incrementalProficiencyScaling trigger
 scoreboard objectives add aegisSelfVisibility trigger
+scoreboard objectives add hungryDamageReduction trigger
 scoreboard objectives add tactCameraDistance trigger
     # removes self so that it resets after every session
 scoreboard objectives add checkStats trigger
