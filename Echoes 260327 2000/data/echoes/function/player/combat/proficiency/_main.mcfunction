@@ -109,17 +109,6 @@ scoreboard players operation @s proficiency += @s proficiency_tact
 scoreboard players operation @s proficiency += @s proficiency_soul
 scoreboard players operation @s proficiency += @s proficiency_mind
 
-# hungry damage reduction
-scoreboard players set @s generic_a 18
-scoreboard players operation @s generic_a -= @s Food
-    scoreboard players operation @s generic_b = @s Vitality
-    scoreboard players operation @s generic_b /= @s 7
-scoreboard players operation @s generic_a -= @s generic_b
-scoreboard players operation @s generic_a *= @s 10
-    scoreboard players operation @s generic_a *= @s 5
-
-execute if score $hungryDamageReduction true matches 1 run scoreboard players operation @s[scores={generic_a=1..}] proficiency -= @s generic_a
-
 scoreboard players operation @s gun_base_damage = @s proficiency_dex
 scoreboard players operation @s gun_base_damage += @s proficiency_tact
 function math:round/100_reduce {"score":"gun_base_damage"}
