@@ -116,7 +116,7 @@ scoreboard players operation @s generic_a -= @s Food
     scoreboard players operation @s generic_b /= @s 7
 scoreboard players operation @s generic_a -= @s generic_b
 scoreboard players operation @s generic_a *= @s 10
-    scoreboard players operation @s generic_a *= @s 5
+    scoreboard players operation @s generic_a *= @s 10
 
 execute if score $hungryDamageReduction true matches 1 run scoreboard players operation @s[scores={generic_a=1..}] proficiency -= @s generic_a
 

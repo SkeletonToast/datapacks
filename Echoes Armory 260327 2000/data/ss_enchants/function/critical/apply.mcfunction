@@ -5,4 +5,4 @@ execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantme
 execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"ss_enchants:critical","levels":3}]] run \
     attribute @s attack_damage modifier add ss_enchants:enchantment.critical.3 0.18 add_multiplied_total
 
-scoreboard players set @s attack_particle_timer 2
+# scoreboard players set @s attack_particle_timer 2

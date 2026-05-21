@@ -5,6 +5,7 @@ scoreboard players enable SkeletonToast creativeEncumbrance
 scoreboard players enable SkeletonToast combatJumpScaling
 scoreboard players enable SkeletonToast ambientParticles
 scoreboard players enable SkeletonToast incrementalProficiencyScaling
+scoreboard players enable SkeletonToast hungryDamageReduction
 scoreboard players enable @a aegisSelfVisibility
 scoreboard players enable @a tactCameraDistance
 
