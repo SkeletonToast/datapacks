@@ -18,7 +18,7 @@ execute as @a if items entity @s weapon.offhand shield[custom_data~{weapon:{nega
     execute as @a run attribute @s attack_speed modifier remove two_handed_attack_speed
 
     # properties tick
-    execute if entity @a[scores={HasPropertiedWeapon=1..}] run function ss_armory:properties/properties
+    execute if entity @a[scores={HasPropertiedWeapon=1..}] run function ss_armory:properties/_main
     execute as @a unless entity @s[scores={GunType=4}] run scoreboard players set @s PaintballType 0
     scoreboard players remove @a[scores={GunType=4,PaintballReload=0}] PaintballReload 1
     scoreboard players remove @a[scores={PaintballReload=1..}] PaintballReload 1

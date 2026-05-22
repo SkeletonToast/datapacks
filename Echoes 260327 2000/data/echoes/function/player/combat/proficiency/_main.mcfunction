@@ -67,9 +67,7 @@ execute as @s[tag=Tact_feat_2] on vehicle on passengers if entity @s[tag=Tact_fe
 execute as @s[tag=Tact_feat_2,scores={FallFlying=1}] run scoreboard players add @s proficiency_tact 50
 
 # two handing - strength feat 2
-execute as @s[tag=Strength_feat_2] unless items entity @s weapon.offhand * run scoreboard players operation @s proficiency_str *= @s 2
-        execute as @s[tag=Strength_feat_2] unless items entity @s weapon.offhand * run scoreboard players operation @s proficiency_str *= @s 2
-        execute as @s[tag=Strength_feat_2] unless items entity @s weapon.offhand * run scoreboard players operation @s proficiency_str /= @s 3
+execute as @s[tag=Strength_feat_2] unless items entity @s weapon.offhand * run function echoes:player/combat/proficiency/two_handing
 
 # adaptability - tact feat 3
 execute as @s[scores={Tact=50..69},tag=Tact_feat_3] run scoreboard players operation @s generic_a = @s Tact
