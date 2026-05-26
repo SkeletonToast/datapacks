@@ -31,3 +31,7 @@ execute as @r[scores={DayTime=0}] run scoreboard players add $Day Day 1
 execute as @a[scores={DayTime=23000,Dimension=1}] run function echoes:player/dawn
 
 execute as @a[scores={DayTime=13000,Dimension=1}] run function echoes:player/dusk
+
+execute as @a run function echoes:player/renown
+
+execute as @a run function echoes:player/feats

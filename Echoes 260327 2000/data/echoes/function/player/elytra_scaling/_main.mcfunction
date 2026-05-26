@@ -41,11 +41,11 @@ execute as @a[scores={flight_level=1..}] run attribute @s minecraft:gravity modi
     execute as @a[scores={flight_level=8..,FallFlying=1,slipstream=1..,elytra_boost_cooldown=-200..,generic_a=0},predicate=ss_lib:input/sneak,x_rotation=..190] run attribute @s minecraft:gravity modifier add mind.elytra_gravity -0.5 add_multiplied_base
 
     # looking down
-    execute as @a[scores={flight_level=1..,FallFlying=1,slipstream=1..,elytra_boost_cooldown=-200..},x_rotation=..100,tag=WearingElytra] run function echoes:player/elytra_scaling/looking_down_5
-    execute as @a[scores={flight_level=1..,FallFlying=1,slipstream=1..,elytra_boost_cooldown=-200..},x_rotation=101..118] run function echoes:player/elytra_scaling/looking_down_4
+    execute as @a[scores={flight_level=1..,FallFlying=1,slipstream=1..,elytra_boost_cooldown=-200..},x_rotation=..100,tag=WearingElytra] run function echoes:player/elytra_scaling/looking_down_1
+    execute as @a[scores={flight_level=1..,FallFlying=1,slipstream=1..,elytra_boost_cooldown=-200..},x_rotation=101..118] run function echoes:player/elytra_scaling/looking_down_2
     execute as @a[scores={flight_level=1..,FallFlying=1,slipstream=1..,elytra_boost_cooldown=-200..},x_rotation=119..136] run function echoes:player/elytra_scaling/looking_down_3
-    execute as @a[scores={flight_level=1..,FallFlying=1,slipstream=1..,elytra_boost_cooldown=-200..},x_rotation=137..154] run function echoes:player/elytra_scaling/looking_down_2
-    execute as @a[scores={flight_level=1..,FallFlying=1,slipstream=1..,elytra_boost_cooldown=-200..},x_rotation=155..172] run function echoes:player/elytra_scaling/looking_down_1
+    execute as @a[scores={flight_level=1..,FallFlying=1,slipstream=1..,elytra_boost_cooldown=-200..},x_rotation=137..154] run function echoes:player/elytra_scaling/looking_down_4
+    execute as @a[scores={flight_level=1..,FallFlying=1,slipstream=1..,elytra_boost_cooldown=-200..},x_rotation=155..172] run function echoes:player/elytra_scaling/looking_down_5
 
     scoreboard players set @a[scores={generic_a=251..}] generic_a 250
     execute as @a[scores={flight_level=1..,FallFlying=1,slipstream=1..,elytra_boost_cooldown=-200..}] run function parse:score {"score":"generic_a","prepend":"","append":".","prepend_position":0,"append_position":2,"function":"echoes:player/elytra_scaling/apply_gravity"}
