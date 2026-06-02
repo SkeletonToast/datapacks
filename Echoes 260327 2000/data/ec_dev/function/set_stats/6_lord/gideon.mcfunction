@@ -10,4 +10,4 @@ function ec_dev:auto_set_difficulty
 
 function rp:check_stats
 
-tellraw @s [{"text":"❖ Loaded stats of Gideon Allecker, the Ghost Monarch.","color":"gray"}]
+tellraw @s [{"text":"❖ Loaded stats of Gideon Allecker, first Ghost Monarch.","color":"gray"}]

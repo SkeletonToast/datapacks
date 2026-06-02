@@ -10,4 +10,4 @@ function ec_dev:auto_set_difficulty
 
 function rp:check_stats
 
-tellraw @s [{"text":"❖ Loaded stats of Haligsundr Tharja, slayer of the Prince of Death, goddess of Last Rites, and chaplain of the ","color":"gray"},{"text":"Cerulean Court","color":"blue"},{"text":".","color":"gray"}]
+tellraw @s [{"text":"❖ Loaded stats of Pontiff Tharja, slayer of the Prince of Death, goddess of Last Rites, and chaplain of the ","color":"gray"},{"text":"Cerulean Court","color":"blue"},{"text":".","color":"gray"}]

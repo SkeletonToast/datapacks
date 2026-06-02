@@ -10,4 +10,4 @@ function ec_dev:auto_set_difficulty
 
 function rp:check_stats
 
-tellraw @s [{"text":"❖ Loaded stats of Lus, Caliph of Night, King of the Long Dawn, and Twin Prince.","color":"gray"}]
+tellraw @s [{"text":"❖ Loaded stats of Lus, Caliph of Night, King of Abseroth, and Twin Prince.","color":"gray"}]
