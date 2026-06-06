@@ -37,7 +37,7 @@ $function math:sqrt/find_closest_square {"input_score":"$(input_score)"}
 
 # in case it is a perfect square, and we get it right without further calculation
 $execute if score @s generic_a = @s $(input_score) run scoreboard players operation @s $(output_score) = @s generic_b
-    # $execute if score @s generic_a = @s $(input_score) run scoreboard players operation @s $(output_score) *= @s 10
+    $execute if score @s generic_a = @s $(input_score) run scoreboard players operation @s $(output_score) *= @s 10
     # $execute if score @s generic_a = @s $(input_score) run scoreboard players operation @s $(output_score) *= @s 10
 $execute if score @s generic_a = @s $(input_score) run return fail
 
@@ -45,17 +45,20 @@ $scoreboard players operation @s generic_a -= @s $(input_score)
 scoreboard players operation @s generic_a *= @s -1
 # scoreboard players operation @s generic_a *= @s 10
 #     scoreboard players operation @s generic_a *= @s 10
-scoreboard players set @s generic_e 10
-$function math:power/integer {"base_score":"generic_e","exponent":"$(decimal_places)"}
+scoreboard players operation @s generic_d = @s generic_b
+scoreboard players set @s generic_c 10
+$function math:power/integer {"base_score":"generic_c","exponent":"$(decimal_places)"}
     # changed this so that scale is just 100 if unscaled
-    scoreboard players operation @s generic_a *= @s generic_e
+scoreboard players operation @s generic_b = @s generic_d
+    scoreboard players operation @s generic_a *= @s generic_c
 scoreboard players operation @s generic_a /= @s generic_b
-    scoreboard players operation @s generic_a /= @s generic_b
+    scoreboard players operation @s generic_a /= @s 2
 
 scoreboard players operation @s generic_b *= @s 10
     scoreboard players operation @s generic_b *= @s 10
 
 scoreboard players operation @s generic_a += @s generic_b
+    scoreboard players operation @s generic_a /= @s 10
 
 $scoreboard players operation @s $(output_score) = @s generic_a
 

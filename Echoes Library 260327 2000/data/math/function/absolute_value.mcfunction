@@ -1,0 +1,1 @@
+$execute if score @s $(score) matches ..-1 run scoreboard players operation @s $(score) *= @s -1
