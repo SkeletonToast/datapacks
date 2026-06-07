@@ -24,7 +24,7 @@ scoreboard players set @a used_glow_berries 0
 
 # sleeping stuff
 execute as @a[scores={TimeSinceRest=0}] run function echoes:player/sleeping
-execute if entity @a[scores={TimeSinceDeath=1..}] if entity @a[scores={DayTime=12010..23991}] unless entity @a[scores={TimeSinceRest=1..}] if entity @a[scores={SleepingTime=99..}] run function echoes:player/sleeping_skip_night
+execute if entity @a[scores={TimeSinceDeath=1..}] if entity @a[scores={DayTime=12010..23991}] unless entity @a[scores={TimeSinceRest=1..}] if entity @a[scores={SleepingTime=99..}] run function echoes:player/skip_night
     # this might fix the thunderstorm thing? this just means that you won't be able to skip the night if it's thundering and NOT nighttime.
 execute as @r[scores={DayTime=0}] run scoreboard players add $Day Day 1
 

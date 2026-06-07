@@ -11,7 +11,7 @@ execute if predicate ss_lib:holding/shovel if block ~ ~ ~ minecraft:soul_campfir
 execute if predicate ss_lib:holding/shovel if block ~ ~ ~ minecraft:soul_campfire run setblock ~ ~ ~ campfire[lit=false]
 execute if predicate ss_lib:holding/shovel run kill @n[type=minecraft:interaction,tag=campfire,distance=0]
 
-execute as @s[scores={ItemSelected=0,DayTime=13000..},predicate=ss_lib:is/sneaking,tag=!InCombat] unless entity @a[tag=!Kindling] run function echoes:player/sleeping_skip_night
+execute as @s[scores={ItemSelected=0,DayTime=13000..},predicate=ss_lib:is/sneaking,tag=!InCombat] unless entity @a[tag=!Kindling] run function echoes:player/skip_night
 execute as @s[scores={ItemSelected=0,DayTime=13000..},predicate=ss_lib:is/sneaking,tag=!InCombat] unless entity @a[tag=!Kindling] if block ~ ~ ~ minecraft:campfire run setblock ~ ~ ~ campfire[lit=false]
 execute as @s[scores={ItemSelected=0,DayTime=13000..},predicate=ss_lib:is/sneaking,tag=!InCombat] unless entity @a[tag=!Kindling] if block ~ ~ ~ minecraft:soul_campfire run setblock ~ ~ ~ soul_campfire[lit=false]
 
