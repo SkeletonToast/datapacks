@@ -3,6 +3,7 @@
        "gameVersion": "1.21.11"
     },
     "lint": {
-		"nameOfObjective": null
+		"nameOfObjective": null,
+      "idOmitDefaultNamespace": false
 	}
  }
