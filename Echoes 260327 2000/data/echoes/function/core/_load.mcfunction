@@ -12,7 +12,7 @@ function echoes:stats/_load
 function echoes:player/_load
 # function echoes:artifacts/_load
 
-gamerule playersSleepingPercentage 101
-gamerule keepInventory true
+gamerule players_sleeping_percentage 101
+gamerule keep_inventory true
 
 schedule function echoes:core/scheduled_20t 20t

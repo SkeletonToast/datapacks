@@ -2,7 +2,7 @@
 execute if score $variantMonsters true matches 1 as @e[scores={Age=1},type=#ss_lib:hostile,type=!#echoes:not_spawn_bolstered,tag=!SpawnDuplicated] at @s if predicate ss_lib:random_50_percent run function echoes:monsters/spawn_duplication
 execute if score $variantMonsters true matches 1 as @e[scores={Age=1},type=#ss_lib:hostile] run function echoes:monsters/spawn_bolster
 
-execute as @a[tag=InCombat,scores={DamageTaken=1..}] at @s run data modify entity @e[limit=1,sort=furthest,type=enderman,distance=..20] AngryAt set from entity @s UUID
+execute as @a[tag=InCombat,scores={DamageTaken=1..}] at @s run data modify entity @e[limit=1,sort=furthest,type=enderman,distance=..20] angry_at set from entity @s UUID
 execute as @a[tag=InCombat,scores={DamageTaken=1..}] at @s as @n[limit=1,sort=furthest,type=enderman,distance=..20] run function echoes:monsters/moon_spirit_trigger
 execute as @a[tag=InCombat,scores={DamageTaken=1..}] on attacker if entity @s[type=enderman] run function echoes:monsters/moon_spirit_trigger
 # execute as @a[tag=InCombat,scores={DamageTaken=1..}] at @s run data modify entity @e[limit=1,sort=nearest,type=enderman,distance=..30] AngryAt set from entity @s UUID
