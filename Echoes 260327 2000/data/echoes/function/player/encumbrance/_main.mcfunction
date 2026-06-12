@@ -9,7 +9,7 @@ execute as @a run attribute @s jump_strength modifier remove encumbrance_jump_st
 execute as @a run attribute @s water_movement_efficiency modifier remove encumbrance_water_movement_efficiency
 
 execute as @a[scores={ArmorWeight=1..}] run scoreboard players operation @s encumbrance_armor += @s ArmorWeight
-execute as @a[scores={ArmorWeight=1..},tag=InCombat] run scoreboard players operation @s encumbrance_armor += @s ArmorWeight
+# execute as @a[scores={ArmorWeight=1..},tag=InCombat] run scoreboard players operation @s encumbrance_armor += @s ArmorWeight
 
 # weapon weight
 scoreboard players add @a[scores={WeaponWeight=2}] encumbrance_items 20

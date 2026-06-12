@@ -1,0 +1,1 @@
+$item modify entity @s weapon.mainhand [{"function":"minecraft:set_custom_model_data","strings":{"values":['$(string)'],"mode":"replace_all"}}]
