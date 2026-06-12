@@ -4,7 +4,7 @@
   },
   "exclusive_set": "#ss_enchants:exclusive_set/elemental",
   "supported_items": "#ss_enchants:enchantable/elemental",
-  "primary_items": "#minecraft:enchantable/sword",
+  "primary_items": "#minecraft:swords",
   "weight": 1,
   "max_level": 2,
   "min_cost": {

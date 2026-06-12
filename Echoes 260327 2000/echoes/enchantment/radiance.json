@@ -1,10 +1,10 @@
 {
   "description": {
-    "text": "Searing"
+    "text": "Radiance"
   },
   "exclusive_set": "#minecraft:exclusive_set/damage",
   "supported_items": "#minecraft:enchantable/melee_weapon",
-  "primary_items": "#minecraft:enchantable/sword",
+  "primary_items": "#minecraft:swords",
   "weight": 5,
   "max_level": 5,
   "min_cost": {
@@ -25,22 +25,8 @@
         "enchanted": "attacker",
         "affected": "victim",
         "effect": {
-          "type": "minecraft:play_sound",
-          "sound": "minecraft:entity.generic.burn",
-          "volume": 0.5,
-          "pitch": {
-            "type": "minecraft:uniform",
-            "min_inclusive": 1.9,
-            "max_exclusive": 2.0
-          }
-        }
-      },
-      {
-        "enchanted": "attacker",
-        "affected": "victim",
-        "effect": {
           "type": "minecraft:run_function",
-          "function": "echoes:enchantments/searing_particles"
+          "function": "echoes:enchantments/radiance_particles"
         }
       },
       {
@@ -48,7 +34,7 @@
         "affected": "victim",
         "effect": {
           "type": "minecraft:damage_entity",
-          "damage_type": "minecraft:in_fire",
+          "damage_type": "echoes:light",
           "min_damage": {
             "type": "minecraft:linear",
             "base": 0.5,

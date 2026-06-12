@@ -1,0 +1,1 @@
+the melee_weapon tag was having an issue when i referenced minecraft:enchantable/sharp_weapon? no idea why, i just replaced it with the three values in sharp weapon
