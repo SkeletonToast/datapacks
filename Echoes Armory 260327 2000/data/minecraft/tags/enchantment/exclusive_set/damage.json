@@ -5,8 +5,11 @@
     "minecraft:power",
     "minecraft:smite",
     "minecraft:bane_of_arthropods",
+    "ss_enchants:defender",
     "minecraft:impaling",
     "minecraft:density",
-    "minecraft:breach"
+    "minecraft:breach",
+    "ss_enchants:hexblade",
+    "ss_enchants:frenzy"
   ]
 }
