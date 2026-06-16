@@ -27,4 +27,4 @@ execute as @a run attribute @s minecraft:movement_speed modifier remove elytra_v
 
 execute as @a unless entity @s[scores={EchoDifficulty=0..}] run scoreboard players set @s EchoDifficulty 3
 
-function echoes:player/combat/combat
+function echoes:player/combat/_main

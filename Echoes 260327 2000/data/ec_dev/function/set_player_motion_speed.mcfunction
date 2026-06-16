@@ -1,0 +1,1 @@
+$scoreboard players set $strength player_motion.api.launch $(i)
