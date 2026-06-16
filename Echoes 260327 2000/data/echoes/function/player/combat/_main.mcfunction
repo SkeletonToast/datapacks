@@ -41,3 +41,5 @@ tag @a[scores={in_combat=-1}] add InCombat
 execute as @a[scores={in_combat=0},tag=InCombat] run function echoes:player/combat/exit_message
 execute as @a[scores={in_combat=0},tag=InCombat] run function echoes:player/combat/techniques/disable
 tag @a[scores={in_combat=0}] remove InCombat
+
+# function echoes:player/combat/arts/_main

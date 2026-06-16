@@ -5,4 +5,4 @@ scoreboard players operation @s EchoLevel += @s Vitality
 scoreboard players operation @s EchoLevel += @s Mind
 scoreboard players operation @s EchoLevel += @s Tact
 scoreboard players operation @s EchoLevel += @s Soul
-scoreboard players remove @s EchoLevel 70
+scoreboard players remove @s EchoLevel 69

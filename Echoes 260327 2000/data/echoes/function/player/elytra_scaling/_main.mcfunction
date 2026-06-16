@@ -1,7 +1,5 @@
 function ss_lib:fetch/fall_flying {"s":"@a[scores={flight_level=1..}]"}
 
-execute as @a[scores={used_firework_rocket=1..}] at @s anchored eyes facing ^ ^ ^1 run function player_motion:api/launch_looking
-
 execute as @a[scores={flight_level=1..}] if items entity @s armor.chest elytra run tag @s add WearingElytra
 
 # flight level calculation
