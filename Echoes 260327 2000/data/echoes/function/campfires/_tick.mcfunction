@@ -8,10 +8,9 @@ function echoes:campfires/lanterns
 
 # scoreboard players set @a[scores={used_flint_and_steel=1..}] placed_campfire 1
 
-    # FIX THIS!!!!!!!!!!
-execute as @a at @s if entity @e[type=interaction,tag=campfire,distance=..5] run tag @s add near_campfire_5
-execute as @a at @s if entity @e[type=interaction,tag=campfire,distance=..10] run tag @s add near_campfire_10
-    tag @a[tag=near_campfire_5] add near_campfire
+execute as @a at @s as @e[type=interaction,tag=campfire,distance=..10] at @s positioned ~-10 ~-1 ~-10 run tag @a[dx=20,dy=11,dz=20] add near_campfire_10
+execute as @a[tag=near_campfire_10] at @s as @e[type=interaction,tag=campfire,distance=..5] at @s positioned ~-5 ~-1 ~-5 run tag @a[dx=10,dy=6,dz=10] add near_campfire_5
+tag @a[tag=near_campfire_10] add near_campfire
 
 # execute as @a on vehicle if entity @s[type=#minecraft:boat] on passengers if items entity @s weapon.mainhand #echoes:campfires run tag @s add near_campfire
 
