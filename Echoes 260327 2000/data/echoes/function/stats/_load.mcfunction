@@ -69,11 +69,3 @@ scoreboard objectives add tact_armor_toughness dummy
 scoreboard objectives add soul_burning_time dummy
 scoreboard objectives add soul_oxygen_bonus dummy
 scoreboard objectives add soul_luck dummy
-
-# strafing
-scoreboard objectives add StrafeTime dummy
-scoreboard objectives add SuperSprintTime dummy
-    # scoreboard objectives add strafe_input dummy
-    # scoreboard objectives add strafe_direction dummy
-    # scoreboard objectives add strafe_direction_stored dummy
-    # scoreboard objectives add strafe_flag dummy

@@ -35,3 +35,5 @@ execute as @a[scores={DayTime=13000,Dimension=1}] run function echoes:player/dus
 execute as @a run function echoes:player/renown
 
 execute as @a run function echoes:player/feats
+
+function echoes:player/movement/glide

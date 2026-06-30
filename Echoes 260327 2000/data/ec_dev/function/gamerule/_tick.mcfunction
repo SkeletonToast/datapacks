@@ -14,11 +14,6 @@ execute as @a[scores={timeDilation=0..}] store result score $timeDilation true r
 execute as @a[scores={timeDilation=0..}] run data get storage gamerule_time_dilation toggle
 scoreboard players set @a timeDilation -2
 
-execute as @a[scores={smoothSprinting=-1..}] run function ec_dev:gamerule/smooth_sprinting
-execute as @a[scores={smoothSprinting=0..}] store result score $smoothSprinting true run data get storage gamerule_smooth_sprinting toggle
-execute as @a[scores={smoothSprinting=0..}] run data get storage gamerule_smooth_sprinting toggle
-scoreboard players set @a smoothSprinting -2
-
 execute as @a[scores={variantMonsters=-1..}] run function ec_dev:gamerule/variant_monsters
 execute as @a[scores={variantMonsters=0..}] store result score $variantMonsters true run data get storage gamerule_variant_monsters toggle
 execute as @a[scores={variantMonsters=0..}] run data get storage gamerule_variant_monsters toggle
@@ -52,6 +47,17 @@ scoreboard players set @a hungryDamageReduction -2
 execute as @a unless entity @s[scores={aegisSelfVisibility=0..}] run scoreboard players set @s aegisSelfVisibility 1
 scoreboard players set @a[scores={aegisSelfVisibility=2..}] aegisSelfVisibility 0
 scoreboard players set @a[scores={aegisSelfVisibility=..-1}] aegisSelfVisibility 0
+
+# execute as @a[scores={smoothSprinting=-1..}] run function ec_dev:gamerule/smooth_sprinting
+# execute as @a[scores={smoothSprinting=0..}] store result score $smoothSprinting true run data get storage gamerule_smooth_sprinting toggle
+# execute as @a[scores={smoothSprinting=0..}] run data get storage gamerule_smooth_sprinting toggle
+# scoreboard players set @a smoothSprinting -2
+# scoreboard players operation @s smoothSprinting = $smoothSprinting true
+
+execute as @a unless entity @s[scores={smoothSprinting=0..}] run scoreboard players set @s smoothSprinting 1
+scoreboard players set @a[scores={smoothSprinting=2..}] smoothSprinting 0
+scoreboard players set @a[scores={smoothSprinting=..-1}] smoothSprinting 0
+
 
 execute as @a unless entity @s[scores={attackBuffVisibility=0..}] run scoreboard players set @s attackBuffVisibility 1
 scoreboard players set @a[scores={attackBuffVisibility=2..}] attackBuffVisibility 0

@@ -45,19 +45,19 @@
     scoreboard players operation @s generic_attribute = @s Dexterity
     scoreboard players operation @s generic_c = @s SprintTime
         scoreboard players operation @s generic_c *= @s smooth_sprint_multiplier
-    execute if score $smoothSprinting true matches 1 as @s[scores={SprintTime=1..,StrafeTime=0}] if score @s generic_attribute > @s generic_c run scoreboard players operation @s generic_attribute = @s generic_c
+    execute if score @s smoothSprinting matches 1 as @s[scores={SprintTime=1..,StrafeTime=0}] if score @s generic_attribute > @s generic_c run scoreboard players operation @s generic_attribute = @s generic_c
 
         # strafing
-        execute as @s[scores={SprintTime=..0}] run function echoes:stats/strafe
+        execute as @s[scores={SprintTime=..0}] run function echoes:player/movement/strafe
             scoreboard players operation @s generic_c = @s StrafeTime
                 scoreboard players operation @s generic_c *= @s smooth_sprint_multiplier
             tag @s remove SuperSprinting
-            execute if score $smoothSprinting true matches 1 as @s[scores={StrafeTime=1..}] if score @s generic_attribute > @s generic_c run scoreboard players operation @s generic_attribute = @s generic_c
+            execute if score @s smoothSprinting matches 1 as @s[scores={StrafeTime=1..}] if score @s generic_attribute > @s generic_c run scoreboard players operation @s generic_attribute = @s generic_c
 
             # super sprinting
-            execute as @s[scores={SuperSprintTime=100..}] if predicate ss_lib:input/forward unless predicate ss_lib:input/sprint run function echoes:stats/super_sprint
-            execute as @s[scores={SprintTime=40..,Food=7..,SneakTime=0}] if predicate ss_lib:input/sprint run function echoes:stats/super_sprint
-            execute as @s[scores={StrafeTime=20..,SprintTime=0,Food=7..,SneakTime=0}] if predicate ss_lib:input/sprint run function echoes:stats/super_sprint
+            execute as @s[scores={SuperSprintTime=100..}] if predicate ss_lib:input/forward unless predicate ss_lib:input/sprint run function echoes:player/movement/super_sprint
+            execute as @s[scores={SprintTime=40..,Food=7..,SneakTime=0}] if predicate ss_lib:input/sprint run function echoes:player/movement/super_sprint
+            execute as @s[scores={StrafeTime=20..,SprintTime=0,Food=7..,SneakTime=0}] if predicate ss_lib:input/sprint run function echoes:player/movement/super_sprint
             scoreboard players set @s[tag=!SuperSprinting] SuperSprintTime 0
         
         # diseligibility
@@ -65,7 +65,7 @@
         scoreboard players set @s[scores={Food=..6}] generic_attribute 0
         scoreboard players set @s[scores={SneakTime=1..}] generic_attribute 0
 
-        execute if score $smoothSprinting true matches 0 run scoreboard players remove @s generic_attribute 1
+        execute if score @s smoothSprinting matches 0 run scoreboard players remove @s generic_attribute 1
             # this is here if smooth sprinting is ever changed to be modifiable on a personal level.
             # this will mean that if you have smooth sprinting disabled, your maximum speed will be slightly lower, to compensate for the instant acceleration.
 

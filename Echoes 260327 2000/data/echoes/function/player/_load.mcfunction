@@ -104,3 +104,13 @@ gamerule natural_health_regeneration false
         # scoreboard objectives remove body_temp_modifier
 
     scoreboard objectives add drink_water minecraft.used:minecraft.potion
+
+# movement
+scoreboard objectives add StrafeTime dummy
+scoreboard objectives add SuperSprintTime dummy
+scoreboard objectives add GlideTime dummy
+scoreboard objectives add GlideEligible dummy
+    # scoreboard objectives add strafe_input dummy
+    # scoreboard objectives add strafe_direction dummy
+    # scoreboard objectives add strafe_direction_stored dummy
+    # scoreboard objectives add strafe_flag dummy
