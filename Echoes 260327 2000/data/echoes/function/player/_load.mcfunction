@@ -30,7 +30,6 @@ gamerule natural_health_regeneration false
     scoreboard objectives add killed_mob minecraft.custom:mob_kills
     scoreboard objectives add killed_player minecraft.custom:player_kills
 
-    scoreboard objectives add ichor_damage dummy
 
 # healing items
     scoreboard objectives add used_honey_bottle minecraft.used:minecraft.honey_bottle
@@ -47,30 +46,33 @@ gamerule natural_health_regeneration false
     scoreboard objectives add encumbrance_items dummy
     scoreboard objectives add encumbrance_armor dummy
 
-# proficiency
-    scoreboard objectives add proficiency dummy
-    scoreboard objectives add proficiency_temp dummy
-    scoreboard objectives add proficiency_str dummy
-    scoreboard objectives add proficiency_dex dummy
-    scoreboard objectives add proficiency_tact dummy
-    scoreboard objectives add proficiency_soul dummy
-    scoreboard objectives add proficiency_mind dummy
-    scoreboard objectives add prof_str_unadj dummy
-    scoreboard objectives add prof_dex_unadj dummy
-    scoreboard objectives add prof_tact_unadj dummy
-    scoreboard objectives add prof_soul_unadj dummy
-    scoreboard objectives add prof_mind_unadj dummy
-    
-    scoreboard objectives add proficiency_recursion dummy
-    scoreboard objectives add proficiency_inc_sum dummy
-    scoreboard objectives add minprof dummy
-    scoreboard objectives add prof dummy
-    scoreboard objectives add statmax dummy
-    scoreboard objectives add scale dummy
-    scoreboard objectives add truth dummy
-    scoreboard objectives add mintruth dummy
-    scoreboard objectives add lies dummy
-    scoreboard objectives add maybe dummy
+# combat
+    # proficiency
+        scoreboard objectives add proficiency dummy
+        scoreboard objectives add proficiency_temp dummy
+        scoreboard objectives add proficiency_str dummy
+        scoreboard objectives add proficiency_dex dummy
+        scoreboard objectives add proficiency_tact dummy
+        scoreboard objectives add proficiency_soul dummy
+        scoreboard objectives add proficiency_mind dummy
+        scoreboard objectives add prof_str_unadj dummy
+        scoreboard objectives add prof_dex_unadj dummy
+        scoreboard objectives add prof_tact_unadj dummy
+        scoreboard objectives add prof_soul_unadj dummy
+        scoreboard objectives add prof_mind_unadj dummy
+        
+        scoreboard objectives add proficiency_recursion dummy
+        scoreboard objectives add proficiency_inc_sum dummy
+        # scoreboard objectives add minprof dummy
+        # scoreboard objectives add prof dummy
+        # scoreboard objectives add statmax dummy
+        # scoreboard objectives add scale dummy
+        # scoreboard objectives add truth dummy
+        # scoreboard objectives add mintruth dummy
+        # scoreboard objectives add lies dummy
+        # scoreboard objectives add maybe dummy
+
+    scoreboard objectives add ichor_damage dummy
 
 # elytra scaling stuff
     scoreboard objectives add elytra_boost_cooldown dummy
