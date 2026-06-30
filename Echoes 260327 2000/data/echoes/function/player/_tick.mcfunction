@@ -36,4 +36,4 @@ execute as @a run function echoes:player/renown
 
 execute as @a run function echoes:player/feats
 
-function echoes:player/movement/glide
+# function echoes:player/movement/glide

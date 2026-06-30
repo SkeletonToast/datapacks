@@ -33,9 +33,9 @@
     # execute unless score @s generic_attribute = @s res_armor_health run function parse:score \
     #     {"score":"generic_attribute","prepend":"-","append":"","prepend_position":0,"append_position":0,"function":"echoes:stats/set_armor_health"}
 
-# function ss_lib:fetch/armor {"s":"@s[scores={Tact=30..}]"}
-    # armor (if armorless): +Tact / 2 (If Tact ≥ 30, caps at 68 Tact)
-    # armor_toughness (if armorless): +Tact / 5 (If Tact ≥ 30, caps at 68 Tact)
+    # function ss_lib:fetch/armor {"s":"@s[scores={Tact=30..}]"}
+        # armor (if armorless): +Tact / 2 (If Tact ≥ 30, caps at 68 Tact)
+        # armor_toughness (if armorless): +Tact / 5 (If Tact ≥ 30, caps at 68 Tact)
 
 # movement_speed: +Dex / 1000
     scoreboard players operation @s smooth_sprint_multiplier = @s Food
@@ -101,7 +101,7 @@
         scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
         scoreboard players set @s[scores={SprintTime=0,StrafeTime=0,SneakTime=0}] generic_attribute 0
         scoreboard players set @s[predicate=!ss_lib:input/sprint] generic_attribute 0
-        execute if score $combatJumpScaling true matches 0 run scoreboard players set @s[tag=InCombat] generic_attribute 0
+        execute if score $combatJumpScaling true matches 0 unless score @s SuperSprintTime matches 1.. run scoreboard players set @s[tag=InCombat] generic_attribute 0
     execute unless score @s generic_attribute = @s dex_jump_strength run function parse:score \
         {"score":"generic_attribute","prepend":"","append":".","prepend_position":0,"append_position":2,"function":"echoes:stats/set_jump_strength"}
 
