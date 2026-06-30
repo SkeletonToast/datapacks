@@ -129,6 +129,8 @@ scoreboard objectives add attack_particle_timer dummy
 
 function ss_lib:whitelist {"name":"SkeletonToast"}
 
+scoreboard objectives add ssid dummy
+
 # scheduled functions
 schedule function ss_lib:scheduled_10t 10t
 schedule function ss_lib:scheduled_20t 20t

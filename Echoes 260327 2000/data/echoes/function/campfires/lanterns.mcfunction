@@ -1,9 +1,11 @@
 # clear @a[scores={RestOrRespawn=2}] *[custom_data~{ember_lantern:true}]
 # execute as @a[scores={RestOrRespawn=2}] run function echoes:campfires/lantern_give
 
-execute as @a[predicate=ss_lib:is/sneaking,predicate=echoes:holding_ember_lantern,scores={lantern_cooldown=0,OnGround=1}] unless entity @s[predicate=ss_lib:is/moving] at @s anchored eyes positioned ^ ^ ^ positioned ~ ~-0.3 ~ unless entity @e[type=minecraft:interaction,tag=Lantern,dx=0.01,dy=0.01,dz=0.01] unless entity @e[type=minecraft:interaction,tag=Lantern,dx=-0.01,dy=-0.01,dz=-0.01] summon interaction run function echoes:campfires/lantern_interaction
+execute as @a[predicate=ss_lib:is/sneaking,predicate=echoes:holding_ember_lantern,scores={lantern_cooldown=0,OnGround=1}] unless entity @s[predicate=ss_lib:is/moving] at @s anchored eyes positioned ^ ^ ^ positioned ~-0.01 ~-0.31 ~-0.01 unless entity @e[type=minecraft:interaction,tag=Lantern,dx=0.02,dy=0.02,dz=0.02] summon interaction run function echoes:campfires/lantern_interaction
 execute as @a[predicate=ss_lib:is/sneaking,predicate=echoes:holding_ember_lantern,scores={lantern_cooldown=0,OnGround=1}] run function ss_statuses:immobilized
-execute as @e[type=minecraft:interaction,tag=Lantern] at @s unless entity @a[predicate=ss_lib:is/sneaking,dx=0.01,dy=0.01,dz=0.01] unless entity @a[predicate=ss_lib:is/sneaking,dx=-0.01,dy=-0.01,dz=-0.01] run kill @s
+# execute as @e[type=minecraft:interaction,tag=Lantern] at @s unless entity @a[predicate=ss_lib:is/sneaking,dx=0.01,dy=0.01,dz=0.01] unless entity @a[predicate=ss_lib:is/sneaking,dx=-0.01,dy=-0.01,dz=-0.01] run kill @s
+execute as @e[type=minecraft:interaction,tag=Lantern] at @s positioned ~-0.01 ~-0.01 ~-0.01 unless entity @a[predicate=ss_lib:is/sneaking,dx=0.02,dy=0.02,dz=0.02] run kill @s
+    # fixed detection using new dx system
 execute as @e[type=minecraft:interaction,tag=Lantern] at @s if data entity @s interaction on target run scoreboard players set @s lantern_cooldown 10
     execute as @e[type=minecraft:interaction,tag=Lantern] at @s if data entity @s interaction on target run scoreboard players set @s generic_a 40
     execute as @e[type=minecraft:interaction,tag=Lantern] at @s if data entity @s interaction on target run scoreboard players operation @s generic_a += @s Soul
