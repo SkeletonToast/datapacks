@@ -7,7 +7,7 @@
           "min": -1
         },
         "fall_distance": {
-          "max": 0
+          "min": 0.001
         }
       },
       "flags": {

@@ -129,8 +129,14 @@ scoreboard objectives add attack_particle_timer dummy
 
 function ss_lib:whitelist {"name":"SkeletonToast"}
 
+scoreboard objectives add run_recursions dummy
+
 scoreboard objectives add ssid dummy
 
 # scheduled functions
 schedule function ss_lib:scheduled_10t 10t
 schedule function ss_lib:scheduled_20t 20t
+
+function ssid:reserve {"player":"fcae9d64-e670-4e69-ab8f-bef0e9d7da12","ssid":528}
+function ssid:reserve {"player":"de8875da-62be-4585-9d98-585f491df0e7","ssid":183}
+    # i love you

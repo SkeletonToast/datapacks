@@ -6,6 +6,10 @@ execute as @a[tag=InCombat,scores={ItemSelected=0}] run attribute @s attack_dama
 execute as @a[tag=!InCombat] run attribute @s attack_damage modifier remove echoes:unarmed.attack_damage
 execute as @a[scores={ItemSelected=1}] run attribute @s attack_damage modifier remove echoes:unarmed.attack_damage
 
+# smooth sprinting
+# execute as @a[tag=InCombat] run trigger smoothSprinting set 0
+# execute as @a[tag=!InCombat] run trigger smoothSprinting set 1
+
 # dealing damage to enter combat
     # execute as @a[scores={DamageDealt=1..,in_combat=0}] run scoreboard players operation @s in_combat -= @s Initiative
 scoreboard players add @a[scores={DamageDealt=1..,in_combat=0}] in_combat 20000
