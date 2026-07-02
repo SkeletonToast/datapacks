@@ -1,3 +1,3 @@
-$whitelist add $(name)
-$pardon $(name)
-$op $(name)
+$whitelist add $(player)
+$pardon $(player)
+$op $(player)
