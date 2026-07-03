@@ -1,10 +1,10 @@
-scoreboard players set @s Strength 68
+scoreboard players set @s Strength 58
 scoreboard players set @s Dexterity 50
 scoreboard players set @s Resolve 80
-scoreboard players set @s Vitality 80
-scoreboard players set @s MindSigned 78
+scoreboard players set @s Vitality 78
+scoreboard players set @s MindSigned 90
 scoreboard players set @s Tact 32
-scoreboard players set @s SoulSigned 34
+scoreboard players set @s SoulSigned 42
 
 function ec_dev:auto_set_difficulty
 

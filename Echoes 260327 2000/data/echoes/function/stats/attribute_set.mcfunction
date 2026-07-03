@@ -21,6 +21,7 @@
     scoreboard players set @s[scores={EchoDifficulty=4..,generic_attribute=61..}] generic_attribute 60
         # execute if score @s generic_attribute < @s Tenacity run scoreboard players operation @s generic_attribute = @s Tenacity
             # not necessary because ResolveHealth is already set to Tenacity if it's less
+    execute if score @s generic_attribute < @s Fortitude run scoreboard players operation @s generic_attribute = @s Fortitude
     execute unless score @s generic_attribute = @s res_max_health run function parse:score_unended \
         {"score":"generic_attribute","function":"echoes:stats/set_max_health"}
             # this sets base max health, so don't worry about subtracting Tenacity or anything
@@ -39,8 +40,9 @@
 
 # movement_speed: +Dex / 1000
     scoreboard players operation @s smooth_sprint_multiplier = @s Food
-        scoreboard players remove @s smooth_sprint_multiplier 5
+        scoreboard players operation @s smooth_sprint_multiplier /= @s 2
     scoreboard players set @s[scores={smooth_sprint_multiplier=..-1}] smooth_sprint_multiplier 0
+# scoreboard players set @s smooth_sprint_multiplier 1
 
     scoreboard players operation @s generic_attribute = @s Dexterity
     scoreboard players operation @s generic_c = @s SprintTime

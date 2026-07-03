@@ -26,7 +26,9 @@ tellraw @s[scores={SoulSigned=..-1}] [{"text":"❖ You have ","color":"gray"},{"
     
 tellraw @s[scores={EchoDifficulty=1..}] [""]
 tellraw @s[scores={EchoDifficulty=1}] [{"text":"⚔ You are on ","color":"gray"},{"text":"Homesteader","color":"blue"},{"text":" difficulty.","color":"gray"}]
-tellraw @s[scores={EchoDifficulty=2}] [{"text":"⚔ You are on ","color":"gray"},{"text":"Retainer","color":"green"},{"text":" difficulty.","color":"gray"}]
-tellraw @s[scores={EchoDifficulty=3}] [{"text":"⚔ You are on ","color":"gray"},{"text":"Vestige","color":"yellow"},{"text":" difficulty.","color":"gray"}]
-tellraw @s[scores={EchoDifficulty=4}] [{"text":"⚔ You are on ","color":"gray"},{"text":"Aspirant","color":"gold"},{"text":" difficulty.","color":"gray"}]
-tellraw @s[scores={EchoDifficulty=5}] [{"text":"⚔ You are on ","color":"gray"},{"text":"Monarch","color":"red"},{"text":" difficulty.","color":"gray"}]
+tellraw @s[scores={EchoDifficulty=2}] [{"text":"⚔ You are on ","color":"gray"},{"text":"Pilgrim","color":"green"},{"text":" difficulty.","color":"gray"}]
+tellraw @s[scores={EchoDifficulty=3}] [{"text":"⚔ You are on ","color":"gray"},{"text":"Retainer","color":"yellow"},{"text":" difficulty.","color":"gray"}]
+tellraw @s[scores={EchoDifficulty=4}] [{"text":"⚔ You are on ","color":"gray"},{"text":"Vestige","color":"gold"},{"text":" difficulty.","color":"gray"}]
+tellraw @s[scores={EchoDifficulty=5}] [{"text":"⚔ You are on ","color":"gray"},{"text":"Aspirant","color":"red"},{"text":" difficulty.","color":"gray"}]
+tellraw @s[scores={EchoDifficulty=6}] [{"text":"⚔ You are on ","color":"gray"},{"text":"Lord","color":"dark_red"},{"text":" difficulty.","color":"gray"}]
+tellraw @s[scores={EchoDifficulty=7}] [{"text":"⚔ You are on ","color":"gray"},{"text":"Monarch","color":"light_purple"},{"text":" difficulty.","color":"gray"}]

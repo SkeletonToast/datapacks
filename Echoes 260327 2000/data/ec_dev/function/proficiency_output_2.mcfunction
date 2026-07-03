@@ -1,0 +1,1 @@
+$tellraw @s [{"text":"❖ Total Attack Damage: ","color":"gray"},{"text":"$(value)","color":"white"}]

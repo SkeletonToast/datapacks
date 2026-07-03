@@ -6,9 +6,9 @@ execute at @s[scores={OnGround=1}] run particle small_gust ~ ~0.3 ~ 0.1 0.1 0.1 
 scoreboard players operation @s generic_c = @s SuperSprintTime
     scoreboard players operation @s generic_c *= @s smooth_sprint_multiplier
 
-execute if score $smoothSprinting true matches 1 if score @s generic_c < @s generic_attribute run scoreboard players operation @s generic_attribute += @s generic_c
-execute if score $smoothSprinting true matches 1 if score @s generic_c >= @s generic_attribute run scoreboard players operation @s generic_attribute += @s generic_attribute
-execute if score $smoothSprinting true matches 0 run scoreboard players operation @s generic_attribute += @s generic_attribute
+execute if score @s smoothSprinting matches 1 if score @s generic_c < @s generic_attribute run scoreboard players operation @s generic_attribute += @s generic_c
+execute if score @s smoothSprinting matches 1 if score @s generic_c >= @s generic_attribute run scoreboard players operation @s generic_attribute += @s generic_attribute
+execute if score @s smoothSprinting matches 0 run scoreboard players operation @s generic_attribute += @s generic_attribute
 
 tag @s remove SurgeSprintEligible
 tag @s[scores={Dexterity=30..}] add SurgeSprintEligible
@@ -18,10 +18,11 @@ execute as @s[scores={SuperSprintTime=100},tag=SurgeSprintEligible] at @s anchor
 scoreboard players add @s[scores={SuperSprintTime=100..},tag=SurgeSprintEligible] generic_attribute 50
 
 # super jumping
-    # tag @s[scores={SuperSprintTime=100..,Dexterity=50..,OnGround=1}] add SurgeJumpEligible
-    # execute as @s[tag=SurgeJumpEligible,predicate=ss_lib:input/jump] at @s anchored eyes positioned ^ ^ ^-0.3 run summon creeper ~ ~ ~ {ExplosionRadius:-1,Fuse:0,ignited:true}
-    # tag @s[predicate=ss_lib:input/jump] remove SurgeJumpEligible
-    # tag @s[scores={OnGround=0}] remove SurgeJumpEligible
+    # tag @s[scores={SuperSprintTime=100..,Dexterity=70..,OnGround=1}] add SurgeJumpEligible
+    execute as @s[tag=SurgeJumpEligible,predicate=ss_lib:input/jump] run scoreboard players set $strength player_motion.api.launch 10000
+    execute as @s[tag=SurgeJumpEligible,predicate=ss_lib:input/jump] at @s anchored eyes run function player_motion:api/launch_looking
+    tag @s[predicate=ss_lib:input/jump] remove SurgeJumpEligible
+    tag @s[scores={OnGround=0}] remove SurgeJumpEligible
 
 # out of combat
 effect give @s[tag=!SurgeSprintEligible,scores={OnGround=1,Dexterity=40..59},tag=InCombat] hunger 1 4 true
