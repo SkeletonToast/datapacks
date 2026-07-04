@@ -1,13 +1,3 @@
-scoreboard players set @s Strength 37
-scoreboard players set @s Dexterity 30
-scoreboard players set @s Resolve 80
-scoreboard players set @s Vitality 40
-scoreboard players set @s MindSigned 120
-scoreboard players set @s Tact 90
-scoreboard players set @s SoulSigned 33
-
-function ec_dev:auto_set_difficulty
-
-function rp:check_stats
+function ec_dev:set_stats/set_stats {"st":37,"dx":30,"rs":80,"vt":40,"md":120,"tc":90,"sl":33}
 
 tellraw @s [{"text":"❖ Loaded stats of Ashkeeper Udmund, Ashen Revenant and Provost of Eigengrau.","color":"gray"}]

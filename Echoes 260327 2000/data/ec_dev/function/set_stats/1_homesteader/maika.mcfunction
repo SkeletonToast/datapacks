@@ -1,12 +1,3 @@
-scoreboard players set @s Strength 19
-scoreboard players set @s Dexterity 14
-scoreboard players set @s Resolve 16
-scoreboard players set @s MindSigned 7
-scoreboard players set @s Tact 9
-scoreboard players set @s SoulSigned 15
-
-function ec_dev:auto_set_difficulty
-
-function rp:check_stats
+function ec_dev:set_stats/set_stats {"st":19,"dx":14,"rs":14,"vt":8,"md":7,"tc":9,"sl":8}
 
 tellraw @s [{"text":"❖ Loaded stats of Blacksmith Maika.","color":"gray"}]

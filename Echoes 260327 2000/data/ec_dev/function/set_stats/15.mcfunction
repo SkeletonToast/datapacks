@@ -1,11 +1,1 @@
-scoreboard players set @s Strength 15
-scoreboard players set @s Dexterity 15
-scoreboard players set @s Resolve 15
-scoreboard players set @s Vitality 15
-scoreboard players set @s MindSigned 15
-scoreboard players set @s Tact 15
-scoreboard players set @s SoulSigned 15
-
-function ec_dev:auto_set_difficulty
-
-function rp:check_stats
+function ec_dev:set_stats/set_stats {"st":15,"dx":15,"rs":15,"vt":15,"md":15,"tc":15,"sl":15}

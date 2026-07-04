@@ -1,13 +1,3 @@
-scoreboard players set @s Strength 25
-scoreboard players set @s Dexterity 66
-scoreboard players set @s Resolve 40
-scoreboard players set @s Vitality 40
-scoreboard players set @s MindSigned 30
-scoreboard players set @s Tact 62
-scoreboard players set @s SoulSigned 10
-
-function ec_dev:auto_set_difficulty
-
-function rp:check_stats
+function ec_dev:set_stats/set_stats {"st":25,"dx":66,"rs":40,"vt":40,"md":30,"tc":62,"sl":10}
 
 tellraw @s [{"text":"❖ Loaded stats of Hellion the Firebrand, harbinger of Ilina.","color":"gray"}]

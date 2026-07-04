@@ -1,11 +1,1 @@
-scoreboard players set @s Strength 70
-scoreboard players set @s Dexterity 70
-scoreboard players set @s Resolve 70
-scoreboard players set @s Vitality 70
-scoreboard players set @s MindSigned 70
-scoreboard players set @s Tact 70
-scoreboard players set @s SoulSigned 70
-
-function ec_dev:auto_set_difficulty
-
-function rp:check_stats
+function ec_dev:set_stats/set_stats {"st":70,"dx":70,"rs":70,"vt":70,"md":70,"tc":70,"sl":70}

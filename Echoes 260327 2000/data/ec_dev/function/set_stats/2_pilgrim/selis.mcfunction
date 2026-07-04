@@ -1,13 +1,3 @@
-scoreboard players set @s Strength 8
-scoreboard players set @s Dexterity 12
-scoreboard players set @s Resolve 20
-scoreboard players set @s Vitality 15
-scoreboard players set @s MindSigned 29
-scoreboard players set @s Tact 21
-scoreboard players set @s SoulSigned 10
-
-function ec_dev:auto_set_difficulty
-
-function rp:check_stats
+function ec_dev:set_stats/set_stats {"st":8,"dx":12,"rs":20,"vt":15,"md":29,"tc":21,"sl":10}
 
 tellraw @s [{"text":"❖ Loaded stats of War-Scholar Selis.","color":"gray"}]

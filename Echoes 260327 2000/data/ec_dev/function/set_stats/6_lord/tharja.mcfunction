@@ -1,13 +1,3 @@
-scoreboard players set @s Strength 58
-scoreboard players set @s Dexterity 50
-scoreboard players set @s Resolve 80
-scoreboard players set @s Vitality 78
-scoreboard players set @s MindSigned 90
-scoreboard players set @s Tact 32
-scoreboard players set @s SoulSigned 42
-
-function ec_dev:auto_set_difficulty
-
-function rp:check_stats
+function ec_dev:set_stats/set_stats {"st":58,"dx":50,"rs":80,"vt":78,"md":90,"tc":32,"sl":42}
 
 tellraw @s [{"text":"❖ Loaded stats of Pontiff Tharja, slayer of the Prince of Death, goddess of Last Rites, and chaplain of the ","color":"gray"},{"text":"Cerulean Court","color":"blue"},{"text":".","color":"gray"}]
