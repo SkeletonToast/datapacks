@@ -1,13 +1,3 @@
-scoreboard players set @s Strength 22
-scoreboard players set @s Dexterity 23
-scoreboard players set @s Resolve 70
-scoreboard players set @s Vitality 62
-scoreboard players set @s MindSigned 30
-scoreboard players set @s Tact 40
-scoreboard players set @s SoulSigned 55
-
-function ec_dev:auto_set_difficulty
-
-function rp:check_stats
+function ec_dev:set_stats/set_stats {"st":22,"dx":23,"rs":70,"vt":62,"md":30,"tc":40,"sl":55}
 
 tellraw @s [{"text":"❖ Loaded stats of Eosh, Shield of the Ardents, consort of Rasaya.","color":"gray"}]

@@ -1,11 +1,1 @@
-scoreboard players set @s Strength 30
-scoreboard players set @s Dexterity 30
-scoreboard players set @s Resolve 30
-scoreboard players set @s Vitality 30
-scoreboard players set @s MindSigned 30
-scoreboard players set @s Tact 30
-scoreboard players set @s SoulSigned 30
-
-function ec_dev:auto_set_difficulty
-
-function rp:check_stats
+function ec_dev:set_stats/set_stats {"st":30,"dx":30,"rs":30,"vt":30,"md":30,"tc":30,"sl":30}
