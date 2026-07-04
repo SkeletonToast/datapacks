@@ -1,13 +1,3 @@
-scoreboard players set @s Strength 30
-scoreboard players set @s Dexterity 30
-scoreboard players set @s Resolve 70
-scoreboard players set @s Vitality 30
-scoreboard players set @s MindSigned 30
-scoreboard players set @s Tact 50
-scoreboard players set @s SoulSigned 50
-
-function ec_dev:auto_set_difficulty
-
-function rp:check_stats
+function ec_dev:set_stats/set_stats {"st":30,"dx":30,"rs":70,"vt":30,"md":30,"tc":50,"sl":50}
 
 tellraw @s [{"text":"❖ Loaded stats of Laertes, preceptor to the Vestiges, soldier of the Blue Plaza.","color":"gray"}]

@@ -1,14 +1,4 @@
-scoreboard players set @s Strength 39
-scoreboard players set @s Dexterity 36
-scoreboard players set @s Resolve 70
-scoreboard players set @s Vitality 70
-scoreboard players set @s MindSigned 21
-scoreboard players set @s Tact 25
-scoreboard players set @s SoulSigned 51
-
-function ec_dev:auto_set_difficulty
-
-function rp:check_stats
+function ec_dev:set_stats/set_stats {"st":39,"dx":36,"rs":70,"vt":70,"md":21,"tc":25,"sl":51}
 
 tellraw @s [{"text":"❖ Loaded stats of Arborknight Valentine, daughter of Evangeline, heiress to the ","color":"gray"},{"text":"Overgrowth","color":"green"},\
   {"text":", and Roots of the ","color":"gray"},{"text":"Cerulean Court","color":"blue"},{"text":".","color":"gray"}]

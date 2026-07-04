@@ -1,13 +1,3 @@
-scoreboard players set @s Strength 79
-scoreboard players set @s Dexterity 64
-scoreboard players set @s Resolve 90
-scoreboard players set @s Vitality 90
-scoreboard players set @s MindSigned 30
-scoreboard players set @s Tact 50
-scoreboard players set @s SoulSigned 95
-
-function ec_dev:auto_set_difficulty
-
-function rp:check_stats
+function ec_dev:set_stats/set_stats {"st":79,"dx":64,"rs":90,"vt":90,"md":30,"tc":50,"sl":95}
 
 tellraw @s [{"text":"❖ Loaded stats of Ichordrake Ferina, Angel-Eater, Empress of the Ichor Imperya.","color":"gray"}]

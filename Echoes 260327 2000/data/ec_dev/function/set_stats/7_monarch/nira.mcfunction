@@ -1,13 +1,3 @@
-scoreboard players set @s Strength 150
-scoreboard players set @s Dexterity 60
-scoreboard players set @s Resolve 90
-scoreboard players set @s Vitality 70
-scoreboard players set @s MindSigned 30
-scoreboard players set @s Tact 80
-scoreboard players set @s SoulSigned 30
+function ec_dev:set_stats/set_stats {"st":70,"dx":150,"rs":80,"vt":60,"md":30,"tc":90,"sl":30}
 
-function ec_dev:auto_set_difficulty
-
-function rp:check_stats
-
-tellraw @s [{"text":"❖ Loaded stats of Nira, the Last Lancer, leader of the Cerulean Sentinels.","color":"gray"}]
+tellraw @s [{"text":"❖ Loaded stats of Nira, Last Lancer, Sentinel of the Cerulean Court, Monarch of the Echo.","color":"gray"}]

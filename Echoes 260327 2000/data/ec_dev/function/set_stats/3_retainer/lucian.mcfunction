@@ -1,13 +1,3 @@
-scoreboard players set @s Strength 30
-scoreboard players set @s Dexterity 30
-scoreboard players set @s Resolve 40
-scoreboard players set @s Vitality 30
-scoreboard players set @s MindSigned 10
-scoreboard players set @s Tact 23
-scoreboard players set @s SoulSigned 12
-
-function ec_dev:auto_set_difficulty
-
-function rp:check_stats
+function ec_dev:set_stats/set_stats {"st":30,"dx":30,"rs":40,"vt":30,"md":10,"tc":23,"sl":12}
 
 tellraw @s [{"text":"❖ Loaded stats of Lucian Avenwalk, privateer.","color":"gray"}]

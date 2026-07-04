@@ -1,13 +1,3 @@
-scoreboard players set @s Strength 40
-scoreboard players set @s Dexterity 40
-scoreboard players set @s Resolve 90
-scoreboard players set @s Vitality 70
-scoreboard players set @s MindSigned 130
-scoreboard players set @s Tact 80
-scoreboard players set @s SoulSigned 130
-
-function ec_dev:auto_set_difficulty
-
-function rp:check_stats
+function ec_dev:set_stats/set_stats {"st":40,"dx":40,"rs":90,"vt":70,"md":130,"tc":80,"sl":130}
 
 tellraw @s [{"text":"❖ Loaded stats of Beloved Eoris, Monarch of the Echo, Queen of Eochrin.","color":"gray"}]
