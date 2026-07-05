@@ -75,7 +75,7 @@ execute as @s[scores={Tact=50..69},tag=Tact_feat_3] run scoreboard players opera
 scoreboard players add @s[scores={Tact=70..},tag=Tact_feat_3] proficiency_tact 35
 
 # style enchants
-execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"#echoes:exclusive_set/style"}]] run function echoes:player/combat/style_enchantments
+execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"#echoes:exclusive_set/style"}]] run function echoes:player/combat/proficiency/style/enchantments
 
 # unadjusted score storage
 scoreboard players operation @s prof_str_unadj = @s proficiency_str
