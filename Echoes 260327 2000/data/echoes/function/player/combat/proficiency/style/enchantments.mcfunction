@@ -1,4 +1,4 @@
-execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"echoes:style_equalizer"}]] run function echoes:player/combat/style_equalizer
+execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"echoes:style_equalizer"}]] run function echoes:player/combat/proficiency/style/equalizer
 execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"echoes:style_brigand"}]] run scoreboard players add @s proficiency_str 15
 execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"echoes:style_brigand"}]] run scoreboard players remove @s proficiency_dex 15
 execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"echoes:style_carnivore"}]] run scoreboard players add @s proficiency_str 30

@@ -107,13 +107,12 @@ effect give @a[scores={flight_level=4..,FallFlying=1,flight_level=30..}] minecra
 # slipstream timer decrease
 scoreboard players set @a[scores={flight_level=4..,slipstream=1..,DamageTaken=1..}] slipstream 1
 scoreboard players set @a[scores={flight_level=4..,slipstream=1..,DamageResisted=1..}] slipstream 1
-scoreboard players remove @a[scores={flight_level=4..,flight_level=..9,slipstream=11..,trait002-01=1..}] slipstream 10
+# scoreboard players remove @a[scores={flight_level=4..,flight_level=..9,slipstream=11..,trait002-01=1..}] slipstream 10
 title @a[scores={flight_level=4..,FallFlying=1,slipstream=1}] actionbar [{"text":"- Slipstream Lost -","color":"#999999"}]
 scoreboard players remove @a[scores={flight_level=4..,slipstream=1..}] slipstream 1
 scoreboard players set @a[scores={flight_level=4..,FallFlying=0}] slipstream 0
 
 # water flyby effects
-
 
 # old
     # execute as @a[scores={flight_level=04..07,FallFlying=1,slipstream=1..,elytra_boost_cooldown=-200..},x_rotation=..100] run attribute @s minecraft:gravity modifier add mind.elytra_gravity 0.75 add_multiplied_base
