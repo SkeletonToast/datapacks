@@ -12,8 +12,8 @@ item modify entity @s weapon.mainhand [{"function":"minecraft:set_lore","lore":[
 # custom data
 execute unless items entity @s weapon.mainhand netherite_sword run item modify entity @s weapon.mainhand [{"function":"minecraft:set_custom_data","tag":{"weapon":{"weight":3}}}]
 execute if items entity @s weapon.mainhand netherite_sword run item modify entity @s weapon.mainhand [{"function":"minecraft:set_custom_data","tag":{"weapon":{"weight":4}}}]
-item modify entity @s weapon.mainhand [{"function":"minecraft:set_custom_data","tag":{"weapon":{"properties":{"properties":["studded_grip"],"active":["mainhand"]}}}}]
-    # item modify entity @s weapon.mainhand [{"function":"minecraft:set_custom_data","tag":{"weapon":{"properties":{"properties":["two_handed","studded_grip"],"active":["mainhand"]}}}}]
+# item modify entity @s weapon.mainhand [{"function":"minecraft:set_custom_data","tag":{"weapon":{"properties":{"properties":["studded_grip"],"active":["mainhand"]}}}}]
+item modify entity @s weapon.mainhand [{"function":"minecraft:set_custom_data","tag":{"weapon":{"properties":{"properties":["two_handed"],"active":["mainhand"]}}}}]
 
 # new line
 item modify entity @s weapon.mainhand ss_armory:text_new_line
