@@ -4,7 +4,7 @@ execute as @s[scores={raycast_lifetime=..99}] run scoreboard players operation @
 execute as @s[scores={raycast_lifetime=100..149}] run scoreboard players operation @s generic_a /= @s 7
 execute as @s[scores={raycast_lifetime=150..}] run scoreboard players operation @s generic_a /= @s 10
 scoreboard players set @s[scores={generic_a=..0}] generic_a 1
-function parse:score {"function":"ss_armory:properties/guns/bolt_action/damage","score":"generic_a","prepend":"","prepend_position":0,"append":".","append_position":1}
+function parse:score {"function":"ss_armory:properties/guns/bolt_action/damage","score":"generic_a","prepend":"","append":".","prepend_position":0,"append_position":1}
 tag @n add StatusEligible
 scoreboard players add @n encumbered_timer 20
 

@@ -114,10 +114,12 @@
         scoreboard players operation @s[scores={encumbrance=1..}] generic_attribute -= @s encumbrance
         scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
         scoreboard players set @s[scores={generic_attribute=51..}] generic_attribute 50
-    execute as @s[scores={generic_attribute=10..}] unless score @s generic_attribute = @s dex_step_height run function parse:score_unended \
-        {"score":"generic_attribute","function":"echoes:stats/set_step_height"}
-    execute as @s[scores={generic_attribute=..9}] unless score @s generic_attribute = @s dex_step_height run function parse:score_unended \
-        {"score":"generic_attribute","function":"echoes:stats/set_step_height_0"}
+    # execute as @s[scores={generic_attribute=10..}] unless score @s generic_attribute = @s dex_step_height run function parse:score_unended \
+    #     {"score":"generic_attribute","function":"echoes:stats/set_step_height"}
+    # execute as @s[scores={generic_attribute=..9}] unless score @s generic_attribute = @s dex_step_height run function parse:score_unended \
+    #     {"score":"generic_attribute","function":"echoes:stats/set_step_height_0"}
+    execute unless score @s generic_attribute = @s dex_step_height run function parse:score_unended \
+        {"score":"generic_attribute","function":"echoes:stats/set_step_height","prepend":"","append":".","prepend_position":"","append_position":"-2"}
 
 # sneaking_speed: +Tact
     scoreboard players operation @s generic_attribute = @s Tact

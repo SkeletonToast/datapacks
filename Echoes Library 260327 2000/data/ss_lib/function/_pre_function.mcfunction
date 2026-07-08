@@ -34,6 +34,7 @@ scoreboard players set @a BootsType 0
 scoreboard players set @a Armorless 0
 
 scoreboard players set @a OnGround 0
+scoreboard players set @a[nbt={OnGround:1b}] OnGround 1
 
 # fetch functions
 function ss_lib:fetch_configuration
