@@ -1,0 +1,3 @@
+function parse:score {"score":"generic_h","function":"echoes:stats/scale_attribute/max_health","prepend":"","append":".","prepend_position":0,"append_position":-3}
+function parse:score {"score":"generic_h","function":"echoes:stats/scale_attribute/step_height","prepend":"","append":".","prepend_position":0,"append_position":-3}
+function parse:score {"score":"generic_h","function":"echoes:stats/scale_attribute/interaction_range","prepend":"","append":".","prepend_position":0,"append_position":-3}

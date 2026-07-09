@@ -1,5 +1,12 @@
 # remember to modify all calculations so that the values are not actually being modified to decimal amounts.
-# the actual formulas can be found in the attribute_default function, these formulas show the number that's passed through the parse:score_unended function.
+
+scoreboard players operation @s AttributeStrength = @s Strength
+scoreboard players operation @s AttributeDexterity = @s Dexterity
+scoreboard players operation @s AttributeMind = @s Mind
+scoreboard players operation @s AttributeResolve = @s Resolve
+scoreboard players operation @s AttributeVitality = @s Vitality
+scoreboard players operation @s AttributeTact = @s Tact
+scoreboard players operation @s AttributeSoul = @s Soul
 
 execute store result score @s generic_h run attribute @s scale get 100
 scoreboard players operation @s generic_h *= @s generic_h

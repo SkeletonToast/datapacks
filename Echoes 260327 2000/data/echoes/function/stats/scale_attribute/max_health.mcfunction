@@ -1,0 +1,1 @@
+$attribute @s minecraft:max_health modifier add scale.max_health $(value) add_multiplied_base

@@ -2,6 +2,14 @@
 scoreboard objectives add EchoLevel dummy
 scoreboard objectives add Renown dummy
 
+scoreboard objectives add BaseStrength dummy
+scoreboard objectives add BaseDexterity dummy
+scoreboard objectives add BaseMind dummy
+scoreboard objectives add BaseResolve dummy
+scoreboard objectives add BaseVitality dummy
+scoreboard objectives add BaseTact dummy
+scoreboard objectives add BaseSoul dummy
+
 scoreboard objectives add Strength dummy
 scoreboard objectives add Dexterity dummy
 scoreboard objectives add Mind dummy

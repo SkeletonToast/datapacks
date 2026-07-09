@@ -88,13 +88,13 @@ scoreboard players add @a[scores={incendiary_timer=-2}] ambient_temp 36
 execute as @a[predicate=ss_lib:is/on_fire] if predicate ss_lib:random_10_percent if predicate ss_lib:random_50_percent run scoreboard players add @s temp_modifier 1
 
     # in arid biome
-    scoreboard players add @a[predicate=echoes:in_arid_biome] ambient_temp 13
+    scoreboard players add @a[predicate=ss_lib:in_arid_biome] ambient_temp 13
 
-    execute as @a[predicate=echoes:in_arid_biome,scores={ambient_temp=..110}] \
+    execute as @a[predicate=ss_lib:in_arid_biome,scores={ambient_temp=..110}] \
         if predicate ss_lib:random_1_percent \
         if predicate ss_lib:random_50_percent \
             run scoreboard players add @s temp_modifier 1
-    execute as @a[predicate=echoes:in_arid_biome,scores={temp_modifier=..0}] \
+    execute as @a[predicate=ss_lib:in_arid_biome,scores={temp_modifier=..0}] \
         if predicate ss_lib:random_1_percent \
             run scoreboard players add @s temp_modifier 1
 
