@@ -75,8 +75,8 @@ scoreboard players add @s[scores={Tact=70..},tag=Tact_feat_3] proficiency_tact 3
 execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"#echoes:exclusive_set/style"}]] run function echoes:player/combat/proficiency/style/enchantments
 
 # two handing - strength/dexterity feat 2
-execute as @s[tag=Strength_feat_2,tag=!Dexterity_feat_2] unless items entity @s weapon.offhand * run function echoes:player/combat/proficiency/two_handing_stat {"stat":"str"}
-execute as @s[tag=Dexterity_feat_2,tag=!Strength_feat_2] unless items entity @s weapon.offhand * run function echoes:player/combat/proficiency/two_handing_stat {"stat":"dex"}
+execute as @s[tag=Strength_feat_2,tag=!Dexterity_feat_2] unless items entity @s weapon.offhand * run function echoes:player/combat/proficiency/two_handing {"stat":"_str"}
+execute as @s[tag=Dexterity_feat_2,tag=!Strength_feat_2] unless items entity @s weapon.offhand * run function echoes:player/combat/proficiency/two_handing {"stat":"_dex"}
 
 # unadjusted score storage
 scoreboard players operation @s prof_str_unadj = @s proficiency_str
@@ -109,7 +109,8 @@ scoreboard players operation @s proficiency += @s proficiency_soul
 scoreboard players operation @s proficiency += @s proficiency_mind
 
 # str AND dex two-handing
-execute as @s[tag=Strength_feat_2,tag=Dexterity_feat_2] unless items entity @s weapon.offhand * run function echoes:player/combat/proficiency/two_handing
+execute as @s[tag=Strength_feat_2,tag=Dexterity_feat_2] unless items entity @s weapon.offhand * run function echoes:player/combat/proficiency/two_handing {"stat":""}
+# execute as @s[tag=Strength_feat_2,tag=Dexterity_feat_2] unless items entity @s weapon.offhand * run function echoes:player/combat/proficiency/two_handing {"stat":"_dex"}
 
 # hungry damage reduction
 scoreboard players set @s generic_a 18
