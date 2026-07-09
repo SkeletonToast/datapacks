@@ -1,14 +1,13 @@
-scoreboard players operation @s proficiency_str *= @s 2
-scoreboard players operation @s proficiency_str *= @s 2
-scoreboard players operation @s proficiency_str /= @s 3
+execute if items entity @s weapon.mainhand *[minecraft:custom_data~{weapon:{properties:{properties:["two_handed"]}}}] run tag @s add two_handing_property
 
-execute unless items entity @s weapon.mainhand *[minecraft:custom_data~{weapon:{properties:{properties:["two_handed"]}}}] run return fail
-    # undoes 4/3x multiplier, and changes to a 9/8x multiplier
-scoreboard players operation @s proficiency_str *= @s 3
-scoreboard players operation @s proficiency_str *= @s 3
-scoreboard players operation @s proficiency_str *= @s 3
-scoreboard players operation @s proficiency_str /= @s 2
-scoreboard players operation @s proficiency_str /= @s 2
-scoreboard players operation @s proficiency_str /= @s 2
-scoreboard players operation @s proficiency_str /= @s 2
-scoreboard players operation @s proficiency_str /= @s 2
+$scoreboard players operation @s[tag=two_handing_property] proficiency$(stat) *= @s 3
+$scoreboard players operation @s[tag=two_handing_property] proficiency$(stat) *= @s 3
+$scoreboard players operation @s[tag=two_handing_property] proficiency$(stat) /= @s 2
+$scoreboard players operation @s[tag=two_handing_property] proficiency$(stat) /= @s 2
+$scoreboard players operation @s[tag=two_handing_property] proficiency$(stat) /= @s 2
+
+$scoreboard players operation @s[tag=!two_handing_property] proficiency$(stat) *= @s 2
+$scoreboard players operation @s[tag=!two_handing_property] proficiency$(stat) *= @s 2
+$scoreboard players operation @s[tag=!two_handing_property] proficiency$(stat) /= @s 3
+
+tag @s remove two_handing_property

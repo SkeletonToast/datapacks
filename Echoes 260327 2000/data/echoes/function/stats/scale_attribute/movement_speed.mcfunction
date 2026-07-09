@@ -1,0 +1,1 @@
+$attribute @s minecraft:movement_speed modifier add scale.movement_speed $(value) add_multiplied_total

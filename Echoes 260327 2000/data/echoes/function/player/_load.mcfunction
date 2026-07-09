@@ -74,6 +74,8 @@ gamerule natural_health_regeneration false
 
     scoreboard objectives add ichor_damage dummy
 
+    scoreboard objectives add used_goat_horn minecraft.used:minecraft.goat_horn
+
 # elytra scaling stuff
     scoreboard objectives add elytra_boost_cooldown dummy
     scoreboard objectives add flight_level dummy

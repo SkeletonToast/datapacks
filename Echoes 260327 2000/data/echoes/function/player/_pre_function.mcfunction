@@ -10,13 +10,17 @@ execute as @a run scoreboard players operation @s heat_resistance = @s Vitality
     execute as @a run scoreboard players operation @s heat_resistance /= @s 2
 execute as @a run scoreboard players operation @s cold_resistance = @s Vitality
     execute as @a run scoreboard players operation @s cold_resistance /= @s 3
-
-# aegis timer
-scoreboard players set @a aegis_timer_max 100
     
 tag @a add TemperatureEligible
 tag @a[scores={EchoDifficulty=..2}] remove TemperatureEligible
 tag @a[scores={Dimension=5}] remove TemperatureEligible
+
+# aegis timer
+scoreboard players set @a aegis_timer_max 100
+
+scoreboard players set @a[scores={EchoDifficulty=1..5}] aegis_amplifier_max 4
+scoreboard players set @a[scores={EchoDifficulty=6..}] aegis_amplifier_max 9
+# scoreboard players set @a[scores={Dimension=4}] aegis_amplifier_max -1
 
 # execute as @a run attribute @s armor modifier add echoes.armor_reduction -0.5 add_multiplied_total
     # ArmorType doesn't actually take your armor points value into account so this is fine to keep w/out further modification to like encumbrance

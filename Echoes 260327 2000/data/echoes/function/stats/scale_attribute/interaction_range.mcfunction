@@ -1,0 +1,2 @@
+$attribute @s minecraft:entity_interaction_range modifier add scale.entity_interaction_range $(value) add_multiplied_total
+$attribute @s minecraft:block_interaction_range modifier add scale.block_interaction_range $(value) add_multiplied_total

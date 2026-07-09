@@ -15,8 +15,8 @@ execute if score @s smoothSprinting matches 0 run scoreboard players operation @
 tag @s remove SurgeSprintEligible
 tag @s[scores={Dexterity=30..}] add SurgeSprintEligible
 tag @s[scores={EchoLevel=80..}] add SurgeSprintEligible
-execute as @s[scores={SuperSprintTime=100},tag=SurgeSprintEligible] at @s anchored eyes positioned ^ ^ ^ run playsound entity.breeze.wind_burst master @s ~ ~ ~ 0.3 0.7
-execute as @s[scores={SuperSprintTime=100},tag=SurgeSprintEligible] at @s anchored eyes positioned ^ ^ ^ run particle explosion_emitter
+execute as @s[scores={SuperSprintTime=100,OnGround=1},tag=SurgeSprintEligible] at @s anchored eyes positioned ^ ^ ^ run playsound entity.breeze.wind_burst master @s ~ ~ ~ 0.3 0.7
+execute as @s[scores={SuperSprintTime=100,OnGround=1},tag=SurgeSprintEligible] at @s anchored eyes positioned ^ ^ ^ run particle explosion_emitter
 scoreboard players add @s[scores={SuperSprintTime=100..},tag=SurgeSprintEligible] generic_attribute 50
 
 # super jumping

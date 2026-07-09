@@ -17,6 +17,7 @@ scoreboard players add @a[scores={DamageDealt=1..,in_combat=..10000}] in_combat 
 
 scoreboard players add @a[scores={UsingShield=1..,in_combat=0}] in_combat 10000
 scoreboard players add @a[scores={UsingBow=1..,in_combat=0}] in_combat 10000
+scoreboard players add @a[scores={used_goat_horn=1..,in_combat=0}] in_combat 20000
 scoreboard players add @a[scores={in_combat=0},advancements={ss_armory:gun/shot_crossbow=true}] in_combat 10000
 
 # taking damage to enter combat

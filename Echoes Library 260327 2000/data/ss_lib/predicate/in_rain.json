@@ -10,6 +10,13 @@
       "predicate": {
         "can_see_sky": true
       }
+    },
+    {
+      "condition": "minecraft:inverted",
+      "term": {
+        "condition": "minecraft:reference",
+        "name": "ss_lib:in_arid_biome"
+      }
     }
   ]
 }

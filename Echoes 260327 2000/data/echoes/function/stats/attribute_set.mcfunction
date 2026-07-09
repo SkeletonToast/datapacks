@@ -1,5 +1,12 @@
 # remember to modify all calculations so that the values are not actually being modified to decimal amounts.
-# the actual formulas can be found in the attribute_default function, these formulas show the number that's passed through the parse:score_unended function.
+
+execute store result score @s generic_h run attribute @s scale get 100
+# commented out while i decide whether or not to keep the base movement speed buff for tall characters
+    # execute unless score @s generic_h matches -200..200 run scoreboard players operation @s generic_h *= @s generic_h
+    # scoreboard players set @s[scores={generic_h=201..}] generic_i 200
+    # scoreboard players set @s[scores={generic_h=..-201}] generic_i -200
+    # execute if score @s generic_h matches -200..200 run scoreboard players operation @s generic_h *= @s generic_i
+    # function math:round/100_reduce {"score":"generic_h"}
 
 # resolve health and armor calculation
     function ss_lib:fetch/armor {"s":"@s"}
@@ -42,9 +49,11 @@
     scoreboard players operation @s smooth_sprint_multiplier = @s Food
         scoreboard players operation @s smooth_sprint_multiplier /= @s 2
     scoreboard players set @s[scores={smooth_sprint_multiplier=..-1}] smooth_sprint_multiplier 0
-# scoreboard players set @s smooth_sprint_multiplier 1
+    # scoreboard players set @s smooth_sprint_multiplier 1
 
     scoreboard players operation @s generic_attribute = @s Dexterity
+        scoreboard players operation @s generic_attribute *= @s generic_h
+        function math:round/100_reduce {"score":"generic_attribute"}
     scoreboard players operation @s generic_c = @s SprintTime
         scoreboard players operation @s generic_c *= @s smooth_sprint_multiplier
     execute if score @s smoothSprinting matches 1 as @s[scores={SprintTime=1..,StrafeTime=0}] if score @s generic_attribute > @s generic_c run scoreboard players operation @s generic_attribute = @s generic_c
@@ -74,6 +83,7 @@
     scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
     execute unless score @s generic_attribute = @s dex_movement_speed run function parse:score \
         {"score":"generic_attribute","prepend":"","append":".","prepend_position":0,"append_position":3,"function":"echoes:stats/set_movement_speed"}
+    execute as @s[scores={dex_movement_speed=1..}] run scoreboard players operation @s generic_max = @s dex_movement_speed
 
 # fall_damage_multiplier: -[higher of Dex/Tact] (cap of 45) * 3 / 2
     scoreboard players operation @s generic_attribute = @s Dexterity
@@ -114,10 +124,12 @@
         scoreboard players operation @s[scores={encumbrance=1..}] generic_attribute -= @s encumbrance
         scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
         scoreboard players set @s[scores={generic_attribute=51..}] generic_attribute 50
-    execute as @s[scores={generic_attribute=10..}] unless score @s generic_attribute = @s dex_step_height run function parse:score_unended \
-        {"score":"generic_attribute","function":"echoes:stats/set_step_height"}
-    execute as @s[scores={generic_attribute=..9}] unless score @s generic_attribute = @s dex_step_height run function parse:score_unended \
-        {"score":"generic_attribute","function":"echoes:stats/set_step_height_0"}
+    # execute as @s[scores={generic_attribute=10..}] unless score @s generic_attribute = @s dex_step_height run function parse:score_unended \
+    #     {"score":"generic_attribute","function":"echoes:stats/set_step_height"}
+    # execute as @s[scores={generic_attribute=..9}] unless score @s generic_attribute = @s dex_step_height run function parse:score_unended \
+    #     {"score":"generic_attribute","function":"echoes:stats/set_step_height_0"}
+    execute unless score @s generic_attribute = @s dex_step_height run function parse:score_unended \
+        {"score":"generic_attribute","function":"echoes:stats/set_step_height","prepend":"","append":".","prepend_position":"","append_position":"-2"}
 
 # sneaking_speed: +Tact
     scoreboard players operation @s generic_attribute = @s Tact

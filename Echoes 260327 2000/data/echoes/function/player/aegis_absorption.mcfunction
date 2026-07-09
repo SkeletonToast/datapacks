@@ -1,4 +1,4 @@
-$effect give @s absorption 60 $(value) true
+$effect give @s absorption 10 $(value) true
 
 # effect give @s[scores={Absorption=36..39,aegis_amplifier_max=40..}] absorption infinite 9 true
 # effect give @s[scores={Absorption=32..35,aegis_amplifier_max=36..}] absorption infinite 8 true

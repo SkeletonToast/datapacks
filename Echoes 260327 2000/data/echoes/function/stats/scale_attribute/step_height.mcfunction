@@ -1,0 +1,1 @@
+$attribute @s minecraft:step_height modifier add scale.step_height $(value) add_multiplied_total
