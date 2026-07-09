@@ -1,16 +1,12 @@
 # remember to modify all calculations so that the values are not actually being modified to decimal amounts.
 
-scoreboard players operation @s AttributeStrength = @s Strength
-scoreboard players operation @s AttributeDexterity = @s Dexterity
-scoreboard players operation @s AttributeMind = @s Mind
-scoreboard players operation @s AttributeResolve = @s Resolve
-scoreboard players operation @s AttributeVitality = @s Vitality
-scoreboard players operation @s AttributeTact = @s Tact
-scoreboard players operation @s AttributeSoul = @s Soul
-
 execute store result score @s generic_h run attribute @s scale get 100
-scoreboard players operation @s generic_h *= @s generic_h
-function math:round/100_reduce {"score":"generic_h"}
+# commented out while i decide whether or not to keep the base movement speed buff for tall characters
+    # execute unless score @s generic_h matches -200..200 run scoreboard players operation @s generic_h *= @s generic_h
+    # scoreboard players set @s[scores={generic_h=201..}] generic_i 200
+    # scoreboard players set @s[scores={generic_h=..-201}] generic_i -200
+    # execute if score @s generic_h matches -200..200 run scoreboard players operation @s generic_h *= @s generic_i
+    # function math:round/100_reduce {"score":"generic_h"}
 
 # resolve health and armor calculation
     function ss_lib:fetch/armor {"s":"@s"}

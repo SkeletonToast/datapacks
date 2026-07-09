@@ -1,0 +1,1 @@
+$attribute @s minecraft:jump_strength modifier add scale.jump_strength $(value) add_multiplied_total

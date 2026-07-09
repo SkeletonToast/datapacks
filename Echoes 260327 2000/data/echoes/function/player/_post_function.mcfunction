@@ -32,12 +32,8 @@ scoreboard players set @a[scores={used_firework_rocket=1..}] used_firework_rocke
 # aegis nonsense
 tag @a[tag=AegisApplied] remove AegisApplied
 
-scoreboard players set @a[scores={EchoDifficulty=1..4}] aegis_amplifier_max 4
-scoreboard players set @a[scores={EchoDifficulty=5}] aegis_amplifier_max 9
-# scoreboard players set @a[scores={Dimension=4}] aegis_amplifier_max -1
-
 # ichor damage
-        # if anything grants ichor damage immunity, put it here
+        # if anything grants ichor damage immunity, put it here, before the below function
 
 execute as @a[scores={ichor_damage=1..}] run function parse:score_unended {"score":"ichor_damage","function":"echoes:player/combat/ichor_damage"}
 scoreboard players set @a ichor_damage 0

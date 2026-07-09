@@ -59,14 +59,18 @@ execute as @a run function echoes:stats/attribute_set
 # execute as @a[scores={SoftRestOrRespawn=0}] run function echoes:stats/attribute_default
 
 # scale changes
-execute as @a run attribute @s minecraft:max_health modifier remove scale.max_health
-execute as @a run attribute @s minecraft:step_height modifier remove scale.step_height
-execute as @a run attribute @s minecraft:entity_interaction_range modifier remove scale.entity_interaction_range
-execute as @a run attribute @s minecraft:block_interaction_range modifier remove scale.block_interaction_range
+execute as @a run attribute @s max_health modifier remove scale.max_health
+execute as @a run attribute @s step_height modifier remove scale.step_height
+execute as @a run attribute @s entity_interaction_range modifier remove scale.entity_interaction_range
+execute as @a run attribute @s block_interaction_range modifier remove scale.block_interaction_range
+execute as @a run attribute @s gravity modifier remove scale.gravity
+execute as @a run attribute @s fall_damage_multiplier modifier remove scale.fall_damage_multiplier
+execute as @a run attribute @s jump_strength modifier remove scale.jump_strength
+execute as @a run attribute @s movement_speed modifier remove scale.movement_speed
 
 execute as @a store result score @s generic_h run attribute @s scale get 1000
 execute as @a run scoreboard players remove @s generic_h 1000
-execute as @a unless score @s generic_h matches -150..150 run function echoes:stats/scale_attribute/_main
+execute as @a unless score @s generic_h matches -150..150 run function echoes:stats/scale_attribute/_main {"score":"generic_h"}
 
 execute as @a run scoreboard players operation @s generic_h /= @s 5
 execute as @a run function math:round/10_reduce {"score":"generic_h"}

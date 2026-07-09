@@ -1,0 +1,1 @@
+$attribute @s minecraft:gravity modifier add scale.gravity $(value) add_multiplied_base

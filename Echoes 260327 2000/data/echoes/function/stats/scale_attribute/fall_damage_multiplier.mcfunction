@@ -1,0 +1,1 @@
+$attribute @s minecraft:fall_damage_multiplier modifier add scale.fall_damage_multiplier $(value) add_multiplied_base
