@@ -19,9 +19,10 @@ tag @a[scores={Dimension=5}] remove TemperatureEligible
 scoreboard players set @a aegis_timer_max 100
 
 scoreboard players set @a[scores={EchoDifficulty=1}] aegis_amplifier_max 0
-scoreboard players set @a[scores={EchoDifficulty=2..3}] aegis_amplifier_max 2
-scoreboard players set @a[scores={EchoDifficulty=4..5}] aegis_amplifier_max 4
-scoreboard players set @a[scores={EchoDifficulty=6..}] aegis_amplifier_max 9
+scoreboard players set @a[scores={EchoDifficulty=2}] aegis_amplifier_max 1
+scoreboard players set @a[scores={EchoDifficulty=3}] aegis_amplifier_max 2
+scoreboard players set @a[scores={EchoDifficulty=4..6}] aegis_amplifier_max 4
+scoreboard players set @a[scores={EchoDifficulty=7}] aegis_amplifier_max 9
 # scoreboard players set @a[scores={Dimension=4}] aegis_amplifier_max -1
 
 # execute as @a run attribute @s armor modifier add echoes.armor_reduction -0.5 add_multiplied_total
