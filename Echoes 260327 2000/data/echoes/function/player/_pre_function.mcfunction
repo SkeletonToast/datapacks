@@ -18,7 +18,9 @@ tag @a[scores={Dimension=5}] remove TemperatureEligible
 # aegis timer
 scoreboard players set @a aegis_timer_max 100
 
-scoreboard players set @a[scores={EchoDifficulty=1..5}] aegis_amplifier_max 4
+scoreboard players set @a[scores={EchoDifficulty=1}] aegis_amplifier_max 0
+scoreboard players set @a[scores={EchoDifficulty=2..3}] aegis_amplifier_max 2
+scoreboard players set @a[scores={EchoDifficulty=4..5}] aegis_amplifier_max 4
 scoreboard players set @a[scores={EchoDifficulty=6..}] aegis_amplifier_max 9
 # scoreboard players set @a[scores={Dimension=4}] aegis_amplifier_max -1
 

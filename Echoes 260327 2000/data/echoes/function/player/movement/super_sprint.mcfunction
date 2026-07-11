@@ -2,8 +2,8 @@ execute if entity @s[scores={encumbrance_unadjusted=30..}] run title @s actionba
 execute if entity @s[scores={encumbrance_unadjusted=30..}] run return fail
 
 execute at @s[scores={OnGround=1}] run particle small_gust ~ ~0.3 ~ 0.1 0.1 0.1 0.1 2 normal @a
-execute at @s[scores={OnGround=1,SuperSprintTime=100..}] rotated ~90 ~ positioned ^-1.5 ^ ^ run particle small_gust ~ ~0.6 ~ 0.2 0.2 0.2 0.1 5 normal @a
-execute at @s[scores={OnGround=1,SuperSprintTime=100..}] rotated ~90 ~ positioned ^-1 ^ ^ run particle minecraft:explosion ~ ~0.6 ~ 0.2 0.2 0.2 0.1 1 normal @a
+execute at @s[scores={OnGround=1,SuperSprintTime=100..,Dexterity=40..}] rotated ~90 ~ positioned ^-1.5 ^ ^ run particle small_gust ~ ~0.6 ~ 0.2 0.2 0.2 0.1 5 normal @a
+execute at @s[scores={OnGround=1,SuperSprintTime=100..,Dexterity=40..}] rotated ~90 ~ positioned ^-1 ^ ^ run particle minecraft:explosion ~ ~0.6 ~ 0.2 0.2 0.2 0.1 1 normal @a
 
 scoreboard players operation @s generic_c = @s SuperSprintTime
     scoreboard players operation @s generic_c *= @s smooth_sprint_multiplier
@@ -20,7 +20,8 @@ execute as @s[scores={SuperSprintTime=100,OnGround=1},tag=SurgeSprintEligible] a
 scoreboard players add @s[scores={SuperSprintTime=100..},tag=SurgeSprintEligible] generic_attribute 50
 
 # super jumping
-    # tag @s[scores={SuperSprintTime=100..,Dexterity=70..,OnGround=1}] add SurgeJumpEligible
+    tag @s[scores={SuperSprintTime=100..,Dexterity=70..,OnGround=1}] add SurgeJumpEligible
+    execute as @s[tag=SurgeJumpEligible,predicate=ss_lib:input/jump] run scoreboard players set @s SuperSprintTime 80
     execute as @s[tag=SurgeJumpEligible,predicate=ss_lib:input/jump] run scoreboard players set $strength player_motion.api.launch 10000
     execute as @s[tag=SurgeJumpEligible,predicate=ss_lib:input/jump] at @s anchored eyes run function player_motion:api/launch_looking
     tag @s[predicate=ss_lib:input/jump] remove SurgeJumpEligible

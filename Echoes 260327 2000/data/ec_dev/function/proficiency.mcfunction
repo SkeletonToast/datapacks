@@ -1,5 +1,5 @@
 function echoes:player/combat/proficiency/_main
-function echoes:player/combat/proficiency/apply_damage
+function parse:score {"score":"proficiency","prepend":"","append":".","prepend_position":0,"append_position":4,"function":"echoes:player/combat/proficiency/apply_damage"}
 
 tellraw @s [""]
 tellraw @s [{"text":"❖ Proficiency: ","color":"gray"},{"score":{"name":"@s","objective":"proficiency"},"color":"white"}]

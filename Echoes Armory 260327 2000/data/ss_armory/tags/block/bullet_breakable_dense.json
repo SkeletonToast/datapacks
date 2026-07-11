@@ -12,17 +12,13 @@
         "minecraft:suspicious_gravel",
         "minecraft:suspicious_sand",
         "minecraft:dirt_path",
-        "minecraft:mushroom_stem",
-        "minecraft:red_mushroom_block",
-        "minecraft:brown_mushroom_block",
-        "minecraft:azalea",
-        "minecraft:flowering_azalea",
-        "minecraft:cactus",
-        "minecraft:chorus_flower",
-        "minecraft:chorus_plant",
         "#minecraft:coral_blocks",
         "minecraft:pumpkin",
         "minecraft:melon",
-        "minecraft:hay_block"
+        "minecraft:hay_block",
+        "#minecraft:wooden_doors",
+        "#minecraft:wooden_trapdoors",
+        "#minecraft:wooden_fences",
+        "#minecraft:fence_gates"
     ]
 }

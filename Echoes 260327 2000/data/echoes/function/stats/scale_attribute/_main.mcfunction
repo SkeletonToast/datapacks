@@ -7,7 +7,9 @@ function parse:score {"score":"generic_a","function":"echoes:stats/scale_attribu
 execute if score @s generic_a matches ..-1 run function parse:score \
     {"score":"generic_a","function":"echoes:stats/scale_attribute/gravity","prepend":"","append":".","prepend_position":0,"append_position":-4}
 execute if score @s generic_a matches ..-1 run function parse:score \
-{"score":"generic_a","function":"echoes:stats/scale_attribute/fall_damage_multiplier","prepend":"","append":".","prepend_position":0,"append_position":-3}
+    {"score":"generic_a","function":"echoes:stats/scale_attribute/fall_damage_multiplier","prepend":"","append":".","prepend_position":0,"append_position":-3}
+execute if score @s generic_a matches 1.. run function parse:score \
+    {"score":"generic_a","function":"echoes:stats/scale_attribute/fall_damage_multiplier","prepend":"-","append":".","prepend_position":0,"append_position":-3}
 
 # keep this at the end of the file so that it doesn't mess up any other calculations
 scoreboard players operation @s generic_a *= @s 3

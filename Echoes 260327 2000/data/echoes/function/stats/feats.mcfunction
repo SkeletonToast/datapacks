@@ -1,10 +1,10 @@
-function echoes:player/feat_assignment {"stat":"Strength"}
-function echoes:player/feat_assignment {"stat":"Dexterity"}
+function echoes:stats/feat_assignment {"stat":"Strength"}
+function echoes:stats/feat_assignment {"stat":"Dexterity"}
     # no resolve feats
-function echoes:player/feat_assignment {"stat":"Vitality"}
-function echoes:player/feat_assignment {"stat":"Mind"}
-function echoes:player/feat_assignment {"stat":"Tact"}
-function echoes:player/feat_assignment {"stat":"Soul"}
+function echoes:stats/feat_assignment {"stat":"Vitality"}
+function echoes:stats/feat_assignment {"stat":"Mind"}
+function echoes:stats/feat_assignment {"stat":"Tact"}
+function echoes:stats/feat_assignment {"stat":"Soul"}
 
 # strength
     # level 15: 

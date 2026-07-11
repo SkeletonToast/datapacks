@@ -8,7 +8,7 @@ execute as @a[scores={DamageDealt=1..}] run scoreboard players operation @s Init
 # Unsigning Stats
 execute as @a run scoreboard players operation @s Strength = @s BaseStrength
 execute as @a run scoreboard players operation @s Dexterity = @s BaseDexterity
-execute as @a run scoreboard players operation @s Mind = @s BaseMind
+execute as @a run scoreboard players operation @s MindSigned = @s BaseMind
 execute as @a run scoreboard players operation @s Resolve = @s BaseResolve
 execute as @a run scoreboard players operation @s Vitality = @s BaseVitality
 execute as @a run scoreboard players operation @s Tact = @s BaseTact
@@ -25,13 +25,13 @@ execute as @a run scoreboard players operation @s Charm += @s Tact
 execute as @a run scoreboard players operation @s Charm /= @s 2
 
 # setting stats for the first time
-scoreboard players set @a[scores={Age=1}] Strength 7
-scoreboard players set @a[scores={Age=1}] Dexterity 7
-scoreboard players set @a[scores={Age=1}] MindSigned 7
-scoreboard players set @a[scores={Age=1}] Resolve 7
-scoreboard players set @a[scores={Age=1}] Vitality 7
-scoreboard players set @a[scores={Age=1}] Tact 7
-scoreboard players set @a[scores={Age=1}] SoulSigned 7
+scoreboard players set @a[scores={Age=1}] BaseStrength 7
+scoreboard players set @a[scores={Age=1}] BaseDexterity 7
+scoreboard players set @a[scores={Age=1}] BaseMind 7
+scoreboard players set @a[scores={Age=1}] BaseResolve 7
+scoreboard players set @a[scores={Age=1}] BaseVitality 7
+scoreboard players set @a[scores={Age=1}] BaseTact 7
+scoreboard players set @a[scores={Age=1}] BaseSoul 7
 
 # Tenacity & Fortitude
 execute as @a[tag=Vitality_feat_1] run scoreboard players operation @s Tenacity = @s Vitality
