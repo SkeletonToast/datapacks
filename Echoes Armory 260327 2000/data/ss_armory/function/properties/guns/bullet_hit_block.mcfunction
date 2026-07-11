@@ -1,6 +1,6 @@
 execute if block ~ ~ ~ #ss_armory:bullet_breakable run scoreboard players add @s raycast_lifetime 8
 execute if block ~ ~ ~ #ss_armory:bullet_breakable if predicate {"condition":"random_chance",chance:0.9} run fill ~ ~ ~ ~ ~ ~ air destroy
-execute if block ~ ~ ~ #ss_armory:bullet_breakable_dense if predicate {"condition":"random_chance",chance:0.1} run fill ~ ~ ~ ~ ~ ~ air destroy
+execute if block ~ ~ ~ #ss_armory:bullet_breakable_dense if predicate {"condition":"random_chance",chance:0.2} run fill ~ ~ ~ ~ ~ ~ air destroy
 particle large_smoke ^ ^ ^-0.25 0.1 0.1 0.1 0 5
 particle falling_dust{block_state:"minecraft:gravel"} ^ ^ ^-0.25 0.1 0.1 0.1 0 5
 playsound minecraft:block.deepslate.break block @a ^ ^ ^-0.25 1 1.2

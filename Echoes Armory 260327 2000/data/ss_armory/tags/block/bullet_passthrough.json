@@ -3,6 +3,12 @@
         "#ss_lib:glass",
         "#ss_lib:glass_panes",
         "#minecraft:ice",
-        "minecraft:bamboo"
+        "minecraft:bamboo",
+        "minecraft:azalea",
+        "minecraft:flowering_azalea",
+        "minecraft:cactus",
+        "minecraft:chorus_flower",
+        "minecraft:chorus_plant",
+        "#minecraft:crops"
     ]
 }
