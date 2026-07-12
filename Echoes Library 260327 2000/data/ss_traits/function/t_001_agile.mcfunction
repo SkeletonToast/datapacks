@@ -37,5 +37,5 @@ execute as @a[scores={trait001=1..}] run attribute @s step_height modifier add t
 
 execute as @a[scores={trait001=1..}] at @s unless block ~ ~ ~ #minecraft:climbable unless block ~ ~1 ~ #minecraft:climbable run attribute @s gravity modifier remove trait001_climbing_gravity
 execute as @a[scores={trait001=1..}] unless entity @s[predicate=ss_traits:climbing_input] run attribute @s gravity modifier remove trait001_climbing_gravity
-execute as @a[scores={trait001=1..},predicate=ss_traits:climbing_input] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","input":{"jump":true}}}} at @s if block ~ ~ ~ #minecraft:climbable run attribute @s gravity modifier add trait001_climbing_gravity -1.5 add_multiplied_base
+execute as @a[scores={trait001=1..},predicate=ss_traits:climbing_input] if predicate ss_lib:input/jump at @s if block ~ ~ ~ #minecraft:climbable run attribute @s gravity modifier add trait001_climbing_gravity -1.5 add_multiplied_base
 execute as @a[scores={trait001=1..},predicate=ss_traits:climbing_input] at @s anchored eyes if block ^ ^ ^ #minecraft:climbable run attribute @s gravity modifier add trait001_climbing_gravity -1.5 add_multiplied_base
