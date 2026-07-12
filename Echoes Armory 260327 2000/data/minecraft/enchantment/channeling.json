@@ -32,7 +32,7 @@
                 "condition": "minecraft:entity_properties",
                 "entity": "this",
                 "predicate": {
-                  "type": "minecraft:trident"
+                  "entity_type": "minecraft:trident"
                 }
               },
               {
@@ -94,7 +94,7 @@
             "condition": "minecraft:damage_source_properties",
             "predicate": {
               "direct_entity": {
-                "type": "minecraft:lightning_bolt"
+                "entity_type": "minecraft:lightning_bolt"
               }
             }
           },

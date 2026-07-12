@@ -1,7 +1,7 @@
 {
     "anvil_cost": 1,
     "description": {
-      "translate": "Titanskin"
+      "text": "Titanskin"
     },
     "effects": {
       "minecraft:damage_protection": [

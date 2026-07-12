@@ -1,7 +1,7 @@
 {
     "anvil_cost": 1,
     "description": {
-      "translate": "Occult Protection"
+      "text": "Occult Protection"
     },
     "effects": {
       "minecraft:damage_protection": [

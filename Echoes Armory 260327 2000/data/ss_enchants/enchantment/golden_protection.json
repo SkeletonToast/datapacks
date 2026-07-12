@@ -1,7 +1,7 @@
 {
   "anvil_cost": 1,
   "description": {
-    "translate": "Golden Protection",
+    "text": "Golden Protection",
     "color": "gold"
   },
   "effects": {

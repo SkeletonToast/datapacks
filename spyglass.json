@@ -1,0 +1,8 @@
+{
+    "env": {
+       "gameVersion": "26.2"
+    },
+    "lint": {
+		"nameOfObjective": null
+	}
+ }

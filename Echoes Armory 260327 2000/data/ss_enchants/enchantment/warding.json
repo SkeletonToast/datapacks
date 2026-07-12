@@ -1,7 +1,7 @@
 {
     "anvil_cost": 1,
     "description": {
-      "translate": "Monster Protection"
+      "text": "Monster Protection"
     },
     "effects": {
       "minecraft:damage_protection": [
@@ -24,7 +24,7 @@
                 }
               ],
               "source_entity": {
-                "type": "#ss_lib:hostile"
+                "entity_type": "#ss_lib:hostile"
               }
             }
           }

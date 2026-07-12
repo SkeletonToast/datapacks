@@ -1,7 +1,7 @@
 {
   "anvil_cost": 1,
   "description": {
-    "translate": "Halo Breaker"
+    "text": "Halo Breaker"
   },
   "effects": {
     "minecraft:post_attack": [
