@@ -31,7 +31,13 @@ execute if entity @a[scores={TimeSinceDeath=1..}] if entity @a[scores={DayTime=1
 execute as @r[scores={DayTime=0}] run scoreboard players add $Day Day 1
 execute as @a[scores={DayTime=23000,Dimension=1}] run function echoes:player/dawn
 execute as @a[scores={DayTime=13000,Dimension=1}] run function echoes:player/dusk
-execute unless score $Day Day matches 0.. run scoreboard players set $Day Day 0
+
+execute as @a[scores={DayTime=6000,Dimension=1}] run function echoes:player/advance_time_false
+execute as @a[scores={DayTime=13000,Dimension=1}] run function echoes:player/advance_time_false
+execute as @a[scores={DayTime=18000,Dimension=1}] run function echoes:player/advance_time_false
+execute as @a[scores={DayTime=23000,Dimension=1}] run function echoes:player/advance_time_false
+
+execute unless score $Day Day matches 1.. run scoreboard players set $Day Day 1
 
 execute as @a run function echoes:player/renown
 
