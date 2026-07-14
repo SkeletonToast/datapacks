@@ -3,7 +3,7 @@ function echoes:player/temperature/temperature
 function echoes:player/encumbrance/_main
 
 scoreboard players enable @a aegis_base_color
-function echoes:player/aegis
+function echoes:player/aegis/_main
 
 function echoes:player/healing_items
 
@@ -17,7 +17,7 @@ execute as @a[scores={SoftRestOrRespawn=1}] run function echoes:player/grant_rec
 
 # execute as @a run function echoes:player/ambient_particles
 
-function echoes:player/aegis_display
+function echoes:player/aegis/display/_main
 
 effect give @a[scores={used_glow_berries=1..}] glowing 10 0 true
 scoreboard players set @a used_glow_berries 0

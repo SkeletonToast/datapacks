@@ -18,7 +18,7 @@ effect give @a[scores={killed_mob=1..,aegis_amplifier_max=0..}] absorption 5 0 t
 effect give @a[scores={killed_player=1..,aegis_amplifier_max=0}] absorption 15 0 true
 effect give @a[scores={killed_player=1..,aegis_amplifier_max=1..}] absorption 15 1 true
 
-execute as @a[scores={aegis_timer=0}] run function echoes:player/aegis_apply
+execute as @a[scores={aegis_timer=0}] run function echoes:player/aegis/apply
 
 execute as @a[tag=AegisApplied,scores={Soul=..79}] run scoreboard players operation @s aegis_timer_max -= @s Soul
 execute as @a[tag=AegisApplied,scores={Soul=80..}] run scoreboard players remove @s aegis_timer_max 80
