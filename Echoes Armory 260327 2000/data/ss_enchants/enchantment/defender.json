@@ -37,7 +37,7 @@
                 "condition": "minecraft:entity_properties",
                 "entity": "this",
                 "predicate": {
-                  "type": "#ss_enchants:sensitive_to_defender"
+                  "entity_type": "#ss_enchants:sensitive_to_defender"
                 }
               },
               {

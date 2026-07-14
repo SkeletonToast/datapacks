@@ -5,8 +5,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-                "type_specific": {
-                "type": "minecraft:player",
+                "type_specific/player": {
                 "input": {
                     "forward": true
                 }
@@ -17,8 +16,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-                "type_specific": {
-                "type": "minecraft:player",
+                "type_specific/player": {
                 "input": {
                     "jump": true
                 }

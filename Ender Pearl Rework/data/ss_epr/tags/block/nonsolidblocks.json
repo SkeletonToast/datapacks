@@ -29,9 +29,6 @@
         "#minecraft:buttons",
         "minecraft:tripwire_hook",
         "minecraft:snow",
-        "minecraft:nether_portal",
-        "minecraft:end_portal",
-        "minecraft:end_gateway",
         "#minecraft:fire"
     ]
 }

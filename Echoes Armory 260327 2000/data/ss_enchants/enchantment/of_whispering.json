@@ -120,7 +120,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:player"
+              "entity_type": "minecraft:player"
             }
           },
           "enchanted": "attacker",

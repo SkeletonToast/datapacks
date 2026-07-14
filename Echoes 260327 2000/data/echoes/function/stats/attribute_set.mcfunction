@@ -52,6 +52,9 @@ execute store result score @s generic_h run attribute @s scale get 100
     # scoreboard players set @s smooth_sprint_multiplier 1
 
     scoreboard players operation @s generic_attribute = @s Dexterity
+        scoreboard players operation @s generic_attribute *= @s 3
+        scoreboard players operation @s generic_attribute /= @s 2
+            scoreboard players operation @s generic_attribute /= @s 2
         scoreboard players operation @s generic_attribute *= @s generic_h
         function math:round/100_reduce {"score":"generic_attribute"}
     scoreboard players operation @s generic_c = @s SprintTime
