@@ -7,6 +7,7 @@ scoreboard players enable SkeletonToast ambientParticles
 scoreboard players enable SkeletonToast incrementalProficiencyScaling
 scoreboard players enable SkeletonToast hungryDamageReduction
 scoreboard players enable @a aegisSelfVisibility
+scoreboard players enable @a aegisVisibility
 scoreboard players enable @a tactCameraDistance
 
 execute as @a[scores={timeDilation=-1..}] run function ec_dev:gamerule/time_dilation
@@ -44,9 +45,14 @@ execute as @a[scores={hungryDamageReduction=0..}] store result score $hungryDama
 execute as @a[scores={hungryDamageReduction=0..}] run data get storage gamerule_hungry_damage_reduction toggle
 scoreboard players set @a hungryDamageReduction -2
 
+scoreboard players set @a[scores={aegisVisibility=0}] aegisSelfVisibility 0
 execute as @a unless entity @s[scores={aegisSelfVisibility=0..}] run scoreboard players set @s aegisSelfVisibility 1
 scoreboard players set @a[scores={aegisSelfVisibility=2..}] aegisSelfVisibility 0
 scoreboard players set @a[scores={aegisSelfVisibility=..-1}] aegisSelfVisibility 0
+
+execute as @a unless entity @s[scores={aegisVisibility=0..}] run scoreboard players set @s aegisVisibility 1
+scoreboard players set @a[scores={aegisVisibility=2..}] aegisVisibility 0
+scoreboard players set @a[scores={aegisVisibility=..-1}] aegisVisibility 0
 
 # execute as @a[scores={smoothSprinting=-1..}] run function ec_dev:gamerule/smooth_sprinting
 # execute as @a[scores={smoothSprinting=0..}] store result score $smoothSprinting true run data get storage gamerule_smooth_sprinting toggle

@@ -13,3 +13,5 @@ scoreboard players operation @s[scores={EchoDifficulty=4..5},tag=InCombat] overh
 execute as @s[scores={EchoDifficulty=6},tag=InCombat] run function math:round/10 {"score":"overheal_limit"}
 # difficulty 7
 scoreboard players set @s[scores={EchoDifficulty=7},tag=InCombat] overheal_limit 0
+
+execute as @s[scores={TimeSinceRest=0}] run scoreboard players operation @s overheal_limit = @s Resolve

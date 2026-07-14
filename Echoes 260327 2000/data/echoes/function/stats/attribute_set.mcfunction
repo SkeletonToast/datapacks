@@ -136,6 +136,7 @@ execute store result score @s generic_h run attribute @s scale get 100
 
 # sneaking_speed: +Tact
     scoreboard players operation @s generic_attribute = @s Tact
+        scoreboard players set @s[predicate=ss_lib:is/sneaking] generic_attribute 0
         scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
     execute unless score @s generic_attribute = @s tact_sneaking_speed run function parse:score \
         {"score":"generic_attribute","prepend":"","append":".","prepend_position":0,"append_position":2,"function":"echoes:stats/set_sneaking_speed"}

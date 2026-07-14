@@ -72,6 +72,8 @@ execute as @a[scores={frozen_active=0..}] if predicate ss_lib:random_10_percent 
         if predicate ss_lib:random_50_percent \
             run scoreboard players remove @s temp_modifier 1
 
+    execute as @a unless score @s wet_timer matches 1.. run function ss_lib:fetch/in_water
+
     execute as @a[scores={InWater=1,temp_modifier=0..}] \
         if predicate ss_lib:random_1_percent \
         if predicate ss_lib:random_50_percent \

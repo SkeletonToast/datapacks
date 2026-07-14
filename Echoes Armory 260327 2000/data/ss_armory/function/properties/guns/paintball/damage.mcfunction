@@ -6,7 +6,7 @@ effect give @n slowness 3 1 true
 # effect give @n weakness 3 1 true
 # effect give @n mining_fatigue 3 1 true
 tag @n add StatusEligible
-scoreboard players add @n encumbered_timer 20
+# scoreboard players add @n encumbered_timer 20
 execute as @n if entity @s[type=player] run scoreboard players add @s PaintballHitsTaken 1
 
 playsound minecraft:entity.slime.jump block @a ^ ^ ^-0.25 2 1.2
