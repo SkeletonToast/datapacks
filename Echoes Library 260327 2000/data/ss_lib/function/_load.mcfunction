@@ -105,6 +105,7 @@ scoreboard objectives add Dimension dummy
 scoreboard objectives add OnGround dummy
 
 scoreboard objectives add DayTime dummy
+scoreboard objectives add MoonPhase dummy
 
 scoreboard objectives add xcoord dummy
 scoreboard objectives add ycoord dummy

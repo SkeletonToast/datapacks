@@ -2,6 +2,7 @@
     "values": [
         "minecraft:ender_pearl",
         "minecraft:snowball",
-        "minecraft:item"
+        "minecraft:item",
+        "minecraft:egg"
     ]
 }

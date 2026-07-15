@@ -25,7 +25,7 @@ gamerule natural_health_regeneration false
     scoreboard objectives add aegis_amplifier_max dummy
     scoreboard objectives add aegis_amplifier dummy
 
-    scoreboard objectives add aegis_base_color trigger
+    scoreboard objectives add aegis_theme trigger
 
     scoreboard objectives add killed_mob minecraft.custom:mob_kills
     scoreboard objectives add killed_player minecraft.custom:player_kills

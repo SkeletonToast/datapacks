@@ -2,7 +2,7 @@ function echoes:player/temperature/temperature
 
 function echoes:player/encumbrance/_main
 
-scoreboard players enable @a aegis_base_color
+scoreboard players enable @a aegis_theme
 function echoes:player/aegis/_main
 
 function echoes:player/healing_items
