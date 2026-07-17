@@ -1,4 +1,4 @@
-execute store result score $Moon MoonPhase run time query minecraft:moon
-scoreboard players set $Moon generic_a 24000
-scoreboard players operation $Moon MoonPhase /= $Moon generic_a
-scoreboard players add $Moon MoonPhase 1
+execute store result score $moon_phase value run time query minecraft:moon
+scoreboard players set $moon_phase generic_a 24000
+scoreboard players operation $moon_phase value /= $moon_phase generic_a
+scoreboard players add $moon_phase value 1

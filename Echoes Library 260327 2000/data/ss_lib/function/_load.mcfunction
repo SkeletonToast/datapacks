@@ -4,6 +4,7 @@ scoreboard objectives add 3 dummy
 scoreboard objectives add 5 dummy
 scoreboard objectives add 7 dummy
 scoreboard objectives add 10 dummy
+
 scoreboard objectives add generic_a dummy
 scoreboard objectives add generic_b dummy
 scoreboard objectives add generic_c dummy
@@ -14,10 +15,28 @@ scoreboard objectives add generic_g dummy
 scoreboard objectives add generic_h dummy
 scoreboard objectives add generic_i dummy
 scoreboard objectives add generic_j dummy
+scoreboard objectives add generic_k dummy
+scoreboard objectives add generic_l dummy
+scoreboard objectives add generic_m dummy
+scoreboard objectives add generic_n dummy
+scoreboard objectives add generic_o dummy
+scoreboard objectives add generic_p dummy
+scoreboard objectives add generic_q dummy
+scoreboard objectives add generic_r dummy
+scoreboard objectives add generic_s dummy
+scoreboard objectives add generic_t dummy
+scoreboard objectives add generic_u dummy
+scoreboard objectives add generic_v dummy
+scoreboard objectives add generic_w dummy
+scoreboard objectives add generic_x dummy
+scoreboard objectives add generic_y dummy
+scoreboard objectives add generic_z dummy
+
 scoreboard objectives add generic_max dummy
 scoreboard objectives add generic_min dummy
 
 scoreboard objectives add true dummy
+scoreboard objectives add value dummy
 
 scoreboard objectives add Age dummy
 
@@ -105,7 +124,7 @@ scoreboard objectives add Dimension dummy
 scoreboard objectives add OnGround dummy
 
 scoreboard objectives add DayTime dummy
-scoreboard objectives add MoonPhase dummy
+scoreboard objectives add value dummy
 
 scoreboard objectives add xcoord dummy
 scoreboard objectives add ycoord dummy
