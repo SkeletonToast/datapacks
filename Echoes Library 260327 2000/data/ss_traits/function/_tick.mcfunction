@@ -18,3 +18,8 @@ scoreboard players set @a[scores={trait002-01=1..}] trait002-01 0
 scoreboard players remove @a[scores={trait003=0}] trait003-01 1
 
 execute as @a[scores={trait004=0}] run attribute @s sneaking_speed modifier remove trait004_sneaking_speed
+
+execute as @r[scores={trait001=1..}] run function ss_traits:t_001_agile
+execute as @r[scores={trait002=1..}] run function ss_traits:t_002_winged
+execute as @r[scores={trait003=1..}] run function ss_traits:t_003_quick_learner
+execute as @r[scores={trait004=1..}] run function ss_traits:t_004_stealthy

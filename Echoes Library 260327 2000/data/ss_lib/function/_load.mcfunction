@@ -124,7 +124,6 @@ scoreboard objectives add Dimension dummy
 scoreboard objectives add OnGround dummy
 
 scoreboard objectives add DayTime dummy
-scoreboard objectives add value dummy
 
 scoreboard objectives add xcoord dummy
 scoreboard objectives add ycoord dummy
@@ -138,12 +137,6 @@ scoreboard objectives add deathy dummy
 scoreboard objectives add deathz dummy
 
 scoreboard objectives add raycast_lifetime dummy
-
-scoreboard objectives add ss_gen_1 dummy
-scoreboard objectives add ss_gen_2 dummy
-scoreboard objectives add ss_gen_3 dummy
-scoreboard objectives add ss_gen_4 dummy
-scoreboard objectives add ss_gen_5 dummy
 
 scoreboard objectives add attack_particle_timer dummy
 

@@ -132,7 +132,7 @@ execute store result score @s generic_h run attribute @s scale get 100
     # execute as @s[scores={generic_attribute=..9}] unless score @s generic_attribute = @s dex_step_height run function parse:score_unended \
     #     {"score":"generic_attribute","function":"echoes:stats/set_step_height_0"}
     execute unless score @s generic_attribute = @s dex_step_height run function parse:score \
-        {"score":"generic_attribute","function":"echoes:stats/set_step_height","prepend":"","append":".","prepend_position":"0","append_position":"-2"}
+        {"score":"generic_attribute","function":"echoes:stats/set_step_height","prepend":"","append":".","prepend_position":"0","append_position":"2"}
 
 # sneaking_speed: +Tact
     scoreboard players operation @s generic_attribute = @s Tact
