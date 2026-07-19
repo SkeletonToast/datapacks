@@ -1,6 +1,7 @@
 scoreboard objectives add in_combat dummy
 
-scoreboard objectives add Day dummy
+# scoreboard objectives add Day dummys
+    # removed in favor of $day value
 
 scoreboard objectives add GameTime dummy
 

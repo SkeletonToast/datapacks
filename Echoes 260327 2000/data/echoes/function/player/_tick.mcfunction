@@ -28,16 +28,16 @@ execute as @a[scores={TimeSinceRest=1}] run function echoes:player/sleeping_awak
 execute if entity @a[scores={TimeSinceDeath=1..}] if entity @a[scores={DayTime=12010..23991}] unless entity @a[scores={TimeSinceRest=1..}] unless entity @a[scores={SleepingTime=..99}] run function echoes:player/skip_night
     # this might fix the thunderstorm thing? this just means that you won't be able to skip the night if it's thundering and NOT nighttime.
 
-execute as @r[scores={DayTime=0}] run scoreboard players add $Day Day 1
+execute as @r[scores={DayTime=0}] run scoreboard players add $day value 1
 execute as @a[scores={DayTime=23000,Dimension=1}] run function echoes:player/dawn
 execute as @a[scores={DayTime=13000,Dimension=1}] run function echoes:player/dusk
 
-execute as @a[scores={DayTime=6000,Dimension=1}] run function echoes:player/advance_time_false
-execute as @a[scores={DayTime=13000,Dimension=1}] run function echoes:player/advance_time_false
-execute as @a[scores={DayTime=18000,Dimension=1}] run function echoes:player/advance_time_false
-execute as @a[scores={DayTime=23000,Dimension=1}] run function echoes:player/advance_time_false
+execute as @r[scores={DayTime=6000,Dimension=1}] run function echoes:player/advance_time_false
+execute as @r[scores={DayTime=13000,Dimension=1}] run function echoes:player/advance_time_false
+execute as @r[scores={DayTime=18000,Dimension=1}] run function echoes:player/advance_time_false
+execute as @r[scores={DayTime=23000,Dimension=1}] run function echoes:player/advance_time_false
 
-execute unless score $Day Day matches 1.. run scoreboard players set $Day Day 1
+execute unless score $day value matches 1.. run scoreboard players set $day value 1
 
 execute as @a run function echoes:player/renown
 
