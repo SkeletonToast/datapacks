@@ -22,19 +22,10 @@ scoreboard objectives add Vitality dummy
 scoreboard objectives add Soul dummy
     scoreboard objectives add SoulSigned dummy
 
-    # primary stat modifiers
-    scoreboard objectives add StrengthModifier dummy
-    scoreboard objectives add DexterityModifier dummy
-    scoreboard objectives add MindModifier dummy
-    scoreboard objectives add TactModifier dummy
-    scoreboard objectives add ResolveModifier dummy
-    scoreboard objectives add VitalityModifier dummy
-    scoreboard objectives add SoulModifier dummy
-
-# signed stats
-scoreboard objectives add Faith dummy
-scoreboard objectives add Humanity dummy
-scoreboard objectives add Glory dummy
+# averaged stats
+scoreboard objectives add sse.Physique dummy
+scoreboard objectives add sse.Passion dummy
+scoreboard objectives add sse.Knowledge dummy
 
 # secondary stats
 scoreboard objectives add Initiative dummy
@@ -77,3 +68,8 @@ scoreboard objectives add tact_armor_toughness dummy
 scoreboard objectives add soul_burning_time dummy
 scoreboard objectives add soul_oxygen_bonus dummy
 scoreboard objectives add soul_luck dummy
+
+# movement
+scoreboard objectives add StrafeTime dummy
+scoreboard objectives add SuperSprintTime dummy
+scoreboard objectives add SuperSprintThreshold dummy

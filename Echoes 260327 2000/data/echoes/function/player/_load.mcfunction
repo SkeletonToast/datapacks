@@ -111,8 +111,6 @@ gamerule natural_health_regeneration false
     scoreboard objectives add drink_water minecraft.used:minecraft.potion
 
 # movement
-scoreboard objectives add StrafeTime dummy
-scoreboard objectives add SuperSprintTime dummy
 scoreboard objectives add GlideTime dummy
 scoreboard objectives add GlideEligible dummy
     # scoreboard objectives add strafe_input dummy
