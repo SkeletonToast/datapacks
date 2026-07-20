@@ -15,7 +15,7 @@ clear @a[scores={OnGround=1}] firework_rocket[custom_data~{elytra_boost:true}]
 
 execute as @a[scores={SoftRestOrRespawn=1}] run function echoes:player/grant_recipes
 
-# execute as @a run function echoes:player/ambient_particles
+execute as @a run function echoes:player/ambient_particles
 
 function echoes:player/aegis/display/_main
 
@@ -41,6 +41,8 @@ execute unless score $day value matches 1.. run scoreboard players set $day valu
 
 execute as @a run function echoes:player/renown
 
+scoreboard players set @a[tag=InCombat] smoothSprinting 0
+scoreboard players set @a[tag=!InCombat] smoothSprinting 1
 execute as @a run function echoes:stats/feats
 
 # function echoes:player/movement/glide

@@ -61,6 +61,7 @@ execute store result score @s generic_h run attribute @s scale get 100
         function math:round/100_reduce {"score":"generic_attribute"}
     scoreboard players operation @s generic_c = @s SprintTime
         scoreboard players operation @s generic_c *= @s smooth_sprint_multiplier
+            scoreboard players operation @s[scores={SprintTime=..39}] generic_c *= @s 2
     execute if score @s smoothSprinting matches 1 as @s[scores={SprintTime=1..,StrafeTime=0}] if score @s generic_attribute > @s generic_c run scoreboard players operation @s generic_attribute = @s generic_c
 
         # strafing
@@ -71,7 +72,7 @@ execute store result score @s generic_h run attribute @s scale get 100
             execute if score @s smoothSprinting matches 1 as @s[scores={StrafeTime=1..}] if score @s generic_attribute > @s generic_c run scoreboard players operation @s generic_attribute = @s generic_c
 
             # super sprinting
-            execute as @s[scores={SuperSprintTime=100..},tag=SurgeSprintEligible] if predicate ss_lib:input/forward unless predicate ss_lib:input/sprint run function echoes:stats/movement/super_sprint
+            execute as @s[tag=SurgeSprintEligible] if score @s SuperSprintTime >= @s SuperSprintThreshold if predicate ss_lib:input/forward unless predicate ss_lib:input/sprint run function echoes:stats/movement/super_sprint
             execute as @s[scores={SprintTime=40..,Food=7..,SneakTime=0}] if predicate ss_lib:input/sprint run function echoes:stats/movement/super_sprint
             execute as @s[scores={StrafeTime=20..,SprintTime=0,Food=7..,SneakTime=0}] if predicate ss_lib:input/sprint run function echoes:stats/movement/super_sprint
             scoreboard players set @s[tag=!SuperSprinting] SuperSprintTime 0

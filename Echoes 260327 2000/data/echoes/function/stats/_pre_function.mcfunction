@@ -39,20 +39,29 @@ execute as @a run scoreboard players operation @s sse.Physique += @s Dexterity
 # execute as @a run scoreboard players operation @s sse.Physique += @s Resolve
 execute as @a run scoreboard players operation @s sse.Physique *= @s 3
 execute as @a run scoreboard players operation @s sse.Physique /= @s 5
+    execute as @a run scoreboard players operation @s sse.Physique /= @s 2
+    execute as @a if score @s Strength >= @s Dexterity run scoreboard players operation @s sse.Physique += @s Dexterity
+    execute as @a if score @s Dexterity >= @s Strength run scoreboard players operation @s sse.Physique += @s Strength
 execute as @a if score @s Strength >= @s Dexterity if score @s sse.Physique > @s Strength run scoreboard players operation @s sse.Physique = @s Strength
 execute as @a if score @s Dexterity >= @s Strength if score @s sse.Physique > @s Dexterity run scoreboard players operation @s sse.Physique = @s Dexterity
 
 execute as @a run scoreboard players operation @s sse.Passion = @s Vitality
 execute as @a run scoreboard players operation @s sse.Passion += @s Soul
-execute as @a run scoreboard players operation @s sse.Passion *= @s 2
-execute as @a run scoreboard players operation @s sse.Passion /= @s 3
+execute as @a run scoreboard players operation @s sse.Passion *= @s 3
+execute as @a run scoreboard players operation @s sse.Passion /= @s 5
+    execute as @a run scoreboard players operation @s sse.Passion /= @s 2
+    execute as @a if score @s Vitality >= @s Soul run scoreboard players operation @s sse.Passion += @s Soul
+    execute as @a if score @s Soul >= @s Vitality run scoreboard players operation @s sse.Passion += @s Vitality
 execute as @a if score @s Vitality >= @s Soul if score @s sse.Passion > @s Vitality run scoreboard players operation @s sse.Passion = @s Vitality
 execute as @a if score @s Soul >= @s Vitality if score @s sse.Passion > @s Soul run scoreboard players operation @s sse.Passion = @s Soul
 
 execute as @a run scoreboard players operation @s sse.Knowledge = @s Mind
 execute as @a run scoreboard players operation @s sse.Knowledge += @s Tact
-execute as @a run scoreboard players operation @s sse.Knowledge *= @s 2
-execute as @a run scoreboard players operation @s sse.Knowledge /= @s 3
+execute as @a run scoreboard players operation @s sse.Knowledge *= @s 3
+execute as @a run scoreboard players operation @s sse.Knowledge /= @s 5
+    execute as @a run scoreboard players operation @s sse.Knowledge /= @s 2
+    execute as @a if score @s Mind >= @s Tact run scoreboard players operation @s sse.Knowledge += @s Tact
+    execute as @a if score @s Tact >= @s Mind run scoreboard players operation @s sse.Knowledge += @s Mind
 execute as @a if score @s Mind >= @s Mind if score @s sse.Knowledge > @s Mind run scoreboard players operation @s sse.Knowledge = @s Mind
 execute as @a if score @s Mind >= @s Mind if score @s sse.Knowledge > @s Tact run scoreboard players operation @s sse.Knowledge = @s Tact
 
@@ -104,3 +113,7 @@ scoreboard players set @a SuperSprintThreshold 115
 execute as @a run scoreboard players operation @s generic_a = @s Dexterity
 execute as @a run scoreboard players operation @s generic_a /= @s 2
 execute as @a run scoreboard players operation @s SuperSprintThreshold -= @s Dexterity
+
+    scoreboard players set @a SuperSprintThreshold 200
+    execute as @a run scoreboard players operation @s SuperSprintThreshold -= @s Dexterity
+    scoreboard players set @a[scores={SuperSprintThreshold=..79}] SuperSprintThreshold 80

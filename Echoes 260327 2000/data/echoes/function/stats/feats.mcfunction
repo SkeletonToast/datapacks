@@ -85,5 +85,6 @@ function echoes:stats/feat_assignment {"stat":"Soul"}
     # level 50: player gains fire resistance, conduit power, and saturation (at ≤19 Food) if aegis is active
     function ss_lib:fetch/absorption {"s":"@a[tag=Soul_feat_3,tag=!InCombat]"}
     effect give @a[tag=Soul_feat_3,scores={Absorption=1..},tag=!InCombat] fire_resistance 1 0 true
-    effect give @a[tag=Soul_feat_3,scores={Absorption=1..},tag=!InCombat] conduit_power 1 0 true
+    effect give @a[tag=Soul_feat_3,scores={Absorption=1..}] conduit_power 1 0 true
     effect give @a[tag=Soul_feat_3,scores={Absorption=1..,Food=..18},tag=!InCombat] saturation 1 0 true
+    # execute as @a[tag=Soul_feat_3,scores={Absorption=1..,InWater=2..}] at @s anchored eyes run particle wax_on ^ ^ ^ 10 10 10 0 10 normal @s
