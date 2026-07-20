@@ -1,1 +1,1 @@
-title @s actionbar [{"text":"[⚔] You have exited combat.","color":"green"}]
+function ss_lib:actionbar {"title":"{\"text\":\"[⚔] You have exited combat.\",\"color\":\"green\"}","duration":40}

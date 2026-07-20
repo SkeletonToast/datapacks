@@ -100,6 +100,7 @@ gamerule natural_health_regeneration false
     scoreboard objectives add temp_default dummy
     scoreboard objectives add temp_modifier dummy
     scoreboard objectives add ambient_temp dummy
+    scoreboard objectives add temp_dangerous dummy
 
     scoreboard objectives add cold_resistance dummy
     scoreboard objectives add heat_resistance dummy

@@ -8,7 +8,7 @@ execute as @a[scores={flight_level=1..}] if items entity @s armor.chest elytra r
     scoreboard players set @a[scores={Mind=..16}] flight_level 0
 
 # slipstream
-execute as @a[scores={flight_level=4..,FallFlying=1,flight_level=3..,used_firework_rocket=1..}] unless entity @s[scores={slipstream=1..}] run title @s actionbar [{"text":"✧ Caught Slipstream ✧","color":"#ffffff"}]
+execute as @a[scores={flight_level=4..,FallFlying=1,flight_level=3..,used_firework_rocket=1..}] unless entity @s[scores={slipstream=1..}] run function ss_lib:actionbar {"title":"{\"text\":\"✧ Caught Slipstream ✧\",\"color\":\"#ffffff\"}","duration":20}
     # flight level 4-20
     scoreboard players set @a[scores={flight_level=4..,FallFlying=1,flight_level=3..20,used_firework_rocket=1..}] slipstream 30
     execute as @a run scoreboard players operation @s[scores={FallFlying=1,flight_level=3..20,used_firework_rocket=1..}] slipstream -= @s flight_level
@@ -108,7 +108,7 @@ effect give @a[scores={flight_level=4..,FallFlying=1,flight_level=30..}] minecra
 scoreboard players set @a[scores={flight_level=4..,slipstream=1..,DamageTaken=1..}] slipstream 1
 scoreboard players set @a[scores={flight_level=4..,slipstream=1..,DamageResisted=1..}] slipstream 1
 # scoreboard players remove @a[scores={flight_level=4..,flight_level=..9,slipstream=11..,trait002-01=1..}] slipstream 10
-title @a[scores={flight_level=4..,FallFlying=1,slipstream=1}] actionbar [{"text":"- Slipstream Lost -","color":"#999999"}]
+execute as @a[scores={flight_level=4..,FallFlying=1,slipstream=1}] run function ss_lib:actionbar {"title":"{\"text\":\"- Slipstream Lost -\",\"color\":\"#999999\"}","duration":20}
 scoreboard players remove @a[scores={flight_level=4..,slipstream=1..}] slipstream 1
 scoreboard players set @a[scores={flight_level=4..,FallFlying=0}] slipstream 0
 

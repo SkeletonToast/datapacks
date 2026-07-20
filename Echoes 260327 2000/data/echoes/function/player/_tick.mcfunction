@@ -1,4 +1,4 @@
-function echoes:player/temperature/temperature
+function echoes:player/temperature/_main
 
 function echoes:player/encumbrance/_main
 

@@ -136,6 +136,10 @@ scoreboard objectives add deathx dummy
 scoreboard objectives add deathy dummy
 scoreboard objectives add deathz dummy
 
+scoreboard objectives add pause_actionbars dummy
+    # should be referenced when creating an actionbar title. check to see if this timer is at 0, and then set to however long you want your timer to take priority.
+    # the ss_lib:actionbar function can also be used.
+
 scoreboard objectives add raycast_lifetime dummy
 
 scoreboard objectives add attack_particle_timer dummy

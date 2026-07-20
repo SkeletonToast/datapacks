@@ -2,12 +2,14 @@ scoreboard players set @s proficiency_str 0
 scoreboard players set @s proficiency_dex 0
 scoreboard players set @s proficiency_tact 0
 scoreboard players set @s proficiency_soul 0
+scoreboard players set @s proficiency_mind 0
 
 # these are really just here for debugging
 scoreboard players set @s prof_str_unadj 0
 scoreboard players set @s prof_dex_unadj 0
 scoreboard players set @s prof_tact_unadj 0
 scoreboard players set @s prof_soul_unadj 0
+scoreboard players set @s prof_mind_unadj 0
 
 function ss_lib:fetch/weapon {"s":"@s"}
 # function ss_lib:fetch/item_selected {"s":"@s"}
@@ -89,16 +91,16 @@ scoreboard players operation @s prof_mind_unadj = @s proficiency_mind
 execute unless score $incrementalProficiencyScaling true matches 1 run function echoes:player/combat/proficiency/linear
 
 # incremental
-execute as @s[scores={proficiency_str=1..}] if score $incrementalProficiencyScaling true matches 1 run \
-    function echoes:player/combat/proficiency/incremental {"stat":"Strength","statabbr":"str"}
-execute as @s[scores={proficiency_dex=1..}] if score $incrementalProficiencyScaling true matches 1 run \
-    function echoes:player/combat/proficiency/incremental {"stat":"Dexterity","statabbr":"dex"}
-execute as @s[scores={proficiency_tact=1..}] if score $incrementalProficiencyScaling true matches 1 run \
-    function echoes:player/combat/proficiency/incremental {"stat":"Tact","statabbr":"tact"}
-execute as @s[scores={proficiency_soul=1..}] if score $incrementalProficiencyScaling true matches 1 run \
-    function echoes:player/combat/proficiency/incremental {"stat":"Soul","statabbr":"soul"}
-execute as @s[scores={proficiency_mind=1..}] if score $incrementalProficiencyScaling true matches 1 run \
-    function echoes:player/combat/proficiency/incremental {"stat":"Mind","statabbr":"mind"}
+    # execute as @s[scores={proficiency_str=1..}] if score $incrementalProficiencyScaling true matches 1 run \
+    #     function echoes:player/combat/proficiency/incremental {"stat":"Strength","statabbr":"str"}
+    # execute as @s[scores={proficiency_dex=1..}] if score $incrementalProficiencyScaling true matches 1 run \
+    #     function echoes:player/combat/proficiency/incremental {"stat":"Dexterity","statabbr":"dex"}
+    # execute as @s[scores={proficiency_tact=1..}] if score $incrementalProficiencyScaling true matches 1 run \
+    #     function echoes:player/combat/proficiency/incremental {"stat":"Tact","statabbr":"tact"}
+    # execute as @s[scores={proficiency_soul=1..}] if score $incrementalProficiencyScaling true matches 1 run \
+    #     function echoes:player/combat/proficiency/incremental {"stat":"Soul","statabbr":"soul"}
+    # execute as @s[scores={proficiency_mind=1..}] if score $incrementalProficiencyScaling true matches 1 run \
+    #     function echoes:player/combat/proficiency/incremental {"stat":"Mind","statabbr":"mind"}
 
 # actual assignment
 scoreboard players operation @s proficiency = @s proficiency_temp
