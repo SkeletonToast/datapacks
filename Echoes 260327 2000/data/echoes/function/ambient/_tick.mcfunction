@@ -7,6 +7,9 @@ execute as @a at @s[predicate=echoes:in_ocean,scores={InWater=1..}] run particle
 execute as @a at @s[predicate=echoes:in_ocean,scores={InWater=1..}] run particle white_ash ~ ~ ~ 20 20 20 0 80 normal @s
 execute as @a at @s[predicate=echoes:in_cold_biome,predicate=ss_lib:in_rain] run particle snowflake ~ ~20 ~ 20 10 20 0 320 normal @s
 
+execute as @a at @s[predicate=echoes:in_caves] if predicate ss_lib:random_1_percent if predicate ss_lib:random_20_percent run particle ash ~ ~20 ~ 20 10 20 0 3000 normal @s
+# execute as @a at @s[predicate=echoes:in_caves] if predicate ss_lib:random_1_percent if predicate ss_lib:random_1_percent run particle ash ~ ~10 ~ 20 10 20 0 3000 normal @s
+
 # execute as @a[predicate=echoes:in_cold_biome,predicate=ss_lib:in_rain] run particle white_ash ~ ~5 ~ 5 5 5 1 1000 normal @s
 # execute at @s[predicate=echoes:in_stony_biome] run particle ash ~ ~ ~ 10 1 10 0 2 normal @s
 # effect give @s[predicate=echoes:in_caves] darkness 3 0 true

@@ -54,6 +54,7 @@ execute store result score @s generic_h run attribute @s scale get 100
     # scoreboard players set @s smooth_sprint_multiplier 1
 
     scoreboard players operation @s generic_attribute = @s Dexterity
+            scoreboard players set @s[scores={generic_attribute=101..}] generic_attribute 100
         scoreboard players operation @s generic_attribute *= @s 3
         scoreboard players operation @s generic_attribute /= @s 2
             scoreboard players operation @s generic_attribute /= @s 2
@@ -72,7 +73,7 @@ execute store result score @s generic_h run attribute @s scale get 100
             execute if score @s smoothSprinting matches 1 as @s[scores={StrafeTime=1..}] if score @s generic_attribute > @s generic_c run scoreboard players operation @s generic_attribute = @s generic_c
 
             # super sprinting
-            execute as @s[tag=SurgeSprintEligible] if score @s SuperSprintTime >= @s SuperSprintThreshold if predicate ss_lib:input/forward unless predicate ss_lib:input/sprint run function echoes:stats/movement/super_sprint
+            execute as @s[tag=SurgeSprintEligible] if score @s SuperSprintTime >= @s SurgeSprintThreshold if predicate ss_lib:input/forward unless predicate ss_lib:input/sprint run function echoes:stats/movement/super_sprint
             execute as @s[scores={SprintTime=40..,Food=7..,SneakTime=0}] if predicate ss_lib:input/sprint run function echoes:stats/movement/super_sprint
             execute as @s[scores={StrafeTime=20..,SprintTime=0,Food=7..,SneakTime=0}] if predicate ss_lib:input/sprint run function echoes:stats/movement/super_sprint
             scoreboard players set @s[tag=!SuperSprinting] SuperSprintTime 0

@@ -109,11 +109,11 @@ execute as @a run function math:round/10_reduce {"score":"generic_h"}
 execute as @a run scoreboard players operation @s Strength += @s generic_h
 
 # movement stats
-scoreboard players set @a SuperSprintThreshold 115
+scoreboard players set @a SurgeSprintThreshold 115
 execute as @a run scoreboard players operation @s generic_a = @s Dexterity
 execute as @a run scoreboard players operation @s generic_a /= @s 2
-execute as @a run scoreboard players operation @s SuperSprintThreshold -= @s Dexterity
+execute as @a run scoreboard players operation @s SurgeSprintThreshold -= @s Dexterity
 
-    scoreboard players set @a SuperSprintThreshold 200
-    execute as @a run scoreboard players operation @s SuperSprintThreshold -= @s Dexterity
-    scoreboard players set @a[scores={SuperSprintThreshold=..79}] SuperSprintThreshold 80
+    scoreboard players set @a SurgeSprintThreshold 200
+    execute as @a run scoreboard players operation @s SurgeSprintThreshold -= @s Dexterity
+    scoreboard players set @a[scores={SurgeSprintThreshold=..99}] SurgeSprintThreshold 100

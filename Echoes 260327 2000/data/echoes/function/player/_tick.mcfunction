@@ -39,8 +39,8 @@ execute unless score $day value matches 1.. run scoreboard players set $day valu
 
 execute as @a run function echoes:player/renown
 
-scoreboard players set @a[tag=InCombat] smoothSprinting 0
-scoreboard players set @a[tag=!InCombat] smoothSprinting 1
+scoreboard players set @a[tag=InCombat,scores={SprintTime=0,StrafeTime=0}] smoothSprinting 0
+scoreboard players set @a[tag=!InCombat,scores={SprintTime=0,StrafeTime=0}] smoothSprinting 1
 execute as @a run function echoes:stats/feats
 
 # function echoes:player/movement/glide

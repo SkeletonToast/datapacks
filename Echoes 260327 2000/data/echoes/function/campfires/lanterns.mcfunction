@@ -10,6 +10,7 @@ execute as @e[type=minecraft:interaction,tag=Lantern] at @s if data entity @s in
     execute as @e[type=minecraft:interaction,tag=Lantern] at @s if data entity @s interaction on target run scoreboard players set @s generic_a 40
     execute as @e[type=minecraft:interaction,tag=Lantern] at @s if data entity @s interaction on target run scoreboard players operation @s generic_a += @s Soul
 execute as @e[type=minecraft:interaction,tag=Lantern] at @s if data entity @s interaction on target at @s anchored eyes positioned ^ ^ ^0.5 run function parse:score_unended {"score":"generic_a","function":"echoes:campfires/lantern_raycast"}
+# execute as @e[type=minecraft:interaction,tag=Lantern] at @s if data entity @s interaction on target run effect give @s[scores={Soul=50..}] night_vision 1 0 true
 
 execute as @e[type=minecraft:interaction,tag=Lantern] at @s if data entity @s interaction run kill @s
 

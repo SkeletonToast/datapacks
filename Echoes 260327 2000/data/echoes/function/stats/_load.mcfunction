@@ -72,4 +72,4 @@ scoreboard objectives add soul_luck dummy
 # movement
 scoreboard objectives add StrafeTime dummy
 scoreboard objectives add SuperSprintTime dummy
-scoreboard objectives add SuperSprintThreshold dummy
+scoreboard objectives add SurgeSprintThreshold dummy
