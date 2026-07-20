@@ -15,8 +15,8 @@ tag @a[tag=near_campfire_10] add near_campfire
 # execute as @a on vehicle if entity @s[type=#minecraft:boat] on passengers if items entity @s weapon.mainhand #echoes:campfires run tag @s add near_campfire
 
 scoreboard players set @a[scores={placed_soul_campfire=1..}] placed_campfire 1
-execute as @a[scores={placed_campfire=1}] at @s anchored eyes positioned ^ ^ ^0.25 run function raycast:block_specific {"block":"#minecraft:campfires","particle":"execute if entity @s","increment_distance":"0.25","max_lifetime":"30","run_on_success":"execute align xyz positioned ~0.5 ~0.15 ~0.5 run function echoes:campfires/place"}
-execute as @a[scores={placed_campfire=1}] at @s anchored eyes positioned ^ ^ ^0.25 positioned ~ ~1 ~ run function raycast:block_specific {"block":"#minecraft:campfires","particle":"execute if entity @s","increment_distance":"0.25","max_lifetime":"30","run_on_success":"execute align xyz positioned ~0.5 ~0.15 ~0.5 run function echoes:campfires/place"}
+execute as @a[scores={placed_campfire=1}] at @s anchored eyes positioned ^ ^ ^0.25 run function raycast:block_specific {"block":"#minecraft:campfires","particle":"execute if entity @s","increment_distance":"0.25","max_lifetime":"30","run_on_success":"execute align xyz positioned ~0.5 ~0.15 ~0.5 run function echoes:campfires/place","solid_block_collision":"false"}
+execute as @a[scores={placed_campfire=1}] at @s anchored eyes positioned ^ ^ ^0.25 positioned ~ ~1 ~ run function raycast:block_specific {"block":"#minecraft:campfires","particle":"execute if entity @s","increment_distance":"0.25","max_lifetime":"30","run_on_success":"execute align xyz positioned ~0.5 ~0.15 ~0.5 run function echoes:campfires/place","solid_block_collision":"false"}
 
 # particles
 execute at @e[type=minecraft:interaction,tag=campfire,tag=!soul_campfire] run particle trial_spawner_detection ~ ~ ~ 0.2 0.2 0.2 0 1 normal @a
