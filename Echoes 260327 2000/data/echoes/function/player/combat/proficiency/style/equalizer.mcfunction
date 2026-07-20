@@ -1,4 +1,4 @@
-scoreboard players set @s generic_e 20
+scoreboard players set @s generic_e 40
 
 # higher
 execute if score @s Strength >= @s Dexterity run scoreboard players operation @s generic_a = @s proficiency_str
