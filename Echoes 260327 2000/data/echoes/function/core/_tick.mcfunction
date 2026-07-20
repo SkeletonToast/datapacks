@@ -6,14 +6,14 @@ function echoes:stats/_pre_function
 # function echoes:classes/_pre_function
 # function echoes:classes/_tick
 
+function echoes:ambient/_tick
+
 function echoes:player/_tick
 function ss_armory:_tick
 function ss_statuses:_tick
 function echoes:stats/_tick
 # i moved feat assignment to player, since it's mostly related to things that happen in echoes mechanics,
     # so if there's an issue, check there
-
-function echoes:ambient/_tick
 
 function ec_dev:_tick
 

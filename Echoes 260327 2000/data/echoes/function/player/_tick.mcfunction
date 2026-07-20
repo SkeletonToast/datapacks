@@ -15,8 +15,6 @@ clear @a[scores={OnGround=1}] firework_rocket[custom_data~{elytra_boost:true}]
 
 execute as @a[scores={SoftRestOrRespawn=1}] run function echoes:player/grant_recipes
 
-execute as @a run function echoes:player/ambient_particles
-
 function echoes:player/aegis/display/_main
 
 effect give @a[scores={used_glow_berries=1..}] glowing 10 0 true

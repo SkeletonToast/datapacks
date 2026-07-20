@@ -13,9 +13,10 @@ execute if score @s smoothSprinting matches 1 if score @s generic_c >= @s generi
 execute if score @s smoothSprinting matches 0 run scoreboard players operation @s generic_attribute += @s generic_attribute
 
 tag @s remove SurgeSprintEligible
-tag @s[scores={Dexterity=30..}] add SurgeSprintEligible
-tag @s[scores={sse.Physique=50..}] add SurgeSprintEligible
-tag @s[scores={EchoLevel=80..}] add SurgeSprintEligible
+tag @s[scores={Dexterity=70..}] add SurgeSprintEligible
+tag @s[scores={Dexterity=30..},predicate=!ss_lib:is/swimming] add SurgeSprintEligible
+tag @s[scores={sse.Physique=50..},predicate=!ss_lib:is/swimming] add SurgeSprintEligible
+tag @s[scores={EchoLevel=80..},predicate=!ss_lib:is/swimming] add SurgeSprintEligible
 execute if score @s SuperSprintTime = @s SuperSprintThreshold as @s[tag=SurgeSprintEligible,scores={OnGround=1}] at @s anchored eyes positioned ^ ^ ^ run playsound entity.breeze.wind_burst master @s ~ ~ ~ 0.3 0.7
 execute if score @s SuperSprintTime = @s SuperSprintThreshold as @s[tag=SurgeSprintEligible,scores={OnGround=1}] at @s anchored eyes positioned ^ ^ ^ run playsound entity.player.splash.high_speed master @s ~ ~ ~ 0.3 0.7
 execute if score @s SuperSprintTime = @s SuperSprintThreshold as @s[tag=SurgeSprintEligible] at @s anchored eyes positioned ^ ^ ^ run particle explosion_emitter
@@ -36,6 +37,7 @@ execute if score @s SuperSprintTime >= @s SuperSprintThreshold as @s[tag=SurgeSp
 
 # super jumping
     execute if score @s SuperSprintTime >= @s SuperSprintThreshold run tag @s[scores={Dexterity=70..,OnGround=1}] add SurgeJumpEligible
+    tag @s[predicate=ss_lib:is/swimming] remove SurgeJumpEligible
     execute as @s[tag=SurgeJumpEligible,predicate=ss_lib:input/jump] run scoreboard players operation @s SuperSprintTime = @s SuperSprintThreshold
         execute as @s[tag=SurgeJumpEligible,predicate=ss_lib:input/jump] run scoreboard players operation @s SuperSprintTime /= @s 2
     execute as @s[tag=SurgeJumpEligible,predicate=ss_lib:input/jump] run scoreboard players set $strength player_motion.api.launch 10000
