@@ -17,7 +17,7 @@ execute as @s[scores={temp_dangerous=..-10}] run effect clear @s speed
 execute as @s[scores={temp_dangerous=..-10}] run effect clear @s jump_boost
 execute as @s[scores={temp_dangerous=..-10}] run effect clear @s regeneration
 
-execute if predicate ss_lib:random_10_percent at @s[scores={temp_dangerous=..-10}] anchored eyes run particle firework ^ ^ ^1 7 7 7 0 10 normal @s
+execute if predicate ss_lib:random_10_percent at @s[scores={temp_dangerous=..-10}] anchored eyes run particle firework ^ ^ ^1 20 20 20 0 50 normal @s
 execute as @s[scores={temp_dangerous=..-15}] if predicate ss_lib:random_10_percent run function echoes:particles/concussion
 execute as @s[scores={temp_dangerous=..-20}] if predicate ss_lib:random_10_percent run function echoes:particles/concussion
 execute if predicate ss_lib:random_10_percent at @s[scores={temp_dangerous=..-20}] anchored eyes run particle snowflake ^ ^-0.3 ^0.5 0 0 0 0 1 normal @s

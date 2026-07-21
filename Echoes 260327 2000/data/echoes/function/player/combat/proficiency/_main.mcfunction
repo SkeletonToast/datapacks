@@ -58,7 +58,7 @@ execute as @s[scores={ItemSelected=0}] run function echoes:player/combat/profici
 # copper weapons
     execute as @s[scores={WeaponType=1..4}] if items entity @s weapon.mainhand #echoes:copper_weapon run scoreboard players remove @s proficiency_str 10
     execute as @s[scores={WeaponType=1..4}] if items entity @s weapon.mainhand #echoes:copper_weapon run scoreboard players remove @s proficiency_dex 10
-    execute as @s[scores={WeaponType=1..4}] if items entity @s weapon.mainhand #echoes:copper_weapon run scoreboard players add @s proficiency_mind 40
+    execute as @s[scores={WeaponType=1..4}] if items entity @s weapon.mainhand #echoes:copper_weapon run scoreboard players add @s proficiency_mind 20
 
 # netherite weapons
     execute as @s[scores={WeaponType=1..4}] if items entity @s weapon.mainhand #echoes:netherite_weapon run scoreboard players add @s proficiency_str 10
@@ -79,6 +79,10 @@ execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantme
 # two handing - strength/dexterity feat 2
 execute as @s[tag=Strength_feat_2,tag=!Dexterity_feat_2] unless items entity @s weapon.offhand * run function echoes:player/combat/proficiency/two_handing {"stat":"_str"}
 execute as @s[tag=Dexterity_feat_2,tag=!Strength_feat_2] unless items entity @s weapon.offhand * run function echoes:player/combat/proficiency/two_handing {"stat":"_dex"}
+
+# mind additional proficiency
+scoreboard players operation @s[scores={xp_level=..200}] proficiency_mind += @s xp_level
+scoreboard players add @s[scores={xp_level=201..}] proficiency_mind 200
 
 # unadjusted score storage
 scoreboard players operation @s prof_str_unadj = @s proficiency_str

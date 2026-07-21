@@ -9,6 +9,8 @@ scoreboard objectives add EchoDifficulty dummy
 
 scoreboard objectives add xp_level level
 scoreboard objectives add xp_stored dummy
+scoreboard objectives add xp_cap dummy
+scoreboard objectives add xp_increment dummy
 
 scoreboard objectives add fear dummy
 scoreboard objectives add fear_eligible dummy

@@ -31,9 +31,10 @@ execute as @a[scores={frozen_active=0..}] if predicate ss_lib:random_10_percent 
 
     # in cold biome / dimension
     scoreboard players remove @a[predicate=echoes:in_cold_biome] ambient_temp 34
+    scoreboard players remove @a[predicate=echoes:in_chilly_biome] ambient_temp 19
     execute as @a[predicate=!echoes:in_cold_biome] run function echoes:fetch/dimension {"s":"@s"}
-    scoreboard players remove @a[scores={Dimension=3..4}] ambient_temp 10
-    scoreboard players remove @a[scores={Dimension=4}] ambient_temp 10
+    scoreboard players remove @a[scores={Dimension=3}] ambient_temp 9
+    scoreboard players remove @a[scores={Dimension=4}] ambient_temp 21
 
     execute as @a[predicate=echoes:in_cold_biome,scores={ambient_temp=0..}] \
         if predicate ss_lib:random_1_percent \
@@ -72,7 +73,7 @@ execute as @a[scores={frozen_active=0..}] if predicate ss_lib:random_10_percent 
         if predicate ss_lib:random_50_percent \
             run scoreboard players remove @s temp_modifier 1
 
-    execute as @a unless score @s wet_timer matches 1.. run function ss_lib:fetch/in_water
+    execute as @a unless score @s wet_timer matches 1.. run function ss_lib:fetch/in_water {"s":"@s"}
 
     execute as @a[scores={InWater=1,temp_modifier=0..}] \
         if predicate ss_lib:random_1_percent \
@@ -87,7 +88,7 @@ execute as @a[scores={frozen_active=0..}] if predicate ss_lib:random_10_percent 
 scoreboard players add @a[scores={incendiary_timer=1..}] ambient_temp 36
 scoreboard players add @a[scores={incendiary_timer=-2}] ambient_temp 36
 
-execute as @a[predicate=ss_lib:is/on_fire] if predicate ss_lib:random_10_percent if predicate ss_lib:random_50_percent run scoreboard players add @s temp_modifier 1
+execute as @a[predicate=ss_lib:is/on_fire] if predicate ss_lib:random_20_percent if predicate ss_lib:random_50_percent run scoreboard players add @s temp_modifier 1
 
     # in arid biome
     scoreboard players add @a[predicate=ss_lib:in_arid_biome] ambient_temp 13

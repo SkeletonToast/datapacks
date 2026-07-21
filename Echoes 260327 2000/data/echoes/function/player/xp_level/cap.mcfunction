@@ -1,5 +1,6 @@
-xp add @s -1 points
-scoreboard players add @s xp_stored 1
-
-# execute if score @s xp_level >= @s Mind run function echoes:player/xp_level/cap
-    # don't know if this works. it would need xp_level to update in-between ticks, which is a maybe, bc otherwise it would just memory leak
+$xp add @s -$(value) points
+# scoreboard players operation @s generic_m = @s xp_cap
+#     scoreboard players operation @s generic_m *= @s 10
+#     scoreboard players operation @s generic_m *= @s 10
+#     scoreboard players operation @s generic_m *= @s 10
+$scoreboard players add @s[scores={xp_stored=..2000000000}] xp_stored $(value)

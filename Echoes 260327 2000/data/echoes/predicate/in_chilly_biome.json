@@ -1,0 +1,14 @@
+{
+    "condition": "minecraft:location_check",
+    "predicate": {
+      "biomes": [
+        "minecraft:taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:cold_ocean",
+        "minecraft:deep_cold_ocean",
+        "minecraft:deep_dark"
+      ]
+    }
+  }
+  

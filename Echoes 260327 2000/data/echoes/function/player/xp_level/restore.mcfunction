@@ -1,2 +1,2 @@
-xp add @s 1 points
-scoreboard players remove @s xp_stored 1
+$xp add @s[scores={xp_stored=1..}] $(value) points
+$scoreboard players remove @s[scores={xp_stored=1..}] xp_stored $(value)
