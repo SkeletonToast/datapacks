@@ -1,0 +1,1 @@
+execute as @a[scores={DayTime=13000..22999}] at @s if predicate {"condition":"minecraft:location_check","predicate":{"biomes":["terralith:amethyst_forest"]}} run particle firefly ~ ~ ~ 20 5 20 0.1 10 normal
