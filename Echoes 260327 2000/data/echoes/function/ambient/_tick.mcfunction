@@ -1,3 +1,5 @@
+execute if score $ambientParticles true matches 0 run return fail
+
 execute as @a[predicate=echoes:in_ocean] run function ss_lib:fetch/in_water {"s":"@s"}
 
 execute as @a[scores={Dimension=4},tag=!near_campfire] at @s run particle white_ash ~ ~5 ~ 10 10 10 1 100 normal @s

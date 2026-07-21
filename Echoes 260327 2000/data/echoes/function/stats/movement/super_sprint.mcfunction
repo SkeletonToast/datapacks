@@ -1,9 +1,9 @@
-execute if score @s encumbrance_unadjusted matches 30.. run title @s actionbar {"text":"!! You are too encumbered to Super Sprint. !!","color":"red"}
+execute if score @s encumbrance_unadjusted matches 30.. run title @s actionbar {"text":"!! You are too encumbered to move any faster. !!","color":"red"}
 execute if score @s encumbrance_unadjusted matches 30.. run scoreboard players set @s pause_actionbars 40
 execute if score @s encumbrance_unadjusted matches 30.. run return fail
 
-execute if score @s temp_dangerous matches 6.. run title @s actionbar {"text":"!! Your body temperature is too high. You cannot Super Sprint. !!","color":"red"}
-execute if score @s temp_dangerous matches ..-6 run title @s actionbar {"text":"!! Your body temperature is too low. You cannot Super Sprint. !!","color":"red"}
+execute if score @s temp_dangerous matches 6.. run title @s actionbar {"text":"!! Your body temperature is too high. You cannot move any faster. !!","color":"red"}
+execute if score @s temp_dangerous matches ..-6 run title @s actionbar {"text":"!! Your body temperature is too low. You cannot move any faster. !!","color":"red"}
 execute unless score @s temp_dangerous matches -5..5 run scoreboard players set @s pause_actionbars 40
 execute unless score @s temp_dangerous matches -5..5 run return fail
 
@@ -34,7 +34,7 @@ execute if score @s SuperSprintTime >= @s SurgeSprintThreshold run scoreboard pl
 
 scoreboard players operation @s generic_c = @s SuperSprintTime
     scoreboard players remove @s generic_c 100
-    # scoreboard players operation @s generic_c *= @s smooth_sprint_multiplier
+#     scoreboard players operation @s generic_c *= @s smooth_sprint_multiplier
 # execute if score @s SuperSprintTime >= @s SurgeSprintThreshold as @s[scores={Dexterity=70..},tag=SurgeSprintEligible] run scoreboard players operation @s generic_attribute += @s generic_c
     # funny infinite acceleration
 execute if score @s SuperSprintTime >= @s SurgeSprintThreshold as @s[tag=SurgeSprintEligible] if score @s smoothSprinting matches 1 if score @s generic_c < @s sse.Physique run scoreboard players operation @s generic_attribute += @s generic_c

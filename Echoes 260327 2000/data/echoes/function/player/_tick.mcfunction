@@ -12,6 +12,7 @@ function echoes:player/xp_level/_main
 function echoes:player/elytra_scaling/_main
 execute as @a[scores={boost_visual_effects=0..}] run function echoes:player/elytra_scaling/boost_visuals
 clear @a[scores={OnGround=1}] firework_rocket[custom_data~{elytra_boost:true}]
+clear @a[scores={FallFlying=0}] firework_rocket[custom_data~{elytra_boost:true}]
 
 execute as @a[scores={SoftRestOrRespawn=1}] run function echoes:player/grant_recipes
 

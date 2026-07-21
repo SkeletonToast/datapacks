@@ -75,6 +75,7 @@ scoreboard players add @s[scores={Tact=70..},tag=Tact_feat_3] proficiency_tact 3
 
 # style enchants
 execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"#echoes:exclusive_set/style"}]] run function echoes:player/combat/proficiency/style/enchantments
+execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"ss_enchants:hexblade"}]] run scoreboard players add @s proficiency_mind 30
 
 # two handing - strength/dexterity feat 2
 execute as @s[tag=Strength_feat_2,tag=!Dexterity_feat_2] unless items entity @s weapon.offhand * run function echoes:player/combat/proficiency/two_handing {"stat":"_str"}
@@ -83,6 +84,11 @@ execute as @s[tag=Dexterity_feat_2,tag=!Strength_feat_2] unless items entity @s 
 # mind additional proficiency
 scoreboard players operation @s[scores={xp_level=..200}] proficiency_mind += @s xp_level
 scoreboard players add @s[scores={xp_level=201..}] proficiency_mind 200
+scoreboard players operation @s[scores={xp_level=1000..}] generic_m = @s xp_level
+    execute as @s[scores={xp_level=1000..}] run function math:round/100_reduce {"score":"generic_m"}
+        execute as @s[scores={xp_level=1000..}] run function math:round/10_reduce {"score":"generic_m"}
+    # scoreboard players operation @s[scores={xp_level=1000..}] generic_m *= @s generic_m
+scoreboard players operation @s[scores={xp_level=1000..}] proficiency_mind += @s generic_m
 
 # unadjusted score storage
 scoreboard players operation @s prof_str_unadj = @s proficiency_str

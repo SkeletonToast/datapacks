@@ -71,10 +71,10 @@ execute as @a[tag=Vitality_feat_1] run scoreboard players operation @s Tenacity 
         execute as @a run scoreboard players operation @s Tenacity /= @s 2
         execute as @a run scoreboard players operation @s Tenacity /= @s 2
         execute as @a run scoreboard players operation @s Tenacity /= @s 2
-            scoreboard players set @a[scores={Tenacity=..-1}] Tenacity 0
+            execute as @a run scoreboard players set @s[scores={Tenacity=..-1}] Tenacity 0
         scoreboard players add @a Tenacity 12
-            scoreboard players operation @a[tag=Vitality_feat_3] Tenacity *= @s 3
-            scoreboard players operation @a[tag=Vitality_feat_3] Tenacity /= @s 2
+            execute as @a run scoreboard players operation @s[tag=Vitality_feat_3] Tenacity *= @s 3
+            execute as @a run scoreboard players operation @s[tag=Vitality_feat_3] Tenacity /= @s 2
 
 execute as @a[tag=Vitality_feat_1] run scoreboard players operation @s Fortitude = @s Tenacity
     execute as @a run scoreboard players operation @s Fortitude /= @s 2

@@ -1,6 +1,6 @@
 # remember maximum aegis is calculated in pre function!!
 
-execute as @a run function echoes:player/overheal_calculate
+execute as @a run function echoes:player/aegis/overheal_calculate
 
 execute as @a if score @s aegis_timer > @s aegis_timer_max run scoreboard players operation @s aegis_timer = @s aegis_timer_max
 
