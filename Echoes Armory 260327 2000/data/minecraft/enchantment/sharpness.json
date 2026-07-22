@@ -20,16 +20,16 @@
       "mainhand"
     ],
     "effects": {
-      "minecraft:attributes": [
+      "minecraft:damage": [
         {
-          "attribute": "minecraft:attack_damage",
-          "id": "enchantment.sharpness.attack_damage",
-          "amount": {
-            "type": "minecraft:linear",
-            "base": 1,
-            "per_level_above_first": 0.5
-          },
-          "operation": "add_value"
+          "effect": {
+            "type": "minecraft:add",
+            "value": {
+              "type": "minecraft:linear",
+              "base": 1,
+              "per_level_above_first": 1
+            }
+          }
         }
       ]
     }

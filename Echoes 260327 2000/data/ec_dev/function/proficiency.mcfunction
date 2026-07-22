@@ -42,6 +42,7 @@ execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantme
 execute if items entity @s weapon.mainhand #echoes:golden_weapon run tellraw @s [{"text":" Golden Weapon: -Str","color":"red"}]
 execute if items entity @s weapon.mainhand #echoes:copper_weapon run tellraw @s [{"text":" Copper Weapon: -Str","color":"red"}]
 execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"echoes:style_equalizer"}]] run tellraw @s [{"text":" Equalizer Style","color":"red"}]
+execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"echoes:black_gold_halo_breaker"}]] run tellraw @s [{"text":" Black Gold Halo Breaker: +Str","color":"red"}]
 
 tellraw @s [""]
 tellraw @s [{"text":"Dexterity: ","color":"gray"}]
@@ -54,16 +55,21 @@ execute if items entity @s weapon.mainhand #echoes:netherite_weapon run tellraw 
 execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"echoes:style_brigand"}]] run tellraw @s [{"text":" Brigand Style: -Dex","color":"gold"}]
 execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"echoes:style_carnivore"}]] run tellraw @s [{"text":" Carnivore Style: -Dex","color":"gold"}]
 execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"echoes:style_equalizer"}]] run tellraw @s [{"text":" Equalizer Style","color":"gold"}]
+execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"echoes:black_gold_halo_breaker"}]] run tellraw @s [{"text":" Black Gold Halo Breaker: +Dex","color":"gold"}]
 
 tellraw @s [""]
 tellraw @s [{"text":"Tact: ","color":"gray"}]
 execute as @s[tag=Tact_feat_2] on vehicle on passengers if entity @s[tag=Tact_feat_2] run tellraw @s [{"text":" Mounted: +Tact","color":"blue"}]
 execute as @s[tag=Tact_feat_2,scores={FallFlying=1}] run tellraw @s [{"text":" Gliding: +Tact","color":"blue"}]
+tellraw @s[tag=Tact_feat_3] [{"text":" High Tact: +Tact","color":"blue"}]
 
 tellraw @s [""]
 tellraw @s [{"text":"Soul: ","color":"gray"}]
 execute if items entity @s weapon.mainhand #echoes:golden_weapon run tellraw @s [{"text":" Golden Weapon: +Soul","color":"light_purple"}]
+execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"echoes:halo_breaker"}]] run tellraw @s [{"text":" Halo Breaker: +Soul","color":"light_purple"}]
+execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"echoes:black_gold_halo_breaker"}]] run tellraw @s [{"text":" Black Gold Halo Breaker: 0 Soul","color":"light_purple"}]
 
 tellraw @s [""]
 tellraw @s [{"text":"Mind: ","color":"gray"}]
-execute if items entity @s weapon.mainhand #echoes:copper_weapon run tellraw @s [{"text":" Copper Weapon: +Soul","color":"light_purple"}]
+execute if items entity @s weapon.mainhand #echoes:copper_weapon run tellraw @s [{"text":" Copper Weapon: +Mind","color":"green"}]
+execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"ss_enchants:hexblade"}]] run tellraw @s [{"text":" Hexblade: +Mind","color":"green"}]

@@ -5,6 +5,46 @@ execute as @a[scores={checkStats=1..}] run function rp:check_stats
 scoreboard players set @a[scores={checkStats=1..}] checkStats 0
 scoreboard players set @a[scores={checkStats=..-1}] checkStats 0
 
+execute unless score $combat_damage_display true matches 1 run return fail
+execute as @a if entity @s[tag=InCombat] store result score @s AttackDamage run attribute @s attack_damage get 100
+execute as @a if entity @s[tag=InCombat] run scoreboard players operation @s generic_a = @s AttackDamage
+    execute as @a if entity @s[tag=InCombat] run scoreboard players set @s generic_b 100
+execute as @a if entity @s[tag=InCombat] run scoreboard players operation @s generic_a %= @s generic_b
+execute as @a if entity @s[tag=InCombat] run scoreboard players operation @s AttackDamage /= @s 10
+    execute as @a if entity @s[tag=InCombat] run scoreboard players operation @s AttackDamage /= @s 10
+
+execute as @a if entity @s[tag=InCombat] store result score @s AttackSpeed run attribute @s attack_speed get 100
+execute as @a if entity @s[tag=InCombat] run scoreboard players operation @s generic_c = @s AttackSpeed
+execute as @a if entity @s[tag=InCombat] run scoreboard players operation @s generic_c %= @s generic_b
+execute as @a if entity @s[tag=InCombat] run scoreboard players operation @s AttackSpeed /= @s 10
+    execute as @a if entity @s[tag=InCombat] run scoreboard players operation @s AttackSpeed /= @s 10
+
+execute as @a if score @s pause_actionbars matches 1.. run return fail
+
+execute as @a if entity @s[tag=InCombat] unless score @s generic_a matches 0..9 unless score @s generic_c matches 0..9 \
+    run title @s actionbar \
+    ["Attack Damage: ",{"score":{"name":"*","objective":"AttackDamage"},"color":"red"},{"text":".","color":"red"},{"score":{"name":"*","objective":"generic_a"},"color":"red"}, \
+    " / ",{"score":{"name":"*","objective":"AttackSpeed"},"color":"red"},{"text":".","color":"red"},{"score":{"name":"*","objective":"generic_c"},"color":"red"}, \
+    " | Proficiency: ",{"score":{"name":"*","objective":"proficiency"},"color":"gold"}]
+
+execute as @a if entity @s[tag=InCombat] if score @s generic_a matches 0..9 unless score @s generic_c matches 0..9 \
+    run title @s actionbar \
+    ["Attack Damage: ",{"score":{"name":"*","objective":"AttackDamage"},"color":"red"},{"text":".0","color":"red"},{"score":{"name":"*","objective":"generic_a"},"color":"red"}, \
+    " / ",{"score":{"name":"*","objective":"AttackSpeed"},"color":"red"},{"text":".","color":"red"},{"score":{"name":"*","objective":"generic_c"},"color":"red"}, \
+    " | Proficiency: ",{"score":{"name":"*","objective":"proficiency"},"color":"gold"}]
+
+execute as @a if entity @s[tag=InCombat] if score @s generic_a matches 0..9 if score @s generic_c matches 0..9 \
+    run title @s actionbar \
+    ["Attack Damage: ",{"score":{"name":"*","objective":"AttackDamage"},"color":"red"},{"text":".0","color":"red"},{"score":{"name":"*","objective":"generic_a"},"color":"red"}, \
+    " / ",{"score":{"name":"*","objective":"AttackSpeed"},"color":"red"},{"text":".0","color":"red"},{"score":{"name":"*","objective":"generic_c"},"color":"red"}, \
+    " | Proficiency: ",{"score":{"name":"*","objective":"proficiency"},"color":"gold"}]
+
+execute as @a if entity @s[tag=InCombat] unless score @s generic_a matches 0..9 if score @s generic_c matches 0..9 \
+    run title @s actionbar \
+    ["Attack Damage: ",{"score":{"name":"*","objective":"AttackDamage"},"color":"red"},{"text":".","color":"red"},{"score":{"name":"*","objective":"generic_a"},"color":"red"}, \
+    " / ",{"score":{"name":"*","objective":"AttackSpeed"},"color":"red"},{"text":".0","color":"red"},{"score":{"name":"*","objective":"generic_c"},"color":"red"}, \
+    " | Proficiency: ",{"score":{"name":"*","objective":"proficiency"},"color":"gold"}]
+
 # execute as @a unless predicate ss_lib:is/hiding at @s positioned ~ ~.5 ~ run function ec_dev:aegis_display
 # execute as @a unless predicate ss_lib:is/hiding at @s positioned ~ ~.1 ~ run function ec_dev:aegis_display
 

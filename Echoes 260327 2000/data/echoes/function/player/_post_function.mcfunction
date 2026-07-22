@@ -29,6 +29,19 @@ execute as @a[scores={SneakTime=1..,in_combat=1..}] if score @s in_combat <= @s 
 
 scoreboard players set @a[scores={used_firework_rocket=1..}] used_firework_rocket 0
 
+# aegis timer
+scoreboard players set @a aegis_timer_max 100
+
+scoreboard players set @a[scores={EchoDifficulty=1}] aegis_amplifier_max 0
+scoreboard players set @a[scores={EchoDifficulty=2}] aegis_amplifier_max 1
+scoreboard players set @a[scores={EchoDifficulty=3}] aegis_amplifier_max 2
+scoreboard players set @a[scores={EchoDifficulty=4..6}] aegis_amplifier_max 4
+scoreboard players set @a[scores={EchoDifficulty=7}] aegis_amplifier_max 9
+# scoreboard players set @a[scores={Dimension=4}] aegis_amplifier_max -1
+
+# execute as @a run attribute @s armor modifier add echoes.armor_reduction -0.5 add_multiplied_total
+    # ArmorType doesn't actually take your armor points value into account so this is fine to keep w/out further modification to like encumbrance
+
 # aegis nonsense
 tag @a[tag=AegisApplied] remove AegisApplied
 

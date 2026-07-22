@@ -1,7 +1,7 @@
 {
     "values": [
-        "minecraft:bamboo",
         "minecraft:iron_chain",
-        "minecraft:copper_chain"
+        "minecraft:copper_chain",
+        "minecraft:pale_hanging_moss"
     ]
   }

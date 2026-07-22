@@ -15,19 +15,6 @@ tag @a add TemperatureEligible
 tag @a[scores={EchoDifficulty=..2}] remove TemperatureEligible
 tag @a[scores={Dimension=5}] remove TemperatureEligible
 
-# aegis timer
-scoreboard players set @a aegis_timer_max 100
-
-scoreboard players set @a[scores={EchoDifficulty=1}] aegis_amplifier_max 0
-scoreboard players set @a[scores={EchoDifficulty=2}] aegis_amplifier_max 1
-scoreboard players set @a[scores={EchoDifficulty=3}] aegis_amplifier_max 2
-scoreboard players set @a[scores={EchoDifficulty=4..6}] aegis_amplifier_max 4
-scoreboard players set @a[scores={EchoDifficulty=7}] aegis_amplifier_max 9
-# scoreboard players set @a[scores={Dimension=4}] aegis_amplifier_max -1
-
-# execute as @a run attribute @s armor modifier add echoes.armor_reduction -0.5 add_multiplied_total
-    # ArmorType doesn't actually take your armor points value into account so this is fine to keep w/out further modification to like encumbrance
-
 scoreboard players set @a[scores={OnGround=1}] boost_visual_effects 0
 execute as @a run attribute @s minecraft:gravity modifier remove mind.elytra_gravity
 execute as @a run attribute @s minecraft:movement_speed modifier remove elytra_visual_speed

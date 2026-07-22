@@ -1,1 +1,5 @@
-execute as @a[scores={DayTime=13000..22999}] at @s if predicate {"condition":"minecraft:location_check","predicate":{"biomes":["terralith:amethyst_forest"]}} run particle firefly ~ ~ ~ 20 5 20 0.1 10 normal
+# execute as @a[scores={DayTime=13000..22999}] at @s if predicate {"condition":"minecraft:location_check","predicate":{"biomes":["terralith:sakura_grove"]}} run particle cherry_leaves ~ ~ ~ 20 5 20 0 1000 normal
+
+execute as @a[scores={DayTime=13000..22999}] at @s if predicate {"condition":"minecraft:location_check","predicate":{"biomes":["terralith:amethyst_rainforest"]}} run particle electric_spark ~ ~ ~ 20 5 20 0 1 normal
+execute as @a[scores={DayTime=13000..22999}] if score $moon_phase value matches 1 at @s if predicate {"condition":"minecraft:location_check","predicate":{"biomes":["terralith:amethyst_rainforest"]}} run particle electric_spark ~ ~ ~ 20 5 20 0 5 normal
+execute as @a[scores={DayTime=13000..22999}] if score $moon_phase value matches 1 at @s if predicate {"condition":"minecraft:location_check","predicate":{"biomes":["terralith:amethyst_rainforest"]}} run particle wax_off ~ ~ ~ 20 5 20 0 5 normal

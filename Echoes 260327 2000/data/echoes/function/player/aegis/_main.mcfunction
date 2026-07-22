@@ -1,4 +1,4 @@
-# remember maximum aegis is calculated in pre function!!
+# remember maximum aegis is calculated in post function!!
 
 execute as @a run function echoes:player/aegis/overheal_calculate
 
@@ -17,8 +17,10 @@ scoreboard players set @a[scores={aegis_timer=..-1}] aegis_timer 0
 effect give @a[scores={killed_mob=1..,aegis_amplifier_max=0..}] absorption 5 0 true
 effect give @a[scores={killed_player=1..,aegis_amplifier_max=0}] absorption 15 0 true
 effect give @a[scores={killed_player=1..,aegis_amplifier_max=1..}] absorption 15 1 true
+effect give @a[scores={killed_mob=1..,Vitality=0}] regeneration 1 2 true
+effect give @a[scores={killed_player=1..,Vitality=0}] absorption 1 3 true
 
-execute as @a[scores={aegis_timer=0}] run function echoes:player/aegis/apply
+execute as @a[scores={aegis_timer=0,aegis_amplifier_max=0..}] run function echoes:player/aegis/apply
 
 execute as @a[tag=AegisApplied,scores={Soul=..79}] run scoreboard players operation @s aegis_timer_max -= @s Soul
 execute as @a[tag=AegisApplied,scores={Soul=80..}] run scoreboard players remove @s aegis_timer_max 80

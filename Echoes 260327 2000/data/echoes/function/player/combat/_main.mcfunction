@@ -13,7 +13,7 @@ execute as @a[scores={ItemSelected=1}] run attribute @s attack_damage modifier r
 # dealing damage to enter combat
     # execute as @a[scores={DamageDealt=1..,in_combat=0}] run scoreboard players operation @s in_combat -= @s Initiative
 scoreboard players add @a[scores={DamageDealt=1..,in_combat=0}] in_combat 20000
-scoreboard players add @a[scores={DamageDealt=1..,in_combat=..10000}] in_combat 10000
+scoreboard players add @a[scores={DamageDealt=1..,in_combat=0..10000}] in_combat 10000
 
 scoreboard players add @a[scores={UsingShield=1..,in_combat=0}] in_combat 10000
 scoreboard players add @a[scores={UsingBow=1..,in_combat=0}] in_combat 10000

@@ -19,4 +19,5 @@ execute if score @s Tenacity > @s overheal_limit run scoreboard players operatio
 # difficulty 7
 scoreboard players operation @s[scores={EchoDifficulty=7}] overheal_limit /= @s 2
 
-execute as @s[scores={TimeSinceRest=0}] run scoreboard players operation @s overheal_limit = @s Resolve
+scoreboard players operation @s[scores={TimeSinceRest=0}] overheal_limit = @s Resolve
+scoreboard players set @s[scores={Vitality=0}] overheal_limit 0

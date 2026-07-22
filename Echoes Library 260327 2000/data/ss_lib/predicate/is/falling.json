@@ -4,7 +4,7 @@
     "predicate": {
       "movement": {
         "vertical_speed": {
-          "min": 4
+          "min": 0.1
         },
         "fall_distance": {
           "min": 0.001

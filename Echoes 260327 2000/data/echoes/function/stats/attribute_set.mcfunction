@@ -198,10 +198,11 @@ execute store result score @s generic_h run attribute @s scale get 100
         {"score":"generic_attribute","prepend":"","append":".","prepend_position":0,"append_position":2,"function":"echoes:stats/set_submerged_mining_speed"}
 
 # camera_distance: +(Tact - 10) / 5
-    scoreboard players operation @s generic_attribute = @s Tact
+    scoreboard players set @s generic_attribute 0
+    scoreboard players operation @s[scores={SneakTime=1..}] generic_attribute = @s Tact
+    execute on vehicle on passengers run scoreboard players operation @s[predicate=ss_lib:input/jump] generic_attribute = @s Tact
         scoreboard players remove @s generic_attribute 10
         scoreboard players operation @s generic_attribute *= @s 2
-        scoreboard players set @s[scores={SneakTime=0}] generic_attribute 0
         scoreboard players set @s[scores={generic_attribute=..2}] generic_attribute 0
             scoreboard players operation @s generic_a = @s SneakTime
             scoreboard players operation @s generic_a *= @s 2
