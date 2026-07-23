@@ -118,8 +118,9 @@ execute store result score @s generic_h run attribute @s scale get 100
     scoreboard players operation @s generic_attribute /= @s 2
     scoreboard players set @s[scores={Food=..6}] generic_attribute 0
         scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
-        scoreboard players set @s[scores={SprintTime=0,StrafeTime=0,SneakTime=0}] generic_attribute 0
-        scoreboard players set @s[predicate=!ss_lib:input/sprint] generic_attribute 0
+        # scoreboard players set @s[scores={SprintTime=0,StrafeTime=0,SneakTime=0}] generic_attribute 0
+        scoreboard players set @s[tag=!InCombat,predicate=!ss_lib:input/sprint,predicate=!ss_lib:input/sneak] generic_attribute 0
+        scoreboard players set @s[tag=InCombat,predicate=!ss_lib:input/sneak] generic_attribute 0
         execute if score $combatJumpScaling true matches 0 unless score @s SuperSprintTime matches 1.. run scoreboard players set @s[tag=InCombat] generic_attribute 0
     execute unless score @s generic_attribute = @s dex_jump_strength run function parse:score \
         {"score":"generic_attribute","prepend":"","append":".","prepend_position":0,"append_position":2,"function":"echoes:stats/set_jump_strength"}

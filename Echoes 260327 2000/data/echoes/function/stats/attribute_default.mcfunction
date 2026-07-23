@@ -35,7 +35,7 @@ attribute @s attack_damage base set 1.00
 attribute @s attack_speed base set 4.00
 attribute @s attack_knockback base set 0.00
 attribute @s armor base set 0.00
-attribute @s armor_toughness base set 0.00
+attribute @s armor_toughness base set 10.00
 attribute @s scale base set 1.00
 attribute @s gravity base set 0.08
 attribute @s waypoint_receive_range base set 60000

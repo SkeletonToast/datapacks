@@ -4,6 +4,9 @@ scoreboard players set @a encumbrance_reduction 0
 scoreboard players set @a encumbrance_armor 0
 scoreboard players set @a encumbrance_items 0
 
+# aegis timer
+# scoreboard players set @a aegis_timer_max 100
+
 # temperature
 scoreboard players set @a temp_default 65
 execute as @a run scoreboard players operation @s heat_resistance = @s Vitality

@@ -88,9 +88,9 @@ scoreboard players set @a[scores={flight_level=4..,boosts_stored=11..}] boosts_s
 execute as @a[scores={flight_level=4..,boosts_stored=1..}] if score @s boosts_stored > @s flight_level run scoreboard players operation @s boosts_stored = @s flight_level
 
 # this was changed so that it doesn't give two boosts, so boosts r just capped at one
-    function ss_lib:fetch/item_selected {"s":"@a[scores={flight_level=4..,FallFlying=1,elytra_boost_cooldown=1}]"}
-    execute as @a[scores={flight_level=4..,FallFlying=1,elytra_boost_cooldown=1,boosts_in_inventory=0,ItemOffhand=0}] run function echoes:player/elytra_scaling/item_replace_boost
-    execute as @a[scores={flight_level=4..,FallFlying=1,elytra_boost_cooldown=1,boosts_in_inventory=0,ItemOffhand=1}] run function echoes:player/elytra_scaling/give_boost
+    # function ss_lib:fetch/item_selected {"s":"@a[scores={flight_level=4..,FallFlying=1,elytra_boost_cooldown=1}]"}
+    # execute as @a[scores={flight_level=4..,FallFlying=1,elytra_boost_cooldown=1,boosts_in_inventory=0,ItemOffhand=0}] run function echoes:player/elytra_scaling/item_replace_boost
+    # execute as @a[scores={flight_level=4..,FallFlying=1,elytra_boost_cooldown=1,boosts_in_inventory=0,ItemOffhand=1}] run function echoes:player/elytra_scaling/give_boost
 
 # resistance
 effect give @a[scores={flight_level=4..,FallFlying=1,slipstream=20..,flight_level=08..11}] minecraft:resistance 1 0 true
@@ -108,7 +108,7 @@ effect give @a[scores={flight_level=4..,FallFlying=1,flight_level=30..}] minecra
 scoreboard players set @a[scores={flight_level=4..,slipstream=1..,DamageTaken=1..}] slipstream 1
 scoreboard players set @a[scores={flight_level=4..,slipstream=1..,DamageResisted=1..}] slipstream 1
 # scoreboard players remove @a[scores={flight_level=4..,flight_level=..9,slipstream=11..,trait002-01=1..}] slipstream 10
-execute as @a[scores={flight_level=4..,FallFlying=1,slipstream=1}] run function ss_lib:actionbar {"title":"{\"text\":\"- Slipstream Lost -\",\"color\":\"#999999\"}","duration":20}
+execute as @a[scores={flight_level=4..,FallFlying=1,slipstream=1}] run function ss_lib:actionbar {"title":"{\"text\":\"- Slipstream Lost -\",\"color\":\"#999999\"}","duration":3}
 scoreboard players remove @a[scores={flight_level=4..,slipstream=1..}] slipstream 1
 scoreboard players set @a[scores={flight_level=4..,FallFlying=0}] slipstream 0
 

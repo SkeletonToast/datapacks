@@ -15,4 +15,6 @@ function echoes:player/_load
 gamerule players_sleeping_percentage 101
 gamerule keep_inventory true
 
+schedule function echoes:core/scheduled_10t 10t
 schedule function echoes:core/scheduled_20t 20t
+schedule function echoes:core/scheduled_40t 40t

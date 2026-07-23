@@ -85,9 +85,15 @@ execute as @s[tag=Strength_feat_2,tag=!Dexterity_feat_2] unless items entity @s 
 execute as @s[tag=Dexterity_feat_2,tag=!Strength_feat_2] unless items entity @s weapon.offhand * run function echoes:player/combat/proficiency/two_handing {"stat":"_dex"}
 
 # mind additional proficiency
-scoreboard players operation @s[tag=hexblade_enchantment,scores={xp_level=101..200}] proficiency_mind += @s xp_level
-    scoreboard players remove @s[tag=hexblade_enchantment,scores={xp_level=101..200}] proficiency_mind 100
-scoreboard players add @s[tag=hexblade_enchantment,scores={xp_level=201..}] proficiency_mind 100
+scoreboard players operation @s[tag=hexblade_enchantment,scores={xp_level=31..100}] proficiency_mind += @s xp_level
+    scoreboard players remove @s[tag=hexblade_enchantment,scores={xp_level=31..100}] proficiency_mind 70
+scoreboard players add @s[tag=hexblade_enchantment,scores={xp_level=101..}] proficiency_mind 70
+
+scoreboard players operation @s[scores={xp_level=100..1000}] generic_m = @s xp_level
+    execute as @s[scores={xp_level=100..1000}] run function math:round/100_reduce {"score":"generic_m"}
+    # scoreboard players operation @s[scores={xp_level=200..1000}] generic_m *= @s generic_m
+scoreboard players operation @s[tag=hexblade_enchantment,scores={xp_level=200..1000}] proficiency_mind += @s generic_m
+
 scoreboard players operation @s[scores={xp_level=1000..}] generic_m = @s xp_level
     execute as @s[scores={xp_level=1000..}] run function math:round/100_reduce {"score":"generic_m"}
         execute as @s[scores={xp_level=1000..}] run function math:round/10_reduce {"score":"generic_m"}
