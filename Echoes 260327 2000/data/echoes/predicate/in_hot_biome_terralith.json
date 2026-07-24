@@ -1,0 +1,15 @@
+{
+    "condition": "minecraft:location_check",
+    "predicate": {
+      "biomes": [
+        "terralith:caldera",
+        "terralith:desert_canyon",
+        "terralith:desert_spires",
+        "terralith:cave/mantle_caves",
+        "terralith:cave/thermal_caves",
+        "terralith:volcanic_crater",
+        "terralith:volcanic_peaks"
+      ]
+    }
+  }
+  
