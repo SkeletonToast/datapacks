@@ -1,0 +1,1 @@
+execute at @s anchored eyes run particle trial_spawner_detection ^ ^ ^ 0.4 0.4 0.4 0 10 normal @a

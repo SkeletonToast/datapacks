@@ -130,8 +130,11 @@ execute store result score @s generic_h run attribute @s scale get 100
     scoreboard players remove @s generic_attribute 10
     scoreboard players operation @s generic_attribute *= @s 2
         scoreboard players operation @s[scores={encumbrance=1..}] generic_attribute -= @s encumbrance
-        scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
         scoreboard players set @s[scores={generic_attribute=51..}] generic_attribute 50
+            execute store result score @s generic_s run attribute @s minecraft:step_height get 100
+            scoreboard players remove @s generic_s 60
+            scoreboard players operation @s generic_attribute -= @s generic_s
+        scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
     # execute as @s[scores={generic_attribute=10..}] unless score @s generic_attribute = @s dex_step_height run function parse:score_unended \
     #     {"score":"generic_attribute","function":"echoes:stats/set_step_height"}
     # execute as @s[scores={generic_attribute=..9}] unless score @s generic_attribute = @s dex_step_height run function parse:score_unended \

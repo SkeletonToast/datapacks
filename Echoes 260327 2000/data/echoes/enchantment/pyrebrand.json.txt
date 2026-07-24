@@ -1,0 +1,76 @@
+{
+    "description": {
+      "text": "Pyrebrand"
+    },
+    "exclusive_set": "#minecraft:exclusive_set/damage",
+    "supported_items": "#minecraft:enchantable/none",
+    "weight": 1,
+    "max_level": 1,
+    "min_cost": {
+      "base": 5,
+      "per_level_above_first": 8
+    },
+    "max_cost": {
+      "base": 25,
+      "per_level_above_first": 8
+    },
+    "anvil_cost": 2,
+    "slots": [
+      "offhand"
+    ],
+    "effects": {
+      "minecraft:damage": [
+        {
+          "effect": {
+            "type": "minecraft:add",
+            "value": {
+              "type": "minecraft:linear",
+              "base": 1,
+              "per_level_above_first": 1
+            }
+          },
+          "requirements": {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "entity_type": "#ss_lib:hostile"
+            }
+          }
+        },
+        {
+          "effect": {
+            "type": "minecraft:add",
+            "value": {
+              "type": "minecraft:linear",
+              "base": 3,
+              "per_level_above_first": 3
+            }
+          },
+          "requirements": {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "nbt": "{Tags:[\"Fogtouched\"]}"
+            }
+          }
+        }
+      ],
+      "minecraft:post_attack": [
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "echoes:enchantments/pyrebrand_particles"
+        },
+          "requirements": {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "entity_type": "#ss_lib:hostile"
+            }
+          }
+      }
+    ]
+    }
+  }

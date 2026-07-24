@@ -39,6 +39,8 @@ scoreboard objectives add Prowess dummy
     # modify universal stats in echoes:stats/_tick
 
 # stored stats
+scoreboard objectives add scale_modifier dummy
+
 scoreboard objectives add generic_attribute dummy
 
 scoreboard objectives add res_max_health dummy

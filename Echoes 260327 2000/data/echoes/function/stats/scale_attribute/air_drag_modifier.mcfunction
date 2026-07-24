@@ -1,0 +1,1 @@
+$attribute @s minecraft:air_drag_modifier modifier add scale.air_drag_modifier $(value) add_value

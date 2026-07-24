@@ -99,6 +99,7 @@ execute as @a run attribute @s gravity modifier remove scale.gravity
 execute as @a run attribute @s fall_damage_multiplier modifier remove scale.fall_damage_multiplier
 execute as @a run attribute @s jump_strength modifier remove scale.jump_strength
 execute as @a run attribute @s movement_speed modifier remove scale.movement_speed
+# execute as @a run attribute @s air_drag_modifier modifier remove scale.air_drag_modifier
 
 execute as @a store result score @s generic_h run attribute @s scale get 1000
 execute as @a run scoreboard players remove @s generic_h 1000
@@ -107,6 +108,7 @@ execute as @a unless score @s generic_h matches -150..150 run function echoes:st
 execute as @a run scoreboard players operation @s generic_h /= @s 5
 execute as @a run function math:round/10_reduce {"score":"generic_h"}
 execute as @a run scoreboard players operation @s Strength += @s generic_h
+execute as @a run scoreboard players operation @s Dexterity += @s generic_h
 
 # movement stats
 # scoreboard players set @a SurgeSprintThreshold 115

@@ -83,6 +83,8 @@ execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantme
 # two handing - strength/dexterity feat 2
 execute as @s[tag=Strength_feat_2,tag=!Dexterity_feat_2] unless items entity @s weapon.offhand * run function echoes:player/combat/proficiency/two_handing {"stat":"_str"}
 execute as @s[tag=Dexterity_feat_2,tag=!Strength_feat_2] unless items entity @s weapon.offhand * run function echoes:player/combat/proficiency/two_handing {"stat":"_dex"}
+# execute as @s[tag=Strength_feat_2,tag=!Dexterity_feat_2] if items entity @s weapon.offhand clock run function echoes:player/combat/proficiency/two_handing {"stat":"_str"}
+# execute as @s[tag=Dexterity_feat_2,tag=!Strength_feat_2] if items entity @s weapon.offhand clock run function echoes:player/combat/proficiency/two_handing {"stat":"_dex"}
 
 # mind additional proficiency
 scoreboard players operation @s[tag=hexblade_enchantment,scores={xp_level=31..100}] proficiency_mind += @s xp_level
