@@ -4,7 +4,16 @@ tag @a[tag=near_campfire] remove near_campfire
 execute as @e[type=minecraft:interaction,tag=campfire,tag=!soul_campfire] at @s if block ~ ~ ~ soul_campfire run tag @s add soul_campfire
 execute as @e[type=minecraft:interaction,tag=soul_campfire] at @s if block ~ ~ ~ campfire run tag @s remove soul_campfire
 
-function echoes:campfires/lanterns
+execute as @a run function echoes:campfires/lanterns/_main
+
+# ember sprites
+execute at @e[type=marker,tag=EmberSprite] run particle trial_spawner_detection ~ ~ ~ 0.1 0.1 0.1 0 1 normal @a
+execute at @e[type=marker,tag=EmberSprite] run particle small_flame ~ ~ ~ 0.1 0.1 0.1 0 1 normal @a
+execute at @e[type=marker,tag=EmberSprite,scores={Age=..-30}] run particle end_rod ~ ~0.1 ~ 0.01 0.01 0.01 0 1 normal @a
+execute at @e[type=marker,tag=EmberSprite,scores={Age=-2..}] run particle large_smoke ~ ~ ~ 0.1 0.1 0.1 0 10 normal @a
+execute at @e[type=marker,tag=EmberSprite,scores={Age=-1..}] run fill ~ ~ ~ ~ ~ ~ air replace light[level=8]
+
+execute as @e[type=marker,tag=EmberSprite] at @s if dimension eochrin:erdefret run effect give @e[type=#ss_lib:hostile,distance=..5] slowness 1 0 true
 
 # scoreboard players set @a[scores={used_flint_and_steel=1..}] placed_campfire 1
 

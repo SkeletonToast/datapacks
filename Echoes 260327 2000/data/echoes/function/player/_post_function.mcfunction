@@ -48,3 +48,5 @@ scoreboard players set @a[scores={EchoDifficulty=7}] aegis_amplifier_max 9
 
 execute as @a[scores={ichor_damage=1..}] run function parse:score_unended {"score":"ichor_damage","function":"echoes:player/combat/ichor_damage"}
 scoreboard players set @a ichor_damage 0
+
+advancement revoke @a only echoes:using_clock

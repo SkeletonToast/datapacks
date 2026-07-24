@@ -10,9 +10,10 @@ execute as @a[tag=InCombat,scores={DamageTaken=1..}] on attacker if entity @s[ty
 # execute as @a[tag=InCombat,scores={DamageTaken=1..}] at @s run effect clear @n[limit=1,sort=nearest,type=enderman,distance=..30] invisibility
 # execute as @a[tag=InCombat,scores={DamageTaken=1..}] at @s run attribute @n[limit=1,sort=nearest,type=enderman,distance=..30] movement_speed modifier remove enderman_bolster_movement_speed
 
-effect give @e[tag=pyre_cleansed] slowness 1 0 true
-execute at @e[tag=pyre_cleansed] run particle trial_spawner_detection ~ ~ ~ 0.2 0.2 0.2 0 1 normal @a
-execute as @e[tag=pyre_cleansed,tag=SpawnBolstered] run function echoes:campfires/spawn_bolster_remove
+effect give @e[scores={cleansed_timer=1..}] slowness 1 0 true
+execute at @e[scores={cleansed_timer=1..}] run particle trial_spawner_detection ~ ~ ~ 0.2 0.2 0.2 0 1 normal @a
+execute as @e[scores={cleansed_timer=1..},tag=SpawnBolstered] run function echoes:campfires/spawn_bolster_remove
+scoreboard players remove @e[scores={cleansed_timer=1..}] cleansed_timer 1
 
 execute in eochrin:erdefret as @e[type=enderman,scores={Age=1}] run tp @s ~ ~-10000 ~
 execute in eochrin:erdefret as @e[type=enderman,scores={Age=1}] run kill @s

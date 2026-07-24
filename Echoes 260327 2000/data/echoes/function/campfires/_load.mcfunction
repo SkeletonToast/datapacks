@@ -13,6 +13,8 @@
 
     scoreboard objectives add cindered dummy
 
+    scoreboard objectives add cleansed_timer dummy
+
     scoreboard objectives add lantern_cooldown dummy
 
     scoreboard objectives add bell_ring minecraft.custom:bell_ring

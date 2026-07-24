@@ -18,10 +18,12 @@ execute as @s[scores={ItemSelected=0,DayTime=13000..},predicate=ss_lib:is/sneaki
 # lanterns
 execute if items entity @s weapon.mainhand lantern run function echoes:campfires/kindle_particles
 execute if items entity @s weapon.offhand lantern unless items entity @s weapon.mainhand * run function echoes:campfires/kindle_particles
-execute if items entity @s weapon.mainhand lantern[count=1] run function echoes:campfires/lantern_item_replace {"hand":"main"}
-execute if items entity @s weapon.mainhand lantern[!count=1] run function echoes:campfires/lantern_give {"hand":"main"}
-execute if items entity @s weapon.offhand lantern[count=1] unless items entity @s weapon.mainhand * run function echoes:campfires/lantern_item_replace {"hand":"off"}
-execute if items entity @s weapon.offhand lantern[!count=1] unless items entity @s weapon.mainhand * run function echoes:campfires/lantern_give {"hand":"off"}
+execute if items entity @s weapon.mainhand lantern[count=1] run function echoes:campfires/lanterns/item_replace {"hand":"main"}
+execute if items entity @s weapon.mainhand lantern[!count=1] run function echoes:campfires/lanterns/give
+execute if items entity @s weapon.mainhand lantern[!count=1] run item modify entity @s[gamemode=!creative] weapon.mainhand [{"function":"minecraft:set_count","count":-1,"add":true}]
+execute if items entity @s weapon.offhand lantern[count=1] unless items entity @s weapon.mainhand * run function echoes:campfires/lanterns/item_replace {"hand":"off"}
+execute if items entity @s weapon.offhand lantern[!count=1] unless items entity @s weapon.mainhand * run function echoes:campfires/lanterns/give
+execute if items entity @s weapon.offhand lantern[!count=1] unless items entity @s weapon.mainhand * run item modify entity @s[gamemode=!creative] weapon.offhand [{"function":"minecraft:set_count","count":-1,"add":true}]
 
 # effect give @s[scores={Food=..6}] saturation 1 1 true
 

@@ -17,6 +17,7 @@ execute as @a run scoreboard players operation @s cold_resistance = @s Vitality
 tag @a add TemperatureEligible
 tag @a[scores={EchoDifficulty=..2}] remove TemperatureEligible
 tag @a[scores={Dimension=5}] remove TemperatureEligible
+tag @a[gamemode=!survival,gamemode=!adventure] remove TemperatureEligible
 
 scoreboard players set @a[scores={OnGround=1}] boost_visual_effects 0
 execute as @a run attribute @s minecraft:gravity modifier remove mind.elytra_gravity

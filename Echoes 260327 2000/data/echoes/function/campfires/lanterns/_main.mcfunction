@@ -1,0 +1,28 @@
+# clear @a[scores={RestOrRespawn=2}] *[custom_data~{ember_lantern:true}]
+# execute as @s[scores={RestOrRespawn=2}] run function echoes:campfires/lanterns/give
+
+# execute as @s[predicate=ss_lib:is/sneaking,predicate=echoes:holding_ember_lantern,scores={lantern_cooldown=0,OnGround=1}] unless entity @s[predicate=ss_lib:is/moving] at @s anchored eyes positioned ^ ^ ^ positioned ~-0.01 ~-0.31 ~-0.01 unless entity @e[type=minecraft:interaction,tag=Lantern,dx=0.02,dy=0.02,dz=0.02] summon interaction run function echoes:campfires/lanterns/interaction
+# execute as @s[predicate=ss_lib:is/sneaking,predicate=echoes:holding_ember_lantern,scores={lantern_cooldown=0,OnGround=1}] run function ss_statuses:immobilized
+# execute as @e[type=minecraft:interaction,tag=Lantern] at @s unless entity @a[predicate=ss_lib:is/sneaking,dx=0.01,dy=0.01,dz=0.01] unless entity @a[predicate=ss_lib:is/sneaking,dx=-0.01,dy=-0.01,dz=-0.01] run kill @s
+# execute as @e[type=minecraft:interaction,tag=Lantern] at @s positioned ~-0.01 ~-0.01 ~-0.01 unless entity @a[predicate=ss_lib:is/sneaking,dx=0.02,dy=0.02,dz=0.02] run kill @s
+    # fixed detection using new dx system
+
+# execute as @e[type=minecraft:interaction,tag=Lantern] at @s if data entity @s interaction run kill @s
+
+scoreboard players remove @s[scores={lantern_cooldown=1..}] lantern_cooldown 1
+execute unless score @s lantern_cooldown matches 1.. run scoreboard players set @s lantern_cooldown 0
+
+# failure conditions
+execute if score @s lantern_cooldown matches 1.. run return fail
+execute unless entity @s[advancements={echoes:using_clock=true}] run return fail
+execute unless items entity @s weapon.* clock[custom_data={ember_lantern:true}] run return fail
+execute if items entity @s weapon.mainhand clock unless items entity @s weapon.mainhand clock[custom_data={ember_lantern:true}] run return fail
+
+scoreboard players set @s generic_a 60
+scoreboard players operation @s generic_a += @s sse.Passion
+execute at @s anchored eyes positioned ^ ^ ^0.5 run function parse:score_unended {"score":"generic_a","function":"echoes:campfires/lanterns/raycast"}
+
+scoreboard players set @s lantern_cooldown 40
+scoreboard players operation @s lantern_cooldown -= @s sse.Passion
+scoreboard players set @s[scores={lantern_cooldown=..9}] lantern_cooldown 10
+# execute as @e[type=minecraft:interaction,tag=Lantern] at @s if data entity @s interaction on target run effect give @s[scores={Soul=50..}] night_vision 1 0 true

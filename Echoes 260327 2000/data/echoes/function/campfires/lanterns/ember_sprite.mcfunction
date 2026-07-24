@@ -1,4 +1,3 @@
-data merge entity @s {custom_particle:{type:block,block_state:"minecraft:air"},Age:2147483647}
 tag @s add EmberSprite
 scoreboard players set @s Age -400
 

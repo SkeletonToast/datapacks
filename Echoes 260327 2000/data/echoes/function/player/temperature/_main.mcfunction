@@ -212,6 +212,7 @@ execute as @a unless score @s temp = @s temp_default run function ss_lib:fetch/a
     # unarmored heat resistance
     execute as @a if score @s temp > @s temp_default run scoreboard players operation @s heat_resistance -= @s ArmorType
 
+
     # leather cold resistance
     execute as @a[scores={HelmetType=1}] if score @s temp < @s temp_default run scoreboard players add @s cold_resistance 3
     execute as @a[scores={ChestplateType=1}] if score @s temp < @s temp_default run scoreboard players add @s cold_resistance 3

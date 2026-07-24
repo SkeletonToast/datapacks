@@ -1,0 +1,1 @@
+$function raycast:block {"particle":"particle smoke ~ ~ ~ 0 0 0 0 1 normal @a","increment_distance":"0.25","max_lifetime":"$(value)","run_on_success":"function echoes:campfires/lanterns/light"}
