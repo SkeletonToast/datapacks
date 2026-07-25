@@ -2,10 +2,10 @@ execute if score @s encumbrance_unadjusted matches 30.. run title @s actionbar {
 execute if score @s encumbrance_unadjusted matches 30.. run scoreboard players set @s pause_actionbars 40
 execute if score @s encumbrance_unadjusted matches 30.. run return fail
 
-execute if score @s temp_dangerous matches 6.. run title @s actionbar {"text":"!! Your body temperature is too high. You cannot move any faster. !!","color":"red"}
-execute if score @s temp_dangerous matches ..-6 run title @s actionbar {"text":"!! Your body temperature is too low. You cannot move any faster. !!","color":"red"}
-execute unless score @s temp_dangerous matches -5..5 run scoreboard players set @s pause_actionbars 40
-execute unless score @s temp_dangerous matches -5..5 run return fail
+execute if score @s temp_dangerous matches 8.. run title @s actionbar {"text":"!! Your body temperature is too high. You cannot move any faster. !!","color":"red"}
+execute if score @s temp_dangerous matches ..-8 run title @s actionbar {"text":"!! Your body temperature is too low. You cannot move any faster. !!","color":"red"}
+execute unless score @s temp_dangerous matches -7..7 run scoreboard players set @s pause_actionbars 40
+execute unless score @s temp_dangerous matches -7..7 run return fail
 
 function echoes:stats/movement/particles {"condition":"OnGround=1"}
 function ss_lib:fetch/in_water {"s":"@s[scores={Dexterity=70..,OnGround=0}]"}

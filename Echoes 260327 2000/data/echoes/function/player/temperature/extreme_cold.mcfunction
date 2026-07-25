@@ -1,8 +1,8 @@
 scoreboard players operation @s temp_dangerous += @s cold_resistance
 scoreboard players set @s[scores={temp_dangerous=1..}] temp_dangerous 0
 
-execute if predicate ss_lib:random_1_percent run damage @s[scores={temp_dangerous=..-20}] 1 freeze
-execute if predicate ss_lib:random_1_percent run damage @s[scores={temp_dangerous=..-30}] 2 freeze
+execute if predicate ss_lib:random_10_percent if predicate ss_lib:random_50_percent run damage @s[scores={temp_dangerous=..-20}] 1 freeze
+execute if predicate ss_lib:random_10_percent run damage @s[scores={temp_dangerous=..-30}] 2 freeze
 execute as @s[scores={temp_dangerous=..-20}] run function ss_lib:actionbar {"title":"{\"text\":\"[❄] You are freezing to death.\",\"color\":\"#82c7ff\"}","duration":20}
 
 # scoreboard players set @s[scores={temp_dangerous=..-1}] hesitant_active 1
@@ -16,6 +16,8 @@ function run:recur {"f":"scoreboard players operation @s[scores={temp_dangerous=
 execute as @s[scores={temp_dangerous=..-10}] run effect clear @s speed
 execute as @s[scores={temp_dangerous=..-10}] run effect clear @s jump_boost
 execute as @s[scores={temp_dangerous=..-10}] run effect clear @s regeneration
+
+scoreboard players set @s[scores={temp_dangerous=..-20}] aegis_amplifier_max -1
 
 execute if predicate ss_lib:random_10_percent at @s[scores={temp_dangerous=..-10}] anchored eyes run particle firework ^ ^ ^1 20 20 20 0 50 normal @s
 execute as @s[scores={temp_dangerous=..-15}] if predicate ss_lib:random_10_percent run function echoes:particles/concussion
