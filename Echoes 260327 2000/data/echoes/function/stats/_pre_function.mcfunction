@@ -62,11 +62,11 @@ execute as @a run scoreboard players operation @s sse.Knowledge /= @s 5
     execute as @a run scoreboard players operation @s sse.Knowledge /= @s 2
     execute as @a if score @s Mind >= @s Tact run scoreboard players operation @s sse.Knowledge += @s Tact
     execute as @a if score @s Tact >= @s Mind run scoreboard players operation @s sse.Knowledge += @s Mind
-execute as @a if score @s Mind >= @s Mind if score @s sse.Knowledge > @s Mind run scoreboard players operation @s sse.Knowledge = @s Mind
-execute as @a if score @s Mind >= @s Mind if score @s sse.Knowledge > @s Tact run scoreboard players operation @s sse.Knowledge = @s Tact
+execute as @a if score @s Mind >= @s Tact if score @s sse.Knowledge > @s Mind run scoreboard players operation @s sse.Knowledge = @s Mind
+execute as @a if score @s Tact >= @s Mind if score @s sse.Knowledge > @s Tact run scoreboard players operation @s sse.Knowledge = @s Tact
 
 # Tenacity & Fortitude
-execute as @a[tag=Vitality_feat_1] run scoreboard players operation @s Tenacity = @s Vitality
+execute as @a run scoreboard players operation @s Tenacity = @s Vitality
     execute as @a run scoreboard players remove @s Tenacity 10
         execute as @a run scoreboard players operation @s Tenacity /= @s 2
         execute as @a run scoreboard players operation @s Tenacity /= @s 2
@@ -80,7 +80,7 @@ execute as @a[tag=Vitality_feat_1] run scoreboard players operation @s Fortitude
     execute as @a run scoreboard players operation @s Fortitude /= @s 2
     scoreboard players remove @a Fortitude 2
     
-scoreboard players set @a[tag=!Vitality_feat_1] Tenacity 0
+# scoreboard players set @a[tag=!Vitality_feat_1] Tenacity 0
 scoreboard players set @a[tag=!Vitality_feat_1] Fortitude 0
 
 scoreboard players set @a Potential 300

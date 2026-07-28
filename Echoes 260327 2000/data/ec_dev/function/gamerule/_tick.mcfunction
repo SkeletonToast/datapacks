@@ -1,11 +1,12 @@
-scoreboard players enable SkeletonToast timeDilation
-scoreboard players enable SkeletonToast smoothSprinting
-scoreboard players enable SkeletonToast variantMonsters
-scoreboard players enable SkeletonToast creativeEncumbrance
-scoreboard players enable SkeletonToast combatJumpScaling
-scoreboard players enable SkeletonToast ambientParticles
-scoreboard players enable SkeletonToast incrementalProficiencyScaling
-scoreboard players enable SkeletonToast hungryDamageReduction
+scoreboard players enable @a[scores={sse.permissions_level=5..}] timeDilation
+scoreboard players enable @a[scores={sse.permissions_level=5..}] smoothSprinting
+scoreboard players enable @a[scores={sse.permissions_level=5..}] variantMonsters
+scoreboard players enable @a[scores={sse.permissions_level=5..}] creativeEncumbrance
+scoreboard players enable @a[scores={sse.permissions_level=5..}] combatJumpScaling
+scoreboard players enable @a[scores={sse.permissions_level=5..}] ambientParticles
+scoreboard players enable @a[scores={sse.permissions_level=5..}] incrementalProficiencyScaling
+scoreboard players enable @a[scores={sse.permissions_level=5..}] hungryDamageReduction
+scoreboard players enable @a[scores={sse.permissions_level=5..}] elytraBoosting
 scoreboard players enable @a aegisSelfVisibility
 scoreboard players enable @a aegisVisibility
 scoreboard players enable @a tactCameraDistance
@@ -44,6 +45,11 @@ execute as @a[scores={hungryDamageReduction=-1..}] run function ec_dev:gamerule/
 execute as @a[scores={hungryDamageReduction=0..}] store result score $hungryDamageReduction true run data get storage gamerule_hungry_damage_reduction toggle
 execute as @a[scores={hungryDamageReduction=0..}] run data get storage gamerule_hungry_damage_reduction toggle
 scoreboard players set @a hungryDamageReduction -2
+
+execute as @a[scores={elytraBoosting=-1..}] run function ec_dev:gamerule/elytra_boosting
+execute as @a[scores={elytraBoosting=0..}] store result score $elytraBoosting true run data get storage gamerule_elytra_boosting toggle
+execute as @a[scores={elytraBoosting=0..}] run data get storage gamerule_elytra_boosting toggle
+scoreboard players set @a elytraBoosting -2
 
 scoreboard players set @a[scores={aegisVisibility=0}] aegisSelfVisibility 0
 execute as @a unless entity @s[scores={aegisSelfVisibility=0..}] run scoreboard players set @s aegisSelfVisibility 1

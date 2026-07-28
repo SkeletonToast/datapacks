@@ -12,6 +12,7 @@ scoreboard objectives add xp_stored dummy
 scoreboard objectives add xp_stored_reserve dummy
 scoreboard objectives add xp_cap dummy
 scoreboard objectives add xp_increment dummy
+scoreboard objectives add xp_stall_prevention dummy
 
 scoreboard objectives add fear dummy
 scoreboard objectives add fear_eligible dummy
@@ -93,6 +94,7 @@ gamerule natural_health_regeneration false
         #maximum allotted amt of boosts
     scoreboard objectives add boost_visual_effects dummy
         #boost visual effect timer
+    scoreboard objectives add boost_fuel dummy
 
     scoreboard objectives add air_brake_time dummy
 

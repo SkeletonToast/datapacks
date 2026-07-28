@@ -43,8 +43,9 @@ execute as @a if items entity @s weapon.offhand shield[custom_data~{weapon:{nega
 function ss_armory:attack_speed_cap
 
 # crit damage decrease
-execute as @a if predicate ss_lib:crit_eligible run attribute @s attack_damage modifier add ss_armory.crit.attack_damage -0.25 add_multiplied_total
+execute as @a[scores={FallFlying=0}] if predicate ss_lib:crit_eligible run attribute @s attack_damage modifier add ss_armory.crit.attack_damage -0.25 add_multiplied_total
 execute as @a unless predicate ss_lib:crit_eligible run attribute @s attack_damage modifier remove ss_armory.crit.attack_damage
+execute as @a[scores={FallFlying=1}] run attribute @s attack_damage modifier remove ss_armory.crit.attack_damage
 
 execute as @a if predicate ss_lib:crit_eligible if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"ss_enchants:critical"}]] run function ss_enchants:critical/apply
 execute as @a if predicate ss_lib:crit_eligible unless items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"ss_enchants:critical"}]] run function ss_enchants:critical/remove

@@ -1,12 +1,12 @@
 scoreboard players set @s generic_e 40
 
 # higher
-execute if score @s Strength >= @s Dexterity run scoreboard players operation @s generic_a = @s proficiency_str
-execute if score @s Dexterity > @s Strength run scoreboard players operation @s generic_a = @s proficiency_dex
+scoreboard players operation @s generic_a = @s proficiency_str
+scoreboard players operation @s generic_a > @s proficiency_dex
 
 # lower
-execute if score @s Strength <= @s Dexterity run scoreboard players operation @s generic_b = @s proficiency_str
-execute if score @s Dexterity < @s Strength run scoreboard players operation @s generic_b = @s proficiency_dex
+scoreboard players operation @s generic_b = @s proficiency_str
+scoreboard players operation @s generic_b < @s proficiency_dex
 
 # difference
 scoreboard players operation @s generic_a -= @s generic_b

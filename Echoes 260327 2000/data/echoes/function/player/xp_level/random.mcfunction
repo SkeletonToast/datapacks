@@ -1,0 +1,1 @@
+$execute as @a store result score @s xp_increment run random value 1..$(value)

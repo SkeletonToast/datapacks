@@ -1,3 +1,6 @@
+function ss_lib:fetch/moon_phase
+scoreboard players operation @s generic_m = $moon_phase value
+
 scoreboard players operation $day generic_a = $day value
 scoreboard players add $day generic_a 1
 

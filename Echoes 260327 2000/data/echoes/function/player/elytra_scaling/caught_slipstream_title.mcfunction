@@ -1,0 +1,1 @@
+function ss_lib:actionbar {"title":"{\"text\":\"✧ Caught Slipstream ✧\",\"color\":\"#ffffff\"}","duration":20}

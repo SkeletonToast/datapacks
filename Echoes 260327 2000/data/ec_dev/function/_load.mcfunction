@@ -9,9 +9,12 @@ scoreboard objectives add aegisSelfVisibility trigger
 scoreboard objectives add aegisVisibility trigger
 scoreboard objectives add attackBuffVisibility trigger
 scoreboard objectives add hungryDamageReduction trigger
+scoreboard objectives add elytraBoosting trigger
 scoreboard objectives add tactCameraDistance trigger
     # removes self so that it resets after every session
 scoreboard objectives add checkStats trigger
+
+scoreboard objectives add sse.permissions_level dummy
 
 execute unless data storage gamerule_time_dilation toggle run data modify storage gamerule_time_dilation toggle set value 1
 execute unless data storage gamerule_smooth_sprinting toggle run data modify storage gamerule_smooth_sprinting toggle set value 1

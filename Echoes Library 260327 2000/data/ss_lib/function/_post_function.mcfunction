@@ -21,7 +21,7 @@ function ss_lib:quick_destroy
 
 kill @e[scores={Age=0}]
 
-scoreboard players remove @a[scores={pause_actionbars=1..}] pause_actionbars 1
+scoreboard players remove @a pause_actionbars 1
 
 # function ss_lib:safety
 

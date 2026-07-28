@@ -1,19 +1,20 @@
 execute as @a run scoreboard players operation @s xp_cap = @s Mind
 execute as @a[scores={xp_level=1..}] if score @s xp_level > @s Mind run function ss_lib:fetch/armor {"s":"@s"}
 
-execute as @a[scores={xp_level=..10000}] run scoreboard players operation @s xp_increment = @s xp_level
-execute as @a[scores={xp_level=10001..}] run scoreboard players set @s xp_increment 10000
+execute as @a[scores={xp_level=..9999}] run function parse:score_unended {score:xp_level,function:"echoes:player/xp_level/random"}
+execute as @a[scores={xp_level=10000..}] run function echoes:player/xp_level/random {value:10000}
+    execute as @a run scoreboard players operation @s xp_increment /= @s 2
     execute as @a run scoreboard players operation @s xp_increment *= @s xp_increment
-        execute as @a run scoreboard players operation @s xp_increment /= @s 2
+    # execute as @a[scores={xp_stored=1..}] if score @s xp_increment > @s xp_stored run scoreboard players operation @s xp_increment = @s xp_stored
 
 # levels 20-30
 execute as @a[scores={xp_level=22..,Mind=20..30}] run scoreboard players operation @s generic_b = @s xp_cap
     execute as @a[scores={xp_level=22..,Mind=20..30}] run scoreboard players add @s generic_b 1
 
 # level 30+
-execute as @a[scores={xp_level=32..,Mind=31..}] run scoreboard players operation @s generic_b = @s xp_cap
-    execute as @a[scores={xp_level=32..,Mind=31..}] run scoreboard players remove @s generic_b 30
-    execute as @a[scores={xp_level=32..,Mind=31..}] run scoreboard players operation @s xp_cap += @s generic_b
+execute as @a[scores={xp_level=32..,Mind=31..100}] run scoreboard players operation @s generic_b = @s xp_cap
+    execute as @a[scores={xp_level=32..,Mind=31..100}] run scoreboard players operation @s xp_cap += @s generic_b
+    execute as @a[scores={xp_level=32..,Mind=31..100}] run scoreboard players remove @s generic_b 30
 
 # level 50+
 execute as @a[scores={Mind=101..}] run scoreboard players operation @s xp_cap *= @s xp_cap

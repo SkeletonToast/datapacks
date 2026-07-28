@@ -10,6 +10,8 @@ execute as @a if score @s Health >= @s BaseMaxHealth run scoreboard players add 
     execute as @a if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"effects":{"minecraft:fire_resistance":{}}}} run \
         scoreboard players add @s heat_resistance 100
 
+execute as @a at @s run tag @s[predicate=echoes:in_alpha_biome] remove TemperatureEligible
+
 # setting base ambient temp
 execute as @a run scoreboard players operation @s ambient_temp = @s temp_default
 
@@ -24,10 +26,11 @@ scoreboard players remove @a[predicate=ss_lib:in_rain] ambient_temp 5
     scoreboard players remove @a[scores={Dimension=1,DayTime=16000..20000}] ambient_temp 2
     scoreboard players remove @a[scores={Dimension=1,DayTime=17000..19000}] ambient_temp 2
 
-execute as @a[scores={frozen_timer=0..99}] run scoreboard players operation @s ambient_temp -= @s frozen_timer
-execute as @a[scores={frozen_timer=100..}] run scoreboard players remove @s ambient_temp 100
-execute as @a[scores={frozen_active=0..}] unless entity @s[scores={frozen_timer=0..}] run scoreboard players remove @s ambient_temp 100
-execute as @a[scores={frozen_active=0..}] if predicate ss_lib:random_10_percent if predicate ss_lib:random_50_percent run scoreboard players remove @s temp_modifier 1
+    # frozen
+    execute as @a[scores={frozen_timer=0..99}] run scoreboard players operation @s ambient_temp -= @s frozen_timer
+    execute as @a[scores={frozen_timer=100..}] run scoreboard players remove @s ambient_temp 100
+    execute as @a[scores={frozen_active=0..}] unless entity @s[scores={frozen_timer=0..}] run scoreboard players remove @s ambient_temp 100
+    execute as @a[scores={frozen_active=0..}] if predicate ss_lib:random_10_percent if predicate ss_lib:random_50_percent run scoreboard players remove @s temp_modifier 1
 
     # in cold biome / dimension
     scoreboard players remove @a[predicate=echoes:in_cold_biome] ambient_temp 34
@@ -120,6 +123,7 @@ execute as @a[predicate=ss_lib:is/on_fire] if predicate ss_lib:random_20_percent
     execute as @a[predicate=ss_lib:holding/heated_object,scores={temp_modifier=..0}] \
         if predicate ss_lib:random_1_percent \
             run scoreboard players add @s temp_modifier 1
+    scoreboard players add @a[predicate=ss_lib:holding/heated_object,scores={temp_modifier=..0}] ambient_temp 10
 
     # near campfire
     execute as @a[scores={ambient_temp=..100},tag=near_campfire] if score @s ambient_temp < @s temp_default at @s if entity @e[type=interaction,tag=campfire,tag=!soul_campfire,distance=..2] run scoreboard players add @s ambient_temp 11
@@ -133,6 +137,12 @@ execute as @a[predicate=ss_lib:is/on_fire] if predicate ss_lib:random_20_percent
         if score @s temp < @s ambient_temp \
         if predicate ss_lib:random_1_percent \
             run scoreboard players add @s temp 1
+            
+    execute as @a[scores={temp_modifier=..0}] at @s \
+        if entity @e[type=interaction,tag=campfire,distance=..10] \
+        if predicate ss_lib:random_10_percent \
+        if predicate ss_lib:random_50_percent \
+            run scoreboard players add @s temp_modifier 1
 
     # near soul campfire
     execute as @a[tag=near_campfire] if score @s ambient_temp > @s temp_default if score @s ambient_temp >= @s temp_default at @s if entity @e[type=interaction,tag=soul_campfire,distance=..2] run scoreboard players remove @s ambient_temp 6
@@ -244,13 +254,13 @@ execute as @a[scores={temp_dangerous=..-1},gamemode=!creative,gamemode=!spectato
 execute as @a[scores={temp_dangerous=1..},gamemode=!creative,gamemode=!spectator] unless score @s temp = @s temp_default run function echoes:player/temperature/extreme_heat
 
 # display
-execute as @a[scores={display_temp=1,temp_modifier=1..,temp_dangerous=-19..19},tag=TemperatureEligible] unless score @s pause_actionbars matches 1.. unless score @s temp_dangerous matches 0 run title @s actionbar ["Ambient Temperature: ",{"score":{"name":"*","objective":"ambient_temp"},"color":"gold"},{"text":"°","color":"gold"},{"text":" | ","color":"gray"},"Personal Temperature: ",{"score":{"name":"*","objective":"temp"},"color":"aqua"},{"text":"°","color":"aqua"},{"text":"/","color":"gray"},{"score":{"name":"*","objective":"temp_dangerous"},"color":"aqua"},{"text":"°","color":"aqua"},{"text":" | ","color":"gray"},"Temperature Adjustment: ",{"text":"+","color":"green"},{"score":{"name":"*","objective":"temp_modifier"},"color":"green"},{"text":"°","color":"green"}]
-execute as @a[scores={display_temp=1,temp_modifier=..0,temp_dangerous=-19..19},tag=TemperatureEligible] unless score @s pause_actionbars matches 1.. unless score @s temp_dangerous matches 0 run title @s actionbar ["Ambient Temperature: ",{"score":{"name":"*","objective":"ambient_temp"},"color":"gold"},{"text":"°","color":"gold"},{"text":" | ","color":"gray"},"Personal Temperature: ",{"score":{"name":"*","objective":"temp"},"color":"aqua"},{"text":"°","color":"aqua"},{"text":"/","color":"gray"},{"score":{"name":"*","objective":"temp_dangerous"},"color":"aqua"},{"text":"°","color":"aqua"},{"text":" | ","color":"gray"},"Temperature Adjustment: ",{"score":{"name":"*","objective":"temp_modifier"},"color":"green"},{"text":"°","color":"green"}]
-execute as @a[scores={display_temp=1,temp_modifier=1..,temp_dangerous=-19..19},tag=TemperatureEligible] unless score @s pause_actionbars matches 1.. if score @s temp_dangerous matches 0 run title @s actionbar ["Ambient Temperature: ",{"score":{"name":"*","objective":"ambient_temp"},"color":"gold"},{"text":"°","color":"gold"},{"text":" | ","color":"gray"},"Personal Temperature: ",{"score":{"name":"*","objective":"temp"},"color":"aqua"},{"text":"°","color":"aqua"},{"text":" | ","color":"gray"},"Temperature Adjustment: ",{"text":"+","color":"green"},{"score":{"name":"*","objective":"temp_modifier"},"color":"green"},{"text":"°","color":"green"}]
-execute as @a[scores={display_temp=1,temp_modifier=..0,temp_dangerous=-19..19},tag=TemperatureEligible] unless score @s pause_actionbars matches 1.. if score @s temp_dangerous matches 0 run title @s actionbar ["Ambient Temperature: ",{"score":{"name":"*","objective":"ambient_temp"},"color":"gold"},{"text":"°","color":"gold"},{"text":" | ","color":"gray"},"Personal Temperature: ",{"score":{"name":"*","objective":"temp"},"color":"aqua"},{"text":"°","color":"aqua"},{"text":" | ","color":"gray"},"Temperature Adjustment: ",{"score":{"name":"*","objective":"temp_modifier"},"color":"green"},{"text":"°","color":"green"}]
+execute as @a[scores={display_temp=1,TimeSinceRest=1..,temp_modifier=0..,temp_dangerous=-19..19},tag=TemperatureEligible] unless score @s pause_actionbars matches -20.. unless score @s temp_dangerous matches 0 run title @s actionbar ["Ambient Temperature: ",{"score":{"name":"*","objective":"ambient_temp"},"color":"gold"},{"text":"°","color":"gold"},{"text":" | ","color":"gray"},"Personal Temperature: ",{"score":{"name":"*","objective":"temp"},"color":"aqua"},{"text":"°","color":"aqua"},{"text":"/","color":"gray"},{"score":{"name":"*","objective":"temp_dangerous"},"color":"aqua"},{"text":"°","color":"aqua"},{"text":" | ","color":"gray"},"Temperature Adjustment: ",{"text":"+","color":"green"},{"score":{"name":"*","objective":"temp_modifier"},"color":"green"},{"text":"°","color":"green"}]
+execute as @a[scores={display_temp=1,TimeSinceRest=1..,temp_modifier=..-1,temp_dangerous=-19..19},tag=TemperatureEligible] unless score @s pause_actionbars matches -20.. unless score @s temp_dangerous matches 0 run title @s actionbar ["Ambient Temperature: ",{"score":{"name":"*","objective":"ambient_temp"},"color":"gold"},{"text":"°","color":"gold"},{"text":" | ","color":"gray"},"Personal Temperature: ",{"score":{"name":"*","objective":"temp"},"color":"aqua"},{"text":"°","color":"aqua"},{"text":"/","color":"gray"},{"score":{"name":"*","objective":"temp_dangerous"},"color":"aqua"},{"text":"°","color":"aqua"},{"text":" | ","color":"gray"},"Temperature Adjustment: ",{"score":{"name":"*","objective":"temp_modifier"},"color":"green"},{"text":"°","color":"green"}]
+execute as @a[scores={display_temp=1,TimeSinceRest=1..,temp_modifier=0..,temp_dangerous=-19..19},tag=TemperatureEligible] unless score @s pause_actionbars matches -20.. if score @s temp_dangerous matches 0 run title @s actionbar ["Ambient Temperature: ",{"score":{"name":"*","objective":"ambient_temp"},"color":"gold"},{"text":"°","color":"gold"},{"text":" | ","color":"gray"},"Personal Temperature: ",{"score":{"name":"*","objective":"temp"},"color":"aqua"},{"text":"°","color":"aqua"},{"text":" | ","color":"gray"},"Temperature Adjustment: ",{"text":"+","color":"green"},{"score":{"name":"*","objective":"temp_modifier"},"color":"green"},{"text":"°","color":"green"}]
+execute as @a[scores={display_temp=1,TimeSinceRest=1..,temp_modifier=..-1,temp_dangerous=-19..19},tag=TemperatureEligible] unless score @s pause_actionbars matches -20.. if score @s temp_dangerous matches 0 run title @s actionbar ["Ambient Temperature: ",{"score":{"name":"*","objective":"ambient_temp"},"color":"gold"},{"text":"°","color":"gold"},{"text":" | ","color":"gray"},"Personal Temperature: ",{"score":{"name":"*","objective":"temp"},"color":"aqua"},{"text":"°","color":"aqua"},{"text":" | ","color":"gray"},"Temperature Adjustment: ",{"score":{"name":"*","objective":"temp_modifier"},"color":"green"},{"text":"°","color":"green"}]
 
 # execute as @a[scores={display_temp=1},tag=!InCombat,tag=!TemperatureEligible] run title @s actionbar ["Ambient Temperature: ",{"score":{"name":"*","objective":"ambient_temp"},"color":"gold"},{"text":"°","color":"gold"},{"text":" | ","color":"gray"},"Personal Temperature: ",{"score":{"name":"*","objective":"temp"},"color":"aqua"},{"text":"°","color":"aqua"}]
-execute as @a[scores={display_temp=1},tag=!InCombat,tag=!TemperatureEligible] unless score @s pause_actionbars matches 1.. run title @s actionbar ["Ambient Temperature: ",{"score":{"name":"*","objective":"ambient_temp"},"color":"gold"},{"text":"°","color":"gold"}]
+execute as @a[scores={display_temp=1,TimeSinceRest=1..},tag=!InCombat,tag=!TemperatureEligible] unless score @s pause_actionbars matches -20.. run title @s actionbar ["Ambient Temperature: ",{"score":{"name":"*","objective":"ambient_temp"},"color":"gold"},{"text":"°","color":"gold"}]
 
 scoreboard players set @a[scores={drink_water=1..}] drink_water 0
 
