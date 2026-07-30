@@ -17,10 +17,10 @@ execute as @s[predicate=echoes:flying_very_quickly] at @s anchored eyes position
 execute as @s[predicate=echoes:flying_very_quickly] at @s anchored eyes positioned ^ ^ ^1 run particle cloud ~ ~ ~ 0.5 0.5 0.5 0.02 10 normal @s
 
 scoreboard players set @s boost_visual_effects 20
-scoreboard players set @a air_brake_time 0
-scoreboard players set @s elytra_boost_cooldown 1
+scoreboard players set @s air_brake_time 0
 scoreboard players remove @s boost_fuel 3
-execute as @s[scores={elytra_boost_cooldown=-200..0}] run function echoes:player/elytra_scaling/caught_slipstream_title
+execute as @s[scores={slipstream=-200..0}] run function echoes:player/elytra_scaling/caught_slipstream_title
+# scoreboard players set @s elytra_boost_cooldown 1
 scoreboard players operation @s[scores={elytra_boost_cooldown=-200..}] slipstream += @s flight_level
 
 xp add @s -1 points

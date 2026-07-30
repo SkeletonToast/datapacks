@@ -1,5 +1,35 @@
 {
     "values": [
-        "#ss_lib:nonsolidblocks"
+        "#ss_lib:nonsolidblocks",
+        "#minecraft:wool_carpets",
+        "#minecraft:saplings",
+        "#minecraft:flowers",
+        "#minecraft:crops",
+        "minecraft:sugar_cane",
+        "minecraft:sweet_berry_bush",
+        "minecraft:brown_mushroom",
+        "minecraft:red_mushroom",
+        "minecraft:small_dripleaf",
+        "minecraft:vine",
+        "minecraft:glow_lichen",
+        "minecraft:big_dripleaf",
+        "minecraft:big_dripleaf_stem",
+        "#ss_lib:underwater_vegetation",
+        "#minecraft:cave_vines",
+        "minecraft:big_dripleaf_stem",
+        "#ss_lib:nether_vegetation",
+        "minecraft:short_grass",
+        "minecraft:fern",
+        "minecraft:dead_bush",
+        "minecraft:pink_petals",
+        "minecraft:tall_grass",
+        "minecraft:large_fern",
+        "minecraft:torchflower",
+        "minecraft:pitcher_plant",
+        "minecraft:glow_lichen",
+        "minecraft:hanging_roots",
+        "minecraft:leaf_litter",
+        "minecraft:firefly_bush",
+        "lily_pad"
     ]
 }

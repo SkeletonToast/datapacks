@@ -1,7 +1,9 @@
 # note: "at @s anchored eyes" is applied in the guns/_main function
 
-execute if entity @s[scores={SneakTime=0..20}] positioned ^ ^ ^0.25 positioned ~ ~-0.2 ~ run function raycast:either {"particle":"particle crit ~ ~ ~ 0 0 0 0 1 normal @a","increment_distance":"0.25","max_lifetime":"80","run_on_block_success":"function ss_armory:properties/guns/bullet_hit_block","run_on_entity_success":"function ss_armory:properties/guns/semi_auto/damage","solid_block_collision":"true"}
-execute if entity @s[scores={SneakTime=21..}] positioned ^ ^ ^0.25 positioned ~ ~-0.2 ~ run function raycast:either {"particle":"particle crit ~ ~ ~ 0 0 0 0 1 normal @a","increment_distance":"0.25","max_lifetime":"150","run_on_block_success":"function ss_armory:properties/guns/bullet_hit_block","run_on_entity_success":"function ss_armory:properties/guns/semi_auto/damage","solid_block_collision":"true"}
+execute if entity @s[scores={SneakTime=0..20}] positioned ^ ^ ^0.25 positioned ~ ~-0.2 ~ run function raycast:either \
+    {"particle":"particle crit ~ ~ ~ 0 0 0 0 1 normal @a","increment_distance":"0.25","max_lifetime":"80","run_on_block_success":"function ss_armory:properties/guns/bullet_hit_block","run_on_entity_success":"function ss_armory:properties/guns/semi_auto/damage","solid_block_collision":"false"}
+execute if entity @s[scores={SneakTime=21..}] positioned ^ ^ ^0.25 positioned ~ ~-0.2 ~ run function raycast:either \
+    {"particle":"particle crit ~ ~ ~ 0 0 0 0 1 normal @a","increment_distance":"0.25","max_lifetime":"150","run_on_block_success":"function ss_armory:properties/guns/bullet_hit_block","run_on_entity_success":"function ss_armory:properties/guns/semi_auto/damage","solid_block_collision":"false"}
 
 execute positioned ^ ^ ^0.5 run particle smoke ~ ~-0.2 ~ 0.1 0.1 0.1 0.01 1
 execute positioned ^ ^ ^0.5 run particle small_flame ~ ~-0.2 ~ 0.1 0.1 0.1 0.01 1

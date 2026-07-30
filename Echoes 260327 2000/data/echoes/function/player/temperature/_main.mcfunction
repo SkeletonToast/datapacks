@@ -91,7 +91,7 @@ scoreboard players remove @a[predicate=ss_lib:in_rain] ambient_temp 5
 scoreboard players add @a[scores={incendiary_timer=1..}] ambient_temp 36
 scoreboard players add @a[scores={incendiary_timer=-2}] ambient_temp 36
 
-execute as @a[predicate=ss_lib:is/on_fire] if predicate ss_lib:random_20_percent if predicate ss_lib:random_50_percent run scoreboard players add @s temp_modifier 1
+execute as @a[predicate=ss_lib:is/on_fire] if predicate ss_lib:random_10_percent run scoreboard players add @s temp_modifier 1
 
     # in arid biome
     scoreboard players add @a[predicate=ss_lib:in_arid_biome] ambient_temp 13
@@ -178,6 +178,16 @@ execute as @a run scoreboard players operation @s temp_difference -= @s temp
     execute as @a[scores={temp_modifier=..-1,temp_difference=-5..5}] \
         if predicate ss_lib:random_1_percent \
             run scoreboard players add @s temp_modifier 1
+    
+        # dangerous temperature
+        execute as @a[scores={temp_modifier=1..,temp_dangerous=0}] \
+            unless dimension minecraft:the_nether \
+            if predicate ss_lib:random_1_percent \
+                run scoreboard players remove @s temp_modifier 1
+
+        execute as @a[scores={temp_modifier=..-1,temp_dangerous=0}] \
+            if predicate ss_lib:random_1_percent \
+                run scoreboard players add @s temp_modifier 1
 
     # drinking water
     execute as @a[scores={drink_water=1..}] \

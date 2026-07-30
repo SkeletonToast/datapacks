@@ -12,9 +12,8 @@ execute as @a[scores={xp_level=22..,Mind=20..30}] run scoreboard players operati
     execute as @a[scores={xp_level=22..,Mind=20..30}] run scoreboard players add @s generic_b 1
 
 # level 30+
-execute as @a[scores={xp_level=32..,Mind=31..100}] run scoreboard players operation @s generic_b = @s xp_cap
-    execute as @a[scores={xp_level=32..,Mind=31..100}] run scoreboard players operation @s xp_cap += @s generic_b
-    execute as @a[scores={xp_level=32..,Mind=31..100}] run scoreboard players remove @s generic_b 30
+execute as @a[scores={xp_level=32..,Mind=31..100}] run scoreboard players operation @s xp_cap *= @s 2
+    execute as @a[scores={xp_level=32..,Mind=31..100}] run scoreboard players remove @s xp_cap 30
 
 # level 50+
 execute as @a[scores={Mind=101..}] run scoreboard players operation @s xp_cap *= @s xp_cap

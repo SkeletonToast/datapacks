@@ -3,26 +3,26 @@ function ss_lib:fetch/fall_flying {"s":"@a[scores={flight_level=1..}]"}
 execute as @a[scores={flight_level=1..}] if items entity @s armor.chest elytra run tag @s add WearingElytra
 
 # flight level calculation
-    execute as @a[scores={Mind=17..}] run scoreboard players operation @s flight_level = @s Mind
-    execute as @a[scores={Mind=17..}] run scoreboard players remove @s flight_level 16
-    scoreboard players set @a[scores={Mind=..16}] flight_level 0
+    execute as @a run scoreboard players operation @s flight_level = @s Mind
+    scoreboard players remove @a flight_level 30
+    scoreboard players set @a[scores={flight_level=..-1}] flight_level 0
 
 # slipstream
-execute as @a[scores={flight_level=4..,FallFlying=1,flight_level=3..,used_firework_rocket=1..}] unless entity @s[scores={slipstream=1..}] run function echoes:player/elytra_scaling/caught_slipstream_title
+execute as @a[scores={flight_level=3..,FallFlying=1,used_firework_rocket=1..}] unless entity @s[scores={slipstream=1..}] run function echoes:player/elytra_scaling/caught_slipstream_title
     # flight level 4-20
-    scoreboard players set @a[scores={flight_level=4..,FallFlying=1,flight_level=3..20,used_firework_rocket=1..}] slipstream 30
+    scoreboard players set @a[scores={FallFlying=1,flight_level=3..20,used_firework_rocket=1..}] slipstream 30
     execute as @a run scoreboard players operation @s[scores={FallFlying=1,flight_level=3..20,used_firework_rocket=1..}] slipstream -= @s flight_level
     execute as @a run scoreboard players operation @s[scores={FallFlying=1,flight_level=3..20,used_firework_rocket=1..}] slipstream *= @s 10
     # flight level 21-30
-    scoreboard players set @a[scores={flight_level=4..,FallFlying=1,flight_level=21..30,used_firework_rocket=1..}] slipstream 100
+    scoreboard players set @a[scores={FallFlying=1,flight_level=21..30,used_firework_rocket=1..}] slipstream 100
     # flight level 31+
     execute as @a run scoreboard players operation @s[scores={FallFlying=1,flight_level=31..,used_firework_rocket=1..}] slipstream += @s flight_level
-    scoreboard players remove @a[scores={flight_level=4..,FallFlying=1,flight_level=31..,used_firework_rocket=1..}] slipstream 20
+    scoreboard players remove @a[scores={FallFlying=1,flight_level=31..,used_firework_rocket=1..}] slipstream 20
     execute as @a run scoreboard players operation @s[scores={FallFlying=1,flight_level=31..,used_firework_rocket=1..}] slipstream *= @s 10
     # gliding increase
-    scoreboard players add @a[scores={flight_level=4..,flight_level=10..},predicate=echoes:flying_very_quickly] slipstream 2
+    scoreboard players add @a[scores={flight_level=10..},predicate=echoes:flying_very_quickly] slipstream 2
     # cap
-    scoreboard players set @a[scores={flight_level=4..,FallFlying=1,slipstream=601..}] slipstream 600
+    scoreboard players set @a[scores={slipstream=601..}] slipstream 600
 
 execute as @a[scores={flight_level=1..}] run attribute @s minecraft:gravity modifier remove mind.elytra_gravity
 
@@ -32,11 +32,12 @@ execute as @a[scores={flight_level=1..}] run attribute @s minecraft:gravity modi
     execute as @a if predicate ss_lib:input/sneak run scoreboard players add @s air_brake_time 1
     execute as @a[scores={air_brake_time=1..}] unless predicate ss_lib:input/sneak run scoreboard players remove @s air_brake_time 5
         scoreboard players set @a[scores={air_brake_time=..-1}] air_brake_time 0
+        scoreboard players set @a[scores={FallFlying=0}] air_brake_time 0
     execute as @a[scores={flight_level=1..,FallFlying=1,slipstream=1..,elytra_boost_cooldown=-200..}] run scoreboard players operation @s generic_a = @s flight_level
             execute as @a if score @s air_brake_time > @s generic_a run scoreboard players operation @s air_brake_time = @s generic_a
         execute as @a[scores={flight_level=1..,FallFlying=1,slipstream=1..,elytra_boost_cooldown=-200..}] if predicate ss_lib:input/sneak run \
             scoreboard players operation @s generic_a -= @s air_brake_time
-    execute as @a[scores={air_brake_time=1..}] at @s anchored eyes positioned ^ ^ ^1 run particle small_gust ~ ~ ~ 0.3 0.3 0.3 0 10 normal
+    execute as @a[scores={air_brake_time=1..}] if predicate {"condition": "minecraft:any_of","terms": [{"condition": "minecraft:entity_properties","entity":"this","predicate":{"movement":{"speed":{"min":5}}}}]} at @s anchored eyes positioned ^ ^ ^1 run particle small_gust ~ ~ ~ 0.3 0.3 0.3 0 10 normal
     scoreboard players set @a[scores={used_firework_rocket=1..}] air_brake_time 0
 
     # neutral
@@ -89,19 +90,21 @@ execute as @a[scores={flight_level=4..,boosts_stored=1..}] if score @s boosts_st
     # execute as @a[scores={flight_level=4..,FallFlying=1,elytra_boost_cooldown=1,boosts_in_inventory=0,ItemOffhand=0}] run function echoes:player/elytra_scaling/item_replace_boost
     # execute as @a[scores={flight_level=4..,FallFlying=1,elytra_boost_cooldown=1,boosts_in_inventory=0,ItemOffhand=1}] run function echoes:player/elytra_scaling/give_boost
 
-    execute if score $elytraBoosting true matches 1 as @a[scores={flight_level=10..,FallFlying=1,boost_fuel=1..}] run tag @s[predicate=!ss_lib:input/sprint] remove elytra_sprint_boosting
-    execute if score $elytraBoosting true matches 1 as @a[scores={flight_level=10..,FallFlying=1,boost_fuel=1..},level=1..,predicate=ss_lib:input/sprint] run \
+    scoreboard players set @a[scores={DamageTaken=1..,boost_fuel=1..}] boost_fuel -20
+    execute if score $elytraBoosting true matches 1 as @a[scores={flight_level=1..,FallFlying=1,boost_fuel=1..}] run tag @s[predicate=!ss_lib:input/sprint] remove elytra_sprint_boosting
+    execute if score $elytraBoosting true matches 1 as @a[scores={flight_level=1..,FallFlying=1,boost_fuel=1..},level=1..,predicate=ss_lib:input/sprint] run \
         function echoes:player/elytra_scaling/sprint_boost
     execute as @a run scoreboard players operation @s generic_f = @s Mind
-    execute as @a run scoreboard players operation @s generic_f *= @s 3
+    execute as @a run scoreboard players operation @s generic_f *= @s 2
+        execute as @a run scoreboard players operation @s generic_f *= @s 2
     execute as @a[scores={OnGround=1}] run scoreboard players operation @s generic_f *= @s 2
         execute as @a[scores={OnGround=1,boost_fuel=301..}] run scoreboard players set @s boost_fuel 300
     execute as @a if score @s boost_fuel > @s generic_f run scoreboard players remove @s boost_fuel 1
-    execute as @a[scores={flight_level=10..,FallFlying=1},predicate=!ss_lib:input/sprint] run scoreboard players add @s boost_fuel 1
-    execute as @a[scores={flight_level=10..,OnGround=1}] run scoreboard players add @s boost_fuel 1
+    execute as @a[scores={flight_level=1..,FallFlying=1},predicate=!ss_lib:input/sprint] run scoreboard players add @s boost_fuel 1
+    execute as @a[scores={flight_level=1..,OnGround=1}] run scoreboard players add @s boost_fuel 1
 
-    execute if score $elytraBoosting true matches 1 as @a[scores={FallFlying=1,flight_level=10..,boost_fuel=1..},gamemode=!spectator,gamemode=!creative] if score @s boost_fuel <= @s generic_f run function ss_lib:actionbar {"title":"\"Boost: \",{\"score\":{\"name\":\"*\",\"objective\":\"boost_fuel\"},\"color\":\"aqua\"},{\"text\":\"/\",\"color\":\"white\"},{\"score\":{\"name\":\"*\",\"objective\":\"generic_f\"},\"color\":\"aqua\"}","duration":1}
-    execute if score $elytraBoosting true matches 1 as @a[scores={FallFlying=1,flight_level=10..,boost_fuel=..0},gamemode=!spectator,gamemode=!creative] if score @s boost_fuel <= @s generic_f run function ss_lib:actionbar {"title":"\"Boost: \",{\"text\":\"0\",\"color\":\"red\"},{\"text\":\"/\",\"color\":\"white\"},{\"score\":{\"name\":\"*\",\"objective\":\"generic_f\"},\"color\":\"aqua\"}","duration":1}
+    execute if score $elytraBoosting true matches 1 as @a[scores={FallFlying=1,flight_level=1..,boost_fuel=1..},gamemode=!spectator,gamemode=!creative] if score @s boost_fuel <= @s generic_f run function ss_lib:actionbar {"title":"\"Boost: \",{\"score\":{\"name\":\"*\",\"objective\":\"boost_fuel\"},\"color\":\"aqua\"},{\"text\":\"/\",\"color\":\"white\"},{\"score\":{\"name\":\"*\",\"objective\":\"generic_f\"},\"color\":\"aqua\"}","duration":1}
+    execute if score $elytraBoosting true matches 1 as @a[scores={FallFlying=1,flight_level=1..,boost_fuel=..0},gamemode=!spectator,gamemode=!creative] if score @s boost_fuel <= @s generic_f run function ss_lib:actionbar {"title":"\"Boost: \",{\"text\":\"0\",\"color\":\"red\"},{\"text\":\"/\",\"color\":\"white\"},{\"score\":{\"name\":\"*\",\"objective\":\"generic_f\"},\"color\":\"aqua\"}","duration":1}
     # execute as @a[scores={FallFlying=1}] unless score @s boost_fuel = @s generic_f run title @s actionbar ["Boost: ",{"score":{"name":"*","objective":"boost_fuel"},"color":"yellow"},{"text":"/","color":"white"},{"score":{"name":"*","objective":"generic_f"},"color":"yellow"}]
     # execute as @a[scores={FallFlying=1}] unless score @s boost_fuel = @s generic_f run scoreboard players set @s pause_actionbars 5
 

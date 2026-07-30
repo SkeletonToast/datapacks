@@ -4,7 +4,7 @@ attribute @s[type=!#echoes:not_spawn_bolstered] armor modifier add monster.bolst
 attribute @s[type=!#echoes:not_spawn_bolstered] armor_toughness modifier add monster.bolster_armor 10 add_value
 attribute @s[type=!#echoes:not_spawn_bolstered] max_health modifier add monster.bolster_max_health 0.5 add_multiplied_base
 attribute @s[type=!#echoes:not_spawn_bolstered,type=!minecraft:creeper,type=!#echoes:spawn_bolster_scale] movement_speed modifier add monster.bolster_movement_speed 0.2 add_multiplied_base
-attribute @s[type=#echoes:spawn_bolster_scale] scale modifier add monster.bolster_scale 0.2 add_multiplied_base
+# attribute @s[type=#echoes:spawn_bolster_scale] scale modifier add monster.bolster_scale 0.2 add_multiplied_base
 execute at @s unless dimension eochrin:erdefret run attribute @s[type=!#echoes:not_spawn_bolstered] follow_range modifier add monster.bolster_follow_range 3 add_multiplied_base
 # execute if entity @s[type=#minecraft:burn_in_daylight] unless items entity @s armor.head * run item replace entity @s armor.head with stone_button[enchantments={vanishing_curse:1}]
 
