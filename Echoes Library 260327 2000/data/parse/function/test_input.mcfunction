@@ -1,0 +1,1 @@
+$function parse:test_input_2 {macros:$(macros)}

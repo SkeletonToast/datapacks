@@ -1,0 +1,1 @@
+$function parse:score_unended {score:generic_a,$(macros)}

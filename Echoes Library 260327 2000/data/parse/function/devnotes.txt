@@ -1,0 +1,8 @@
+MACRO PASSING IS OKAY!!! IT JUST CANT HAVE QUOTES!!!
+- what you do if you need something in quotes is: you just store the regular value as a macro and then send it to a different function, which then passes it ON to whatever function needs quotes.
+- instead of passing the quoted macro to the parse module, you just pass the parse module output to a function that adds the quoted macro.
+- you don't need to build it to be infinite or anything, because
+- the only issue is that there can't be quotes INSIDE quotes.
+    - when you pass something quoted, even if it has janky characters, it's protected by the quotes UNTIL it's actually used, and therefore no longer passed thru.
+- this means that having a macro input for the score module is fine, because it wouldn't be used for anything other than stacking parse module outputs, which are required to be sanitized anyways.
+    - and plus! as long as the prepend or append don't have weird characters, again, your macro inputs are protected by the quotes if you need them.

@@ -1,1 +1,3 @@
-$function parse:score {"function":"$(function)","prepend":"","append":"","prepend_position":"0","append_position":"0","score":"$(score)"}
+# say su
+
+$function parse:score_unended_with_macros {function:"$(function)",score:"$(score)",macros:""}
