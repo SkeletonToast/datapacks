@@ -21,6 +21,8 @@ execute at @a[scores={HasPropertiedWeapon=1..,ItemSelected=1,DamageDealt=1..}] a
 
 # guns
 execute as @a[scores={WeaponType=9}] run function ss_armory:properties/guns/_main
+execute as @a unless score @s WeaponType matches 9 if items entity @s weapon.offhand *[minecraft:custom_data~{weapon:{gun:{}}}] run function ss_armory:properties/guns/_main
+
 
 # longbow
 # execute as @a[scores={WeaponType=7}] \

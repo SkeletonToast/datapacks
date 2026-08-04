@@ -20,6 +20,7 @@ execute if entity @s[type=enderman] run effect give @s invisibility infinite 0 t
 tag @s[type=!#echoes:not_spawn_bolstered] add SpawnBolstered
 tag @s add SpawnDuplicated
 
-execute as @s[type=spider] if predicate ss_lib:random_50_percent run return fail
-attribute @s[type=spider] movement_speed modifier remove monster.bolster_movement_speed
-attribute @s[type=spider] scale modifier add monster.spider.scale -0.3 add_multiplied_base
+execute as @s[type=spider,tag=!SpawnDuplicated] if predicate ss_lib:random_50_percent run return fail
+execute as @s[type=spider,tag=!SpawnDuplicated] summon spider run function echoes:monsters/baby_spider
+execute as @s[type=spider,tag=!SpawnDuplicated] summon spider run function echoes:monsters/baby_spider
+execute as @s[type=spider,tag=!SpawnDuplicated] summon spider run function echoes:monsters/baby_spider
