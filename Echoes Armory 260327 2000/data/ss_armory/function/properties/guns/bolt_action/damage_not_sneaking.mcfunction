@@ -6,7 +6,7 @@ execute as @s[scores={raycast_lifetime=150..}] run scoreboard players operation 
 scoreboard players set @s[scores={generic_a=..0}] generic_a 1
 function parse:score {"function":"ss_armory:properties/guns/bolt_action/damage","score":"generic_a","prepend":"","append":".","prepend_position":0,"append_position":1}
 tag @n add StatusEligible
-scoreboard players add @n encumbered_timer 20
+# scoreboard players add @n encumbered_timer 20
 
 # execute at @s anchored eyes run playsound entity.arrow.hit_player player @s ^ ^ ^ 0.3 0.9
 

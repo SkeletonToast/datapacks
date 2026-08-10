@@ -65,6 +65,7 @@ gamerule natural_health_regeneration false
         scoreboard objectives add prof_tact_unadj dummy
         scoreboard objectives add prof_soul_unadj dummy
         scoreboard objectives add prof_mind_unadj dummy
+        scoreboard objectives add prof_unadj dummy
         
         scoreboard objectives add proficiency_recursion dummy
         scoreboard objectives add proficiency_inc_sum dummy

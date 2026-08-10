@@ -1,9 +1,9 @@
-function echoes:player/combat/proficiency/_main
-function parse:score {"score":"proficiency","prepend":"","append":".","prepend_position":0,"append_position":4,"function":"echoes:player/combat/proficiency/apply_damage"}
+execute unless entity @s[tag=InCombat] run function echoes:player/combat/proficiency/_main
+# function parse:score {"score":"proficiency","prepend":"","append":".","prepend_position":0,"append_position":3,"function":"echoes:player/combat/proficiency/apply_damage"}
 
 tellraw @s [""]
 tellraw @s [{"text":"❖ Proficiency: ","color":"gray"},{"score":{"name":"@s","objective":"proficiency"},"color":"white"}]
-function parse:score {"prepend":"","append":".","prepend_position":0,"append_position":2,"score":"proficiency","function":"ec_dev:proficiency_output_1"}
+function parse:score {"prepend":"","append":".","prepend_position":0,"append_position":3,"score":"proficiency","function":"ec_dev:proficiency_output_1"}
 
 execute store result score @s generic_j run attribute @s minecraft:attack_damage get 1000
 function math:round/10_reduce {"score":"generic_j"}

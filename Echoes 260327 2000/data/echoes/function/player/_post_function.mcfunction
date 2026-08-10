@@ -11,12 +11,14 @@ execute as @a[scores={WeaponType=0,proficiency=1..},tag=InCombat] run function s
 execute as @a[scores={ItemSelected=0,proficiency=1..},tag=InCombat] run function parse:score \
         {"score":"proficiency","prepend":"","append":".","prepend_position":0,"append_position":3,"function":"echoes:player/combat/proficiency/apply_damage"}
 
+scoreboard players operation @a[scores={WeaponType=1..6,proficiency=1..},tag=InCombat,tag=Dexterity_feat_2] generic_d = @s proficiency_dex
+
 execute as @a[scores={WeaponType=1..6,proficiency=1..},tag=InCombat,tag=Dexterity_feat_2] run \
-        function math:round/100_reduce {"score":"proficiency_dex"}
+        function math:round/100_reduce {"score":"generic_d"}
 execute as @a[scores={WeaponType=1..6,proficiency=1..},tag=InCombat,tag=Dexterity_feat_2] run \
-        function math:round/10_reduce {"score":"proficiency_dex"}
+        function math:round/10_reduce {"score":"generic_d"}
 execute as @a[scores={WeaponType=1..6,proficiency=1..},tag=InCombat,tag=Dexterity_feat_2] run function parse:score \
-        {"score":"proficiency_dex","prepend":"","append":".","prepend_position":0,"append_position":2,"function":"echoes:player/combat/proficiency/apply_speed"}
+        {"score":"generic_d","prepend":"","append":".","prepend_position":0,"append_position":2,"function":"echoes:player/combat/proficiency/apply_speed"}
 
 scoreboard players remove @a[scores={proficiency_temp=1..}] proficiency_temp 100
 scoreboard players set @a[scores={proficiency_temp=..-1}] proficiency_temp 0

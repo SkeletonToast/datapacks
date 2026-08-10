@@ -1,1 +1,1 @@
-$tellraw @s [{"text":"❖ Additional Attack Damage: ","color":"gray"},{"text":"+$(value)%","color":"white"}]
+$tellraw @s [{"text":"❖ Additional Attack Damage: ","color":"gray"},{"text":"+$(value)","color":"white"}]
