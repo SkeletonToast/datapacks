@@ -43,7 +43,6 @@ execute as @s[scores={WeaponType=6}] run function echoes:player/combat/proficien
 execute as @s[scores={WeaponType=10}] run function echoes:player/combat/proficiency/profile/agile_3
 
 # guns
-scoreboard players add @s[scores={WeaponType=9}] proficiency_str 0
 scoreboard players add @s[scores={WeaponType=9}] proficiency_dex 30
 scoreboard players add @s[scores={WeaponType=9}] proficiency_tact 120
 
@@ -111,7 +110,8 @@ scoreboard players operation @s prof_soul_unadj = @s proficiency_soul
 scoreboard players operation @s prof_mind_unadj = @s proficiency_mind
 
 # linear
-execute unless score $incrementalProficiencyScaling true matches 1 run function echoes:player/combat/proficiency/linear
+    # execute unless score $incrementalProficiencyScaling true matches 1 run function echoes:player/combat/proficiency/linear
+function echoes:player/combat/proficiency/linear
 
 # incremental
     # execute as @s[scores={proficiency_str=1..}] if score $incrementalProficiencyScaling true matches 1 run \
@@ -133,6 +133,20 @@ scoreboard players operation @s proficiency += @s proficiency_tact
 scoreboard players operation @s proficiency += @s proficiency_soul
 scoreboard players operation @s proficiency += @s proficiency_mind
 
+function ss_lib:fetch/attack_damage {s:"@s",scale:100}
+scoreboard players operation @s generic_a = @s AttackDamage
+        scoreboard players set @s generic_p 0
+    execute store result score @s generic_p run attribute @s attack_damage modifier value get minecraft:effect.weakness 100
+scoreboard players operation @s generic_a -= @s generic_p
+        scoreboard players set @s generic_p 0
+    execute store result score @s generic_p run attribute @s attack_damage modifier value get minecraft:effect.strength 100
+scoreboard players operation @s generic_a -= @s generic_p
+scoreboard players set @s[scores={generic_a=..99}] generic_a 100
+
+scoreboard players operation @s proficiency *= @s generic_a
+function math:round/100_reduce {score:proficiency}
+function math:round/10_reduce {score:proficiency}
+
 # str AND dex two-handing
 execute as @s[tag=Strength_feat_2,tag=Dexterity_feat_2] unless items entity @s weapon.offhand * run function echoes:player/combat/proficiency/two_handing {"stat":""}
 # execute as @s[tag=Strength_feat_2,tag=Dexterity_feat_2] unless items entity @s weapon.offhand * run function echoes:player/combat/proficiency/two_handing {"stat":"_dex"}
@@ -150,6 +164,6 @@ execute if score $hungryDamageReduction true matches 1 run scoreboard players op
 
 scoreboard players operation @s gun_base_damage = @s proficiency_dex
 scoreboard players operation @s gun_base_damage += @s proficiency_tact
-function math:round/100_reduce {"score":"gun_base_damage"}
+function math:round/100_reduce {score:gun_base_damage}
 
 # remember proficiency application is in post function!

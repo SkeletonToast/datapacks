@@ -2,9 +2,10 @@
 
 execute as @a run function echoes:player/aegis/overheal_calculate
 
-execute as @a if score @s aegis_timer > @s aegis_timer_max run scoreboard players operation @s aegis_timer = @s aegis_timer_max
+# execute as @a if score @s aegis_timer > @s aegis_timer_max run scoreboard players operation @s aegis_timer = @s aegis_timer_max
 
-scoreboard players add @a[scores={DamageTaken=1..}] aegis_timer 30
+scoreboard players set @a[scores={aegis_timer=201..}] aegis_timer 200
+scoreboard players add @a[scores={DamageTaken=1..}] aegis_timer 50
 scoreboard players add @a aegis_timer 0
 
 # golden apples

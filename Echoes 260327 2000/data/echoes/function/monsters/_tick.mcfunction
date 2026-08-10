@@ -18,4 +18,8 @@ scoreboard players remove @e[scores={cleansed_timer=1..}] cleansed_timer 1
 execute in eochrin:erdefret as @e[type=enderman,scores={Age=1}] run tp @s ~ ~-10000 ~
 execute in eochrin:erdefret as @e[type=enderman,scores={Age=1}] run kill @s
 
+# creakings
+execute as @e[type=creaking] on target at @s anchored eyes run particle dust_color_transition{from_color:[1.0,0.5,0.0],to_color:[0.4,0.2,0.0],scale:0.5} ^ ^ ^ 0.2 0.2 0.2 0 1 normal @s
+execute as @e[type=creaking] on target run effect give @s mining_fatigue 1 1 true
+
 execute as @e[type=enderman] at @s anchored eyes run particle reverse_portal ^ ^ ^ 0.3 0.3 0.3 0 5

@@ -5,11 +5,11 @@ execute as @a[tag=InCombat] run function echoes:player/combat/proficiency/_main
 scoreboard players set @a[scores={used_goat_horn=1..}] used_goat_horn 0
 
 execute as @a[scores={WeaponType=1..6,proficiency=1..},tag=InCombat] run function parse:score \
-        {"score":"proficiency","prepend":"","append":".","prepend_position":0,"append_position":4,"function":"echoes:player/combat/proficiency/apply_damage"}
+        {"score":"proficiency","prepend":"","append":".","prepend_position":0,"append_position":3,"function":"echoes:player/combat/proficiency/apply_damage"}
 
 execute as @a[scores={WeaponType=0,proficiency=1..},tag=InCombat] run function ss_lib:fetch/item_selected {"s":"@s"}
 execute as @a[scores={ItemSelected=0,proficiency=1..},tag=InCombat] run function parse:score \
-        {"score":"proficiency","prepend":"","append":".","prepend_position":0,"append_position":4,"function":"echoes:player/combat/proficiency/apply_damage"}
+        {"score":"proficiency","prepend":"","append":".","prepend_position":0,"append_position":3,"function":"echoes:player/combat/proficiency/apply_damage"}
 
 execute as @a[scores={WeaponType=1..6,proficiency=1..},tag=InCombat,tag=Dexterity_feat_2] run \
         function math:round/100_reduce {"score":"proficiency_dex"}

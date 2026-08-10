@@ -1,0 +1,1 @@
+$execute as $(s) store result score @s AttackDamage run attribute @s attack_damage get $(scale)
