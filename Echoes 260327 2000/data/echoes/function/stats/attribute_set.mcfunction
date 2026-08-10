@@ -153,8 +153,8 @@ execute store result score @s generic_h run attribute @s scale get 100
 
 # sneaking_speed: +Tact
     scoreboard players operation @s generic_attribute = @s Tact
-        scoreboard players set @s[predicate=ss_lib:is/sneaking] generic_attribute 0
-        scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
+        # scoreboard players set @s[predicate=!ss_lib:is/sneaking] generic_attribute 0
+        # scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
     execute unless score @s generic_attribute = @s tact_sneaking_speed run function parse:score \
         {"score":"generic_attribute","prepend":"","append":".","prepend_position":0,"append_position":2,"function":"echoes:stats/set_sneaking_speed"}
 
@@ -212,14 +212,15 @@ execute store result score @s generic_h run attribute @s scale get 100
 
 # camera_distance: +(Tact - 10) / 5
     scoreboard players set @s generic_attribute 0
-    scoreboard players operation @s[scores={SneakTime=1..}] generic_attribute = @s Tact
+    scoreboard players operation @s generic_attribute = @s Tact
     execute on vehicle on passengers run scoreboard players operation @s[predicate=ss_lib:input/jump] generic_attribute = @s Tact
         scoreboard players remove @s generic_attribute 10
         scoreboard players operation @s generic_attribute *= @s 2
         scoreboard players set @s[scores={generic_attribute=..2}] generic_attribute 0
             scoreboard players operation @s generic_a = @s SneakTime
             scoreboard players operation @s generic_a *= @s 2
-        execute if score $tactCameraDolly true matches 1 run execute if score @s generic_attribute > @s generic_a run scoreboard players operation @s generic_attribute = @s generic_a
+        scoreboard players set @s[scores={SneakTime=0},tag=!tact_camera_locked] generic_attribute 0
+        execute if score $tactCameraDolly true matches 1 as @s[tag=!tact_camera_locked] run execute if score @s generic_attribute > @s generic_a run scoreboard players operation @s generic_attribute = @s generic_a
     execute unless score @s generic_attribute = @s tact_camera_distance run function parse:score \
         {"score":"generic_attribute","prepend":"","append":".","prepend_position":0,"append_position":1,"function":"echoes:stats/set_camera_distance"}
 

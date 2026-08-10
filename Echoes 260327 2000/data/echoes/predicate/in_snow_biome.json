@@ -1,0 +1,29 @@
+{
+    "condition": "minecraft:location_check",
+    "predicate": {
+      "biomes": [
+        "minecraft:jagged_peaks",
+        "minecraft:frozen_peaks",
+        "minecraft:grove",
+        "minecraft:snowy_slopes",
+        "minecraft:snowy_taiga",
+        "minecraft:frozen_river",
+        "minecraft:frozen_ocean",
+        "minecraft:deep_frozen_ocean",
+        "minecraft:snowy_beach",
+        "minecraft:snowy_plains",
+        "minecraft:ice_spikes",
+        "terralith:alpine_grove",
+        "terralith:cold_shrubland",
+        "terralith:emerald_peaks",
+        "terralith:frozen_cliffs",
+        "terralith:rocky_mountains",
+        "terralith:rocky_shrubland",
+        "terralith:scarlet_mountains",
+        "terralith:siberian_grove",
+        "terralith:skylands_winter",
+        "terralith:wintry_forest"
+      ]
+    }
+  }
+  

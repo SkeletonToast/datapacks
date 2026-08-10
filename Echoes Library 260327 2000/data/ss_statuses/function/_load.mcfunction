@@ -80,3 +80,4 @@ scoreboard objectives add hesitant_amount dummy
 scoreboard objectives add recover_amount dummy
 scoreboard objectives add surgical_hit_timer dummy
 scoreboard objectives add tormented_random dummy
+scoreboard objectives add alert_level dummy

@@ -16,7 +16,7 @@ execute as @a[predicate=echoes:has_darkness] at @s if entity @e[type=warden,dist
 
 execute as @a[predicate=echoes:in_ocean,scores={InWater=1..}] at @s run particle bubble ~ ~ ~ 20 20 20 0 80 normal @s
 execute as @a[predicate=echoes:in_ocean,scores={InWater=1..}] at @s run particle white_ash ~ ~ ~ 20 20 20 0 80 normal @s
-execute as @a[predicate=echoes:in_cold_biome,predicate=ss_lib:in_rain] at @s run particle snowflake ~ ~20 ~ 20 10 20 0 320 normal @s
+execute as @a[predicate=echoes:in_snow_biome,predicate=ss_lib:in_rain] at @s run particle snowflake ~ ~20 ~ 20 10 20 0 320 normal @s
 # execute as @a[predicate=!echoes:in_cold_biome,predicate=!echoes:in_arid_biome] at @s run particle falling_water ~ ~10 ~ 30 1 30 0 10 normal @s
 
 execute as @a at @s[predicate=echoes:in_caves] if predicate ss_lib:random_1_percent if predicate ss_lib:random_20_percent run particle ash ~ ~20 ~ 20 10 20 0 3000 normal @s

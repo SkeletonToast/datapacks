@@ -63,6 +63,7 @@ scoreboard objectives add tact_movement_efficiency dummy
 scoreboard objectives add tact_water_movement_efficiency dummy
 scoreboard objectives add tact_submerged_mining_speed dummy
 scoreboard objectives add tact_camera_distance dummy
+scoreboard objectives add tact_camera_lock_timer dummy
 
 scoreboard objectives add tact_armor dummy
 scoreboard objectives add tact_armor_toughness dummy
