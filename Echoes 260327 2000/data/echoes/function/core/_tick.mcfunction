@@ -15,7 +15,6 @@ function echoes:stats/_tick
 # i moved feat assignment to player, since it's mostly related to things that happen in echoes mechanics,
     # so if there's an issue, check there
 
-function ec_dev:_tick
 
 # campfires
 function echoes:campfires/_tick
@@ -31,6 +30,9 @@ function ss_lib:deathcoords
 
 function echoes:monsters/_tick
 
+function ec_dev:_tick
+
 function echoes:player/_post_function
 function ss_lib:_post_function
 function ss_statuses:_post_function
+function ec_dev:_post_function

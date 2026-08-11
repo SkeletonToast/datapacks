@@ -54,6 +54,7 @@ gamerule natural_health_regeneration false
 # combat
     # proficiency
         scoreboard objectives add proficiency dummy
+        scoreboard objectives add proficiency_normalized dummy
         scoreboard objectives add proficiency_temp dummy
         scoreboard objectives add proficiency_str dummy
         scoreboard objectives add proficiency_dex dummy

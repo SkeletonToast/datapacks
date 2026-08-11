@@ -4,6 +4,7 @@ execute as @a run function echoes:stats/echo_level
 execute as @a[scores={Mind=..50}] run scoreboard players operation @s ss_epr.teleport_distance = @s Mind
 execute as @a[scores={Mind=50..}] run scoreboard players set @s ss_epr.teleport_distance 50
 
+# tact camera lock
 scoreboard players remove @a[scores={tact_camera_lock_timer=1..}] tact_camera_lock_timer 1
 scoreboard players add @a[scores={tact_camera_lock_timer=..-1}] tact_camera_lock_timer 1
 scoreboard players add @a tact_camera_lock_timer 0
