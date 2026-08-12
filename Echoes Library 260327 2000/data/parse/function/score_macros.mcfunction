@@ -1,5 +1,3 @@
-# say sm
-
 # score reset
 # scoreboard objectives add parse_score_recursions dummy
 # scoreboard objectives add parse_score_digits dummy

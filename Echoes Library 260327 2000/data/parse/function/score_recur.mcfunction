@@ -1,5 +1,3 @@
-# say sr
-
 $execute as @s[scores={generic_b=0}] run function parse:score_increment {function:"$(function)",prepend:"$(prepend)",append:"$(append)",value:"0$(value)",macros:"$(macros)"}
 $execute as @s[scores={generic_b=1}] run function parse:score_increment {function:"$(function)",prepend:"$(prepend)",append:"$(append)",value:"1$(value)",macros:"$(macros)"}
 $execute as @s[scores={generic_b=2}] run function parse:score_increment {function:"$(function)",prepend:"$(prepend)",append:"$(append)",value:"2$(value)",macros:"$(macros)"}
