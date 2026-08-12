@@ -6,4 +6,4 @@ scoreboard players operation @s generic_a /= @s 10
 
 $scoreboard players operation @s $(output_score) = @s digit_counter
 execute as @s[scores={generic_a=..9}] run scoreboard players set @s digit_counter 0
-$execute as @s[scores={generic_a=10..}] run function math:digit_counter {"input_score":"$(input_score)","output_score":"$(output_score)"}
+$execute as @s[scores={generic_a=10..}] run function math:digit_counter {input_score:"$(input_score)",output_score:"$(output_score)"}

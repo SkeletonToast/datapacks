@@ -1,2 +1,0 @@
-- the power module only takes scores for the base. the calculation is performed on the base score.
-- if your exponent also comes from a score, it's recommended you pass it through the Score Parse Module.
