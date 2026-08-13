@@ -1,0 +1,1 @@
+function ss_lib:fetch/absorption {"s":"@s"}

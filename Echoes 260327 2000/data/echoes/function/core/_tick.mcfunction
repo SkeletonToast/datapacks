@@ -1,3 +1,5 @@
+scoreboard players set @a Luck -1
+
 function ss_lib:_pre_function
 function ss_statuses:_pre_function
 function echoes:player/_pre_function

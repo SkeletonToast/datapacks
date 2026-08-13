@@ -18,3 +18,5 @@ gamerule keep_inventory true
 schedule function echoes:core/scheduled_10t 10t
 schedule function echoes:core/scheduled_20t 20t
 schedule function echoes:core/scheduled_40t 40t
+
+scoreboard objectives add luck_chance dummy

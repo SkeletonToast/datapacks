@@ -1,0 +1,1 @@
+$execute if predicate {"condition":"random_chance",chance:$(value)} run function $(function)

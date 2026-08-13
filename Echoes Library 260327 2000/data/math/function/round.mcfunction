@@ -1,5 +1,5 @@
 $scoreboard players operation @s generic_a = @s $(score)
-$scoreboard players operation @s generic_b = @s $(to)
+$scoreboard players operation @s generic_b = @s $(round)
 scoreboard players operation @s generic_a %= @s generic_b
 scoreboard players operation @s generic_c = @s generic_b
     scoreboard players operation @s generic_c /= @s 2
@@ -17,5 +17,5 @@ $execute if score @s generic_a >= @s generic_c run scoreboard players operation 
 $execute if score @s generic_a < @s generic_c run scoreboard players operation @s $(score) -= @s generic_a
 
 # reduction
-$scoreboard players set @s generic_b $(to)
+$scoreboard players set @s generic_b $(round)
 $execute if score $$(reduce) true = $true true run scoreboard players operation @s $(score) /= @s generic_b

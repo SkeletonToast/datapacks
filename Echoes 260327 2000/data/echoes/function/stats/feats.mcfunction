@@ -22,6 +22,7 @@ function echoes:stats/feat_assignment {"stat":"Soul"}
         # in proficiency / attribute apply file
         
     # level 50: surge sprint: allows you to sprint much faster after continuously super sprinting for 5 seconds
+        # in attribute set file
 
 # resolve
     # level 15: overheal: allows base health regeneration
@@ -73,7 +74,7 @@ function echoes:stats/feat_assignment {"stat":"Soul"}
         # in proficiency file
     execute as @a[tag=Tact_feat_2,tag=!Tact_feat_3,scores={SneakTime=60..},advancements={echoes:using_spyglass=false},predicate=!ss_lib:is/moving] if items entity @s weapon.* spyglass run function parse:score {score:Tact,function:"ss_statuses:alert",prepend:"",append:".",prepend_position:0,append_position:2} 
     execute as @a[tag=Tact_feat_3,tag=!Tact_feat_4,scores={SneakTime=30..},advancements={echoes:using_spyglass=false}] if items entity @s weapon.* spyglass run function parse:score {score:Tact,function:"ss_statuses:alert",prepend:"",append:".",prepend_position:0,append_position:2} 
-    execute as @a[tag=Tact_feat_4,scores={SneakTime=10..},advancements={echoes:using_spyglass=false}] if items entity @s weapon.* spyglass run function parse:score {score:Tact,function:"ss_statuses:alert",prepend:"",append:".",prepend_position:0,append_position:2} 
+    execute as @a[tag=Tact_feat_4,scores={SneakTime=7..},advancements={echoes:using_spyglass=false}] if items entity @s weapon.* spyglass run function parse:score {score:Tact,function:"ss_statuses:alert",prepend:"",append:".",prepend_position:0,append_position:2} 
     advancement revoke @a[tag=Tact_feat_2,advancements={echoes:using_spyglass=true}] only echoes:using_spyglass
 
     # level 50: adaptability: Player gains [Tact] Tact Proficiency, caps at 70
@@ -85,7 +86,7 @@ function echoes:stats/feat_assignment {"stat":"Soul"}
     # level 30: 
 
     # level 50: player gains fire resistance, conduit power, and saturation (at ≤19 Food) if aegis is active
-    function ss_lib:fetch/absorption {"s":"@a[tag=Soul_feat_3,tag=!InCombat]"}
+    function ss_lib:fetch/absorption {"s":"@a[tag=Soul_feat_3]"}
     effect give @a[tag=Soul_feat_3,scores={Absorption=1..},tag=!InCombat] fire_resistance 1 0 true
     effect give @a[tag=Soul_feat_3,scores={Absorption=1..}] conduit_power 1 0 true
     effect give @a[tag=Soul_feat_3,scores={Absorption=1..,Food=..18},tag=!InCombat] saturation 1 0 true
