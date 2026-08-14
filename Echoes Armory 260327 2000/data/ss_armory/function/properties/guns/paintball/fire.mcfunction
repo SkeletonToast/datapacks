@@ -4,8 +4,8 @@
 scoreboard players set @s[scores={SneakTime=0..20}] PaintballReload 7
 scoreboard players set @s[scores={SneakTime=21..}] PaintballReload 2
 
-execute if entity @s[scores={SneakTime=0..20}] positioned ^ ^ ^0.25 positioned ~ ~-0.2 ~ run function raycast:either {"particle":"function ss_armory:properties/guns/paintball/particles","increment_distance":"0.25","max_lifetime":"60","run_on_block_success":"function ss_armory:properties/guns/paintball/bullet_hit_block","run_on_entity_success":"function ss_armory:properties/guns/paintball/damage","solid_block_collision":"true"}
-execute if entity @s[scores={SneakTime=21..}] positioned ^ ^ ^0.25 positioned ~ ~-0.2 ~ run function raycast:either {"particle":"function ss_armory:properties/guns/paintball/particles","increment_distance":"0.25","max_lifetime":"120","run_on_block_success":"function ss_armory:properties/guns/paintball/bullet_hit_block","run_on_entity_success":"function ss_armory:properties/guns/paintball/damage","solid_block_collision":"true"}
+execute if entity @s[scores={SneakTime=0..20}] positioned ^ ^ ^0.25 positioned ~ ~-0.2 ~ run function raycast:either {"particle":"function ss_armory:properties/guns/paintball/particles","increment_distance":"0.25","max_lifetime":"60","run_on_block_success":"function ss_armory:properties/guns/paintball/bullet_hit_block","run_on_entity_success":"function ss_armory:properties/guns/paintball/damage",solid_block_collision:true}
+execute if entity @s[scores={SneakTime=21..}] positioned ^ ^ ^0.25 positioned ~ ~-0.2 ~ run function raycast:either {"particle":"function ss_armory:properties/guns/paintball/particles","increment_distance":"0.25","max_lifetime":"120","run_on_block_success":"function ss_armory:properties/guns/paintball/bullet_hit_block","run_on_entity_success":"function ss_armory:properties/guns/paintball/damage",solid_block_collision:true}
 
 # execute positioned ^ ^ ^0.5 run particle firework ~ ~-0.2 ~ 0.1 0.1 0.1 0.01 1
 function ss_armory:properties/guns/paintball/big_particles
