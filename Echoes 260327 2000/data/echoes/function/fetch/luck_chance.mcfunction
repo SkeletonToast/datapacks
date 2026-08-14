@@ -1,0 +1,1 @@
+$execute unless score @s luck_chance matches ..-1 store result score @s luck_chance run attribute @s luck get $(scale)

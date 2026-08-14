@@ -9,7 +9,7 @@ execute as @s[scores={temp_dangerous=..-20}] run function ss_lib:actionbar {"tit
 scoreboard players operation @s[scores={temp_dangerous=..-1}] encumbrance_hard -= @s temp_dangerous
 # scoreboard players operation @s[scores={temp_dangerous=..-1}] hesitant_amount -= @s temp_dangerous
 # scoreboard players operation @s[scores={temp_dangerous=..-1}] hesitant_amount -= @s temp_dangerous
-function run:recur {"f":"scoreboard players operation @s[scores={temp_dangerous=..-1}] Dexterity += @s temp_dangerous","r":3}
+function run:recur {f:"scoreboard players operation @s[scores={temp_dangerous=..-1}] Dexterity += @s temp_dangerous",r:3}
 
 # scoreboard players operation @s fear += @s temp_dangerous
 
