@@ -29,7 +29,7 @@ scoreboard players set @s generic_c 0
 $function math:sqrt/find_closest_square {"input_score":"$(input_score)"}
     $scoreboard players operation @s $(input_score) /= @s 10
         $scoreboard players operation @s $(input_score) /= @s 10
-# function run:run {"f":"function math:sqrt/test","r":3}
+# function run:recur {f:"function math:sqrt/test",r:3}
 # generic_a is the square, generic_b is returned as the square root of generic_a
 
 # once closest square is found, do calculation here
