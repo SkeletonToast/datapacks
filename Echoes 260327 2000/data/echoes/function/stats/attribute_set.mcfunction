@@ -153,6 +153,7 @@ execute store result score @s generic_h run attribute @s scale get 100
 
 # sneaking_speed: +Tact
     scoreboard players operation @s generic_attribute = @s Tact
+    scoreboard players remove @s generic_attribute 15
         # scoreboard players set @s[predicate=!ss_lib:is/sneaking] generic_attribute 0
         # scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
     execute unless score @s generic_attribute = @s tact_sneaking_speed run function parse:score \
@@ -192,6 +193,7 @@ execute store result score @s generic_h run attribute @s scale get 100
 # movement_efficiency: +(Tact * 2)
     # effective cap at 50 Tact
     scoreboard players operation @s generic_attribute = @s Tact
+    scoreboard players remove @s generic_attribute 15
     scoreboard players operation @s generic_attribute *= @s 2
         scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
     execute unless score @s generic_attribute = @s tact_interaction_range run function parse:score \
@@ -199,6 +201,7 @@ execute store result score @s generic_h run attribute @s scale get 100
 
 # water_movement_efficiency: +(Tact * 2)
     scoreboard players operation @s generic_attribute = @s Tact
+    scoreboard players remove @s generic_attribute 15
     scoreboard players operation @s generic_attribute *= @s 2
         scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
     execute unless score @s generic_attribute = @s tact_interaction_range run function parse:score \
@@ -206,6 +209,7 @@ execute store result score @s generic_h run attribute @s scale get 100
 
 # submerged_mining_speed: +Tact
     scoreboard players operation @s generic_attribute = @s Tact
+    scoreboard players remove @s generic_attribute 15
         scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
     execute unless score @s generic_attribute = @s tact_interaction_range run function parse:score \
         {"score":"generic_attribute","prepend":"","append":".","prepend_position":0,"append_position":2,"function":"echoes:stats/set_submerged_mining_speed"}
@@ -224,8 +228,9 @@ execute store result score @s generic_h run attribute @s scale get 100
     execute unless score @s generic_attribute = @s tact_camera_distance run function parse:score \
         {"score":"generic_attribute","prepend":"","append":".","prepend_position":0,"append_position":1,"function":"echoes:stats/set_camera_distance"}
 
-# burning_time: -SoulSigned * 8 / 5
+# burning_time: -Soul * 8 / 5
     scoreboard players operation @s generic_attribute = @s Soul
+    scoreboard players remove @s generic_attribute 15
     scoreboard players operation @s generic_attribute *= @s 2
         scoreboard players operation @s generic_attribute *= @s 2
         scoreboard players operation @s generic_attribute *= @s 2
@@ -234,15 +239,16 @@ execute store result score @s generic_h run attribute @s scale get 100
     execute unless score @s generic_attribute = @s soul_burning_time run function parse:score \
         {"score":"generic_attribute","prepend":"-","append":".","prepend_position":0,"append_position":2,"function":"echoes:stats/set_burning_time"}
 
-# oxygen_bonus: +SoulSigned
+# oxygen_bonus: +Soul
     scoreboard players operation @s generic_attribute = @s Soul
+    scoreboard players remove @s generic_attribute 15
         scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
     execute unless score @s generic_attribute = @s soul_oxygen_bonus run function parse:score \
         {"score":"generic_attribute","prepend":"","append":".","prepend_position":0,"append_position":1,"function":"echoes:stats/set_oxygen_bonus"}
 
-# luck: +SoulSigned - 10
+# luck: +Soul - 10
     scoreboard players operation @s generic_attribute = @s Soul
-    scoreboard players remove @s generic_attribute 10
+    scoreboard players remove @s generic_attribute 15
         scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
     execute unless score @s generic_attribute = @s soul_luck run function parse:score_unended \
         {"score":"generic_attribute","function":"echoes:stats/set_luck"}
