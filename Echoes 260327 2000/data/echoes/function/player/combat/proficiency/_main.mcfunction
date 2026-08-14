@@ -133,20 +133,6 @@ scoreboard players operation @s proficiency += @s proficiency_tact
 scoreboard players operation @s proficiency += @s proficiency_soul
 scoreboard players operation @s proficiency += @s proficiency_mind
 
-function ss_lib:fetch/attack_damage {s:"@s",scale:100}
-scoreboard players operation @s generic_a = @s AttackDamage
-        scoreboard players set @s generic_p 0
-    execute store result score @s generic_p run attribute @s attack_damage modifier value get minecraft:effect.weakness 100
-scoreboard players operation @s generic_a -= @s generic_p
-        scoreboard players set @s generic_p 0
-    execute store result score @s generic_p run attribute @s attack_damage modifier value get minecraft:effect.strength 100
-scoreboard players operation @s generic_a -= @s generic_p
-scoreboard players set @s[scores={generic_a=..99}] generic_a 100
-
-scoreboard players operation @s proficiency *= @s generic_a
-function math:round/100_reduce {score:proficiency}
-function math:round/10_reduce {score:proficiency}
-
 # str AND dex two-handing
 execute as @s[tag=Strength_feat_2,tag=Dexterity_feat_2] unless items entity @s weapon.offhand * run function echoes:player/combat/proficiency/two_handing {"stat":""}
 # execute as @s[tag=Strength_feat_2,tag=Dexterity_feat_2] unless items entity @s weapon.offhand * run function echoes:player/combat/proficiency/two_handing {"stat":"_dex"}

@@ -2,44 +2,45 @@
 function parse:score_unended {"function":"echoes:stats/attribute_default_max_health","score":"Tenacity"}
 
 # Dexterity
-attribute @s movement_speed base set 0.1
-attribute @s fall_damage_multiplier base set 1.00
-attribute @s safe_fall_distance base set 3
-attribute @s jump_strength base set 0.42
-attribute @s step_height base set 0.60
-attribute @s sneaking_speed base set 0.30
+attribute @s movement_speed base reset
+attribute @s fall_damage_multiplier base reset
+attribute @s safe_fall_distance base reset
+attribute @s jump_strength base reset
+attribute @s step_height base reset
+attribute @s sneaking_speed base reset
 
 # Strength
 attribute @s block_break_speed base set 0.80
-attribute @s knockback_resistance base set 0.0
+attribute @s knockback_resistance base reset
 
 # Tact
-attribute @s block_interaction_range base set 4.50
-attribute @s entity_interaction_range base set 3.00
-attribute @s movement_efficiency base set 0.00
-attribute @s water_movement_efficiency base set 0.00
-attribute @s submerged_mining_speed base set 0.20
-attribute @s camera_distance base set 4
+attribute @s block_interaction_range base reset
+attribute @s entity_interaction_range base reset
+attribute @s movement_efficiency base reset
+attribute @s water_movement_efficiency base reset
+attribute @s submerged_mining_speed base reset
+attribute @s camera_distance base reset
 
 # Soul
-attribute @s burning_time base set 1.00
+attribute @s burning_time base reset
     # - Spr * 0.016
         # - Spr / 100 * 8 / 5
-attribute @s oxygen_bonus base set 0.00
+attribute @s oxygen_bonus base reset
     # + Spr / 10
-attribute @s luck base set 0.00
+attribute @s luck base reset
     # + (Spr - 10) * 10
 
 # other
-attribute @s attack_damage base set 1.00
-attribute @s attack_speed base set 4.00
-attribute @s attack_knockback base set 0.00
-attribute @s armor base set 0.00
+attribute @s attack_damage base reset
+
+attribute @s attack_speed base reset
+attribute @s attack_knockback base reset
+attribute @s armor base reset
 attribute @s armor_toughness base set 10.00
-attribute @s scale base set 1.00
-attribute @s gravity base set 0.08
-attribute @s waypoint_receive_range base set 60000
-attribute @s waypoint_transmit_range base set 60000
+attribute @s scale base reset
+attribute @s gravity base reset
+attribute @s waypoint_receive_range base reset
+attribute @s waypoint_transmit_range base reset
 
 # score resets
 scoreboard players set @s res_max_health 0
