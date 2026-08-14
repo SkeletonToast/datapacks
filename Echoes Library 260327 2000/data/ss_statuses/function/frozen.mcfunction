@@ -1,4 +1,4 @@
-# execute as @s[scores={frozen_active=-1}] run function ss_statuses:_display_status {"type":"-","color":"#bce7ff","status":"Frozen","append":""}
+# execute as @s[scores={frozen_active=-1}] run function ss_statuses:_display_status {"type":"-","color":"#bce7ff","status":"Frozen",append:""}
 
 function ss_statuses:immobilized
 

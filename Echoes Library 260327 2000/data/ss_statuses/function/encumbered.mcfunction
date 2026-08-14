@@ -4,7 +4,7 @@
 execute as @s[scores={encumbered_amount=100..}] run scoreboard players set @s encumbered_amount 99
 scoreboard players operation @s generic_a = @s encumbered_amount
 
-# function parse:score {"score":"encumbered_amount","function":"ss_statuses:encumbered_apply","prepend_position":"0","prepend":"","append_position":"2","append":"."}
+# function parse:score {"score":"encumbered_amount","function":"ss_statuses:encumbered_apply",prepend_position:"0",prepend:"",append_position:"2",append:"."}
 
 execute as @s[scores={generic_a=90..99}] run function ss_statuses:encumbered_increment {"multiplier":"0.9"}
 execute as @s[scores={generic_a=80..89}] run function ss_statuses:encumbered_increment {"multiplier":"0.8"}

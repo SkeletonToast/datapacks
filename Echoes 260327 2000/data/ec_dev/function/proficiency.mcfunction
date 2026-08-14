@@ -1,14 +1,14 @@
 function echoes:player/combat/proficiency/_main
 execute as @s[tag=!InCombat] run function echoes:player/combat/proficiency/apply
-# function parse:score {"score":"proficiency_normalized","prepend":"","append":".","prepend_position":0,"append_position":3,"function":"echoes:player/combat/proficiency/apply_damage"}
+# function parse:score {"score":"proficiency_normalized",prepend:"",append:".",prepend_position:0,append_position:3,"function":"echoes:player/combat/proficiency/apply_damage"}
 
 tellraw @s [""]
 tellraw @s [{"text":"❖ Proficiency: ","color":"gray"},{"score":{"name":"@s","objective":"proficiency"},"color":"white"}]
-function parse:score {"prepend":"","append":".","prepend_position":0,"append_position":2,"score":"proficiency","function":"ec_dev:proficiency_output_1"}
+function parse:score {prepend:"",append:".",prepend_position:0,append_position:2,"score":"proficiency","function":"ec_dev:proficiency_output_1"}
 
 function ss_lib:fetch/attack_damage {s:"@s",scale:1000}
-function math:round/10_reduce {"score":"AttackDamage"}
-function parse:score {"prepend":"","append":".","prepend_position":0,"append_position":2,"score":"AttackDamage","function":"ec_dev:proficiency_output_2"}
+function math:round {score:AttackDamage,round:10,reduce:true}
+function parse:score {prepend:"",append:".",prepend_position:0,append_position:2,"score":"AttackDamage","function":"ec_dev:proficiency_output_2"}
 
 tellraw @s [""]
 tellraw @s [{"text":"❖ Unadjusted Strength: ","color":"gray"},{"score":{"name":"@s","objective":"prof_str_unadj"},"color":"red"}]

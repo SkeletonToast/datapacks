@@ -1,4 +1,4 @@
-execute as @s[scores={hesitant_active=-1}] run function ss_statuses:_display_status {"type":"-","color":"#4bb192","status":"Hesitant","append":""}
+execute as @s[scores={hesitant_active=-1}] run function ss_statuses:_display_status {"type":"-","color":"#4bb192","status":"Hesitant",append:""}
 
 scoreboard players operation @s generic_a = @s hesitant_amount
 

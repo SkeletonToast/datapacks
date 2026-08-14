@@ -4,19 +4,19 @@ execute as @a[tag=InCombat] store result score @s AttackSpeed run attribute @s a
 
 execute as @a[tag=InCombat] run scoreboard players operation @s generic_t = @s AttackDamage
     execute as @a[tag=InCombat] run scoreboard players operation @s generic_t *= @s AttackSpeed
-    execute as @a[tag=InCombat] run function math:round/100_reduce {score:generic_t}
-    execute as @a[tag=InCombat] run function math:round/100_reduce {score:generic_t}
+    execute as @a[tag=InCombat] run function math:round {score:generic_t,round:100,reduce:true}
+    execute as @a[tag=InCombat] run function math:round {score:generic_t,round:100,reduce:true}
 
 # residuals
 execute as @a[tag=InCombat] run scoreboard players set @s generic_b 100
 
 execute as @a[tag=InCombat] run scoreboard players operation @s generic_a = @s AttackDamage
 execute as @a[tag=InCombat] run scoreboard players operation @s generic_a %= @s generic_b
-execute as @a[tag=InCombat] run function math:round/100_reduce {score:AttackDamage}
+execute as @a[tag=InCombat] run function math:round {score:AttackDamage,round:100,reduce:true}
 
 execute as @a[tag=InCombat] run scoreboard players operation @s generic_c = @s AttackSpeed
 execute as @a[tag=InCombat] run scoreboard players operation @s generic_c %= @s generic_b
-execute as @a[tag=InCombat] run function math:round/100_reduce {score:AttackSpeed}
+execute as @a[tag=InCombat] run function math:round {score:AttackSpeed,round:100,reduce:true}
 
 # combat bar display
 execute as @a if score @s pause_actionbars matches 1.. run return fail

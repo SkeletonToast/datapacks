@@ -52,7 +52,7 @@ execute as @a[scores={flight_level=1..}] run attribute @s minecraft:gravity modi
     execute as @a[scores={flight_level=1..,FallFlying=1,slipstream=1..,elytra_boost_cooldown=-200..},x_rotation=155..172] run function echoes:player/elytra_scaling/looking_down_5
 
     scoreboard players set @a[scores={generic_a=251..}] generic_a 250
-    execute as @a[scores={flight_level=1..,FallFlying=1,slipstream=1..,elytra_boost_cooldown=-200..},predicate=!ss_lib:input/sneak] run function parse:score {"score":"generic_a","prepend":"","append":".","prepend_position":0,"append_position":2,"function":"echoes:player/elytra_scaling/apply_gravity"}
+    execute as @a[scores={flight_level=1..,FallFlying=1,slipstream=1..,elytra_boost_cooldown=-200..},predicate=!ss_lib:input/sneak] run function parse:score {"score":"generic_a",prepend:"",append:".",prepend_position:0,append_position:2,"function":"echoes:player/elytra_scaling/apply_gravity"}
 
     # looking up
     execute as @a[scores={flight_level=34..,FallFlying=1,slipstream=1..,elytra_boost_cooldown=-200..,flight_level=20..},x_rotation=250..] run attribute @s minecraft:gravity modifier add mind.elytra_gravity -0.04 add_multiplied_base

@@ -1,4 +1,4 @@
-$execute as @s[scores={frenzied_active=-1}] run function ss_statuses:_display_status {"type":"+","color":"#ff1a7a","status":"Frenzied","append":" (+$(amplifier))"}
+$execute as @s[scores={frenzied_active=-1}] run function ss_statuses:_display_status {"type":"+","color":"#ff1a7a","status":"Frenzied",append:" (+$(amplifier))"}
 
 scoreboard players operation @s[scores={bleeding_timer=1..}] frenzied_timer += @s bleeding_timer
 scoreboard players set @s[scores={bleeding_timer=1..}] bleeding_timer 0

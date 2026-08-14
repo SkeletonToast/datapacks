@@ -38,14 +38,14 @@ execute as @s[scores={generic_a=0}] run return fail
     execute as @s[scores={run_score_append_position=..-1}] run scoreboard players operation @s run_score_digits -= @s run_score_append_position
     scoreboard players set @s[scores={run_score_append_position=..-1}] run_score_append_position 0
 
-$execute if entity @s[scores={generic_a=1..},tag=!parse_append_negative] run function parse:score_increment {"function":"$(function)","prepend":"$(prepend)","append":"$(append)","value":""}
-$execute if entity @s[scores={generic_a=..-1},tag=!parse_append_negative] run function parse:score_increment {"function":"$(function)","prepend":"$(prepend)-","append":"$(append)","value":""}
+$execute if entity @s[scores={generic_a=1..},tag=!parse_append_negative] run function parse:score_increment {"function":"$(function)",prepend:"$(prepend)",append:"$(append)","value":""}
+$execute if entity @s[scores={generic_a=..-1},tag=!parse_append_negative] run function parse:score_increment {"function":"$(function)",prepend:"$(prepend)-",append:"$(append)","value":""}
 
 # kind of a bandaid fix lol but these are meant to differentiate if the function has a negative append position,
 # but the negative position is the same as the # of digits, so it's just set to 0 instead
-$execute if entity @s[scores={generic_a=1..,run_score_append_position=1..},tag=parse_append_negative] run function parse:score_increment {"function":"$(function)","prepend":"$(prepend)","append":"$(append)","value":""}
-$execute if entity @s[scores={generic_a=..-1,run_score_append_position=1..},tag=parse_append_negative] run function parse:score_increment {"function":"$(function)","prepend":"$(prepend)-","append":"$(append)","value":""}
-$execute if entity @s[scores={generic_a=1..,run_score_append_position=0},tag=parse_append_negative] run function parse:score_increment {"function":"$(function)","prepend":"$(prepend)$(append)","append":"","value":""}
-$execute if entity @s[scores={generic_a=..-1,run_score_append_position=0},tag=parse_append_negative] run function parse:score_increment {"function":"$(function)","prepend":"$(prepend)-$(append)","append":"","value":""}
+$execute if entity @s[scores={generic_a=1..,run_score_append_position=1..},tag=parse_append_negative] run function parse:score_increment {"function":"$(function)",prepend:"$(prepend)",append:"$(append)","value":""}
+$execute if entity @s[scores={generic_a=..-1,run_score_append_position=1..},tag=parse_append_negative] run function parse:score_increment {"function":"$(function)",prepend:"$(prepend)-",append:"$(append)","value":""}
+$execute if entity @s[scores={generic_a=1..,run_score_append_position=0},tag=parse_append_negative] run function parse:score_increment {"function":"$(function)",prepend:"$(prepend)$(append)",append:"","value":""}
+$execute if entity @s[scores={generic_a=..-1,run_score_append_position=0},tag=parse_append_negative] run function parse:score_increment {"function":"$(function)",prepend:"$(prepend)-$(append)",append:"","value":""}
 
 tag @s[tag=parse_append_negative] remove parse_append_negative

@@ -106,7 +106,7 @@ execute as @a run scoreboard players remove @s generic_h 1000
 execute as @a unless score @s generic_h matches -150..150 run function echoes:stats/scale_attribute/_main {"score":"generic_h"}
 
 execute as @a run scoreboard players operation @s generic_h /= @s 5
-execute as @a run function math:round/10_reduce {"score":"generic_h"}
+execute as @a run function math:round {score:generic_h,round:10,reduce:true}
 execute as @a run scoreboard players operation @s Strength += @s generic_h
 execute as @a run scoreboard players operation @s Dexterity += @s generic_h
 

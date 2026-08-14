@@ -11,7 +11,7 @@ scoreboard players operation @s[scores={EchoDifficulty=3}] overheal_limit /= @s 
 scoreboard players operation @s[scores={EchoDifficulty=4..5}] overheal_limit /= @s 2
     scoreboard players operation @s[scores={EchoDifficulty=4..5}] overheal_limit /= @s 2
 # difficulty 6 - 10%
-execute as @s[scores={EchoDifficulty=6}] run function math:round/10_reduce {"score":"overheal_limit"}
+execute as @s[scores={EchoDifficulty=6}] run function math:round {score:overheal_limit,round:10,reduce:true}
 # difficulty 7
 scoreboard players set @s[scores={EchoDifficulty=7}] overheal_limit 0
 

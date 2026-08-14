@@ -1,4 +1,4 @@
-$execute as @s[scores={fortified_active=-1}] run function ss_statuses:_display_status {"type":"+","color":"#ffd000","status":"Fortified","append":" ($(multiplier)x)"}
+$execute as @s[scores={fortified_active=-1}] run function ss_statuses:_display_status {"type":"+","color":"#ffd000","status":"Fortified",append:" ($(multiplier)x)"}
 
 $attribute @s minecraft:armor modifier add fortified_armor $(multiplier) add_multiplied_total
 $attribute @s minecraft:armor_toughness modifier add fortified_armor_toughness $(multiplier) add_multiplied_total

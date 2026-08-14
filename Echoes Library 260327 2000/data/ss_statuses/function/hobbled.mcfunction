@@ -1,4 +1,4 @@
-execute as @s[scores={hobbled_active=-1}] run function ss_statuses:_display_status {"type":"-","color":"#306e28","status":"Hobbled","append":""}
+execute as @s[scores={hobbled_active=-1}] run function ss_statuses:_display_status {"type":"-","color":"#306e28","status":"Hobbled",append:""}
 
 scoreboard players operation @s[scores={DamageTaken=1..}] hobbled_amount += @s DamageTaken
 scoreboard players add @s[scores={OnGround=0}] hobbled_amount 3

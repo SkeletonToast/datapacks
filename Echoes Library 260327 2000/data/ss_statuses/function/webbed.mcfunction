@@ -1,4 +1,4 @@
-execute as @s[scores={webbed_active=-1}] run function ss_statuses:_display_status {"type":"-","color":"#bce7ff","status":"Webbed","append":""}
+execute as @s[scores={webbed_active=-1}] run function ss_statuses:_display_status {"type":"-","color":"#bce7ff","status":"Webbed",append:""}
 
 function ss_statuses:immobilized
 

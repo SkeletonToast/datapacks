@@ -1,4 +1,4 @@
-$execute as @s[scores={bleeding_active=-1}] run function ss_statuses:_display_status {"type":"-","color":"#ff0000","status":"Bleeding","append":" ($(damage)x)"}
+$execute as @s[scores={bleeding_active=-1}] run function ss_statuses:_display_status {"type":"-","color":"#ff0000","status":"Bleeding",append:" ($(damage)x)"}
 
 execute as @s[type=!player] at @s on attacker run scoreboard players operation @n[type=!player] bleeding_damage += @s DamageDealt
 scoreboard players operation @s[type=player,scores={DamageTaken=11..}] bleeding_damage += @s DamageTaken

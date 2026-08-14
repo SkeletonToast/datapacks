@@ -64,13 +64,13 @@ execute if score $creativeEncumbrance true matches 0 run scoreboard players set 
 execute if score $creativeEncumbrance true matches 0 run scoreboard players set @a[gamemode=spectator] encumbrance 0
     
 execute as @a[scores={encumbrance=1..}] run function parse:score \
-        {"score":"encumbrance","prepend":"-","append":".","prepend_position":0,"append_position":2,"function":"echoes:player/encumbrance/speed_apply"}
+        {"score":"encumbrance",prepend:"-",append:".",prepend_position:0,append_position:2,"function":"echoes:player/encumbrance/speed_apply"}
         
 execute as @a[scores={encumbrance=1..}] run function parse:score \
-        {"score":"encumbrance","prepend":"-","append":".","prepend_position":0,"append_position":2,"function":"echoes:player/encumbrance/swim_apply"}
+        {"score":"encumbrance",prepend:"-",append:".",prepend_position:0,append_position:2,"function":"echoes:player/encumbrance/swim_apply"}
 
 execute as @a[scores={encumbrance_half=1..,SneakTime=0}] run function parse:score \
-        {"score":"encumbrance_half","prepend":"-","append":".","prepend_position":0,"append_position":2,"function":"echoes:player/encumbrance/jump_apply"}
+        {"score":"encumbrance_half",prepend:"-",append:".",prepend_position:0,append_position:2,"function":"echoes:player/encumbrance/jump_apply"}
 
 # execute as @a run scoreboard players operation @s DexterityModifier -= @s encumbrance_half
 

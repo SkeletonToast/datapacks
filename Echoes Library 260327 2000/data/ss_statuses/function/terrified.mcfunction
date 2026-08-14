@@ -1,4 +1,4 @@
-$execute as @s[scores={terrified_active=-1}] run function ss_statuses:_display_status {"type":"-","color":"#ae4bb1","status":"Terrified","append":" ($(multiplier)x)"}
+$execute as @s[scores={terrified_active=-1}] run function ss_statuses:_display_status {"type":"-","color":"#ae4bb1","status":"Terrified",append:" ($(multiplier)x)"}
 
 scoreboard players set @s frightened_active 1
 scoreboard players set @s unnerved_active 1
