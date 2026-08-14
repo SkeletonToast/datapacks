@@ -10,7 +10,7 @@ $execute as @s[scores={raycast_lifetime=1..}] if entity @e[type=$(entity),dx=0,d
 $execute $(condition) block ~ ~ ~ $(block) run $(run_on_block_success)
 $execute $(condition) block ~ ~ ~ $(block) run scoreboard players set @s raycast_lifetime 0
 $execute $(condition) block ~ ~ ~ $(block) run return fail
-$execute if score $$(solid_block_collision) true = $true true unless block ~ ~ ~ #ss_lib:nonsolidblocks run scoreboard players set @s raycast_lifetime $(max_lifetime)
+$execute if score $true true matches $(solid_block_collision) unless block ~ ~ ~ #ss_lib:nonsolidblocks run scoreboard players set @s raycast_lifetime $(max_lifetime)
 
 $execute unless entity @s[scores={raycast_lifetime=$(max_lifetime)..}] positioned ^ ^ ^0.25 run function raycast:either_specific \
     {"block":"$(block)","condition":"$(condition)","entity":"$(entity)","particle":"$(particle)", \

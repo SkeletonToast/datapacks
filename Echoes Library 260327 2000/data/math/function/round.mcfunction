@@ -18,4 +18,8 @@ $execute if score @s generic_a < @s generic_c run scoreboard players operation @
 
 # reduction
 $scoreboard players set @s generic_b $(round)
-$execute if score $$(reduce) true = $true true run scoreboard players operation @s $(score) /= @s generic_b
+$execute if score $true true matches $(reduce) run scoreboard players operation @s $(score) /= @s generic_b
+
+$say score: $(score)
+$say round: $(round)
+$say reduce: $(reduce)
