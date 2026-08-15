@@ -1,0 +1,1 @@
+$scoreboard objectives add talisman.active_talismans.$(value) dummy

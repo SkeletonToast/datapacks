@@ -74,5 +74,3 @@ tag @a[tag=FallDamageNegated] remove FallDamageNegated
     # to zero, will prevent fall damage, but will be removed when the player touches the ground.
 
 scoreboard players add @e Age 1
-
-function ss_lib:generic_scores

@@ -47,4 +47,6 @@ scoreboard players set @a[tag=InCombat,scores={SprintTime=0,StrafeTime=0}] smoot
 scoreboard players set @a[tag=!InCombat,scores={SprintTime=0,StrafeTime=0}] smoothSprinting 1
 execute as @a run function echoes:stats/feats
 
+function echoes:player/talisman
+
 # function echoes:player/movement/glide

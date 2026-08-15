@@ -1,1 +1,2 @@
 schedule function ss_lib:scheduled_20t 20t
+function ss_lib:generic_scores

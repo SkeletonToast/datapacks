@@ -1,4 +1,4 @@
-scoreboard players set @a Luck -1
+scoreboard players set @a luck_chance -1
 
 function ss_lib:_pre_function
 function ss_statuses:_pre_function
@@ -17,6 +17,7 @@ function echoes:stats/_tick
 # i moved feat assignment to player, since it's mostly related to things that happen in echoes mechanics,
     # so if there's an issue, check there
 
+function talisman:_tick
 
 # campfires
 function echoes:campfires/_tick

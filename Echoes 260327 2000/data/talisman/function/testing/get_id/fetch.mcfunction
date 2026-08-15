@@ -1,0 +1,2 @@
+execute store result score @s talisman.generic.id run data get entity @s SelectedItem.components.minecraft:custom_data.talisman.id[0]
+function parse:score_unended {score:talisman.generic.id,function:"talisman:get_id/assign"}
