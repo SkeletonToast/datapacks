@@ -1,1 +1,1 @@
-kill @e[type=item,distance=..3]
+kill @e[type=item,distance=..4]

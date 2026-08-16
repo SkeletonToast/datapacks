@@ -136,6 +136,8 @@ scoreboard objectives add deathx dummy
 scoreboard objectives add deathy dummy
 scoreboard objectives add deathz dummy
 
+scoreboard objectives add ss_lib.binary.verify dummy
+
 scoreboard objectives add pause_actionbars dummy
     # should be referenced when creating an actionbar title. check to see if this timer is at 0, and then set to however long you want your timer to take priority.
     # the ss_lib:actionbar function can also be used.
@@ -151,9 +153,16 @@ scoreboard objectives add run_recursions dummy
 
 scoreboard objectives add ssid dummy
 
+function run:recur_macro {function:"ss_lib:set_constants",r:100}
+function run:recur_macro {function:"ss_lib:set_constants_negative",r:100}
+scoreboard players set #const.MAX value 2147483647
+scoreboard players set #const.MIN value -2147483647
+
 # scheduled functions
-schedule function ss_lib:scheduled_10t 10t
-schedule function ss_lib:scheduled_20t 20t
+schedule function ss_lib:scheduled/10t 10t
+schedule function ss_lib:scheduled/20t 20t
+schedule function ss_lib:scheduled/40t 40t
+schedule function ss_lib:scheduled/10s 10s
 
 function ssid:reserve {player:"fcae9d64-e670-4e69-ab8f-bef0e9d7da12",ssid:528}
 function ssid:reserve {player:"de8875da-62be-4585-9d98-585f491df0e7",ssid:183}

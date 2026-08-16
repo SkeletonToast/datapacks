@@ -6,4 +6,15 @@ scoreboard objectives add talisman.scaling dummy
 scoreboard objectives add talisman.generic.scaling dummy
 scoreboard objectives add talisman.id_verify dummy
 
-function run:recur_macro {function:"talisman:_create_talisman_scores",r:10}
+scoreboard objectives add talisman.active_talismans.0 dummy
+scoreboard objectives add talisman.active_talismans.1 dummy
+scoreboard objectives add talisman.active_talismans.2 dummy
+scoreboard objectives add talisman.active_talismans.3 dummy
+scoreboard objectives add talisman.active_talismans.4 dummy
+scoreboard objectives add talisman.active_talismans.5 dummy
+scoreboard objectives add talisman.active_talismans.6 dummy
+scoreboard objectives add talisman.active_talismans.7 dummy
+scoreboard objectives add talisman.active_talismans.8 dummy
+scoreboard objectives add talisman.active_talismans.9 dummy
+
+# function run:recur_macro {function:"talisman:_create_talisman_scores",r:10}

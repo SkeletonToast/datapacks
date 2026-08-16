@@ -1,0 +1,1 @@
+$scoreboard players set #const.-$(value) value -$(value)
