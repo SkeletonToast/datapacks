@@ -17,4 +17,7 @@ scoreboard objectives add talisman.active_talismans.7 dummy
 scoreboard objectives add talisman.active_talismans.8 dummy
 scoreboard objectives add talisman.active_talismans.9 dummy
 
+# bank 0
+scoreboard objectives add talisman.0.9.damage_timer dummy
+
 # function run:recur_macro {function:"talisman:_create_talisman_scores",r:10}
