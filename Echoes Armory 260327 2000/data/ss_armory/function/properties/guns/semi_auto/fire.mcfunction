@@ -18,6 +18,6 @@ execute unless entity @s[scores={InfinitePowderslingAmmo=0}] run item modify ent
 execute unless entity @s[scores={MultishotTimer=1}] unless entity @s[scores={powdersling_cooldown=1..}] if predicate ss_lib:random_50_percent run clear @s[scores={InfinitePowderslingAmmo=0},predicate=ss_armory:has_arrow] #minecraft:arrows 1
 execute unless entity @s[scores={MultishotTimer=1}] if entity @s[scores={powdersling_cooldown=1..}] run clear @s[scores={InfinitePowderslingAmmo=0},predicate=ss_armory:has_arrow] #minecraft:arrows 1
 
-execute unless entity @s[scores={encumbered_timer=11..}] run scoreboard players add @s encumbered_timer 10
+# execute unless entity @s[scores={encumbered_timer=11..}] run scoreboard players add @s encumbered_timer 10
 
 execute unless entity @s[scores={powdersling_cooldown=3..}] run scoreboard players set @s powdersling_cooldown 2

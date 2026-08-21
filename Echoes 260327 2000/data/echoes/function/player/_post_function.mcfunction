@@ -20,6 +20,8 @@ scoreboard players set @a[scores={used_firework_rocket=1..}] used_firework_rocke
 # aegis nonsense
 tag @a[tag=AegisApplied] remove AegisApplied
 
+scoreboard players enable @a aegis_theme
+function echoes:player/aegis/_main
 scoreboard players set @a[scores={EchoDifficulty=1}] aegis_amplifier_max 0
 scoreboard players set @a[scores={EchoDifficulty=2}] aegis_amplifier_max 1
 scoreboard players set @a[scores={EchoDifficulty=3}] aegis_amplifier_max 2

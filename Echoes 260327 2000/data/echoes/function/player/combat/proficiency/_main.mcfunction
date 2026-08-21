@@ -1,9 +1,3 @@
-scoreboard players set @s proficiency_str 0
-scoreboard players set @s proficiency_dex 0
-scoreboard players set @s proficiency_tact 0
-scoreboard players set @s proficiency_soul 0
-scoreboard players set @s proficiency_mind 0
-
 # these are really just here for debugging
 scoreboard players set @s prof_str_unadj 0
 scoreboard players set @s prof_dex_unadj 0
@@ -148,8 +142,7 @@ scoreboard players operation @s generic_a *= @s 10
 
 execute if score $hungryDamageReduction true matches 1 run scoreboard players operation @s[scores={generic_a=1..}] proficiency -= @s generic_a
 
-scoreboard players operation @s gun_base_damage = @s proficiency_dex
+scoreboard players operation @s gun_base_damage += @s proficiency_dex
 scoreboard players operation @s gun_base_damage += @s proficiency_tact
-function math:round {score:gun_base_damage,round:100,reduce:true}
 
 # remember proficiency application is in post function!

@@ -54,3 +54,6 @@ execute as @a if predicate ss_lib:crit_eligible unless items entity @s weapon.ma
 scoreboard players remove @a[scores={riposte_timer=1..}] riposte_timer 1
 scoreboard players set @a[scores={riposte_damage_blocked=1..}] riposte_damage_blocked 0
 execute as @a[scores={riposte_timer=0}] run attribute @s attack_damage modifier remove ss_enchants:riposte.attack_damage
+
+# gun damage reduce
+scoreboard players set @s gun_base_damage 0

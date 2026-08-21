@@ -2,6 +2,9 @@
 scoreboard players add @a InfinitePowderslingAmmo 0
 scoreboard players set @a[gamemode=creative,scores={InfinitePowderslingAmmo=0}] InfinitePowderslingAmmo 1
 
+# gun damage downscale - every 1000 points before this is 1 point of damage
+function math:round {score:gun_base_damage,round:100,reduce:true}
+
 # gun type
 execute as @a[scores={GunType=0}] if items entity @s weapon.mainhand *[minecraft:custom_data~{weapon:{gun:{type:"bolt_action"}}}] run scoreboard players set @s GunType 1
 execute as @a[scores={GunType=0}] if items entity @s weapon.mainhand *[minecraft:custom_data~{weapon:{gun:{type:"semi_auto"}}}] run scoreboard players set @s GunType 2
@@ -52,9 +55,10 @@ execute as @a[scores={HasPropertiedWeapon=0..,GunType=4},advancements={ss_armory
     execute as @a[scores={SeekerLifetime=1..,generic_a=0}] at @s anchored eyes run function ss_armory:properties/guns/fire {"type":"seeker"}
 
 # gunfire encumbrance
-execute as @a[scores={HasPropertiedWeapon=0..,SneakTime=1..10,GunType=1..,OnGround=1}] run scoreboard players add @s encumbered_amount 30
-execute as @a[scores={HasPropertiedWeapon=0..,SneakTime=11..20,GunType=1..,OnGround=1}] run scoreboard players add @s encumbered_amount 70
-execute as @a[scores={HasPropertiedWeapon=0..,SneakTime=21..,GunType=1..,OnGround=1}] run function ss_statuses:immobilized
+execute as @a[scores={HasPropertiedWeapon=0..,SneakTime=1..19,GunType=1..,OnGround=1}] run scoreboard players operation @s generic_e = @s SneakTime
+execute as @a[scores={HasPropertiedWeapon=0..,SneakTime=1..19,GunType=1..,OnGround=1}] run scoreboard players operation @s generic_e *= @s 5
+execute as @a[scores={HasPropertiedWeapon=0..,SneakTime=1..19,GunType=1..,OnGround=1}] run scoreboard players operation @s encumbrance_hard += @s generic_e
+execute as @a[scores={HasPropertiedWeapon=0..,SneakTime=20..,GunType=1..,OnGround=1}] run function ss_statuses:immobilized
 
 # jump disabling
     # execute as @a[scores={GunType=1..2}] run function ss_statuses:immobilized_jump

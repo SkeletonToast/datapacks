@@ -2,7 +2,7 @@ execute as @s run damage @n 0.5 ss_armory:no_cooldown by @s from @s
 execute as @s[scores={Tact=30..}] run damage @n 0.5 ss_armory:no_cooldown by @s from @s
 execute as @s[scores={Tact=70..}] run damage @n 0.5 ss_armory:no_cooldown by @s from @s
 tag @n add StatusEligible
-scoreboard players add @n encumbered_timer 20
+effect give @n slowness 1 1 true
 
 # execute at @s anchored eyes run playsound entity.arrow.hit_player player @s ^ ^ ^ 0.3 1
 

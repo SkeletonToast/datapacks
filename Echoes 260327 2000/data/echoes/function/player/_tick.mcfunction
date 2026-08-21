@@ -2,9 +2,6 @@ function echoes:player/temperature/_main
 
 function echoes:player/encumbrance/_main
 
-scoreboard players enable @a aegis_theme
-function echoes:player/aegis/_main
-
 function echoes:player/healing_items
 
 function echoes:player/xp_level/_main

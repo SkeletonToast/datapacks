@@ -1,9 +1,8 @@
 scoreboard players operation @s generic_a = @s gun_base_damage
     scoreboard players operation @s generic_a *= @s 10
-execute as @s[scores={raycast_lifetime=..149}] run scoreboard players operation @s generic_a /= @s 2
-    execute as @s[scores={raycast_lifetime=..149}] run scoreboard players operation @s generic_a /= @s 2
-execute as @s[scores={raycast_lifetime=150..224}] run scoreboard players operation @s generic_a /= @s 7
-execute as @s[scores={raycast_lifetime=225..}] run scoreboard players operation @s generic_a /= @s 10
+execute as @s[scores={raycast_lifetime=..149}] run function math:round {score:generic_a,round:4}
+execute as @s[scores={raycast_lifetime=150..224}] run function math:round {score:generic_a,round:7}
+execute as @s[scores={raycast_lifetime=225..}] run function math:round {score:generic_a,round:10}
 scoreboard players set @s[scores={generic_a=..0}] generic_a 1
 function parse:score {"function":"ss_armory:properties/guns/bolt_action/damage","score":"generic_a",prepend:"",append:".",prepend_position:0,append_position:1}
 tag @n add StatusEligible
