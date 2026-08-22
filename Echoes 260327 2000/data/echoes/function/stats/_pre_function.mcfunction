@@ -88,7 +88,15 @@ scoreboard players set @a Prowess 40
 execute as @a run function echoes:stats/attribute_set
 
 # attribute default / attribute set
-# execute as @a[scores={SoftRestOrRespawn=0}] run function echoes:stats/attribute_default
+execute as @a[scores={SoftRestOrRespawn=0}] run function echoes:stats/attribute_default
+
+# attribute stats
+execute as @a run scoreboard players operation @s str_attributes = @s Strength
+execute as @a run scoreboard players operation @s dex_attributes = @s Dexterity
+execute as @a run scoreboard players operation @s mind_attributes = @s Mind
+execute as @a run scoreboard players operation @s vit_attributes = @s Vitality
+execute as @a run scoreboard players operation @s tact_attributes = @s Tact
+execute as @a run scoreboard players operation @s soul_attributes = @s Soul
 
 # scale changes
 execute as @a run attribute @s max_health modifier remove scale.max_health

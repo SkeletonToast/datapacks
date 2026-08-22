@@ -10,7 +10,7 @@ attribute @s step_height base reset
 attribute @s sneaking_speed base reset
 
 # Strength
-attribute @s block_break_speed base set 0.80
+attribute @s block_break_speed base set 0.70
 attribute @s knockback_resistance base reset
 
 # Tact

@@ -30,13 +30,21 @@ scoreboard objectives add sse.Knowledge dummy
 # secondary stats
 scoreboard objectives add Initiative dummy
 scoreboard objectives add Charm dummy
-
-# universal stats
 scoreboard objectives add Tenacity dummy
 scoreboard objectives add Fortitude dummy
+
+# universal stats
 scoreboard objectives add Potential dummy
 scoreboard objectives add Prowess dummy
     # modify universal stats in echoes:stats/_tick
+
+# attribute stats
+scoreboard objectives add str_attributes dummy
+scoreboard objectives add dex_attributes dummy
+scoreboard objectives add mind_attributes dummy
+scoreboard objectives add vit_attributes dummy
+scoreboard objectives add tact_attributes dummy
+scoreboard objectives add soul_attributes dummy
 
 # stored stats
 scoreboard objectives add scale_modifier dummy
