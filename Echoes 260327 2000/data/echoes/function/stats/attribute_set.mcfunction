@@ -1,12 +1,19 @@
 # remember to modify all calculations so that the values are not actually being modified to decimal amounts.
 
 # attribute set
-execute as @a run scoreboard players operation @s str_attributes += @s Strength
-execute as @a run scoreboard players operation @s dex_attributes += @s Dexterity
-execute as @a run scoreboard players operation @s mind_attributes += @s Mind
-execute as @a run scoreboard players operation @s vit_attributes += @s Vitality
-execute as @a run scoreboard players operation @s tact_attributes += @s Tact
-execute as @a run scoreboard players operation @s soul_attributes += @s Soul
+scoreboard players operation @s str_attributes += @s Strength
+scoreboard players operation @s dex_attributes += @s Dexterity
+scoreboard players operation @s mind_attributes += @s Mind
+scoreboard players operation @s vit_attributes += @s Vitality
+scoreboard players operation @s tact_attributes += @s Tact
+scoreboard players operation @s soul_attributes += @s Soul
+
+execute as @s[scores={sse.difficulty.attribute_limit=1..}] if score @s str_attributes > @s sse.difficulty.attribute_limit run scoreboard players operation @s str_attributes = @s sse.difficulty.attribute_limit
+execute as @s[scores={sse.difficulty.attribute_limit=1..}] if score @s dex_attributes > @s sse.difficulty.attribute_limit run scoreboard players operation @s dex_attributes = @s sse.difficulty.attribute_limit
+execute as @s[scores={sse.difficulty.attribute_limit=1..}] if score @s mind_attributes > @s sse.difficulty.attribute_limit run scoreboard players operation @s str_attributes = @s sse.difficulty.attribute_limit
+execute as @s[scores={sse.difficulty.attribute_limit=1..}] if score @s vit_attributes > @s sse.difficulty.attribute_limit run scoreboard players operation @s vit_attributes = @s sse.difficulty.attribute_limit
+execute as @s[scores={sse.difficulty.attribute_limit=1..}] if score @s tact_attributes > @s sse.difficulty.attribute_limit run scoreboard players operation @s tact_attributes = @s sse.difficulty.attribute_limit
+execute as @s[scores={sse.difficulty.attribute_limit=1..}] if score @s soul_attributes > @s sse.difficulty.attribute_limit run scoreboard players operation @s soul_attributes = @s sse.difficulty.attribute_limit
 
 execute store result score @s generic_h run attribute @s scale get 100
 # commented out while i decide whether or not to keep the base movement speed buff for tall characters
@@ -37,6 +44,7 @@ execute store result score @s generic_h run attribute @s scale get 100
         # execute if score @s generic_attribute < @s Tenacity run scoreboard players operation @s generic_attribute = @s Tenacity
             # not necessary because ResolveHealth is already set to Tenacity if it's less
     execute if score @s generic_attribute < @s Fortitude run scoreboard players operation @s generic_attribute = @s Fortitude
+    execute if score @s generic_attribute > @s sse.difficulty.health_limit run scoreboard players operation @s generic_attribute = @s sse.difficulty.health_limit
     execute unless score @s generic_attribute = @s res_max_health run function parse:score_unended \
         {"score":"generic_attribute","function":"echoes:stats/set_max_health"}
             # this sets base max health, so don't worry about subtracting Tenacity or anything

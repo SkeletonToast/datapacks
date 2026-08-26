@@ -22,11 +22,8 @@ tag @a[tag=AegisApplied] remove AegisApplied
 
 scoreboard players enable @a aegis_theme
 function echoes:player/aegis/_main
-scoreboard players set @a[scores={EchoDifficulty=1}] aegis_amplifier_max 0
-scoreboard players set @a[scores={EchoDifficulty=2}] aegis_amplifier_max 1
-scoreboard players set @a[scores={EchoDifficulty=3}] aegis_amplifier_max 2
-scoreboard players set @a[scores={EchoDifficulty=4..6}] aegis_amplifier_max 4
-scoreboard players set @a[scores={EchoDifficulty=7}] aegis_amplifier_max 9
+scoreboard players set @a aegis_amplifier_max 4
+execute as @a[scores={sse.difficulty.default_aegis_amplifier=-1..}] run scoreboard players operation @s aegis_amplifier_max = @s sse.difficulty.default_aegis_amplifier
 # scoreboard players set @a[scores={Dimension=4}] aegis_amplifier_max -1
 
 # execute as @a run attribute @s armor modifier add echoes.armor_reduction -0.5 add_multiplied_total
