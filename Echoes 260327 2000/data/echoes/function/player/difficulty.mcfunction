@@ -1,90 +1,55 @@
 # 1: Homesteader
-    # Echo Level Cap: 10
-    # Unsigned stat cap: 20
-    # Resolve cap: 20
-    # Health cap: 12
-    # Health regeneration limit: 100%
-    # Aegis default: Level 2
-    # Cannot enter combat
-    # Unaffected by exhaustion
-    # Radiation multiplier: 200%
-    # Leveling multiplier: 50%
+scoreboard players set @s[scores={EchoDifficulty=1}] sse.difficulty.attribute_limit 20
+scoreboard players set @s[scores={EchoDifficulty=1}] sse.difficulty.health_limit 12
+scoreboard players set @s[scores={EchoDifficulty=1}] sse.difficulty.health_regeneration_limit 100
+scoreboard players set @s[scores={EchoDifficulty=1}] sse.difficulty.exhaustion_multiplier 0
+scoreboard players set @s[scores={EchoDifficulty=1}] sse.difficulty.radiation_multiplier 200
+scoreboard players set @s[scores={EchoDifficulty=1}] sse.difficulty.leveling_multiplier 33
 
 # 2: Pilgrim
-    # Echo Level Cap: 90
-    # Unsigned stat cap: 20
-    # Resolve cap: 20
-    # Health cap: 12
-    # Health regeneration limit: 100%
-    # Aegis default: Level 5
-    # In/out of combat: No changes
-    # Unaffected by exhaustion
-    # Radiation multiplier: 200%
-    # Leveling multiplier: 50%
+scoreboard players set @s[scores={EchoDifficulty=2}] sse.difficulty.attribute_limit 30
+scoreboard players set @s[scores={EchoDifficulty=2}] sse.difficulty.health_limit 20
+scoreboard players set @s[scores={EchoDifficulty=2}] sse.difficulty.health_regeneration_limit 100
+scoreboard players set @s[scores={EchoDifficulty=2}] sse.difficulty.exhaustion_multiplier 50
+scoreboard players set @s[scores={EchoDifficulty=2}] sse.difficulty.radiation_multiplier 150
+scoreboard players set @s[scores={EchoDifficulty=2}] sse.difficulty.leveling_multiplier 67
 
 # 3: Retainer
-    # Echo Level Cap: 170
-    # Unsigned stat cap: 40
-    # Resolve cap: 40
-    # Health cap: 40
-    # Health regeneration limit: 80%
-    # Aegis default: Level 5
-    # In/out of combat: No changes
-    # Exhaustion: Unaffected by exhaustion
-    # Radiation multiplier: 150%
-    # Leveling multiplier: 75%
+scoreboard players set @s[scores={EchoDifficulty=3}] sse.difficulty.attribute_limit 50
+scoreboard players set @s[scores={EchoDifficulty=3}] sse.difficulty.health_limit 40
+scoreboard players set @s[scores={EchoDifficulty=3}] sse.difficulty.health_regeneration_limit 80
+scoreboard players set @s[scores={EchoDifficulty=3}] sse.difficulty.exhaustion_multiplier 75
+scoreboard players set @s[scores={EchoDifficulty=3}] sse.difficulty.radiation_multiplier 100
+scoreboard players set @s[scores={EchoDifficulty=3}] sse.difficulty.leveling_multiplier 90
 
 # 4: Vestige
-    # Echo Level Cap: 250
-    # Unsigned stat cap: 60
-    # Resolve cap: 60
-    # Health cap: 40
-    # Health regeneration limit: 60%
-    # Aegis default: Level 5
-    # In/out of combat: No changes
-    # Exhaustion: Player experiences exhaustion as normal
-    # Radiation multiplier: 100%
-    # Leveling multiplier: 100%
+scoreboard players set @s[scores={EchoDifficulty=4}] sse.difficulty.attribute_limit 70
+scoreboard players set @s[scores={EchoDifficulty=4}] sse.difficulty.health_limit 40
+scoreboard players set @s[scores={EchoDifficulty=4}] sse.difficulty.health_regeneration_limit 60
+scoreboard players set @s[scores={EchoDifficulty=4}] sse.difficulty.exhaustion_multiplier 100
+scoreboard players set @s[scores={EchoDifficulty=4}] sse.difficulty.radiation_multiplier 100
+scoreboard players set @s[scores={EchoDifficulty=4}] sse.difficulty.leveling_multiplier 100
 
 # 5: Aspirant
-    # Echo Level Cap: 330
-    # Unsigned stat cap: 90
-    # Signed stat cap: 25
-    # Resolve cap: 70
-    # Health cap: 60
-    # Health regeneration limit: 40%
-    # Aegis default: Level 5
-    # In/out of combat: No changes
-    # Exhaustion: Faster onset, but player is Invigorated when not exhausted. Exhaustion can decrease during combat, but does not increase until after combat.
-    # Radiation multiplier: 75%
-    # Leveling multiplier: 125%
-    # Reavers can be used on the player, allowing them to decrease their stats to zero to reallocate levels or, in some cases, invert their stats
-        # Body Reaver: Decreases Strength and Dexterity to 0 and allows player to reallocate their Strength / Dexterity levels
-        # Focus Reaver: Decreases Mind and Tact to 0 and allows the player to reallocate their Mind / Tact levels
-        # Spirit Reaver: Decreases Soul and Vitality to 0 and allows the player to reallocate their Soul / Vitality levels. Also allows for players to become Husks, inverting their Soul.
+scoreboard players set @s[scores={EchoDifficulty=5}] sse.difficulty.attribute_limit -1
+scoreboard players set @s[scores={EchoDifficulty=5}] sse.difficulty.health_limit 60
+scoreboard players set @s[scores={EchoDifficulty=5}] sse.difficulty.health_regeneration_limit 40
+scoreboard players set @s[scores={EchoDifficulty=5}] sse.difficulty.exhaustion_multiplier 125
+scoreboard players set @s[scores={EchoDifficulty=5}] sse.difficulty.radiation_multiplier 75
+scoreboard players set @s[scores={EchoDifficulty=5}] sse.difficulty.leveling_multiplier 110
 
 # 6: Lord
-    # Echo Level Cap: 429
-    # Unsigned stat cap: 120
-    # Resolve cap: 90
-    # Health cap: 60
-    # Health regeneration limit: 20%
-    # Aegis Default: Level 5
-    # In/out of combat: No changes
-    # Exhaustion: Faster onset, but player is Invigorated when not exhausted. Exhaustion can increase or decrease during combat.
-    # Radiation multiplier: 50%
-    # Leveling multiplier: 125%
-    # Reavers can be used
+scoreboard players set @s[scores={EchoDifficulty=6}] sse.difficulty.attribute_limit -1
+scoreboard players set @s[scores={EchoDifficulty=6}] sse.difficulty.health_limit 60
+scoreboard players set @s[scores={EchoDifficulty=6}] sse.difficulty.health_regeneration_limit 25
+scoreboard players set @s[scores={EchoDifficulty=6}] sse.difficulty.exhaustion_multiplier 125
+scoreboard players set @s[scores={EchoDifficulty=6}] sse.difficulty.radiation_multiplier 50
+scoreboard players set @s[scores={EchoDifficulty=6}] sse.difficulty.leveling_multiplier 125
 
 # 7: Monarch
-    # Echo Level Cap: No cap
-    # Unsigned stat cap: No cap
-    # Resolve cap: 90
-    # Health cap: 60
-    # Health regeneration limit: 50%
-    # Aegis Default: Level 10
-    # In/out of combat: 
-    # Exhaustion: Faster onset, but player is Invigorated when not exhausted. Exhaustion can decrease during combat, but does not increase until after combat.
-    # Radiation multiplier: 50%
-    # Leveling multiplier: 150%
-    # Reavers can be used
+scoreboard players set @s[scores={EchoDifficulty=7}] sse.difficulty.attribute_limit -1
+scoreboard players set @s[scores={EchoDifficulty=7}] sse.difficulty.health_limit 60
+scoreboard players set @s[scores={EchoDifficulty=7}] sse.difficulty.health_regeneration_limit 0
+scoreboard players set @s[scores={EchoDifficulty=7}] sse.difficulty.exhaustion_multiplier 140
+scoreboard players set @s[scores={EchoDifficulty=7}] sse.difficulty.radiation_multiplier 25
+scoreboard players set @s[scores={EchoDifficulty=7}] sse.difficulty.leveling_multiplier 150

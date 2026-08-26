@@ -1,0 +1,1 @@
+$attribute @s attack_damage modifier add talisman.1.7.attack_damage 0.$(value) add_multiplied_total

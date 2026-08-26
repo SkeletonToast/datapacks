@@ -118,6 +118,17 @@ gamerule natural_health_regeneration false
 
     scoreboard objectives add drink_water minecraft.used:minecraft.potion
 
+# difficulty
+    scoreboard objectives add sse.difficulty.attribute_limit dummy
+    # feat limit
+    scoreboard objectives add sse.difficulty.health_limit dummy
+    scoreboard objectives add sse.difficulty.health_regeneration_limit dummy
+    # aegis default
+    # proficiency cap
+    scoreboard objectives add sse.difficulty.exhaustion_multiplier dummy
+    scoreboard objectives add sse.difficulty.radiation_multiplier dummy
+    scoreboard objectives add sse.difficulty.leveling_multiplier dummy
+
 # movement
 scoreboard objectives add GlideTime dummy
 scoreboard objectives add GlideEligible dummy
