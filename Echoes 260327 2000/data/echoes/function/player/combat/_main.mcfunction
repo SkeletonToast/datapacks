@@ -31,17 +31,6 @@ execute as @a[scores={DamageTaken=1..,in_combat=0..19999}] at @s on attacker if 
 execute as @a[scores={in_combat=1..4999}] at @s as @e[type=#ss_lib:hostile,distance=..10] on target if entity @s[type=player] run scoreboard players set @s in_combat 5000
 execute as @a[scores={in_combat=1..4999}] at @s if entity @e[type=#ss_lib:hostile,distance=..5] run scoreboard players set @s[scores={in_combat=0..4999}] in_combat 5000
 
-# techniques
-execute as @e[tag=TechniqueProd] run attribute @s gravity modifier remove technique.prod.gravity
-execute as @a[tag=InCombat,scores={proficiency=200..}] run function echoes:player/combat/techniques/_main
-
-    execute as @a[scores={SneakTime=0}] run function echoes:player/combat/techniques/prod_disable
-    execute as @a[scores={SneakTime=6}] run function echoes:player/combat/techniques/prod_disable
-
-    execute as @a[predicate=!ss_lib:is/sprinting] run function echoes:player/combat/techniques/repel_disable
-    execute as @a[predicate=!ss_lib:is/ascending] run function echoes:player/combat/techniques/repel_disable
-    execute as @a[scores={OnGround=1}] run function echoes:player/combat/techniques/repel_disable
-
 execute as @a[scores={in_combat=1..},tag=!InCombat] run function echoes:player/combat/enter_message
 tag @a[scores={in_combat=1..}] add InCombat
 tag @a[scores={in_combat=-1}] add InCombat

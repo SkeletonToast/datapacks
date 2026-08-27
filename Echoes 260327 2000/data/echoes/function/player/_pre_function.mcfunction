@@ -32,6 +32,10 @@ execute as @a run attribute @s minecraft:movement_speed modifier remove elytra_v
 
 execute as @a unless entity @s[scores={EchoDifficulty=0..}] run scoreboard players set @s EchoDifficulty 3
 
+execute as @a[scores={EchoDifficulty=1}] unless score @s in_combat matches 0 run scoreboard players set @s in_combat 0
+tag @a[scores={EchoDifficulty=1},tag=InCombat] remove InCombat
 function echoes:player/combat/_main
+execute as @a[scores={EchoDifficulty=1}] unless score @s in_combat matches 0 run scoreboard players set @s in_combat 0
+tag @a[scores={EchoDifficulty=1},tag=InCombat] remove InCombat
 
 # scoreboard players set $strength player_motion.api.launch 10000

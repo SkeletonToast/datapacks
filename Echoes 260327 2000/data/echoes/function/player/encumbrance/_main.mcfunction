@@ -17,8 +17,8 @@ scoreboard players add @a[scores={WeaponWeight=3}] encumbrance_items 30
 scoreboard players add @a[scores={WeaponWeight=4}] encumbrance_items 50
 scoreboard players add @a[scores={WeaponWeight=5..}] encumbrance_items 90
 
-    # massive weapon in hotbar
-    execute if items entity @s hotbar.* *[minecraft:custom_data~{weapon:{properties:{massive:true}}}] run scoreboard players add @s encumbrance_items 12
+    # massive weapon in hotbar - commented out because i don't think any echoes weapons will have this
+    # execute if items entity @s hotbar.* *[minecraft:custom_data~{weapon:{properties:{massive:true}}}] run scoreboard players add @s encumbrance_items 12
 
     # offhand
     execute as @a[scores={ItemOffhand=1}] if items entity @s weapon.offhand #echoes:offhand_encumbering run scoreboard players add @s encumbrance_items 10
@@ -28,7 +28,7 @@ scoreboard players add @a[scores={WeaponWeight=5..}] encumbrance_items 90
 # scoreboard players add @s[scores={fear=70000..}] encumbrance 20
 
 # apply
-execute as @a[scores={encumbrance_items=2..,EchoDifficulty=2..},tag=!InCombat] run scoreboard players operation @s encumbrance_items /= @s 2
+execute as @a[scores={encumbrance_items=2..},tag=!InCombat] run scoreboard players operation @s encumbrance_items /= @s 2
 
 execute as @a[scores={encumbrance_armor=1..}] run scoreboard players operation @s encumbrance += @s encumbrance_armor
 execute as @a[scores={encumbrance_items=1..}] run scoreboard players operation @s encumbrance += @s encumbrance_items

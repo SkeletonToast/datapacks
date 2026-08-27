@@ -12,7 +12,7 @@ function ss_lib:fetch/weapon {"s":"@s"}
 # note 8/6/2025 - All proficiencies have been increased by 50%. I'm still trying to figure out the balance between Mind and physical builds
 
 # swords
-execute as @s[scores={WeaponType=1}] run function echoes:player/combat/proficiency/profile/balanced
+execute as @s[scores={WeaponType=1}] run function echoes:player/combat/proficiency/profile/balanced {value:90}
 
 # axes
 execute as @s[scores={WeaponType=2}] run function echoes:player/combat/proficiency/profile/heavy_1
@@ -24,7 +24,7 @@ execute as @s[scores={WeaponType=3}] run function echoes:player/combat/proficien
 execute as @s[scores={WeaponType=4}] run function echoes:player/combat/proficiency/profile/agile_2
 
 # tridents
-execute as @s[scores={WeaponType=5}] run function echoes:player/combat/proficiency/profile/adaptive_1
+execute as @s[scores={WeaponType=5}] run function echoes:player/combat/proficiency/profile/adaptive {level:1}
 
         # picks
         # scoreboard players add @s[scores={WeaponType=5}] proficiency_str 105
@@ -41,7 +41,7 @@ scoreboard players add @s[scores={WeaponType=9}] proficiency_dex 30
 scoreboard players add @s[scores={WeaponType=9}] proficiency_tact 120
 
 # unarmed
-execute as @s[scores={ItemSelected=0}] run function echoes:player/combat/proficiency/profile/balanced_weak
+execute as @s[scores={ItemSelected=0}] run function echoes:player/combat/proficiency/profile/balanced {value:75}
 
 # golden weapons
     execute as @s[scores={WeaponType=1..4}] if items entity @s weapon.mainhand #echoes:golden_weapon run scoreboard players remove @s proficiency_str 10
@@ -72,6 +72,10 @@ execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantme
 execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"#echoes:mind_proficiency"}]] run scoreboard players add @s proficiency_mind 30
 execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"#echoes:halo_breaker"}]] run scoreboard players add @s proficiency_soul 30
 execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"echoes:black_gold_halo_breaker"}]] run function echoes:player/combat/proficiency/style/black_gold_halo_breaker
+
+# difficulty modifications
+execute as @s[scores={EchoDifficulty=2}] run function echoes:player/combat/proficiency/style/adaptive {value:40}
+execute as @s[scores={EchoDifficulty=3}] run function echoes:player/combat/proficiency/style/adaptive {value:25}
 
 # two handing - strength/dexterity feat 2
 execute as @s[tag=Strength_feat_2,tag=!Dexterity_feat_2] unless items entity @s weapon.offhand * run function echoes:player/combat/proficiency/two_handing {"stat":"_str"}

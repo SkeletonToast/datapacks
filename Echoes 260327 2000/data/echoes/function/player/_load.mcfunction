@@ -124,7 +124,7 @@ gamerule natural_health_regeneration false
     scoreboard objectives add sse.difficulty.health_limit dummy
     scoreboard objectives add sse.difficulty.health_regeneration_limit dummy
     scoreboard objectives add sse.difficulty.default_aegis_amplifier dummy
-    # proficiency cap
+    scoreboard objectives add sse.difficulty.proficiency_limit dummy
     scoreboard objectives add sse.difficulty.exhaustion_multiplier dummy
     scoreboard objectives add sse.difficulty.radiation_multiplier dummy
     scoreboard objectives add sse.difficulty.leveling_multiplier dummy
