@@ -136,7 +136,7 @@ scoreboard objectives add deathx dummy
 scoreboard objectives add deathy dummy
 scoreboard objectives add deathz dummy
 
-scoreboard objectives add ss_lib.binary.verify dummy
+scoreboard objectives add ss_lib.bitpack.verify dummy
 
 scoreboard objectives add pause_actionbars dummy
     # should be referenced when creating an actionbar title. check to see if this timer is at 0, and then set to however long you want your timer to take priority.

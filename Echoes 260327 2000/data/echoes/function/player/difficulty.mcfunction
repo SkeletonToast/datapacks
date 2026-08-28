@@ -10,6 +10,9 @@ scoreboard players set @s[scores={EchoDifficulty=1}] sse.difficulty.exhaustion_m
 scoreboard players set @s[scores={EchoDifficulty=1}] sse.difficulty.radiation_multiplier 200
 scoreboard players set @s[scores={EchoDifficulty=1}] sse.difficulty.leveling_multiplier 33
 
+execute as @s[scores={EchoDifficulty=1}] run function ss_lib:fetch/health {s:"@s"}
+execute if score @s[scores={EchoDifficulty=1}] Health >= @s BaseMaxHealth run effect give @s saturation 1 0 true
+
 # 2: Pilgrim
 scoreboard players set @s[scores={EchoDifficulty=2}] sse.difficulty.attribute_limit 30
 scoreboard players set @s[scores={EchoDifficulty=2}] sse.difficulty.health_limit 20
