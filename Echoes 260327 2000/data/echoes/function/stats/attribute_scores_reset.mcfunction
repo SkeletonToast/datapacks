@@ -1,5 +1,5 @@
 scoreboard players set @a res_max_health 0
-scoreboard players set @a res_armor_health 0
+scoreboard players set @a res_armor 0
 
 scoreboard players set @a smooth_sprint_multiplier 0
 scoreboard players set @a dex_movement_speed 0

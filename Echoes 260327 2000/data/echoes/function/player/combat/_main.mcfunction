@@ -19,7 +19,7 @@ scoreboard players add @a[scores={DamageDealt=1..,in_combat=0..10000}] in_combat
 
 scoreboard players add @a[scores={UsingShield=1..,in_combat=0}] in_combat 10000
 scoreboard players add @a[scores={UsingBow=1..,in_combat=0}] in_combat 10000
-scoreboard players add @a[scores={used_goat_horn=1..,in_combat=0}] in_combat 20000
+execute as @a[scores={used_goat_horn=1..}] at @s run scoreboard players add @a[distance=..30,scores={in_combat=0}] in_combat 20000
 scoreboard players add @a[scores={in_combat=0},advancements={ss_armory:gun/shot_crossbow=true}] in_combat 10000
 
 # taking damage to enter combat
@@ -29,13 +29,6 @@ execute as @a[scores={DamageTaken=1..,in_combat=0..19999}] at @s on attacker if 
 
 # hostile mob combat targeting
 execute as @a[scores={in_combat=1..4999}] at @s as @e[type=#ss_lib:hostile,distance=..10] on target if entity @s[type=player] run scoreboard players set @s in_combat 5000
-execute as @a[scores={in_combat=1..4999}] at @s if entity @e[type=#ss_lib:hostile,distance=..5] run scoreboard players set @s[scores={in_combat=0..4999}] in_combat 5000
-
-execute as @a[scores={in_combat=1..},tag=!InCombat] run function echoes:player/combat/enter_message
-tag @a[scores={in_combat=1..}] add InCombat
-tag @a[scores={in_combat=-1}] add InCombat
-execute as @a[scores={in_combat=0},tag=InCombat] run function echoes:player/combat/exit_message
-execute as @a[scores={in_combat=0},tag=InCombat] run function echoes:player/combat/techniques/disable
-tag @a[scores={in_combat=0}] remove InCombat
+execute as @a[scores={in_combat=1..4999}] at @s if entity @e[type=#ss_lib:hostile,distance=..5] run scoreboard players set @s in_combat 5000
 
 # function echoes:player/combat/arts/_main

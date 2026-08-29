@@ -16,8 +16,6 @@ scoreboard objectives add Mind dummy
     scoreboard objectives add MindSigned dummy
 scoreboard objectives add Tact dummy
 scoreboard objectives add Resolve dummy
-    scoreboard objectives add ResolveHealth dummy
-    scoreboard objectives add ResolveArmor dummy
 scoreboard objectives add Vitality dummy
 scoreboard objectives add Soul dummy
     scoreboard objectives add SoulSigned dummy
@@ -52,7 +50,7 @@ scoreboard objectives add scale_modifier dummy
 scoreboard objectives add generic_attribute dummy
 
 scoreboard objectives add res_max_health dummy
-scoreboard objectives add res_armor_health dummy
+scoreboard objectives add res_armor dummy
 
 scoreboard objectives add smooth_sprint_multiplier dummy
 scoreboard objectives add dex_movement_speed dummy

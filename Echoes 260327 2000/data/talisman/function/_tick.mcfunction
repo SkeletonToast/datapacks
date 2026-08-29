@@ -1,4 +1,4 @@
-# execute as @a[scores={talisman.active_talismans.1=1..}] run function ss_lib:binary_disambiguation {score:talisman.active_talismans.1,namespace_1:"talisman:talismans/bank_",namespace_2:"/_main"}
+# execute as @a[scores={talisman.active_talismans.1=1..}] run function ss_lib:bitpack/dissect {score:talisman.active_talismans.1,namespace_1:"talisman:talismans/bank_",namespace_2:"/_main"}
 
 # scoreboard players set @a talisman.total_talismans 10
     # TOREPLACE TOTAL_TALISMANS

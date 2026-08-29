@@ -34,10 +34,18 @@ execute as @a run attribute @s minecraft:movement_speed modifier remove elytra_v
 
 execute as @a unless entity @s[scores={EchoDifficulty=0..}] run scoreboard players set @s EchoDifficulty 3
 
-execute as @a[scores={EchoDifficulty=1}] unless score @s in_combat matches 0 run scoreboard players set @s in_combat 0
-tag @a[scores={EchoDifficulty=1},tag=InCombat] remove InCombat
+tag @a[scores={EchoDifficulty=1}] remove InCombat
 function echoes:player/combat/_main
-execute as @a[scores={EchoDifficulty=1}] unless score @s in_combat matches 0 run scoreboard players set @s in_combat 0
-tag @a[scores={EchoDifficulty=1},tag=InCombat] remove InCombat
+tag @a[scores={EchoDifficulty=1}] remove InCombat
+scoreboard players set @a[scores={EchoDifficulty=1}] in_combat 0
+
+# these are here so that combat tags can be effectively removed before the titles show up
+execute at @a[scores={in_combat=1..},tag=!InCombat] run scoreboard players add @a[distance=..5,scores={in_combat=0}] in_combat 10000
+execute as @a[scores={in_combat=1..},tag=!InCombat] run function echoes:player/combat/enter_message
+tag @a[scores={in_combat=1..}] add InCombat
+tag @a[scores={in_combat=-1}] add InCombat
+execute as @a[scores={in_combat=0},tag=InCombat] run function echoes:player/combat/exit_message
+execute as @a[scores={in_combat=0},tag=InCombat] run function echoes:player/combat/techniques/disable
+tag @a[scores={in_combat=0}] remove InCombat
 
 # scoreboard players set $strength player_motion.api.launch 10000
