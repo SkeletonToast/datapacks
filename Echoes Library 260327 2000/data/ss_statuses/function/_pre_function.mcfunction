@@ -150,6 +150,7 @@ scoreboard players set @a[scores={unnerving_timer=1..,unnerved_timer=1..}] unner
 execute as @a[scores={vulnerable_active=0}] run attribute @s minecraft:max_health modifier remove vulnerable_max_health
 
 # WET - Should only be run with timer
+# function ss_lib:fetch/in_water {s:"@a"}
 scoreboard players set @a[scores={wet_timer=200..}] wet_timer 200
 execute as @a[scores={wet_timer=1..}] if score @s wet_timer <= @s incendiary_timer run scoreboard players set @s wet_timer 0
 scoreboard players set @a[scores={wet_timer=1..,Dimension=2}] wet_timer 0

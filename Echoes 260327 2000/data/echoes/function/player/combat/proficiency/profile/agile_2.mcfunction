@@ -1,2 +1,2 @@
-scoreboard players add @s proficiency_str 30
-scoreboard players add @s proficiency_dex 120
+scoreboard players add @s proficiency_str 20
+scoreboard players add @s proficiency_dex 80

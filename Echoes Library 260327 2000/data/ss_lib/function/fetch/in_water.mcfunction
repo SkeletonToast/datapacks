@@ -1,4 +1,5 @@
 $execute as $(s) unless score @s InWater matches -1 run return fail
+$scoreboard players set $(s) InWater 0
 $execute as $(s) if entity @s[scores={InWater=0}] at @s if block ~ ~ ~ minecraft:water run scoreboard players set @s InWater 1
 $execute as $(s) if entity @s[scores={InWater=0}] at @s if block ~ ~1 ~ minecraft:water run scoreboard players set @s InWater 1
 $execute as $(s) if entity @s[scores={InWater=0}] at @s if block ~ ~ ~ minecraft:water_cauldron run scoreboard players set @s InWater 1

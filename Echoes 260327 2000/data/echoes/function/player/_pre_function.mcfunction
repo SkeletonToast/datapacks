@@ -1,3 +1,5 @@
+execute as @a run function echoes:player/difficulty
+
 scoreboard players set @a encumbrance 0
 scoreboard players set @a encumbrance_hard 0
 scoreboard players set @a encumbrance_reduction 0
@@ -5,11 +7,11 @@ scoreboard players set @a encumbrance_armor 0
 scoreboard players set @a encumbrance_items 0
 
 # proficiency
-scoreboard players set @s proficiency_str 0
-scoreboard players set @s proficiency_dex 0
-scoreboard players set @s proficiency_tact 0
-scoreboard players set @s proficiency_soul 0
-scoreboard players set @s proficiency_mind 0
+scoreboard players set @a proficiency_str 0
+scoreboard players set @a proficiency_dex 0
+scoreboard players set @a proficiency_tact 0
+scoreboard players set @a proficiency_soul 0
+scoreboard players set @a proficiency_mind 0
 
 # aegis timer
 # scoreboard players set @a aegis_timer_max 100
