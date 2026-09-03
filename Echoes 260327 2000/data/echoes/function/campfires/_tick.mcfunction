@@ -63,7 +63,7 @@ scoreboard players set @a[scores={placed_soul_campfire=1..}] placed_soul_campfir
 # range display
 execute as @e[type=minecraft:interaction,tag=campfire,scores={campfire_display_range=1..}] at @s run function echoes:campfires/range_display
 
-scoreboard players remove @e[scores={campfire_display_range=0..}] campfire_display_range 1
+scoreboard players remove @e[type=minecraft:interaction,tag=campfire,scores={campfire_display_range=0..}] campfire_display_range 1
 
 # campfire respawning
 # execute as @r[scores={campfire_spawn=1,TimeSinceDeath=1}] run function echoes:campfires/respawn

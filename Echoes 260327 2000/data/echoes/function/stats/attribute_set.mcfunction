@@ -177,7 +177,8 @@ execute store result score @s generic_h run attribute @s scale get 100
 
 # knockback_resistance: +(Str - 20) * 2 (minimum of 0)
     # effective cap at 70 Strength
-    function ss_lib:fetch/absorption {"s":"@s"}
+    execute unless score @s Absorption matches 1.. run function ss_lib:fetch/absorption {"s":"@s"}
+        # gonna disable this for now because, if a player's aegis is broken this tick, it doesn't matter if they get 1 extra tick of knockback res
     scoreboard players operation @s generic_attribute = @s str_attributes
     scoreboard players remove @s generic_attribute 20
     scoreboard players add @s[scores={Absorption=1..}] generic_attribute 20

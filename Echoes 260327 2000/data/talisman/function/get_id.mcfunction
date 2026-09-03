@@ -1,4 +1,5 @@
 execute store result score @s talisman.id_verify run data get entity @s SelectedItem.components.minecraft:custom_data.talisman.id[0]
+    # fetches ID, not bank
 scoreboard players set @s generic_a 31
 scoreboard players operation @s generic_t = @s talisman.id_verify
 scoreboard players operation @s generic_t /= @s generic_a

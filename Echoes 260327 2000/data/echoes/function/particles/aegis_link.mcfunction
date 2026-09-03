@@ -1,1 +1,1 @@
-$particle dust_color_transition{from_color:[$(from)],to_color:[$(to)],scale:1} $(pos) 0 0 0 0 1 normal $(display)
+$particle dust_color_transition{from_color:[$(from)],to_color:[$(to)],scale:1} ~ ~ ~ 0 0 0 0 1 normal $(display)

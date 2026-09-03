@@ -2,7 +2,7 @@
 
 attribute @s attack_damage modifier remove talisman.1.10.attack_damage
 
-# execute as @s if predicate talisman:light_level_1 run tag @s add talisman.1.10.applied.1
+# execute if predicate talisman:light_level_1 run tag @s add talisman.1.10.applied.1
 # tag @s[tag=talisman.1.10.applied.1] add talisman.1.10.applied
 # execute as @s[tag=!talisman.1.10.applied] if predicate talisman:light_level_2 run tag @s add talisman.1.10.applied.2
 # tag @s[tag=talisman.1.10.applied.2] add talisman.1.10.applied

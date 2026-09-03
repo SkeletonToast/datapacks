@@ -10,7 +10,7 @@ $effect give @s hunger 1 $(amplifier) true
 execute as @s[scores={DamageDealt=1..}] run scoreboard players operation @s frenzied_damage += @s DamageDealt
 execute as @s[scores={DamageDealt=1..}] run scoreboard players operation @s bleeding_damage += @s frenzied_damage
 
-$execute as @s run function ss_statuses:bleeding {"damage":"$(amplifier)"}
+$execute run function ss_statuses:bleeding {"damage":"$(amplifier)"}
 scoreboard players set @s bleeding_timer -1
 
 scoreboard players set @s frenzied_active 1

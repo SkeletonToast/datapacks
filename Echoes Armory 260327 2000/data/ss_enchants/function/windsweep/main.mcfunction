@@ -1,3 +1,3 @@
-execute at @s[nbt={OnGround:1b}] positioned ~ ~ ~ summon wind_charge summon area_effect_cloud run function ss_enchants:windsweep/wind_charge_1 {"position":"~ ~-1 ~"}
+execute at @s[scores={OnGround=1}] positioned ~ ~ ~ summon wind_charge summon area_effect_cloud run function ss_enchants:windsweep/wind_charge_1 {"position":"~ ~-1 ~"}
 attribute @s fall_damage_multiplier modifier add fall_damage_immunity -1 add_multiplied_total
 # execute at @s on attacker if entity @s if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"ss_enchants:windsweep","levels":2}]] at @s positioned ~ ~ ~ summon wind_charge summon area_effect_cloud run function ss_enchants:windsweep/wind_charge_1 {"position":"~ ~-1 ~"}

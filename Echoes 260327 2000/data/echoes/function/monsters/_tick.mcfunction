@@ -15,7 +15,7 @@ execute as @e[type=enderman] at @s anchored eyes run particle reverse_portal ^ ^
 
 # ember cleansing
 effect give @e[scores={cleansed_timer=1..}] slowness 1 0 true
-execute at @e[scores={cleansed_timer=1..}] run particle trial_spawner_detection ~ ~ ~ 0.2 0.2 0.2 0 1 normal @a
+execute at @a at @e[distance=..10,scores={cleansed_timer=1..}] run particle trial_spawner_detection ~ ~ ~ 0.2 0.2 0.2 0 1 normal @a
 execute as @e[scores={cleansed_timer=1..},tag=SpawnBolstered] run function echoes:campfires/spawn_bolster_remove
 scoreboard players remove @e[scores={cleansed_timer=1..}] cleansed_timer 1
 

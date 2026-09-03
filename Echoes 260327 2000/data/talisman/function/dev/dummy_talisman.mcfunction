@@ -1,0 +1,1 @@
+$give @s clock[item_model=emerald,enchantment_glint_override=true,item_name="Placeholder Talisman (ID $(id))",custom_data={talisman:{id:[$(id)]}}]

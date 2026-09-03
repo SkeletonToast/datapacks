@@ -1,0 +1,1 @@
+$tellraw @s ["\\",{"text":"\\\\[","underlined":true},"$(namespace)]: $(datapack) Loaded"]

@@ -51,7 +51,6 @@ execute as @a[scores={elytraBoosting=0..}] store result score $elytraBoosting tr
 execute as @a[scores={elytraBoosting=0..}] run data get storage gamerule_elytra_boosting toggle
 scoreboard players set @a elytraBoosting -2
 
-scoreboard players set @a[scores={aegisVisibility=0}] aegisSelfVisibility 0
 execute as @a unless entity @s[scores={aegisSelfVisibility=0..}] run scoreboard players set @s aegisSelfVisibility 1
 scoreboard players set @a[scores={aegisSelfVisibility=2..}] aegisSelfVisibility 0
 scoreboard players set @a[scores={aegisSelfVisibility=..-1}] aegisSelfVisibility 0
@@ -69,7 +68,6 @@ scoreboard players set @a[scores={aegisVisibility=..-1}] aegisVisibility 0
 execute as @a unless entity @s[scores={smoothSprinting=0..}] run scoreboard players set @s smoothSprinting 1
 scoreboard players set @a[scores={smoothSprinting=2..}] smoothSprinting 0
 scoreboard players set @a[scores={smoothSprinting=..-1}] smoothSprinting 0
-
 
 execute as @a unless entity @s[scores={attackBuffVisibility=0..}] run scoreboard players set @s attackBuffVisibility 1
 scoreboard players set @a[scores={attackBuffVisibility=2..}] attackBuffVisibility 0

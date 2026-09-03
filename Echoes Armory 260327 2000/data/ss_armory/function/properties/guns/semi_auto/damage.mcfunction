@@ -1,4 +1,4 @@
-execute as @s run damage @n 0.5 ss_armory:no_cooldown by @s from @s
+execute run damage @n 0.5 ss_armory:no_cooldown by @s from @s
 execute as @s[scores={Tact=30..}] run damage @n 0.5 ss_armory:no_cooldown by @s from @s
 execute as @s[scores={Tact=70..}] run damage @n 0.5 ss_armory:no_cooldown by @s from @s
 tag @n add StatusEligible
