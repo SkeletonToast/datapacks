@@ -1,4 +1,7 @@
-function echoes:player/combat/proficiency/_main
+execute as @s[scores={EchoDifficulty=1}] run tellraw @s [{text:"Players on Homesteader difficulty are ineligible for Proficiency.",color:gray}]
+execute as @s[scores={EchoDifficulty=1}] run return fail
+
+execute as @s[tag=!InCombat] run function echoes:player/combat/proficiency/_main
 execute as @s[tag=!InCombat] run function echoes:player/combat/proficiency/apply
 # function parse:score {"score":"proficiency_normalized",prepend:"",append:".",prepend_position:0,append_position:3,"function":"echoes:player/combat/proficiency/apply_damage"}
 

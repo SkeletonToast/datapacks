@@ -12,7 +12,7 @@ function ss_lib:fetch/weapon {"s":"@s"}
 # note 8/6/2025 - All proficiencies have been increased by 50%. I'm still trying to figure out the balance between Mind and physical builds
 
 # swords
-execute as @s[scores={WeaponType=1}] run function echoes:player/combat/proficiency/profile/balanced {value:90}
+execute as @s[scores={WeaponType=1}] run function echoes:player/combat/proficiency/profile/balanced {value:60}
 
 # axes
 execute as @s[scores={WeaponType=2}] run function echoes:player/combat/proficiency/profile/heavy_1
@@ -41,7 +41,7 @@ scoreboard players add @s[scores={WeaponType=9}] proficiency_dex 30
 scoreboard players add @s[scores={WeaponType=9}] proficiency_tact 120
 
 # unarmed
-execute as @s[scores={ItemSelected=0}] run function echoes:player/combat/proficiency/profile/balanced {value:75}
+execute as @s[scores={ItemSelected=0}] run function echoes:player/combat/proficiency/profile/balanced {value:50}
 
 # golden weapons
     execute as @s[scores={WeaponType=1..4}] if items entity @s weapon.mainhand #echoes:golden_weapon run scoreboard players remove @s proficiency_str 10
@@ -58,8 +58,8 @@ execute as @s[scores={ItemSelected=0}] run function echoes:player/combat/profici
     execute as @s[scores={WeaponType=1..4}] if items entity @s weapon.mainhand #echoes:netherite_weapon run scoreboard players remove @s proficiency_dex 10
 
 # mounted - tact feat 2
-execute as @s[tag=Tact_feat_2] on vehicle on passengers if entity @s[tag=Tact_feat_2] run scoreboard players add @s proficiency_tact 50
-execute as @s[tag=Tact_feat_2,scores={FallFlying=1}] run scoreboard players add @s proficiency_tact 50
+execute as @s[tag=Tact_feat_2] on vehicle on passengers if entity @s[tag=Tact_feat_2] run scoreboard players add @s proficiency_tact 35
+execute as @s[tag=Tact_feat_2,scores={FallFlying=1}] run scoreboard players add @s proficiency_tact 35
 
 # adaptability - tact feat 3
 execute as @s[scores={Tact=50..69},tag=Tact_feat_3] run scoreboard players operation @s generic_a = @s Tact
