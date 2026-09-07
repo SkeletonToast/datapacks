@@ -1,4 +1,5 @@
 execute if score @s FallFlying matches 1 run return fail
+execute if predicate ss_lib:is/swimming run return fail
 
 function echoes:player/aegis/display/calculate_display_level
 scoreboard players set @s[scores={Absorption=0}] aegis_display_level 0

@@ -4,4 +4,6 @@ function ss_lib:fetch/absorption {"s":"@s"}
 
 $function echoes:player/aegis/display/break {"dy":"$(dy)","display":"$(display)","particle":"glow"}
 
-$function echoes:player/aegis/display/default_particles {particle:electric_spark,dy:"$(dy)",display:"$(display)"}
+$execute unless score @s FallFlying matches 1 unless predicate ss_lib:is/swimming run function echoes:player/aegis/display/default_particles {particle:electric_spark,dy:"$(dy)",display:"$(display)"}
+$execute if score @s FallFlying matches 1 unless predicate ss_lib:is/swimming run function echoes:player/aegis/display/default_particles_gliding {particle:electric_spark,dy:"$(dy)",display:"$(display)"}
+$execute unless score @s FallFlying matches 1 if predicate ss_lib:is/swimming run function echoes:player/aegis/display/default_particles_swimming {particle:electric_spark,dy:"$(dy)",display:"$(display)"}

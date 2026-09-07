@@ -9,7 +9,8 @@ execute if score @s temp_dangerous matches ..-8 run title @s[scores={OnGround=1}
 execute unless score @s temp_dangerous matches -7..7 run scoreboard players set @s pause_actionbars 40
 execute unless score @s temp_dangerous matches -7..7 run return fail
 
-function echoes:stats/movement/particles {"condition":"OnGround=1"}
+function echoes:stats/movement/particles {"condition":"OnGround=1,predicate=!ss_lib:is/swimming"}
+execute if predicate ss_lib:is/swimming
 function ss_lib:fetch/in_water {"s":"@s[scores={Dexterity=70..,OnGround=0}]"}
 execute as @s[scores={Dexterity=70..,OnGround=0}] run function echoes:stats/movement/particles {"condition":"InWater=1.."}
 

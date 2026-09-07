@@ -23,4 +23,4 @@ schedule function echoes:core/scheduled/10s 10s
 
 scoreboard objectives add luck_chance dummy
 
-execute as SkeletonToast run function ss_lib:load_message {namespace:"SILVER STAR",datapack:"Echoes Core"}
+execute as SkeletonToast run function ss_lib:load_message {namespace:"ֆɨʟʋɛʀ ֆȶǟʀ",datapack:"Echoes Core"}
