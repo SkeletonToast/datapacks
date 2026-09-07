@@ -1,7 +1,0 @@
-function ss_lib:fetch/absorption {"s":"@s"}
-
-# execute as @s[scores={aegis_display_level=8,Absorption=0}] run function echoes:particles/aegis_ring_break
-
-$function echoes:player/aegis/display/break {"dy":"$(dy)","display":"$(display)","particle":"bubble_pop"}
-
-$function echoes:player/aegis/display/default_particles {particle:bubble,dy:"$(dy)",display:"$(display)"}

@@ -1,16 +1,31 @@
-execute if score @s FallFlying matches 1 run return fail
-execute if predicate ss_lib:is/swimming run return fail
-
 function echoes:player/aegis/display/calculate_display_level
 scoreboard players set @s[scores={Absorption=0}] aegis_display_level 0
-$execute as @s[scores={aegis_display_level=1..}] at @s rotated ~090 ~ positioned ^.5 ^ ^ run particle $(particle) ~ ~$(dy) ~ 0 0 0 0 1 normal $(display)
-$execute as @s[scores={aegis_display_level=2..}] at @s rotated ~135 ~ positioned ^.5 ^ ^ run particle $(particle) ~ ~$(dy) ~ 0 0 0 0 1 normal $(display)
-$execute as @s[scores={aegis_display_level=3..}] at @s rotated ~180 ~ positioned ^.5 ^ ^ run particle $(particle) ~ ~$(dy) ~ 0 0 0 0 1 normal $(display)
-$execute as @s[scores={aegis_display_level=4..}] at @s rotated ~225 ~ positioned ^.5 ^ ^ run particle $(particle) ~ ~$(dy) ~ 0 0 0 0 1 normal $(display)
-$execute as @s[scores={aegis_display_level=5..}] at @s rotated ~270 ~ positioned ^.5 ^ ^ run particle $(particle) ~ ~$(dy) ~ 0 0 0 0 1 normal $(display)
-$execute as @s[scores={aegis_display_level=6..}] at @s rotated ~315 ~ positioned ^.5 ^ ^ run particle $(particle) ~ ~$(dy) ~ 0 0 0 0 1 normal $(display)
-$execute as @s[scores={aegis_display_level=7..}] at @s rotated ~000 ~ positioned ^.5 ^ ^ run particle $(particle) ~ ~$(dy) ~ 0 0 0 0 1 normal $(display)
-$execute as @s[scores={aegis_display_level=8..}] at @s rotated ~045 ~ positioned ^.5 ^ ^ run particle $(particle) ~ ~$(dy) ~ 0 0 0 0 1 normal $(display)
+$execute as @s[scores={aegis_display_level=1..,FallFlying=0}] unless predicate ss_lib:is/swimming at @s rotated ~090 ~ positioned ^.5 ^ ^ run particle $(particle) ~ ~$(dy) ~ 0 0 0 0 1 normal $(display)
+$execute as @s[scores={aegis_display_level=2..,FallFlying=0}] unless predicate ss_lib:is/swimming at @s rotated ~135 ~ positioned ^.5 ^ ^ run particle $(particle) ~ ~$(dy) ~ 0 0 0 0 1 normal $(display)
+$execute as @s[scores={aegis_display_level=3..,FallFlying=0}] unless predicate ss_lib:is/swimming at @s rotated ~180 ~ positioned ^.5 ^ ^ run particle $(particle) ~ ~$(dy) ~ 0 0 0 0 1 normal $(display)
+$execute as @s[scores={aegis_display_level=4..,FallFlying=0}] unless predicate ss_lib:is/swimming at @s rotated ~225 ~ positioned ^.5 ^ ^ run particle $(particle) ~ ~$(dy) ~ 0 0 0 0 1 normal $(display)
+$execute as @s[scores={aegis_display_level=5..,FallFlying=0}] unless predicate ss_lib:is/swimming at @s rotated ~270 ~ positioned ^.5 ^ ^ run particle $(particle) ~ ~$(dy) ~ 0 0 0 0 1 normal $(display)
+$execute as @s[scores={aegis_display_level=6..,FallFlying=0}] unless predicate ss_lib:is/swimming at @s rotated ~315 ~ positioned ^.5 ^ ^ run particle $(particle) ~ ~$(dy) ~ 0 0 0 0 1 normal $(display)
+$execute as @s[scores={aegis_display_level=7..,FallFlying=0}] unless predicate ss_lib:is/swimming at @s rotated ~000 ~ positioned ^.5 ^ ^ run particle $(particle) ~ ~$(dy) ~ 0 0 0 0 1 normal $(display)
+$execute as @s[scores={aegis_display_level=8..,FallFlying=0}] unless predicate ss_lib:is/swimming at @s rotated ~045 ~ positioned ^.5 ^ ^ run particle $(particle) ~ ~$(dy) ~ 0 0 0 0 1 normal $(display)
+
+$execute as @s[scores={aegis_display_level=1..,FallFlying=0}] if predicate ss_lib:is/swimming at @s anchored eyes positioned ^0000 ^-.50 ^ run particle $(particle) ~ ~ ~ 0 0 0 0 1 normal $(display)
+$execute as @s[scores={aegis_display_level=2..,FallFlying=0}] if predicate ss_lib:is/swimming at @s anchored eyes positioned ^-.35 ^-.35 ^ run particle $(particle) ~ ~ ~ 0 0 0 0 1 normal $(display)
+$execute as @s[scores={aegis_display_level=3..,FallFlying=0}] if predicate ss_lib:is/swimming at @s anchored eyes positioned ^-.50 ^0000 ^ run particle $(particle) ~ ~ ~ 0 0 0 0 1 normal $(display)
+$execute as @s[scores={aegis_display_level=4..,FallFlying=0}] if predicate ss_lib:is/swimming at @s anchored eyes positioned ^-.35 ^0.35 ^ run particle $(particle) ~ ~ ~ 0 0 0 0 1 normal $(display)
+$execute as @s[scores={aegis_display_level=5..,FallFlying=0}] if predicate ss_lib:is/swimming at @s anchored eyes positioned ^0000 ^0.50 ^ run particle $(particle) ~ ~ ~ 0 0 0 0 1 normal $(display)
+$execute as @s[scores={aegis_display_level=6..,FallFlying=0}] if predicate ss_lib:is/swimming at @s anchored eyes positioned ^0.35 ^0.35 ^ run particle $(particle) ~ ~ ~ 0 0 0 0 1 normal $(display)
+$execute as @s[scores={aegis_display_level=7..,FallFlying=0}] if predicate ss_lib:is/swimming at @s anchored eyes positioned ^0.50 ^0000 ^ run particle $(particle) ~ ~ ~ 0 0 0 0 1 normal $(display)
+$execute as @s[scores={aegis_display_level=8..,FallFlying=0}] if predicate ss_lib:is/swimming at @s anchored eyes positioned ^0.35 ^-.35 ^ run particle $(particle) ~ ~ ~ 0 0 0 0 1 normal $(display)
+
+$execute as @s[scores={aegis_display_level=1..,FallFlying=1}] at @s positioned ^0000 ^-.50 ^ run particle $(particle) ~ ~ ~ 0 0 0 0 1 normal $(display)
+$execute as @s[scores={aegis_display_level=2..,FallFlying=1}] at @s positioned ^-.35 ^-.35 ^ run particle $(particle) ~ ~ ~ 0 0 0 0 1 normal $(display)
+$execute as @s[scores={aegis_display_level=3..,FallFlying=1}] at @s positioned ^-.50 ^0000 ^ run particle $(particle) ~ ~ ~ 0 0 0 0 1 normal $(display)
+$execute as @s[scores={aegis_display_level=4..,FallFlying=1}] at @s positioned ^-.35 ^0.35 ^ run particle $(particle) ~ ~ ~ 0 0 0 0 1 normal $(display)
+$execute as @s[scores={aegis_display_level=5..,FallFlying=1}] at @s positioned ^0000 ^0.50 ^ run particle $(particle) ~ ~ ~ 0 0 0 0 1 normal $(display)
+$execute as @s[scores={aegis_display_level=6..,FallFlying=1}] at @s positioned ^0.35 ^0.35 ^ run particle $(particle) ~ ~ ~ 0 0 0 0 1 normal $(display)
+$execute as @s[scores={aegis_display_level=7..,FallFlying=1}] at @s positioned ^0.50 ^0000 ^ run particle $(particle) ~ ~ ~ 0 0 0 0 1 normal $(display)
+$execute as @s[scores={aegis_display_level=8..,FallFlying=1}] at @s positioned ^0.35 ^-.35 ^ run particle $(particle) ~ ~ ~ 0 0 0 0 1 normal $(display)
 
 # $execute as @s[scores={aegis_display_level=1..}] run particle $(particle) ~.5 ~$(dy) ~ 0 0 0 0 1 normal $(display)
 # $execute as @s[scores={aegis_display_level=2..}] run particle $(particle) ~.35 ~$(dy) ~.35 0 0 0 0 1 normal $(display)

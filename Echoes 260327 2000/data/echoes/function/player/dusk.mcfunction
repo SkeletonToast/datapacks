@@ -1,3 +1,4 @@
+title @a times 1t 60t 20t
 title @a[tag=!InCombat,scores={Dimension=1}] title ["𝔑 𝔦 𝔤 𝔥 𝔱 𝔣 𝔞 𝔩 𝔩"]
 title @a[tag=!InCombat,scores={Dimension=1}] subtitle ["- Night ",{"score":{"name":"$day","objective":"value"}}," -"]
 function ss_lib:fetch/moon_phase
