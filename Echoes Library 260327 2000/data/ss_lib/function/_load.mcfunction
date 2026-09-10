@@ -1,3 +1,5 @@
+function elixir:_load
+
 scoreboard objectives add -1 dummy
 scoreboard objectives add 2 dummy
 scoreboard objectives add 3 dummy

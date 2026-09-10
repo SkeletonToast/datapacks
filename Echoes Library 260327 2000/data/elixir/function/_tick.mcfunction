@@ -1,0 +1,1 @@
+function elixir:custom/tick_status {status:lightweight,status_function:"elixir:status/lightweight",source:elixir}

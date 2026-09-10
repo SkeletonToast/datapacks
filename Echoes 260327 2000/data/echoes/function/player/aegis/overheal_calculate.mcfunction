@@ -1,8 +1,6 @@
 scoreboard players operation @s overheal_limit = @s Resolve
-# homesteader difficulty is just unchanged
-
 scoreboard players operation @s overheal_limit *= @s sse.difficulty.health_regeneration_limit
-function math:round {score:overheal_limit,round:100}
+function math:round {score:overheal_limit,round:100,reduce:true}
 
 execute if score @s overheal_limit < @s Tenacity run scoreboard players operation @s overheal_limit = @s Tenacity
 

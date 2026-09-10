@@ -27,19 +27,18 @@ execute store result score @s generic_h run attribute @s scale get 100
     function ss_lib:fetch/armor {"s":"@s"}
     scoreboard players operation @s res_armor = @s Armor
         scoreboard players operation @s res_armor -= @s Fortitude
-    scoreboard players operation @s res_max_health = @s Resolve
-        scoreboard players operation @s[scores={res_armor=1..}] res_max_health -= @s res_armor
-        execute if score @s res_max_health <= @s Tenacity run scoreboard players operation @s res_max_health = @s Tenacity
+    scoreboard players operation @s generic_attribute = @s Resolve
+        scoreboard players operation @s[scores={res_armor=1..}] generic_attribute -= @s res_armor
+        execute if score @s generic_attribute <= @s Tenacity run scoreboard players operation @s generic_attribute = @s Tenacity
 
 # max_health: +Res (health)
-    scoreboard players operation @s generic_attribute = @s res_max_health
         # function math:even {score:generic_attribute,sign:"-"}
             # this will round generic_attribute down to an even number if generic_a is an odd number,
             # because the modulus remainder will subtract 1 if it's odd, and 0 if it's even
     execute if score @s generic_attribute < @s Fortitude run scoreboard players operation @s generic_attribute = @s Fortitude
     execute if score @s generic_attribute > @s sse.difficulty.health_limit run scoreboard players operation @s generic_attribute = @s sse.difficulty.health_limit
     execute unless score @s generic_attribute = @s res_max_health run function parse:score_unended \
-        {score:"generic_attribute",function:"echoes:stats/set/max_health"}
+        {score:generic_attribute,function:"echoes:stats/set/max_health"}
             # this sets base max health, so don't worry about subtracting Tenacity or anything
 
 # armor: -Res

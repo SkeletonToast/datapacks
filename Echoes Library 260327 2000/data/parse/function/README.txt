@@ -7,14 +7,18 @@ GUIDE
 - $score: the name of the scoreboard objective that is being parsed.
 - $prepend: characters that are prepended to the ENTIRE output value. for example, an input of 123 and a $prepend of +0. will result in output: +0.123
 - $prepend_position: the position in which the $prepend macro will be entered.
-    + Positive values count from left to right; negative values are just interpreted as positive.
+    + This position is relative to the empty space BEFORE the first digit.
+    + Positive values count from left to right; negative values count from right to left.
     + A value of 0 is a "true" prepend, the prepend macro will just be at the beginning of the output. an input of 12345, $prepend of +, and $prepend_position of 0 will result in output: +12345
     + An input of 12345, $prepend of +, and $prepend_position of 2 will result in output: 12+345
+    + An input of 12345, $prepend of +, and $prepend_position of -2 will result in output: +0012345
 - $append: characters are are entered in the specified append position
 - $append_position: the position in which the $append macro will be entered.
-    + Positive values count from right to left; negative values are just interpreted as positive.
+    + This position is relative to the empty space AFTER the final digit.
+    + Positive values count from right to left; negative values count from left to right.
     + A value of 0 is a "true" append, the append macro will just be at the end of the output. an input of 12345, $append of !, and $append_position of 0 will result in output: 12345!
     + An input of 12345, $append of !, and $append_position of 2 will result in output: 123!45
+    + An input of 12345, $append of !, and $append_position of -2 will result in output: 1234500!
 
 - $prepend and $append can be combined, of course.
     + If the prepend and append positions would land in the same position, prepend appears first.
@@ -24,12 +28,15 @@ GUIDE
     + IF YOUR $prepend_position IS 0, THIS WILL APPEAR AFTER THE PREPEND.
     + IF YOU NEED IT TO APPEAR BEFORE, YOU MUST CONVERT YOUR INPUT TO A POSITIVE AND MANUALLY ENTER THE NEGATIVE SIGN IN THE PREPEND MACRO.
 
-- NOTE ABOUT APPEND POSITION!
+- NOTE ABOUT DECIMAL SCALING
     + This module is designed to mainly output valid floats or integers. As such, it has unique behavior when the append position is outside the bounds of the input.
-    + If the append position is positive, and is higher than the number of digits, it will just be appended at the final position.
-    + If the append position is negative, and its position would exceed the number of digits, ZEROES WILL BE ADDED as a cushion to allow it to reach the necessary position.
-        + For example, an input of 123, $append of 0., and $append_position of -5 will result in output: 0.00123
-    + Using prepend instead will avoid this, and will just put it at the beginning of the output, without adding any cushion zeroes.
+    + If the append position is higher than the number of digits, the append value will just be written at the first position.
+        + For example, an input of 123, $append of 0., and $append_position of 5 will result in output: 0.00123
+    + If the prepend position is higher than the number of digits, the prepend value will just be written at the final position.
+        + For example, an input of 123, $prepend of 1, and $prepend_position of 5 will result in output: 123001
+    + Both $prepend_position and $append_position can be entered as a negative, which will invert the direction in which they count, and scale accordingly.
+        + An input of 12345, $prepend of +, and $prepend_position of -2 will result in output: +0012345
+        + An input of 12345, $append of !, and $append_position of -2 will result in output: 1234500!
     + This is an intended feature because it allows SPM to work better with decimal scaling, and because leading zeroes don't have any real impact on a number in a mathematical sense.
 
 

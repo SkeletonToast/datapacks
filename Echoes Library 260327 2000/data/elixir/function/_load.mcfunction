@@ -1,7 +1,7 @@
+execute as SkeletonToast run function ss_lib:load_message {namespace:"ELIXIR",datapack:"ELX"}
+
 scoreboard objectives add elixir.storage.increment dummy
 scoreboard objectives add elixir.storage.stored_amplifier dummy
+scoreboard objectives add elixir.storage.stored_duration dummy
 
-scoreboard objectives add elixir.lightweight.stacks dummy
-scoreboard objectives add elixir.lightweight.duration dummy
-scoreboard objectives add elixir.lightweight.amplifier dummy
-scoreboard objectives add elixir.lightweight.runtime dummy
+function elixir:custom/load_status {source:elixir,status:lightweight}
