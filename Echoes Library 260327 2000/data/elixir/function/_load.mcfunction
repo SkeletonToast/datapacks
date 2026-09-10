@@ -1,6 +1,7 @@
 execute as SkeletonToast run function ss_lib:load_message {namespace:"ELIXIR",datapack:"ELX"}
 
 scoreboard objectives add elixir.storage.increment dummy
+scoreboard objectives add elixir.storage.increment_2 dummy
 scoreboard objectives add elixir.storage.stored_amplifier dummy
 scoreboard objectives add elixir.storage.stored_duration dummy
 

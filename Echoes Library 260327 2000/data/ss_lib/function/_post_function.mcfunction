@@ -1,3 +1,5 @@
+function elixir:_tick
+
 scoreboard players set @a[scores={DamageDealt=1..}] DamageDealt 0
 scoreboard players set @a[scores={DamageDealtAbsorbed=1..}] DamageDealtAbsorbed 0
 scoreboard players set @a[scores={DamageDealtResisted=1..}] DamageDealtResisted 0
