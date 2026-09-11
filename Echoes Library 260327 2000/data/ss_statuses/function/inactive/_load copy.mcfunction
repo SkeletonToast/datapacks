@@ -51,7 +51,6 @@ scoreboard objectives add frozen_active dummy
 scoreboard objectives add hesitant_active dummy
 scoreboard objectives add hobbled_active dummy
 scoreboard objectives add immobilized_active dummy
-    # scoreboard objectives add incendiary_active dummy
 scoreboard objectives add lightweight_active dummy
 scoreboard objectives add recover_active dummy
 scoreboard objectives add rooted_active dummy
@@ -63,7 +62,6 @@ scoreboard objectives add tormented_active dummy
 scoreboard objectives add unnerved_active dummy
 scoreboard objectives add vulnerable_active dummy
 scoreboard objectives add webbed_active dummy
-    # scoreboard objectives add wet_active dummy
 
 # other variables
 scoreboard objectives add aggressive_amount dummy

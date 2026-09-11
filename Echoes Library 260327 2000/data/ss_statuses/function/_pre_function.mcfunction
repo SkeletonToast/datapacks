@@ -9,6 +9,12 @@ execute as @e[tag=StatusEligible,scores={immobilized_active=0}] run attribute @s
 execute as @e[tag=StatusEligible,scores={immobilized_active=0}] run attribute @s minecraft:movement_speed modifier remove immobilized_movement_speed
 execute as @e[tag=StatusEligible,scores={immobilized_active=0}] run attribute @s minecraft:knockback_resistance modifier remove immobilized_knockback_resistance
 
+# INCENDIARY - Should only be run with timer
+scoreboard players set @a[scores={incendiary_timer=200..}] incendiary_timer 200
+execute as @a[scores={incendiary_timer=1..}] if score @s incendiary_timer <= @s wet_timer run scoreboard players set @s incendiary_timer 0
+execute as @a run attribute @s minecraft:burning_time modifier remove incendiary_burning_time
+    # execute as @a[scores={incendiary_active=0}] run attribute @s minecraft:burning_time modifier remove incendiary_burning_time
+
 # WET - Should only be run with timer
 # function ss_lib:fetch/in_water {s:"@a"}
 scoreboard players set @a[scores={wet_timer=200..}] wet_timer 200
