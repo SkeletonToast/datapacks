@@ -1,5 +1,5 @@
-# execute as @a at @s run tag @e[tag=!StatusEligible,distance=..20,type=!#ss_lib:not_alive] add StatusEligible
 tag @a add StatusEligible
+execute as @a[scores={TimeSinceDeath=1}] run function ss_statuses:respawn_timer_reset
 
 # base activity scores
 execute as @a unless entity @s[scores={alert_active=0..}] run scoreboard players set @s alert_active -1
