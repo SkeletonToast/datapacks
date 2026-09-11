@@ -7,10 +7,20 @@ $execute as @s[scores={aegis_display_level=3..,Absorption= ..4}] at @s rotated ~
 $execute as @s[scores={aegis_display_level=2..,Absorption= ..2}] at @s rotated ~135 ~ positioned ^.5 ^ ^ run function echoes:particles/aegis_link_break {display:"$(display)",particle:"$(particle)"}
 $execute as @s[scores={aegis_display_level=1..,Absorption=   0}] at @s rotated ~090 ~ positioned ^.5 ^ ^ run function echoes:particles/aegis_link_break {display:"$(display)",particle:"$(particle)"}
 
+$execute as @s[scores={aegis_display_level=1..,Absorption=..14,FallFlying=0}] if predicate ss_lib:is/swimming at @s anchored eyes positioned ^0000 ^-.50 ^ run function echoes:particles/aegis_link_break {display:"$(display)",particle:"$(particle)"}
+$execute as @s[scores={aegis_display_level=2..,Absorption=..12,FallFlying=0}] if predicate ss_lib:is/swimming at @s anchored eyes positioned ^-.35 ^-.35 ^ run function echoes:particles/aegis_link_break {display:"$(display)",particle:"$(particle)"}
+$execute as @s[scores={aegis_display_level=3..,Absorption=..10,FallFlying=0}] if predicate ss_lib:is/swimming at @s anchored eyes positioned ^-.50 ^0000 ^ run function echoes:particles/aegis_link_break {display:"$(display)",particle:"$(particle)"}
+$execute as @s[scores={aegis_display_level=4..,Absorption= ..8,FallFlying=0}] if predicate ss_lib:is/swimming at @s anchored eyes positioned ^-.35 ^0.35 ^ run function echoes:particles/aegis_link_break {display:"$(display)",particle:"$(particle)"}
+$execute as @s[scores={aegis_display_level=5..,Absorption= ..6,FallFlying=0}] if predicate ss_lib:is/swimming at @s anchored eyes positioned ^0000 ^0.50 ^ run function echoes:particles/aegis_link_break {display:"$(display)",particle:"$(particle)"}
+$execute as @s[scores={aegis_display_level=6..,Absorption= ..4,FallFlying=0}] if predicate ss_lib:is/swimming at @s anchored eyes positioned ^0.35 ^0.35 ^ run function echoes:particles/aegis_link_break {display:"$(display)",particle:"$(particle)"}
+$execute as @s[scores={aegis_display_level=7..,Absorption= ..2,FallFlying=0}] if predicate ss_lib:is/swimming at @s anchored eyes positioned ^0.50 ^0000 ^ run function echoes:particles/aegis_link_break {display:"$(display)",particle:"$(particle)"}
+$execute as @s[scores={aegis_display_level=8..,Absorption=   0,FallFlying=0}] if predicate ss_lib:is/swimming at @s anchored eyes positioned ^0.35 ^-.35 ^ run function echoes:particles/aegis_link_break {display:"$(display)",particle:"$(particle)"}
 
-
-
-
-
-
-
+$execute as @s[scores={aegis_display_level=1..,Absorption=..14,FallFlying=1}] at @s positioned ^0000 ^-.50 ^ run function echoes:particles/aegis_link_break {display:"$(display)",particle:"$(particle)"}
+$execute as @s[scores={aegis_display_level=2..,Absorption=..12,FallFlying=1}] at @s positioned ^-.35 ^-.35 ^ run function echoes:particles/aegis_link_break {display:"$(display)",particle:"$(particle)"}
+$execute as @s[scores={aegis_display_level=3..,Absorption=..10,FallFlying=1}] at @s positioned ^-.50 ^0000 ^ run function echoes:particles/aegis_link_break {display:"$(display)",particle:"$(particle)"}
+$execute as @s[scores={aegis_display_level=4..,Absorption= ..8,FallFlying=1}] at @s positioned ^-.35 ^0.35 ^ run function echoes:particles/aegis_link_break {display:"$(display)",particle:"$(particle)"}
+$execute as @s[scores={aegis_display_level=5..,Absorption= ..6,FallFlying=1}] at @s positioned ^0000 ^0.50 ^ run function echoes:particles/aegis_link_break {display:"$(display)",particle:"$(particle)"}
+$execute as @s[scores={aegis_display_level=6..,Absorption= ..4,FallFlying=1}] at @s positioned ^0.35 ^0.35 ^ run function echoes:particles/aegis_link_break {display:"$(display)",particle:"$(particle)"}
+$execute as @s[scores={aegis_display_level=7..,Absorption= ..2,FallFlying=1}] at @s positioned ^0.50 ^0000 ^ run function echoes:particles/aegis_link_break {display:"$(display)",particle:"$(particle)"}
+$execute as @s[scores={aegis_display_level=8..,Absorption=   0,FallFlying=1}] at @s positioned ^0.35 ^-.35 ^ run function echoes:particles/aegis_link_break {display:"$(display)",particle:"$(particle)"}

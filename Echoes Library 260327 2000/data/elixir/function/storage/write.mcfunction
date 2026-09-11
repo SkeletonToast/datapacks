@@ -9,23 +9,21 @@ $execute unless data storage elixir:$(ssid) $(source).$(status).$(value) run fun
 $execute store result score @s generic_a run data get storage elixir:$(ssid) $(source).$(status).$(value).amplifier
 $execute store result score @s generic_d run data get storage elixir:$(ssid) $(source).$(status).$(value).duration
 
-$execute if score @s elixir.storage.stored_duration matches 0 run data remove storage elixir:$(ssid) $(source).$(status).stored
+$execute if score @s elixir.storage.stored_duration matches ..0 run data remove storage elixir:$(ssid) $(source).$(status).stored
     # if incoming duration is zero
 $execute if score @s generic_a >= @s elixir.storage.stored_amplifier if score @s generic_d >= @s elixir.storage.stored_duration run data remove storage elixir:$(ssid) $(source).$(status).stored
     # if the incoming amplifier AND duration are both less than/equal to the current amplifier and duration, the application is just discarded
-$execute unless data storage elixir:$(ssid) $(source).$(status).stored run return fail
 
-# comparing stored values
-$execute if score @s generic_a < @s elixir.storage.stored_amplifier if score @s generic_d > @s elixir.storage.stored_duration \
-    if score @s generic_d matches 1.. run data modify storage elixir:$(ssid) $(source).$(status).stored.amplifier set from storage \
-    elixir:$(ssid) $(source).$(status).$(value).amplifier
+# comparing stored values, switching stored data if necessary
+$execute if score @s generic_a < @s elixir.storage.stored_amplifier if score @s generic_d > @s elixir.storage.stored_duration if score @s generic_d matches 1.. run \
+    function parse:score_unended_with_macros {function:"elixir:storage/write_amplifier",score:generic_a,macros:"ssid:$(ssid),source:$(source),status:$(status),stack:stored"}
     # if the incoming amplifier is greater than the current amplifier, and the incoming duration is LESS than the current duration, take the current amplifier and write it to stored data
         # otherwise it would just be overwritten by the stronger effect
     # if the incoming amplifier is LESS THAN the current amplifier, the stored amplifier data (incoming) remains unchanged, because it'll be used next time
 
-$execute if score @s generic_a < @s elixir.storage.stored_amplifier if score @s generic_d > @s elixir.storage.stored_duration \
-    if score @s generic_d matches 1.. run data modify storage elixir:$(ssid) $(source).$(status).stored.duration set from storage \
-    elixir:$(ssid) $(source).$(status).$(value).duration
+$execute if score @s generic_a < @s elixir.storage.stored_amplifier if score @s generic_d > @s elixir.storage.stored_duration if score @s generic_d matches 1.. run \
+    function parse:score_unended_with_macros {function:"elixir:storage/write_duration",score:generic_d,macros:"ssid:$(ssid),source:$(source),status:$(status),stack:stored"}
+# data modify storage elixir:$(ssid) $(source).$(status).stored.duration set from storage elixir:$(ssid) $(source).$(status).$(value).duration
 
 # edge case - changing current duration
 $execute if score @s generic_a = @s elixir.storage.stored_amplifier if score @s generic_d < @s elixir.storage.stored_duration \
@@ -37,16 +35,14 @@ $execute if score @s generic_a < @s elixir.storage.stored_amplifier run \
     function parse:score_unended_with_macros {function:"elixir:storage/write_amplifier",score:elixir.storage.stored_amplifier,macros:"ssid:$(ssid),source:$(source),status:$(status),stack:$(value)"}
 $execute if score @s generic_a < @s elixir.storage.stored_amplifier run \
     function parse:score_unended_with_macros {function:"elixir:storage/write_duration",score:elixir.storage.stored_duration,macros:"ssid:$(ssid),source:$(source),status:$(status),stack:$(value)"}
+# execute if score @s generic_a <= @s elixir.storage.stored_amplifier if score @s generic_d <= @s elixir.storage.stored_duration run return fail
+    # bandaid fix for application duping
 
-# writing actual current scores - THIS SHOULD ONLY HAPPEN FOR FIRST APPLICATION, ISSUE???
-    # $execute if score @s generic_a < @s elixir.storage.stored_amplifier if score @s generic_d > @s elixir.storage.stored_duration run \
-    #     scoreboard players operation @s $(source).$(status).duration = @s elixir.storage.stored_duration
-    # $execute if score @s generic_a < @s elixir.storage.stored_amplifier if score @s generic_d > @s elixir.storage.stored_duration run \
-    #     scoreboard players operation @s $(source).$(status).amplifier = @s elixir.storage.stored_amplifier
-# not necessary because storage/store does this
+# failure condition
+execute if score @s generic_a <= @s elixir.storage.stored_amplifier if score @s generic_c <= @s elixir.storage.stored_duration run return fail
 
 # writing new scores - has to be this way otherwise the two comparisons don't work
-execute if score @s generic_a < @s elixir.storage.stored_amplifier if score @s generic_d > @s elixir.storage.stored_duration run \
+execute if score @s generic_a < @s elixir.storage.stored_amplifier run \
     function elixir:storage/write_new_scores
 
 $function elixir:storage/increment {ssid:$(ssid),source:$(source),status:$(status)}
