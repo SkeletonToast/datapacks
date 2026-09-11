@@ -29,6 +29,7 @@ $execute if score @s elixir.storage.stored_amplifier >= @s elixir.storage.curren
 $execute if score @s elixir.storage.stored_amplifier >= @s elixir.storage.current_amplifier if score @s elixir.storage.current_duration < @s elixir.storage.stored_duration run \
     data modify storage elixir:$(ssid) $(source).$(status).$(value).duration set from storage elixir:$(ssid) $(source).$(status).stored.duration
 execute if score @s elixir.storage.stored_amplifier >= @s elixir.storage.current_amplifier if score @s elixir.storage.current_duration < @s elixir.storage.stored_duration run return fail
+    # bandaid fix for just rewriting the current duration, so that it doesn't continuously duplicate and assign to every empty memory location
 
 # writing new values - ONLY if incoming amplifier is HIGHER. otherwise it just stayed stored or changed current duration
 $execute if score @s elixir.storage.current_amplifier < @s elixir.storage.stored_amplifier run \

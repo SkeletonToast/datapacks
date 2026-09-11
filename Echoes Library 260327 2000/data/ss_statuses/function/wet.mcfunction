@@ -7,7 +7,3 @@ attribute @s minecraft:burning_time modifier add wet_burning_time -0.5 add_multi
 
 execute at @s[predicate=ss_lib:is/on_fire] if block ~ ~ ~ fire run playsound block.fire.extinguish block @a
 execute at @s[predicate=ss_lib:is/on_fire] if block ~ ~ ~ fire run fill ~ ~ ~ ~ ~ ~ air replace fire
-
-    # scoreboard players set @s wet_active 1
-
-scoreboard players set @s HasStatus 1
