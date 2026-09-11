@@ -2,10 +2,7 @@
 # generic_d = duration of the "incumbent" application
 # elixir.storage.stored_amplifier = incoming amplifier, exists because the stored data is overwritten if it needs to be stored
 # elixir.storage.stored_duration = incoming duration, exists because the stored data is overwritten if it needs to be stored
-# data $(source).$(status).stored = written to ONLY if the incumbent application needs to be passed on
-
-# why would the best application be duplicated and applied to all later storage locations?
-    # probably the stored value is never changed?
+# data $(source).$(status).stored = written ONLY if the incumbent application needs to be passed on
 
 $execute unless data storage elixir:$(ssid) $(source).$(status).$(value) run function elixir:storage/write_new {ssid:$(ssid),source:$(source),status:$(status),value:$(value)}
 

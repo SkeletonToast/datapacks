@@ -7,11 +7,10 @@ $function parse:score_unended_with_macros {function:"elixir:storage/store_durati
 
 # if application is NOT higher amplifier than current application, increase duration by current runtime
 $execute as @s[scores={$(source).$(status).runtime=1..}] if data storage elixir:$(value) $(source).$(status).1 \
-    store result score @s generic_d run data get storage elixir:$(value) $(source).$(status).1.duration
+    store result score @s generic_a run data get storage elixir:$(value) $(source).$(status).1.amplifier
 $execute as @s[scores={$(source).$(status).runtime=1..}] if data storage elixir:$(value) $(source).$(status).1 \
-    run scoreboard players operation @s generic_d -= @s $(source).$(status).runtime
-$execute as @s[scores={$(source).$(status).runtime=1..}] if data storage elixir:$(value) $(source).$(status).1 \
-    if score @s elixir.storage.stored_duration > @s generic_d \
+    if score @s elixir.storage.stored_amplifier < @s generic_a \
+    if score @s elixir.storage.stored_duration > @s $(source).$(status).duration \
     run scoreboard players operation @s elixir.storage.stored_duration += @s $(source).$(status).runtime
 $execute as @s[scores={$(source).$(status).runtime=1..}] if data storage elixir:$(value) $(source).$(status).1 \
     run function parse:score_unended_with_macros \
