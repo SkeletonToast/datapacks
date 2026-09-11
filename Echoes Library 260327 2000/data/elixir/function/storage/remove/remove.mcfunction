@@ -1,4 +1,4 @@
-$execute unless data storage elixir:$(ssid) $(source).$(status).$(value) run scoreboard players set @s $(source).$(status).runtime 0
+# $execute unless data storage elixir:$(ssid) $(source).$(status).$(value) run scoreboard players set @s $(source).$(status).runtime 0
 $execute unless data storage elixir:$(ssid) $(source).$(status).$(value) run return fail
 
 $data modify storage elixir:$(ssid) $(source).$(status).$(value0).amplifier set from storage elixir:$(ssid) $(source).$(status).$(value).amplifier

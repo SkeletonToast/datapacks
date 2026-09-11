@@ -1,0 +1,1 @@
+$data modify storage elixir:$(ssid) $(source).$(status).stored.duration set value $(duration)

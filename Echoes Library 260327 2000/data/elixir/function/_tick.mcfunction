@@ -1,1 +1,1 @@
-function elixir:custom/tick_status {status:lightweight,status_function:"elixir:status/lightweight",source:elixir}
+function elixir:custom/tick_status {status:lightweight,status_function:"elixir:status/lightweight/main",expire_function:"elixir:status/lightweight/expire",source:elixir}

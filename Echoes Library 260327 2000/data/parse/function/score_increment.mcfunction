@@ -5,6 +5,8 @@ scoreboard players operation @s parse_score_input /= @s 10
 
 scoreboard players add @s parse_score_recursions 1
 
+# $say si $(macros)
+
 # finalize - nonnegative
 $execute if score @s parse_score_recursions = @s parse_score_digits \
     unless score @s parse_score_prepend_position matches -1 \
