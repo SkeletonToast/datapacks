@@ -1,5 +1,5 @@
 execute as @a run scoreboard players operation @s xp_cap = @s Mind
-execute as @a[scores={xp_level=1..}] if score @s xp_level > @s Mind run function ss_lib:fetch/armor {"s":"@s"}
+execute as @a[scores={xp_level=1..}] if score @s xp_level > @s Mind run function ss_lib:fetch/armor {s:"@s"}
 
 execute as @a[scores={xp_level=..9999}] run function parse:score_unended {score:xp_level,function:"echoes:player/xp_level/random"}
 execute as @a[scores={xp_level=10000..}] run function echoes:player/xp_level/random {value:10000}

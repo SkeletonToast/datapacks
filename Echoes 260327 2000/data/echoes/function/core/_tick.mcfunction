@@ -2,6 +2,7 @@ scoreboard players set @a luck_chance -1
 
 function ss_lib:_pre_function
 function ss_statuses:_pre_function
+function echoes:status/_pre_function
 function echoes:player/_pre_function
 function echoes:stats/_pre_function
 
@@ -22,7 +23,7 @@ function talisman:_tick
 # campfires
 function echoes:campfires/_tick
 
-function ss_lib:fetch/health {"s":"@a"}
+function ss_lib:fetch/health {s:"@a"}
 
 # death coords
 function ss_lib:deathcoords

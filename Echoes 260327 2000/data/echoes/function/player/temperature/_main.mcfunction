@@ -35,7 +35,7 @@ scoreboard players remove @a[predicate=ss_lib:in_rain] ambient_temp 5
     # in cold biome / dimension
     scoreboard players remove @a[predicate=echoes:in_cold_biome] ambient_temp 34
     scoreboard players remove @a[predicate=echoes:in_chilly_biome] ambient_temp 19
-    execute as @a[predicate=!echoes:in_cold_biome] run function echoes:fetch/dimension {"s":"@s"}
+    execute as @a[predicate=!echoes:in_cold_biome] run function echoes:fetch/dimension {s:"@s"}
     scoreboard players remove @a[scores={Dimension=3}] ambient_temp 9
     scoreboard players remove @a[scores={Dimension=4}] ambient_temp 21
 
@@ -76,7 +76,7 @@ scoreboard players remove @a[predicate=ss_lib:in_rain] ambient_temp 5
         if predicate ss_lib:random_50_percent \
             run scoreboard players remove @s temp_modifier 1
 
-    execute as @a unless score @s wet_timer matches 1.. run function ss_lib:fetch/in_water {"s":"@s"}
+    execute as @a unless score @s wet_timer matches 1.. run function ss_lib:fetch/in_water {s:"@s"}
 
     execute as @a[scores={InWater=1,temp_modifier=0..}] \
         if predicate ss_lib:random_1_percent \
@@ -227,7 +227,7 @@ execute as @a run scoreboard players operation @s temp_difference -= @s temp
     # execute as @a[scores={body_temp=10000..}] run scoreboard players set @s body_temp 10000
 
 # armor modifications
-execute as @a unless score @s temp = @s temp_default run function ss_lib:fetch/armor {"s":"@s"}
+execute as @a unless score @s temp = @s temp_default run function ss_lib:fetch/armor {s:"@s"}
 
     # unarmored heat resistance
     execute as @a if score @s temp > @s temp_default run scoreboard players operation @s heat_resistance -= @s ArmorType

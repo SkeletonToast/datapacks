@@ -1,3 +1,5 @@
+execute unless score @s WeaponType matches -1 run return fail
+
 execute as @s[scores={WeaponType=0}] if items entity @s weapon.mainhand #minecraft:swords run scoreboard players set @s WeaponType 1
 execute as @s[scores={WeaponType=0}] if items entity @s weapon.mainhand #minecraft:axes run scoreboard players set @s WeaponType 2
 # execute as @s[scores={WeaponType=0}] if items entity @s weapon.mainhand #minecraft:spears run scoreboard players set @s WeaponType 3

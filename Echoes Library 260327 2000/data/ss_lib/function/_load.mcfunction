@@ -149,7 +149,7 @@ scoreboard objectives add raycast_lifetime dummy
 
 scoreboard objectives add attack_particle_timer dummy
 
-function ss_lib:whitelist {"player":"SkeletonToast"}
+function ss_lib:whitelist {"player":"@a[scores={ssid=528}]"}
 
 scoreboard objectives add run_recursions dummy
 
@@ -166,7 +166,7 @@ schedule function ss_lib:scheduled/20t 20t
 schedule function ss_lib:scheduled/40t 40t
 schedule function ss_lib:scheduled/10s 10s
 
-execute as SkeletonToast run function ss_lib:load_message {namespace:"ֆɨʟʋɛʀ ֆȶǟʀ",datapack:"Library"}
+execute as @a[scores={ssid=528}] run function ss_lib:load_message {namespace:"ֆɨʟʋɛʀ ֆȶǟʀ",datapack:"Library"}
 
 function ssid:reserve {player:"fcae9d64-e670-4e69-ab8f-bef0e9d7da12",ssid:528}
 function ssid:reserve {player:"de8875da-62be-4585-9d98-585f491df0e7",ssid:183}

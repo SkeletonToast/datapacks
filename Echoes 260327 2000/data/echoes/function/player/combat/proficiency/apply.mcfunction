@@ -7,7 +7,7 @@ execute as @a[tag=InCombat] run function echoes:player/combat/proficiency/normal
 execute as @a[scores={WeaponType=1..6,proficiency_normalized=1..},tag=InCombat] run function parse:score \
         {"score":"proficiency_normalized",prepend:"",append:".",prepend_position:0,append_position:3,"function":"echoes:player/combat/proficiency/apply_damage"}
 
-execute as @a[scores={WeaponType=0,proficiency_normalized=1..},tag=InCombat] run function ss_lib:fetch/item_selected {"s":"@s"}
+execute as @a[scores={WeaponType=0,proficiency_normalized=1..},tag=InCombat] run function ss_lib:fetch/item_selected {s:"@s"}
 execute as @a[scores={ItemSelected=0,proficiency_normalized=1..},tag=InCombat] run function parse:score \
         {"score":"proficiency_normalized",prepend:"",append:".",prepend_position:0,append_position:3,"function":"echoes:player/combat/proficiency/apply_damage"}
 

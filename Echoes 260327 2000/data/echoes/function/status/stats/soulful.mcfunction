@@ -1,0 +1,1 @@
+scoreboard players operation @s Soul += @s sse.soulful.amplifier

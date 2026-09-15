@@ -1,4 +1,4 @@
-function ss_lib:fetch/absorption {"s":"@s"}
+function ss_lib:fetch/absorption {s:"@s",bypass_check:true}
 execute as @s[scores={Absorption=0}] run return fail
 
 $scoreboard players set @s generic_a $(value)

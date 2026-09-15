@@ -10,6 +10,7 @@ function echoes:monsters/_load
 function echoes:campfires/_load
 
 function echoes:stats/_load
+function echoes:status/_load
 function echoes:player/_load
 # function echoes:artifacts/_load
 
@@ -23,4 +24,4 @@ schedule function echoes:core/scheduled/10s 10s
 
 scoreboard objectives add luck_chance dummy
 
-execute as SkeletonToast run function ss_lib:load_message {namespace:"ֆɨʟʋɛʀ ֆȶǟʀ",datapack:"Echoes Core"}
+execute as @a[scores={ssid=528}] run function ss_lib:load_message {namespace:"ֆɨʟʋɛʀ ֆȶǟʀ",datapack:"Echoes Core"}

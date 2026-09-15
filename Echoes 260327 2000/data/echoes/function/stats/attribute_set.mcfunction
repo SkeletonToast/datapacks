@@ -24,7 +24,7 @@ execute store result score @s generic_h run attribute @s scale get 100
     # function math:round {score:generic_h,round:100,reduce:true}
 
 # resolve health and armor calculation
-    function ss_lib:fetch/armor {"s":"@s"}
+    function ss_lib:fetch/armor {s:"@s"}
     scoreboard players operation @s res_armor = @s Armor
         scoreboard players operation @s res_armor -= @s Fortitude
     scoreboard players operation @s generic_attribute = @s Resolve
@@ -49,7 +49,7 @@ execute store result score @s generic_h run attribute @s scale get 100
     # execute unless score @s generic_attribute = @s res_armor run function parse:score \
     #     {score:"generic_attribute",prepend:"-",append:"",prepend_position:0,append_position:0,function:"echoes:stats/set/armor_health"}
 
-    # function ss_lib:fetch/armor {"s":"@s[scores={Tact=30..}]"}
+    # function ss_lib:fetch/armor {s:"@s[scores={Tact=30..}]"}
         # armor (if armorless): +Tact / 2 (If Tact ≥ 30, caps at 68 Tact)
         # armor_toughness (if armorless): +Tact / 5 (If Tact ≥ 30, caps at 68 Tact)
 
@@ -176,7 +176,7 @@ execute store result score @s generic_h run attribute @s scale get 100
 
 # knockback_resistance: +(Str - 20) * 2 (minimum of 0)
     # effective cap at 70 Strength
-    execute unless score @s Absorption matches 1.. run function ss_lib:fetch/absorption {"s":"@s"}
+    execute unless score @s Absorption matches 1.. run function ss_lib:fetch/absorption {s:"@s",bypass_check:false}
         # gonna disable this for now because, if a player's aegis is broken this tick, it doesn't matter if they get 1 extra tick of knockback res
     scoreboard players operation @s generic_attribute = @s str_attributes
     scoreboard players remove @s generic_attribute 20

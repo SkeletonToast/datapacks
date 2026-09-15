@@ -28,7 +28,7 @@ scoreboard players set @a[tag=AegisApplied] aegis_timer_max 100
 execute as @a[tag=AegisApplied,scores={Soul=..79}] run scoreboard players operation @s aegis_timer_max -= @s Soul
 execute as @a[tag=AegisApplied,scores={Soul=80..}] run scoreboard players remove @s aegis_timer_max 80
 
-function ss_lib:fetch/armor {"s":"@a[tag=AegisApplied]"}
+function ss_lib:fetch/armor {s:"@a[tag=AegisApplied]"}
 execute as @a[tag=AegisApplied,scores={aegis_timer_max=1..,HelmetType=2}] run scoreboard players remove @s aegis_timer_max 10
 execute as @a[tag=AegisApplied,scores={aegis_timer_max=1..,ChestplateType=2}] run scoreboard players remove @s aegis_timer_max 10
 execute as @a[tag=AegisApplied,scores={aegis_timer_max=1..,LeggingsType=2}] run scoreboard players remove @s aegis_timer_max 10

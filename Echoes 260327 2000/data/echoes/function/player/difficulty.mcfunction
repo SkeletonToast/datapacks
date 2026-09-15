@@ -53,6 +53,10 @@ scoreboard players set @s[scores={EchoDifficulty=5}] sse.difficulty.exhaustion_m
 scoreboard players set @s[scores={EchoDifficulty=5}] sse.difficulty.radiation_multiplier 75
 scoreboard players set @s[scores={EchoDifficulty=5}] sse.difficulty.leveling_multiplier 110
 
+# caps - Lord and Monarch are unavailable until certain level thresholds have been reached
+    # scoreboard players set @s[scores={EchoDifficulty=6,EchoLevel=..170}] EchoDifficulty 5
+    # scoreboard players set @s[scores={EchoDifficulty=7,EchoLevel=..250}] EchoDifficulty 5
+
 # 6: Lord
 scoreboard players set @s[scores={EchoDifficulty=6}] sse.difficulty.attribute_limit -1
 scoreboard players set @s[scores={EchoDifficulty=6}] sse.difficulty.health_limit 60

@@ -1,5 +1,3 @@
-function ss_lib:fetch/absorption {"s":"@s"}
-
 # execute as @s[scores={aegis_display_level=8,Absorption=0}] run function echoes:particles/aegis_ring_break
 
 $function echoes:player/aegis/display/break {dy:"$(dy)",particle:"dust{color:[1,1,1],scale:1}"}

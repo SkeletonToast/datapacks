@@ -1,0 +1,1 @@
+scoreboard players operation @s Mind += @s sse.mindful.amplifier

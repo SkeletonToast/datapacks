@@ -22,7 +22,6 @@ tag @a[tag=AegisApplied] remove AegisApplied
 
 scoreboard players enable @a aegis_theme
 function echoes:player/aegis/_main
-scoreboard players set @a aegis_amplifier_max 4
 execute as @a[scores={sse.difficulty.default_aegis_amplifier=-1..}] run scoreboard players operation @s aegis_amplifier_max = @s sse.difficulty.default_aegis_amplifier
 # scoreboard players set @a[scores={Dimension=4}] aegis_amplifier_max -1
 

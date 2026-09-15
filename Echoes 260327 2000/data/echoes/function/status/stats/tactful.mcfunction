@@ -1,0 +1,1 @@
+scoreboard players operation @s Tact += @s sse.tactful.amplifier

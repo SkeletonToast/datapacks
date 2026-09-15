@@ -1,6 +1,6 @@
 tag @s add Kindling
 
-function ss_lib:fetch/item_selected {"s":"@s"}
+function ss_lib:fetch/item_selected {s:"@s"}
 
 playsound entity.ghast.shoot block @s ~ ~ ~ 0.3 1
 playsound block.fire.ambient block @s

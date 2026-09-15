@@ -1,1 +1,0 @@
-# $say applying ($(value), $(source), $(status), $(duration), $(amplifier))

@@ -1,3 +1,0 @@
-$execute unless entity @s[scores={ability030=1..,ability030-01=2..}] run particle dust{$(dust_color),scale:$(dust_scale)} $(pos) 0 0 0 0 1 normal @p
-$execute as @s[predicate=ss_lib:is/moving] unless entity @s[scores={ability030=1..,ability030-01=2..}] run particle dust{color:[1.000,1.000,1.000],scale:$(dust_scale)} $(pos)1 0 0 0 0 1 normal @p
-$execute as @s[predicate=ss_lib:is/hiding] unless entity @s[scores={ability030=1..,ability030-01=2..}] run particle dust{color:[0.000,0.000,0.000],scale:$(dust_scale)} $(pos)1 0 0 0 0 1 normal @p

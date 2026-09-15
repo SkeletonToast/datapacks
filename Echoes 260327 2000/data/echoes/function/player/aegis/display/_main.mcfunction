@@ -1,8 +1,8 @@
-# execute as @a unless score @s aegisSelfVisibility matches 0 run function ss_lib:fetch/fall_flying {"s":"@s","macros":""}
+# execute as @a unless score @s aegisSelfVisibility matches 0 run function ss_lib:fetch/fall_flying {s:"@s","macros":""}
     # fallflying is already fetched every tick
 
 tag @a[predicate=ss_lib:is/hiding] add aegis_ineligible
-function ss_lib:fetch/absorption {"s":"@a[scores={aegis_theme=0..},tag=!aegis_ineligible]"}
+function ss_lib:fetch/absorption {s:"@a[scores={aegis_theme=0..},tag=!aegis_ineligible]",bypass_check:false}
 execute as @a unless entity @s[scores={aegis_theme=0..}] run scoreboard players set @s aegis_theme 6
 scoreboard players set @a[scores={aegis_theme=16}] aegis_theme 0
 

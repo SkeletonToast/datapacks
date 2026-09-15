@@ -1,5 +1,5 @@
 execute as @a run scoreboard players operation @s xp_cap = @s Mind
-execute as @a[scores={xp_level=1..}] if score @s xp_level > @s Mind run function ss_lib:fetch/armor {"s":"@s"}
+execute as @a[scores={xp_level=1..}] if score @s xp_level > @s Mind run function ss_lib:fetch/armor {s:"@s"}
 
 execute as @a[scores={xp_level=..10000}] run scoreboard players operation @s xp_increment = @s xp_level
 execute as @a[scores={xp_level=10001..}] run scoreboard players set @s xp_increment 10000

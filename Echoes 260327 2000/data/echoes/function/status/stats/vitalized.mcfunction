@@ -1,0 +1,1 @@
+scoreboard players operation @s Vitality += @s sse.vitalized.amplifier

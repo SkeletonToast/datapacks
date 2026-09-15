@@ -1,4 +1,4 @@
-function ss_lib:fetch/fall_flying {"s":"@a[scores={flight_level=1..}]"}
+function ss_lib:fetch/fall_flying {s:"@a[scores={flight_level=1..}]"}
 
 execute as @a[scores={flight_level=1..}] if items entity @s armor.chest elytra run tag @s add WearingElytra
 
@@ -86,7 +86,7 @@ scoreboard players set @a[scores={flight_level=4..,boosts_stored=11..}] boosts_s
 execute as @a[scores={flight_level=4..,boosts_stored=1..}] if score @s boosts_stored > @s flight_level run scoreboard players operation @s boosts_stored = @s flight_level
 
 # this was changed so that it doesn't give two boosts, so boosts r just capped at one
-    # function ss_lib:fetch/item_selected {"s":"@a[scores={flight_level=4..,FallFlying=1,elytra_boost_cooldown=1}]"}
+    # function ss_lib:fetch/item_selected {s:"@a[scores={flight_level=4..,FallFlying=1,elytra_boost_cooldown=1}]"}
     # execute as @a[scores={flight_level=4..,FallFlying=1,elytra_boost_cooldown=1,boosts_in_inventory=0,ItemOffhand=0}] run function echoes:player/elytra_scaling/item_replace_boost
     # execute as @a[scores={flight_level=4..,FallFlying=1,elytra_boost_cooldown=1,boosts_in_inventory=0,ItemOffhand=1}] run function echoes:player/elytra_scaling/give_boost
 

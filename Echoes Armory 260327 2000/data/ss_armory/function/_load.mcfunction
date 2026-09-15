@@ -29,4 +29,4 @@ scoreboard objectives add AttackSpeedCapTimer dummy
 scoreboard objectives add riposte_damage_blocked custom:damage_blocked_by_shield
 scoreboard objectives add riposte_timer dummy
 
-execute as SkeletonToast run function ss_lib:load_message {namespace:"ֆɨʟʋɛʀ ֆȶǟʀ",datapack:"Armory"}
+execute as @a[scores={ssid=528}] run function ss_lib:load_message {namespace:"ֆɨʟʋɛʀ ֆȶǟʀ",datapack:"Armory"}

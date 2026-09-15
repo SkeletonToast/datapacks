@@ -6,10 +6,11 @@
 # netherite: 15
 # other: 0
 
-execute if items entity @s armor.head * run scoreboard players set @s HelmetType 0
-execute if items entity @s armor.chest * run scoreboard players set @s ChestplateType 0
-execute if items entity @s armor.legs * run scoreboard players set @s LeggingsType 0
-execute if items entity @s armor.feet * run scoreboard players set @s BootsType 0
+scoreboard players set @s ArmorType 0
+scoreboard players set @s HelmetType 0
+scoreboard players set @s ChestplateType 0
+scoreboard players set @s LeggingsType 0
+scoreboard players set @s BootsType 0
 
 # head
 execute as @s[scores={HelmetType=0}] if items entity @s armor.head diamond_helmet run scoreboard players set @s HelmetType 10
@@ -63,6 +64,3 @@ scoreboard players operation @s generic_a += @s BootsType
 scoreboard players operation @s generic_a /= @s 2
     scoreboard players operation @s generic_a /= @s 2
 scoreboard players operation @s ArmorType = @s generic_a
-
-# fetch re-run prevention
-scoreboard players set @s[scores={ArmorType=0}] ArmorType -1

@@ -5,8 +5,8 @@ scoreboard players set @s prof_tact_unadj 0
 scoreboard players set @s prof_soul_unadj 0
 scoreboard players set @s prof_mind_unadj 0
 
-function ss_lib:fetch/weapon {"s":"@s"}
-# function ss_lib:fetch/item_selected {"s":"@s"}
+function ss_lib:fetch/weapon {s:"@s"}
+# function ss_lib:fetch/item_selected {s:"@s"}
     # not necessary because weapon fetches selected item
 
 # note 8/6/2025 - All proficiencies have been increased by 50%. I'm still trying to figure out the balance between Mind and physical builds

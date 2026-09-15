@@ -1,9 +1,10 @@
-function ss_lib:fetch/health {"s":"@s"}
+function ss_lib:fetch/health {s:"@s"}
 
 # execute at @s[scores={Absorption=..19}] unless entity @s[predicate=ss_lib:is/hiding] run particle minecraft:trial_spawner_detection ~ ~1 ~ 0.3 0.3 0.3 0 3 normal @a[distance=..10]
 # execute at @s[scores={Absorption=..19}] unless entity @s[predicate=ss_lib:is/hiding] run particle minecraft:dust{color:[1.00,0.50,0.00],scale:1} ~ ~1 ~ 0.4 0.4 0.4 0 10 normal @a[distance=..10]
 
 scoreboard players set @s[scores={Soul=0}] aegis_amplifier_max -1
+scoreboard players set @s[scores={Soul=..29,aegis_amplifier_max=5..}] aegis_amplifier_max 4
 
 scoreboard players operation @s aegis_amplifier = @s Absorption
 scoreboard players operation @s aegis_amplifier /= @s 2

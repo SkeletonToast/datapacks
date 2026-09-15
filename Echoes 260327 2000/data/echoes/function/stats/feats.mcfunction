@@ -54,11 +54,13 @@ function echoes:stats/feat_assignment {"stat":"Soul"}
 
     # level 50: 
 
+    # Level 90: +1 Talisman Slot
+
 # tact
     # level 15: 
 
     # level 20: player gains resistance outside of combat if aegis is active
-    function ss_lib:fetch/absorption {"s":"@a[scores={Tact=20..}]"}
+    function ss_lib:fetch/absorption {s:"@a[scores={Tact=20..}]",bypass_check:false}
     effect give @a[scores={Tact=20..29,Absorption=1..},tag=!InCombat] resistance 4 0 true
     effect give @a[scores={Tact=30..39,Absorption=1..},tag=!InCombat] resistance 3 1 true
     effect give @a[scores={Tact=40..49,Absorption=1..},tag=!InCombat] resistance 2 2 true
@@ -86,7 +88,7 @@ function echoes:stats/feat_assignment {"stat":"Soul"}
     # level 30: 
 
     # level 50: player gains fire resistance, conduit power, and saturation (at ≤19 Food) if aegis is active
-    function ss_lib:fetch/absorption {"s":"@a[tag=Soul_feat_3]"}
+    function ss_lib:fetch/absorption {s:"@a[tag=Soul_feat_3]",bypass_check:false}
     effect give @a[tag=Soul_feat_3,scores={Absorption=1..},tag=!InCombat] fire_resistance 1 0 true
     effect give @a[tag=Soul_feat_3,scores={Absorption=1..}] conduit_power 1 0 true
     effect give @a[tag=Soul_feat_3,scores={Absorption=1..,Food=..18},tag=!InCombat] saturation 1 0 true

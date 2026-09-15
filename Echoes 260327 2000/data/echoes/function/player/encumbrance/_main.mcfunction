@@ -1,8 +1,8 @@
 # armor
     # execute if items entity @s weapon.* shield run scoreboard players add @s encumbrance_armor 3
     # scoreboard players add @s[scores={UsingShield=1..}] encumbrance_armor 3
-function ss_lib:fetch/weapon {"s":"@a"}
-function ss_lib:fetch/armor {"s":"@a"}
+function ss_lib:fetch/weapon {s:"@a"}
+function ss_lib:fetch/armor {s:"@a"}
 
 execute as @a run attribute @s movement_speed modifier remove encumbrance_movement_speed
 execute as @a run attribute @s jump_strength modifier remove encumbrance_jump_strength

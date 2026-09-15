@@ -3,7 +3,7 @@
 # health
 scoreboard players set @a Health 0
 scoreboard players set @a TotalHealth 0
-scoreboard players set @a Absorption 0
+scoreboard players set @a Absorption -1
 scoreboard players set @a BaseMaxHealth 0
 
 # damage
@@ -19,21 +19,23 @@ execute as @a store result score @s ArmorToughness run attribute @s armor_toughn
 
 # selected items
 scoreboard players set @a ItemSelected -1
-scoreboard players set @a ItemOffhand 0
+scoreboard players set @a ItemOffhand -1
 
 # weapon & armor types / weights
-scoreboard players set @a WeaponType 0
-scoreboard players set @a WeaponWeight 0
+scoreboard players set @a WeaponType -1
+scoreboard players set @a WeaponWeight -1
 
-scoreboard players set @a ArmorType 0
-scoreboard players set @a HelmetType 0
-scoreboard players set @a ChestplateType 0
-scoreboard players set @a LeggingsType 0
-scoreboard players set @a BootsType 0
+scoreboard players set @a ArmorType -1
+scoreboard players set @a HelmetType -1
+scoreboard players set @a ChestplateType -1
+scoreboard players set @a LeggingsType -1
+scoreboard players set @a BootsType -1
 
 scoreboard players set @a Armorless 0
 
 scoreboard players set @a OnGround 0
+scoreboard players set @a FallFlying 0
+    # these are fine as is because they're only run once per tick
 
 # fetch functions
 function ss_lib:fetch_configuration
