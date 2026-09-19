@@ -8,8 +8,8 @@ function echoes:player/xp_level/_main
 
 function echoes:player/elytra_scaling/_main
 execute as @a[scores={boost_visual_effects=0..}] run function echoes:player/elytra_scaling/boost_visuals
-clear @a[scores={OnGround=1}] firework_rocket[custom_data~{elytra_boost:true}]
-clear @a[scores={FallFlying=0}] firework_rocket[custom_data~{elytra_boost:true}]
+# clear @a[scores={OnGround=1}] firework_rocket[custom_data~{elytra_boost:true}]
+# clear @a[scores={FallFlying=0}] firework_rocket[custom_data~{elytra_boost:true}]
 
 execute as @a[scores={SoftRestOrRespawn=1}] run function echoes:player/grant_recipes
 
@@ -24,7 +24,6 @@ scoreboard players set @a used_glow_berries 0
 execute as @a[scores={TimeSinceRest=0}] run function echoes:player/sleeping
 execute as @a[scores={TimeSinceRest=1}] run function echoes:player/sleeping_awaken
 execute if entity @a[scores={TimeSinceDeath=1..}] if entity @a[scores={DayTime=12010..23991}] unless entity @a[scores={TimeSinceRest=1..}] unless entity @a[scores={SleepingTime=..99}] run function echoes:player/skip_night
-    # this might fix the thunderstorm thing? this just means that you won't be able to skip the night if it's thundering and NOT nighttime.
 
 execute as @r[scores={DayTime=0}] run scoreboard players add $day value 1
 execute as @a[scores={DayTime=23000,Dimension=1}] run function echoes:player/dawn

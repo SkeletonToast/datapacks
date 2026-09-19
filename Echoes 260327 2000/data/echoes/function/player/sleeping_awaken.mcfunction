@@ -1,0 +1,1 @@
+# doesnt do anything currently but this'll be used to like unequip talismans and whatnot, things that trigger every time you get out of bed

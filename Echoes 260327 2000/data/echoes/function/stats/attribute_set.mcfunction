@@ -32,9 +32,9 @@ execute store result score @s generic_h run attribute @s scale get 100
         execute if score @s generic_attribute <= @s Tenacity run scoreboard players operation @s generic_attribute = @s Tenacity
 
 # max_health: +Res (health)
-        # function math:even {score:generic_attribute,sign:"-"}
-            # this will round generic_attribute down to an even number if generic_a is an odd number,
-            # because the modulus remainder will subtract 1 if it's odd, and 0 if it's even
+    function math:even {score:generic_attribute,sign:"-"}
+        # this will round generic_attribute down to an even number if generic_a is an odd number,
+        # because the modulus remainder will subtract 1 if it's odd, and 0 if it's even
     execute if score @s generic_attribute < @s Fortitude run scoreboard players operation @s generic_attribute = @s Fortitude
     execute if score @s generic_attribute > @s sse.difficulty.health_limit run scoreboard players operation @s generic_attribute = @s sse.difficulty.health_limit
     execute unless score @s generic_attribute = @s res_max_health run function parse:score_unended \
@@ -63,9 +63,7 @@ execute store result score @s generic_h run attribute @s scale get 100
 
     scoreboard players operation @s generic_attribute = @s dex_attributes
             scoreboard players set @s[scores={generic_attribute=101..}] generic_attribute 100
-        scoreboard players operation @s generic_attribute *= @s 3
-        scoreboard players operation @s generic_attribute /= @s 2
-            scoreboard players operation @s generic_attribute /= @s 2
+        function math:percentage {score:generic_attribute,percentage:75}
         scoreboard players operation @s generic_attribute *= @s generic_h
         function math:round {score:generic_attribute,round:90,reduce:true}
     scoreboard players operation @s generic_c = @s SprintTime
@@ -98,7 +96,6 @@ execute store result score @s generic_h run attribute @s scale get 100
     scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
     execute unless score @s generic_attribute = @s dex_movement_speed run function parse:score \
         {score:"generic_attribute",prepend:"",append:".",prepend_position:0,append_position:3,function:"echoes:stats/set/movement_speed"}
-    execute as @s[scores={dex_movement_speed=1..}] run scoreboard players operation @s generic_max = @s dex_movement_speed
 
 # fall_damage_multiplier: -[higher of Dex/Tact] (cap of 45) * 3 / 2
     scoreboard players operation @s generic_attribute = @s dex_attributes
@@ -177,8 +174,8 @@ execute store result score @s generic_h run attribute @s scale get 100
 # knockback_resistance: +(Str - 20) * 2 (minimum of 0)
     # effective cap at 70 Strength
     execute unless score @s Absorption matches 1.. run function ss_lib:fetch/absorption {s:"@s",bypass_check:false}
-        # gonna disable this for now because, if a player's aegis is broken this tick, it doesn't matter if they get 1 extra tick of knockback res
     scoreboard players operation @s generic_attribute = @s str_attributes
+        scoreboard players set @s[scores={generic_attribute=71..}] generic_attribute 70
     scoreboard players remove @s generic_attribute 20
     scoreboard players add @s[scores={Absorption=1..}] generic_attribute 20
     scoreboard players operation @s generic_attribute *= @s 2
