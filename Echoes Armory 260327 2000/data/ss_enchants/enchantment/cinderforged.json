@@ -2,7 +2,7 @@
     "description": {
       "text": "Cinderforged"
     },
-    "exclusive_set": "minecraft:mending",
+    "exclusive_set": "#ss_enchants:exclusive_set/durability",
     "supported_items": "#ss_enchants:enchantable/cinderforged",
     "weight": 1,
     "max_level": 1,
