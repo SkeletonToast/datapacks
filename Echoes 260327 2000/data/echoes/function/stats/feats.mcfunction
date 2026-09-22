@@ -74,9 +74,9 @@ function echoes:stats/feat_assignment {"stat":"Soul"}
 
     # level 30: tactical combat: player gains 50 tact proficiency if mounted or gliding
         # in proficiency file
-    execute as @a[tag=Tact_feat_2,tag=!Tact_feat_3,scores={SneakTime=60..},advancements={echoes:using_spyglass=false},predicate=!ss_lib:is/moving] if items entity @s weapon.* spyglass run function parse:score {score:Tact,function:"ss_statuses:alert",prepend:"",append:".",prepend_position:0,append_position:2} 
-    execute as @a[tag=Tact_feat_3,tag=!Tact_feat_4,scores={SneakTime=30..},advancements={echoes:using_spyglass=false}] if items entity @s weapon.* spyglass run function parse:score {score:Tact,function:"ss_statuses:alert",prepend:"",append:".",prepend_position:0,append_position:2} 
-    execute as @a[tag=Tact_feat_4,scores={SneakTime=7..},advancements={echoes:using_spyglass=false}] if items entity @s weapon.* spyglass run function parse:score {score:Tact,function:"ss_statuses:alert",prepend:"",append:".",prepend_position:0,append_position:2} 
+    execute as @a[tag=Tact_feat_2,tag=!Tact_feat_3,scores={SneakTime=60..},advancements={echoes:using_spyglass=false},predicate=!ss_lib:is/moving] if items entity @s weapon.* spyglass run function parse:score {score:Tact,function:"ss_lib:status/alert",prepend:"",append:".",prepend_position:0,append_position:2} 
+    execute as @a[tag=Tact_feat_3,tag=!Tact_feat_4,scores={SneakTime=30..},advancements={echoes:using_spyglass=false}] if items entity @s weapon.* spyglass run function parse:score {score:Tact,function:"ss_lib:status/alert",prepend:"",append:".",prepend_position:0,append_position:2} 
+    execute as @a[tag=Tact_feat_4,scores={SneakTime=7..},advancements={echoes:using_spyglass=false}] if items entity @s weapon.* spyglass run function parse:score {score:Tact,function:"ss_lib:status/alert",prepend:"",append:".",prepend_position:0,append_position:2} 
     advancement revoke @a[tag=Tact_feat_2,advancements={echoes:using_spyglass=true}] only echoes:using_spyglass
 
     # level 50: adaptability: Player gains [Tact] Tact Proficiency, caps at 70

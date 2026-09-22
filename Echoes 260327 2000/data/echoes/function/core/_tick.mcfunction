@@ -1,7 +1,7 @@
 scoreboard players set @a luck_chance -1
 
 function ss_lib:_pre_function
-function ss_statuses:_pre_function
+function ss_lib:status/_pre_function
 function echoes:status/_pre_function
 function echoes:player/_pre_function
 function echoes:stats/_pre_function
@@ -13,7 +13,7 @@ function echoes:ambient/_tick
 
 function echoes:player/_tick
 function ss_armory:_tick
-function ss_statuses:_tick
+function ss_lib:status/_tick
 function echoes:stats/_tick
 # i moved feat assignment to player, since it's mostly related to things that happen in echoes mechanics,
     # so if there's an issue, check there
@@ -38,5 +38,5 @@ function ec_dev:_tick
 
 function echoes:player/_post_function
 function ss_lib:_post_function
-function ss_statuses:_post_function
+function ss_lib:status/_post_function
 function ec_dev:_post_function

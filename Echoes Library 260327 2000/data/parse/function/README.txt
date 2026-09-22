@@ -29,7 +29,7 @@ GUIDE
     + IF YOU NEED IT TO APPEAR BEFORE, YOU MUST CONVERT YOUR INPUT TO A POSITIVE AND MANUALLY ENTER THE NEGATIVE SIGN IN THE PREPEND MACRO.
 
 - NOTE ABOUT DECIMAL SCALING
-    + This module is designed to mainly output valid floats or integers. As such, it has unique behavior when the append position is outside the bounds of the input.
+    + This module is designed to mainly output valid floats or integers. As such, it has unique behavior when the prepend/append position is outside the bounds of the input.
     + If the append position is higher than the number of digits, the append value will just be written at the first position.
         + For example, an input of 123, $append of 0., and $append_position of 5 will result in output: 0.00123
     + If the prepend position is higher than the number of digits, the prepend value will just be written at the final position.
@@ -37,7 +37,7 @@ GUIDE
     + Both $prepend_position and $append_position can be entered as a negative, which will invert the direction in which they count, and scale accordingly.
         + An input of 12345, $prepend of +, and $prepend_position of -2 will result in output: +0012345
         + An input of 12345, $append of !, and $append_position of -2 will result in output: 1234500!
-    + This is an intended feature because it allows SPM to work better with decimal scaling, and because leading zeroes don't have any real impact on a number in a mathematical sense.
+    + This is an intended feature because it allows SPM to work better with decimal scaling.
 
 
 - Your parsed score outputs as $(value).

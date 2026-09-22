@@ -1,0 +1,12 @@
+$execute as @e[type=!#ss_lib:not_alive,type=!#ss_lib:hostile,type=!player,distance=1..8] facing entity @s eyes run particle dust{color:[0.60,1.00,0.00],scale:$(base)7} ^ ^ ^$(base)85 0 0 0 0 1 normal @p
+$execute as @e[type=!#ss_lib:not_alive,type=!#ss_lib:hostile,type=!player,distance=8..16] facing entity @s eyes run particle dust{color:[0.00,1.00,0.00],scale:$(base)6} ^ ^ ^$(base)9 0 0 0 0 1 normal @p
+$execute as @e[type=!#ss_lib:not_alive,type=!#ss_lib:hostile,type=!player,distance=16..24] facing entity @s eyes run particle dust{color:[0.00,0.50,0.00],scale:$(base)5} ^ ^ ^$(base)95 0 0 0 0 1 normal @p
+$execute as @e[type=#ss_lib:hostile,distance=1..10] facing entity @s eyes run particle dust{color:[0.00,0.90,1.00],scale:$(base)7} ^ ^ ^$(base)85 0 0 0 0 1 normal @p
+$execute as @e[type=#ss_lib:hostile,distance=10..20] facing entity @s eyes run particle dust{color:[0.00,0.40,1.00],scale:$(base)6} ^ ^ ^$(base)9 0 0 0 0 1 normal @p
+$execute as @e[type=#ss_lib:hostile,distance=20..30] facing entity @s eyes run particle dust{color:[0.60,0.00,1.00],scale:$(base)5} ^ ^ ^$(base)95 0 0 0 0 1 normal @p
+$execute as @a[gamemode=!creative,gamemode=!spectator,distance=5..12,predicate=!ss_lib:is/hiding] facing entity @s eyes run function ss_lib:status/alert_player {"dust_color":"color:[1.00,0.00,0.00]","dust_scale":"$(base)7","pos":"^ ^ ^$(base)85"}
+$execute as @a[gamemode=!creative,gamemode=!spectator,distance=12..24,predicate=!ss_lib:is/hiding] facing entity @s eyes run function ss_lib:status/alert_player {"dust_color":"color:[1.00,0.333,0.00]","dust_scale":"$(base)6","pos":"^ ^ ^$(base)9"}
+$execute as @a[gamemode=!creative,gamemode=!spectator,distance=24..36,predicate=!ss_lib:is/hiding] facing entity @s eyes run function ss_lib:status/alert_player {"dust_color":"color:[1.00,0.667,0.00]","dust_scale":"$(base)5","pos":"^ ^ ^$(base)95"}
+# $execute as @e[type=item,distance=1..8] facing entity @s eyes run particle dust{color:[1.00,1.00,1.00],scale:$(base)7} ^ ^ ^$(base)85 0 0 0 0 1 normal @p
+# $execute as @e[type=item,distance=8..16] facing entity @s eyes run particle dust{color:[0.67,0.67,0.67],scale:$(base)6} ^ ^ ^$(base)9 0 0 0 0 1 normal @p
+# $execute as @e[type=item,distance=16..24] facing entity @s eyes run particle dust{color:[0.33,0.33,0.33],scale:$(base)5} ^ ^ ^$(base)95 0 0 0 0 1 normal @p

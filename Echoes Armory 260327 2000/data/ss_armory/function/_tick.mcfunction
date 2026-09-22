@@ -22,7 +22,7 @@ execute as @a if items entity @s weapon.offhand shield[custom_data~{weapon:{nega
     execute as @a unless entity @s[scores={GunType=4}] run scoreboard players set @s PaintballType 0
     scoreboard players remove @a[scores={GunType=4,PaintballReload=0}] PaintballReload 1
     scoreboard players remove @a[scores={PaintballReload=1..}] PaintballReload 1
-    # execute as @a[scores={PaintballReload=1..}] run function ss_statuses:immobilized_jump
+    # execute as @a[scores={PaintballReload=1..}] run function ss_lib:status/immobilized_jump
     
     # execute as @a unless entity @s[scores={GunType=1..2}] run attribute @s step_height modifier remove gun_step_height
 

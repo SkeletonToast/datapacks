@@ -10,7 +10,7 @@ execute as @a[scores={Class=1,in_combat=0}] run scoreboard players operation @s 
 # in-combat evasion calculation
 scoreboard players add @a[scores={Class=1,DamageDealt=1..}] foudroyant_evasion 2
 scoreboard players remove @a[scores={Class=1,DamageTaken=1..}] foudroyant_evasion 3
-execute as @a[scores={Class=1,DamageDealt=1..},tag=InCombat] at @s positioned ~ ~0.2 ~ run function ss_particles:electric_spark_ring
+execute as @a[scores={Class=1,DamageDealt=1..},tag=InCombat] at @s positioned ~ ~0.2 ~ run function ss_lib:particles/electric_spark_ring
 
 # evasion apply
 execute as @a[scores={Class=1}] run attribute @s armor modifier remove foudroyant.evasion.armor

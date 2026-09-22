@@ -58,10 +58,10 @@ execute as @a[scores={HasPropertiedWeapon=0..,GunType=4},advancements={ss_armory
 execute as @a[scores={HasPropertiedWeapon=0..,SneakTime=1..19,GunType=1..,OnGround=1}] run scoreboard players operation @s generic_e = @s SneakTime
 execute as @a[scores={HasPropertiedWeapon=0..,SneakTime=1..19,GunType=1..,OnGround=1}] run scoreboard players operation @s generic_e *= @s 5
 execute as @a[scores={HasPropertiedWeapon=0..,SneakTime=1..19,GunType=1..,OnGround=1}] run scoreboard players operation @s encumbrance_hard += @s generic_e
-execute as @a[scores={HasPropertiedWeapon=0..,SneakTime=20..,GunType=1..,OnGround=1}] run function ss_statuses:immobilized
+execute as @a[scores={HasPropertiedWeapon=0..,SneakTime=20..,GunType=1..,OnGround=1}] run function ss_lib:status/immobilized
 
 # jump disabling
-    # execute as @a[scores={GunType=1..2}] run function ss_statuses:immobilized_jump
+    # execute as @a[scores={GunType=1..2}] run function ss_lib:status/immobilized_jump
     # execute as @a[scores={GunType=1..2}] run attribute @s step_height modifier add gun_step_height 1 add_multiplied_base
 
 # infinite ammo

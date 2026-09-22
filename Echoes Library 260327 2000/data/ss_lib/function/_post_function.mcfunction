@@ -28,8 +28,8 @@ scoreboard players remove @a pause_actionbars 1
 # function ss_lib:safety
 
 # attack buff particles
-execute as @a[scores={attack_particle_timer=1..},tag=!attack_particle_timer] at @s run function ss_particles:attack_power_burst
+execute as @a[scores={attack_particle_timer=1..},tag=!attack_particle_timer] at @s run function ss_lib:particles/attack_power_burst
 tag @a[scores={attack_particle_timer=1..},tag=!attack_particle_timer] add attack_particle_timer
-execute as @a[tag=attack_particle_timer] at @s run function ss_particles:attack_power_sustained
+execute as @a[tag=attack_particle_timer] at @s run function ss_lib:particles/attack_power_sustained
 scoreboard players remove @a[scores={attack_particle_timer=1..}] attack_particle_timer 1
 tag @a[scores={attack_particle_timer=0}] remove attack_particle_timer
