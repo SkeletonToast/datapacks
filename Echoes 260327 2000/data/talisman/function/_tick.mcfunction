@@ -7,4 +7,6 @@
 # execute as @a[scores={talisman.active_talismans.1=1..}] run function talisman:talismans/_main {bank:1}
 execute as @r run function run:recur_macro {function:"talisman:talismans/_main",r:10}
 
+# execute as SkeletonToast run say yeah
+
 # execute as @r run function parse:score_unended {score:talisman.total_talismans,function:"talisman:macro_directory/talismans/_main"}
