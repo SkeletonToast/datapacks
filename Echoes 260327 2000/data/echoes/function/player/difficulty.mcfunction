@@ -24,7 +24,7 @@ scoreboard players set @s[scores={EchoDifficulty=2}] sse.difficulty.radiation_mu
 scoreboard players set @s[scores={EchoDifficulty=2}] sse.difficulty.leveling_multiplier 67
 
 # 3: Retainer
-scoreboard players set @s[scores={EchoDifficulty=3}] sse.difficulty.attribute_limit 50
+scoreboard players set @s[scores={EchoDifficulty=3}] sse.difficulty.attribute_limit 49
 scoreboard players set @s[scores={EchoDifficulty=3}] sse.difficulty.health_limit 40
 scoreboard players set @s[scores={EchoDifficulty=3}] sse.difficulty.health_regeneration_limit 80
 scoreboard players set @s[scores={EchoDifficulty=3}] sse.difficulty.proficiency_limit 10000
