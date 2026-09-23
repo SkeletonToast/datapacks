@@ -3,7 +3,7 @@ function ss_armory:_load
 function ss_lib:status/_load
 function talisman:_load
 
-function ec_dev:_load
+function sse.dev:_load
 
 function echoes:monsters/_load
 # function echoes:classes/_load

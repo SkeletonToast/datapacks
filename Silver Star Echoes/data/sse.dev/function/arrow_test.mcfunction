@@ -1,0 +1,1 @@
+execute as @a[scores={SneakTime=1}] at @s anchored eyes positioned ^ ^ ^3 run function sse.dev:spawn_projectile/1 {"projectile":"wind_charge"}

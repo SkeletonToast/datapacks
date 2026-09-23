@@ -34,9 +34,9 @@ function ss_lib:deathcoords
 
 function echoes:monsters/_tick
 
-function ec_dev:_tick
+function sse.dev:_tick
 
 function echoes:player/_post_function
 function ss_lib:_post_function
 function ss_lib:status/_post_function
-function ec_dev:_post_function
+function sse.dev:_post_function

@@ -1,0 +1,1 @@
+data modify storage silver_star_armory installed set value true

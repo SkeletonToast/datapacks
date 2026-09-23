@@ -1,0 +1,1 @@
+data modify storage silver_star_library installed set value true

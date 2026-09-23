@@ -1,1 +1,0 @@
-function ec_dev:set_stats/set_stats {"st":70,"dx":70,"rs":70,"vt":70,"md":70,"tc":70,"sl":70}
