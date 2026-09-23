@@ -22,7 +22,7 @@ scoreboard players remove @e[scores={cleansed_timer=1..}] cleansed_timer 1
 # creakings
 execute as @e[type=creaking] on target at @s anchored eyes run particle dust_color_transition{from_color:[1.0,0.5,0.0],to_color:[0.4,0.2,0.0],scale:0.5} ^ ^ ^ 0.2 0.2 0.2 0 1 normal @s
 execute as @e[type=creaking] on target run effect give @s mining_fatigue 1 1 true
-# execute as @e[type=creaking] at @s on target run function echoes:core/luck_chance {base:0,function:"echoes:monsters/creaking_rotate",luck_scale:0.1,condition:unless}
+# execute as @e[type=creaking] at @s on target run function echoes:luck_chance {base:0,function:"echoes:monsters/creaking_rotate",luck_scale:0.1,condition:unless}
 
 # default variation
 # execute if score $variantMonsters true matches 1 as @a at @s if entity @e[scores={Age=1},type=#ss_lib:hostile,type=!#echoes:not_spawn_bolstered,tag=!SpawnDuplicated,distance=..100] run function echoes:monsters/variation_luck_check

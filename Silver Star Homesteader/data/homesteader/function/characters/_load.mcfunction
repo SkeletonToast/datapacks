@@ -1,0 +1,1 @@
+scoreboard objectives add switch_character trigger

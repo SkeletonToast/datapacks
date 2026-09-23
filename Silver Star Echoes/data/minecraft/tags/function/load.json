@@ -1,5 +1,5 @@
 {
     "values": [
-        "echoes:core/_load"
+        "echoes:_load"
     ]
 }

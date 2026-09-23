@@ -1,8 +1,13 @@
+# dependency failures
+execute unless data storage silver_star_library installed run return fail
+execute unless data storage silver_star_armory installed run return fail
+execute unless data storage silver_star_homesteader installed run return fail
+
 scoreboard players set @a luck_chance -1
 
 function ss_lib:_pre_function
 function ss_lib:status/_pre_function
-function echoes:status/_pre_function
+function echoes:elixir/_pre_function
 function echoes:player/_pre_function
 function echoes:stats/_pre_function
 

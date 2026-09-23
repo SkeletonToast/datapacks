@@ -1,3 +1,14 @@
 Talisman
 - Maybe rework talisman so that it also takes inputs for a source, and make it more compatible with any other datapack?
 - this could let you add some basic talismans for homesteader maybe
+
+
+Echoes
+- rename items
+    - rename cocoa beans to something else
+    - rename nether star to Fleeting Echo
+        - imitations of a real Vestige soul
+    - rename mending to frail mending or something
+    - rename fire protection to cindershield
+- make some sort of mechanic that makes you immune to void damage
+- make sure luck chance function actually works

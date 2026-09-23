@@ -1,3 +1,6 @@
+# dependency failures
+execute unless data storage silver_star_library installed run return fail
+
 scoreboard players add @a HasPropertiedWeapon 0
 execute as @a[scores={ItemSelected=1,HasPropertiedWeapon=0}] if items entity @s weapon.mainhand *[minecraft:custom_data~{weapon:{properties:{active:["mainhand"]}}}] run \
     scoreboard players set @s HasPropertiedWeapon 1
