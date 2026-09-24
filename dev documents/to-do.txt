@@ -10,5 +10,5 @@ Echoes
         - imitations of a real Vestige soul
     - rename mending to frail mending or something
     - rename fire protection to cindershield
-- make some sort of mechanic that makes you immune to void damage
+- make some sort of mechanic or item that makes you immune to void damage
 - make sure luck chance function actually works

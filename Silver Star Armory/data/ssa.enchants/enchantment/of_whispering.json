@@ -1,0 +1,144 @@
+{
+    "description": {
+      "text": "Whispering"
+    },
+    "exclusive_set": "#ssa.enchants:exclusive_set/elemental",
+    "supported_items": "#ssa.enchants:enchantable/elemental",
+    "weight": 1,
+    "max_level": 3,
+    "min_cost": {
+      "base": 25,
+      "per_level_above_first": 20
+    },
+    "max_cost": {
+      "base": 60,
+      "per_level_above_first": 20
+    },
+    "anvil_cost": 5,
+    "slots": [
+      "mainhand"
+    ],
+    "effects": {
+      "minecraft:post_attack": [
+        {
+          "requirements": {
+            "condition": "minecraft:entity_scores",
+            "entity": "attacker",
+            "scores": {
+              "fear": {
+                "min": 10000,
+                "max": 39999
+              }
+            }
+          },
+          "effect": {
+            "type": "minecraft:damage_entity",
+            "damage_type": "minecraft:out_of_world",
+            "min_damage": {
+              "type": "minecraft:linear",
+              "base": 0,
+              "per_level_above_first": 0.5
+            },
+            "max_damage": {
+              "type": "minecraft:linear",
+              "base": 0,
+              "per_level_above_first": 0.5
+            }
+          },
+          "enchanted": "attacker",
+          "affected": "victim"
+        },
+        {
+          "requirements": {
+            "condition": "minecraft:entity_scores",
+            "entity": "attacker",
+            "scores": {
+              "fear": {
+                "min": 40000,
+                "max": 69999
+              }
+            }
+          },
+          "effect": {
+            "type": "minecraft:damage_entity",
+            "damage_type": "minecraft:out_of_world",
+            "min_damage": {
+              "type": "minecraft:linear",
+              "base": 1,
+              "per_level_above_first": 0.5
+            },
+            "max_damage": {
+              "type": "minecraft:linear",
+              "base": 1,
+              "per_level_above_first": 0.5
+            }
+          },
+          "enchanted": "attacker",
+          "affected": "victim"
+        },
+        {
+          "requirements": {
+            "condition": "minecraft:any_of",
+            "terms": [
+              {
+                "condition": "minecraft:entity_scores",
+                "entity": "attacker",
+                "scores": {
+                  "fear": {
+                    "min": 70000
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:entity_scores",
+                "entity": "attacker",
+                "scores": {
+                  "fear_eligible": 0
+                }
+              }
+            ]
+          },
+          "effect": {
+            "type": "minecraft:damage_entity",
+            "damage_type": "minecraft:out_of_world",
+            "min_damage": {
+              "type": "minecraft:linear",
+              "base": 1,
+              "per_level_above_first": 1
+            },
+            "max_damage": {
+              "type": "minecraft:linear",
+              "base": 1,
+              "per_level_above_first": 1
+            }
+          },
+          "enchanted": "attacker",
+          "affected": "victim"
+        },
+        {
+          "requirements": {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "entity_type": "minecraft:player"
+            }
+          },
+          "enchanted": "attacker",
+          "affected": "victim",
+          "effect": {
+            "type": "minecraft:run_function",
+            "function": "ssa.enchants:whispering/main"
+          }
+        }
+      ],
+      "minecraft:tick": [
+        {
+          "effect": {
+            "type": "minecraft:run_function",
+            "function": "ssa.enchants:whispering/tick"
+          }
+        }
+      ]
+    }
+  }
+  

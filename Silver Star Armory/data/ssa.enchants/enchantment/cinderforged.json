@@ -1,0 +1,23 @@
+{
+    "description": {
+      "text": "Cinderforged"
+    },
+    "exclusive_set": "#ssa.enchants:exclusive_set/durability",
+    "supported_items": "#ssa.enchants:enchantable/cinderforged",
+    "weight": 1,
+    "max_level": 1,
+    "min_cost": {
+      "base": 20,
+      "per_level_above_first": 20
+    },
+    "max_cost": {
+      "base": 75,
+      "per_level_above_first": 20
+    },
+    "anvil_cost": 4,
+    "slots": [
+      "mainhand"
+    ],
+    "effects": {}
+  }
+  

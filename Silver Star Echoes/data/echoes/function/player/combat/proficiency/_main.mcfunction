@@ -68,7 +68,7 @@ scoreboard players add @s[scores={Tact=70..},tag=Tact_feat_3] proficiency_tact 3
 
 # style enchants
 execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"#echoes:exclusive_set/style"}]] run function echoes:player/combat/proficiency/style/enchantments
-execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"ss_enchants:hexblade"}]] run tag @s add hexblade_enchantment
+execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"ssa.enchants:hexblade"}]] run tag @s add hexblade_enchantment
 execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"#echoes:mind_proficiency"}]] run scoreboard players add @s proficiency_mind 30
 execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"#echoes:halo_breaker"}]] run scoreboard players add @s proficiency_soul 30
 execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"echoes:black_gold_halo_breaker"}]] run function echoes:player/combat/proficiency/style/black_gold_halo_breaker

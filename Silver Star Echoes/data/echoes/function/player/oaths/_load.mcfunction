@@ -62,13 +62,15 @@ scoreboard objectives add sse.allegiance dummy
     # students
         team add student_entropy "Student (Entropy)"
         team add student_vital "Student (Vitalism)"
-        team add student_justice "Student (Justice)"
+        # team add student_justice "Student (Justice)"
         team add student_artist "Student (Artistry)"
+        team add student_stellography "Student (Stellography)"
         team add student_scribe "Student (Script)"
         team modify student_entropy prefix "[Student (Entropy)] "
         team modify student_vital prefix "[Student (Vitalism)] "
-        team modify student_justice prefix "[Student (Justice)] "
+        # team modify student_justice prefix "[Student (Justice)] "
         team modify student_artist prefix "[Student (Artistry)] "
+        team modify student_artist prefix "[Student (Stellography)] "
         team modify student_scribe prefix "[Student (Script)] "
 
     # ashengard

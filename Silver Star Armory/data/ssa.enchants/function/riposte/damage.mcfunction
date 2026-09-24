@@ -1,0 +1,3 @@
+execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"ssa.enchants:stormtouch","levels":1}]] run attribute @s attack_damage modifier add ssa.enchants:riposte.attack_damage 0.1 add_multiplied_total
+execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"ssa.enchants:stormtouch","levels":2}]] run attribute @s attack_damage modifier add ssa.enchants:riposte.attack_damage 0.2 add_multiplied_total
+execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"ssa.enchants:stormtouch","levels":3}]] run attribute @s attack_damage modifier add ssa.enchants:riposte.attack_damage 0.3 add_multiplied_total

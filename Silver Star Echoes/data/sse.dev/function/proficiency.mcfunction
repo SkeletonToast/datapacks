@@ -78,4 +78,4 @@ execute if items entity @s weapon.mainhand *[enchantments~[{"enchantments":"echo
 tellraw @s [""]
 tellraw @s [{"text":"Mind: ","color":"gray"}]
 execute if items entity @s weapon.mainhand #echoes:copper_weapon run tellraw @s [{"text":" Copper Weapon: +Mind","color":"green"}]
-execute if items entity @s weapon.mainhand *[enchantments~[{"enchantments":"ss_enchants:hexblade"}]] run tellraw @s [{"text":" Hexblade: +Mind","color":"green"}]
+execute if items entity @s weapon.mainhand *[enchantments~[{"enchantments":"ssa.enchants:hexblade"}]] run tellraw @s [{"text":" Hexblade: +Mind","color":"green"}]

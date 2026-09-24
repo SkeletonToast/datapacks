@@ -1,5 +1,5 @@
 function ss_lib:_load
-function ss_armory:_load
+function ssa.armory:_load
 function ss_lib:status/_load
 function talisman:_load
 

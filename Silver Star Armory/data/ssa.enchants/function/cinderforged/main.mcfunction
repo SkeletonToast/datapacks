@@ -1,0 +1,2 @@
+execute as @s[tag=Kindling,level=1..] if items entity @s weapon.mainhand *[minecraft:damage~{damage:{min:1}}] run function ssa.enchants:cinderforged/repair {"cost":"0"}
+# execute as @s[tag=Kindling,level=1..] if items entity @s weapon.mainhand *[minecraft:damage~{damage:{min:1}},minecraft:enchantments~[{"enchantments":"ssa.enchants:resonance"}]] run function ssa.enchants:cinderforged/repair {"cost":"0"}

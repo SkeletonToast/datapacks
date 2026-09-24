@@ -1,0 +1,62 @@
+{
+  "description": {
+    "text": "Blizzard"
+  },
+  "exclusive_set": "#ssa.enchants:exclusive_set/elemental",
+  "supported_items": "#ssa.enchants:enchantable/elemental",
+  "primary_items": "#minecraft:swords",
+  "weight": 2,
+  "max_level": 2,
+  "min_cost": {
+    "base": 9,
+    "per_level_above_first": 10
+  },
+  "max_cost": {
+    "base": 60,
+    "per_level_above_first": 10
+  },
+  "anvil_cost": 3,
+  "slots": [
+    "mainhand"
+  ],
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:play_sound",
+          "sound": "minecraft:block.glass.break",
+          "volume": 0.3,
+          "pitch": {
+            "type": "minecraft:uniform",
+            "min_inclusive": 0.9,
+            "max_exclusive": 1.1
+          }
+        }
+      },
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:play_sound",
+          "sound": "minecraft:entity.player.hurt_freeze",
+          "volume": 0.5,
+          "pitch": {
+            "type": "minecraft:uniform",
+            "min_inclusive": 0.9,
+            "max_exclusive": 1.1
+          }
+        }
+      },
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "ssa.enchants:blizzard/main"
+        }
+      }
+    ]
+  }
+}

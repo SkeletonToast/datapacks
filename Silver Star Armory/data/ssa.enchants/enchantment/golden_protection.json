@@ -1,0 +1,47 @@
+{
+  "anvil_cost": 1,
+  "description": {
+    "text": "Golden Protection",
+    "color": "gold"
+  },
+  "effects": {
+    "minecraft:damage_protection": [
+      {
+        "effect": {
+          "type": "minecraft:add",
+          "value": {
+            "type": "minecraft:linear",
+            "base": 0.5,
+            "per_level_above_first": 0.5
+          }
+        },
+        "requirements": {
+          "condition": "minecraft:damage_source_properties",
+          "predicate": {
+            "tags": [
+              {
+                "expected": false,
+                "id": "minecraft:bypasses_invulnerability"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 12,
+    "per_level_above_first": 11
+  },
+  "max_level": 5,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 11
+  },
+  "slots": [
+    "armor"
+  ],
+  "exclusive_set": "#ssa.enchants:exclusive_set/golden_protection",
+  "supported_items": "#ssa.enchants:enchantable/golden_armor",
+  "weight": 10
+}
