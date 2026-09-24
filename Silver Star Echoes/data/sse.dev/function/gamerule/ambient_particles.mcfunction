@@ -9,4 +9,4 @@ scoreboard players set @s[scores={ambientParticles=2..}] ambientParticles 0
 execute store result storage gamerule_ambient_particles toggle int 1 run scoreboard players get @s ambientParticles
 
 # setting phantom player
-execute store result score $ambientParticles true run data get storage gamerule_ambient_particles toggle
+execute store result score $sse.gamerule.ambient_particles true run data get storage gamerule_ambient_particles toggle

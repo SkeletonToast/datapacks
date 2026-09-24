@@ -1,3 +1,5 @@
+function echoes:player/oaths/_load
+
 scoreboard objectives add in_combat dummy
 
 # scoreboard objectives add Day dummys

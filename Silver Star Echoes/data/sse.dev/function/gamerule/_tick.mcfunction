@@ -12,42 +12,42 @@ scoreboard players enable @a aegisVisibility
 scoreboard players enable @a tactCameraDistance
 
 execute as @a[scores={timeDilation=-1..}] run function sse.dev:gamerule/time_dilation
-execute as @a[scores={timeDilation=0..}] store result score $timeDilation true run data get storage gamerule_time_dilation toggle
+execute as @a[scores={timeDilation=0..}] store result score $sse.gamerule.time_dilation true run data get storage gamerule_time_dilation toggle
 execute as @a[scores={timeDilation=0..}] run data get storage gamerule_time_dilation toggle
 scoreboard players set @a timeDilation -2
 
 execute as @a[scores={variantMonsters=-1..}] run function sse.dev:gamerule/variant_monsters
-execute as @a[scores={variantMonsters=0..}] store result score $variantMonsters true run data get storage gamerule_variant_monsters toggle
+execute as @a[scores={variantMonsters=0..}] store result score $sse.gamerule.variant_monsters true run data get storage gamerule_variant_monsters toggle
 execute as @a[scores={variantMonsters=0..}] run data get storage gamerule_variant_monsters toggle
 scoreboard players set @a variantMonsters -2
 
 execute as @a[scores={creativeEncumbrance=-1..}] run function sse.dev:gamerule/creative_encumbrance
-execute as @a[scores={creativeEncumbrance=0..}] store result score $creativeEncumbrance true run data get storage gamerule_creative_encumbrance toggle
+execute as @a[scores={creativeEncumbrance=0..}] store result score $sse.gamerule.creative_encumbrance true run data get storage gamerule_creative_encumbrance toggle
 execute as @a[scores={creativeEncumbrance=0..}] run data get storage gamerule_creative_encumbrance toggle
 scoreboard players set @a creativeEncumbrance -2
 
 execute as @a[scores={combatJumpScaling=-1..}] run function sse.dev:gamerule/combat_jump_scaling
-execute as @a[scores={combatJumpScaling=0..}] store result score $combatJumpScaling true run data get storage gamerule_combat_jump_scaling toggle
+execute as @a[scores={combatJumpScaling=0..}] store result score $sse.gamerule.combat_jump_scaling true run data get storage gamerule_combat_jump_scaling toggle
 execute as @a[scores={combatJumpScaling=0..}] run data get storage gamerule_combat_jump_scaling toggle
 scoreboard players set @a combatJumpScaling -2
 
 execute as @a[scores={ambientParticles=-1..}] run function sse.dev:gamerule/ambient_particles
-execute as @a[scores={ambientParticles=0..}] store result score $ambientParticles true run data get storage gamerule_ambient_particles toggle
+execute as @a[scores={ambientParticles=0..}] store result score $sse.gamerule.ambient_particles true run data get storage gamerule_ambient_particles toggle
 execute as @a[scores={ambientParticles=0..}] run data get storage gamerule_ambient_particles toggle
 scoreboard players set @a ambientParticles -2
 
 execute as @a[scores={incrementalProficiencyScaling=-1..}] run function sse.dev:gamerule/incremental_proficiency_scaling
-execute as @a[scores={incrementalProficiencyScaling=0..}] store result score $incrementalProficiencyScaling true run data get storage gamerule_incremental_proficiency_scaling toggle
+execute as @a[scores={incrementalProficiencyScaling=0..}] store result score $sse.gamerule.incremental_proficiency_scaling true run data get storage gamerule_incremental_proficiency_scaling toggle
 execute as @a[scores={incrementalProficiencyScaling=0..}] run data get storage gamerule_incremental_proficiency_scaling toggle
 scoreboard players set @a incrementalProficiencyScaling -2
 
 execute as @a[scores={hungryDamageReduction=-1..}] run function sse.dev:gamerule/hungry_damage_reduction
-execute as @a[scores={hungryDamageReduction=0..}] store result score $hungryDamageReduction true run data get storage gamerule_hungry_damage_reduction toggle
+execute as @a[scores={hungryDamageReduction=0..}] store result score $sse.gamerule.hungry_damage_reduction true run data get storage gamerule_hungry_damage_reduction toggle
 execute as @a[scores={hungryDamageReduction=0..}] run data get storage gamerule_hungry_damage_reduction toggle
 scoreboard players set @a hungryDamageReduction -2
 
 execute as @a[scores={elytraBoosting=-1..}] run function sse.dev:gamerule/elytra_boosting
-execute as @a[scores={elytraBoosting=0..}] store result score $elytraBoosting true run data get storage gamerule_elytra_boosting toggle
+execute as @a[scores={elytraBoosting=0..}] store result score $sse.gamerule.elytra_boosting true run data get storage gamerule_elytra_boosting toggle
 execute as @a[scores={elytraBoosting=0..}] run data get storage gamerule_elytra_boosting toggle
 scoreboard players set @a elytraBoosting -2
 

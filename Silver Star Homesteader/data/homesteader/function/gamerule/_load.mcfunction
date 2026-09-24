@@ -1,0 +1,1 @@
+scoreboard objectives add homesteader.gamerule.character_limit trigger

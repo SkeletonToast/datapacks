@@ -91,8 +91,8 @@ execute as @a[scores={flight_level=4..,boosts_stored=1..}] if score @s boosts_st
     # execute as @a[scores={flight_level=4..,FallFlying=1,elytra_boost_cooldown=1,boosts_in_inventory=0,ItemOffhand=1}] run function echoes:player/elytra_scaling/give_boost
 
     scoreboard players set @a[scores={DamageTaken=1..,boost_fuel=1..}] boost_fuel -20
-    execute if score $elytraBoosting true matches 1 as @a[scores={flight_level=1..,FallFlying=1,boost_fuel=1..}] run tag @s[predicate=!ss_lib:input/sprint] remove elytra_sprint_boosting
-    execute if score $elytraBoosting true matches 1 as @a[scores={flight_level=1..,FallFlying=1,boost_fuel=1..},level=1..,predicate=ss_lib:input/sprint] run \
+    execute if score $sse.gamerule.elytra_boosting true matches 1 as @a[scores={flight_level=1..,FallFlying=1,boost_fuel=1..}] run tag @s[predicate=!ss_lib:input/sprint] remove elytra_sprint_boosting
+    execute if score $sse.gamerule.elytra_boosting true matches 1 as @a[scores={flight_level=1..,FallFlying=1,boost_fuel=1..},level=1..,predicate=ss_lib:input/sprint] run \
         function echoes:player/elytra_scaling/sprint_boost
     execute as @a run scoreboard players operation @s generic_f = @s Mind
     execute as @a run scoreboard players operation @s generic_f *= @s 2
@@ -103,8 +103,8 @@ execute as @a[scores={flight_level=4..,boosts_stored=1..}] if score @s boosts_st
     execute as @a[scores={flight_level=1..,FallFlying=1},predicate=!ss_lib:input/sprint] run scoreboard players add @s boost_fuel 1
     execute as @a[scores={flight_level=1..,OnGround=1}] run scoreboard players add @s boost_fuel 1
 
-    execute if score $elytraBoosting true matches 1 as @a[scores={FallFlying=1,flight_level=1..,boost_fuel=1..},gamemode=!spectator,gamemode=!creative] if score @s boost_fuel <= @s generic_f run function ss_lib:actionbar {"title":"\"Boost: \",{\"score\":{\"name\":\"*\",\"objective\":\"boost_fuel\"},\"color\":\"aqua\"},{\"text\":\"/\",\"color\":\"white\"},{\"score\":{\"name\":\"*\",\"objective\":\"generic_f\"},\"color\":\"aqua\"}","duration":1}
-    execute if score $elytraBoosting true matches 1 as @a[scores={FallFlying=1,flight_level=1..,boost_fuel=..0},gamemode=!spectator,gamemode=!creative] if score @s boost_fuel <= @s generic_f run function ss_lib:actionbar {"title":"\"Boost: \",{\"text\":\"0\",\"color\":\"red\"},{\"text\":\"/\",\"color\":\"white\"},{\"score\":{\"name\":\"*\",\"objective\":\"generic_f\"},\"color\":\"aqua\"}","duration":1}
+    execute if score $sse.gamerule.elytra_boosting true matches 1 as @a[scores={FallFlying=1,flight_level=1..,boost_fuel=1..},gamemode=!spectator,gamemode=!creative] if score @s boost_fuel <= @s generic_f run function ss_lib:actionbar {"title":"\"Boost: \",{\"score\":{\"name\":\"*\",\"objective\":\"boost_fuel\"},\"color\":\"aqua\"},{\"text\":\"/\",\"color\":\"white\"},{\"score\":{\"name\":\"*\",\"objective\":\"generic_f\"},\"color\":\"aqua\"}","duration":1}
+    execute if score $sse.gamerule.elytra_boosting true matches 1 as @a[scores={FallFlying=1,flight_level=1..,boost_fuel=..0},gamemode=!spectator,gamemode=!creative] if score @s boost_fuel <= @s generic_f run function ss_lib:actionbar {"title":"\"Boost: \",{\"text\":\"0\",\"color\":\"red\"},{\"text\":\"/\",\"color\":\"white\"},{\"score\":{\"name\":\"*\",\"objective\":\"generic_f\"},\"color\":\"aqua\"}","duration":1}
     # execute as @a[scores={FallFlying=1}] unless score @s boost_fuel = @s generic_f run title @s actionbar ["Boost: ",{"score":{"name":"*","objective":"boost_fuel"},"color":"yellow"},{"text":"/","color":"white"},{"score":{"name":"*","objective":"generic_f"},"color":"yellow"}]
     # execute as @a[scores={FallFlying=1}] unless score @s boost_fuel = @s generic_f run scoreboard players set @s pause_actionbars 5
 

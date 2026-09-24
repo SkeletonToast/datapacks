@@ -9,4 +9,4 @@ scoreboard players set @s[scores={creativeEncumbrance=2..}] creativeEncumbrance 
 execute store result storage gamerule_creative_encumbrance toggle int 1 run scoreboard players get @s creativeEncumbrance
 
 # setting phantom player
-execute store result score $creativeEncumbrance true run data get storage gamerule_creative_encumbrance toggle
+execute store result score $sse.gamerule.creative_encumbrance true run data get storage gamerule_creative_encumbrance toggle

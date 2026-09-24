@@ -108,19 +108,19 @@ scoreboard players operation @s prof_soul_unadj = @s proficiency_soul
 scoreboard players operation @s prof_mind_unadj = @s proficiency_mind
 
 # linear
-    # execute unless score $incrementalProficiencyScaling true matches 1 run function echoes:player/combat/proficiency/linear
+    # execute unless score $sse.gamerule.incremental_proficiency_scaling true matches 1 run function echoes:player/combat/proficiency/linear
 function echoes:player/combat/proficiency/linear
 
 # incremental
-    # execute as @s[scores={proficiency_str=1..}] if score $incrementalProficiencyScaling true matches 1 run \
+    # execute as @s[scores={proficiency_str=1..}] if score $sse.gamerule.incremental_proficiency_scaling true matches 1 run \
     #     function echoes:player/combat/proficiency/incremental {"stat":"Strength","statabbr":"str"}
-    # execute as @s[scores={proficiency_dex=1..}] if score $incrementalProficiencyScaling true matches 1 run \
+    # execute as @s[scores={proficiency_dex=1..}] if score $sse.gamerule.incremental_proficiency_scaling true matches 1 run \
     #     function echoes:player/combat/proficiency/incremental {"stat":"Dexterity","statabbr":"dex"}
-    # execute as @s[scores={proficiency_tact=1..}] if score $incrementalProficiencyScaling true matches 1 run \
+    # execute as @s[scores={proficiency_tact=1..}] if score $sse.gamerule.incremental_proficiency_scaling true matches 1 run \
     #     function echoes:player/combat/proficiency/incremental {"stat":"Tact","statabbr":"tact"}
-    # execute as @s[scores={proficiency_soul=1..}] if score $incrementalProficiencyScaling true matches 1 run \
+    # execute as @s[scores={proficiency_soul=1..}] if score $sse.gamerule.incremental_proficiency_scaling true matches 1 run \
     #     function echoes:player/combat/proficiency/incremental {"stat":"Soul","statabbr":"soul"}
-    # execute as @s[scores={proficiency_mind=1..}] if score $incrementalProficiencyScaling true matches 1 run \
+    # execute as @s[scores={proficiency_mind=1..}] if score $sse.gamerule.incremental_proficiency_scaling true matches 1 run \
     #     function echoes:player/combat/proficiency/incremental {"stat":"Mind","statabbr":"mind"}
 
 # actual assignment
@@ -144,7 +144,7 @@ scoreboard players operation @s generic_a -= @s generic_b
 scoreboard players operation @s generic_a *= @s 10
     scoreboard players operation @s generic_a *= @s 10
 
-execute if score $hungryDamageReduction true matches 1 run scoreboard players operation @s[scores={generic_a=1..}] proficiency -= @s generic_a
+execute if score $sse.gamerule.hungry_damage_reduction true matches 1 run scoreboard players operation @s[scores={generic_a=1..}] proficiency -= @s generic_a
 
 scoreboard players operation @s gun_base_damage += @s proficiency_dex
 scoreboard players operation @s gun_base_damage += @s proficiency_tact

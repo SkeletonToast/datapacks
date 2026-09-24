@@ -1,3 +1,4 @@
 function homesteader:dependencies
 
-function homesteader:_load
+function homesteader:gamerule/_load
+function homesteader:characters/_load

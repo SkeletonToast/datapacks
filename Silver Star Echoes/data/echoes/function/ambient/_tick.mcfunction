@@ -1,4 +1,4 @@
-execute if score $ambientParticles true matches 0 run return fail
+execute if score $sse.gamerule.ambient_particles true matches 0 run return fail
 function echoes:ambient/compatibility
 
 execute as @a[predicate=echoes:in_ocean] run function ss_lib:fetch/in_water {s:"@s"}

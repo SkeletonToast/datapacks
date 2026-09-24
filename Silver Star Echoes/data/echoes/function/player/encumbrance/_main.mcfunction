@@ -60,8 +60,8 @@ scoreboard players set @a[scores={encumbrance=91..}] encumbrance 90
 
 execute as @a if score @s encumbrance <= @s encumbrance_hard run scoreboard players operation @s encumbrance = @s encumbrance_hard
 
-execute if score $creativeEncumbrance true matches 0 run scoreboard players set @a[gamemode=creative] encumbrance 0
-execute if score $creativeEncumbrance true matches 0 run scoreboard players set @a[gamemode=spectator] encumbrance 0
+execute if score $sse.gamerule.creative_encumbrance true matches 0 run scoreboard players set @a[gamemode=creative] encumbrance 0
+execute if score $sse.gamerule.creative_encumbrance true matches 0 run scoreboard players set @a[gamemode=spectator] encumbrance 0
     
 execute as @a[scores={encumbrance=1..}] run function parse:score \
         {"score":"encumbrance",prepend:"-",append:".",prepend_position:0,append_position:2,"function":"echoes:player/encumbrance/speed_apply"}

@@ -9,4 +9,4 @@ scoreboard players set @s[scores={hungryDamageReduction=2..}] hungryDamageReduct
 execute store result storage gamerule_hungry_damage_reduction toggle int 1 run scoreboard players get @s hungryDamageReduction
 
 # setting phantom player
-execute store result score $hungryDamageReduction true run data get storage gamerule_hungry_damage_reduction toggle
+execute store result score $sse.gamerule.hungry_damage_reduction true run data get storage gamerule_hungry_damage_reduction toggle

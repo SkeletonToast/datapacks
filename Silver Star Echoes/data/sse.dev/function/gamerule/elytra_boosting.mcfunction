@@ -9,4 +9,4 @@ scoreboard players set @s[scores={elytraBoosting=2..}] elytraBoosting 0
 execute store result storage gamerule_elytra_boosting toggle int 1 run scoreboard players get @s elytraBoosting
 
 # setting phantom player
-execute store result score $elytraBoosting true run data get storage gamerule_elytra_boosting toggle
+execute store result score $sse.gamerule.elytra_boosting true run data get storage gamerule_elytra_boosting toggle

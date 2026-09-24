@@ -9,4 +9,4 @@ scoreboard players set @s[scores={variantMonsters=2..}] variantMonsters 0
 execute store result storage gamerule_variant_monsters toggle int 1 run scoreboard players get @s variantMonsters
 
 # setting phantom player
-execute store result score $variantMonsters true run data get storage gamerule_variant_monsters toggle
+execute store result score $sse.gamerule.variant_monsters true run data get storage gamerule_variant_monsters toggle

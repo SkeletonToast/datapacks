@@ -8,13 +8,13 @@ function sse.dev:_load
 function echoes:monsters/_load
 # function echoes:classes/_load
 function echoes:campfires/_load
-function echoes:oaths/_load
 
 function echoes:stats/_load
 function echoes:elixir/_load
 function echoes:player/_load
 # function echoes:artifacts/_load
 
+execute unless score $homesteader.gamerule.character_limit value matches 7.. run scoreboard players set $homesteader.gamerule.character_limit value 7
 gamerule players_sleeping_percentage 101
 gamerule keep_inventory true
 

@@ -9,4 +9,4 @@ scoreboard players set @s[scores={combatJumpScaling=2..}] combatJumpScaling 0
 execute store result storage gamerule_variant_monsters toggle int 1 run scoreboard players get @s combatJumpScaling
 
 # setting phantom player
-execute store result score $combatJumpScaling true run data get storage gamerule_variant_monsters toggle
+execute store result score $sse.gamerule.combat_jump_scaling true run data get storage gamerule_variant_monsters toggle
