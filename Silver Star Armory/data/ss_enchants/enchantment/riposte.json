@@ -2,7 +2,7 @@
     "description": {
       "text": "Riposte"
     },
-    "exclusive_set": "#ssa.enchants:exclusive_set/tactical",
+    "exclusive_set": "#ss_enchants:exclusive_set/tactical",
     "supported_items": "#minecraft:enchantable/melee_weapon",
     "weight": 5,
     "max_level": 3,
@@ -23,7 +23,7 @@
       {
         "effect": {
           "type": "minecraft:run_function",
-          "function": "ssa.enchants:riposte/timer"
+          "function": "ss_enchants:riposte/timer"
         }
       },
       {
@@ -38,7 +38,7 @@
         },
         "effect": {
           "type": "minecraft:run_function",
-          "function": "ssa.enchants:riposte/damage"
+          "function": "ss_enchants:riposte/damage"
         }
       }
     ]

@@ -17,4 +17,4 @@ item modify entity @s weapon.mainhand ss_armory:hide_attribute_tooltips
 tag @s add WeaponModified
 
 # cinderforged chance
-    # execute if predicate ss_lib:random_10_percent run item modify entity @s weapon.mainhand [{"function":"minecraft:set_components","components":{"minecraft:enchantments":{"levels":{"ssa.enchants:cinderforged":1}}}}]
+    # execute if predicate ss_lib:random_10_percent run item modify entity @s weapon.mainhand [{"function":"minecraft:set_components","components":{"minecraft:enchantments":{"levels":{"ss_enchants:cinderforged":1}}}}]

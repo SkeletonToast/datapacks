@@ -41,7 +41,7 @@
   "slots": [
     "armor"
   ],
-  "exclusive_set": "#ssa.enchants:exclusive_set/golden_protection",
-  "supported_items": "#ssa.enchants:enchantable/golden_armor",
+  "exclusive_set": "#ss_enchants:exclusive_set/golden_protection",
+  "supported_items": "#ss_enchants:enchantable/golden_armor",
   "weight": 10
 }

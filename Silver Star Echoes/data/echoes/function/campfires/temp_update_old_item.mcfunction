@@ -6,6 +6,6 @@ execute if items entity @s weapon.mainhand *[minecraft:custom_data~{weapon:{adva
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{weapon:{artisan:true}}] run function echoes:campfires/temp_item_update_function {"run":"item modify entity @s weapon.mainhand [{\"function\":\"minecraft:set_custom_model_data\",\"strings\":{\"values\":['artisan'],\"mode\":\"replace_all\"}}]"}
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{weapon:{siege:true}}] run function echoes:campfires/temp_item_update_function {"run":"item modify entity @s weapon.mainhand [{\"function\":\"minecraft:set_custom_model_data\",\"strings\":{\"values\":['siege'],\"mode\":\"replace_all\"}}]"}
 
-execute if items entity @s weapon.mainhand lead[minecraft:custom_data~{weapon:{special:true}}] run function echoes:campfires/temp_item_update_function {"run":"function ssa.armory:artisan/whip"}
+execute if items entity @s weapon.mainhand lead[minecraft:custom_data~{weapon:{special:true}}] run function echoes:campfires/temp_item_update_function {"run":"function ss_armory:artisan/whip"}
 
 tellraw @s[tag=campfireUpdatedItem] ["Outdated item detected. It has been updated. No other campfire functions were run."]

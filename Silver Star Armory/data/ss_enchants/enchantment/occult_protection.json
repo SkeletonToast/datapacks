@@ -24,7 +24,7 @@
                 },
                 {
                   "expected": true,
-                  "id": "ssa.enchants:occult"
+                  "id": "ss_enchants:occult"
                 }
               ]
             }
@@ -35,7 +35,7 @@
         {
           "effect": {
             "type": "minecraft:run_function",
-            "function": "ssa.enchants:occult_protection"
+            "function": "ss_enchants:occult_protection"
           }
         }
       ]

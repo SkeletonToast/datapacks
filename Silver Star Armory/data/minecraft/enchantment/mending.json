@@ -25,7 +25,7 @@
   "slots": [
     "any"
   ],
-  "exclusive_set": "#ssa.enchants:exclusive_set/durability",
+  "exclusive_set": "#ss_enchants:exclusive_set/durability",
   "supported_items": "#minecraft:enchantable/durability",
   "weight": 2
 }

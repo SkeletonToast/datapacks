@@ -50,13 +50,13 @@ execute as @a[scores={FallFlying=0}] if predicate ss_lib:crit_eligible run attri
 execute as @a unless predicate ss_lib:crit_eligible run attribute @s attack_damage modifier remove ss_armory.crit.attack_damage
 execute as @a[scores={FallFlying=1}] run attribute @s attack_damage modifier remove ss_armory.crit.attack_damage
 
-execute as @a if predicate ss_lib:crit_eligible if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"ssa.enchants:critical"}]] run function ssa.enchants:critical/apply
-execute as @a if predicate ss_lib:crit_eligible unless items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"ssa.enchants:critical"}]] run function ssa.enchants:critical/remove
+execute as @a if predicate ss_lib:crit_eligible if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"ss_enchants:critical"}]] run function ss_enchants:critical/apply
+execute as @a if predicate ss_lib:crit_eligible unless items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"ss_enchants:critical"}]] run function ss_enchants:critical/remove
 
 # riposte enchantment
 scoreboard players remove @a[scores={riposte_timer=1..}] riposte_timer 1
 scoreboard players set @a[scores={riposte_damage_blocked=1..}] riposte_damage_blocked 0
-execute as @a[scores={riposte_timer=0}] run attribute @s attack_damage modifier remove ssa.enchants:riposte.attack_damage
+execute as @a[scores={riposte_timer=0}] run attribute @s attack_damage modifier remove ss_enchants:riposte.attack_damage
 
 # gun damage reduce
 scoreboard players set @s gun_base_damage 0

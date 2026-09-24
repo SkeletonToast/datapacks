@@ -2,7 +2,7 @@
     "description": {
       "translate": "Critical"
     },
-    "exclusive_set": "#ssa.enchants:exclusive_set/tactical",
+    "exclusive_set": "#ss_enchants:exclusive_set/tactical",
     "supported_items": "#minecraft:enchantable/melee_weapon",
     "weight": 5,
     "max_level": 3,
@@ -28,7 +28,7 @@
               "ss_lib:crit_eligible" : true
             }
           },
-          "id": "ssa.enchants:enchantment.critical",
+          "id": "ss_enchants:enchantment.critical",
           "attribute": "minecraft:attack_damage",
           "amount": {
             "type": "minecraft:linear",

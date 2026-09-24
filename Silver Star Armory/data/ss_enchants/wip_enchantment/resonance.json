@@ -2,7 +2,7 @@
     "description": {
       "text": "Resonance"
     },
-    "exclusive_set": "#ssa.enchants:exclusive_set/tactical",
+    "exclusive_set": "#ss_enchants:exclusive_set/tactical",
     "supported_items": "#minecraft:enchantable/weapon",
     "weight": 2,
     "max_level": 1,
@@ -32,7 +32,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantments": "ssa.enchants:stormtouch"
+                      "enchantments": "ss_enchants:stormtouch"
                     }
                   ]
                 }
@@ -42,7 +42,7 @@
         },
         "effect": {
           "type": "minecraft:run_function",
-          "function": "ssa.enchants:stormtouch/effect"
+          "function": "ss_enchants:stormtouch/effect"
         }
       },
       {
@@ -57,7 +57,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantments": "ssa.enchants:blizzard"
+                      "enchantments": "ss_enchants:blizzard"
                     }
                   ]
                 }
@@ -67,7 +67,7 @@
         },
         "effect": {
           "type": "minecraft:run_function",
-          "function": "ssa.enchants:blizzard/effect"
+          "function": "ss_enchants:blizzard/effect"
         }
       },
       {
@@ -118,7 +118,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantments": "ssa.enchants:of_whispering"
+                      "enchantments": "ss_enchants:of_whispering"
                     }
                   ]
                 }
@@ -128,7 +128,7 @@
         },
         "effect": {
           "type": "minecraft:run_function",
-          "function": "ssa.enchants:whispering/effect"
+          "function": "ss_enchants:whispering/effect"
         }
       }
     ],
@@ -146,7 +146,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantments": "ssa.enchants:earthen"
+                          "enchantments": "ss_enchants:earthen"
                         }
                       ]
                     }
@@ -259,7 +259,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantments": "ssa.enchants:wisdom"
+                      "enchantments": "ss_enchants:wisdom"
                     }
                   ]
                 }

@@ -1,6 +1,6 @@
 {
     "values": [
       "minecraft:unbreaking",
-      "ssa.enchants:golden_unbreaking"
+      "ss_enchants:golden_unbreaking"
     ]
   }

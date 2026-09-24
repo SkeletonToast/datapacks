@@ -2,7 +2,7 @@
     "description": {
       "text": "Barrage"
     },
-    "exclusive_set": "#ssa.enchants:exclusive_set/tactical",
+    "exclusive_set": "#ss_enchants:exclusive_set/tactical",
     "supported_items": "#minecraft:enchantable/melee_weapon",
     "weight": 4,
     "max_level": 5,
@@ -21,7 +21,7 @@
     "effects": {
       "minecraft:attributes": [
         {
-          "id": "ssa.enchants:enchantment.barrage",
+          "id": "ss_enchants:enchantment.barrage",
           "attribute": "minecraft:attack_damage",
           "amount": -2.0,
           "operation": "add_value"
@@ -47,7 +47,7 @@
           "affected": "victim",
           "effect": {
             "type": "minecraft:run_function",
-            "function": "ssa.enchants:hexblade/particles"
+            "function": "ss_enchants:hexblade/particles"
           }
         },
         {
@@ -55,7 +55,7 @@
           "affected": "victim",
           "effect": {
             "type": "minecraft:damage_entity",
-            "damage_type": "ssa.enchants:no_cooldown",
+            "damage_type": "ss_enchants:no_cooldown",
             "min_damage": {
               "type": "minecraft:linear",
               "base": 0.5,

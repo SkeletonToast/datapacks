@@ -2,8 +2,8 @@
   "description": {
     "text": "Earthen"
   },
-  "exclusive_set": "#ssa.enchants:exclusive_set/elemental",
-  "supported_items": "#ssa.enchants:enchantable/elemental",
+  "exclusive_set": "#ss_enchants:exclusive_set/elemental",
+  "supported_items": "#ss_enchants:enchantable/elemental",
   "primary_items": "#minecraft:swords",
   "weight": 2,
   "max_level": 2,
@@ -82,7 +82,7 @@
         },
         "effect": {
           "type": "minecraft:run_function",
-          "function": "ssa.enchants:earthen/particles"
+          "function": "ss_enchants:earthen/particles"
         },
         "enchanted": "attacker",
         "affected": "victim"

@@ -2,8 +2,8 @@
   "description": {
     "text": "Hexblade"
   },
-  "exclusive_set": "#ssa.enchants:exclusive_set/hexblade",
-  "supported_items": "#ssa.enchants:enchantable/hexblade",
+  "exclusive_set": "#ss_enchants:exclusive_set/hexblade",
+  "supported_items": "#ss_enchants:enchantable/hexblade",
   "primary_items": "#minecraft:swords",
   "weight": 5,
   "max_level": 5,
@@ -40,7 +40,7 @@
         "affected": "victim",
         "effect": {
           "type": "minecraft:run_function",
-          "function": "ssa.enchants:hexblade/particles"
+          "function": "ss_enchants:hexblade/particles"
         }
       },
       {

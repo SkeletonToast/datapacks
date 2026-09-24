@@ -2,7 +2,7 @@
     "values": [
       "minecraft:mending",
       "minecraft:unbreaking",
-      "ssa.enchants:cinderforged",
-      "ssa.enchants:golden_unbreaking"
+      "ss_enchants:cinderforged",
+      "ss_enchants:golden_unbreaking"
     ]
   }

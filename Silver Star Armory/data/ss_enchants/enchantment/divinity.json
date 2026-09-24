@@ -42,7 +42,7 @@
           "affected": "victim",
           "effect": {
             "type": "minecraft:run_function",
-            "function": "ssa.enchants:divinity/particles"
+            "function": "ss_enchants:divinity/particles"
           }
         },
         {

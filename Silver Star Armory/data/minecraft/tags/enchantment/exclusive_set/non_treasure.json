@@ -1,17 +1,17 @@
 {
     "values": [
-      "ssa.enchants:blizzard",
-      "ssa.enchants:cinderforged",
-      "ssa.enchants:defender",
-      "ssa.enchants:earthen",
-      "ssa.enchants:finesse",
-      "ssa.enchants:hexblade",
-      "ssa.enchants:reach",
-      "ssa.enchants:stormtouch",
-      "ssa.enchants:warding",
-      "ssa.enchants:of_whispering",
-      "ssa.enchants:windsweep",
-      "ssa.enchants:wisdom",
-      "ssa.enchants:resonance"
+      "ss_enchants:blizzard",
+      "ss_enchants:cinderforged",
+      "ss_enchants:defender",
+      "ss_enchants:earthen",
+      "ss_enchants:finesse",
+      "ss_enchants:hexblade",
+      "ss_enchants:reach",
+      "ss_enchants:stormtouch",
+      "ss_enchants:warding",
+      "ss_enchants:of_whispering",
+      "ss_enchants:windsweep",
+      "ss_enchants:wisdom",
+      "ss_enchants:resonance"
     ]
   }

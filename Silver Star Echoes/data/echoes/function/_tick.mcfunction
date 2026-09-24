@@ -17,7 +17,7 @@ function echoes:stats/_pre_function
 function echoes:ambient/_tick
 
 function echoes:player/_tick
-function ssa.armory:_tick
+function ss_armory:_tick
 function ss_lib:status/_tick
 function echoes:stats/_tick
 # i moved feat assignment to player, since it's mostly related to things that happen in echoes mechanics,

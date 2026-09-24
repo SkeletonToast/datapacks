@@ -1,7 +1,7 @@
 {
     "values": [
-      "ssa.enchants:no_cooldown",
-      "ssa.armory:no_cooldown",
+      "ss_enchants:no_cooldown",
+      "ss_armory:no_cooldown",
       "minecraft:player_attack"
     ]
 }

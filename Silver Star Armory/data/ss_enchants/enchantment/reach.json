@@ -2,7 +2,7 @@
     "description": {
       "text": "Reach"
     },
-    "exclusive_set": "#ssa.enchants:exclusive_set/tactical",
+    "exclusive_set": "#ss_enchants:exclusive_set/tactical",
     "supported_items": "#minecraft:enchantable/melee_weapon",
     "weight": 10,
     "max_level": 3,
@@ -21,7 +21,7 @@
     "effects": {
       "minecraft:attributes": [
         {
-          "id": "ssa.enchants:enchantment.reach",
+          "id": "ss_enchants:enchantment.reach",
           "attribute": "minecraft:entity_interaction_range",
           "amount": {
             "type": "minecraft:linear",
@@ -31,7 +31,7 @@
           "operation": "add_value"
         },
         {
-          "id": "ssa.enchants:enchantment.reach",
+          "id": "ss_enchants:enchantment.reach",
           "attribute": "minecraft:block_interaction_range",
           "amount": {
             "type": "minecraft:linear",

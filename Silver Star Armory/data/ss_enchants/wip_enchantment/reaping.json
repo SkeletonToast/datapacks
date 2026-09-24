@@ -13,7 +13,7 @@
                 "affected": "victim",
                 "effect": {
                 "type": "minecraft:run_function",
-                "function": "ssa.enchants:reaping/main"
+                "function": "ss_enchants:reaping/main"
                 }
             }
         ]

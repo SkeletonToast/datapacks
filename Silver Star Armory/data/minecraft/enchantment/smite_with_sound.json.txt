@@ -224,7 +224,7 @@
           "affected": "victim",
           "effect": {
             "type": "minecraft:run_function",
-            "function": "ssa.enchants:smite/main"
+            "function": "ss_enchants:smite/main"
           }
         }
       ]

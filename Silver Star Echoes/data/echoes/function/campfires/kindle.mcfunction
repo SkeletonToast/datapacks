@@ -49,7 +49,7 @@ execute as @s[scores={ItemSelected=1},tag=!campfireUpdatedItem] if items entity 
 execute as @s[scores={ItemSelected=1},tag=!campfireUpdatedItem] if items entity @s weapon.mainhand #minecraft:logs run function echoes:campfires/create
 
 # cinderforged functionality
-execute as @s[scores={ItemSelected=1},tag=!campfireUpdatedItem,predicate=ss_lib:is/sneaking] if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"ssa.enchants:cinderforged"}]] run function echoes:campfires/kindle_particles
-execute as @s[level=1..] if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"ssa.enchants:cinderforged"}],minecraft:damage~{damage:{min:1}}] run function ssa.enchants:cinderforged/repair {"cost":"1"}
+execute as @s[scores={ItemSelected=1},tag=!campfireUpdatedItem,predicate=ss_lib:is/sneaking] if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"ss_enchants:cinderforged"}]] run function echoes:campfires/kindle_particles
+execute as @s[level=1..] if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"ss_enchants:cinderforged"}],minecraft:damage~{damage:{min:1}}] run function ss_enchants:cinderforged/repair {"cost":"1"}
 
 tag @s remove campfireUpdatedItem

@@ -23,7 +23,7 @@
       {
         "effect": {
           "type": "minecraft:run_function",
-          "function": "ssa.enchants:heavy_curse/main"
+          "function": "ss_enchants:heavy_curse/main"
         }
       }
     ]

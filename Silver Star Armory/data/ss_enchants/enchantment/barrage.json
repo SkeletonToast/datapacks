@@ -2,7 +2,7 @@
     "description": {
       "text": "Barrage"
     },
-    "exclusive_set": "#ssa.enchants:exclusive_set/tactical",
+    "exclusive_set": "#ss_enchants:exclusive_set/tactical",
     "supported_items": "#minecraft:enchantable/melee_weapon",
     "weight": 4,
     "max_level": 1,

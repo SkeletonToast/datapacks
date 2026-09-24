@@ -2,8 +2,8 @@
   "description": {
     "text": "Blizzard"
   },
-  "exclusive_set": "#ssa.enchants:exclusive_set/elemental",
-  "supported_items": "#ssa.enchants:enchantable/elemental",
+  "exclusive_set": "#ss_enchants:exclusive_set/elemental",
+  "supported_items": "#ss_enchants:enchantable/elemental",
   "primary_items": "#minecraft:swords",
   "weight": 2,
   "max_level": 2,
@@ -54,7 +54,7 @@
         "affected": "victim",
         "effect": {
           "type": "minecraft:run_function",
-          "function": "ssa.enchants:blizzard/main"
+          "function": "ss_enchants:blizzard/main"
         }
       }
     ]

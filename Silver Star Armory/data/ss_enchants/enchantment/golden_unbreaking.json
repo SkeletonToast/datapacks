@@ -26,7 +26,7 @@
         "requirements": {
           "condition": "minecraft:match_tool",
           "predicate": {
-            "items": "#ssa.enchants:enchantable/gold"
+            "items": "#ss_enchants:enchantable/gold"
           }
         }
       }
@@ -44,7 +44,7 @@
   "slots": [
     "any"
   ],
-  "supported_items": "#ssa.enchants:enchantable/gold",
-  "exclusive_set": "#ssa.enchants:exclusive_set/golden_unbreaking",
+  "supported_items": "#ss_enchants:enchantable/gold",
+  "exclusive_set": "#ss_enchants:exclusive_set/golden_unbreaking",
   "weight": 5
 }

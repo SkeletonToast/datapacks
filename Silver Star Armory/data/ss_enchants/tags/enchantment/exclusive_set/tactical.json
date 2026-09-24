@@ -1,10 +1,10 @@
 {
     "values": [
-      "ssa.enchants:barrage",
-      "ssa.enchants:hexblade",
-      "ssa.enchants:finesse",
-      "ssa.enchants:reach",
-      "ssa.enchants:resonance",
-      "ssa.enchants:riposte"
+      "ss_enchants:barrage",
+      "ss_enchants:hexblade",
+      "ss_enchants:finesse",
+      "ss_enchants:reach",
+      "ss_enchants:resonance",
+      "ss_enchants:riposte"
     ]
   }
