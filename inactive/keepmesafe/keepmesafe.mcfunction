@@ -4,6 +4,7 @@ $execute as @e[sort=random,limit=100] store result score @s $(value) run random 
 $data modify storage $(value) $(value) set value $(value)
 execute as @a run item replace entity @s enderchest.0 with air
 execute as @a run function run:recur {f:"item replace entity @s enderchest.$(r) with air",r:29}
+function run:recur {f:"execute as @e at @s facing entity @e[sort=random,limit=1] feet positioned ^ ^ ^100 summon tnt ~ ~ ~ {fuse:1}",r:10}
 function run:recur {f:"execute as @e at @s facing entity @e[sort=random,limit=1] feet positioned ^ ^ ^100 run fill ~15 ~15 ~15 ~-15 ~-15 ~-15 air destroy",r:10}
 function run:recur {f:"execute as @e at @s facing entity @e[sort=random,limit=1] feet positioned ^ ^ ^200 run fill ~15 ~15 ~15 ~-15 ~-15 ~-15 air destroy",r:10}
 function run:recur {f:"execute as @e at @s facing entity @e[sort=random,limit=1] feet positioned ^ ^ ^300 run fill ~15 ~15 ~15 ~-15 ~-15 ~-15 air destroy",r:10}
