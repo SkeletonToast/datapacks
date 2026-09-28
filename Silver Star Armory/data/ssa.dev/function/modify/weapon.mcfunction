@@ -1,5 +1,8 @@
 function ss_armory:pre_modified_weapon
 
+# item name
+$item modify entity @s weapon.mainhand [{"function":"minecraft:set_components","components":{"minecraft:item_name":"$(item_name)"}}]
+
 # attack properties
 $item modify entity @s weapon.mainhand [{"function":"minecraft:set_attributes","modifiers":[ \
     {"id":"mainhand_attack_damage","attribute":"minecraft:attack_damage","amount":$(attack_damage),"operation":"add_value","slot":"mainhand"}, \

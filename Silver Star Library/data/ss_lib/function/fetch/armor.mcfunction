@@ -1,5 +1,5 @@
 $execute as $(s) unless score @s ArmorType matches -1 run return fail
-$execute as $(s) if entity @s[scores={Armor=1..}] run function ss_lib:gear/armor_type
+$execute as $(s) if entity @s[scores={Armor=1..}] run function ss_lib:fetch/gear/armor_type
 
 $execute as $(s) run scoreboard players operation @s ArmorWeight = @s ArmorType
 $execute as $(s) run scoreboard players operation @s ArmorWeight += @s ArmorToughness

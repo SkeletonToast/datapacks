@@ -79,6 +79,7 @@ scoreboard objectives add Food food
     # gear values
     scoreboard objectives add WeaponType dummy
     scoreboard objectives add WeaponWeight dummy
+    scoreboard objectives add WeaponMaterial dummy
 
     scoreboard objectives add ArmorType dummy
     scoreboard objectives add ArmorWeight dummy

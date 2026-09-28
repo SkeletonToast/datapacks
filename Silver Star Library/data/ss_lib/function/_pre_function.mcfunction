@@ -24,6 +24,7 @@ scoreboard players set @a ItemOffhand -1
 # weapon & armor types / weights
 scoreboard players set @a WeaponType -1
 scoreboard players set @a WeaponWeight -1
+scoreboard players set @a WeaponMaterial -1
 
 scoreboard players set @a ArmorType -1
 scoreboard players set @a HelmetType -1
