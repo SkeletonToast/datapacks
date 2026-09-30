@@ -17,6 +17,11 @@ execute as @a[scores={SneakTime=1..,in_combat=1..}] if score @s in_combat <= @s 
 
 scoreboard players set @a[scores={used_firework_rocket=1..}] used_firework_rocket 0
 
+# radiation
+function echoes:player/radiation
+    # i figure this can be post function, because nothing else really references radiation, so all its effects can be calculated and applied at the same time
+        # this also leaves the most room for additional resistance and stat changes
+
 # aegis nonsense
 tag @a[tag=AegisApplied] remove AegisApplied
 

@@ -1,12 +1,11 @@
-scoreboard players enable @a[scores={sse.permissions_level=5..}] timeDilation
-scoreboard players enable @a[scores={sse.permissions_level=5..}] smoothSprinting
-scoreboard players enable @a[scores={sse.permissions_level=5..}] variantMonsters
-scoreboard players enable @a[scores={sse.permissions_level=5..}] creativeEncumbrance
-scoreboard players enable @a[scores={sse.permissions_level=5..}] combatJumpScaling
-scoreboard players enable @a[scores={sse.permissions_level=5..}] ambientParticles
-scoreboard players enable @a[scores={sse.permissions_level=5..}] incrementalProficiencyScaling
-scoreboard players enable @a[scores={sse.permissions_level=5..}] hungryDamageReduction
-scoreboard players enable @a[scores={sse.permissions_level=5..}] elytraBoosting
+scoreboard players enable @a[scores={ssl.permissions_level=4..}] timeDilation
+scoreboard players enable @a[scores={ssl.permissions_level=4..}] smoothSprinting
+scoreboard players enable @a[scores={ssl.permissions_level=4..}] variantMonsters
+scoreboard players enable @a[scores={ssl.permissions_level=4..}] creativeEncumbrance
+scoreboard players enable @a[scores={ssl.permissions_level=4..}] combatJumpScaling
+scoreboard players enable @a[scores={ssl.permissions_level=4..}] ambientParticles
+scoreboard players enable @a[scores={ssl.permissions_level=4..}] hungryDamageReduction
+scoreboard players enable @a[scores={ssl.permissions_level=4..}] elytraBoosting
 scoreboard players enable @a aegisSelfVisibility
 scoreboard players enable @a aegisVisibility
 scoreboard players enable @a tactCameraDistance
@@ -35,11 +34,6 @@ execute as @a[scores={ambientParticles=-1..}] run function sse.dev:gamerule/ambi
 execute as @a[scores={ambientParticles=0..}] store result score $sse.gamerule.ambient_particles true run data get storage gamerule_ambient_particles toggle
 execute as @a[scores={ambientParticles=0..}] run data get storage gamerule_ambient_particles toggle
 scoreboard players set @a ambientParticles -2
-
-execute as @a[scores={incrementalProficiencyScaling=-1..}] run function sse.dev:gamerule/incremental_proficiency_scaling
-execute as @a[scores={incrementalProficiencyScaling=0..}] store result score $sse.gamerule.incremental_proficiency_scaling true run data get storage gamerule_incremental_proficiency_scaling toggle
-execute as @a[scores={incrementalProficiencyScaling=0..}] run data get storage gamerule_incremental_proficiency_scaling toggle
-scoreboard players set @a incrementalProficiencyScaling -2
 
 execute as @a[scores={hungryDamageReduction=-1..}] run function sse.dev:gamerule/hungry_damage_reduction
 execute as @a[scores={hungryDamageReduction=0..}] store result score $sse.gamerule.hungry_damage_reduction true run data get storage gamerule_hungry_damage_reduction toggle

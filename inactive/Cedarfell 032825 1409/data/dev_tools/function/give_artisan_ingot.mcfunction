@@ -1,0 +1,1 @@
+$give @r[nbt={UUID:$(UUID)}] gold_ingot[item_name='"Artisan Ingot"',custom_data={"weapon":{"smithing":{"type":"artisan","soul_campfire":true}}}]

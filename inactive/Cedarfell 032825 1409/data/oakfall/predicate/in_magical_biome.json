@@ -1,0 +1,13 @@
+{
+    "condition": "minecraft:location_check",
+    "predicate": {
+      "biomes": [
+        "minecraft:mushroom_fields",
+        "minecraft:flower_forest",
+        "minecraft:cherry_grove",
+        "minecraft:ice_spikes",
+        "minecraft:deep_dark"
+      ]
+    }
+  }
+  

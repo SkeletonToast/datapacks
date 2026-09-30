@@ -11,3 +11,10 @@ Echoes
     - rename fire protection to cindershield
 - make some sort of mechanic or item that makes you immune to void damage
 - make sure luck chance function actually works
+- finish oath effects
+
+Library
+- add contingency for making sure ssl doesn't run twice in one tick / doesnt reload twice
+    - most subfunctions already have contingencies in place for this
+    - this is really just so that it's easier to distribute datapacks like Homesteader without installing SSL as well
+        - just remember that all datapacks have dependency functions now, so if you don't have SSL installed, it's really easy to figure out how to do it. it literally links you to the download page if you try to run any other pack without SSL

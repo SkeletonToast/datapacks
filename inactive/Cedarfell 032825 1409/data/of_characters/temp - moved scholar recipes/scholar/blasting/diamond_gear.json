@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:blasting",
+    "ingredient": "#of_characters:diamond_gear",
+    "result": {
+      "id": "minecraft:diamond"
+    }
+  }
+  

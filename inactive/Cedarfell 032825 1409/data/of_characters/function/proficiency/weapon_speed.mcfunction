@@ -1,0 +1,1 @@
+$attribute @s attack_speed modifier add weapon_proficiency_attack_speed 0.$(value) add_value

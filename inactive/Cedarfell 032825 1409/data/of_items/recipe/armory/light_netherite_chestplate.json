@@ -1,0 +1,53 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+      "# #",
+      "X#X",
+      "#X#"
+    ],
+    "key": {
+      "#": "minecraft:netherite_scrap",
+      "X": "minecraft:iron_ingot"
+    },
+    "result": {
+      "id": "minecraft:iron_chestplate",
+      "components": {
+        "minecraft:item_name": "{\"text\":\"Light Netherite Chestplate\"}",
+        "minecraft:item_model": "minecraft:netherite_chestplate",
+        "minecraft:max_damage": 542,
+        "minecraft:repairable": {"items":"#minecraft:repairs_netherite_armor"},
+        "minecraft:trim": {"pattern":"tide","material":"iron","show_in_tooltip":false},
+        "minecraft:equippable": {
+          "slot": "chest",
+          "model": "minecraft:netherite"
+        },
+        "minecraft:attribute_modifiers": {
+          "modifiers": [
+            {
+              "id": "armor.chest",
+              "type": "minecraft:armor",
+              "amount": 7,
+              "operation": "add_value",
+              "slot": "chest"
+            },
+            {
+              "id": "armor_toughness.chest",
+              "type": "minecraft:armor_toughness",
+              "amount": 2,
+              "operation": "add_value",
+              "slot": "chest"
+            },
+            {
+              "id": "knockback_resistance.chest",
+              "type": "minecraft:knockback_resistance",
+              "amount": 0.05,
+              "operation": "add_value",
+              "slot": "chest"
+            }
+          ]
+        }
+      }
+    }
+  }
+  

@@ -1,5 +1,38 @@
 function elixir:_load
 
+scoreboard objectives add ssl.permissions_level dummy
+    # These permissions are not used in any SSLib functions by default.
+        # They exist mainly just because I personally wanted them, but feel free to use them as well if you want.
+        # If you don't want to use them, then just ignore them. This system doesn't affect literally anything unless you specifically tell it to.
+    # Guidelines are below for each permission level.
+# !!! KEEP IN MIND:
+    # Any player who has op status, and can freely execute commands, can change their and others' permission levels.
+    # This system is designed EXCLUSIVELY for use by non-operator players, to allow regular members limited permissions.
+# Level 0 - timeouted / no permissions
+    # Assign this if you want to specifically deny permissions from a player.
+    # It should be assumed that players with a permissions level of 0 or lower have been intentionally punished for something.
+# Level 1 - all members (public server)
+    # This level is automatically assigned to all players who join this world.
+    # Any permissions that you want to give all players (who have not been specifically punished) should be assigned to this permissions level.
+    # You might consider using permissions level 2 instead, if your world has some sort of verification system in place.
+# Level 2 - all members (private server) or trusted/verified members (public server)
+    # In private settings, this permissions level might be given to all players as a baseline, since you likely know and trust most world members.
+    # In public settings, consider only giving this permissions level to players who you have a baseline level of trust for.
+        # This might mean they are verified to be real users (as in, not bots or griefers), or maybe you just like them. Use it however you want.
+# Level 3 - especially trustworthy members / junior moderators
+    # This permission should probably only be given to individuals who you know and trust.
+    # It isn't typically used to enable full moderation, but you might use it to, for example, give players the ability to freely teleport home, or give them special potion effects, or whatever.
+    # This is kind of a filler permissions level, just here in case you want something above a general member, but below a moderator.
+# Level 4 - moderators
+    # This permission level can be given to members who are trusted enough to have moderator capabilities, though not necessarily trusted enough to be operators (i.e. have full command execution permissions).
+    # You might consider use it to allow players to change custom gamerules (which is mainly what I use it for), or maybe give certain players extra health, or immunity to certain mechanics, or whatever.
+        # PLEASE NOTE: If Silver Star: Echoes is installed (which may or may not be released by the time you're reading this): most gamerules in Echoes can be changed by anybody with a permissions level of 4 or higher.
+# Level 99 - operators
+    # This permission level should ONLY be given to players who are also operators.
+    # This is mostly a formality, since operators can already do whatever they want, but it still has some niche uses.
+    # Consider using this for any functions that should require operator permissions, but aren't easily triggerable by commands. Maybe you use it to only allow certain players into the operator lounge, or whatever. Maybe you want to run special commands on all operator-level players.
+    # Just treat this as a level indicating the player is an operator.
+
 scoreboard objectives add -1 dummy
 scoreboard objectives add 2 dummy
 scoreboard objectives add 3 dummy
@@ -99,6 +132,7 @@ scoreboard objectives add Food food
     # scoreboard objectives remove Unclothed
     # scoreboard objectives remove Naked
 
+scoreboard objectives add GameTime dummy
 scoreboard objectives add SoftGameTime dummy
 
 scoreboard objectives add TimeSinceDeath minecraft.custom:minecraft.time_since_death

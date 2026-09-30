@@ -5,8 +5,6 @@ scoreboard objectives add in_combat dummy
 # scoreboard objectives add Day dummys
     # removed in favor of $day value
 
-scoreboard objectives add GameTime dummy
-
 scoreboard objectives add EchoDifficulty dummy
 
 scoreboard objectives add xp_level level
@@ -119,6 +117,11 @@ gamerule natural_health_regeneration false
         # scoreboard objectives remove body_temp_modifier
 
     scoreboard objectives add drink_water minecraft.used:minecraft.potion
+
+# radiation
+    scoreboard objectives add sse.radiation.resistance dummy
+    scoreboard objectives add sse.radiation.add dummy
+    scoreboard objectives add sse.radiation dummy
 
 # difficulty
     scoreboard objectives add sse.difficulty.attribute_limit dummy

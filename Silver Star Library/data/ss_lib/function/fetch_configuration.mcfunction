@@ -22,4 +22,5 @@ function ss_lib:fetch/in_water {s:"@a"}
 # fire
 scoreboard players set @a Fire 0
 
-execute store result score @a DayTime run time query minecraft:day
+execute store result score $day_time value run time query minecraft:day
+# execute store result score @a DayTime run time query minecraft:day

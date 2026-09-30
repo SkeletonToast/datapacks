@@ -1,0 +1,13 @@
+{
+    "criteria": {
+      "enchanted_item": {
+        "trigger": "minecraft:enchanted_item"
+      }
+    },
+    "requirements": [
+      [
+        "enchanted_item"
+      ]
+    ]
+  }
+  

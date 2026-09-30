@@ -1,0 +1,2 @@
+$execute as @r[nbt={UUID:$(UUID)}] run function of_characters:stats/set_base_stats {"Body":12,"Mind":12,"Soul":12,"Wit":12,"Will":12}
+$execute as @r[nbt={UUID:$(UUID)}] run function of_characters:stats/set_secondary_stats

@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+      "SS ",
+      " S ",
+      " S "
+    ],
+    "key": {
+      "S": "minecraft:stick"
+    },
+    "result": {
+      "id": "minecraft:stick",
+      "components": {
+        "minecraft:item_name": "{\"text\":\"Wooden Crutch\"}",
+        "minecraft:lore": [
+          "[{\"text\":\"A sturdy wooden crutch. It can be\",\"italic\":false,\"color\":\"gray\"}]",
+          "[{\"text\":\"used to help a crippled individual\",\"italic\":false,\"color\":\"gray\"}]",
+          "[{\"text\":\"walk at a normal pace.\",\"italic\":false,\"color\":\"gray\"}]"
+        ],
+        "custom_model_data": {"strings":["crutch"]},
+        "minecraft:custom_data": {"crutch":true},
+        "max_stack_size": 1
+      }
+    }
+  }
+  

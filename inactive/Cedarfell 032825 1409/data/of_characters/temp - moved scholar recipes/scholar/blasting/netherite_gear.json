@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:blasting",
+    "ingredient": "#of_characters:netherite_gear",
+    "result": {
+      "id": "minecraft:netherite_ingot"
+    }
+  }
+  

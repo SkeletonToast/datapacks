@@ -32,7 +32,6 @@ scoreboard players set @a[team=ardent] sse.oath 7
 # students
 scoreboard players set @a[team=student_artist] sse.oath 8
 scoreboard players set @a[team=student_entropy] sse.oath 8
-scoreboard players set @a[team=student_justice] sse.oath 8
 scoreboard players set @a[team=student_artist] sse.oath 8
 scoreboard players set @a[team=student_scribe] sse.oath 8
 
@@ -71,3 +70,26 @@ scoreboard players set @a[team=nightbrand] sse.oath 18
 scoreboard players set @a[team=silverseeker] sse.oath 19
 scoreboard players set @a[team=nightjar] sse.oath 20
 scoreboard players set @a[team=heron] sse.oath 21
+
+# very basic oath effects
+# court - all around buffs
+scoreboard players add @a[scores={sse.oath=1}] Strength 1
+scoreboard players add @a[scores={sse.oath=1}] Dexterity 1
+scoreboard players add @a[scores={sse.oath=1}] Resolve 1
+scoreboard players add @a[scores={sse.oath=1}] Vitality 1
+scoreboard players add @a[scores={sse.oath=1}] Mind 1
+scoreboard players add @a[scores={sse.oath=1}] Tact 1
+scoreboard players add @a[scores={sse.oath=1}] Soul 1
+
+# haligsect - big mind buff, better health regen
+scoreboard players add @a[scores={sse.oath=2}] Mind 5
+execute as @a[scores={sse.oath=2}] if score @s aegis_amplifier >= @s aegis_amplifier_max run scoreboard players operation @s aegis_timer_max /= @s 2
+
+# angel hunters - idk
+
+# overgrowth - better resolve and vitality
+scoreboard players add @a[scores={sse.oath=5}] Resolve 4
+scoreboard players add @a[scores={sse.oath=5}] Vitality 3
+
+# arcanists - tact
+scoreboard players add @a[scores={sse.oath=6}] Tact 5

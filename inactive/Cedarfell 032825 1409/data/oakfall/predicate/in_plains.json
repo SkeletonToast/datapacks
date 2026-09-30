@@ -1,0 +1,13 @@
+{
+    "condition": "minecraft:location_check",
+    "predicate": {
+      "biomes": [
+        "minecraft:meadow",
+        "minecraft:windswept_hills",
+        "minecraft:sparse_jungle",
+        "minecraft:plains",
+        "minecraft:sunflower_plains"
+      ]
+    }
+  }
+  

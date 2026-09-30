@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "equipment",
+    "ingredients": [
+      "minecraft:iron_helmet",
+      "minecraft:fermented_spider_eye",
+      "minecraft:golden_carrot"
+    ],
+    "result": {
+      "id": "minecraft:iron_helmet",
+      "components": {
+        "minecraft:item_name": "{\"text\":\"Invisible Hat\"}",
+        "minecraft:item_model": "minecraft:air",
+        "minecraft:equippable": {
+          "slot": "head",
+          "model": "minecraft:air"
+        }
+      }
+    }
+  }
+  

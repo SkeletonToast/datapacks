@@ -1,0 +1,1 @@
+# the thaumaturgist will sell mana and other magical items, and if possible, their stock of mana will rotate

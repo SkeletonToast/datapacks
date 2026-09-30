@@ -1,0 +1,1 @@
+$give @r[nbt={UUID:$(UUID)}] netherite_ingot[item_name='"Siege Ingot"',custom_data={"weapon":{"smithing":{"type":"siege","soul_campfire":true}}}]

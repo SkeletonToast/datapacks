@@ -20,11 +20,11 @@ scoreboard players remove @a[predicate=ss_lib:is/raining] ambient_temp 5
 scoreboard players remove @a[predicate=ss_lib:in_rain] ambient_temp 5
 
     # night
-    scoreboard players remove @a[scores={Dimension=1,DayTime=13000..23000}] ambient_temp 2
-    scoreboard players remove @a[scores={Dimension=1,DayTime=14000..22000}] ambient_temp 2
-    scoreboard players remove @a[scores={Dimension=1,DayTime=15000..21000}] ambient_temp 2
-    scoreboard players remove @a[scores={Dimension=1,DayTime=16000..20000}] ambient_temp 2
-    scoreboard players remove @a[scores={Dimension=1,DayTime=17000..19000}] ambient_temp 2
+    execute if score $day_time value matches 13000..23000 run scoreboard players remove @a[scores={Dimension=1}] ambient_temp 2
+    execute if score $day_time value matches 14000..22000 run scoreboard players remove @a[scores={Dimension=1}] ambient_temp 2
+    execute if score $day_time value matches 15000..21000 run scoreboard players remove @a[scores={Dimension=1}] ambient_temp 2
+    execute if score $day_time value matches 16000..20000 run scoreboard players remove @a[scores={Dimension=1}] ambient_temp 2
+    execute if score $day_time value matches 17000..19000 run scoreboard players remove @a[scores={Dimension=1}] ambient_temp 2
 
     # frozen
     execute as @a[scores={frozen_timer=0..99}] run scoreboard players operation @s ambient_temp -= @s frozen_timer

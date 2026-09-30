@@ -1,0 +1,52 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+      "   ",
+      "# #",
+      "# #"
+    ],
+    "key": {
+      "#": "minecraft:netherite_scrap"
+    },
+    "result": {
+      "id": "minecraft:iron_boots",
+      "components": {
+        "minecraft:item_name": "{\"text\":\"Light Netherite Boots\"}",
+        "minecraft:item_model": "minecraft:netherite_boots",
+        "minecraft:max_damage": 431,
+        "minecraft:repairable": {"items":"#minecraft:repairs_netherite_armor"},
+        "minecraft:trim": {"pattern":"dune","material":"iron","show_in_tooltip":false},
+        "minecraft:equippable": {
+          "slot": "feet",
+          "model": "minecraft:netherite"
+        },
+        "minecraft:attribute_modifiers": {
+          "modifiers": [
+            {
+              "id": "armor.feet",
+              "type": "minecraft:armor",
+              "amount": 2,
+              "operation": "add_value",
+              "slot": "feet"
+            },
+            {
+              "id": "armor_toughness.feet",
+              "type": "minecraft:armor_toughness",
+              "amount": 2,
+              "operation": "add_value",
+              "slot": "feet"
+            },
+            {
+              "id": "knockback_resistance.feet",
+              "type": "minecraft:knockback_resistance",
+              "amount": 0.05,
+              "operation": "add_value",
+              "slot": "feet"
+            }
+          ]
+        }
+      }
+    }
+  }
+  

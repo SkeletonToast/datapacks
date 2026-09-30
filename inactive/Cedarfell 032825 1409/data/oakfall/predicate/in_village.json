@@ -1,0 +1,12 @@
+{
+    "condition": "minecraft:location_check",
+    "predicate": {
+      "structures": [
+        "minecraft:village_desert",
+        "minecraft:village_plains",
+        "minecraft:village_savanna",
+        "minecraft:village_snowy",
+        "minecraft:village_taiga"
+      ]
+    }
+  }

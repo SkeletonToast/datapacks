@@ -1,0 +1,1 @@
+$scoreboard players set @r[nbt={UUID:$(UUID)}] RestOrRespawn 0

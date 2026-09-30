@@ -1,0 +1,48 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+      "AAA",
+      "GHG",
+      "WCW"
+    ],
+    "key": {
+      "H": "minecraft:diamond_helmet",
+      "A": "minecraft:amethyst_shard",
+      "G": "minecraft:gold_ingot",
+      "W": "minecraft:nether_wart",
+      "C": "minecraft:golden_carrot"
+    },
+    "result": {
+      "id": "minecraft:leather_helmet",
+      "components": {
+        "minecraft:trim": {
+          "material": "minecraft:gold",
+          "pattern": "minecraft:wayfinder",
+          "show_in_tooltip": false
+        },
+        "minecraft:item_name": "{\"text\":\"Crystal Goggles\"}",
+        "minecraft:lore": [
+          "[{\"text\":\"\",\"italic\":false,\"color\":\"gray\"}]",
+          "[{\"text\":\"A cap sporting old-fashioned goggles.\",\"italic\":false,\"color\":\"gray\"}]",
+          "[{\"text\":\"The lenses are made of some kind of\",\"italic\":false,\"color\":\"gray\"}]",
+          "[{\"text\":\"crystal, which allows the user to see\",\"italic\":false,\"color\":\"gray\"}]",
+          "[{\"text\":\"further through fog.\",\"italic\":false,\"color\":\"gray\"}]"
+        ],
+        "minecraft:attribute_modifiers": {
+          "modifiers": [
+            {
+              "id": "head_armor",
+              "type": "minecraft:armor",
+              "amount": 1,
+              "operation": "add_value",
+              "slot": "head"
+            }
+          ]
+        },
+        "minecraft:rarity": "uncommon",
+        "minecraft:custom_data": {"goggles":true}
+      }
+    }
+  }
+  

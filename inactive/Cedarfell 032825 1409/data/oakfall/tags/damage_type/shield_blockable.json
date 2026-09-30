@@ -1,0 +1,16 @@
+{
+    "values": [
+      "minecraft:arrow",
+      "#minecraft:is_player_attack",
+      "minecraft:player_explosion",
+      "minecraft:trident",
+      "minecraft:thrown",
+      "minecraft:mob_attack",
+      "minecraft:mob_attack_no_aggro",
+      "minecraft:mob_projectile",
+      "minecraft:spit",
+      "minecraft:fireball",
+      "minecraft:explosion",
+      "minecraft:sting"
+    ]
+}

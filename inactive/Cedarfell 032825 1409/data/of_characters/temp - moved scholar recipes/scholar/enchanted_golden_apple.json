@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+      "D#D",
+      "#X#",
+      "D#D"
+    ],
+    "key": {
+      "#": "minecraft:gold_ingot",
+      "X": "minecraft:apple",
+      "D": "minecraft:diamond"
+    },
+    "result": {
+      "id": "minecraft:enchanted_golden_apple",
+      "count": 1
+    }
+  }
+  

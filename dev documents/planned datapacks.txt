@@ -15,7 +15,7 @@ New pack: "Homesteader" / "Petrichor"?
     - you can only have a certain amount of Familiars
     - mounts wouldn't move around so much if they weren't currently mounted
     - add an item that lets you target a specific entity for your pets to attack
-        - this item would probably also leet you de-aggro your pets
+        - this item would probably also let you de-aggro your pets
 - Various cosmetic immersion things
     - at-will height changing!
         - probably still with some drawback, or just capped at +/- 10% or whatever
@@ -54,7 +54,7 @@ New pack: "Homesteader" / "Petrichor"?
     - heavy wind? idk what this would do but i wrote it down so
     - sandstorms?
         - heavily slows you in deserts, causes reduced vision, maybe moves you a certain direction?
-        - you could even just add slowness based on on the player's rotation direction lol
+        - you could even just add slowness / air drag based on on the player's rotation direction lol
     - storms at sea?
     - eclipses / deep nights
 - moon phase effects!!

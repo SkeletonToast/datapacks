@@ -1,0 +1,83 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "group": "psychoactives",
+    "ingredients": [
+      "minecraft:blue_dye",
+      "minecraft:blue_dye",
+      "minecraft:blue_dye",
+      "minecraft:redstone"
+    ],
+    "result": {
+      "id": "minecraft:blue_dye",
+      "count": 3,
+      "components": {
+        "minecraft:custom_data": {"psychoactive":{"type":"blue"}},
+        "minecraft:item_name": "\"Psychoactive Azure\"",
+        "minecraft:consumable": {
+          "consume_seconds": 2,
+          "animation": "eat",
+          "sound": "minecraft:entity.generic.eat",
+          "has_consume_particles": true,
+          "on_consume_effects": [
+            {
+              "type": "minecraft:play_sound",
+              "sound": "minecraft:ambient.cave"
+            },
+            {
+              "type": "minecraft:apply_effects",
+              "effects": [
+                {
+                  "id": "minecraft:conduit_power",
+                  "amplifier": 0,
+                  "duration": 1200
+                },
+                {
+                  "id": "minecraft:dolphins_grace",
+                  "amplifier": 0,
+                  "duration": 1200
+                },
+                {
+                  "id": "minecraft:slowness",
+                  "amplifier": 1,
+                  "duration": 800
+                },
+                {
+                  "id": "minecraft:nausea",
+                  "amplifier": 0,
+                  "duration": 400
+                }
+              ],
+            "probability": 1
+            },
+            {
+              "type": "minecraft:apply_effects",
+              "effects": [
+                {
+                  "id": "minecraft:weakness",
+                  "amplifier": 2,
+                  "duration": 400
+                },
+                {
+                  "id": "minecraft:mining_fatigue",
+                  "amplifier": 2,
+                  "duration": 400
+                },
+                {
+                  "id": "minecraft:slowness",
+                  "amplifier": 2,
+                  "duration": 400
+                },
+                {
+                  "id": "minecraft:nausea",
+                  "amplifier": 0,
+                  "duration": 400
+                }
+              ],
+            "probability": 0.1
+            }
+          ]
+        }
+      }
+    }
+  }
+  

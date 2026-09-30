@@ -1,0 +1,1 @@
+$attribute @s attack_damage modifier add weapon_proficiency_attack_damage $(value) add_value

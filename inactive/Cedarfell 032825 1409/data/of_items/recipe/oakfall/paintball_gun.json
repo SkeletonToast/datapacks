@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+      "SSS",
+      "SBS",
+      "SCS"
+    ],
+    "key": {
+      "S": "minecraft:string",
+      "B": "minecraft:slime_ball",
+      "C": "minecraft:crossbow"
+    },
+    "result": {
+      "id": "minecraft:crossbow",
+      "components": {
+        "minecraft:item_name": "{\"text\":\"Paintball Gun\"}",
+        "minecraft:lore": [
+          "[{\"text\":\"Release the whimsy!!! :D\",\"italic\":false,\"color\":\"gold\"}]",
+          "[{\"text\":\"-Devi\",\"italic\":false,\"color\":\"gold\"}]"
+        ],
+        "custom_model_data": {"strings":["advanced"]},
+        "minecraft:custom_data": {"weapon":{"special":true,"gun":{"type":"paintball"},"weight":1,"properties":{"active":["mainhand","offhand"]}}},
+        "minecraft:unbreakable": {"show_in_tooltip":false},
+        "minecraft:hide_additional_tooltip": {},
+        "max_stack_size": 1
+      }
+    }
+  }
+  

@@ -1,0 +1,1 @@
+give @s diamond_helmet[trim={pattern:spire,material:gold,show_in_tooltip:false},custom_name='[{"text":"Devi\'s Halo","italic":false}]',unbreakable={show_in_tooltip:false},glider={}]

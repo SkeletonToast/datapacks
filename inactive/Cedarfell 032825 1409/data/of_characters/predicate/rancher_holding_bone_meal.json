@@ -1,0 +1,24 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "equipment": {
+        "mainhand": {
+          "items": [
+            "minecraft:wooden_hoe",
+            "minecraft:stone_hoe",
+            "minecraft:iron_hoe",
+            "minecraft:golden_hoe",
+            "minecraft:diamond_hoe",
+            "minecraft:netherite_hoe"
+          ]
+        },
+        "offhand": {
+          "items": [
+            "minecraft:bone_meal"
+          ]
+        }
+      }
+    }
+  }
+  

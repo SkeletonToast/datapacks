@@ -1,0 +1,23 @@
+{
+    "description": {
+      "text": "Expertise"
+    },
+    "exclusive_set": "#ss_enchants:exclusive_set/tactical",
+    "supported_items": "#minecraft:enchantable/weapon",
+    "weight": 5,
+    "max_level": 1,
+    "min_cost": {
+      "base": 20,
+      "per_level_above_first": 9
+    },
+    "max_cost": {
+      "base": 31,
+      "per_level_above_first": 9
+    },
+    "anvil_cost": 4,
+    "slots": [
+      "mainhand"
+    ],
+    "effects": {}
+  }
+  

@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": "#of_characters:golden_gear",
+  "result": {
+    "id": "minecraft:gold_ingot"
+  }
+}

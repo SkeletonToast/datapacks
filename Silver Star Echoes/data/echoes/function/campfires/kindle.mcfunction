@@ -13,9 +13,9 @@ execute if predicate ss_lib:holding/shovel if block ~ ~ ~ minecraft:soul_campfir
 execute if predicate ss_lib:holding/shovel run kill @n[type=minecraft:interaction,tag=campfire,distance=0]
 
 # singleplayer night skipping
-execute as @s[scores={ItemSelected=0,DayTime=13000..},predicate=ss_lib:is/sneaking,tag=!InCombat] unless entity @a[tag=!Kindling] run function echoes:player/skip_night
-execute as @s[scores={ItemSelected=0,DayTime=13000..},predicate=ss_lib:is/sneaking,tag=!InCombat] unless entity @a[tag=!Kindling] if block ~ ~ ~ minecraft:campfire run setblock ~ ~ ~ campfire[lit=false]
-execute as @s[scores={ItemSelected=0,DayTime=13000..},predicate=ss_lib:is/sneaking,tag=!InCombat] unless entity @a[tag=!Kindling] if block ~ ~ ~ minecraft:soul_campfire run setblock ~ ~ ~ soul_campfire[lit=false]
+execute if score $day_time value matches 13000.. as @s[scores={ItemSelected=0},predicate=ss_lib:is/sneaking,tag=!InCombat] unless entity @a[tag=!Kindling] run function echoes:player/skip_night
+execute if score $day_time value matches 13000.. as @s[scores={ItemSelected=0},predicate=ss_lib:is/sneaking,tag=!InCombat] unless entity @a[tag=!Kindling] if block ~ ~ ~ minecraft:campfire run setblock ~ ~ ~ campfire[lit=false]
+execute if score $day_time value matches 13000.. as @s[scores={ItemSelected=0},predicate=ss_lib:is/sneaking,tag=!InCombat] unless entity @a[tag=!Kindling] if block ~ ~ ~ minecraft:soul_campfire run setblock ~ ~ ~ soul_campfire[lit=false]
 
 # lanterns
 execute if items entity @s weapon.mainhand lantern run function echoes:campfires/kindle_particles

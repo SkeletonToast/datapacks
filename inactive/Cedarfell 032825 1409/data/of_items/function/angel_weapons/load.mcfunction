@@ -1,0 +1,1 @@
+# scoreboard objectives add ordonna_cooldown dummy

@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+      "minecraft:gunpowder"
+    ],
+    "result": {
+      "id": "minecraft:gray_dye",
+      "count": 12,
+      "components": {
+        "minecraft:item_name": "{\"text\":\"Powder Pellet\"}",
+        "minecraft:lore": [
+          "[{\"text\":\"Used as fuel for firearms.\",\"italic\":false,\"color\":\"gray\"}]"
+        ],
+        "minecraft:custom_data": {"weapon":{"gun":{"fuel":"true"}}}
+      }
+    }
+  }
+  

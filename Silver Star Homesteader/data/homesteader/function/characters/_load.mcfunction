@@ -1,4 +1,5 @@
 scoreboard objectives add switch_character trigger
+scoreboard objectives add character.current dummy
 scoreboard objectives add character.age dummy
 scoreboard objectives add character.birthday dummy
 scoreboard objectives add character.height dummy

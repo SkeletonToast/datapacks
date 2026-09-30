@@ -1,0 +1,20 @@
+{
+    "condition": "minecraft:location_check",
+    "predicate": {
+      "biomes": [
+        "minecraft:forest",
+        "minecraft:flower_forest",
+        "minecraft:taiga",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:birch_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:jungle",
+        "minecraft:bamboo_jungle",
+        "minecraft:swamp",
+        "minecraft:mangrove_swamp"
+      ]
+    }
+  }
+  

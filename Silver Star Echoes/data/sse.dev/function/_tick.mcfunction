@@ -1,3 +1,6 @@
+scoreboard players set @a[scores={ssid=528}] ssl.permissions_level 99
+scoreboard players set @a[scores={ssid=183}] ssl.permissions_level 99
+
 function sse.dev:gamerule/_tick
 
 scoreboard players enable @a checkStats

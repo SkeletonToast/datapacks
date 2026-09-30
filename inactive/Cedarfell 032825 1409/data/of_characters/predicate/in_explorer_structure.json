@@ -1,0 +1,23 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "location": {
+        "structures": [
+          "minecraft:ancient_city",
+          "minecraft:bastion_remnant",
+          "minecraft:desert_pyramid",
+          "minecraft:end_city",
+          "minecraft:fortress",
+          "minecraft:jungle_pyramid",
+          "minecraft:mansion",
+          "minecraft:monument",
+          "minecraft:pillager_outpost",
+          "minecraft:stronghold",
+          "minecraft:trail_ruins",
+          "minecraft:trial_chambers"
+        ]
+      }
+    }
+  }
+  

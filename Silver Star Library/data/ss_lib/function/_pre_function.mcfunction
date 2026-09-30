@@ -1,4 +1,4 @@
-# replace all "@a" or "@e" in fetch files with macro selectors.
+execute as @a[scores={GameTime=1}] run function ss_lib:first_join
 
 # health
 scoreboard players set @a Health 0

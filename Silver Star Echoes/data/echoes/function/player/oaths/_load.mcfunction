@@ -1,4 +1,5 @@
-execute unless score #sse.oaths value matches 16 run return fail
+# execute unless score #sse.oaths value matches 16 run return fail
+    # why was this here??
 scoreboard objectives add sse.oath dummy
 scoreboard objectives add sse.allegiance dummy
 
@@ -27,7 +28,7 @@ scoreboard objectives add sse.allegiance dummy
         team modify ritesmaiden prefix "[Ritesmaiden] "
 
     # ichor imperya
-    team add imperyal "Imperyals"
+    team add imperyal "Ichor Imperya"
     team modify imperyal prefix "[Imperyal] "
         team add inquisitor "Inquisitors"
         team modify inquisitor prefix "[Inquisitor] "

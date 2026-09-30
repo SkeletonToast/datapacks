@@ -1,0 +1,3 @@
+execute at @s on attacker if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"ss_enchants:stormtouch","levels":{min:1}}]] run scoreboard players add @p[name="KidInTheCorner",scores={Character=2,DamageTaken=1..},distance=0] hysterical_timer 200
+execute at @s on attacker if items entity @s weapon.mainhand *[minecraft:item_model="minecraft:lead",minecraft:custom_data~{weapon:{special:true}}] run scoreboard players add @p[name="KidInTheCorner",scores={Character=2,DamageTaken=1..},distance=0] hysterical_timer 200
+execute at @s on attacker if items entity @s weapon.mainhand lead[minecraft:custom_data~{weapon:{special:true}}] run scoreboard players add @p[name="KidInTheCorner",scores={Character=2,DamageTaken=1..},distance=0] hysterical_timer 200
