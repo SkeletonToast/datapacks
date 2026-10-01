@@ -133,11 +133,13 @@ scoreboard objectives add Food food
     # scoreboard objectives remove Naked
 
 scoreboard objectives add GameTime dummy
+    # This value should NEVER be changed. If you need to reference this value, but modified, use SoftGameTime.
 scoreboard objectives add SoftGameTime dummy
 
 scoreboard objectives add TimeSinceDeath minecraft.custom:minecraft.time_since_death
 scoreboard objectives add TimeSinceRest minecraft.custom:minecraft.time_since_rest
 scoreboard objectives add RestOrRespawn dummy
+    # The above scores should NEVER be modified. Use the "soft" scores below for situations where you need to reference this value, but modified.
 scoreboard objectives add SoftTimeSinceDeath dummy
 scoreboard objectives add SoftTimeSinceRest dummy
 scoreboard objectives add SoftRestOrRespawn dummy
