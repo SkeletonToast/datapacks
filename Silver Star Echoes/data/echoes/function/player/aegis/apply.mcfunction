@@ -7,8 +7,7 @@ scoreboard players set @s[scores={Soul=0}] aegis_amplifier_max -1
 scoreboard players set @s[scores={Soul=..29,aegis_amplifier_max=5..}] aegis_amplifier_max 4
 
 scoreboard players operation @s aegis_amplifier = @s Absorption
-scoreboard players operation @s aegis_amplifier /= @s 2
-    scoreboard players operation @s aegis_amplifier /= @s 2
+scoreboard players operation @s aegis_amplifier /= #const.4 value
     scoreboard players set @s[scores={aegis_amplifier=..-1}] aegis_amplifier 0
 
 # difficulty

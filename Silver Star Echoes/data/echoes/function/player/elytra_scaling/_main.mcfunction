@@ -12,13 +12,13 @@ execute as @a[scores={flight_level=3..,FallFlying=1,used_firework_rocket=1..}] u
     # flight level 4-20
     scoreboard players set @a[scores={FallFlying=1,flight_level=3..20,used_firework_rocket=1..}] slipstream 30
     execute as @a run scoreboard players operation @s[scores={FallFlying=1,flight_level=3..20,used_firework_rocket=1..}] slipstream -= @s flight_level
-    execute as @a run scoreboard players operation @s[scores={FallFlying=1,flight_level=3..20,used_firework_rocket=1..}] slipstream *= @s 10
+    execute as @a run scoreboard players operation @s[scores={FallFlying=1,flight_level=3..20,used_firework_rocket=1..}] slipstream *= #const.10 value
     # flight level 21-30
     scoreboard players set @a[scores={FallFlying=1,flight_level=21..30,used_firework_rocket=1..}] slipstream 100
     # flight level 31+
     execute as @a run scoreboard players operation @s[scores={FallFlying=1,flight_level=31..,used_firework_rocket=1..}] slipstream += @s flight_level
     scoreboard players remove @a[scores={FallFlying=1,flight_level=31..,used_firework_rocket=1..}] slipstream 20
-    execute as @a run scoreboard players operation @s[scores={FallFlying=1,flight_level=31..,used_firework_rocket=1..}] slipstream *= @s 10
+    execute as @a run scoreboard players operation @s[scores={FallFlying=1,flight_level=31..,used_firework_rocket=1..}] slipstream *= #const.10 value
     # gliding increase
     scoreboard players add @a[scores={flight_level=10..},predicate=echoes:flying_very_quickly] slipstream 2
     # cap
@@ -95,9 +95,8 @@ execute as @a[scores={flight_level=4..,boosts_stored=1..}] if score @s boosts_st
     execute if score $sse.gamerule.elytra_boosting true matches 1 as @a[scores={flight_level=1..,FallFlying=1,boost_fuel=1..},level=1..,predicate=ss_lib:input/sprint] run \
         function echoes:player/elytra_scaling/sprint_boost
     execute as @a run scoreboard players operation @s generic_f = @s Mind
-    execute as @a run scoreboard players operation @s generic_f *= @s 2
-        execute as @a run scoreboard players operation @s generic_f *= @s 2
-    execute as @a[scores={OnGround=1}] run scoreboard players operation @s generic_f *= @s 2
+    execute as @a run scoreboard players operation @s generic_f *= #const.4 value
+    execute as @a[scores={OnGround=1}] run scoreboard players operation @s generic_f *= #const.4 value
         execute as @a[scores={OnGround=1,boost_fuel=301..}] run scoreboard players set @s boost_fuel 300
     execute as @a if score @s boost_fuel > @s generic_f run scoreboard players remove @s boost_fuel 1
     execute as @a[scores={flight_level=1..,FallFlying=1},predicate=!ss_lib:input/sprint] run scoreboard players add @s boost_fuel 1

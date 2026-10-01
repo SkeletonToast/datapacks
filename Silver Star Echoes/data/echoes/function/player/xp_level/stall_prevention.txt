@@ -3,12 +3,12 @@ execute as @a[scores={xp_level=1..}] if score @s xp_level > @s Mind run function
 
 execute as @a[scores={xp_level=..10000}] run scoreboard players operation @s xp_increment = @s xp_level
 execute as @a[scores={xp_level=10001..}] run scoreboard players set @s xp_increment 10000
-        execute as @a run scoreboard players operation @s xp_increment /= @s 3
+        execute as @a run scoreboard players operation @s xp_increment /= #const.3 value
     execute as @a run scoreboard players operation @s xp_increment *= @s xp_increment
 
 # stall prevention
 execute as @a run scoreboard players operation @s generic_r = @s RestOrRespawn
-execute as @a run scoreboard players operation @s generic_r %= @s 2
+execute as @a run scoreboard players operation @s generic_r %= #const.2 value
 execute as @a store result score @s generic_p run xp query @s points
 execute as @a run scoreboard players operation @s generic_p > @s xp_stall_prevention
 # execute as @a if score @s generic_p = @s xp_stall_prevention run tag @s add xp_stall_prevention
@@ -26,7 +26,7 @@ execute as @a[scores={xp_level=32..,Mind=31..100}] run scoreboard players operat
 # level 50+
 execute as @a[scores={Mind=101..}] run scoreboard players operation @s xp_cap = @s Mind
 execute as @a[scores={Mind=101..}] run scoreboard players remove @s xp_cap 100
-execute as @a[scores={Mind=101..}] run scoreboard players operation @s xp_cap *= @s 2
+execute as @a[scores={Mind=101..}] run scoreboard players operation @s xp_cap *= #const.2 value
 execute as @a[scores={Mind=101..}] run scoreboard players add @s xp_cap 10
 execute as @a[scores={Mind=101..}] run function math:power/integer {base_score:xp_cap,exponent:3}
     # scoreboard players set @a[scores={xp_cap=20001..}] xp_cap 20000

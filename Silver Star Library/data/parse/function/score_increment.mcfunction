@@ -1,7 +1,7 @@
 # calculating
 scoreboard players operation @s generic_b = @s parse_score_input
-scoreboard players operation @s generic_b %= @s 10
-scoreboard players operation @s parse_score_input /= @s 10
+scoreboard players operation @s generic_b %= #const.10 value
+scoreboard players operation @s parse_score_input /= #const.10 value
 
 scoreboard players add @s parse_score_recursions 1
 

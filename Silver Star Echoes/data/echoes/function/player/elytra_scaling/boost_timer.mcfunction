@@ -9,7 +9,7 @@ scoreboard players remove @s generic_b 3
 scoreboard players set @s[scores={generic_b=..-1}] generic_b 0
     # this value is used here because I don't want to add another calculation value.
     # even though generic_a is meant to be the final timer, I set it to 10 here solely for the calculation on the next line.
-scoreboard players operation @s generic_b *= @s 5
+scoreboard players operation @s generic_b *= #const.5 value
 scoreboard players set @s[scores={generic_b=151..}] generic_b 150
 scoreboard players set @s generic_a 180
 scoreboard players operation @s generic_a -= @s generic_b

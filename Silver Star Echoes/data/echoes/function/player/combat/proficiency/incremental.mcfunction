@@ -17,19 +17,18 @@ scoreboard players operation @s scale = @s Prowess
 scoreboard players operation @s mintruth = @s statmax
 
 scoreboard players operation @s mintruth -= @s minprof
-    scoreboard players operation @s mintruth /= @s 2
-        scoreboard players operation @s mintruth /= @s 3
+    scoreboard players operation @s mintruth /= #const.6 value
 scoreboard players operation @s mintruth *= @s scale
 
 # lies = generic_c
 scoreboard players operation @s lies = @s prof
 scoreboard players operation @s lies *= @s scale
 scoreboard players operation @s lies -= @s prof
-scoreboard players operation @s lies /= @s 10
+scoreboard players operation @s lies /= #const.10 value
 
 # maybe = generic_d
     scoreboard players operation @s generic_e = @s prof
-    scoreboard players operation @s generic_e /= @s 2
+    scoreboard players operation @s generic_e /= #const.2 value
     scoreboard players set @s maybe 0
 
     # if true

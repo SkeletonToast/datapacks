@@ -1,5 +1,5 @@
 scoreboard players operation @s generic_a = @s gun_base_damage
-    scoreboard players operation @s generic_a *= @s 10
+    scoreboard players operation @s generic_a *= #const.10 value
 execute as @s[scores={raycast_lifetime=..149}] run function math:round {score:generic_a,round:4}
 execute as @s[scores={raycast_lifetime=150..224}] run function math:round {score:generic_a,round:7}
 execute as @s[scores={raycast_lifetime=225..}] run function math:round {score:generic_a,round:10}

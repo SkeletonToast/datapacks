@@ -2,7 +2,7 @@ $scoreboard players operation @s generic_a = @s $(score)
 
 # 2^31
 $execute as @s[scores={generic_a=..-1}] run function $(namespace_1)31$(namespace_2)
-scoreboard players operation @s[scores={generic_a=..-1}] generic_a *= @s -1
+scoreboard players operation @s[scores={generic_a=..-1}] generic_a *= #const.-1 value
 
 # 2^30
 $execute as @s[scores={generic_a=1073741824..}] run function $(namespace_1)30$(namespace_2)

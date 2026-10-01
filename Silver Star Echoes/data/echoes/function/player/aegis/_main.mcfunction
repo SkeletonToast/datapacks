@@ -41,7 +41,7 @@ execute as @a[tag=AegisApplied,scores={aegis_timer_max=..16}] if score @s aegis_
     # if regeneration 1 3 is enabled, it can be applied once every 0.25 seconds
 # execute as @a[tag=AegisApplied,scores={aegis_timer_max=..9}] if score @s aegis_amplifier >= @s aegis_amplifier_max run scoreboard players set @s aegis_timer_max 10
 
-execute as @a[tag=InCombat] run scoreboard players operation @s aegis_timer_max *= @s 2
+execute as @a[tag=InCombat] run scoreboard players operation @s aegis_timer_max *= #const.2 value
 execute as @a[tag=AegisApplied] run scoreboard players operation @s aegis_timer = @s aegis_timer_max
 
 scoreboard players remove @a[scores={aegis_timer=1..}] aegis_timer 1

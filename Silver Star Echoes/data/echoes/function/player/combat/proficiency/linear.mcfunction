@@ -1,8 +1,3 @@
-# scoreboard players operation @s proficiency_str *= @s 10
-# scoreboard players operation @s proficiency_dex *= @s 10
-# scoreboard players operation @s proficiency_tact *= @s 10
-# scoreboard players operation @s proficiency_soul *= @s 10
-
 execute as @s[scores={sse.difficulty.attribute_limit=0..}] if score @s Strength <= @s sse.difficulty.attribute_limit run scoreboard players operation @s proficiency_str *= @s Strength
 execute as @s[scores={sse.difficulty.attribute_limit=0..}] if score @s Strength > @s sse.difficulty.attribute_limit run scoreboard players operation @s proficiency_str *= @s sse.difficulty.attribute_limit
 execute as @s[scores={sse.difficulty.attribute_limit=0..}] if score @s Dexterity <= @s sse.difficulty.attribute_limit run scoreboard players operation @s proficiency_dex *= @s Dexterity

@@ -1,5 +1,5 @@
 $scoreboard players operation @s generic_a = @s $(score)
-scoreboard players operation @s generic_a %= @s 10
+scoreboard players operation @s generic_a %= #const.10 value
 scoreboard players set @s generic_b 10
 
 # round up

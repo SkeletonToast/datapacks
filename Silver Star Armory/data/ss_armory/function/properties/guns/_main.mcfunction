@@ -37,9 +37,7 @@ scoreboard players set @a[scores={MultishotGun=13..}] MultishotGun 12
 execute as @a unless score @s GunType = @s MultishotGunType run scoreboard players set @s MultishotGun 0
 
 execute as @a[scores={MultishotGun=1..}] run scoreboard players operation @s MultishotTimer = @s MultishotGun
-    execute as @a[scores={MultishotGun=1..}] run scoreboard players operation @s generic_b = @s 2
-    execute as @a[scores={MultishotGun=1..}] run scoreboard players operation @s generic_b *= @s 3
-execute as @a[scores={MultishotGun=1..}] run scoreboard players operation @s MultishotTimer %= @s generic_b
+execute as @a[scores={MultishotGun=1..}] run scoreboard players operation @s MultishotTimer %= #const.6 value
 advancement grant @a[scores={MultishotGun=1..,MultishotTimer=1}] only ss_armory:gun/shot_crossbow
 
 # fire calls
@@ -51,12 +49,12 @@ execute as @a[scores={HasPropertiedWeapon=0..,GunType=4},advancements={ss_armory
 
 # seekers
     execute as @a[scores={SeekerLifetime=1..}] run scoreboard players operation @s generic_a = @s SeekerLifetime
-    execute as @a[scores={SeekerLifetime=1..}] run scoreboard players operation @s generic_a %= @s 3
+    execute as @a[scores={SeekerLifetime=1..}] run scoreboard players operation @s generic_a %= #const.3 value
     execute as @a[scores={SeekerLifetime=1..,generic_a=0}] at @s anchored eyes run function ss_armory:properties/guns/fire {"type":"seeker"}
 
 # gunfire encumbrance
 execute as @a[scores={HasPropertiedWeapon=0..,SneakTime=1..19,GunType=1..,OnGround=1}] run scoreboard players operation @s generic_e = @s SneakTime
-execute as @a[scores={HasPropertiedWeapon=0..,SneakTime=1..19,GunType=1..,OnGround=1}] run scoreboard players operation @s generic_e *= @s 5
+execute as @a[scores={HasPropertiedWeapon=0..,SneakTime=1..19,GunType=1..,OnGround=1}] run scoreboard players operation @s generic_e *= #const.5 value
 execute as @a[scores={HasPropertiedWeapon=0..,SneakTime=1..19,GunType=1..,OnGround=1}] run scoreboard players operation @s encumbrance_hard += @s generic_e
 execute as @a[scores={HasPropertiedWeapon=0..,SneakTime=20..,GunType=1..,OnGround=1}] run function ss_lib:status/immobilized
 

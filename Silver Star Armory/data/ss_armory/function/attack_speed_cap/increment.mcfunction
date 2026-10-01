@@ -1,6 +1,6 @@
 scoreboard players operation @s generic_a = @s AttackSpeed
 scoreboard players operation @s generic_b = @s AttackSpeed
-scoreboard players operation @s generic_b %= @s 10
+scoreboard players operation @s generic_b %= #const.10 value
 scoreboard players operation @s generic_a -= @s generic_b
 execute as @s[scores={generic_a=10..}] run function ss_armory:attack_speed_cap/round_down_past_10
 

@@ -28,7 +28,7 @@ scoreboard players add @a[scores={WeaponWeight=5..}] encumbrance_items 90
 # scoreboard players add @s[scores={fear=70000..}] encumbrance 20
 
 # apply
-execute as @a[scores={encumbrance_items=2..},tag=!InCombat] run scoreboard players operation @s encumbrance_items /= @s 2
+execute as @a[scores={encumbrance_items=2..},tag=!InCombat] run scoreboard players operation @s encumbrance_items /= #const.2 value
 
 execute as @a[scores={encumbrance_armor=1..}] run scoreboard players operation @s encumbrance += @s encumbrance_armor
 execute as @a[scores={encumbrance_items=1..}] run scoreboard players operation @s encumbrance += @s encumbrance_items
@@ -45,14 +45,14 @@ execute as @a run scoreboard players operation @s encumbrance_unadjusted = @s en
 
 # handicaps
 scoreboard players remove @a[tag=!InCombat,scores={EchoDifficulty=..3}] encumbrance 10
-# execute as @a[scores={Food=20,encumbrance=2..},tag=!InCombat] run scoreboard players operation @s encumbrance /= @s 2
+# execute as @a[scores={Food=20,encumbrance=2..},tag=!InCombat] run scoreboard players operation @s encumbrance /= #const.2 value
 
 # 50+ strength encumbrance halving
-execute as @a[tag=Strength_feat_3] run scoreboard players operation @s encumbrance /= @s 2
+execute as @a[tag=Strength_feat_3] run scoreboard players operation @s encumbrance /= #const.2 value
 
 # other calculations
 execute as @a run scoreboard players operation @s encumbrance_half = @s encumbrance
-execute as @a run scoreboard players operation @s encumbrance_half /= @s 2
+execute as @a run scoreboard players operation @s encumbrance_half /= #const.2 value
 scoreboard players set @a[scores={encumbrance_half=70..}] encumbrance_half 100
     # this is 100 because it's meant to fully disable jumping past 140 encumbrance
 scoreboard players set @a[scores={encumbrance=91..}] encumbrance_half 100

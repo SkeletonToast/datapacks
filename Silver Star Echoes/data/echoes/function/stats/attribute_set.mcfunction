@@ -44,7 +44,7 @@ execute store result score @s generic_h run attribute @s scale get 100
 # armor: -Res
     # scoreboard players operation @s generic_attribute = @s res_armor
     #     scoreboard players operation @s generic_a = @s generic_attribute
-    #     scoreboard players operation @s generic_a %= @s 2
+    #     scoreboard players operation @s generic_a %= #const.2 value
     #     scoreboard players operation @s generic_attribute -= @s generic_a
     # execute unless score @s generic_attribute = @s res_armor run function parse:score \
     #     {score:"generic_attribute",prepend:"-",append:"",prepend_position:0,append_position:0,function:"echoes:stats/set/armor_health"}
@@ -55,8 +55,7 @@ execute store result score @s generic_h run attribute @s scale get 100
 
 # movement_speed: +Dex / 1000
     scoreboard players operation @s smooth_sprint_multiplier = @s Food
-        scoreboard players operation @s smooth_sprint_multiplier *= @s 10
-        scoreboard players operation @s smooth_sprint_multiplier /= @s 5
+        scoreboard players operation @s smooth_sprint_multiplier *= #const.2 value
         function math:round {score:smooth_sprint_multiplier,round:10,reduce:true}
     scoreboard players set @s[scores={smooth_sprint_multiplier=..-1}] smooth_sprint_multiplier 0
     # scoreboard players set @s smooth_sprint_multiplier 1
@@ -68,7 +67,7 @@ execute store result score @s generic_h run attribute @s scale get 100
         function math:round {score:generic_attribute,round:90,reduce:true}
     scoreboard players operation @s generic_c = @s SprintTime
         scoreboard players operation @s generic_c *= @s smooth_sprint_multiplier
-            scoreboard players operation @s[scores={SprintTime=..39}] generic_c *= @s 2
+            scoreboard players operation @s[scores={SprintTime=..39}] generic_c *= #const.2 value
     execute if score @s smoothSprinting matches 1 as @s[scores={SprintTime=1..,StrafeTime=0}] if score @s generic_attribute > @s generic_c run scoreboard players operation @s generic_attribute = @s generic_c
 
         # strafing
@@ -101,8 +100,8 @@ execute store result score @s generic_h run attribute @s scale get 100
     scoreboard players operation @s generic_attribute = @s dex_attributes
     execute if score @s tact_attributes > @s dex_attributes run scoreboard players operation @s generic_attribute = @s tact_attributes
     scoreboard players set @s[scores={generic_attribute=46..}] generic_attribute 45
-    scoreboard players operation @s generic_attribute *= @s 3
-    scoreboard players operation @s generic_attribute /= @s 2
+    scoreboard players operation @s generic_attribute *= #const.3 value
+    function math:round {score:generic_attribute,round:2}
         scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
     execute unless score @s generic_attribute = @s dex_tact_fall_damage_multiplier run function parse:score \
         {score:"generic_attribute",prepend:"-",append:".",prepend_position:0,append_position:2,function:"echoes:stats/set/fall_damage_multiplier"}
@@ -111,7 +110,7 @@ execute store result score @s generic_h run attribute @s scale get 100
     scoreboard players operation @s generic_attribute = @s dex_attributes
     execute if score @s tact_attributes > @s dex_attributes run scoreboard players operation @s generic_attribute = @s tact_attributes
         scoreboard players remove @s generic_attribute 20
-    scoreboard players operation @s generic_attribute /= @s 3
+    scoreboard players operation @s generic_attribute /= #const.3 value
         scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
     execute unless score @s generic_attribute = @s dex_tact_safe_fall_distance run function parse:score_unended \
         {score:"generic_attribute",function:"echoes:stats/set/safe_fall_distance"}
@@ -120,7 +119,7 @@ execute store result score @s generic_h run attribute @s scale get 100
     scoreboard players operation @s generic_attribute = @s dex_attributes
     scoreboard players set @s[scores={generic_attribute=76..}] generic_attribute 75
     scoreboard players remove @s generic_attribute 20
-    scoreboard players operation @s generic_attribute /= @s 2
+    function math:round {score:generic_attribute,round:2}
     scoreboard players set @s[scores={Food=..6}] generic_attribute 0
         scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
         # scoreboard players set @s[scores={SprintTime=0,StrafeTime=0,SneakTime=0}] generic_attribute 0
@@ -133,7 +132,7 @@ execute store result score @s generic_h run attribute @s scale get 100
 # step_height: +(Dex - 10) * 2
     scoreboard players operation @s generic_attribute = @s dex_attributes
     scoreboard players remove @s generic_attribute 10
-    scoreboard players operation @s generic_attribute *= @s 2
+    scoreboard players operation @s generic_attribute *= #const.2 value
         scoreboard players operation @s[scores={encumbrance=1..}] generic_attribute -= @s encumbrance
         scoreboard players set @s[scores={generic_attribute=51..}] generic_attribute 50
             
@@ -166,7 +165,7 @@ execute store result score @s generic_h run attribute @s scale get 100
 
 # block_break_speed: +Strength * 2
     scoreboard players operation @s generic_attribute = @s str_attributes
-    scoreboard players operation @s generic_attribute *= @s 2
+    scoreboard players operation @s generic_attribute *= #const.2 value
         scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
     execute unless score @s generic_attribute = @s str_block_break_speed run function parse:score \
         {score:"generic_attribute",prepend:"",append:".",prepend_position:0,append_position:2,function:"echoes:stats/set/block_break_speed"}
@@ -178,7 +177,7 @@ execute store result score @s generic_h run attribute @s scale get 100
         scoreboard players set @s[scores={generic_attribute=71..}] generic_attribute 70
     scoreboard players remove @s generic_attribute 20
     scoreboard players add @s[scores={Absorption=1..}] generic_attribute 20
-    scoreboard players operation @s generic_attribute *= @s 2
+    scoreboard players operation @s generic_attribute *= #const.2 value
     scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
         scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
     execute unless score @s generic_attribute = @s str_knockback_resistance run function parse:score \
@@ -188,9 +187,7 @@ execute store result score @s generic_h run attribute @s scale get 100
     scoreboard players operation @s generic_attribute = @s tact_attributes
         scoreboard players set @s[scores={generic_attribute=71..}] generic_attribute 70
     scoreboard players remove @s generic_attribute 25
-    scoreboard players operation @s generic_attribute *= @s 10
-        scoreboard players operation @s generic_attribute *= @s 3
-            scoreboard players operation @s generic_attribute /= @s 2
+    scoreboard players operation @s generic_attribute *= #const.15 value
         scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
         function math:round {score:generic_attribute,round:10,reduce:true}
     execute unless score @s generic_attribute = @s tact_interaction_range run function parse:score \
@@ -200,7 +197,7 @@ execute store result score @s generic_h run attribute @s scale get 100
     # effective cap at 50 Tact
     scoreboard players operation @s generic_attribute = @s tact_attributes
     scoreboard players remove @s generic_attribute 15
-    scoreboard players operation @s generic_attribute *= @s 2
+    scoreboard players operation @s generic_attribute *= #const.2 value
         scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
     execute unless score @s generic_attribute = @s tact_interaction_range run function parse:score \
         {score:"generic_attribute",prepend:"",append:".",prepend_position:0,append_position:2,function:"echoes:stats/set/movement_efficiency"}
@@ -208,7 +205,7 @@ execute store result score @s generic_h run attribute @s scale get 100
 # water_movement_efficiency: +(Tact * 2)
     scoreboard players operation @s generic_attribute = @s tact_attributes
     scoreboard players remove @s generic_attribute 15
-    scoreboard players operation @s generic_attribute *= @s 2
+    scoreboard players operation @s generic_attribute *= #const.2 value
         scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
     execute unless score @s generic_attribute = @s tact_interaction_range run function parse:score \
         {score:"generic_attribute",prepend:"",append:".",prepend_position:0,append_position:2,function:"echoes:stats/set/water_movement_efficiency"}
@@ -225,10 +222,10 @@ execute store result score @s generic_h run attribute @s scale get 100
     scoreboard players operation @s generic_attribute = @s tact_attributes
     execute on vehicle on passengers run scoreboard players operation @s[predicate=ss_lib:input/jump] generic_attribute = @s tact_attributes
         scoreboard players remove @s generic_attribute 10
-        scoreboard players operation @s generic_attribute *= @s 2
+        scoreboard players operation @s generic_attribute *= #const.2 value
         scoreboard players set @s[scores={generic_attribute=..2}] generic_attribute 0
             scoreboard players operation @s generic_a = @s SneakTime
-            scoreboard players operation @s generic_a *= @s 2
+            scoreboard players operation @s generic_a *= #const.2 value
         scoreboard players set @s[scores={SneakTime=0},tag=!tact_camera_locked] generic_attribute 0
         execute if score $tactCameraDolly true matches 1 as @s[tag=!tact_camera_locked] run execute if score @s generic_attribute > @s generic_a run scoreboard players operation @s generic_attribute = @s generic_a
     execute unless score @s generic_attribute = @s tact_camera_distance run function parse:score \
@@ -237,10 +234,8 @@ execute store result score @s generic_h run attribute @s scale get 100
 # burning_time: -Soul * 8 / 5
     scoreboard players operation @s generic_attribute = @s soul_attributes
     scoreboard players remove @s generic_attribute 15
-    scoreboard players operation @s generic_attribute *= @s 2
-        scoreboard players operation @s generic_attribute *= @s 2
-        scoreboard players operation @s generic_attribute *= @s 2
-    scoreboard players operation @s generic_attribute /= @s 5
+    scoreboard players operation @s generic_attribute *= #const.8 value
+    function math:round {score:generic_attribute,round:5}
         scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
     execute unless score @s generic_attribute = @s soul_burning_time run function parse:score \
         {score:"generic_attribute",prepend:"-",append:".",prepend_position:0,append_position:2,function:"echoes:stats/set/burning_time"}

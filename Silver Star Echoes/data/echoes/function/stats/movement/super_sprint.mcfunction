@@ -48,7 +48,7 @@ execute if score @s SuperSprintTime >= @s SurgeSprintThreshold as @s[tag=SurgeSp
     execute if score @s SuperSprintTime >= @s SurgeSprintThreshold run tag @s[scores={Dexterity=70..,OnGround=1}] add SurgeJumpEligible
     tag @s[predicate=ss_lib:is/swimming] remove SurgeJumpEligible
     execute as @s[tag=SurgeJumpEligible,predicate=ss_lib:input/jump] run scoreboard players operation @s SuperSprintTime = @s SurgeSprintThreshold
-        execute as @s[tag=SurgeJumpEligible,predicate=ss_lib:input/jump] run scoreboard players operation @s SuperSprintTime /= @s 2
+        execute as @s[tag=SurgeJumpEligible,predicate=ss_lib:input/jump] run scoreboard players operation @s SuperSprintTime /= #const.2 value
     execute as @s[tag=SurgeJumpEligible,predicate=ss_lib:input/jump] run scoreboard players set $strength player_motion.api.launch 10000
     execute as @s[tag=SurgeJumpEligible,predicate=ss_lib:input/jump] at @s anchored eyes run function player_motion:api/launch_looking
     tag @s[predicate=ss_lib:input/jump] remove SurgeJumpEligible

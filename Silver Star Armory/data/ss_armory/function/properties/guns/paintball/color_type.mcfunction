@@ -6,7 +6,7 @@ execute if predicate {"condition":"minecraft:random_chance","chance":0.200} run 
 execute if predicate {"condition":"minecraft:random_chance","chance":0.167} run scoreboard players set @s PaintballType -6
 execute if predicate {"condition":"minecraft:random_chance","chance":0.143} run scoreboard players set @s PaintballType -7
 execute if predicate {"condition":"minecraft:random_chance","chance":0.125} run scoreboard players set @s PaintballType -8
-scoreboard players operation @s PaintballType *= @s -1
+scoreboard players operation @s PaintballType *= #const.-1 value
 
 # title @s title [""]
 # title @s subtitle [{"score":{"name":"*","objective":"PaintballHitsDealt"},"color":"#0fb300"},{"text":"/","color":"gray"},{"score":{"name":"*","objective":"PaintballHitsTaken"},"color":"#b30000"}]

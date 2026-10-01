@@ -19,9 +19,9 @@ scoreboard players set @a proficiency_mind 0
 # temperature
 scoreboard players set @a temp_default 65
 execute as @a run scoreboard players operation @s heat_resistance = @s Vitality
-    execute as @a run scoreboard players operation @s heat_resistance /= @s 2
+    execute as @a run scoreboard players operation @s heat_resistance /= #const.2 value
 execute as @a run scoreboard players operation @s cold_resistance = @s Vitality
-    execute as @a run scoreboard players operation @s cold_resistance /= @s 3
+    execute as @a run scoreboard players operation @s cold_resistance /= #const.2 value
     
 tag @a add TemperatureEligible
 tag @a[scores={EchoDifficulty=..2}] remove TemperatureEligible

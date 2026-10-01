@@ -12,7 +12,7 @@ scoreboard players operation @s generic_b < @s proficiency_dex
 scoreboard players operation @s generic_a -= @s generic_b
 
 # if difference is under threshold
-execute if score @s generic_a < @s generic_e run scoreboard players operation @s generic_a /= @s 2
+execute if score @s generic_a < @s generic_e run scoreboard players operation @s generic_a /= #const.2 value
 execute if score @s generic_a < @s generic_e if score @s Strength > @s Dexterity run scoreboard players operation @s proficiency_str -= @s generic_a
 execute if score @s generic_a < @s generic_e if score @s Strength > @s Dexterity run scoreboard players operation @s proficiency_dex += @s generic_a
 execute if score @s generic_a < @s generic_e if score @s Dexterity > @s Strength run scoreboard players operation @s proficiency_dex -= @s generic_a

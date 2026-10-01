@@ -1,8 +1,7 @@
 # Initiative - the modifier for enemy in-combat time
 execute as @a[scores={DamageDealt=1..}] run scoreboard players operation @s Initiative = @s Tact
-execute as @a[scores={DamageDealt=1..}] run scoreboard players operation @s Initiative *= @s 10
-    execute as @a[scores={DamageDealt=1..}] run scoreboard players operation @s Initiative *= @s 10
-        execute as @a[scores={DamageDealt=1..}] run scoreboard players operation @s Initiative *= @s 10
+execute as @a[scores={DamageDealt=1..}] run scoreboard players operation @s Initiative *= #const.100 value
+    execute as @a[scores={DamageDealt=1..}] run scoreboard players operation @s Initiative *= #const.10 value
 # execute as @a[scores={DamageDealt=1..}] run scoreboard players operation @s Initiative += @s DamageDealt
 
 # Unsigning Stats
@@ -15,14 +14,14 @@ execute as @a run scoreboard players operation @s Tact = @s BaseTact
 execute as @a run scoreboard players operation @s SoulSigned = @s BaseSoul
 
 execute as @a run scoreboard players operation @s Soul = @s SoulSigned
-execute as @a[scores={Soul=..-1}] run scoreboard players operation @s Soul *= @s -1
+execute as @a[scores={Soul=..-1}] run scoreboard players operation @s Soul *= #const.-1 value
 execute as @a run scoreboard players operation @s Mind = @s MindSigned
-execute as @a[scores={Mind=..-1}] run scoreboard players operation @s Mind *= @s -1
+execute as @a[scores={Mind=..-1}] run scoreboard players operation @s Mind *= #const.-1 value
 
 # Charm - modifier for persuasion (only used in rp probably)
 execute as @a run scoreboard players operation @s Charm = @s Soul
 execute as @a run scoreboard players operation @s Charm += @s Tact
-execute as @a run scoreboard players operation @s Charm /= @s 2
+execute as @a run scoreboard players operation @s Charm /= #const.2 value
 
 # setting stats for the first time
 scoreboard players set @a[scores={Age=1}] BaseStrength 7
@@ -37,9 +36,8 @@ scoreboard players set @a[scores={Age=1}] BaseSoul 7
 execute as @a run scoreboard players operation @s sse.Physique = @s Strength
 execute as @a run scoreboard players operation @s sse.Physique += @s Dexterity
 # execute as @a run scoreboard players operation @s sse.Physique += @s Resolve
-execute as @a run scoreboard players operation @s sse.Physique *= @s 3
-execute as @a run scoreboard players operation @s sse.Physique /= @s 5
-    execute as @a run scoreboard players operation @s sse.Physique /= @s 2
+execute as @a run scoreboard players operation @s sse.Physique *= #const.3 value
+execute as @a run function math:round {score:sse.Physique,round:10}
     execute as @a if score @s Strength >= @s Dexterity run scoreboard players operation @s sse.Physique += @s Dexterity
     execute as @a if score @s Dexterity >= @s Strength run scoreboard players operation @s sse.Physique += @s Strength
 execute as @a if score @s Strength >= @s Dexterity if score @s sse.Physique > @s Strength run scoreboard players operation @s sse.Physique = @s Strength
@@ -47,9 +45,8 @@ execute as @a if score @s Dexterity >= @s Strength if score @s sse.Physique > @s
 
 execute as @a run scoreboard players operation @s sse.Passion = @s Vitality
 execute as @a run scoreboard players operation @s sse.Passion += @s Soul
-execute as @a run scoreboard players operation @s sse.Passion *= @s 3
-execute as @a run scoreboard players operation @s sse.Passion /= @s 5
-    execute as @a run scoreboard players operation @s sse.Passion /= @s 2
+execute as @a run scoreboard players operation @s sse.Passion *= #const.3 value
+execute as @a run function math:round {score:sse.Passion,round:10}
     execute as @a if score @s Vitality >= @s Soul run scoreboard players operation @s sse.Passion += @s Soul
     execute as @a if score @s Soul >= @s Vitality run scoreboard players operation @s sse.Passion += @s Vitality
 execute as @a if score @s Vitality >= @s Soul if score @s sse.Passion > @s Vitality run scoreboard players operation @s sse.Passion = @s Vitality
@@ -57,9 +54,8 @@ execute as @a if score @s Soul >= @s Vitality if score @s sse.Passion > @s Soul 
 
 execute as @a run scoreboard players operation @s sse.Knowledge = @s Mind
 execute as @a run scoreboard players operation @s sse.Knowledge += @s Tact
-execute as @a run scoreboard players operation @s sse.Knowledge *= @s 3
-execute as @a run scoreboard players operation @s sse.Knowledge /= @s 5
-    execute as @a run scoreboard players operation @s sse.Knowledge /= @s 2
+execute as @a run scoreboard players operation @s sse.Knowledge *= #const.3 value
+execute as @a run function math:round {score:sse.Knowledge,round:10}
     execute as @a if score @s Mind >= @s Tact run scoreboard players operation @s sse.Knowledge += @s Tact
     execute as @a if score @s Tact >= @s Mind run scoreboard players operation @s sse.Knowledge += @s Mind
 execute as @a if score @s Mind >= @s Tact if score @s sse.Knowledge > @s Mind run scoreboard players operation @s sse.Knowledge = @s Mind
@@ -68,16 +64,14 @@ execute as @a if score @s Tact >= @s Mind if score @s sse.Knowledge > @s Tact ru
 # Tenacity & Fortitude
 execute as @a run scoreboard players operation @s Tenacity = @s Vitality
     execute as @a run scoreboard players remove @s Tenacity 10
-        execute as @a run scoreboard players operation @s Tenacity /= @s 2
-        execute as @a run scoreboard players operation @s Tenacity /= @s 2
-        execute as @a run scoreboard players operation @s Tenacity /= @s 2
+        execute as @a run scoreboard players operation @s Tenacity /= #const.8 value
             execute as @a run scoreboard players set @s[scores={Tenacity=..-1}] Tenacity 0
         scoreboard players add @a Tenacity 12
-            execute as @a run scoreboard players operation @s[tag=Vitality_feat_3] Tenacity *= @s 3
-            execute as @a run scoreboard players operation @s[tag=Vitality_feat_3] Tenacity /= @s 2
+            execute as @a run scoreboard players operation @s[tag=Vitality_feat_3] Tenacity *= #const.3 value
+            execute as @a[tag=Vitality_feat_3] run function math:round {score:Tenacity,round:2}
 
 execute as @a[tag=Vitality_feat_1] run scoreboard players operation @s Fortitude = @s Tenacity
-    execute as @a run scoreboard players operation @s Fortitude /= @s 2
+    execute as @a run scoreboard players operation @s Fortitude /= #const.2 value
     scoreboard players remove @a Fortitude 2
     
 # scoreboard players set @a[tag=!Vitality_feat_1] Tenacity 0
@@ -113,7 +107,7 @@ execute as @a store result score @s generic_h run attribute @s scale get 1000
 execute as @a run scoreboard players remove @s generic_h 1000
 execute as @a unless score @s generic_h matches -150..150 run function echoes:stats/scale_attribute/_main {"score":"generic_h"}
 
-execute as @a run scoreboard players operation @s generic_h /= @s 5
+execute as @a run scoreboard players operation @s generic_h /= #const.5 value
 execute as @a run function math:round {score:generic_h,round:10,reduce:true}
 execute as @a run scoreboard players operation @s Strength += @s generic_h
 execute as @a run scoreboard players operation @s Dexterity += @s generic_h
@@ -121,7 +115,7 @@ execute as @a run scoreboard players operation @s Dexterity += @s generic_h
 # movement stats
 # scoreboard players set @a SurgeSprintThreshold 115
 # execute as @a run scoreboard players operation @s generic_a = @s Dexterity
-# execute as @a run scoreboard players operation @s generic_a /= @s 2
+# execute as @a run scoreboard players operation @s generic_a /= #const.2 value
 # execute as @a run scoreboard players operation @s SurgeSprintThreshold -= @s Dexterity
 
 scoreboard players set @a SurgeSprintThreshold 200

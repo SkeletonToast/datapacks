@@ -19,3 +19,6 @@ Library
     - most subfunctions already have contingencies in place for this
     - this is really just so that it's easier to distribute datapacks like Homesteader without installing SSL as well
         - just remember that all datapacks have dependency functions now, so if you don't have SSL installed, it's really easy to figure out how to do it. it literally links you to the download page if you try to run any other pack without SSL
+
+Armory
+- update attack speed cap lmfao that thing is extremely outdated

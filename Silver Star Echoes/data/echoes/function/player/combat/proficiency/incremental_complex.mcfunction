@@ -20,41 +20,33 @@ $scoreboard players operation @s minprof = @s $(stat)
 $scoreboard players operation @s prof = @s proficiency_$(statabbr)
 scoreboard players operation @s statmax = @s Potential
 scoreboard players operation @s scale = @s Prowess
-    scoreboard players operation @s scale *= @s 10
-    scoreboard players operation @s scale *= @s 10
-    scoreboard players operation @s scale *= @s 10
-    scoreboard players operation @s scale *= @s 5
+    scoreboard players operation @s scale *= #const.100 value
+    scoreboard players operation @s scale *= #const.50 value
 
 # truth = generic_a
 scoreboard players operation @s generic_e = @s prof
-    scoreboard players operation @s generic_e *= @s 10
-    scoreboard players operation @s generic_e *= @s 10
-scoreboard players operation @s generic_e /= @s 2
+    scoreboard players operation @s generic_e *= #const.50 value
 scoreboard players operation @s truth = @s statmax
 scoreboard players operation @s truth -= @s generic_e
-    scoreboard players operation @s truth /= @s 2
-        scoreboard players operation @s truth /= @s 3
+    scoreboard players operation @s truth /= #const.6 value
 
 # mintruth = generic_b
 scoreboard players operation @s mintruth = @s statmax
-    scoreboard players operation @s mintruth *= @s 10
-    scoreboard players operation @s mintruth *= @s 10
+    scoreboard players operation @s mintruth *= #const.100 value
 
 scoreboard players operation @s mintruth -= @s minprof
-    scoreboard players operation @s mintruth /= @s 2
-        scoreboard players operation @s mintruth /= @s 3
+    scoreboard players operation @s mintruth /= #const.6 value
 
 # lies = generic_c
 scoreboard players operation @s lies = @s statmax
-    scoreboard players operation @s lies *= @s 10
-    scoreboard players operation @s lies *= @s 10
+    scoreboard players operation @s lies *= #const.100 value
 
 scoreboard players operation @s lies -= @s minprof
-    scoreboard players operation @s lies /= @s 5
+    scoreboard players operation @s lies /= #const.5 value
 
 # maybe = generic_d
     scoreboard players operation @s generic_e = @s prof
-    scoreboard players operation @s generic_e /= @s 2
+    scoreboard players operation @s generic_e /= #const.2 value
     # remember, generic_e is already set to prof / 2
     # also remember that the proficiency value in-game is going to be \
         # 100,000x larger than the value displayed in the spreadsheet
@@ -82,8 +74,7 @@ scoreboard players operation @s lies -= @s minprof
 
 # final
 scoreboard players operation @s maybe *= @s scale
-    scoreboard players operation @s maybe *= @s 10
-    scoreboard players operation @s maybe *= @s 10
+    scoreboard players operation @s maybe *= #const.100 value
 scoreboard players operation @s generic_c = @s prof
     scoreboard players operation @s generic_c *= @s scale
 

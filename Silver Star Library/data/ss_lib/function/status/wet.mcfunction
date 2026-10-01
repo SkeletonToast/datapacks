@@ -1,5 +1,5 @@
 scoreboard players operation @s generic_a = @s wet_timer
-scoreboard players operation @s generic_a %= @s 2
+scoreboard players operation @s generic_a %= #const.2 value
 execute at @s[scores={generic_a=1,InWater=-1..0}] unless entity @s[predicate=ss_lib:in_rain] anchored eyes positioned ^ ^ ^ run particle falling_water ~ ~-0.4 ~ 0.15 0.15 0.15 0 1 normal @a
 execute at @s[scores={generic_a=0,InWater=-1..0}] unless entity @s[predicate=ss_lib:in_rain] anchored feet positioned ^ ^ ^ run particle falling_water ~ ~0.4 ~ 0.15 0.15 0.15 0 1 normal @a
 

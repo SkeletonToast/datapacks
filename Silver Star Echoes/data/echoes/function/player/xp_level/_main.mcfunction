@@ -3,7 +3,7 @@ execute as @a[scores={xp_level=1..}] if score @s xp_level > @s Mind run function
 
 execute as @a[scores={xp_level=..9999}] run function parse:score_unended {score:xp_level,function:"echoes:player/xp_level/random"}
 execute as @a[scores={xp_level=10000..}] run function echoes:player/xp_level/random {value:10000}
-    execute as @a run scoreboard players operation @s xp_increment /= @s 2
+    execute as @a run scoreboard players operation @s xp_increment /= #const.2 value
     execute as @a run scoreboard players operation @s xp_increment *= @s xp_increment
     # execute as @a[scores={xp_stored=1..}] if score @s xp_increment > @s xp_stored run scoreboard players operation @s xp_increment = @s xp_stored
 
@@ -12,7 +12,7 @@ execute as @a[scores={xp_level=22..,Mind=20..30}] run scoreboard players operati
     execute as @a[scores={xp_level=22..,Mind=20..30}] run scoreboard players add @s generic_b 1
 
 # level 30+
-execute as @a[scores={xp_level=32..,Mind=31..100}] run scoreboard players operation @s xp_cap *= @s 2
+execute as @a[scores={xp_level=32..,Mind=31..100}] run scoreboard players operation @s xp_cap *= #const.2 value
     execute as @a[scores={xp_level=32..,Mind=31..100}] run scoreboard players remove @s xp_cap 30
 
 # level 50+

@@ -1,1 +1,1 @@
-scoreboard players operation @s generic_a *= @s 10
+scoreboard players operation @s generic_a *= #const.10 value

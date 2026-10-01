@@ -5,16 +5,17 @@ scoreboard objectives add ssl.permissions_level dummy
         # They exist mainly just because I personally wanted them, but feel free to use them as well if you want.
         # If you don't want to use them, then just ignore them. This system doesn't affect literally anything unless you specifically tell it to.
     # Guidelines are below for each permission level.
-# !!! KEEP IN MIND:
-    # Any player who has op status, and can freely execute commands, can change their and others' permission levels.
-    # This system is designed EXCLUSIVELY for use by non-operator players, to allow regular members limited permissions.
+    # !!! KEEP IN MIND:
+        # Any player who has op status, and can freely execute commands, can change their and others' permission levels.
+        # This system is designed EXCLUSIVELY for use by non-operator players, to allow regular members limited permissions.
+        # No permissions level should enable a player to do something an operator could not do.
 # Level 0 - timeouted / no permissions
     # Assign this if you want to specifically deny permissions from a player.
     # It should be assumed that players with a permissions level of 0 or lower have been intentionally punished for something.
 # Level 1 - all members (public server)
-    # This level is automatically assigned to all players who join this world.
+    # This level is automatically assigned to all players when they join this world/server for the first time.
+        # This is the only situation where permissions level is automatically set. This datapack does not touch it ever again, after it's assigned for the first time.
     # Any permissions that you want to give all players (who have not been specifically punished) should be assigned to this permissions level.
-    # You might consider using permissions level 2 instead, if your world has some sort of verification system in place.
 # Level 2 - all members (private server) or trusted/verified members (public server)
     # In private settings, this permissions level might be given to all players as a baseline, since you likely know and trust most world members.
     # In public settings, consider only giving this permissions level to players who you have a baseline level of trust for.

@@ -15,9 +15,9 @@ $scoreboard players set @s Tact $(tc)
 $scoreboard players set @s SoulSigned $(sl)
 
 scoreboard players operation @s Soul = @s SoulSigned
-execute as @s[scores={Soul=..-1}] run scoreboard players operation @s Soul *= @s -1
+execute as @s[scores={Soul=..-1}] run scoreboard players operation @s Soul *= #const.-1 value
 scoreboard players operation @s Mind = @s MindSigned
-execute as @s[scores={Mind=..-1}] run scoreboard players operation @s Mind *= @s -1
+execute as @s[scores={Mind=..-1}] run scoreboard players operation @s Mind *= #const.-1 value
 
 function sse.dev:auto_set_difficulty
 

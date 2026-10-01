@@ -1,1 +1,1 @@
-$execute if score @s $(score) matches ..-1 run scoreboard players operation @s $(score) *= @s -1
+$execute if score @s $(score) matches ..-1 run scoreboard players operation @s $(score) *= #const.-1 value

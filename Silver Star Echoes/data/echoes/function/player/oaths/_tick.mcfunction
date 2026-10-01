@@ -83,7 +83,7 @@ scoreboard players add @a[scores={sse.oath=1}] Soul 1
 
 # haligsect - big mind buff, better health regen
 scoreboard players add @a[scores={sse.oath=2}] Mind 5
-execute as @a[scores={sse.oath=2}] if score @s aegis_amplifier >= @s aegis_amplifier_max run scoreboard players operation @s aegis_timer_max /= @s 2
+execute as @a[scores={sse.oath=2}] if score @s aegis_amplifier >= @s aegis_amplifier_max run scoreboard players operation @s aegis_timer_max /= #const.2 value
 
 # angel hunters - idk
 

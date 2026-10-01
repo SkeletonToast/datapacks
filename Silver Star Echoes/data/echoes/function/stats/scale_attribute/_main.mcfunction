@@ -1,7 +1,5 @@
 $scoreboard players operation @s scale_modifier = @s $(score)
-scoreboard players add @s scale_modifier 1
-scoreboard players operation @s scale_modifier /= @s 2
-scoreboard players operation @s scale_modifier *= @s 2
+function math:even {score:scale_modifier,sign:"-"}
 function parse:score {"score":"scale_modifier","function":"echoes:stats/scale_attribute/max_health",prepend:"",append:".",prepend_position:0,append_position:-3}
     # i don't love that this rounds down to odd numbers, but i don't think it reeeeeally matters because most of this is never going to apply to a real player
         # hopefully should be fixed by the evening out above
@@ -16,15 +14,14 @@ execute if score @s scale_modifier matches 1.. run function parse:score \
     {"score":"scale_modifier","function":"echoes:stats/scale_attribute/fall_damage_multiplier",prepend:"-",append:".",prepend_position:0,append_position:-3}
 
 # keep this at the end of the file so that it doesn't mess up any other calculations
-scoreboard players operation @s scale_modifier *= @s 3
-scoreboard players operation @s scale_modifier /= @s 5
+scoreboard players operation @s scale_modifier *= #const.3 value
+scoreboard players operation @s scale_modifier /= #const.5 value
     # used to make the falloff slightly more generous, like maybe aegis loss below 0.4 instead of below 0.6 or 0.7
 
 # this is just here because it's convenient, the aegis calc continues after
 execute if score @s scale_modifier matches 1.. run function parse:score \
     {"score":"scale_modifier","function":"echoes:stats/scale_attribute/movement_speed",prepend:"",append:".",prepend_position:0,append_position:-3}
 
-scoreboard players operation @s scale_modifier /= @s 10
-scoreboard players operation @s scale_modifier /= @s 10
+function math:round {score:scale_modifier,round:100}
 
 scoreboard players operation @s aegis_amplifier_max += @s scale_modifier

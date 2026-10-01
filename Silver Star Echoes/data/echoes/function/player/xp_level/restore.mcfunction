@@ -9,8 +9,8 @@ scoreboard players add @s[tag=xp_stored_reserve] xp_stored 2000000000
 tag @s remove xp_stored_reserve
 $scoreboard players remove @s[scores={xp_stored=1..}] xp_stored $(value)
 
-# scoreboard players operation @s xp_increment /= @s 2
-#     scoreboard players operation @s xp_increment /= @s 2
-# scoreboard players operation @s xp_increment *= @s 3
+# scoreboard players operation @s xp_increment /= #const.2 value
+#     scoreboard players operation @s xp_increment /= #const.2 value
+# scoreboard players operation @s xp_increment *= #const.3 value
 
 execute at @s anchored eyes run particle enchant ^ ^ ^ 0.3 0.3 0.3 0 2 normal @a

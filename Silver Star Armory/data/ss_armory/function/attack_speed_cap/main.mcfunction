@@ -3,13 +3,13 @@
 
 
 scoreboard players operation @s generic_a = @s AttackSpeed
-scoreboard players operation @s generic_a %= @s 10
+scoreboard players operation @s generic_a %= #const.10 value
 scoreboard players add @s[scores={generic_a=6}] AttackSpeed 4
 scoreboard players add @s[scores={generic_a=7}] AttackSpeed 3
 scoreboard players add @s[scores={generic_a=8}] AttackSpeed 2
 scoreboard players add @s[scores={generic_a=9}] AttackSpeed 1
 
-scoreboard players operation @s AttackSpeed /= @s 10
+function math:round {score:AttackSpeed,round:10}
     # attackspeed is stored at 100x so this just reduces it
 
 execute if score @s AttackSpeed <= @s AttackSpeedCap run return fail
@@ -19,7 +19,7 @@ scoreboard players operation @s AttackSpeed -= @s AttackSpeedCap
     # otherwise, gets value over the cap
 
 scoreboard players operation @s generic_a = @s AttackSpeed
-scoreboard players operation @s generic_a %= @s 10
+scoreboard players operation @s generic_a %= #const.10 value
     # first, gets the last digit number
 
 $execute as @s[scores={generic_a=1}] run function ss_armory:attack_speed_cap/increment {"value":"1","sign":"$(sign)"}

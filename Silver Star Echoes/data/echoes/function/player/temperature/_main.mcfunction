@@ -245,7 +245,7 @@ execute as @a unless score @s temp = @s temp_default run function ss_lib:fetch/a
     execute as @a[scores={ChestplateType=1..}] if items entity @s armor.chest *[enchantments~[{"enchantments":"echoes:thermostasis"}]] run scoreboard players add @s generic_t 1
     execute as @a[scores={LeggingsType=1..}] if items entity @s armor.legs *[enchantments~[{"enchantments":"echoes:thermostasis"}]] run scoreboard players add @s generic_t 1
     execute as @a[scores={BootsType=1..}] if items entity @s armor.feet *[enchantments~[{"enchantments":"echoes:thermostasis"}]] run scoreboard players add @s generic_t 1
-    execute as @a run scoreboard players operation @s generic_t *= @s 3
+    execute as @a run scoreboard players operation @s generic_t *= #const.3 value
         execute as @a run scoreboard players operation @s cold_resistance += @s generic_t
         execute as @a run scoreboard players operation @s heat_resistance += @s generic_t
 
@@ -254,7 +254,7 @@ execute as @a run scoreboard players operation @s temp_dangerous -= @s temp_defa
 
 # moving towards ambient temperature
 execute as @a unless score @s temp = @s ambient_temp run scoreboard players operation @s generic_b = @s temp_difference
-execute as @a[scores={generic_b=..-1}] unless score @s temp = @s ambient_temp run scoreboard players operation @s generic_b *= @s -1
+execute as @a[scores={generic_b=..-1}] unless score @s temp = @s ambient_temp run scoreboard players operation @s generic_b *= #const.-1 value
 execute as @a unless score @s temp = @s ambient_temp run function echoes:player/temperature/ambient
 
 # temperature diseligibility

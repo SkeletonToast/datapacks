@@ -14,7 +14,7 @@ scoreboard players set @s parse_score_digits 0
     $scoreboard players operation @s parse_score_input = @s $(score)
 
 tag @s[scores={parse_score_input=..-1}] add parse_score_negative
-scoreboard players operation @s[tag=parse_score_negative] parse_score_input *= @s -1
+scoreboard players operation @s[tag=parse_score_negative] parse_score_input *= #const.-1 value
 
 # digit counter initialization
     scoreboard players operation @s generic_b = @s parse_score_input
@@ -31,7 +31,7 @@ $scoreboard players set @s parse_score_prepend_position $(prepend_position)
     # append
     scoreboard players operation @s[scores={parse_score_append_position=..-1}] parse_score_digits -= @s parse_score_append_position
     scoreboard players operation @s[scores={parse_score_append_position=..-1}] generic_e = @s parse_score_append_position
-    scoreboard players operation @s[scores={parse_score_append_position=..-1}] generic_e *= @s -1
+    scoreboard players operation @s[scores={parse_score_append_position=..-1}] generic_e *= #const.-1 value
     scoreboard players set @s[scores={parse_score_append_position=..-1}] generic_p 10
     execute as @s[scores={parse_score_append_position=..-1}] run function math:power/score {base_score:generic_p,exponent_score:generic_e}
     scoreboard players operation @s[scores={parse_score_append_position=..-1}] parse_score_input *= @s generic_p

@@ -1,3 +1,2 @@
-scoreboard players operation @s generic_a *= @s 10
-    scoreboard players operation @s generic_a *= @s 2
-        scoreboard players operation @s generic_a /= @s 3
+scoreboard players operation @s generic_a *= #const.20 value
+function math:round {score:generic_a,round:3}
