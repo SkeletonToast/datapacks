@@ -33,33 +33,9 @@ scoreboard players set @a[scores={Age=1}] BaseTact 7
 scoreboard players set @a[scores={Age=1}] BaseSoul 7
 
 # averaged stats
-execute as @a run scoreboard players operation @s sse.Physique = @s Strength
-execute as @a run scoreboard players operation @s sse.Physique += @s Dexterity
-# execute as @a run scoreboard players operation @s sse.Physique += @s Resolve
-execute as @a run scoreboard players operation @s sse.Physique *= #const.3 value
-execute as @a run function math:round {score:sse.Physique,round:10}
-    execute as @a if score @s Strength >= @s Dexterity run scoreboard players operation @s sse.Physique += @s Dexterity
-    execute as @a if score @s Dexterity >= @s Strength run scoreboard players operation @s sse.Physique += @s Strength
-execute as @a if score @s Strength >= @s Dexterity if score @s sse.Physique > @s Strength run scoreboard players operation @s sse.Physique = @s Strength
-execute as @a if score @s Dexterity >= @s Strength if score @s sse.Physique > @s Dexterity run scoreboard players operation @s sse.Physique = @s Dexterity
-
-execute as @a run scoreboard players operation @s sse.Passion = @s Vitality
-execute as @a run scoreboard players operation @s sse.Passion += @s Soul
-execute as @a run scoreboard players operation @s sse.Passion *= #const.3 value
-execute as @a run function math:round {score:sse.Passion,round:10}
-    execute as @a if score @s Vitality >= @s Soul run scoreboard players operation @s sse.Passion += @s Soul
-    execute as @a if score @s Soul >= @s Vitality run scoreboard players operation @s sse.Passion += @s Vitality
-execute as @a if score @s Vitality >= @s Soul if score @s sse.Passion > @s Vitality run scoreboard players operation @s sse.Passion = @s Vitality
-execute as @a if score @s Soul >= @s Vitality if score @s sse.Passion > @s Soul run scoreboard players operation @s sse.Passion = @s Soul
-
-execute as @a run scoreboard players operation @s sse.Knowledge = @s Mind
-execute as @a run scoreboard players operation @s sse.Knowledge += @s Tact
-execute as @a run scoreboard players operation @s sse.Knowledge *= #const.3 value
-execute as @a run function math:round {score:sse.Knowledge,round:10}
-    execute as @a if score @s Mind >= @s Tact run scoreboard players operation @s sse.Knowledge += @s Tact
-    execute as @a if score @s Tact >= @s Mind run scoreboard players operation @s sse.Knowledge += @s Mind
-execute as @a if score @s Mind >= @s Tact if score @s sse.Knowledge > @s Mind run scoreboard players operation @s sse.Knowledge = @s Mind
-execute as @a if score @s Tact >= @s Mind if score @s sse.Knowledge > @s Tact run scoreboard players operation @s sse.Knowledge = @s Tact
+function echoes:stats/combination_stat {stat1:Strength,stat2:Dexterity,stat3:sse.Physique}
+function echoes:stats/combination_stat {stat1:Vitality,stat2:Soul,stat3:sse.Passion}
+function echoes:stats/combination_stat {stat1:Mind,stat2:Tact,stat3:sse.Knowledge}
 
 # Tenacity & Fortitude
 execute as @a run scoreboard players operation @s Tenacity = @s Vitality

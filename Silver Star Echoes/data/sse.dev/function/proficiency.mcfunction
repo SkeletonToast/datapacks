@@ -9,7 +9,7 @@ tellraw @s [""]
 tellraw @s [{"text":"❖ Proficiency: ","color":"gray"},{"score":{"name":"@s","objective":"proficiency"},"color":"white"}]
 function parse:score {prepend:"",append:".",prepend_position:0,append_position:2,"score":"proficiency","function":"sse.dev:proficiency_output_1"}
 
-function ss_lib:fetch/attack_damage {s:"@s",scale:1000}
+function ss_lib:fetch/attack_damage {s:"@s",scale:1000,bypass_check:true}
 function math:round {score:AttackDamage,round:10,reduce:true}
 function parse:score {prepend:"",append:".",prepend_position:0,append_position:2,"score":"AttackDamage","function":"sse.dev:proficiency_output_2"}
 

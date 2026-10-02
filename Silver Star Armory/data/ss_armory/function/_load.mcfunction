@@ -1,3 +1,5 @@
+scoreboard players set $ssa.gamerule.attack_speed_cap value 50
+
 # propertied weapons
 scoreboard objectives add HasPropertiedWeapon dummy
 
@@ -23,7 +25,9 @@ scoreboard objectives add powdersling_cooldown dummy
 scoreboard objectives add gun_base_damage dummy
 
 # attack speed
-scoreboard objectives add AttackSpeedCapTimer dummy
+scoreboard objectives add ssa.attack_speed_cap dummy
+scoreboard objectives add ssa.attack_speed_cap.timer dummy
+scoreboard objectives add ssa.attack_speed_cap.attack_speed dummy
 
 # riposte
 scoreboard objectives add riposte_damage_blocked custom:damage_blocked_by_shield

@@ -1,4 +1,9 @@
-Thanks for downloading Score Parse Module! A short guide is below. The creator, SkeletonToast, can be reached best through Discord: @skeleton.toast
+Thanks for downloading Score Parse Module! A short guide is below.
+
+Questions & Comments:
+Discord (Best for contacting me): @skeleton.toast
+Modrinth: https://modrinth.com/user/skeletontoast
+GitHub: https://github.com/SkeletonToast
 
 GUIDE
 - Required input macros: $function, $score, (optional)[$prepend, $prepend_position, $append, $append_position]

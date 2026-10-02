@@ -11,7 +11,7 @@ execute as @a[scores={HasPropertiedWeapon=1..,ItemSelected=1,disarmed_timer=1..}
     if items entity @s weapon.mainhand *[minecraft:custom_data~{weapon:{properties:{studded_grip:true}}}] run function ss_armory:properties/studded_grip
 
 # quick draw
-execute as @a[scores={HasPropertiedWeapon=1..,ItemSelected=1,AttackSpeedCapTimer=0}] \
+execute as @a[scores={HasPropertiedWeapon=1..,ItemSelected=1,ssa.attack_speed_cap.timer=0}] \
     if items entity @s weapon.mainhand *[minecraft:custom_data~{weapon:{properties:{properties:["quick_draw"]}}}] run function ss_armory:properties/quick_draw
 
 # visceral

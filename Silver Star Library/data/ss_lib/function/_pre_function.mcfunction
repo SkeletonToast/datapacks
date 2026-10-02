@@ -13,9 +13,10 @@ execute as @a run scoreboard players operation @s DamageDealt += @s DamageDealtA
 execute as @a run scoreboard players operation @s DamageDealt += @s DamageDealtResisted
 
 # attributes
-execute as @a store result score @s AttackDamage run attribute @s attack_damage get
-
-execute as @a store result score @s ArmorToughness run attribute @s armor_toughness get
+scoreboard players set @a AttackDamage -1
+scoreboard players set @a AttackSpeed -1
+scoreboard players set @a ssl.fetch.attack_damage.scale 0
+scoreboard players set @a ssl.fetch.attack_speed.scale 0
 
 # selected items
 scoreboard players set @a ItemSelected -1
@@ -36,7 +37,9 @@ scoreboard players set @a Armorless 0
 
 scoreboard players set @a OnGround 0
 scoreboard players set @a FallFlying 0
-    # these are fine as is because they're only run once per tick
+    # Most of these scores are set to -1. OnGround and FallFlying are untouched because, by default, they're run every tick.
+    # See ss_lib:fetch_configuration (linked below) to change this.
+        # Be aware: If any other Silver Star datapacks are installed, they will likely lose some functionality if anything in fetch_configuration is changed.
 
 # fetch functions
 function ss_lib:fetch_configuration
@@ -59,6 +62,7 @@ scoreboard players set @a[scores={SoftTimeSinceRest=0}] SoftRestOrRespawn 0
 scoreboard players add @a[scores={TimeSinceRest=0}] SleepingTime 1
 scoreboard players set @a[scores={TimeSinceRest=1..}] SleepingTime 0
 
+scoreboard players add @a GameTime 1
 scoreboard players add @a SoftGameTime 1
 
 # this can be used to remove aggro from any hostile mob.

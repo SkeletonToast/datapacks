@@ -1,6 +1,6 @@
 {
 "pack": {
-    "pack_format": 107.1,
+    "pack_format": 121.0,
     "description": "Changes Ender Pearls to simply teleport the player a short distance forward on use."
   }
 }

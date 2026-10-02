@@ -1,12 +1,17 @@
 # dependency failures
 execute unless data storage silver_star_library installed run return fail
 
+function ss_lib:fetch/item_selected {s:"@a"}
+
 scoreboard players add @a HasPropertiedWeapon 0
-execute as @a[scores={ItemSelected=1,HasPropertiedWeapon=0}] if items entity @s weapon.mainhand *[minecraft:custom_data~{weapon:{properties:{active:["mainhand"]}}}] run \
+execute as @a[scores={ItemSelected=1,HasPropertiedWeapon=0}] if items entity @s weapon.mainhand \
+    *[minecraft:custom_data~{weapon:{properties:{active:["mainhand"]}}}] run \
     scoreboard players set @s HasPropertiedWeapon 1
-execute as @a[scores={ItemOffhand=1,HasPropertiedWeapon=0}] if items entity @s weapon.offhand *[minecraft:custom_data~{weapon:{properties:{active:["offhand"]}}}] run \
+execute as @a[scores={ItemOffhand=1,HasPropertiedWeapon=0}] if items entity @s weapon.offhand \
+    *[minecraft:custom_data~{weapon:{properties:{active:["offhand"]}}}] run \
     scoreboard players set @s HasPropertiedWeapon 1
-execute as @a[scores={HasPropertiedWeapon=0}] if items entity @s hotbar.* *[minecraft:custom_data~{weapon:{properties:{active:["hotbar"]}}}] run \
+execute as @a[scores={HasPropertiedWeapon=0}] if items entity @s hotbar.* \
+    *[minecraft:custom_data~{weapon:{properties:{active:["hotbar"]}}}] run \
     scoreboard players set @s HasPropertiedWeapon 1
 
 # shield penalty
@@ -31,7 +36,7 @@ execute as @a if items entity @s weapon.offhand shield[custom_data~{weapon:{nega
 
     # quick draw attribute removal
     execute as @a[scores={HasPropertiedWeapon=0}] run attribute @s attack_speed modifier remove quick_draw_attack_speed
-    execute as @a[scores={AttackSpeedCapTimer=1..}] run attribute @s attack_speed modifier remove quick_draw_attack_speed
+    execute as @a[scores={ssa.attack_speed_cap.timer=1..}] run attribute @s attack_speed modifier remove quick_draw_attack_speed
     execute as @a[tag=!QuickDrawUsed] run attribute @s attack_speed modifier remove quick_draw_attack_speed
     tag @a[tag=QuickDrawUsed] remove QuickDrawUsed
 

@@ -61,27 +61,36 @@ gamerule natural_health_regeneration false
         scoreboard objectives add proficiency_tact dummy
         scoreboard objectives add proficiency_soul dummy
         scoreboard objectives add proficiency_mind dummy
+        
+        # Scores below are just used for developer tools.
         scoreboard objectives add prof_str_unadj dummy
         scoreboard objectives add prof_dex_unadj dummy
         scoreboard objectives add prof_tact_unadj dummy
         scoreboard objectives add prof_soul_unadj dummy
         scoreboard objectives add prof_mind_unadj dummy
         scoreboard objectives add prof_unadj dummy
-        
-        scoreboard objectives add proficiency_recursion dummy
-        scoreboard objectives add proficiency_inc_sum dummy
-        # scoreboard objectives add minprof dummy
-        # scoreboard objectives add prof dummy
-        # scoreboard objectives add statmax dummy
-        # scoreboard objectives add scale dummy
-        # scoreboard objectives add truth dummy
-        # scoreboard objectives add mintruth dummy
-        # scoreboard objectives add lies dummy
-        # scoreboard objectives add maybe dummy
+
+        # These scores were all used for a scrapped rework of Proficiency.        
+            # scoreboard objectives add proficiency_recursion dummy
+            # scoreboard objectives add proficiency_inc_sum dummy
+            # scoreboard objectives add minprof dummy
+            # scoreboard objectives add prof dummy
+            # scoreboard objectives add statmax dummy
+            # scoreboard objectives add scale dummy
+            # scoreboard objectives add truth dummy
+            # scoreboard objectives add mintruth dummy
+            # scoreboard objectives add lies dummy
+            # scoreboard objectives add maybe dummy
 
     scoreboard objectives add ichor_damage dummy
+        # This value can be incremented by anything, and at the end of each tick, this much Ichor damage will be dealt to the score holder.
+            # As a reminder, Ichor damage ignores any kind of damage reduction, but only affects Absorption hearts.
 
     scoreboard objectives add used_goat_horn minecraft.used:minecraft.goat_horn
+        # This is just used to enter players into combat when they use a goat horn.
+
+    scoreboard objectives add attack_particle_timer dummy
+        # This score is used to display particles when a player has increased attack power, usually from an enchantment.
 
 # elytra scaling stuff
     scoreboard objectives add elytra_boost_cooldown dummy

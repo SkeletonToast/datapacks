@@ -8,6 +8,8 @@ scoreboard players set @a ss_epr.used_ender_pearl 0
 
 execute at @a[scores={ss_epr.teleport_trail_timer=1..}] run particle dragon_breath ~ ~ ~ 0.1 0.1 0.1 0 1 normal
 scoreboard players remove @a[scores={ss_epr.teleport_trail_timer=1..}] ss_epr.teleport_trail_timer 1
+scoreboard players remove @a[scores={ss_epr.gravity_timer=1..}] ss_epr.gravity_timer 1
+execute as @a[scores={ss_epr.gravity_timer=1}] run attribute @s minecraft:gravity modifier remove ss_epr.gravity
 
 execute unless score $default ss_epr.teleport_distance matches 0.. run scoreboard players set $default ss_epr.teleport_distance 40
 execute as @a run scoreboard players operation @s ss_epr.teleport_distance = $default ss_epr.teleport_distance

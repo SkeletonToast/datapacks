@@ -1,14 +1,14 @@
 function elixir:_tick
 
-scoreboard players set @a[scores={DamageDealt=1..}] DamageDealt 0
-scoreboard players set @a[scores={DamageDealtAbsorbed=1..}] DamageDealtAbsorbed 0
-scoreboard players set @a[scores={DamageDealtResisted=1..}] DamageDealtResisted 0
+scoreboard players set @a DamageDealt 0
+scoreboard players set @a DamageDealtAbsorbed 0
+scoreboard players set @a DamageDealtResisted 0
 
-scoreboard players set @a[scores={DamageTaken=1..}] DamageTaken 0
-scoreboard players set @a[scores={DamageAbsorbed=1..}] DamageAbsorbed 0
-scoreboard players set @a[scores={DamageResisted=1..}] DamageResisted 0
+scoreboard players set @a DamageTaken 0
+scoreboard players set @a DamageAbsorbed 0
+scoreboard players set @a DamageResisted 0
 
-scoreboard players set @a[scores={PlayerKilled=1..}] PlayerKilled 0
+scoreboard players set @a PlayerKilled 0
 
 advancement revoke @a[advancements={ss_lib:lib/using_shield=true}] only ss_lib:lib/using_shield
 advancement revoke @a[advancements={ss_lib:lib/using_bow=true}] only ss_lib:lib/using_bow
@@ -28,8 +28,8 @@ scoreboard players remove @a pause_actionbars 1
 # function ss_lib:safety
 
 # attack buff particles
-execute as @a[scores={attack_particle_timer=1..},tag=!attack_particle_timer] at @s run function ss_lib:particles/attack_power_burst
+execute as @a[scores={attack_particle_timer=1..},tag=!attack_particle_timer] at @s run function ss_lib:particles/function/attack_power_burst
 tag @a[scores={attack_particle_timer=1..},tag=!attack_particle_timer] add attack_particle_timer
-execute as @a[tag=attack_particle_timer] at @s run function ss_lib:particles/attack_power_sustained
+execute as @a[tag=attack_particle_timer] at @s run function ss_lib:particles/function/attack_power_sustained
 scoreboard players remove @a[scores={attack_particle_timer=1..}] attack_particle_timer 1
 tag @a[scores={attack_particle_timer=0}] remove attack_particle_timer

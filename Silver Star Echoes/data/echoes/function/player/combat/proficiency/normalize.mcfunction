@@ -1,4 +1,4 @@
-function ss_lib:fetch/attack_damage {s:"@s",scale:100}
+function ss_lib:fetch/attack_damage {s:"@s",scale:100,bypass_check:true}
 scoreboard players operation @s generic_a = @s AttackDamage
         scoreboard players set @s generic_p 0
     execute store result score @s generic_p run attribute @s attack_damage modifier value get minecraft:effect.weakness 100

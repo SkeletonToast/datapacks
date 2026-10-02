@@ -3,6 +3,7 @@ Talisman
 - this could let you add some basic talismans for homesteader maybe
 
 Echoes
+- make sure combination stats actually calculate as intended, i changed around the multipliers
 - rename items
     - rename cocoa beans to something else
     - rename nether star to Fleeting Echo
@@ -19,6 +20,24 @@ Library
     - most subfunctions already have contingencies in place for this
     - this is really just so that it's easier to distribute datapacks like Homesteader without installing SSL as well
         - just remember that all datapacks have dependency functions now, so if you don't have SSL installed, it's really easy to figure out how to do it. it literally links you to the download page if you try to run any other pack without SSL
+- make sure new fetch functions work (atk dmg, atk spd, armor)
+
+LIBRARY UPDATE:
+- gamerule system
+- moving over to constants instead of generic scores
+- permissions levels
+- dependencies template
+- changes to fetch functions
+    - AttackSpeed and AttackDamage now require bypass_check as well
+    - ArmorToughness is no longer calculated every tick, and is now part of the fetch/armor function
+- soon, we will add an actionbar queueing system!!!
+- GameTime updates now lmfao?? what was the point before
+- DayTime changes
+    - Used to be a score, DayTime, which was stored for each player. Now it's just #day_time value.
+- (hopefully) circle module!
+- elixir readme but it was already on the modrinth page so it doesn't really matter
 
 Armory
 - update attack speed cap lmfao that thing is extremely outdated
+    - it appears to predate even SPM
+    - should be updated to use SPM! I didn't see any other major issues
