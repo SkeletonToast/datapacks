@@ -31,17 +31,17 @@
             }
           },
           "requirements": {
-            "condition": "minecraft:any_of",
+            "type": "minecraft:any_of",
             "terms": [
               {
-                "condition": "minecraft:entity_properties",
+                "type": "minecraft:entity_properties",
                 "entity": "this",
                 "predicate": {
                   "entity_type": "#minecraft:sensitive_to_bane_of_arthropods"
                 }
               },
               {
-                "condition": "minecraft:entity_properties",
+                "type": "minecraft:entity_properties",
                 "entity": "this",
                 "predicate": {
                   "nbt": "{Tags:[\"sensitive_to_bane\"]}"
@@ -68,20 +68,20 @@
             "max_amplifier": 3
           },
           "requirements": {
-            "condition": "minecraft:all_of",
+            "type": "minecraft:all_of",
             "terms": [
               {
-                "condition": "minecraft:any_of",
+                "type": "minecraft:any_of",
                 "terms": [
                   {
-                    "condition": "minecraft:entity_properties",
+                    "type": "minecraft:entity_properties",
                     "entity": "this",
                     "predicate": {
                       "entity_type": "#minecraft:sensitive_to_bane_of_arthropods"
                       }
                   },
                   {
-                    "condition": "minecraft:entity_properties",
+                    "type": "minecraft:entity_properties",
                     "entity": "this",
                     "predicate": {
                       "nbt": "{Tags:[\"sensitive_to_bane\"]}"
@@ -90,7 +90,7 @@
                 ]
               },
               {
-                "condition": "minecraft:damage_source_properties",
+                "type": "minecraft:damage_source_properties",
                 "predicate": {
                   "is_direct": true
                 }

@@ -16,9 +16,9 @@ function ss_armory:properties/guns/paintball/big_particles
 playsound minecraft:block.wood.break player @a ^ ^ ^0.5 2 1
 playsound minecraft:block.stone.break player @a ^ ^ ^0.5 2 1
 
-# item modify entity @s[scores={InfinitePowderslingAmmo=0},predicate=ss_armory:has_arrow] weapon.mainhand [{"function":"minecraft:set_components","components":{"minecraft:charged_projectiles":[{count:1,id:"minecraft:arrow"}]}}]
-# execute unless entity @s[scores={InfinitePowderslingAmmo=0}] run item modify entity @s weapon.mainhand [{"function":"minecraft:set_components","components":{"minecraft:charged_projectiles":[{count:1,id:"minecraft:arrow"}]}}]
+# item modify entity @s[scores={InfinitePowderslingAmmo=0},predicate=ss_armory:has_arrow] weapon.mainhand {"type":"minecraft:set_components","components":{"minecraft:charged_projectiles":[{count:1,id:"minecraft:arrow"}]}}]
+# execute unless entity @s[scores={InfinitePowderslingAmmo=0}] run item modify entity @s weapon.mainhand {"type":"minecraft:set_components","components":{"minecraft:charged_projectiles":[{count:1,id:"minecraft:arrow"}]}}]
 # execute unless entity @s[scores={MultishotTimer=1}] if predicate ss_lib:random_50_percent run clear @s[scores={InfinitePowderslingAmmo=0},predicate=ss_armory:has_arrow] #minecraft:arrows 1
 
 # temporary
-# item modify entity @s weapon.mainhand [{"function":"minecraft:set_components","components":{"minecraft:charged_projectiles":[{count:1,id:"minecraft:arrow"}]}}]
+# item modify entity @s weapon.mainhand {"type":"minecraft:set_components","components":{"minecraft:charged_projectiles":[{count:1,id:"minecraft:arrow"}]}}]

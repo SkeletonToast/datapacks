@@ -1,9 +1,9 @@
 scoreboard players add @s raycast_lifetime 1
 
 scoreboard players set @s SeekerDirection 0
-execute if predicate {"condition":"minecraft:random_chance","chance":0.50} run scoreboard players set @s SeekerDirection 1
-execute if predicate {"condition":"minecraft:random_chance","chance":0.33} run scoreboard players set @s SeekerDirection 2
-execute if predicate {"condition":"minecraft:random_chance","chance":0.25} run scoreboard players set @s SeekerDirection 3
+execute if predicate {"type":"minecraft:random_chance","chance":0.50} run scoreboard players set @s SeekerDirection 1
+execute if predicate {"type":"minecraft:random_chance","chance":0.33} run scoreboard players set @s SeekerDirection 2
+execute if predicate {"type":"minecraft:random_chance","chance":0.25} run scoreboard players set @s SeekerDirection 3
 
 particle end_rod ~ ~ ~ 0 0 0 0 1 normal @a
 particle electric_spark ~ ~ ~ 0.2 0.2 0.2 0 3 normal @a

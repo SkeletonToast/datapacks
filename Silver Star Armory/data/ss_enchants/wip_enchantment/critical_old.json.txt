@@ -22,7 +22,7 @@
       "minecraft:attributes": [
         {
           "requirements": {
-            "condition": "minecraft:entity_properties",
+            "type": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
               "ss_lib:crit_eligible" : true

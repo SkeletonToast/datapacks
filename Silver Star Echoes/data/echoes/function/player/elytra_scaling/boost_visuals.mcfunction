@@ -11,6 +11,6 @@ attribute @s[scores={boost_visual_effects=2}] movement_speed modifier add elytra
 attribute @s[scores={boost_visual_effects=1}] movement_speed modifier add elytra_visual_speed 0.1 add_multiplied_total
 
 # execute as @s[scores={boost_visual_effects=..9}] run function parse:score_unended \
-#     {"score":"elytra_visual_speed","function":"echoes:player/elytra_scaling/boost_visuals_apply"}
+#     {score:elytra_visual_speed,function:"echoes:player/elytra_scaling/boost_visuals_apply"}
 
 scoreboard players remove @s boost_visual_effects 1

@@ -1,20 +1,20 @@
 {
-  "condition": "minecraft:all_of",
+  "type": "minecraft:all_of",
   "terms": [
     {
-      "condition": "minecraft:weather_check",
+      "type": "minecraft:weather_check",
       "raining": true
     },
     {
-      "condition": "minecraft:location_check",
+      "type": "minecraft:location_check",
       "predicate": {
         "can_see_sky": true
       }
     },
     {
-      "condition": "minecraft:inverted",
+      "type": "minecraft:inverted",
       "term": {
-        "condition": "minecraft:reference",
+        "type": "minecraft:reference",
         "name": "ss_lib:in_arid_biome"
       }
     }

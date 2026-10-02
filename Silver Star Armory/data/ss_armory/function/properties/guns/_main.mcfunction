@@ -19,7 +19,7 @@ execute as @a[scores={GunType=0}] if items entity @s weapon.offhand *[minecraft:
 
 # paintball
 scoreboard players set @a[scores={GunType=4,InfinitePowderslingAmmo=0}] InfinitePowderslingAmmo 1
-execute as @a[scores={GunType=4,PaintballReload=0}] run item modify entity @s weapon.mainhand [{"function":"minecraft:set_components","components":{"minecraft:charged_projectiles":[{count:1,id:"minecraft:arrow"}]}}]
+execute as @a[scores={GunType=4,PaintballReload=0}] run item modify entity @s weapon.mainhand {"type":"minecraft:set_components","components":{"minecraft:charged_projectiles":[{count:1,id:"minecraft:arrow"}]}}
 execute as @a[scores={GunType=4,PaintballType=..0}] run function ss_armory:properties/guns/paintball/color_type
 
 # multishot
@@ -66,7 +66,7 @@ execute as @a[scores={HasPropertiedWeapon=0..,SneakTime=20..,GunType=1..,OnGroun
 execute as @a[scores={HasPropertiedWeapon=0..,SneakTime=1}] unless entity @s[scores={InfinitePowderslingAmmo=0}] \
     if items entity @s weapon.mainhand *[minecraft:custom_data~{weapon:{gun:{}}}] \
     unless items entity @s weapon.mainhand *[minecraft:charged_projectiles=[{id:"arrow",count:1}]] \
-    run item modify entity @s weapon.mainhand [{"function":"minecraft:set_components","components":{"minecraft:charged_projectiles":[{count:1,id:"minecraft:arrow"}]}}]
+    run item modify entity @s weapon.mainhand {"type":"minecraft:set_components","components":{"minecraft:charged_projectiles":[{count:1,id:"minecraft:arrow"}]}}
 
 scoreboard players set @a[scores={InfinitePowderslingAmmo=1}] InfinitePowderslingAmmo 0
 

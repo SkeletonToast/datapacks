@@ -37,7 +37,7 @@ execute as @a[scores={sse.difficulty.default_aegis_amplifier=-1..}] run scoreboa
 # ichor damage
         # if anything grants ichor damage immunity, put it here, before the below function
 
-execute as @a[scores={ichor_damage=1..}] run function parse:score_unended {"score":"ichor_damage","function":"echoes:player/combat/ichor_damage"}
+execute as @a[scores={ichor_damage=1..}] run function parse:score_unended {score:ichor_damage,function:"echoes:player/combat/ichor_damage"}
 scoreboard players set @a ichor_damage 0
 
 advancement revoke @a only echoes:using_clock

@@ -7,7 +7,7 @@
     "minecraft:post_attack": [
       {
         "requirements": {
-          "condition": "minecraft:damage_source_properties",
+          "type": "minecraft:damage_source_properties",
           "predicate": {
             "tags": [],
             "source_entity": {
@@ -32,7 +32,7 @@
       },
       {
         "requirements": {
-          "condition": "minecraft:damage_source_properties",
+          "type": "minecraft:damage_source_properties",
           "predicate": {
             "tags": [],
             "source_entity": {
@@ -57,7 +57,7 @@
       },
       {
         "requirements": {
-          "condition": "minecraft:damage_source_properties",
+          "type": "minecraft:damage_source_properties",
           "predicate": {
             "tags": [],
             "source_entity": {
@@ -82,7 +82,7 @@
       },
       {
         "requirements": {
-          "condition": "minecraft:damage_source_properties",
+          "type": "minecraft:damage_source_properties",
           "predicate": {
             "tags": [],
             "source_entity": {
@@ -107,7 +107,7 @@
       },
       {
         "requirements": {
-          "condition": "minecraft:damage_source_properties",
+          "type": "minecraft:damage_source_properties",
           "predicate": {
             "tags": [],
             "source_entity": {

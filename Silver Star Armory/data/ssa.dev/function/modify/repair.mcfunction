@@ -1,1 +1,1 @@
-item modify entity @s weapon.mainhand [{"function":"minecraft:set_damage","damage":1,"add":true}]
+item modify entity @s weapon.mainhand {"type":"minecraft:set_damage","damage":1,"add":true}

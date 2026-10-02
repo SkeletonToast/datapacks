@@ -1,2 +1,2 @@
-$item modify entity @s weapon.mainhand {"function":"minecraft:set_components","components":{"minecraft:repair_cost":$(value)}}
+$item modify entity @s weapon.mainhand {"type":"minecraft:set_components","components":{"minecraft:repair_cost":$(value)}}
 execute at @s anchored eyes run playsound block.grindstone.use block @s ^ ^ ^1 0.5 1.1

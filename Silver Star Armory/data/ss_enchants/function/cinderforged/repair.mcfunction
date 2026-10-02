@@ -1,4 +1,4 @@
-execute as @s[predicate=ss_lib:is/sneaking] run item modify entity @s weapon.mainhand [{"function":"minecraft:set_damage","damage":0.01,"add":true}]
+execute as @s[predicate=ss_lib:is/sneaking] run item modify entity @s weapon.mainhand {"type":"minecraft:set_damage","damage":0.01,"add":true}
 $execute as @s[predicate=ss_lib:is/sneaking] run xp add @s -$(cost) points
 execute as @s[predicate=ss_lib:is/sneaking] unless items entity @s weapon.mainhand *[minecraft:damage~{damage:{min:1}}] at @s run playsound block.anvil.use block @a ~ ~ ~ 0.5 1
 

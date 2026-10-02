@@ -16,7 +16,7 @@ playsound minecraft:entity.firework_rocket.large_blast_far player @a ^ ^ ^0.5 0.
 playsound minecraft:entity.blaze.hurt player @a ^ ^ ^0.5 0.5 1
 playsound minecraft:block.wood.break player @a ^ ^ ^0.5 2 1
 
-execute unless entity @s[scores={InfinitePowderslingAmmo=0}] run item modify entity @s weapon.mainhand [{"function":"minecraft:set_components","components":{"minecraft:charged_projectiles":[{count:1,id:"minecraft:arrow"}]}}]
+execute unless entity @s[scores={InfinitePowderslingAmmo=0}] run item modify entity @s weapon.mainhand {"type":"minecraft:set_components","components":{"minecraft:charged_projectiles":[{count:1,id:"minecraft:arrow"}]}}
 
 execute unless entity @s[scores={encumbered_timer=21..}] run scoreboard players add @s encumbered_timer 20
 

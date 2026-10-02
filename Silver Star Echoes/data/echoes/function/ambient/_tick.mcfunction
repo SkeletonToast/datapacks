@@ -6,13 +6,13 @@ execute as @a[predicate=echoes:in_ocean] run function ss_lib:fetch/in_water {s:"
 execute as @a[scores={Dimension=4},tag=!near_campfire] at @s run particle white_ash ~ ~5 ~ 10 10 10 1 100 normal @s
 execute as @a[scores={Dimension=4},tag=near_campfire] at @s run particle white_ash ~ ~5 ~ 10 10 10 1 10 normal @s
 
-execute if score $day_time value matches 13000..22999 as @a at @s if predicate {"condition":"minecraft:location_check","predicate":{"biomes":["minecraft:flower_forest","minecraft:mushroom_fields"]}} run particle firefly ~ ~ ~ 20 5 20 0.1 10 normal
-execute if score $day_time value matches 13000..22999 as @a unless score $moon_phase value matches 1 at @s if predicate {"condition":"minecraft:location_check","predicate":{"biomes":["minecraft:ice_spikes"]}} run particle ominous_spawning ~ ~ ~ 20 5 20 0 10 normal
-execute if score $day_time value matches 13000..22999 as @a if score $moon_phase value matches 1 at @s if predicate {"condition":"minecraft:location_check","predicate":{"biomes":["minecraft:ice_spikes"]}} run particle ominous_spawning ~ ~ ~ 20 5 20 0 100 normal
-execute as @a at @s if predicate {"condition":"minecraft:location_check","predicate":{"biomes":["minecraft:lush_caves"]}} run particle firefly ~ ~ ~ 10 10 10 0.1 1 normal
-execute as @a at @s if predicate {"condition":"minecraft:location_check","predicate":{"biomes":["minecraft:sulfur_caves"]}} run particle noxious_gas ~ ~ ~ 10 10 10 0 10 normal
-execute as @a[predicate=echoes:has_darkness] at @s if entity @e[type=warden,distance=..100] if predicate {"condition":"minecraft:location_check","predicate":{"structures":["minecraft:ancient_city"]}} run particle sculk_soul ~ ~ ~ 20 20 20 0 100 normal
-# execute if score $day_time value matches 13000..22999 as @a at @s if predicate {"condition":"minecraft:location_check","predicate":{"structures":["minecraft:ancient_city"]}} run particle sonic_boom ~ ~ ~ 20 20 20 0 100 normal
+execute if score $day_time value matches 13000..22999 as @a at @s if predicate {"type":"minecraft:location_check","predicate":{"biomes":["minecraft:flower_forest","minecraft:mushroom_fields"]}} run particle firefly ~ ~ ~ 20 5 20 0.1 10 normal
+execute if score $day_time value matches 13000..22999 as @a unless score $moon_phase value matches 1 at @s if predicate {"type":"minecraft:location_check","predicate":{"biomes":["minecraft:ice_spikes"]}} run particle ominous_spawning ~ ~ ~ 20 5 20 0 10 normal
+execute if score $day_time value matches 13000..22999 as @a if score $moon_phase value matches 1 at @s if predicate {"type":"minecraft:location_check","predicate":{"biomes":["minecraft:ice_spikes"]}} run particle ominous_spawning ~ ~ ~ 20 5 20 0 100 normal
+execute as @a at @s if predicate {"type":"minecraft:location_check","predicate":{"biomes":["minecraft:lush_caves"]}} run particle firefly ~ ~ ~ 10 10 10 0.1 1 normal
+execute as @a at @s if predicate {"type":"minecraft:location_check","predicate":{"biomes":["minecraft:sulfur_caves"]}} run particle noxious_gas ~ ~ ~ 10 10 10 0 10 normal
+execute as @a[predicate=echoes:has_darkness] at @s if entity @e[type=warden,distance=..100] if predicate {"type":"minecraft:location_check","predicate":{"structures":["minecraft:ancient_city"]}} run particle sculk_soul ~ ~ ~ 20 20 20 0 100 normal
+# execute if score $day_time value matches 13000..22999 as @a at @s if predicate {"type":"minecraft:location_check","predicate":{"structures":["minecraft:ancient_city"]}} run particle sonic_boom ~ ~ ~ 20 20 20 0 100 normal
 
 execute as @a[predicate=echoes:in_ocean,scores={InWater=2..}] at @s run particle bubble ~ ~ ~ 20 20 20 0 80 normal @s
 execute as @a[predicate=echoes:in_ocean,scores={InWater=2..}] at @s run particle white_ash ~ ~ ~ 20 20 20 0 80 normal @s

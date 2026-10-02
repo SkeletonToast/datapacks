@@ -1,12 +1,12 @@
 {
-    "condition": "minecraft:any_of",
+    "type": "minecraft:any_of",
     "terms": [
       {
-        "condition": "minecraft:reference",
+        "type": "minecraft:reference",
         "name": "ss_lib:is/sneaking"
       },
       {
-        "condition": "minecraft:entity_properties",
+        "type": "minecraft:entity_properties",
         "entity": "this",
         "predicate": {
           "effects": {

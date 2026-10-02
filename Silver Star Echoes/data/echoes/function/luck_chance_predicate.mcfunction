@@ -1,1 +1,1 @@
-$execute $(condition) predicate {"condition":"random_chance",chance:$(value)} run function $(function)
+$execute $(condition) predicate {"type":"random_chance",chance:$(value)} run function $(function)

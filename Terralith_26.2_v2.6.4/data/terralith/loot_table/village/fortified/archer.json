@@ -10,7 +10,7 @@
                             "conditions": [
                                 {
                                     "chance": 0.2,
-                                    "condition": "minecraft:random_chance"
+                                    "type": "minecraft:random_chance"
                                 }
                             ],
                             "function": "minecraft:enchant_with_levels",
@@ -32,7 +32,7 @@
                             "conditions": [
                                 {
                                     "chance": 0.2,
-                                    "condition": "minecraft:random_chance"
+                                    "type": "minecraft:random_chance"
                                 }
                             ],
                             "function": "minecraft:enchant_with_levels",

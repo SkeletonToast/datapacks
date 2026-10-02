@@ -37,7 +37,7 @@ execute as @a[scores={flight_level=1..}] run attribute @s minecraft:gravity modi
             execute as @a if score @s air_brake_time > @s generic_a run scoreboard players operation @s air_brake_time = @s generic_a
         execute as @a[scores={flight_level=1..,FallFlying=1,slipstream=1..,elytra_boost_cooldown=-200..}] if predicate ss_lib:input/sneak run \
             scoreboard players operation @s generic_a -= @s air_brake_time
-    execute as @a[scores={air_brake_time=1..}] if predicate {"condition": "minecraft:any_of","terms": [{"condition": "minecraft:entity_properties","entity":"this","predicate":{"movement":{"speed":{"min":5}}}}]} at @s anchored eyes positioned ^ ^ ^1 run particle small_gust ~ ~ ~ 0.3 0.3 0.3 0 10 normal
+    execute as @a[scores={air_brake_time=1..}] if predicate {"type": "minecraft:any_of","terms": [{"type": "minecraft:entity_properties","entity":"this","predicate":{"movement":{"speed":{"min":5}}}}]} at @s anchored eyes positioned ^ ^ ^1 run particle small_gust ~ ~ ~ 0.3 0.3 0.3 0 10 normal
     scoreboard players set @a[scores={used_firework_rocket=1..}] air_brake_time 0
 
     # neutral
@@ -52,7 +52,7 @@ execute as @a[scores={flight_level=1..}] run attribute @s minecraft:gravity modi
     execute as @a[scores={flight_level=1..,FallFlying=1,slipstream=1..,elytra_boost_cooldown=-200..},x_rotation=155..172] run function echoes:player/elytra_scaling/looking_down_5
 
     scoreboard players set @a[scores={generic_a=251..}] generic_a 250
-    execute as @a[scores={flight_level=1..,FallFlying=1,slipstream=1..,elytra_boost_cooldown=-200..},predicate=!ss_lib:input/sneak] run function parse:score {"score":"generic_a",prepend:"",append:".",prepend_position:0,append_position:2,"function":"echoes:player/elytra_scaling/apply_gravity"}
+    execute as @a[scores={flight_level=1..,FallFlying=1,slipstream=1..,elytra_boost_cooldown=-200..},predicate=!ss_lib:input/sneak] run function parse:score {score:generic_a,prepend:"",append:".",prepend_position:0,append_position:2,function:"echoes:player/elytra_scaling/apply_gravity"}
 
     # looking up
     execute as @a[scores={flight_level=34..,FallFlying=1,slipstream=1..,elytra_boost_cooldown=-200..,flight_level=20..},x_rotation=250..] run attribute @s minecraft:gravity modifier add mind.elytra_gravity -0.04 add_multiplied_base

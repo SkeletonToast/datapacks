@@ -1,10 +1,10 @@
 {
-  "condition": "minecraft:all_of",
+  "type": "minecraft:all_of",
   "terms": [
     {
-      "condition": "minecraft:inverted",
+      "type": "minecraft:inverted",
       "term": {
-        "condition": "minecraft:entity_properties",
+        "type": "minecraft:entity_properties",
         "entity": "this",
         "predicate": {
           "stepping_on": {
@@ -16,7 +16,7 @@
       }
     },
     {
-      "condition": "minecraft:value_check",
+      "type": "minecraft:value_check",
       "value": {
         "type": "minecraft:score",
         "target": "this",
@@ -25,7 +25,7 @@
       "range": 1
     },
     {
-      "condition": "minecraft:value_check",
+      "type": "minecraft:value_check",
       "value": {
         "type": "minecraft:score",
         "target": "this",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "condition": "minecraft:entity_properties",
+      "type": "minecraft:entity_properties",
       "entity": "this",
       "predicate": {
         "location": {
@@ -48,7 +48,7 @@
       }
     },
     {
-      "condition": "minecraft:reference",
+      "type": "minecraft:reference",
       "name": "ss_lib:is/on_fire"
     }
   ]

@@ -11,7 +11,7 @@
     },
     "spawn_conditions": [
         {
-            "condition": {
+            "type": {
                 "type": "minecraft:biome",
                 "biomes": "#c:has_wolf_variant/snowy"
             },

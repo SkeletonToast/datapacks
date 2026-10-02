@@ -17,9 +17,9 @@ execute as @s[scores={Dexterity=70..,OnGround=0}] run function echoes:stats/move
 scoreboard players operation @s generic_c = @s SuperSprintTime
     scoreboard players operation @s generic_c *= @s smooth_sprint_multiplier
 
-execute if score @s smoothSprinting matches 1 if score @s generic_c < @s generic_attribute run scoreboard players operation @s generic_attribute += @s generic_c
-execute if score @s smoothSprinting matches 1 if score @s generic_c >= @s generic_attribute run scoreboard players operation @s generic_attribute += @s generic_attribute
-execute if score @s smoothSprinting matches 0 run scoreboard players operation @s generic_attribute += @s generic_attribute
+execute if score @s sse.gamerule.smooth_sprinting matches 1 if score @s generic_c < @s generic_attribute run scoreboard players operation @s generic_attribute += @s generic_c
+execute if score @s sse.gamerule.smooth_sprinting matches 1 if score @s generic_c >= @s generic_attribute run scoreboard players operation @s generic_attribute += @s generic_attribute
+execute if score @s sse.gamerule.smooth_sprinting matches 0 run scoreboard players operation @s generic_attribute += @s generic_attribute
 
 tag @s remove SurgeSprintEligible
 tag @s[scores={Dexterity=70..}] add SurgeSprintEligible
@@ -40,9 +40,9 @@ scoreboard players operation @s generic_c = @s SuperSprintTime
 #     scoreboard players operation @s generic_c *= @s smooth_sprint_multiplier
 # execute if score @s SuperSprintTime >= @s SurgeSprintThreshold as @s[scores={Dexterity=70..},tag=SurgeSprintEligible] run scoreboard players operation @s generic_attribute += @s generic_c
     # funny infinite acceleration
-execute if score @s SuperSprintTime >= @s SurgeSprintThreshold as @s[tag=SurgeSprintEligible] if score @s smoothSprinting matches 1 if score @s generic_c < @s sse.Physique run scoreboard players operation @s generic_attribute += @s generic_c
-execute if score @s SuperSprintTime >= @s SurgeSprintThreshold as @s[tag=SurgeSprintEligible] if score @s smoothSprinting matches 1 if score @s generic_c >= @s sse.Physique run scoreboard players operation @s generic_attribute += @s sse.Physique
-execute if score @s SuperSprintTime >= @s SurgeSprintThreshold as @s[tag=SurgeSprintEligible] if score @s smoothSprinting matches 0 run scoreboard players operation @s generic_attribute += @s sse.Physique
+execute if score @s SuperSprintTime >= @s SurgeSprintThreshold as @s[tag=SurgeSprintEligible] if score @s sse.gamerule.smooth_sprinting matches 1 if score @s generic_c < @s sse.Physique run scoreboard players operation @s generic_attribute += @s generic_c
+execute if score @s SuperSprintTime >= @s SurgeSprintThreshold as @s[tag=SurgeSprintEligible] if score @s sse.gamerule.smooth_sprinting matches 1 if score @s generic_c >= @s sse.Physique run scoreboard players operation @s generic_attribute += @s sse.Physique
+execute if score @s SuperSprintTime >= @s SurgeSprintThreshold as @s[tag=SurgeSprintEligible] if score @s sse.gamerule.smooth_sprinting matches 0 run scoreboard players operation @s generic_attribute += @s sse.Physique
 
 # super jumping
     execute if score @s SuperSprintTime >= @s SurgeSprintThreshold run tag @s[scores={Dexterity=70..,OnGround=1}] add SurgeJumpEligible

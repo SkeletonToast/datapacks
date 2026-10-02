@@ -1,11 +1,9 @@
-[
+{
+  "type": "minecraft:set_lore",
+  "lore": [
     {
-      "function": "minecraft:set_lore",
-      "lore": [
-        {
-          "text": ""
-        }
-      ],
-      "mode": "append"
+      "text": ""
     }
-  ] 
+  ],
+  "mode": "append"
+}

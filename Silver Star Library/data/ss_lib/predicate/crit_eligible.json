@@ -1,16 +1,16 @@
 
 
 {
-  "condition": "minecraft:all_of",
+  "type": "minecraft:all_of",
   "terms": [
     {
-      "condition": "minecraft:reference",
+      "type": "minecraft:reference",
       "name": "ss_lib:is/falling"
     },
     {
-      "condition": "minecraft:inverted",
+      "type": "minecraft:inverted",
       "term": {
-        "condition": "minecraft:reference",
+        "type": "minecraft:reference",
         "name": "ss_lib:is/sprinting"
       }
     }

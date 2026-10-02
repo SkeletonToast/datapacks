@@ -25,7 +25,7 @@
                             "conditions": [
                                 {
                                     "chance": 0.375,
-                                    "condition": "minecraft:random_chance"
+                                    "type": "minecraft:random_chance"
                                 }
                             ],
                             "count": {
@@ -45,7 +45,7 @@
                             "conditions": [
                                 {
                                     "chance": 0.5,
-                                    "condition": "minecraft:random_chance"
+                                    "type": "minecraft:random_chance"
                                 }
                             ],
                             "count": {
@@ -65,7 +65,7 @@
                             "conditions": [
                                 {
                                     "chance": 0.5,
-                                    "condition": "minecraft:random_chance"
+                                    "type": "minecraft:random_chance"
                                 }
                             ],
                             "count": {
@@ -88,7 +88,7 @@
                             "conditions": [
                                 {
                                     "chance": 0.5,
-                                    "condition": "minecraft:random_chance"
+                                    "type": "minecraft:random_chance"
                                 }
                             ],
                             "count": {
@@ -186,7 +186,7 @@
                     "conditions": [
                         {
                             "chance": 0.65,
-                            "condition": "minecraft:random_chance"
+                            "type": "minecraft:random_chance"
                         }
                     ],
                     "functions": [
@@ -208,7 +208,7 @@
                             "conditions": [
                                 {
                                     "chance": 0.4,
-                                    "condition": "minecraft:random_chance"
+                                    "type": "minecraft:random_chance"
                                 }
                             ],
                             "count": {
@@ -242,7 +242,7 @@
                             "conditions": [
                                 {
                                     "chance": 0.5,
-                                    "condition": "minecraft:random_chance"
+                                    "type": "minecraft:random_chance"
                                 }
                             ],
                             "count": {
@@ -274,7 +274,7 @@
                     "conditions": [
                         {
                             "chance": 0.5,
-                            "condition": "minecraft:random_chance"
+                            "type": "minecraft:random_chance"
                         }
                     ],
                     "functions": [
@@ -294,7 +294,7 @@
                     "conditions": [
                         {
                             "chance": 0.5,
-                            "condition": "minecraft:random_chance"
+                            "type": "minecraft:random_chance"
                         }
                     ],
                     "functions": [
@@ -314,7 +314,7 @@
                     "conditions": [
                         {
                             "chance": 0.1,
-                            "condition": "minecraft:random_chance"
+                            "type": "minecraft:random_chance"
                         }
                     ],
                     "name": "minecraft:diamond",
@@ -333,7 +333,7 @@
                     "conditions": [
                         {
                             "chance": 0.75,
-                            "condition": "minecraft:random_chance"
+                            "type": "minecraft:random_chance"
                         }
                     ],
                     "expand": true,
@@ -342,7 +342,7 @@
                             "conditions": [
                                 {
                                     "chance": 0.75,
-                                    "condition": "minecraft:random_chance"
+                                    "type": "minecraft:random_chance"
                                 }
                             ],
                             "damage": {
@@ -355,7 +355,7 @@
                             "conditions": [
                                 {
                                     "chance": 0.75,
-                                    "condition": "minecraft:random_chance"
+                                    "type": "minecraft:random_chance"
                                 }
                             ],
                             "function": "minecraft:enchant_with_levels",
@@ -381,7 +381,7 @@
                     "conditions": [
                         {
                             "chance": 0.125,
-                            "condition": "minecraft:random_chance"
+                            "type": "minecraft:random_chance"
                         }
                     ],
                     "functions": [
@@ -397,7 +397,7 @@
                     "conditions": [
                         {
                             "chance": 0.125,
-                            "condition": "minecraft:random_chance"
+                            "type": "minecraft:random_chance"
                         }
                     ],
                     "functions": [

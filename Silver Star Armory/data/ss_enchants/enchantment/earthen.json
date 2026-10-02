@@ -23,10 +23,10 @@
     "minecraft:damage": [
       {
         "requirements": {
-          "condition": "minecraft:any_of",
+          "type": "minecraft:any_of",
           "terms": [
             {
-              "condition": "minecraft:entity_properties",
+              "type": "minecraft:entity_properties",
               "entity": "attacker",
               "predicate": {
                 "flags": {
@@ -35,7 +35,7 @@
               }
             },
             {
-              "condition": "minecraft:entity_properties",
+              "type": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
                 "flags": {
@@ -58,10 +58,10 @@
     "minecraft:post_attack": [
       {
         "requirements": {
-          "condition": "minecraft:any_of",
+          "type": "minecraft:any_of",
           "terms": [
             {
-              "condition": "minecraft:entity_properties",
+              "type": "minecraft:entity_properties",
               "entity": "attacker",
               "predicate": {
                 "flags": {
@@ -70,7 +70,7 @@
               }
             },
             {
-              "condition": "minecraft:entity_properties",
+              "type": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
                 "flags": {
@@ -89,10 +89,10 @@
       },
       {
         "requirements": {
-          "condition": "minecraft:any_of",
+          "type": "minecraft:any_of",
           "terms": [
             {
-              "condition": "minecraft:entity_properties",
+              "type": "minecraft:entity_properties",
               "entity": "attacker",
               "predicate": {
                 "flags": {
@@ -101,7 +101,7 @@
               }
             },
             {
-              "condition": "minecraft:entity_properties",
+              "type": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
                 "flags": {

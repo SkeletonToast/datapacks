@@ -1,13 +1,11 @@
-[
+{
+  "type": "minecraft:set_lore",
+  "lore": [
     {
-      "function": "minecraft:set_lore",
-      "lore": [
-        {
-          "text": "When in Main Hand:",
-          "italic": false,
-          "color": "gray"
-        }
-      ],
-      "mode": "append"
+      "text": "When in Main Hand:",
+      "italic": false,
+      "color": "gray"
     }
-  ] 
+  ],
+  "mode": "append"
+}

@@ -56,4 +56,4 @@ execute as @a[tag=InCombat] unless score @s generic_b matches 0..9 if score @s g
 
 # function sse.dev:arrow_test
 
-# execute as @a[predicate=ss_lib:is/raining] if predicate [{"condition":"minecraft:location_check","predicate":{"biomes":"minecraft:desert"}}] run function sse.dev:sandstorm_test
+# execute as @a[predicate=ss_lib:is/raining] if predicate [{"type":"minecraft:location_check","predicate":{"biomes":"minecraft:desert"}}] run function sse.dev:sandstorm_test

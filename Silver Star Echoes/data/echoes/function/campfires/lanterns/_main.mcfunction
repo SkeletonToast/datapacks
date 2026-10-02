@@ -12,7 +12,7 @@ execute if items entity @s weapon.mainhand clock unless items entity @s weapon.m
 
 scoreboard players set @s generic_a 60
 scoreboard players operation @s generic_a += @s sse.Passion
-execute at @s anchored eyes positioned ^ ^ ^0.5 run function parse:score_unended {"score":"generic_a","function":"echoes:campfires/lanterns/raycast"}
+execute at @s anchored eyes positioned ^ ^ ^0.5 run function parse:score_unended {score:generic_a,function:"echoes:campfires/lanterns/raycast"}
 
 scoreboard players set @s lantern_cooldown 40
 scoreboard players operation @s lantern_cooldown -= @s sse.Passion

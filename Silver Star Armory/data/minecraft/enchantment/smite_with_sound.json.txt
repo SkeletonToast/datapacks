@@ -31,7 +31,7 @@
             }
           },
           "requirements": {
-            "condition": "minecraft:entity_properties",
+            "type": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
               "type": "#minecraft:sensitive_to_smite"
@@ -48,7 +48,7 @@
             }
           },
           "requirements": {
-            "condition": "minecraft:entity_properties",
+            "type": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
                 "nbt": "{Tags:[\"Fogtouched\"]}"
@@ -65,10 +65,10 @@
             }
           },
           "requirements": {
-            "condition": "minecraft:any_of",
+            "type": "minecraft:any_of",
             "terms": [
               {
-                "condition": "minecraft:entity_properties",
+                "type": "minecraft:entity_properties",
                 "entity": "this",
                 "predicate": {
                   "effects": {
@@ -81,7 +81,7 @@
                 }
               },
               {
-                "condition": "minecraft:entity_properties",
+                "type": "minecraft:entity_properties",
                 "entity": "this",
                 "predicate": {
                   "effects": {
@@ -94,7 +94,7 @@
                 }
               },
               {
-                "condition": "minecraft:entity_properties",
+                "type": "minecraft:entity_properties",
                 "entity": "this",
                 "predicate": {
                   "effects": {
@@ -107,7 +107,7 @@
                 }
               },
               {
-                "condition": "minecraft:entity_properties",
+                "type": "minecraft:entity_properties",
                 "entity": "this",
                 "predicate": {
                   "effects": {
@@ -120,7 +120,7 @@
                 }
               },
               {
-                "condition": "minecraft:entity_properties",
+                "type": "minecraft:entity_properties",
                 "entity": "this",
                 "predicate": {
                   "effects": {
@@ -133,7 +133,7 @@
                 }
               },
               {
-                "condition": "minecraft:entity_properties",
+                "type": "minecraft:entity_properties",
                 "entity": "this",
                 "predicate": {
                   "effects": {
@@ -146,7 +146,7 @@
                 }
               },
               {
-                "condition": "minecraft:entity_properties",
+                "type": "minecraft:entity_properties",
                 "entity": "this",
                 "predicate": {
                   "effects": {

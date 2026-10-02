@@ -1,13 +1,11 @@
-[
+{
+  "type": "minecraft:set_lore",
+  "lore": [
     {
-      "function": "minecraft:set_lore",
-      "lore": [
-        {
-          "text": "Advanced Weapon",
-          "italic": false,
-          "color": "gray"
-        }
-      ],
-      "mode": "append"
+      "text": "Advanced Weapon",
+      "italic": false,
+      "color": "gray"
     }
-  ] 
+  ],
+  "mode": "append"
+}

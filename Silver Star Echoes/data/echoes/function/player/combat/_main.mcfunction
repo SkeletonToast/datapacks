@@ -7,8 +7,8 @@ execute as @a[tag=!InCombat] run attribute @s attack_damage modifier remove echo
 execute as @a[scores={ItemSelected=1}] run attribute @s attack_damage modifier remove echoes:unarmed.attack_damage
 
 # smooth sprinting
-# execute as @a[tag=InCombat] run trigger smoothSprinting set 0
-# execute as @a[tag=!InCombat] run trigger smoothSprinting set 1
+# execute as @a[tag=InCombat] run trigger sse.gamerule.smooth_sprinting set 0
+# execute as @a[tag=!InCombat] run trigger sse.gamerule.smooth_sprinting set 1
 
 # dealing damage to enter combat
     # execute as @a[scores={DamageDealt=1..,in_combat=0}] run scoreboard players operation @s in_combat -= @s Initiative

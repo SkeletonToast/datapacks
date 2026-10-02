@@ -1,5 +1,5 @@
 {
-  "function": "minecraft:toggle_tooltips",
+  "type": "minecraft:toggle_tooltips",
   "toggles": {
       "minecraft:attribute_modifiers": false
   }

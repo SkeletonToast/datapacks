@@ -80,7 +80,7 @@
             "conditions": [
                 {
                     "chance": 0.5,
-                    "condition": "minecraft:random_chance"
+                    "type": "minecraft:random_chance"
                 }
             ],
             "entries": [
@@ -105,7 +105,7 @@
                             "conditions": [
                                 {
                                     "chance": 1,
-                                    "condition": "minecraft:random_chance"
+                                    "type": "minecraft:random_chance"
                                 }
                             ],
                             "function": "minecraft:enchant_with_levels",
@@ -133,7 +133,7 @@
                             "conditions": [
                                 {
                                     "chance": 1,
-                                    "condition": "minecraft:random_chance"
+                                    "type": "minecraft:random_chance"
                                 }
                             ],
                             "function": "minecraft:enchant_with_levels",
@@ -161,7 +161,7 @@
                             "conditions": [
                                 {
                                     "chance": 1,
-                                    "condition": "minecraft:random_chance"
+                                    "type": "minecraft:random_chance"
                                 }
                             ],
                             "function": "minecraft:enchant_with_levels",
@@ -189,7 +189,7 @@
                             "conditions": [
                                 {
                                     "chance": 1,
-                                    "condition": "minecraft:random_chance"
+                                    "type": "minecraft:random_chance"
                                 }
                             ],
                             "function": "minecraft:enchant_with_levels",
@@ -217,7 +217,7 @@
                             "conditions": [
                                 {
                                     "chance": 1,
-                                    "condition": "minecraft:random_chance"
+                                    "type": "minecraft:random_chance"
                                 }
                             ],
                             "function": "minecraft:enchant_with_levels",
@@ -245,7 +245,7 @@
                             "conditions": [
                                 {
                                     "chance": 1,
-                                    "condition": "minecraft:random_chance"
+                                    "type": "minecraft:random_chance"
                                 }
                             ],
                             "function": "minecraft:enchant_with_levels",
@@ -273,7 +273,7 @@
                             "conditions": [
                                 {
                                     "chance": 1,
-                                    "condition": "minecraft:random_chance"
+                                    "type": "minecraft:random_chance"
                                 }
                             ],
                             "function": "minecraft:enchant_with_levels",

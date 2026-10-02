@@ -30,7 +30,7 @@
             }
           },
           "requirements": {
-            "condition": "minecraft:entity_properties",
+            "type": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
               "entity_type": "#ss_lib:hostile"
@@ -47,7 +47,7 @@
             }
           },
           "requirements": {
-            "condition": "minecraft:entity_properties",
+            "type": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
                 "nbt": "{Tags:[\"Fogtouched\"]}"
@@ -64,7 +64,7 @@
           "function": "echoes:enchantments/pyrebrand_particles"
         },
           "requirements": {
-            "condition": "minecraft:entity_properties",
+            "type": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
               "entity_type": "#ss_lib:hostile"

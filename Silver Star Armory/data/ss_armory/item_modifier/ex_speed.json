@@ -1,1 +1,1 @@
-[{"function":"minecraft:set_attributes","modifiers":[{"id":"mainhand_attack_speed","attribute":"minecraft:attack_speed","amount":-3.0,"operation":"add_value","slot":"mainhand"}],"replace":true}]
+{"type":"minecraft:set_attributes","modifiers":[{"id":"mainhand_attack_speed","attribute":"minecraft:attack_speed","amount":-3.0,"operation":"add_value","slot":"mainhand"}],"replace":true}

@@ -1,5 +1,5 @@
 # Resolve
-function parse:score_unended {"function":"echoes:stats/attribute_default_max_health","score":"Tenacity"}
+function parse:score_unended {score:Tenacity,function:"echoes:stats/attribute_default_max_health"}
 
 # Dexterity
 attribute @s movement_speed base reset

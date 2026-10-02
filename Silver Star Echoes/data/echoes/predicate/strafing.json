@@ -1,20 +1,20 @@
 {
-    "condition": "minecraft:any_of",
+    "type": "minecraft:any_of",
     "terms": [
       {
-        "condition": "minecraft:reference",
+        "type": "minecraft:reference",
         "name": "ss_lib:input/forward"
       },
       {
-        "condition": "minecraft:reference",
+        "type": "minecraft:reference",
         "name": "ss_lib:input/right"
       },
       {
-        "condition": "minecraft:reference",
+        "type": "minecraft:reference",
         "name": "ss_lib:input/backward"
       },
       {
-        "condition": "minecraft:reference",
+        "type": "minecraft:reference",
         "name": "ss_lib:input/left"
       }
     ]

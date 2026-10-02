@@ -7,7 +7,7 @@ execute as @a if score @s Health >= @s BaseMaxHealth run scoreboard players add 
 execute as @a if score @s Health >= @s BaseMaxHealth run scoreboard players add @s[scores={Food=20}] heat_resistance 5
 execute as @a if score @s Health >= @s BaseMaxHealth run scoreboard players add @s[scores={Food=20}] cold_resistance 5
     # fire resistance
-    execute as @a if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"effects":{"minecraft:fire_resistance":{}}}} run \
+    execute as @a if predicate {"type":"minecraft:entity_properties","entity":"this","predicate":{"effects":{"minecraft:fire_resistance":{}}}} run \
         scoreboard players add @s heat_resistance 100
 
 execute as @a at @s run tag @s[predicate=echoes:in_alpha_biome] remove TemperatureEligible

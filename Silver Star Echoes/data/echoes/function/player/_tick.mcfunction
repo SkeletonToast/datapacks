@@ -35,8 +35,8 @@ execute if entity @a[scores={TimeSinceDeath=1..}] if score $day_time value match
 
 execute as @a run function echoes:player/renown
 
-scoreboard players set @a[tag=InCombat,scores={SprintTime=0,StrafeTime=0}] smoothSprinting 0
-scoreboard players set @a[tag=!InCombat,scores={SprintTime=0,StrafeTime=0}] smoothSprinting 1
+scoreboard players set @a[tag=InCombat,scores={SprintTime=0,StrafeTime=0}] sse.gamerule.smooth_sprinting 0
+scoreboard players set @a[tag=!InCombat,scores={SprintTime=0,StrafeTime=0}] sse.gamerule.smooth_sprinting 1
 execute as @a run function echoes:stats/feats
 
 function echoes:player/talisman

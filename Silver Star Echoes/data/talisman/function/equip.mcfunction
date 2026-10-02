@@ -8,7 +8,7 @@ function talisman:get_id
 execute if score @s talisman.id_verify matches -1 run return fail
 
 scoreboard players add @s talisman.active_talismans 1
-execute if items entity @s weapon.mainhand *[custom_data~{talisman:{}}] run item modify entity @s weapon.mainhand [{"function":"minecraft:set_count","count":-1,"add":true}]
+execute if items entity @s weapon.mainhand *[custom_data~{talisman:{}}] run item modify entity @s weapon.mainhand {"type":"minecraft:set_count","count":-1,"add":true}
 
 # play sound
 # have particles

@@ -1,1 +1,1 @@
-item modify entity @s weapon.mainhand [{"function":"minecraft:set_components","components":{"minecraft:blocks_attacks":{"damage_reductions":[{"base":1,"factor":0.5,"horizontal_blocking_angle":90}]}}}]
+item modify entity @s weapon.mainhand {"type":"minecraft:set_components","components":{"minecraft:blocks_attacks":{"damage_reductions":[{"base":1,"factor":0.5,"horizontal_blocking_angle":90}]}}}

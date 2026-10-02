@@ -1,1 +1,1 @@
-[{"function":"minecraft:set_attributes","modifiers":[{"id":"mainhand_entity_interaction_range","attribute":"minecraft:entity_interaction_range","amount":0.5,"operation":"add_value","slot":"mainhand"}],"replace":true}]
+{"type":"minecraft:set_attributes","modifiers":[{"id":"mainhand_entity_interaction_range","attribute":"minecraft:entity_interaction_range","amount":0.5,"operation":"add_value","slot":"mainhand"}],"replace":true}

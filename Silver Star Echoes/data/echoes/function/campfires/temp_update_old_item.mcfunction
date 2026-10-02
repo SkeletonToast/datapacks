@@ -1,4 +1,4 @@
-# execute if items entity @s weapon.mainhand crossbow[minecraft:custom_data~{weapon:{gun:{type:"powdersling"}}}] run item modify entity @s weapon.mainhand [{"function":"minecraft:set_components","components":{"minecraft:enchantments":{"levels":{"minecraft:quick_charge":3}}}}]
+# execute if items entity @s weapon.mainhand crossbow[minecraft:custom_data~{weapon:{gun:{type:"powdersling"}}}] run item modify entity @s weapon.mainhand {"type":"minecraft:set_components","components":{"minecraft:enchantments":{"levels":{"minecraft:quick_charge":3}}}}]
 execute if items entity @s weapon.mainhand crossbow[minecraft:custom_data~{weapon:{gun:{type:"powdersling"}}}] run function echoes:campfires/temp_item_update_function {"run":"item modify entity @s weapon.mainhand [{\"function\":\"minecraft:set_custom_data\",\"tag\":{\"weapon\":{\"weight\":3}}}]"}
 execute if items entity @s weapon.mainhand crossbow[minecraft:custom_data~{weapon:{gun:{type:"powdersling"}}}] run function echoes:campfires/temp_item_update_function {"run":"item modify entity @s weapon.mainhand [{\"function\":\"minecraft:set_custom_data\",\"tag\":{\"weapon\":{\"gun\":{\"type\":\"bolt_action\"}}}}]"}
 

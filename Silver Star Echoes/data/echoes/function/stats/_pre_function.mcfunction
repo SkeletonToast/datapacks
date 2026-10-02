@@ -81,7 +81,7 @@ execute as @a run attribute @s movement_speed modifier remove scale.movement_spe
 
 execute as @a store result score @s generic_h run attribute @s scale get 1000
 execute as @a run scoreboard players remove @s generic_h 1000
-execute as @a unless score @s generic_h matches -150..150 run function echoes:stats/scale_attribute/_main {"score":"generic_h"}
+execute as @a unless score @s generic_h matches -150..150 run function echoes:stats/scale_attribute/_main {score:generic_h}
 
 execute as @a run scoreboard players operation @s generic_h /= #const.5 value
 execute as @a run function math:round {score:generic_h,round:10,reduce:true}

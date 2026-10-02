@@ -1,1 +1,1 @@
-[{"function":"minecraft:set_components","components":{"minecraft:item_name":"{\"text\":\"Wooden Longsword\"}"}}]
+{"type":"minecraft:set_components","components":{"minecraft:item_name":"Wooden Longsword"}}

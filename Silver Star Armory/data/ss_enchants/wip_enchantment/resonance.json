@@ -24,7 +24,7 @@
         "enchanted": "attacker",
         "affected": "victim",
         "requirements": {
-          "condition": "minecraft:entity_properties",
+          "type": "minecraft:entity_properties",
           "entity": "attacker",
           "predicate": {
             "equipment": {
@@ -49,7 +49,7 @@
         "enchanted": "attacker",
         "affected": "victim",
         "requirements": {
-          "condition": "minecraft:entity_properties",
+          "type": "minecraft:entity_properties",
           "entity": "attacker",
           "predicate": {
             "equipment": {
@@ -72,10 +72,10 @@
       },
       {
         "requirements": {
-          "condition": "minecraft:all_of",
+          "type": "minecraft:all_of",
           "terms": [
             {
-              "condition": "minecraft:entity_properties",
+              "type": "minecraft:entity_properties",
               "entity": "attacker",
               "predicate": {
                 "equipment": {
@@ -92,7 +92,7 @@
               }
             },
             {
-              "condition": "minecraft:damage_source_properties",
+              "type": "minecraft:damage_source_properties",
               "predicate": {
                 "is_direct": true
               }
@@ -110,7 +110,7 @@
         "enchanted": "attacker",
         "affected": "victim",
         "requirements": {
-          "condition": "minecraft:entity_properties",
+          "type": "minecraft:entity_properties",
           "entity": "attacker",
           "predicate": {
             "equipment": {
@@ -135,10 +135,10 @@
     "minecraft:damage": [
       {
         "requirements": {
-          "condition": "minecraft:all_of",
+          "type": "minecraft:all_of",
           "terms": [
             {
-              "condition": "minecraft:entity_properties",
+              "type": "minecraft:entity_properties",
               "entity": "attacker",
               "predicate": {
                 "equipment": {
@@ -155,10 +155,10 @@
               }
             },
             {
-              "condition": "minecraft:any_of",
+              "type": "minecraft:any_of",
               "terms": [
                 {
-                  "condition": "minecraft:entity_properties",
+                  "type": "minecraft:entity_properties",
                   "entity": "attacker",
                   "predicate": {
                     "flags": {
@@ -167,7 +167,7 @@
                   }
                 },
                 {
-                  "condition": "minecraft:entity_properties",
+                  "type": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
                     "flags": {
@@ -188,7 +188,7 @@
     "minecraft:knockback": [
       {
         "requirements": {
-          "condition": "minecraft:entity_properties",
+          "type": "minecraft:entity_properties",
           "entity": "attacker",
           "predicate": {
             "equipment": {
@@ -213,10 +213,10 @@
     "minecraft:equipment_drops": [
       {
         "requirements": {
-          "condition": "minecraft:all_of",
+          "type": "minecraft:all_of",
           "terms": [
             {
-              "condition": "minecraft:entity_properties",
+              "type": "minecraft:entity_properties",
               "entity": "attacker",
               "predicate": {
                 "equipment": {
@@ -233,7 +233,7 @@
               }
             },
             {
-              "condition": "minecraft:entity_properties",
+              "type": "minecraft:entity_properties",
               "entity": "attacker",
               "predicate": {
                 "type": "minecraft:player"
@@ -251,7 +251,7 @@
     "minecraft:mob_experience": [
       {
         "requirements": {
-          "condition": "minecraft:entity_properties",
+          "type": "minecraft:entity_properties",
           "entity": "attacker",
           "predicate": {
             "equipment": {

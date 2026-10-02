@@ -14,8 +14,8 @@ scoreboard players operation @s aegis_amplifier /= #const.4 value
 scoreboard players set @s[scores={EchoDifficulty=1,aegis_amplifier_max=2..}] aegis_amplifier_max 1
 scoreboard players set @s[scores={EchoDifficulty=2,aegis_amplifier_max=5..}] aegis_amplifier_max 4
 
-execute as @s[scores={aegis_amplifier_max=0..}] if score @s aegis_amplifier <= @s aegis_amplifier_max run function parse:score_unended {"function":"echoes:player/aegis/absorption","score":"aegis_amplifier"}
-execute as @s[scores={aegis_amplifier_max=0..}] if score @s aegis_amplifier > @s aegis_amplifier_max run function parse:score_unended {"function":"echoes:player/aegis/absorption","score":"aegis_amplifier_max"}
+execute as @s[scores={aegis_amplifier_max=0..}] if score @s aegis_amplifier <= @s aegis_amplifier_max run function parse:score_unended {score:aegis_amplifier,function:"echoes:player/aegis/absorption"}
+execute as @s[scores={aegis_amplifier_max=0..}] if score @s aegis_amplifier > @s aegis_amplifier_max run function parse:score_unended {score:aegis_amplifier_max,function:"echoes:player/aegis/absorption"}
 
 execute as @s[scores={Food=20},tag=!InCombat] if score @s aegis_amplifier >= @s aegis_amplifier_max run function echoes:player/aegis/overheal
 execute as @s[scores={TimeSinceRest=..0}] if score @s aegis_amplifier >= @s aegis_amplifier_max run function echoes:player/aegis/overheal

@@ -22,7 +22,7 @@
       "minecraft:post_attack": [
         {
           "requirements": {
-            "condition": "minecraft:entity_scores",
+            "type": "minecraft:entity_scores",
             "entity": "attacker",
             "scores": {
               "fear": {
@@ -50,7 +50,7 @@
         },
         {
           "requirements": {
-            "condition": "minecraft:entity_scores",
+            "type": "minecraft:entity_scores",
             "entity": "attacker",
             "scores": {
               "fear": {
@@ -78,10 +78,10 @@
         },
         {
           "requirements": {
-            "condition": "minecraft:any_of",
+            "type": "minecraft:any_of",
             "terms": [
               {
-                "condition": "minecraft:entity_scores",
+                "type": "minecraft:entity_scores",
                 "entity": "attacker",
                 "scores": {
                   "fear": {
@@ -90,7 +90,7 @@
                 }
               },
               {
-                "condition": "minecraft:entity_scores",
+                "type": "minecraft:entity_scores",
                 "entity": "attacker",
                 "scores": {
                   "fear_eligible": 0
@@ -117,7 +117,7 @@
         },
         {
           "requirements": {
-            "condition": "minecraft:entity_properties",
+            "type": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
               "entity_type": "minecraft:player"

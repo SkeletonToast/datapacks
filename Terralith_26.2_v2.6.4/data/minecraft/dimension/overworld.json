@@ -1,8 +1,8 @@
 {
     "fabric:load_conditions": {
-        "condition": "fabric:not",
+        "type": "fabric:not",
         "value": {
-            "condition": "fabric:all_mods_loaded",
+            "type": "fabric:all_mods_loaded",
             "values": [
                 "lithostitched"
             ]

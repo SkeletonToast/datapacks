@@ -6,7 +6,7 @@ scoreboard players enable @a[scores={ssl.permissions_level=4..}] sse.gamerule.sm
 scoreboard players enable @a[scores={ssl.permissions_level=4..}] sse.gamerule.variant_monsters
 scoreboard players enable @a[scores={ssl.permissions_level=4..}] sse.gamerule.creative_encumbrance
 scoreboard players enable @a[scores={ssl.permissions_level=4..}] sse.gamerule.combat_jump_scaling
-scoreboard players enable @a[scores={ssl.permissions_level=4..}] sse.gamerule.time_dilation
+scoreboard players enable @a[scores={ssl.permissions_level=4..}] sse.gamerule.ambient_particles
 scoreboard players enable @a[scores={ssl.permissions_level=4..}] sse.gamerule.hungry_damage_reduction
 scoreboard players enable @a[scores={ssl.permissions_level=4..}] sse.gamerule.elytra_boosting
 scoreboard players enable @a[scores={ssl.permissions_level=1..}] aegis_self_visibility

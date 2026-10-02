@@ -9,7 +9,7 @@
                     "name": "minecraft:spyglass",
                     "conditions": [
                         {
-                            "condition": "minecraft:random_chance",
+                            "type": "minecraft:random_chance",
                             "chance": 0.2
                         }
                     ]
@@ -33,7 +33,7 @@
                             "options": "#minecraft:on_random_loot",
                             "conditions": [
                                 {
-                                    "condition": "minecraft:random_chance",
+                                    "type": "minecraft:random_chance",
                                     "chance": 0.2
                                 }
                             ]
