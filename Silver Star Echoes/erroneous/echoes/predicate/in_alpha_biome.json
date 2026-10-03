@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:location_check",
+  "predicate": {
+    "biomes": [
+      "terralith:alpha_islands",
+      "terralith:alpha_islands_winter"
+    ]
+  }
+}

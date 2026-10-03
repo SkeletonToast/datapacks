@@ -74,8 +74,8 @@ execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantme
 execute if items entity @s weapon.mainhand *[minecraft:enchantments~[{"enchantments":"echoes:black_gold_halo_breaker"}]] run function echoes:player/combat/proficiency/style/black_gold_halo_breaker
 
 # difficulty modifications
-execute as @s[scores={EchoDifficulty=2}] run function echoes:player/combat/proficiency/style/adaptive {value:40}
-execute as @s[scores={EchoDifficulty=3}] run function echoes:player/combat/proficiency/style/adaptive {value:25}
+execute as @s[scores={sse.difficulty=2}] run function echoes:player/combat/proficiency/style/adaptive {value:40}
+execute as @s[scores={sse.difficulty=3}] run function echoes:player/combat/proficiency/style/adaptive {value:25}
 
 # two handing - strength/dexterity feat 2
 execute as @s[tag=Strength_feat_2,tag=!Dexterity_feat_2] unless items entity @s weapon.offhand * run function echoes:player/combat/proficiency/two_handing {"stat":"_str"}

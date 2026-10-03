@@ -1,95 +1,15 @@
 {
-    "type": "minecraft:any_of",
-    "terms": [
-    {
-      "type": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "location": {
-          "biomes": "minecraft:deep_frozen_ocean"
-        }
-      }
-    },
-    {
-      "type": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "location": {
-          "biomes": "minecraft:frozen_ocean"
-        }
-      }
-    },
-    {
-      "type": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "location": {
-          "biomes": "minecraft:frozen_peaks"
-        }
-      }
-    },
-    {
-      "type": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "location": {
-          "biomes": "minecraft:frozen_river"
-        }
-      }
-    },
-    {
-      "type": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "location": {
-          "biomes": "minecraft:grove"
-        }
-      }
-    },
-    {
-      "type": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "location": {
-          "biomes": "minecraft:snowy_slopes"
-        }
-      }
-    },
-    {
-      "type": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "location": {
-          "biomes": "minecraft:snowy_taiga"
-        }
-      }
-    },
-    {
-      "type": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "location": {
-          "biomes": "minecraft:snowy_beach"
-        }
-      }
-    },
-    {
-      "type": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "location": {
-          "biomes": "minecraft:snowy_plains"
-        }
-      }
-    },
-    {
-      "type": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "location": {
-          "biomes": "minecraft:ice_spikes"
-        }
-      }
-    }
-  ]
+  "type": "minecraft:location_check",
+  "predicate": {
+    "biomes": [
+      "minecraft:deep_frozen_ocean",
+      "minecraft:frozen_ocean",
+      "minecraft:frozen_peaks",
+      "minecraft:frozen_river",
+      "minecraft:grove",
+      "minecraft:snowy_slopes",
+      "minecraft:snowy_taiga",
+      "minecraft:snowy_beach","minecraft:snowy_plains","minecraft:ice_spikes"
+    ]
   }
+}

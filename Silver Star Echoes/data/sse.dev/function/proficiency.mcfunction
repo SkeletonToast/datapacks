@@ -1,5 +1,5 @@
-execute as @s[scores={EchoDifficulty=1}] run tellraw @s [{text:"Players on Homesteader difficulty are ineligible for Proficiency.",color:gray}]
-execute as @s[scores={EchoDifficulty=1}] run return fail
+execute as @s[scores={sse.difficulty=1}] run tellraw @s [{text:"Players on Homesteader difficulty are ineligible for Proficiency.",color:gray}]
+execute as @s[scores={sse.difficulty=1}] run return fail
 
 execute as @s[tag=!InCombat] run function echoes:player/combat/proficiency/_main
 execute as @s[tag=!InCombat] run function echoes:player/combat/proficiency/apply

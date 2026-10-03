@@ -1,5 +1,7 @@
 # remember to modify all calculations so that the values are not actually being modified to decimal amounts.
 
+# say attribute set
+
 # attribute set
 scoreboard players operation @s str_attributes += @s Strength
 scoreboard players operation @s dex_attributes += @s Dexterity
@@ -29,13 +31,12 @@ execute store result score @s generic_h run attribute @s scale get 100
         scoreboard players operation @s res_armor -= @s Fortitude
     scoreboard players operation @s generic_attribute = @s Resolve
         scoreboard players operation @s[scores={res_armor=1..}] generic_attribute -= @s res_armor
-        execute if score @s generic_attribute <= @s Tenacity run scoreboard players operation @s generic_attribute = @s Tenacity
 
 # max_health: +Res (health)
     function math:even {score:generic_attribute,sign:"-"}
         # this will round generic_attribute down to an even number if generic_a is an odd number,
         # because the modulus remainder will subtract 1 if it's odd, and 0 if it's even
-    execute if score @s generic_attribute < @s Fortitude run scoreboard players operation @s generic_attribute = @s Fortitude
+    execute if score @s generic_attribute < @s Tenacity run scoreboard players operation @s generic_attribute = @s Tenacity
     execute if score @s generic_attribute > @s sse.difficulty.health_limit run scoreboard players operation @s generic_attribute = @s sse.difficulty.health_limit
     execute unless score @s generic_attribute = @s res_max_health run function parse:score_unended \
         {score:generic_attribute,function:"echoes:stats/set/max_health"}
@@ -101,7 +102,7 @@ execute store result score @s generic_h run attribute @s scale get 100
     execute if score @s tact_attributes > @s dex_attributes run scoreboard players operation @s generic_attribute = @s tact_attributes
     scoreboard players set @s[scores={generic_attribute=46..}] generic_attribute 45
     scoreboard players operation @s generic_attribute *= #const.3 value
-    function math:round {score:generic_attribute,round:2}
+    function math:round {score:generic_attribute,round:2,reduce:true}
         scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
     execute unless score @s generic_attribute = @s dex_tact_fall_damage_multiplier run function parse:score \
         {score:generic_attribute,prepend:"-",append:".",prepend_position:0,append_position:2,function:"echoes:stats/set/fall_damage_multiplier"}
@@ -119,7 +120,7 @@ execute store result score @s generic_h run attribute @s scale get 100
     scoreboard players operation @s generic_attribute = @s dex_attributes
     scoreboard players set @s[scores={generic_attribute=76..}] generic_attribute 75
     scoreboard players remove @s generic_attribute 20
-    function math:round {score:generic_attribute,round:2}
+    function math:round {score:generic_attribute,round:2,reduce:true}
     scoreboard players set @s[scores={Food=..6}] generic_attribute 0
         scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
         # scoreboard players set @s[scores={SprintTime=0,StrafeTime=0,SneakTime=0}] generic_attribute 0
@@ -235,7 +236,7 @@ execute store result score @s generic_h run attribute @s scale get 100
     scoreboard players operation @s generic_attribute = @s soul_attributes
     scoreboard players remove @s generic_attribute 15
     scoreboard players operation @s generic_attribute *= #const.8 value
-    function math:round {score:generic_attribute,round:5}
+    function math:round {score:generic_attribute,round:5,reduce:true}
         scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
     execute unless score @s generic_attribute = @s soul_burning_time run function parse:score \
         {score:generic_attribute,prepend:"-",append:".",prepend_position:0,append_position:2,function:"echoes:stats/set/burning_time"}

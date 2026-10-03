@@ -5,7 +5,7 @@ scoreboard players operation @s parse_score_input /= #const.10 value
 
 scoreboard players add @s parse_score_recursions 1
 
-# $say si $(macros)
+# $say si $(function) $(macros)
 
 # finalize - nonnegative
 $execute if score @s parse_score_recursions = @s parse_score_digits \

@@ -1,21 +1,9 @@
 {
     "type": "minecraft:any_of",
     "terms": [
-      {
-        "type": "minecraft:reference",
-        "name": "ss_lib:input/forward"
-      },
-      {
-        "type": "minecraft:reference",
-        "name": "ss_lib:input/right"
-      },
-      {
-        "type": "minecraft:reference",
-        "name": "ss_lib:input/backward"
-      },
-      {
-        "type": "minecraft:reference",
-        "name": "ss_lib:input/left"
-      }
+      "ss_lib:input/forward",
+      "ss_lib:input/right",
+      "ss_lib:input/backward",
+      "ss_lib:input/left"
     ]
   }

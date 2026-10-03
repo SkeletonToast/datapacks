@@ -13,10 +13,7 @@
     },
     {
       "type": "minecraft:inverted",
-      "term": {
-        "type": "minecraft:reference",
-        "name": "ss_lib:in_arid_biome"
-      }
+      "term": "ss_lib:in_arid_biome"
     }
   ]
 }

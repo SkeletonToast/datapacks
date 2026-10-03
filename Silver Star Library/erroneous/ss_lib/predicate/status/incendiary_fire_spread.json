@@ -16,7 +16,7 @@
       }
     },
     {
-      "type": "minecraft:value_check",
+      "type": "minecraft:int_value_check",
       "value": {
         "type": "minecraft:score",
         "target": "this",
@@ -25,7 +25,7 @@
       "range": 1
     },
     {
-      "type": "minecraft:value_check",
+      "type": "minecraft:int_value_check",
       "value": {
         "type": "minecraft:score",
         "target": "this",
@@ -47,9 +47,6 @@
         }
       }
     },
-    {
-      "type": "minecraft:reference",
-      "name": "ss_lib:is/on_fire"
-    }
+    "ss_lib:is/on_fire"
   ]
 }

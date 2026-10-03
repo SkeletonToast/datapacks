@@ -1,3 +1,4 @@
+title @a times 1t 60t 20t
 function ss_lib:fetch/moon_phase
 scoreboard players operation @s generic_m = $moon_phase value
 

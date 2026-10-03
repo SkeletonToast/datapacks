@@ -2,30 +2,13 @@
     "type": "minecraft:any_of",
     "terms": [
     {
-      "type": "minecraft:entity_properties",
-      "entity": "this",
+      "type": "minecraft:location_check",
       "predicate": {
-        "location": {
-          "biomes": "minecraft:desert"
-        }
-      }
-    },
-    {
-      "type": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "location": {
-          "biomes": "minecraft:badlands"
-        }
-      }
-    },
-    {
-      "type": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "location": {
-          "biomes": "minecraft:eroded_badlands"
-        }
+        "biomes": [
+          "minecraft:desert",
+          "minecraft:badlands",
+          "minecraft:eroded_badlands"
+        ]
       }
     },
     {

@@ -14,8 +14,8 @@ execute as @a at @s if predicate {"type":"minecraft:location_check","predicate":
 execute as @a[predicate=echoes:has_darkness] at @s if entity @e[type=warden,distance=..100] if predicate {"type":"minecraft:location_check","predicate":{"structures":["minecraft:ancient_city"]}} run particle sculk_soul ~ ~ ~ 20 20 20 0 100 normal
 # execute if score $day_time value matches 13000..22999 as @a at @s if predicate {"type":"minecraft:location_check","predicate":{"structures":["minecraft:ancient_city"]}} run particle sonic_boom ~ ~ ~ 20 20 20 0 100 normal
 
-execute as @a[predicate=echoes:in_ocean,scores={InWater=2..}] at @s run particle bubble ~ ~ ~ 20 20 20 0 80 normal @s
-execute as @a[predicate=echoes:in_ocean,scores={InWater=2..}] at @s run particle white_ash ~ ~ ~ 20 20 20 0 80 normal @s
+execute as @a[predicate=echoes:in_ocean,scores={InWater=2..}] at @s run particle bubble ~ ~ ~ 20 5 20 0 80 normal @s
+execute as @a[predicate=echoes:in_ocean,scores={InWater=2..}] at @s run particle white_ash ~ ~ ~ 20 5 20 0 80 normal @s
 execute as @a[predicate=echoes:in_snow_biome,predicate=ss_lib:in_rain] at @s run particle snowflake ~ ~20 ~ 20 10 20 0 320 normal @s
 # execute as @a[predicate=!echoes:in_cold_biome,predicate=!echoes:in_arid_biome] at @s run particle falling_water ~ ~10 ~ 30 1 30 0 10 normal @s
 

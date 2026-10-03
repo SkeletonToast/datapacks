@@ -1,8 +1,8 @@
 {
-    "values": [
-      "echoes:kinetic_no_cooldown",
-      "echoes:explosion_no_cooldown",
-      "echoes:true",
-      "echoes:ichor"
-    ]
+  "values": [
+    "echoes:kinetic_no_cooldown",
+    "echoes:explosion_no_cooldown",
+    "echoes:true",
+    "echoes:ichor"
+  ]
 }

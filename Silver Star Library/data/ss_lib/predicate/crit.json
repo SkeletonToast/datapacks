@@ -12,16 +12,10 @@
         }
       }
     },
-    {
-      "type": "minecraft:reference",
-      "name": "ss_lib:is/falling"
-    },
+    "ss_lib:is/falling",
     {
       "type": "minecraft:inverted",
-      "term": {
-        "type": "minecraft:reference",
-        "name": "ss_lib:is/sprinting"
-      }
+      "term": "ss_lib:is/sprinting"
     }
   ]
 }

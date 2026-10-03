@@ -1,6 +1,6 @@
 scoreboard players add @s of_campfire_spawn 0
 
-execute at @s run spawnpoint @s ~ ~ ~ ~
+execute at @s run spawnpoint @s ~ ~ ~
 execute if block ~ ~ ~ campfire run tellraw @s [{"color":"gray","text":"+"},{"color":"gold","text":"Your spawn has been set."}]
 execute if block ~ ~ ~ soul_campfire run tellraw @s [{"color":"gray","text":"+"},{"color":"aqua","text":"Your spawn has been set."}]
 

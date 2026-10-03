@@ -1,6 +1,6 @@
 function ss_lib:_load
-function ss_statuses:_load
-function ss_traits:_load
+# function ss_statuses:_load
+# function ss_traits:_load
 function ss_armory:_load
 
 function of_characters:_load
@@ -89,7 +89,7 @@ scoreboard objectives add of_rift_cooldown dummy
 # sleeping
 scoreboard objectives add of_sleep minecraft.custom:minecraft.sleep_in_bed
 scoreboard objectives add of_sleep_timer dummy
-gamerule playersSleepingPercentage 0
+gamerule players_sleeping_percentage 0
 
 # lanterns
 scoreboard objectives add of_lantern_cooldown dummy

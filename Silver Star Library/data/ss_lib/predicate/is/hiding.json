@@ -1,10 +1,7 @@
 {
     "type": "minecraft:any_of",
     "terms": [
-      {
-        "type": "minecraft:reference",
-        "name": "ss_lib:is/sneaking"
-      },
+      "ss_lib:is/sneaking",
       {
         "type": "minecraft:entity_properties",
         "entity": "this",

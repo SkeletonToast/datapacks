@@ -33,9 +33,9 @@ scoreboard players set @a[scores={Age=1}] BaseTact 7
 scoreboard players set @a[scores={Age=1}] BaseSoul 7
 
 # averaged stats
-function echoes:stats/combination_stat {stat1:Strength,stat2:Dexterity,stat3:sse.Physique}
-function echoes:stats/combination_stat {stat1:Vitality,stat2:Soul,stat3:sse.Passion}
-function echoes:stats/combination_stat {stat1:Mind,stat2:Tact,stat3:sse.Knowledge}
+execute as @a run function echoes:stats/combination_stat {stat1:Strength,stat2:Dexterity,result:sse.Physique}
+execute as @a run function echoes:stats/combination_stat {stat1:Vitality,stat2:Soul,result:sse.Passion}
+execute as @a run function echoes:stats/combination_stat {stat1:Mind,stat2:Tact,result:sse.Knowledge}
 
 # Tenacity & Fortitude
 execute as @a run scoreboard players operation @s Tenacity = @s Vitality
@@ -44,7 +44,7 @@ execute as @a run scoreboard players operation @s Tenacity = @s Vitality
             execute as @a run scoreboard players set @s[scores={Tenacity=..-1}] Tenacity 0
         scoreboard players add @a Tenacity 12
             execute as @a run scoreboard players operation @s[tag=Vitality_feat_3] Tenacity *= #const.3 value
-            execute as @a[tag=Vitality_feat_3] run function math:round {score:Tenacity,round:2}
+            execute as @a[tag=Vitality_feat_3] run function math:round {score:Tenacity,round:2,reduce:true}
 
 execute as @a[tag=Vitality_feat_1] run scoreboard players operation @s Fortitude = @s Tenacity
     execute as @a run scoreboard players operation @s Fortitude /= #const.2 value

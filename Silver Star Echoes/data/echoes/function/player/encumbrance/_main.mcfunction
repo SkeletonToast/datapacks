@@ -44,7 +44,7 @@ execute as @a run scoreboard players operation @s encumbrance -= @s Food
 execute as @a run scoreboard players operation @s encumbrance_unadjusted = @s encumbrance
 
 # handicaps
-scoreboard players remove @a[tag=!InCombat,scores={EchoDifficulty=..3}] encumbrance 10
+scoreboard players remove @a[tag=!InCombat,scores={sse.difficulty=..3}] encumbrance 10
 # execute as @a[scores={Food=20,encumbrance=2..},tag=!InCombat] run scoreboard players operation @s encumbrance /= #const.2 value
 
 # 50+ strength encumbrance halving

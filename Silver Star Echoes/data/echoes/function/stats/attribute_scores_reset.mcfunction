@@ -17,7 +17,7 @@ scoreboard players set @a tact_interaction_range 0
 scoreboard players set @a tact_movement_efficiency 0
 scoreboard players set @a tact_water_movement_efficiency 0
 scoreboard players set @a tact_submerged_mining_speed 0
-scoreboard players set @a tact_camera_distance 0
+scoreboard players set @a sse.settings.tact_camera_distance 0
 
 scoreboard players set @a tact_armor 0
 scoreboard players set @a tact_armor_toughness 0

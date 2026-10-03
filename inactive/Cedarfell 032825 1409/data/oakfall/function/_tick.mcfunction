@@ -1,11 +1,11 @@
 function oakfall:_fixes
 
 function ss_lib:_pre_function
-function ss_statuses:_pre_function
-function ss_traits:_pre_function
+# function ss_statuses:_pre_function
+# function ss_traits:_pre_function
 
 # gamerules
-execute as @a at @s run gamerule keepInventory true
+execute as @a at @s run gamerule keep_inventory true
     # this will (hopefully) make it so that, even on servers, keepInventory becomes true in all dimensions
 
 # attribute reset
@@ -74,7 +74,7 @@ function of_characters:_tick
     execute as @a[scores={TimeSinceRest=2}] run scoreboard players set @s of_sleep 0
 
     # day cycle
-    execute if predicate {"condition":"minecraft:random_chance","chance":0.5} run time add 23999
+    execute if predicate {"type":"minecraft:random_chance","chance":0.5} run time add 23999
     # execute as @r[scores={DayTime=13000..}] run time add 1t
     # execute as @a[limit=5,scores={DayTime=13000..}] if predicate {"condition":"minecraft:random_chance","chance":0.2} run time add 23999
     # execute as @r[scores={DayTime=..12999}] if predicate ss_lib:random_50_percent run time add 23999
@@ -83,15 +83,15 @@ function of_characters:_tick
 
     # other pack tick
     function ss_armory:_tick
-    function ss_traits:_tick
-    function ss_statuses:_tick
+    # function ss_traits:_tick
+    # function ss_statuses:_tick
 
     # death coords
     function ss_lib:deathcoords
 
 # post func
-function ss_traits:_post_function
-function ss_statuses:_post_function
+# function ss_traits:_post_function
+# function ss_statuses:_post_function
 function ss_lib:_post_function
 
 # village tag remove

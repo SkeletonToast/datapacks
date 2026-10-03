@@ -1,4 +1,4 @@
-execute as @a[scores={ssid=528}] run function ss_lib:load_message {namespace:"ELIXIR",datapack:"ELX"}
+execute as @a[scores={ssid=528}] run function ss_lib:load_message {namespace:"SSL",datapack:"Elixir"}
 
 scoreboard objectives add elixir.storage.increment dummy
 scoreboard objectives add elixir.storage.increment_2 dummy

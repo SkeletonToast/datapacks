@@ -10,7 +10,7 @@
 # scoreboard players add @s[scores={generic_a=9}] ssa.attack_speed_cap.attack_speed 1
     # because of round below, this isn't necessary
 
-function math:round {score:ssa.attack_speed_cap.attack_speed,round:10}
+function math:round {score:ssa.attack_speed_cap.attack_speed,round:10,reduce:true}
     # ssa.attack_speed_cap.attack_speed is stored at 100x so this just reduces it
 
 execute if score @s ssa.attack_speed_cap.attack_speed <= @s ssa.attack_speed_cap run return fail
