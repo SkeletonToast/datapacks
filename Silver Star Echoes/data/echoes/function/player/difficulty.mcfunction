@@ -62,7 +62,7 @@ scoreboard players set @s[scores={sse.difficulty=6}] sse.difficulty.attribute_li
 scoreboard players set @s[scores={sse.difficulty=6}] sse.difficulty.health_limit 60
 scoreboard players set @s[scores={sse.difficulty=6}] sse.difficulty.health_regeneration_limit 25
 scoreboard players set @s[scores={sse.difficulty=6}] sse.difficulty.proficiency_limit -1
-scoreboard players set @s[scores={sse.difficulty=6}] sse.difficulty.default_aegis_amplifier 5
+scoreboard players set @s[scores={sse.difficulty=6}] sse.difficulty.default_aegis_amplifier 6
 scoreboard players set @s[scores={sse.difficulty=6}] sse.difficulty.exhaustion_multiplier 125
 scoreboard players set @s[scores={sse.difficulty=6}] sse.difficulty.radiation_multiplier 50
 scoreboard players set @s[scores={sse.difficulty=6}] sse.difficulty.leveling_multiplier 125
@@ -72,7 +72,7 @@ scoreboard players set @s[scores={sse.difficulty=7}] sse.difficulty.attribute_li
 scoreboard players set @s[scores={sse.difficulty=7}] sse.difficulty.health_limit 60
 scoreboard players set @s[scores={sse.difficulty=7}] sse.difficulty.health_regeneration_limit 0
 scoreboard players set @s[scores={sse.difficulty=7}] sse.difficulty.proficiency_limit -1
-scoreboard players set @s[scores={sse.difficulty=7}] sse.difficulty.default_aegis_amplifier 6
+scoreboard players set @s[scores={sse.difficulty=7}] sse.difficulty.default_aegis_amplifier 7
 scoreboard players set @s[scores={sse.difficulty=7}] sse.difficulty.exhaustion_multiplier 140
 scoreboard players set @s[scores={sse.difficulty=7}] sse.difficulty.radiation_multiplier 25
 scoreboard players set @s[scores={sse.difficulty=7}] sse.difficulty.leveling_multiplier 150

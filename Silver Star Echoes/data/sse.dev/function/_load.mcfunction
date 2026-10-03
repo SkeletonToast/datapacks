@@ -16,12 +16,14 @@ scoreboard objectives add sse.gamerule.hungry_damage_reduction trigger
 scoreboard objectives add sse.gamerule.elytra_boosting trigger
 
 scoreboard objectives add sse.gamerule.smooth_sprinting trigger
+scoreboard objectives add settings trigger
 scoreboard objectives add sse.settings.aegis_self_visibility trigger
 scoreboard objectives add sse.settings.aegis_visibility trigger
 scoreboard objectives add sse.settings.attack_buff_visibility trigger
 scoreboard objectives add sse.settings.tact_camera_distance trigger
 
 scoreboard objectives add check_stats trigger
+scoreboard objectives add check_difficulty trigger
 
 execute unless data storage sse:gamerule time_dilation run data modify storage sse:gamerule time_dilation set value 1
 execute unless data storage sse:gamerule variant_monsters run data modify storage sse:gamerule variant_monsters set value 1

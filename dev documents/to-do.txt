@@ -2,6 +2,15 @@ Talisman
 - Maybe rework talisman so that it also takes inputs for a source, and make it more compatible with any other datapack?
 - this could let you add some basic talismans for homesteader maybe
 
+Homesteader
+- add different day titlecard styles
+    - default: "monarch", echoes-style
+    - "modernist" - sleek and whatnot
+    - maybe just like "DAWN 3" and "DUSK 7" or whatever
+    - "majora" - majora's mask style
+    - "hardwire" - cyberpunk?
+    - "local" - weather channel style, little forecast for the day maybe
+
 Echoes
 - make sure combination stats actually calculate as intended, i changed around the multipliers
 - rename items
@@ -16,6 +25,12 @@ Echoes
 - finish the creaking changes you were working on once upon a time
 - FINISH NEW ELIXIR EFFECTS
 - having zero vitality also gives you full inventory regen
+- have some sort of settings menu where you can more easily trigger things without having to know the variable names
+    - also add in a way to change your aegis theme thru there
+- why doesn't aegis self visibility work when it's disabled?
+    - it's offset to display the particles themselves, so you have to find a way to go around that
+    - maybe execute as everyone, and then terminate if their SSID matches your SSID
+- also tact camera distance doesn't work
 
 Library
 - TEST NEW GAMERULE SYSTEM BEFORE YOU RELEASE IT!!!

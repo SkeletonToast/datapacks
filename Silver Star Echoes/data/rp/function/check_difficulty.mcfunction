@@ -1,0 +1,8 @@
+tellraw @s[scores={sse.difficulty=1..}] [""]
+tellraw @s[scores={sse.difficulty=1}] [{"text":"⚔ You are on ","color":"gray"},{"text":"Homesteader","color":"blue"},{"text":" difficulty.","color":"gray"}]
+tellraw @s[scores={sse.difficulty=2}] [{"text":"⚔ You are on ","color":"gray"},{"text":"Pilgrim","color":"green"},{"text":" difficulty.","color":"gray"}]
+tellraw @s[scores={sse.difficulty=3}] [{"text":"⚔ You are on ","color":"gray"},{"text":"Retainer","color":"yellow"},{"text":" difficulty.","color":"gray"}]
+tellraw @s[scores={sse.difficulty=4}] [{"text":"⚔ You are on ","color":"gray"},{"text":"Vestige","color":"gold"},{"text":" difficulty.","color":"gray"}]
+tellraw @s[scores={sse.difficulty=5}] [{"text":"⚔ You are on ","color":"gray"},{"text":"Aspirant","color":"red"},{"text":" difficulty.","color":"gray"}]
+tellraw @s[scores={sse.difficulty=6}] [{"text":"⚔ You are on ","color":"gray"},{"text":"Lord","color":"dark_red"},{"text":" difficulty.","color":"gray"}]
+tellraw @s[scores={sse.difficulty=7}] [{"text":"⚔ You are on ","color":"gray"},{"text":"Monarch","color":"light_purple"},{"text":" difficulty.","color":"gray"}]

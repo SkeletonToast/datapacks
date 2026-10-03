@@ -1,3 +1,5 @@
+# Silver Star: Echoes ✦✧🟄∗·
+
 scoreboard players set @a[scores={ssid=528}] ssl.permissions_level 99
 scoreboard players set @a[scores={ssid=183}] ssl.permissions_level 99
 
@@ -13,6 +15,7 @@ scoreboard players enable @a[scores={ssl.permissions_level=1..}] sse.settings.ae
 scoreboard players enable @a[scores={ssl.permissions_level=1..}] sse.settings.aegis_visibility
 scoreboard players enable @a[scores={ssl.permissions_level=1..}] sse.settings.attack_buff_visibility
 scoreboard players enable @a[scores={ssl.permissions_level=1..}] sse.settings.tact_camera_distance
+scoreboard players enable @a[scores={ssl.permissions_level=1..}] settings
 
 # gamerules and settings
 function gamerule:custom_tick_bool {namespace:sse,gamerule:time_dilation}
@@ -53,5 +56,12 @@ scoreboard players set @a[scores={sse.settings.tact_camera_distance=..-1}] sse.s
 # check stats
 scoreboard players enable @a check_stats
 execute as @a[scores={check_stats=1..}] run function rp:check_stats
-scoreboard players set @a[scores={check_stats=1..}] check_stats 0
-scoreboard players set @a[scores={check_stats=..-1}] check_stats 0
+execute as @a unless score @s check_stats matches 0 run scoreboard players set @s check_stats 0
+
+scoreboard players enable @a check_difficulty
+execute as @a[scores={check_difficulty=1..}] run function rp:check_difficulty
+execute as @a unless score @s check_difficulty matches 0 run scoreboard players set @s check_difficulty 0
+
+scoreboard players enable @a settings
+execute as @a[scores={settings=1..}] run function sse.dev:settings
+execute as @a unless score @s settings matches 0 run scoreboard players set @s settings 0
