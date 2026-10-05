@@ -1,3 +1,5 @@
+function ss_lib:fetch/fire {s:"@s"}
+
 execute at @s[predicate=ss_lib:is/on_fire] positioned ~ ~1 ~ run function ss_lib:particles/function/big_fire
 execute at @s[predicate=ss_lib:is/on_fire,predicate=ss_lib:is/sprinting] run particle lava ~ ~ ~ 0.03 0 0.03 0 1 normal
 execute at @s run particle smoke ~ ~1 ~ 0.3 0.3 0.3 0.02 1

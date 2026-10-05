@@ -1,3 +1,4 @@
 function elixir:custom/tick_status {status:lightweight,status_function:"elixir:status/lightweight/main",expire_function:"elixir:status/lightweight/expire",source:elixir}
 function elixir:custom/tick_status {status:fortified,status_function:"elixir:status/fortified/main",expire_function:"elixir:status/fortified/expire",source:elixir}
 function elixir:custom/tick_status {status:fragile,status_function:"elixir:status/fragile/main",expire_function:"elixir:status/fragile/expire",source:elixir}
+function elixir:custom/tick_status {status:beeful,status_function:"elixir:status/beeful/main",expire_function:"elixir:status/null_expire",source:elixir}

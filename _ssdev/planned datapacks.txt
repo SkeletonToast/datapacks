@@ -80,6 +80,7 @@ New pack: "Homesteader" / "Petrichor"?
     - probably not lowkey
 - add back in the automatic replanting thing that you had for Fawns in crow's keep
 - maybe move morning and nightfall titles / timestops over to homesteader
+    - have fun different titles you can optionally sort thru for titlecard themes
 BUT!!!
 - figure out where Homesteader ends and Echoes begins. homesteader should just be overall friendly changes. Echoes is where you can make evil aggressive changes, or maybe just add systems that interact with homesteader differently than in "vanilla" homesteader.
 - Homesteader should only add BENEFITS. Echoes will add drawbacks and penalties, such as encumbrance.

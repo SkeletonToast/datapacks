@@ -7,7 +7,7 @@
         "type": "minecraft:entity_properties",
         "entity": "this",
         "predicate": {
-          "stepping_on": {
+          "minecraft:stepping_on": {
             "block": {
               "blocks": "#ss_lib:flammable"
             }
@@ -19,34 +19,27 @@
       "type": "minecraft:int_value_check",
       "value": {
         "type": "minecraft:score",
-        "target": "this",
+        "target": {
+          "type": "minecraft:context",
+          "target": "this"
+        },
         "score": "OnGround"
       },
-      "range": 1
+      "test": 1
     },
     {
       "type": "minecraft:int_value_check",
       "value": {
         "type": "minecraft:score",
-        "target": "this",
+        "target": {
+          "type": "minecraft:context",
+          "target": "this"
+        },
         "score": "Fire"
       },
-      "range": {
-        "min": 1,
-        "max": 200
+      "test": {
+        "min": 1
       }
-    },
-    {
-      "type": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "location": {
-          "block": {
-            "blocks": "#minecraft:air"
-          }
-        }
-      }
-    },
-    "ss_lib:is/on_fire"
+    }
   ]
 }

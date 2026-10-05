@@ -10,3 +10,4 @@ scoreboard objectives add elixir.storage.current_duration dummy
 function elixir:custom/load_status {source:elixir,status:lightweight}
 function elixir:custom/load_status {source:elixir,status:fortified}
 function elixir:custom/load_status {source:elixir,status:fragile}
+function elixir:custom/load_status {source:elixir,status:beeful}

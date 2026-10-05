@@ -3,13 +3,18 @@ Talisman
 - this could let you add some basic talismans for homesteader maybe
 
 Homesteader
-- add different day titlecard styles
+- add different day titlecard styles. everything below is JUST ideas
     - default: "monarch", echoes-style
     - "modernist" - sleek and whatnot
     - maybe just like "DAWN 3" and "DUSK 7" or whatever
+        - "arena" potentially - shows like player kill counts, deaths, stuff like that
+    - "citrus" - cutie, slice-of-life style
     - "majora" - majora's mask style
     - "hardwire" - cyberpunk?
     - "local" - weather channel style, little forecast for the day maybe
+    - "overgrowth" - very planty and worn-down
+    - "meadow" - flowery but cutesy instead
+    - "wayfarer" - depends on player's biome location!!! could be super fun!
 
 Echoes
 - make sure combination stats actually calculate as intended, i changed around the multipliers
@@ -33,6 +38,7 @@ Echoes
 - also tact camera distance doesn't work
 
 Library
+- add non-bool gamerule system
 - TEST NEW GAMERULE SYSTEM BEFORE YOU RELEASE IT!!!
 - add contingency for making sure ssl doesn't run twice in one tick / doesnt reload twice
     - most subfunctions already have contingencies in place for this
@@ -49,12 +55,14 @@ LIBRARY UPDATE:
 - changes to fetch functions
     - AttackSpeed and AttackDamage now require bypass_check as well
     - ArmorToughness is no longer calculated every tick, and is now part of the fetch/armor function
-- soon, we will add an actionbar queueing system!!!
+    - new fetch fire function
 - GameTime updates now lmfao?? what was the point before
 - DayTime changes
     - Used to be a score, DayTime, which was stored for each player. Now it's just #day_time value.
-- (hopefully) circle module!
 - elixir readme but it was already on the modrinth page so it doesn't really matter
+UPCOMING FEATURES
+- soon, we will add an actionbar queueing system!!!
+- (hopefully) circle module!
 
 Armory
 - update attack speed cap lmfao that thing is extremely outdated

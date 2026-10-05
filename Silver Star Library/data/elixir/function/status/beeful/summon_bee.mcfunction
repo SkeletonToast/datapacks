@@ -1,0 +1,1 @@
+$summon bee ~ ~1 ~ {AngerTime:200,AngryAt:$(UUID),Tags:["tinybee"],DeathLootTable:"minecraft:empty",attributes:[{id:"scale",base:0.2f},{id:"attack_damage",base:1f},{id:"max_health",base:3f}]}

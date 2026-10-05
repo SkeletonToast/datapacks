@@ -25,6 +25,11 @@ kill @e[scores={Age=0}]
 
 scoreboard players remove @a pause_actionbars 1
 
+# circle module
+    # execute as @e[scores={circle_timer=1},type=marker,tag=ssl.circle] run function ss_lib:circle/internal/marker
+    # scoreboard players remove @e[type=marker,tag=ssl.circle] circle_timer 1
+    # tag @e[scores={circle_timer=0},type=marker,tag=ssl.circle] remove ssl.circle
+
 # function ss_lib:safety
 
 # attack buff particles

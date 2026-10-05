@@ -76,6 +76,11 @@ scoreboard objectives add value dummy
 
 scoreboard objectives add Age dummy
 
+# circle module
+scoreboard objectives add circle_nodes dummy
+scoreboard objectives add circle_timer dummy
+
+# parse
 scoreboard objectives add parse_score_recursions dummy
 scoreboard objectives add parse_score_digits dummy
 scoreboard objectives add parse_score_append_position dummy
