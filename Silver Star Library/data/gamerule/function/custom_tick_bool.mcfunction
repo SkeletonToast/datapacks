@@ -1,2 +1,0 @@
-$execute as @a[scores={$(namespace).gamerule.$(gamerule)=-1..}] run function gamerule:set_bool {namespace:$(namespace),gamerule:$(gamerule)}
-$scoreboard players set @a $(namespace).gamerule.$(gamerule) -2

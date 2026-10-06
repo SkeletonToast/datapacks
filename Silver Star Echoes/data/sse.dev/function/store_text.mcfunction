@@ -1,1 +1,0 @@
-$data modify storage 528:sse.dev text_storage_test set value "$(input)"

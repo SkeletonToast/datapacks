@@ -1,12 +1,10 @@
-function sse.dev:dependencies
-
-function gamerule:custom_load {namespace:sse,gamerule:time_dilation}
-function gamerule:custom_load {namespace:sse,gamerule:variant_monsters}
-function gamerule:custom_load {namespace:sse,gamerule:creative_encumbrance}
-function gamerule:custom_load {namespace:sse,gamerule:combat_jump_scaling}
-function gamerule:custom_load {namespace:sse,gamerule:ambient_particles}
-function gamerule:custom_load {namespace:sse,gamerule:hungry_damage_reduction}
-function gamerule:custom_load {namespace:sse,gamerule:elytra_boosting}
+function gamerule:custom/load {source:sse,gamerule:time_dilation}
+function gamerule:custom/load {source:sse,gamerule:variant_monsters}
+function gamerule:custom/load {source:sse,gamerule:creative_encumbrance}
+function gamerule:custom/load {source:sse,gamerule:combat_jump_scaling}
+function gamerule:custom/load {source:sse,gamerule:ambient_particles}
+function gamerule:custom/load {source:sse,gamerule:hungry_damage_reduction}
+function gamerule:custom/load {source:sse,gamerule:elytra_boosting}
 scoreboard objectives add sse.gamerule.time_dilation trigger
 scoreboard objectives add sse.gamerule.variant_monsters trigger
 scoreboard objectives add sse.gamerule.creative_encumbrance trigger

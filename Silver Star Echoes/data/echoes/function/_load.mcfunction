@@ -1,3 +1,5 @@
+function echoes:dependencies
+
 function ss_lib:_load
 function ss_armory:_load
 function ss_lib:status/_load

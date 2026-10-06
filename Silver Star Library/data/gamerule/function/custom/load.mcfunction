@@ -1,0 +1,1 @@
+$scoreboard objectives add $(source).gamerule.$(gamerule) trigger

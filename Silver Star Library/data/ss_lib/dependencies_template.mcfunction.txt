@@ -4,4 +4,4 @@ function ss_lib:install
 
 execute unless data storage silver_star_library installed run tellraw @a [{"text":"<Your Datapack Here> requires "},{"text":"Silver Star Library","underlined":true,"color":blue,"click_event":{"action":"open_url","url":"https://modrinth.com/datapack/silver-star-library/versions"},"hover_event":{"action":"show_text","value":"https://modrinth.com/datapack/silver-star-library/versions"}},{"text":" to be installed in order to function properly."}]
 
-execute unless data storage silver_star_library installed run schedule function datapack:dependencies_function 60s
+execute unless data storage silver_star_library installed run schedule function <your datapack>:<dependencies function> 60s

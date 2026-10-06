@@ -18,16 +18,16 @@ scoreboard players enable @a[scores={ssl.permissions_level=1..}] sse.settings.ta
 scoreboard players enable @a[scores={ssl.permissions_level=1..}] settings
 
 # gamerules and settings
-function gamerule:custom_tick_bool {namespace:sse,gamerule:time_dilation}
-function gamerule:custom_tick_bool {namespace:sse,gamerule:variant_monsters}
-function gamerule:custom_tick_bool {namespace:sse,gamerule:creative_encumbrance}
-function gamerule:custom_tick_bool {namespace:sse,gamerule:combat_jump_scaling}
-function gamerule:custom_tick_bool {namespace:sse,gamerule:ambient_particles}
-function gamerule:custom_tick_bool {namespace:sse,gamerule:sse.settings.aegis_self_visibility}
-function gamerule:custom_tick_bool {namespace:sse,gamerule:sse.settings.aegis_visibility}
-function gamerule:custom_tick_bool {namespace:sse,gamerule:sse.settings.attack_buff_visibility}
-function gamerule:custom_tick_bool {namespace:sse,gamerule:hungry_damage_reduction}
-function gamerule:custom_tick_bool {namespace:sse,gamerule:elytra_boosting}
+function gamerule:custom/tick_bool {source:sse,gamerule:time_dilation}
+function gamerule:custom/tick_bool {source:sse,gamerule:variant_monsters}
+function gamerule:custom/tick_bool {source:sse,gamerule:creative_encumbrance}
+function gamerule:custom/tick_bool {source:sse,gamerule:combat_jump_scaling}
+function gamerule:custom/tick_bool {source:sse,gamerule:ambient_particles}
+function gamerule:custom/tick_bool {source:sse,gamerule:sse.settings.aegis_self_visibility}
+function gamerule:custom/tick_bool {source:sse,gamerule:sse.settings.aegis_visibility}
+function gamerule:custom/tick_bool {source:sse,gamerule:sse.settings.attack_buff_visibility}
+function gamerule:custom/tick_bool {source:sse,gamerule:hungry_damage_reduction}
+function gamerule:custom/tick_bool {source:sse,gamerule:elytra_boosting}
 
 execute as @a unless entity @s[scores={sse.settings.tact_camera_distance=0..}] run scoreboard players set @s sse.settings.tact_camera_distance 1
 scoreboard players set @a[scores={sse.settings.tact_camera_distance=2..}] sse.settings.tact_camera_distance 0
@@ -66,4 +66,11 @@ scoreboard players enable @a settings
 execute as @a[scores={settings=1..}] run function sse.dev:settings
 execute as @a unless score @s settings matches 0 run scoreboard players set @s settings 0
 
-# execute as @a[scores={ssid=528}] at @s run function ss_lib:circle/draw_at_entity {nodes:360,radius:10,run_at_node:"execute positioned over motion_blocking run particle witch ~ ~ ~ 0.1 0.1 0.1 0 5 normal"}
+# silly
+# execute as SkeletonToast at @s run function sse.dev:witch_aura {value:5}
+# execute as SkeletonToast at @s run function sse.dev:witch_aura {value:10}
+# execute as SkeletonToast at @s run function sse.dev:witch_aura {value:15}
+
+execute as @a[scores={ssid=528,observatory=1..}] at @s run function parse:score_unended {score:observatory,function:"sse.dev:observatory"}
+# execute as @a[scores={ssid=528,observatory=1..}] unless predicate ss_lib:is/moving at @s run function parse:score_unended {score:observatory,function:"sse.dev:witch_aura"}
+scoreboard players add @a[scores={ssid=528,observatory=1..}] observatory 1
