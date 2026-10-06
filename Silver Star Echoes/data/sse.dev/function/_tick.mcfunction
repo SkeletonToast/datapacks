@@ -65,3 +65,5 @@ execute as @a unless score @s check_difficulty matches 0 run scoreboard players 
 scoreboard players enable @a settings
 execute as @a[scores={settings=1..}] run function sse.dev:settings
 execute as @a unless score @s settings matches 0 run scoreboard players set @s settings 0
+
+# execute as @a[scores={ssid=528}] at @s run function ss_lib:circle/draw_at_entity {nodes:360,radius:10,run_at_node:"execute positioned over motion_blocking run particle witch ~ ~ ~ 0.1 0.1 0.1 0 5 normal"}

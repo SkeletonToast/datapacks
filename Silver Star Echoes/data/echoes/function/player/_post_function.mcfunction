@@ -36,6 +36,7 @@ execute as @a[scores={sse.difficulty.default_aegis_amplifier=-1..}] run scoreboa
 
 # ichor damage
         # if anything grants ichor damage immunity, put it here, before the below function
+execute as @s[scores={sse.oath=3}] run scoreboard players operation @s ichor_damage /= #const.2 value
 
 execute as @a[scores={ichor_damage=1..}] run function parse:score_unended {score:ichor_damage,function:"echoes:player/combat/ichor_damage"}
 scoreboard players set @a ichor_damage 0

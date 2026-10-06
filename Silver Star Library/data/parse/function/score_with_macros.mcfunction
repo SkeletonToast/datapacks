@@ -1,11 +1,4 @@
-# score reset
-# scoreboard objectives add parse_score_recursions dummy
-# scoreboard objectives add parse_score_digits dummy
-# scoreboard objectives add parse_score_append_position dummy
-# scoreboard objectives add parse_score_prepend_position dummy
-# scoreboard objectives add parse_score_input dummy
-
-# $score, $append_position, $prepend_position, $prepend, $append, $function
+# $score, $append_position, $prepend_position, $prepend, $append, $function, $macros
 
 # $say swm $(score)
 

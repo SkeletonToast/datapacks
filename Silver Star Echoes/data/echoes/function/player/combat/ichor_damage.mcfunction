@@ -4,4 +4,4 @@ execute as @s[scores={Absorption=0}] run return fail
 $scoreboard players set @s generic_a $(value)
 $execute if score @s Absorption > @s generic_a run damage @s $(value) echoes:ichor
 
-execute if score @s Absorption <= @s generic_a run function parse:score_unended {score:Absorption,function:"echoes:player/combat/ichor_damage_calculated"}
+execute if score @s Absorption <= @s generic_a run function parse:score_unended {score:Absorption,function:"echoes:player/combat/ichor_damage_deal"}

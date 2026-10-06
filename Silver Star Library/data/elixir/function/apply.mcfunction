@@ -4,5 +4,7 @@
 
 function ssid:assign
 
+$tag @s add $(source).$(status).active
+
 # $function parse:score_unended_with_macros {function:"elixir:applying",score:ssid,macros:"source:$(source),status:$(status),duration:$(duration),amplifier:$(amplifier)"}
 $function parse:score_unended_with_macros {function:"elixir:storage/store",score:ssid,macros:"source:$(source),status:$(status),duration:$(duration),amplifier:$(amplifier)"}

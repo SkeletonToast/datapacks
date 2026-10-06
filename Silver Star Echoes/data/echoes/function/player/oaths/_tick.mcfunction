@@ -8,10 +8,16 @@ scoreboard players set @a[team=haligsundr] sse.oath 2
 scoreboard players set @a[team=ritesmaiden] sse.oath 2
 execute as @a[team=ritesmaiden] unless score @s character.gender matches 1 run team join haligsundr
 
+    # haligsect - big mind buff, better health regen
+    scoreboard players add @a[scores={sse.oath=2}] Mind 5
+    execute as @a[scores={sse.oath=2}] if score @s aegis_amplifier >= @s aegis_amplifier_max run scoreboard players operation @s aegis_timer_max /= #const.2 value
+
 # ichor imperya
 scoreboard players set @a[team=imperyal] sse.oath 3
 scoreboard players set @a[team=inquisitor] sse.oath 3
 scoreboard players set @a[team=praetor] sse.oath 3
+
+    # ichor imperya - resistance to ichor damage (in echoes player post function)
 
 # angel hunters
 scoreboard players set @a[team=red_gold] sse.oath 4
@@ -22,8 +28,15 @@ scoreboard players set @a[team=lonwood] sse.oath 5
 scoreboard players set @a[team=arborknight] sse.oath 5
 scoreboard players set @a[team=kestrel] sse.oath 5
 
+    # overgrowth - better resolve and vitality
+    scoreboard players add @a[scores={sse.oath=5}] Resolve 4
+    scoreboard players add @a[scores={sse.oath=5}] Vitality 3
+
 # arcanists
 scoreboard players set @a[team=arcanist] sse.oath 6
+
+    # arcanists - tact
+    scoreboard players add @a[scores={sse.oath=6}] Tact 5
 
 # rasaya
 scoreboard players set @a[team=queenshriven] sse.oath 7
@@ -80,16 +93,3 @@ scoreboard players add @a[scores={sse.oath=1}] Vitality 1
 scoreboard players add @a[scores={sse.oath=1}] Mind 1
 scoreboard players add @a[scores={sse.oath=1}] Tact 1
 scoreboard players add @a[scores={sse.oath=1}] Soul 1
-
-# haligsect - big mind buff, better health regen
-scoreboard players add @a[scores={sse.oath=2}] Mind 5
-execute as @a[scores={sse.oath=2}] if score @s aegis_amplifier >= @s aegis_amplifier_max run scoreboard players operation @s aegis_timer_max /= #const.2 value
-
-# angel hunters - idk
-
-# overgrowth - better resolve and vitality
-scoreboard players add @a[scores={sse.oath=5}] Resolve 4
-scoreboard players add @a[scores={sse.oath=5}] Vitality 3
-
-# arcanists - tact
-scoreboard players add @a[scores={sse.oath=6}] Tact 5
