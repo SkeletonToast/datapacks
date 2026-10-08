@@ -1,7 +1,10 @@
 execute as @a run function echoes:stats/echo_level
+# execute if score @s EchoLevel matches ..-1 run scoreboard players operation @s EchoLevelsUnspent = @s EchoLevel
+# function math:absolute_value {score:EchoLevelsUnspent}
 
 tellraw @s [""]
 tellraw @s [{"text":"❖ Level ","color":"gray"},{"score":{"name":"@s","objective":"EchoLevel"},"color":"white"}]
+# tellraw @s [{"text":"❖ You have ","color":"gray"},{"score":{"name":"@s","objective":"EchoLevelsUnspent"},"color":"white"},{"text":" unspent levels","color":"gray"}]
 tellraw @s [{"text":"Stats listed as [Effective / Real]","color":"gray","italic":true}]
 tellraw @s [""]
 

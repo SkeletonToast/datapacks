@@ -1,3 +1,5 @@
+# function gamerule:custom/load {source:sse,gamerule:test_range}
+
 function gamerule:custom/load {source:sse,gamerule:time_dilation}
 function gamerule:custom/load {source:sse,gamerule:variant_monsters}
 function gamerule:custom/load {source:sse,gamerule:creative_encumbrance}
@@ -15,12 +17,19 @@ scoreboard objectives add sse.settings.tact_camera_distance trigger
 scoreboard objectives add check_stats trigger
 scoreboard objectives add check_difficulty trigger
 
+execute unless data storage sse:gamerule time_dilation run scoreboard players set $sse.gamerule.time_dilation true 1
 execute unless data storage sse:gamerule time_dilation run data modify storage sse:gamerule time_dilation set value 1
+execute unless data storage sse:gamerule variant_monsters run scoreboard players set $sse.gamerule.variant_monsters true 1
 execute unless data storage sse:gamerule variant_monsters run data modify storage sse:gamerule variant_monsters set value 1
+execute unless data storage sse:gamerule creative_encumbrance run scoreboard players set $sse.gamerule.creative_encumbrance true 1
 execute unless data storage sse:gamerule creative_encumbrance run data modify storage sse:gamerule creative_encumbrance set value 0
+execute unless data storage sse:gamerule combat_jump_scaling run scoreboard players set $sse.gamerule.combat_jump_scaling true 1
 execute unless data storage sse:gamerule combat_jump_scaling run data modify storage sse:gamerule combat_jump_scaling set value 0
+execute unless data storage sse:gamerule ambient_particles run scoreboard players set $sse.gamerule.ambient_particles true 1
 execute unless data storage sse:gamerule ambient_particles run data modify storage sse:gamerule ambient_particles set value 1
+execute unless data storage sse:gamerule hungry_damage_reduction run scoreboard players set $sse.gamerule.hungry_damage_reduction true 1
 execute unless data storage sse:gamerule hungry_damage_reduction run data modify storage sse:gamerule hungry_damage_reduction set value 1
+execute unless data storage sse:gamerule elytra_boosting run scoreboard players set $sse.gamerule.elytra_boosting true 1
 execute unless data storage sse:gamerule elytra_boosting run data modify storage sse:gamerule elytra_boosting set value 1
 
 scoreboard objectives add aegis_display_level dummy

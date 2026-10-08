@@ -83,6 +83,8 @@
 - change health fetch so that it always rounds up? idk
 - also just add round_up function
 - write up breakdown for scheduled functions
+- add some way to query active gamerules DONE
+- add default values to gamerule load
 
 NOTE ABOUT THE CIRCLE PROBLEM!!!! it appears to be specifically related to running the function through other functions! invoking a circle by calling a function works fine, but NOT when calling it through a parse function, even if the final circle does not even use the parsed score. calling it through multiple functions also works fine, so either it's something with the parse function specifically, or maybe just something else about passing macros. no idea. LOOK INTO THIS!!!
 
