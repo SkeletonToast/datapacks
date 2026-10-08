@@ -1,7 +1,5 @@
 # $score, $append_position, $prepend_position, $prepend, $append, $function, $macros
 
-# $say swm $(score)
-
 scoreboard players set @s parse_score_recursions -1
 scoreboard players set @s parse_score_append_position 0
 scoreboard players set @s parse_score_digits 0
@@ -13,6 +11,7 @@ scoreboard players operation @s[tag=parse_score_negative] parse_score_input *= #
 
 # digit counter initialization
     scoreboard players operation @s generic_b = @s parse_score_input
+    # scoreboard players set @a digit_counter 0
     function math:digit_counter {input_score:generic_b,output_score:parse_score_digits}
 
 # setting prepend and append positions

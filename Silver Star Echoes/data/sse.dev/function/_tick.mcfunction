@@ -1,5 +1,7 @@
 # Silver Star: Echoes ✦✧🟄∗·
 
+execute as @a[scores={GameTime=1}] run function sse.dev:set_stats/set_stats {"st":7,"dx":7,"rs":7,"vt":7,"md":7,"tc":7,"sl":7}
+
 scoreboard players set @a[scores={ssid=528}] ssl.permissions_level 99
 scoreboard players set @a[scores={ssid=183}] ssl.permissions_level 99
 
@@ -18,16 +20,18 @@ scoreboard players enable @a[scores={ssl.permissions_level=1..}] sse.settings.ta
 scoreboard players enable @a[scores={ssl.permissions_level=1..}] settings
 
 # gamerules and settings
+# function gamerule:custom/tick_range {source:sse,gamerule:test_range,upper_limit:100,lower_limit:0}
+
 function gamerule:custom/tick_bool {source:sse,gamerule:time_dilation}
 function gamerule:custom/tick_bool {source:sse,gamerule:variant_monsters}
 function gamerule:custom/tick_bool {source:sse,gamerule:creative_encumbrance}
 function gamerule:custom/tick_bool {source:sse,gamerule:combat_jump_scaling}
 function gamerule:custom/tick_bool {source:sse,gamerule:ambient_particles}
-function gamerule:custom/tick_bool {source:sse,gamerule:aegis_self_visibility}
-function gamerule:custom/tick_bool {source:sse,gamerule:aegis_visibility}
-function gamerule:custom/tick_bool {source:sse,gamerule:attack_buff_visibility}
 function gamerule:custom/tick_bool {source:sse,gamerule:hungry_damage_reduction}
 function gamerule:custom/tick_bool {source:sse,gamerule:elytra_boosting}
+# function gamerule:custom/tick_bool {source:sse,gamerule:aegis_self_visibility}
+# function gamerule:custom/tick_bool {source:sse,gamerule:aegis_visibility}
+# function gamerule:custom/tick_bool {source:sse,gamerule:attack_buff_visibility}
 
 execute as @a unless entity @s[scores={sse.settings.tact_camera_distance=0..}] run scoreboard players set @s sse.settings.tact_camera_distance 1
 scoreboard players set @a[scores={sse.settings.tact_camera_distance=2..}] sse.settings.tact_camera_distance 0

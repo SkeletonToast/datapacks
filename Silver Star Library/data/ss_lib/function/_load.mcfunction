@@ -205,8 +205,7 @@ scoreboard objectives add run_recursions dummy
 
 scoreboard objectives add ssid dummy
 
-execute as @r run function run:recur_macro {function:"ss_lib:set_constants",r:100}
-execute as @r run function run:recur_macro {function:"ss_lib:set_constants_negative",r:100}
+function ss_lib:load_constants
 scoreboard players set #const.MAX value 2147483647
 scoreboard players set #const.MIN value -2147483647
 

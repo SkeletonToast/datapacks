@@ -1,3 +1,5 @@
+$execute if score @s ssid = @s $(score) run say swm $(score)
+
 # calculating
 scoreboard players operation @s generic_b = @s parse_score_input
 scoreboard players operation @s generic_b %= #const.10 value

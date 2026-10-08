@@ -1,5 +1,6 @@
 # primary stats
 scoreboard objectives add EchoLevel dummy
+scoreboard objectives add EchoLevelsUnspent dummy
 scoreboard objectives add Renown dummy
 
 scoreboard objectives add BaseStrength dummy
