@@ -423,13 +423,13 @@ Note: An input score with a value of 0 will still return 1 digit.
 The function `math:even` is added, which will round the input score to an even number, if it is not already even. It takes two input parameters: `$(score)` and `$(sign)`. `$(score)` is the name of the scoreboard objective that will be modified, and `$(sign)` is a string that must be either `"-"` or `"+"`. This parameter specifies whether the function will round up or down.
 
 **Chance Functions**\
-Two chance functions are added: `chance:percentage` and `chance:score`. These have a random chance to trigger your specified function, and the probability of the function triggering depends on your input.
+Two chance functions are added: `math:chance/percentage` and `math:chance/score`. These have a random chance to trigger your specified function, and the probability of the function triggering depends on your input.
 
-`chance:percentage` takes two inputs: `$(value)` and `$(function)`. `$(value)` is a float from 0.00 to 1.00, which determines the likelihood of `$(function)` triggering. `$(function)` should be the name of a function, obviously.
+`math:chance/percentage` takes two inputs: `$(value)` and `$(function)`. `$(value)` is a float from 0.00 to 1.00, which determines the likelihood of `$(function)` triggering. `$(function)` should be the name of a function, obviously.
 
-Similarly, `chance:score` does the same thing, only using a score instead of a hard value. This function takes three inputs: `$(score)`, a scoreboard objective, `$(max_value)`, which is an integer to compare the value of `$(score)` against, and `$(function)`, which is the name of whatever function will be triggered, if the chance succeeds. As an example, if your objective specified by `$(score)` has a value of 15, and you input a value of 30 for `$(max_value)`, then `$(function)` will have a 15/30 chance of triggering, or 50%.
+Similarly, `math:chance/score` does the same thing, only using a score instead of a hard value. This function takes three inputs: `$(score)`, a scoreboard objective, `$(max_value)`, which is an integer to compare the value of `$(score)` against, and `$(function)`, which is the name of whatever function will be triggered, if the chance succeeds. As an example, if your objective specified by `$(score)` has a value of 15, and you input a value of 30 for `$(max_value)`, then `$(function)` will have a 15/30 chance of triggering, or 50%.
 
-Although `chance:percentage` is extremely basic code, I found it helpful to have a shorthand. Plus, `chance:score` needed some sort of function to pass the parsed value to.
+Although `math:chance/percentage` is extremely basic code, I found it helpful to have a shorthand. Plus, `math:chance/score` needed some sort of function to pass the parsed value to.
 </details>
 
 ## Action Tags

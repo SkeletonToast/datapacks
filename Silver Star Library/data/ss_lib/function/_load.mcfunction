@@ -1,9 +1,9 @@
 function elixir:_load
 
 scoreboard objectives add ssl.permissions_level dummy
-    # These permissions are not used in any SSLib functions by default.
+    # These permissions are only used in one other place: Players with a permissions level of 4 or higher can run "/trigger ssl.gamerule.query" to see a list of custom gamerules. This does not allow them to change gamerules, just see what gamerules there are.
         # They exist mainly just because I personally wanted them, but feel free to use them as well if you want.
-        # If you don't want to use them, then just ignore them. This system doesn't affect literally anything unless you specifically tell it to.
+        # If you don't want to use them, then just ignore them. All players will just have the default permissions level, so none of them will be able to do anything.
             # PLEASE NOTE: If Silver Star: Echoes is installed (which may or may not be released by the time you're reading this): most gamerules in Echoes can be changed by anybody with a permissions level of 4 or higher.
     # Guidelines are below for each permission level.
     # !!! KEEP IN MIND:
