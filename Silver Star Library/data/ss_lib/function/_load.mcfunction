@@ -33,13 +33,8 @@ scoreboard objectives add ssl.permissions_level dummy
     # This is mostly a formality, since operators can already do whatever they want, but it still has some niche uses.
     # Consider using this for any functions that should require operator permissions, but aren't easily triggerable by commands. Maybe you use it to only allow certain players into the operator lounge, or whatever. Maybe you want to run special commands on all operator-level players.
     # Just treat this as a level indicating the player is an operator.
-
-scoreboard objectives add -1 dummy
-scoreboard objectives add 2 dummy
-scoreboard objectives add 3 dummy
-scoreboard objectives add 5 dummy
-scoreboard objectives add 7 dummy
-scoreboard objectives add 10 dummy
+# PLEASE NOTE: these permissions groups are not hard-coded, but I strongly suggest that, if you do use this permissions score, you stick to associating these levels to these groups of people. If you'd rather not, I suggest you just create your own permissions score.
+    # If you still want compatibility with SSL permissions, just set your own permission score based on whatever the player's SSL permission score is. For example, if your "moderator" permissions level is 80, maybe all players with SSL permissions of 4 or higher will have their other permission score automatically set to 80.
 
 scoreboard objectives add generic_a dummy
 scoreboard objectives add generic_b dummy
@@ -181,6 +176,10 @@ scoreboard objectives add OnGround dummy
 scoreboard objectives add xcoord dummy
 scoreboard objectives add ycoord dummy
 scoreboard objectives add zcoord dummy
+
+scoreboard objectives add xcoord_precise dummy
+scoreboard objectives add ycoord_precise dummy
+scoreboard objectives add zcoord_precise dummy
 
 # scoreboard objectives add wayfinderd dummy
 # scoreboard objectives add wayfindertimer dummy

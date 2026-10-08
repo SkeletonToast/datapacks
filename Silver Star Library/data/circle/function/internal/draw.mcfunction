@@ -1,0 +1,1 @@
+$execute rotated ~ 0 run function circle:internal/node {radius:$(radius),rotation:$(value),run_at_node:"$(run_at_node)"}

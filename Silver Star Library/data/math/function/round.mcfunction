@@ -1,5 +1,5 @@
 $scoreboard players operation @s generic_a = @s $(score)
-$scoreboard players operation @s generic_b = @s $(round)
+$scoreboard players set @s generic_b $(round)
 scoreboard players operation @s generic_a %= @s generic_b
 scoreboard players operation @s generic_c = @s generic_b
     scoreboard players add @s generic_c 1

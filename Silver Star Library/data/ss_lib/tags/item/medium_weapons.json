@@ -6,6 +6,7 @@
         "minecraft:iron_axe",
         "minecraft:stone_axe",
         "minecraft:wooden_axe",
+        "#minecraft:shovels",
         "minecraft:bow"
     ]
 }

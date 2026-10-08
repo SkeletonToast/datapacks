@@ -22,6 +22,6 @@ scoreboard players operation @s scale_modifier /= #const.5 value
 execute if score @s scale_modifier matches 1.. run function parse:score \
     {score:scale_modifier,function:"echoes:stats/scale_attribute/movement_speed",prepend:"",append:".",prepend_position:0,append_position:-3}
 
-function math:round {score:scale_modifier,round:100}
+function math:round {score:scale_modifier,round:100,reduce:true}
 
 scoreboard players operation @s aegis_amplifier_max += @s scale_modifier

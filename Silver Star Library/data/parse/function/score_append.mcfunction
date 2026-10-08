@@ -1,0 +1,1 @@
+$function parse:score_with_macros {function:"$(function)",prepend:"",append:"$(append)",prepend_position:0,append_position:"$(append_position)",score:"$(score)",macros:""}

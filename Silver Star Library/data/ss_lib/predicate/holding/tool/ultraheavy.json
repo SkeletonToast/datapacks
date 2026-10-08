@@ -18,8 +18,8 @@
         "type": "minecraft:entity_properties",
         "entity": "this",
         "predicate": {
-          "equipment": {
-            "mainhand": {
+          "slots": {
+            "hotbar.*": {
               "predicates": {
                 "minecraft:custom_data": "{weapon:{properties:{massive:true}}}"
               }

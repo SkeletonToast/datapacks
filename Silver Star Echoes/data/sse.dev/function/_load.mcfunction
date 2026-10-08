@@ -5,14 +5,6 @@ function gamerule:custom/load {source:sse,gamerule:combat_jump_scaling}
 function gamerule:custom/load {source:sse,gamerule:ambient_particles}
 function gamerule:custom/load {source:sse,gamerule:hungry_damage_reduction}
 function gamerule:custom/load {source:sse,gamerule:elytra_boosting}
-scoreboard objectives add sse.gamerule.time_dilation trigger
-scoreboard objectives add sse.gamerule.variant_monsters trigger
-scoreboard objectives add sse.gamerule.creative_encumbrance trigger
-scoreboard objectives add sse.gamerule.combat_jump_scaling trigger
-scoreboard objectives add sse.gamerule.ambient_particles trigger
-scoreboard objectives add sse.gamerule.hungry_damage_reduction trigger
-scoreboard objectives add sse.gamerule.elytra_boosting trigger
-
 scoreboard objectives add sse.gamerule.smooth_sprinting trigger
 scoreboard objectives add settings trigger
 scoreboard objectives add sse.settings.aegis_self_visibility trigger

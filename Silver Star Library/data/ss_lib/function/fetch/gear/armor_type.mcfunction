@@ -1,6 +1,8 @@
 # leather: 1
 # gold: 2
-# chain/turtle: 3
+# chain: 3
+# copper: 4
+# turtle helmet: 5
 # iron: 6
 # diamond: 10
 # netherite: 15
@@ -61,5 +63,5 @@ scoreboard players operation @s generic_a += @s LeggingsType
 
 scoreboard players operation @s generic_a += @s BootsType
 
-function math:round {score:generic_a,round:4}
+function math:round {score:generic_a,round:4,reduce:true}
 scoreboard players operation @s ArmorType = @s generic_a

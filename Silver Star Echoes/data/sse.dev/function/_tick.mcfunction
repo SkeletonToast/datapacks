@@ -23,9 +23,9 @@ function gamerule:custom/tick_bool {source:sse,gamerule:variant_monsters}
 function gamerule:custom/tick_bool {source:sse,gamerule:creative_encumbrance}
 function gamerule:custom/tick_bool {source:sse,gamerule:combat_jump_scaling}
 function gamerule:custom/tick_bool {source:sse,gamerule:ambient_particles}
-function gamerule:custom/tick_bool {source:sse,gamerule:sse.settings.aegis_self_visibility}
-function gamerule:custom/tick_bool {source:sse,gamerule:sse.settings.aegis_visibility}
-function gamerule:custom/tick_bool {source:sse,gamerule:sse.settings.attack_buff_visibility}
+function gamerule:custom/tick_bool {source:sse,gamerule:aegis_self_visibility}
+function gamerule:custom/tick_bool {source:sse,gamerule:aegis_visibility}
+function gamerule:custom/tick_bool {source:sse,gamerule:attack_buff_visibility}
 function gamerule:custom/tick_bool {source:sse,gamerule:hungry_damage_reduction}
 function gamerule:custom/tick_bool {source:sse,gamerule:elytra_boosting}
 
@@ -72,5 +72,7 @@ execute as @a unless score @s settings matches 0 run scoreboard players set @s s
 # execute as SkeletonToast at @s run function sse.dev:witch_aura {value:15}
 
 execute as @a[scores={ssid=528,observatory=1..}] at @s run function parse:score_unended {score:observatory,function:"sse.dev:observatory"}
+execute as @a[scores={ssid=528},tag=witches] at @s run function circle:draw_at_entity {nodes:10,radius:10,run_at_node:"particle end_rod ~ ~ ~ 0.1 0.1 0.1 0 3"}
 # execute as @a[scores={ssid=528,observatory=1..}] unless predicate ss_lib:is/moving at @s run function parse:score_unended {score:observatory,function:"sse.dev:witch_aura"}
 scoreboard players add @a[scores={ssid=528,observatory=1..}] observatory 1
+# scoreboard players set @a[scores={observatory=361..}] observatory 1

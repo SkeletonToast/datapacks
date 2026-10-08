@@ -1,0 +1,1 @@
+$execute if predicate {"type":"minecraft:random_chance","chance":$(value)} run function $(function)

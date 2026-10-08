@@ -4,7 +4,6 @@
         "minecraft:golden_sword",
         "minecraft:copper_sword",
         "#minecraft:pickaxes",
-        "#minecraft:shovels",
         "#minecraft:hoes"
     ]
 }

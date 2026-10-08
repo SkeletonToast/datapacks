@@ -13,11 +13,10 @@ scoreboard players set @a PlayerKilled 0
 advancement revoke @a[advancements={ss_lib:lib/using_shield=true}] only ss_lib:lib/using_shield
 advancement revoke @a[advancements={ss_lib:lib/using_bow=true}] only ss_lib:lib/using_bow
 
-execute as @e[tag=Pacified] run attribute @s follow_range modifier add pacified_follow_range -1 add_multiplied_total
-execute as @e[tag=Extinguished] run attribute @s burning_time modifier add extinguished_burning_time -1 add_multiplied_total
+execute as @e[tag=ssl.action.pacify] run attribute @s follow_range modifier add pacified_follow_range -1 add_multiplied_total
+execute as @e[tag=ssl.action.extinguish] run attribute @s burning_time modifier add extinguished_burning_time -1 add_multiplied_total
 
-execute as @a[scores={OnGround=1}] run tag @s add FallDamageNegated
-# execute as @a[scores={OnGround=1}] run attribute @s fall_damage_multiplier modifier remove fall_damage_immunity
+# execute as @a[scores={OnGround=1}] run tag @s add ssl.action.negate_fall_damage
 
 function ss_lib:quick_destroy
 
@@ -26,7 +25,7 @@ kill @e[scores={Age=0}]
 scoreboard players remove @a pause_actionbars 1
 
 # circle module
-    # execute as @e[scores={circle_timer=1},type=marker,tag=ssl.circle] run function ss_lib:circle/internal/marker
+    # execute as @e[scores={circle_timer=1},type=marker,tag=ssl.circle] run function circle:internal/marker
     # scoreboard players remove @e[type=marker,tag=ssl.circle] circle_timer 1
     # tag @e[scores={circle_timer=0},type=marker,tag=ssl.circle] remove ssl.circle
 

@@ -12,6 +12,7 @@ Familiars module (pet rework)
 - mounts wouldn't move around so much if they weren't currently mounted
 - add an item that lets you target a specific entity for your pets to attack
     - this item would probably also let you de-aggro your pets
+    - this could be a staff!
 
 Various cosmetic immersion things
 - at-will height changing!
@@ -76,7 +77,7 @@ Few more basic crafting recipes
     - gilded apples (1 step below regular golden)
         - maybe don't give you any absorption, they just regenerate some health?
     - salt?
-        - when gathering water in an ocean biome, clear 1 water bottle and give a bottle of salt water.
+        - when bottling water in an ocean biome, clear 1 water bottle and give a bottle of salt water.
         - it can be brewed as-is (or maybe put on a campfire?) to give salt.
 
 Maybe a few basic talismans?
@@ -85,7 +86,7 @@ Maybe a few basic talismans?
 - faster Familiar healing?
 
 Armor set bonuses?
-- probably not lowkey, kind of gets in the way of the intentional armor setups that Echoes has
+- probably not lowk, kind of gets in the way of the intentional armor setups that Echoes has
 
 Add back in the automatic replanting thing that you had for Fawns in crow's keep
 - either as an always-enabled feature, or maybe a talisman or something
@@ -97,6 +98,8 @@ BUT!!!
 - Homesteader should only add BENEFITS. Echoes will add drawbacks and penalties, such as encumbrance.
 - this means probably don't do anything that changes health, because Echoes already interacts so heavily with health.
     - except maybe staggering? something that could just be easily disabled by Echoes
+
+Dig up deathcoords function, move to homesteader
 
 ## Homesteader gamerules
 - light_campfires_when_placed

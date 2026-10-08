@@ -7,4 +7,4 @@ $execute as $(s) run scoreboard players operation @s ArmorWeight += @s ArmorToug
 $execute as $(s) run scoreboard players operation @s ArmorWeight *= #const.2 value
 
 $execute as $(s) run scoreboard players set @s[scores={HelmetType=0,ChestplateType=0,LeggingsType=0,BootsType=0}] Armorless 1
-$execute as $(s) run scoreboard players set @s[scores={Armorless=0,Armor=..4}] Armorless 1
+$execute as $(s) run scoreboard players set @s[scores={Armorless=1,Armor=4..}] Armorless 0

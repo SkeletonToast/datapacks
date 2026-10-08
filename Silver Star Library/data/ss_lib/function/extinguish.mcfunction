@@ -1,1 +1,1 @@
-tag @s add Extinguished
+tag @s add ssl.action.extinguish
