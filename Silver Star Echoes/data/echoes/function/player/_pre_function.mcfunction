@@ -6,6 +6,8 @@ scoreboard players set @a encumbrance_reduction 0
 scoreboard players set @a encumbrance_armor 0
 scoreboard players set @a encumbrance_items 0
 
+scoreboard players set @a xp_cap 0
+
 # proficiency
 scoreboard players set @a proficiency_str 0
 scoreboard players set @a proficiency_dex 0

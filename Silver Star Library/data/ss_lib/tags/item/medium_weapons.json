@@ -1,11 +1,6 @@
 {
     "values": [
-        "minecraft:diamond_sword",
-        "minecraft:iron_sword",
-        "minecraft:stone_sword",
-        "minecraft:iron_axe",
-        "minecraft:stone_axe",
-        "minecraft:wooden_axe",
+        "#minecraft:swords",
         "#minecraft:shovels",
         "minecraft:bow"
     ]

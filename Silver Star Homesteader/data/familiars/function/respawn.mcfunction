@@ -5,3 +5,4 @@
     # storage format will be:
         # homesteader:528 familiars.pet.1.type
         # homesteader:528 familiars.pet.1.nbt
+    # run the function as function <function> with <storage>

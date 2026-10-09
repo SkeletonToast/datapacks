@@ -1,8 +1,7 @@
 {
     "values": [
-        "minecraft:netherite_sword",
-        "minecraft:netherite_axe",
-        "minecraft:diamond_axe",
+        "#minecraft:spears",
+        "#minecraft:axes",
         "minecraft:trident",
         "minecraft:mace",
         "minecraft:crossbow"

@@ -1,8 +1,5 @@
 {
     "values": [
-        "minecraft:wooden_sword",
-        "minecraft:golden_sword",
-        "minecraft:copper_sword",
         "#minecraft:pickaxes",
         "#minecraft:hoes"
     ]

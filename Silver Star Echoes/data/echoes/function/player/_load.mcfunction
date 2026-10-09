@@ -35,8 +35,7 @@ gamerule natural_health_regeneration false
     scoreboard objectives add killed_mob minecraft.custom:mob_kills
     scoreboard objectives add killed_player minecraft.custom:player_kills
 
-
-# healing items
+# healing
     scoreboard objectives add used_honey_bottle minecraft.used:minecraft.honey_bottle
     scoreboard objectives add used_golden_carrot minecraft.used:minecraft.golden_carrot
 
@@ -47,7 +46,7 @@ gamerule natural_health_regeneration false
     scoreboard objectives add encumbrance_hard dummy
     scoreboard objectives add encumbrance_unadjusted dummy
     scoreboard objectives add encumbrance_reduction dummy
-    scoreboard objectives add encumbrance_half dummy
+    scoreboard objectives add encumbrance_jump dummy
     scoreboard objectives add encumbrance_items dummy
     scoreboard objectives add encumbrance_armor dummy
 
@@ -138,6 +137,7 @@ gamerule natural_health_regeneration false
     scoreboard objectives add sse.difficulty.health_limit dummy
     scoreboard objectives add sse.difficulty.health_regeneration_limit dummy
     scoreboard objectives add sse.difficulty.default_aegis_amplifier dummy
+    scoreboard objectives add sse.difficulty.encumbrance_multiplier dummy
     scoreboard objectives add sse.difficulty.proficiency_limit dummy
     scoreboard objectives add sse.difficulty.exhaustion_multiplier dummy
     scoreboard objectives add sse.difficulty.radiation_multiplier dummy

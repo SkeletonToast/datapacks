@@ -65,6 +65,21 @@ Starlight lanterns?
 - would be a way to passively gather xp that was very easy to set up and use
 - how would they be crafted?
 
+Move over campfire system
+- add scouring stones
+- make kindling objects data driven
+    - "type": acts as id, determines what function to run
+        - alternatively just "function", then run kindling with your offhand storage, and reference the function from there
+    - "consume": integer, determines how many should be taken up when you kindle
+        - would probably really only be 1 or 0 but that's fine. maybe you would have to use more ingots to smith stronger weapons or something
+- move weaponsmithing back to campfires
+    - the new armory system is basically done, so it should be pretty easy
+    - just figure out how to make the ingots again
+        - the old recipes were honestly pretty good, they shouldn't be anything crazy expensive. These are just new weapons, not necessarily stronger weapons. they should be just as viable as vanilla weapons
+- maybe add a few regalia weapons?
+    - knightkneeler could be a sword made of two netherite ingots
+    - dissonant dagger, maybe made from echo shards
+
 SCOURING STONES!!!
 - IF!!! scouring stones are added, honestly maybe just move the whole campfires system over here?
 - echoes and armory could just interact with it on their end, and campfires would just be set up in homesteader
@@ -87,6 +102,7 @@ Maybe a few basic talismans?
 
 Armor set bonuses?
 - probably not lowk, kind of gets in the way of the intentional armor setups that Echoes has
+    - although that's what the gamerule is for! honestly yeah probably still have it exist, just disable it for echoes
 
 Add back in the automatic replanting thing that you had for Fawns in crow's keep
 - either as an always-enabled feature, or maybe a talisman or something
@@ -114,7 +130,7 @@ Dig up deathcoords function, move to homesteader
     - default: yes
 - share_inventory_between_characters
     - default: no
-- starlight_lantern_collection_rate
+- starlight_lantern_rate
     - default: 200
         - the duration, in ticks, that it takes for a single xp point to be collected in the starlight lantern
 - character_limit
