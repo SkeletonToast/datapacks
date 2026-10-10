@@ -4,13 +4,13 @@
     function ssa.dev:modify/weapon {item_name:"Wooden Longsword", \
     attack_damage:4,attack_speed:-2.7,interaction_range:0, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"+Two-Handed\",color:blue,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 5 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 1.3 Attack Speed\",color:dark_green,italic:false}", \
-        weapon_data:"advanced:true,weight:2,properties:{properties:[\"two_handed\"],active:[\"mainhand\"]}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:'+Two-Handed',color:blue,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 5 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 1.3 Attack Speed',color:dark_green,italic:false}", \
+        weapon_data:"advanced:true,weight:2,properties:{properties:['two_handed'],active:['mainhand']}", \
         disable_tool:false}
 
     # stone sword
@@ -18,13 +18,13 @@
     function ssa.dev:modify/weapon {item_name:"Stone Longsword", \
     attack_damage:5,attack_speed:-2.7,interaction_range:0, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"+Two-Handed\",color:blue,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 6 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 1.3 Attack Speed\",color:dark_green,italic:false}", \
-        weapon_data:"advanced:true,weight:3,properties:{properties:[\"two_handed\"],active:[\"mainhand\"]}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:'+Two-Handed',color:blue,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 6 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 1.3 Attack Speed',color:dark_green,italic:false}", \
+        weapon_data:"advanced:true,weight:3,properties:{properties:['two_handed'],active:['mainhand']}", \
         disable_tool:false}
     
     # copper sword
@@ -32,13 +32,13 @@
     function ssa.dev:modify/weapon {item_name:"Copper Longsword", \
     attack_damage:5,attack_speed:-2.7,interaction_range:0, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"+Two-Handed\",color:blue,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 6 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 1.3 Attack Speed\",color:dark_green,italic:false}", \
-        weapon_data:"advanced:true,weight:2,properties:{properties:[\"two_handed\"],active:[\"mainhand\"]}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:'+Two-Handed',color:blue,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 6 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 1.3 Attack Speed',color:dark_green,italic:false}", \
+        weapon_data:"advanced:true,weight:2,properties:{properties:['two_handed'],active:['mainhand']}", \
         disable_tool:false}
     
     # iron sword
@@ -46,13 +46,13 @@
     function ssa.dev:modify/weapon {item_name:"Iron Longsword", \
     attack_damage:6,attack_speed:-2.7,interaction_range:0, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"+Two-Handed\",color:blue,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 7 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 1.3 Attack Speed\",color:dark_green,italic:false}", \
-        weapon_data:"advanced:true,weight:2,properties:{properties:[\"two_handed\"],active:[\"mainhand\"]}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:'+Two-Handed',color:blue,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 7 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 1.3 Attack Speed',color:dark_green,italic:false}", \
+        weapon_data:"advanced:true,weight:2,properties:{properties:['two_handed'],active:['mainhand']}", \
         disable_tool:false}
     
     # golden sword
@@ -60,13 +60,13 @@
     function ssa.dev:modify/weapon {item_name:"Golden Longsword", \
     attack_damage:4,attack_speed:-2.5,interaction_range:0, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"+Two-Handed\",color:blue,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 5 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 1.5 Attack Speed\",color:dark_green,italic:false}", \
-        weapon_data:"advanced:true,weight:2,properties:{properties:[\"two_handed\"],active:[\"mainhand\"]}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:'+Two-Handed',color:blue,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 5 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 1.5 Attack Speed',color:dark_green,italic:false}", \
+        weapon_data:"advanced:true,weight:2,properties:{properties:['two_handed'],active:['mainhand']}", \
         disable_tool:false}
     
     # diamond sword
@@ -74,13 +74,13 @@
     function ssa.dev:modify/weapon {item_name:"Diamond Longsword", \
     attack_damage:7,attack_speed:-2.7,interaction_range:0, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"+Two-Handed\",color:blue,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 8 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 1.3 Attack Speed\",color:dark_green,italic:false}", \
-        weapon_data:"advanced:true,weight:2,properties:{properties:[\"two_handed\"],active:[\"mainhand\"]}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:'+Two-Handed',color:blue,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 8 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 1.3 Attack Speed',color:dark_green,italic:false}", \
+        weapon_data:"advanced:true,weight:2,properties:{properties:['two_handed'],active:['mainhand']}", \
         disable_tool:false}
     
     # netherite sword
@@ -88,13 +88,13 @@
     function ssa.dev:modify/weapon {item_name:"Netherite Longsword", \
     attack_damage:8,attack_speed:-2.7,interaction_range:0, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"+Two-Handed\",color:blue,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 9 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 1.3 Attack Speed\",color:dark_green,italic:false}", \
-        weapon_data:"advanced:true,weight:2,properties:{properties:[\"two_handed\"],active:[\"mainhand\"]}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:'+Two-Handed',color:blue,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 9 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 1.3 Attack Speed',color:dark_green,italic:false}", \
+        weapon_data:"advanced:true,weight:2,properties:{properties:['two_handed'],active:['mainhand']}", \
         disable_tool:false}
 
 # Hatchet
@@ -103,12 +103,12 @@
     function ssa.dev:modify/weapon {item_name:"Wooden Hatchet", \
     attack_damage:6,attack_speed:-2.9,interaction_range:-0.3, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"-0.3 Attack Range\",color:red,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 7 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 1.1 Attack Speed\",color:dark_green,italic:false}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:'-0.3 Attack Range',color:red,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 7 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 1.1 Attack Speed',color:dark_green,italic:false}", \
         weapon_data:"advanced:true,weight:2", \
         disable_tool:false}
 
@@ -117,12 +117,12 @@
     function ssa.dev:modify/weapon {item_name:"Stone Hatchet", \
     attack_damage:9,attack_speed:-2.9,interaction_range:-0.3, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"-0.3 Attack Range\",color:red,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 10 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 1.1 Attack Speed\",color:dark_green,italic:false}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:'-0.3 Attack Range',color:red,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 10 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 1.1 Attack Speed',color:dark_green,italic:false}", \
         weapon_data:"advanced:true,weight:2", \
         disable_tool:false}
 
@@ -131,12 +131,12 @@
     function ssa.dev:modify/weapon {item_name:"Copper Hatchet", \
     attack_damage:8,attack_speed:-2.8,interaction_range:-0.3, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"-0.3 Attack Range\",color:red,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 9 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 1.2 Attack Speed\",color:dark_green,italic:false}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:'-0.3 Attack Range',color:red,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 9 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 1.2 Attack Speed',color:dark_green,italic:false}", \
         weapon_data:"advanced:true,weight:1", \
         disable_tool:false}
 
@@ -145,12 +145,12 @@
     function ssa.dev:modify/weapon {item_name:"Iron Hatchet", \
     attack_damage:9,attack_speed:-2.8,interaction_range:-0.3, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"-0.3 Attack Range\",color:red,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 10 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 1.2 Attack Speed\",color:dark_green,italic:false}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:'-0.3 Attack Range',color:red,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 10 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 1.2 Attack Speed',color:dark_green,italic:false}", \
         weapon_data:"advanced:true,weight:1", \
         disable_tool:false}
 
@@ -159,12 +159,12 @@
     function ssa.dev:modify/weapon {item_name:"Golden Hatchet", \
     attack_damage:8,attack_speed:-2.7,interaction_range:-0.3, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"-0.3 Attack Range\",color:red,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 9 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 1.3 Attack Speed\",color:dark_green,italic:false}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:'-0.3 Attack Range',color:red,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 9 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 1.3 Attack Speed',color:dark_green,italic:false}", \
         weapon_data:"advanced:true,weight:1", \
         disable_tool:false}
 
@@ -173,12 +173,12 @@
     function ssa.dev:modify/weapon {item_name:"Diamond Hatchet", \
     attack_damage:9,attack_speed:-2.7,interaction_range:-0.3, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"-0.3 Attack Range\",color:red,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 10 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 1.3 Attack Speed\",color:dark_green,italic:false}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:'-0.3 Attack Range',color:red,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 10 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 1.3 Attack Speed',color:dark_green,italic:false}", \
         weapon_data:"advanced:true,weight:1", \
         disable_tool:false}
 
@@ -187,12 +187,12 @@
     function ssa.dev:modify/weapon {item_name:"Netherite Hatchet", \
     attack_damage:10,attack_speed:-2.7,interaction_range:-0.3, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"-0.3 Attack Range\",color:red,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 11 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 1.3 Attack Speed\",color:dark_green,italic:false}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:'-0.3 Attack Range',color:red,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 11 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 1.3 Attack Speed',color:dark_green,italic:false}", \
         weapon_data:"advanced:true,weight:1", \
         disable_tool:false}
     
@@ -202,12 +202,12 @@
     function ssa.dev:modify/weapon {item_name:"Wooden Halberd", \
     attack_damage:7,attack_speed:-3.2,interaction_range:1.0, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"+1.0 Attack Range\",color:blue,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 8 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 0.8 Attack Speed\",color:dark_green,italic:false}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:'+1.0 Attack Range',color:blue,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 8 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 0.8 Attack Speed',color:dark_green,italic:false}", \
         weapon_data:"advanced:true,weight:3", \
         disable_tool:true}
 
@@ -216,12 +216,12 @@
     function ssa.dev:modify/weapon {item_name:"Stone Halberd", \
     attack_damage:7,attack_speed:-3.2,interaction_range:1.0, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"+1.0 Attack Range\",color:blue,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 8 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 0.8 Attack Speed\",color:dark_green,italic:false}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:'+1.0 Attack Range',color:blue,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 8 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 0.8 Attack Speed',color:dark_green,italic:false}", \
         weapon_data:"advanced:true,weight:3", \
         disable_tool:true}
 
@@ -230,12 +230,12 @@
     function ssa.dev:modify/weapon {item_name:"Copper Halberd", \
     attack_damage:7,attack_speed:-3.2,interaction_range:1.0, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"+1.0 Attack Range\",color:blue,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 8 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 0.8 Attack Speed\",color:dark_green,italic:false}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:'+1.0 Attack Range',color:blue,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 8 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 0.8 Attack Speed',color:dark_green,italic:false}", \
         weapon_data:"advanced:true,weight:2", \
         disable_tool:true}
 
@@ -244,12 +244,12 @@
     function ssa.dev:modify/weapon {item_name:"Iron Halberd", \
     attack_damage:8,attack_speed:-3.2,interaction_range:1.0, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"+1.0 Attack Range\",color:blue,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 9 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 0.8 Attack Speed\",color:dark_green,italic:false}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:'+1.0 Attack Range',color:blue,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 9 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 0.8 Attack Speed',color:dark_green,italic:false}", \
         weapon_data:"advanced:true,weight:2", \
         disable_tool:true}
 
@@ -258,12 +258,12 @@
     function ssa.dev:modify/weapon {item_name:"Golden Halberd", \
     attack_damage:6,attack_speed:-3.1,interaction_range:1.0, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"+1.0 Attack Range\",color:blue,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 7 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 0.9 Attack Speed\",color:dark_green,italic:false}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:'+1.0 Attack Range',color:blue,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 7 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 0.9 Attack Speed',color:dark_green,italic:false}", \
         weapon_data:"advanced:true,weight:2", \
         disable_tool:true}
 
@@ -272,12 +272,12 @@
     function ssa.dev:modify/weapon {item_name:"Diamond Halberd", \
     attack_damage:8,attack_speed:-3.1,interaction_range:1.0, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"+1.0 Attack Range\",color:blue,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 9 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 0.9 Attack Speed\",color:dark_green,italic:false}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:'+1.0 Attack Range',color:blue,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 9 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 0.9 Attack Speed',color:dark_green,italic:false}", \
         weapon_data:"advanced:true,weight:2", \
         disable_tool:true}
 
@@ -286,12 +286,12 @@
     function ssa.dev:modify/weapon {item_name:"Netherite Halberd", \
     attack_damage:9,attack_speed:-3.1,interaction_range:1.0, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"+1.0 Attack Range\",color:blue,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 10 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 0.9 Attack Speed\",color:dark_green,italic:false}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:'+1.0 Attack Range',color:blue,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 10 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 0.9 Attack Speed',color:dark_green,italic:false}", \
         weapon_data:"advanced:true,weight:2", \
         disable_tool:true}
 
@@ -301,11 +301,11 @@
     function ssa.dev:modify/weapon {item_name:"Wooden Scythe", \
     attack_damage:4,attack_speed:-2.3,interaction_range:0, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 5 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 1.7 Attack Speed\",color:dark_green,italic:false}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 5 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 1.7 Attack Speed',color:dark_green,italic:false}", \
         weapon_data:"advanced:true,weight:2", \
         disable_tool:false}
 
@@ -314,11 +314,11 @@
     function ssa.dev:modify/weapon {item_name:"Stone Scythe", \
     attack_damage:4,attack_speed:-2.3,interaction_range:0, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 5 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 1.7 Attack Speed\",color:dark_green,italic:false}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 5 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 1.7 Attack Speed',color:dark_green,italic:false}", \
         weapon_data:"advanced:true,weight:2", \
         disable_tool:false}
 
@@ -327,11 +327,11 @@
     function ssa.dev:modify/weapon {item_name:"Copper Scythe", \
     attack_damage:4,attack_speed:-2.3,interaction_range:0, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 5 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 1.7 Attack Speed\",color:dark_green,italic:false}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 5 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 1.7 Attack Speed',color:dark_green,italic:false}", \
         weapon_data:"advanced:true,weight:1", \
         disable_tool:false}
 
@@ -340,11 +340,11 @@
     function ssa.dev:modify/weapon {item_name:"Iron Scythe", \
     attack_damage:4,attack_speed:-2.2,interaction_range:0, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 5 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 1.8 Attack Speed\",color:dark_green,italic:false}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 5 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 1.8 Attack Speed',color:dark_green,italic:false}", \
         weapon_data:"advanced:true,weight:1", \
         disable_tool:false}
 
@@ -353,11 +353,11 @@
     function ssa.dev:modify/weapon {item_name:"Golden Scythe", \
     attack_damage:4,attack_speed:-2.1,interaction_range:0, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 5 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 1.9 Attack Speed\",color:dark_green,italic:false}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 5 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 1.9 Attack Speed',color:dark_green,italic:false}", \
         weapon_data:"advanced:true,weight:1", \
         disable_tool:false}
 
@@ -366,11 +366,11 @@
     function ssa.dev:modify/weapon {item_name:"Diamond Scythe", \
     attack_damage:5,attack_speed:-2.2,interaction_range:0, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 6 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 1.8 Attack Speed\",color:dark_green,italic:false}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 6 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 1.8 Attack Speed',color:dark_green,italic:false}", \
         weapon_data:"advanced:true,weight:1", \
         disable_tool:false}
 
@@ -379,10 +379,10 @@
     function ssa.dev:modify/weapon {item_name:"Netherite Scythe", \
     attack_damage:6,attack_speed:-2.2,interaction_range:0, \
         model:advanced, \
-        lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \
-        {text:\"\"}, \
-        {text:\"When in Main Hand:\",color:dark_green,italic:false}, \
-        {text:\" 7 Attack Damage\",color:dark_green,italic:false}, \
-        {text:\" 1.8 Attack Speed\",color:dark_green,italic:false}", \
+        lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
+        {text:''}, \
+        {text:'When in Main Hand:',color:dark_green,italic:false}, \
+        {text:' 7 Attack Damage',color:dark_green,italic:false}, \
+        {text:' 1.8 Attack Speed',color:dark_green,italic:false}", \
         weapon_data:"advanced:true,weight:1", \
         disable_tool:false}
