@@ -8,6 +8,10 @@ scoreboard objectives add elixir.storage.current_amplifier dummy
 scoreboard objectives add elixir.storage.current_duration dummy
 
 function elixir:custom/load_status {source:elixir,status:lightweight}
-function elixir:custom/load_status {source:elixir,status:fortified}
-function elixir:custom/load_status {source:elixir,status:fragile}
+function elixir:custom/load_status {source:elixir,status:fortification}
+function elixir:custom/load_status {source:elixir,status:fragility}
 function elixir:custom/load_status {source:elixir,status:beeful}
+function elixir:custom/load_status {source:elixir,status:disorientation}
+function elixir:custom/load_status {source:elixir,status:feebleness}
+    # scoreboard objectives add elixir.feebleness.attribute_multiplier dummy
+function elixir:custom/monolevel/load_status {source:elixir,status:occlusion}

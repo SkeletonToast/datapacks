@@ -1,0 +1,1 @@
+$rotate @s ~$(value) ~$(value1)

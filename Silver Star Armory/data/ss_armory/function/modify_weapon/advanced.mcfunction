@@ -85,7 +85,7 @@
     
     # netherite sword
     execute as @s[scores={WeaponType=1,WeaponMaterial=7}] run \
-    function ssa.dev:modify/weapon {item_name:"Netherite Longsword", \
+    function ssa.dev:modify/weapon {item_name:"Purgatite Longsword", \
     attack_damage:8,attack_speed:-2.7,interaction_range:0, \
         model:advanced, \
         lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
@@ -184,7 +184,7 @@
 
     # netherite axe
     execute as @s[scores={WeaponType=2,WeaponMaterial=7}] run \
-    function ssa.dev:modify/weapon {item_name:"Netherite Hatchet", \
+    function ssa.dev:modify/weapon {item_name:"Purgatite Hatchet", \
     attack_damage:10,attack_speed:-2.7,interaction_range:-0.3, \
         model:advanced, \
         lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
@@ -283,7 +283,7 @@
 
     # netherite shovel
     execute as @s[scores={WeaponType=3,WeaponMaterial=7}] run \
-    function ssa.dev:modify/weapon {item_name:"Netherite Halberd", \
+    function ssa.dev:modify/weapon {item_name:"Purgatite Halberd", \
     attack_damage:9,attack_speed:-3.1,interaction_range:1.0, \
         model:advanced, \
         lore:"{text:'Advanced Weapon',color:gray,italic:false}, \
@@ -376,7 +376,7 @@
 
     # netherite hoe
     execute as @s[scores={WeaponType=4,WeaponMaterial=7}] run \
-    function ssa.dev:modify/weapon {item_name:"Netherite Scythe", \
+    function ssa.dev:modify/weapon {item_name:"Purgatite Scythe", \
     attack_damage:6,attack_speed:-2.2,interaction_range:0, \
         model:advanced, \
         lore:"{text:'Advanced Weapon',color:gray,italic:false}, \

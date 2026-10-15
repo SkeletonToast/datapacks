@@ -3,7 +3,7 @@ scoreboard players set @s[scores={temp_dangerous=1..}] temp_dangerous 0
 
 execute if predicate ss_lib:random_10_percent if predicate ss_lib:random_50_percent run damage @s[scores={temp_dangerous=..-20}] 1 freeze
 execute if predicate ss_lib:random_10_percent run damage @s[scores={temp_dangerous=..-30}] 2 freeze
-execute as @s[scores={temp_dangerous=..-20}] run function ss_lib:actionbar {"title":"{\"text\":\"[❄] You are freezing to death.\",\"color\":\"#82c7ff\"}","duration":20}
+execute as @s[scores={temp_dangerous=..-20}] run function ss_lib:actionbar {title:"{text:'[❄] You are freezing to death.',color:'#82c7ff'}",duration:20}
 
 # scoreboard players set @s[scores={temp_dangerous=..-1}] hesitant_active 1
 scoreboard players operation @s[scores={temp_dangerous=..-1}] encumbrance_hard -= @s temp_dangerous

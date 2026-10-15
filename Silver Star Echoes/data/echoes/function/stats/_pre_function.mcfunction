@@ -13,10 +13,18 @@ execute as @a run scoreboard players operation @s Vitality = @s BaseVitality
 execute as @a run scoreboard players operation @s Tact = @s BaseTact
 execute as @a run scoreboard players operation @s SoulSigned = @s BaseSoul
 
-execute as @a run scoreboard players operation @s Soul = @s SoulSigned
-execute as @a[scores={Soul=..-1}] run scoreboard players operation @s Soul *= #const.-1 value
 execute as @a run scoreboard players operation @s Mind = @s MindSigned
 execute as @a[scores={Mind=..-1}] run scoreboard players operation @s Mind *= #const.-1 value
+execute as @a run scoreboard players operation @s Soul = @s SoulSigned
+execute as @a[scores={Soul=..-1}] run scoreboard players operation @s Soul *= #const.-1 value
+
+    # here if attribute limits actually directly change stats after all
+    execute as @a[scores={sse.difficulty.attribute_limit=0..}] if score @s Strength > @s sse.difficulty.attribute_limit run scoreboard players operation @s Strength = @s sse.difficulty.attribute_limit
+    execute as @a[scores={sse.difficulty.attribute_limit=0..}] if score @s Dexterity > @s sse.difficulty.attribute_limit run scoreboard players operation @s Dexterity = @s sse.difficulty.attribute_limit
+    execute as @a[scores={sse.difficulty.attribute_limit=0..}] if score @s MindSigned > @s sse.difficulty.attribute_limit run scoreboard players operation @s MindSigned = @s sse.difficulty.attribute_limit
+    execute as @a[scores={sse.difficulty.attribute_limit=0..}] if score @s Vitality > @s sse.difficulty.attribute_limit run scoreboard players operation @s Vitality = @s sse.difficulty.attribute_limit
+    execute as @a[scores={sse.difficulty.attribute_limit=0..}] if score @s Tact > @s sse.difficulty.attribute_limit run scoreboard players operation @s Tact = @s sse.difficulty.attribute_limit
+    execute as @a[scores={sse.difficulty.attribute_limit=0..}] if score @s SoulSigned > @s sse.difficulty.attribute_limit run scoreboard players operation @s SoulSigned = @s sse.difficulty.attribute_limit
 
 # Charm - modifier for persuasion (only used in rp probably)
 execute as @a run scoreboard players operation @s Charm = @s Soul
@@ -53,8 +61,8 @@ execute as @a[tag=Vitality_feat_1] run scoreboard players operation @s Fortitude
 # scoreboard players set @a[tag=!Vitality_feat_1] Tenacity 0
 scoreboard players set @a[tag=!Vitality_feat_1] Fortitude 0
 
-scoreboard players set @a Potential 300
-scoreboard players set @a Prowess 40
+# scoreboard players set @a Potential 300
+# scoreboard players set @a Prowess 40
 execute as @a run function echoes:stats/attribute_set
 
 # attribute default / attribute set

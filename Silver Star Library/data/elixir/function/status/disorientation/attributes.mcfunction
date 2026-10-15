@@ -1,0 +1,1 @@
+$attribute @s movement_speed modifier add elixir.disoriented.movement_speed $(value)

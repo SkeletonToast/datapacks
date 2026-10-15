@@ -33,8 +33,8 @@ scoreboard objectives add Tenacity dummy
 scoreboard objectives add Fortitude dummy
 
 # universal stats
-scoreboard objectives add Potential dummy
-scoreboard objectives add Prowess dummy
+# scoreboard objectives add Potential dummy
+# scoreboard objectives add Prowess dummy
     # modify universal stats in echoes:stats/_tick
 
 # attribute stats

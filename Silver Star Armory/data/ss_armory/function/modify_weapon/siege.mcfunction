@@ -99,7 +99,7 @@
     
     # netherite sword
     execute as @s[scores={WeaponType=1,WeaponMaterial=7}] run \
-    function ssa.dev:modify/weapon {item_name:"Netherite Zweihander", \
+    function ssa.dev:modify/weapon {item_name:"Purgatite Zweihander", \
     attack_damage:9,attack_speed:-2.8,interaction_range:0.3, \
         model:advanced, \
         lore:"{text:\"Advanced Weapon\",color:gray,italic:false}, \

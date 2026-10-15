@@ -1,4 +1,4 @@
-# $scoreboard players add @e[tag=$(source).$(status).active,scores={$(source).$(status).runtime=1..}] $(source).$(status).runtime 1
+$execute as @e[tag=$(source).$(status).active,scores={$(source).$(status).duration=1..}] run function ssid:assign
 
 $scoreboard players remove @e[tag=$(source).$(status).active,scores={$(source).$(status).duration=1..}] $(source).$(status).duration 1
 $execute as @e[tag=$(source).$(status).active,scores={$(source).$(status).duration=1..}] run function $(status_function)

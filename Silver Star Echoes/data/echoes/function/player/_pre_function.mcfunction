@@ -40,8 +40,7 @@ tag @a[scores={sse.difficulty=1}] remove InCombat
 scoreboard players set @a[scores={sse.difficulty=1}] in_combat 0
 
 # these are here so that combat tags can be effectively removed before the titles show up
-execute at @a[scores={in_combat=1..},tag=!InCombat] run scoreboard players add @a[distance=..5,scores={in_combat=0}] in_combat 10000
-execute as @a[scores={in_combat=1..},tag=!InCombat] run function echoes:player/combat/enter_message
+execute as @a[scores={in_combat=1..},tag=!InCombat] run function echoes:player/combat/enter/message
 tag @a[scores={in_combat=1..}] add InCombat
 tag @a[scores={in_combat=-1}] add InCombat
 execute as @a[scores={in_combat=0},tag=InCombat] run function echoes:player/combat/exit_message

@@ -2,9 +2,6 @@ function echoes:player/oaths/_load
 
 scoreboard objectives add in_combat dummy
 
-# scoreboard objectives add Day dummys
-    # removed in favor of $day value
-
 scoreboard objectives add sse.difficulty dummy
 
 scoreboard objectives add xp_level level

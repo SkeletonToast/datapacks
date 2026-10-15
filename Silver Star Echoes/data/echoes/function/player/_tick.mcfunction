@@ -31,7 +31,7 @@ tag @a[scores={Armor=..29}] remove sse.30_armor
 # sleeping stuff
 execute as @a[scores={TimeSinceRest=0}] run function echoes:player/sleeping
 execute as @a[scores={TimeSinceRest=1}] run function echoes:player/sleeping_awaken
-execute if entity @a[scores={TimeSinceDeath=1..}] if score $day_time value matches 12010..23991 unless entity @a[scores={TimeSinceRest=1..}] unless entity @a[scores={SleepingTime=..99}] run function echoes:player/skip_night
+execute if entity @a[scores={TimeSinceDeath=1..}] if score $day_time value matches 12010..22991 unless entity @a[scores={TimeSinceRest=1..}] unless entity @a[scores={SleepingTime=..99}] run function echoes:player/skip_night
 
 execute as @a run function echoes:player/renown
 
