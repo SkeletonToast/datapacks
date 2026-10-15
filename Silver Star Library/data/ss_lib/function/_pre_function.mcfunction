@@ -95,3 +95,5 @@ tag @a[tag=ssl.action.negate_fall_damage] remove ssl.action.negate_fall_damage
     # to zero, will prevent fall damage, but will be removed when the player touches the ground.
 
 scoreboard players add @e Age 1
+
+function elixir:_pre_function

@@ -1,3 +1,5 @@
+function gamerule:custom/tick_bool {source:elixir,gamerule:milk_clear_statuses}
+
 function elixir:custom/tick_status {status:lightweight,status_function:"elixir:status/lightweight/main",expire_function:"elixir:status/lightweight/expire",source:elixir}
 function elixir:custom/tick_status {status:fortification,status_function:"elixir:status/fortification/main",expire_function:"elixir:status/fortification/expire",source:elixir}
 function elixir:custom/tick_status {status:fragility,status_function:"elixir:status/fragility/main",expire_function:"elixir:status/fragility/expire",source:elixir}

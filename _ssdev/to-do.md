@@ -117,10 +117,12 @@ funsies
         - curserot - some kind of wither-esque effect? honestly maybe just rename wither to curserot at that point
         - blossoming - you spread flowers and mushrooms around you (monolevel)
         - purified - you're cleared of all potion effects (monolevel)
+            - this is possible now! you just have to clear all vanilla effects, and apply the elixir.clear_statuses tag, which will clear everything else
         - enlightened - you gain xp at a much higher rate
             - echoes-exclusive: it increases your maximum xp cap
         - deep wounds - prevents healing past the level of health you were at when you incurred deep wounds
             - maybe higher amplifiers would prevent a greater deal of healing?
+            - alternatively, a monolevel version might just prevent healing. this honestly might be easier to deal with if you're not especially set on the idea of having higher amplifiers
         - bounciness - makes you bouncy
         - slippery - gives you really low friction
         - something that gives you high air drag
@@ -132,9 +134,12 @@ funsies
 - use math functions to add a distance calculation module, which returns the distance between two points / entities
   - you can pretty easily do this just by using sqrt and finding hypotenuse between two sets of coordinates
 - add some kind of pulse healing? could just be neat, idk if i'd ever use it
-- update to use parse:score_append where applicable
+    - i mean a function that instantly heals a certain amount, but it'd allow increments less than instant_health
 - change health fetch so that it always rounds up? idk
-- also just add round_up function
+- add some way to clear elixir statuses, which fits with the milk gamerule
+- add some kind of way to cap effective amplifiers?
+    - this probably isn't an issue, because almost certainly anybody who's applying custom statuses knows what the effective cap is
+    - the code exists, just decide whether or not to incorporate it
 
 NOTE ABOUT THE CIRCLE PROBLEM!!!! it appears to be specifically related to running the function through other functions! invoking a circle by calling a function works fine, but NOT when calling it through a parse function, even if the final circle does not even use the parsed score. calling it through multiple functions also works fine, so either it's something with the parse function specifically, or maybe just something else about passing macros. no idea. LOOK INTO THIS!!!
 
@@ -143,9 +148,13 @@ Another note: It seems to be something with the nodes. Running multiple instance
 ## library update
 - changed elixir so that tick status also assigns ssids if not already assigned. should have virtually no performance impact
 - added generic amplifier to elixir
+- added milk clear effects gamerule to elixir
+- add something in the elixir readme about how to actually reference gamerules
+- adjusted the order of status tick functions so that the duration is reduced after all other commands are run, which will result in slightly more accurate durations
 - Elixir now supports a new kind of status: "monolevel" statuses! These are statuses that have no amplifier, and only have a duration (for example, the vanilla potion effect night vision). Although it's trivial to set up your own "monolevel" statuses with a single score, I wanted a system in place to add my own monolevel statuses through Elixir, and I thought it might be useful to have all custom potion effects centralized in Elixir.
     - Four new functions have been added: `elixir:custom/monolevel/load_status`, `elixir:custom/monolevel/tick_status`, `elixir:custom/monolevel/tick_status_nonplayer`, and `elixir:apply_monolevel`. The first three take identical input parameters to their equivalent non-monolevel functions. `elixir:apply_monolevel` is not actually required if you're trying to apply a monolevel status, as `elixir:apply` still works (and now accounts for monolevel statuses, so it won't try to use unnecessary data storage), but it's recommended to just use `elixir:apply_monolevel` if you know the status you're applying is, in fact, monolevel.
         - `elixir:apply` might also be useful if you're running a function that takes the status as an input, so you don't know whether or not the function is monolevel or not, just from knowing the name of it. `elixir:apply` is infinitesimally less efficient, as it does access storage to detect whether or not a status is monolevel, but this will have virtually no impact on the pack's performance.
     - `elixir:apply_monolevel` takes three input parameters: `$(source)`, `$(status)`, and `$(duration)`. These are used in the same way as in `elixir:apply`, but as a refresher: `$(source)` is an identifying string for your datapack (for example, "elixir" or "abc" or "pack2"), which shows where the status came from. `$(status)` is the name of the status (for example, "frostbite" or "sleep" or whatever). `$(duration)` is an integer representing how many ticks this application will last for.
         - As aforementioned, `elixir:apply` works just fine for applying monolevel statuses (you just need an extra input parameter, `$(amplifier)`), but `elixir:apply_monolevel` is definitely recommended where possible.
     - Honestly, `elixir:apply_monolevel` isn't even required if you know you're not going to be applying the status to any non-players. You can just change the `source.status.duration` score directly. This is fine, and even encouraged, but just remember that this only works for player-exclusive statuses. Otherwise, entities won't be properly tagged, and they'll never execute the status function.
+- Elixir also now supports status clearing en-masse.

@@ -8,6 +8,10 @@ scoreboard objectives add elixir.storage.current_amplifier dummy
 scoreboard objectives add elixir.storage.current_duration dummy
 scoreboard objectives add elixir.generic.amplifier dummy
 
+scoreboard objectives add elixir.drink_milk used:milk_bucket
+
+function gamerule:custom/load {source:elixir,gamerule:milk_clear_statuses,default:true}
+
 function elixir:custom/load_status {source:elixir,status:lightweight}
 function elixir:custom/load_status {source:elixir,status:fortification}
 function elixir:custom/load_status {source:elixir,status:fragility}
