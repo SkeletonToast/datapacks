@@ -13,14 +13,10 @@ scoreboard objectives add sse.gamerule.hungry_damage_reduction trigger
 scoreboard objectives add sse.gamerule.elytra_boosting trigger
 
 scoreboard objectives add elixir.lightweight.amplifier dummy
-scoreboard objectives add elixir.lightweight.duration dummy
 scoreboard objectives add elixir.fortification.amplifier dummy
-scoreboard objectives add elixir.fortification.duration dummy
 scoreboard objectives add elixir.fragility.amplifier dummy
-scoreboard objectives add elixir.fragility.duration dummy
 scoreboard objectives add elixir.beeful.amplifier dummy
-scoreboard objectives add elixir.beeful.duration dummy
 scoreboard objectives add elixir.disorientation.amplifier dummy
-scoreboard objectives add elixir.disorientation.duration dummy
-scoreboard objectives add elixir.feebleness.amplifier dummy
-scoreboard objectives add elixir.feebleness.duration dummy
+scoreboard objectives add elixir.feeble.amplifier dummy
+scoreboard objectives add elixir.vulnerable.amplifier dummy
+scoreboard objectives add elixir.enlargement.amplifier dummy

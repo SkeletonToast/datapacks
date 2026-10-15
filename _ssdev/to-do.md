@@ -97,20 +97,35 @@ funsies
     - if you only have one amplifier and duration, you can just directly compare scores. no need to do data storage
         - honestly it could be nice to just be able to have all statuses in the same place, though
 - REMAKE STATUSES IN ELIXIR
-    - disoriented DONE
+    - disorientation DONE
     - enshrouded DONE
-    - feeble
-    - fragile
+    - feeble DONE
+    - fragile DONE
+    - vulnerable DONE
+    - bleeding
     - frenzied
-    - frightened
+    - unnerved / frightened / terrified
     - hesitant
     - hobbled
-    - incendiary
+    - incendiary (monolevel)
     - invigorated
-    - rooted / webbed
+    - rooted / webbed (monolevel)
     - tormented
     - wet is not needed. status covers that still
         - could move it over and just make it monolevel!
+    - ideas for new statuses
+        - curserot - some kind of wither-esque effect? honestly maybe just rename wither to curserot at that point
+        - blossoming - you spread flowers and mushrooms around you (monolevel)
+        - purified - you're cleared of all potion effects (monolevel)
+        - enlightened - you gain xp at a much higher rate
+            - echoes-exclusive: it increases your maximum xp cap
+        - deep wounds - prevents healing past the level of health you were at when you incurred deep wounds
+            - maybe higher amplifiers would prevent a greater deal of healing?
+        - bounciness - makes you bouncy
+        - slippery - gives you really low friction
+        - something that gives you high air drag
+        - enlargement - makes you bigger (cap of 2x scale)
+        - reduction - makes you smaller (cap of 0.33x scale)
 - Circle calculation module
 - Collisions obv
 - more math functions that just use the built in storage math functions, but for scores
@@ -127,6 +142,7 @@ Another note: It seems to be something with the nodes. Running multiple instance
 
 ## library update
 - changed elixir so that tick status also assigns ssids if not already assigned. should have virtually no performance impact
+- added generic amplifier to elixir
 - Elixir now supports a new kind of status: "monolevel" statuses! These are statuses that have no amplifier, and only have a duration (for example, the vanilla potion effect night vision). Although it's trivial to set up your own "monolevel" statuses with a single score, I wanted a system in place to add my own monolevel statuses through Elixir, and I thought it might be useful to have all custom potion effects centralized in Elixir.
     - Four new functions have been added: `elixir:custom/monolevel/load_status`, `elixir:custom/monolevel/tick_status`, `elixir:custom/monolevel/tick_status_nonplayer`, and `elixir:apply_monolevel`. The first three take identical input parameters to their equivalent non-monolevel functions. `elixir:apply_monolevel` is not actually required if you're trying to apply a monolevel status, as `elixir:apply` still works (and now accounts for monolevel statuses, so it won't try to use unnecessary data storage), but it's recommended to just use `elixir:apply_monolevel` if you know the status you're applying is, in fact, monolevel.
         - `elixir:apply` might also be useful if you're running a function that takes the status as an input, so you don't know whether or not the function is monolevel or not, just from knowing the name of it. `elixir:apply` is infinitesimally less efficient, as it does access storage to detect whether or not a status is monolevel, but this will have virtually no impact on the pack's performance.

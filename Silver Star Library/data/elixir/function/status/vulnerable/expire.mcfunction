@@ -1,0 +1,1 @@
+attribute @s max_health modifier remove elixir.vulnerable.max_health

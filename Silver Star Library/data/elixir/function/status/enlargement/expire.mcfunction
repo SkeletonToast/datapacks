@@ -1,0 +1,1 @@
+attribute @s scale modifier remove elixir.enlargement.scale

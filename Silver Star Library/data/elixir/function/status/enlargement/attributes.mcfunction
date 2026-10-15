@@ -1,0 +1,1 @@
+$attribute @s scale modifier add elixir.enlargement.scale $(value) add_multiplied_total

@@ -1,3 +1,6 @@
-function parse:score_unended {score:elixir.disoriented.amplifier,function:"elixir:status/disoriented/rotate1"}
-execute as @s[scores={elixir.disoriented.amplifier=..90}] run function parse:score_append {score:elixir.disoriented.amplifier,function:"elixir:status/disoriented/attributes",append:".",append_position:2}
-execute as @s[scores={elixir.disoriented.amplifier=91..}] run function elixir:status/disoriented/attributes {value:0.9}
+scoreboard players operation @s elixir.generic.amplifier = @s elixir.disorientation.amplifier
+scoreboard players add @s elixir.generic.amplifier 1
+
+function parse:score_unended {score:elixir.disorientation.amplifier,function:"elixir:status/disorientation/rotate1"}
+execute as @s[scores={elixir.disorientation.amplifier=..90}] run function parse:score_append {score:elixir.disorientation.amplifier,function:"elixir:status/disorientation/attributes",append:".",append_position:2}
+execute as @s[scores={elixir.disorientation.amplifier=91..}] run function elixir:status/disorientation/attributes {value:0.9}

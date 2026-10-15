@@ -1,1 +1,1 @@
-attribute @s movement_speed modifier remove elixir.disoriented.movement_seed
+attribute @s movement_speed modifier remove elixir.disorientation.movement_seed

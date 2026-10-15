@@ -1,1 +1,0 @@
-$attribute @s movement_speed modifier add elixir.feebleness.movement_speed.$(type) -$(value)

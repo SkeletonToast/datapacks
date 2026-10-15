@@ -1,0 +1,1 @@
+$attribute @s max_health modifier add elixir.vulnerable.max_health -$(value) add_value
