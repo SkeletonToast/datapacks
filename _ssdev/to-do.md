@@ -151,6 +151,15 @@ Another note: It seems to be something with the nodes. Running multiple instance
 - added milk clear effects gamerule to elixir
 - add something in the elixir readme about how to actually reference gamerules
 - adjusted the order of status tick functions so that the duration is reduced after all other commands are run, which will result in slightly more accurate durations
+- fetch/health now requires bypass_check
+    - MAKE SURE YOU TEST THIS BEFORE RELEASE!!!
+- other functions that do not require bypass_check, but are ALWAYS calculated:
+    - fetch/coordinates
+        - also fetch/coordinates exists now lol
+    - fetch/location
+- There was a bug with a considerable amount of fetch functions that would accidentally terminate them early. This likely wasn't causing widespread issues, but it has been fixed. If you were previously experiencing issues with fetch functions not assigning scores correctly, it's possible this change fixed the issue.
+- Similarly, nearly all fetch functions have been tweaked to be slightly more performance-efficient, and avoid potential edge cases that might have caused bugs.
+    - I apologize for the fact that these bugs existed in the first place. I generally just playtest on a singleplayer world, so none of these issues appeared during general testing. I'll keep my eye out for similar issues in the future.
 - Elixir now supports a new kind of status: "monolevel" statuses! These are statuses that have no amplifier, and only have a duration (for example, the vanilla potion effect night vision). Although it's trivial to set up your own "monolevel" statuses with a single score, I wanted a system in place to add my own monolevel statuses through Elixir, and I thought it might be useful to have all custom potion effects centralized in Elixir.
     - Four new functions have been added: `elixir:custom/monolevel/load_status`, `elixir:custom/monolevel/tick_status`, `elixir:custom/monolevel/tick_status_nonplayer`, and `elixir:apply_monolevel`. The first three take identical input parameters to their equivalent non-monolevel functions. `elixir:apply_monolevel` is not actually required if you're trying to apply a monolevel status, as `elixir:apply` still works (and now accounts for monolevel statuses, so it won't try to use unnecessary data storage), but it's recommended to just use `elixir:apply_monolevel` if you know the status you're applying is, in fact, monolevel.
         - `elixir:apply` might also be useful if you're running a function that takes the status as an input, so you don't know whether or not the function is monolevel or not, just from knowing the name of it. `elixir:apply` is infinitesimally less efficient, as it does access storage to detect whether or not a status is monolevel, but this will have virtually no impact on the pack's performance.
