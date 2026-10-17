@@ -8,6 +8,7 @@ scoreboard players set @a Health -1
 scoreboard players set @a TotalHealth -1
 scoreboard players set @a Absorption -1
 scoreboard players set @a BaseMaxHealth -1
+scoreboard players set @a MaxHealth -1
 
 # damage
 execute as @a run scoreboard players operation @s DamageTaken += @s DamageAbsorbed

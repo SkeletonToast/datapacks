@@ -1,2 +1,0 @@
-$execute store result score @s generic_a run random value -$(amplifier)..$(amplifier)
-$function parse:score_unended_with_macros {score:generic_a,function:"elixir:status/disorientation/rotate3",macros:"amplifier:$(amplifier),value1:$(value)"}

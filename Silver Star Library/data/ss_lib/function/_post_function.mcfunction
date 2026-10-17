@@ -39,4 +39,5 @@ scoreboard players remove @a[scores={attack_particle_timer=1..}] attack_particle
 tag @a[scores={attack_particle_timer=0}] remove attack_particle_timer
 
 # gamerule query
-scoreboard players set @a[scores={ssl.gamerule.query=1..}] ssl.gamerule.query 0
+scoreboard players enable @a[scores={ssl.gamerule.query=1..}] ssl.gamerule.query
+execute as @a[scores={ssl.gamerule.query=1..}] run trigger ssl.gamerule.query set 0

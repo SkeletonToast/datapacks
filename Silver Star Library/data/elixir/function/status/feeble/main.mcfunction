@@ -1,3 +1,5 @@
+execute unless entity @s[type=player] run return fail
+
 scoreboard players operation @s elixir.generic.amplifier *= #const.5 value
 scoreboard players set @s[scores={elixir.generic.amplifier=76..}] elixir.generic.amplifier 75
 

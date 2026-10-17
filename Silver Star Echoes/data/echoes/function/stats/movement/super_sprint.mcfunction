@@ -9,10 +9,10 @@ execute if score @s temp_dangerous matches ..-8 run title @s[scores={OnGround=1}
 execute unless score @s temp_dangerous matches -7..7 run scoreboard players set @s pause_actionbars 40
 execute unless score @s temp_dangerous matches -7..7 run return fail
 
-execute unless predicate ss_lib:is/swimming run function echoes:stats/movement/particles {"condition":"OnGround=1"}
+execute unless predicate ss_lib:is/swimming run function echoes:stats/movement/particles {condition:"OnGround=1"}
 execute if predicate ss_lib:is/swimming
 function ss_lib:fetch/in_water {s:"@s[scores={Dexterity=70..,OnGround=0}]"}
-execute as @s[scores={Dexterity=70..,OnGround=0}] run function echoes:stats/movement/particles {"condition":"InWater=1.."}
+execute as @s[scores={Dexterity=70..,OnGround=0}] run function echoes:stats/movement/particles {condition:"InWater=1.."}
 
 scoreboard players operation @s generic_c = @s SuperSprintTime
     scoreboard players operation @s generic_c *= @s smooth_sprint_multiplier

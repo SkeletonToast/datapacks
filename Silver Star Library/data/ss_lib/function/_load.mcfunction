@@ -91,6 +91,7 @@ scoreboard objectives add Health dummy
 scoreboard objectives add Absorption dummy
 scoreboard objectives add TotalHealth health
 scoreboard objectives add BaseMaxHealth dummy
+scoreboard objectives add MaxHealth dummy
 
 scoreboard objectives add Food food
 

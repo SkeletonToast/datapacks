@@ -1,0 +1,1 @@
+scoreboard players operation @s elixir.clear_statuses = $elixir.total_statuses elixir.total_statuses

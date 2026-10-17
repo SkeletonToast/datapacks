@@ -11,6 +11,7 @@ scoreboard objectives add sse.gamerule.combat_jump_scaling trigger
 scoreboard objectives add sse.gamerule.ambient_particles trigger
 scoreboard objectives add sse.gamerule.hungry_damage_reduction trigger
 scoreboard objectives add sse.gamerule.elytra_boosting trigger
+scoreboard objectives add sse.gamerule.scale_attributes trigger
 
 scoreboard objectives add elixir.lightweight.amplifier dummy
 scoreboard objectives add elixir.fortification.amplifier dummy
@@ -18,5 +19,5 @@ scoreboard objectives add elixir.fragility.amplifier dummy
 scoreboard objectives add elixir.beeful.amplifier dummy
 scoreboard objectives add elixir.disorientation.amplifier dummy
 scoreboard objectives add elixir.feeble.amplifier dummy
-scoreboard objectives add elixir.vulnerable.amplifier dummy
+scoreboard objectives add elixir.vulnerability.amplifier dummy
 scoreboard objectives add elixir.enlargement.amplifier dummy

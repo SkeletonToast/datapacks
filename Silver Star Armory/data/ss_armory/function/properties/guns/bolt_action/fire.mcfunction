@@ -1,13 +1,13 @@
 # note: "at @s anchored eyes" is applied in the guns/_main function
 
 execute if entity @s[scores={SneakTime=0..20}] positioned ^ ^ ^0.25 positioned ~ ~-0.2 ~ run function raycast:either_specific \
-    {"block":"#ss_armory:bullet_ignore","type":"unless","entity":"!#ss_lib:not_alive","particle":"particle smoke ~ ~ ~ 0 0 0 0 1 normal @a", \
-    "increment_distance":"0.25","max_lifetime":"200","run_on_block_success":"function ss_armory:properties/guns/bullet_hit_block", \
-    "run_on_entity_success":"function ss_armory:properties/guns/bolt_action/damage_not_sneaking",solid_block_collision:false}
+    {block:"#ss_armory:bullet_ignore",condition:"unless",entity:"!#ss_lib:not_alive",particle:"particle smoke ~ ~ ~ 0 0 0 0 1 normal @a", \
+    increment_distance:"0.25",max_lifetime:"200",run_on_block_success:"function ss_armory:properties/guns/bullet_hit_block", \
+    run_on_entity_success:"function ss_armory:properties/guns/bolt_action/damage_not_sneaking",solid_block_collision:false}
 execute if entity @s[scores={SneakTime=21..}] positioned ^ ^ ^0.25 positioned ~ ~-0.2 ~ run function raycast:either_specific \
-    {"block":"#ss_armory:bullet_ignore","type":"unless","entity":"!#ss_lib:not_alive","particle":"particle smoke ~ ~ ~ 0 0 0 0 1 normal @a", \
-    "increment_distance":"0.25","max_lifetime":"300","run_on_block_success":"function ss_armory:properties/guns/bullet_hit_block", \
-    "run_on_entity_success":"function ss_armory:properties/guns/bolt_action/damage_sneaking",solid_block_collision:false}
+    {block:"#ss_armory:bullet_ignore",condition:"unless",entity:"!#ss_lib:not_alive",particle:"particle smoke ~ ~ ~ 0 0 0 0 1 normal @a", \
+    increment_distance:"0.25",max_lifetime:"300",run_on_block_success:"function ss_armory:properties/guns/bullet_hit_block", \
+    run_on_entity_success:"function ss_armory:properties/guns/bolt_action/damage_sneaking",solid_block_collision:false}
 
 # execute if entity @s[scores={SneakTime=0..20}] positioned ^ ^ ^0.25 positioned ~ ~-0.2 ~ run function raycast:either \
 #     {"particle":"particle smoke ~ ~ ~ 0 0 0 0 1 normal @a", \

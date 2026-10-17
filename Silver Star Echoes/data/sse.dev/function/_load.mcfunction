@@ -7,6 +7,7 @@ function gamerule:custom/load {source:sse,gamerule:combat_jump_scaling,default:f
 function gamerule:custom/load {source:sse,gamerule:ambient_particles,default:true}
 function gamerule:custom/load {source:sse,gamerule:hungry_damage_reduction,default:true}
 function gamerule:custom/load {source:sse,gamerule:elytra_boosting,default:true}
+function gamerule:custom/load {source:sse,gamerule:scale_attributes,default:true}
 scoreboard objectives add sse.gamerule.smooth_sprinting trigger
 scoreboard objectives add settings trigger
 scoreboard objectives add sse.settings.aegis_self_visibility trigger

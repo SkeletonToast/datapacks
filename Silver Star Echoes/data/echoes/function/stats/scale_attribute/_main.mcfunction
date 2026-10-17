@@ -1,8 +1,6 @@
 $scoreboard players operation @s scale_modifier = @s $(score)
 function math:even {score:scale_modifier,sign:"-"}
 function parse:score_append {score:scale_modifier,function:"echoes:stats/scale_attribute/max_health",append:".",append_position:-3}
-    # i don't love that this rounds down to odd numbers, but i don't think it reeeeeally matters because most of this is never going to apply to a real player
-        # hopefully should be fixed by the evening out above
 function parse:score_append {score:scale_modifier,function:"echoes:stats/scale_attribute/step_height",append:".",append_position:-3}
 function parse:score_append {score:scale_modifier,function:"echoes:stats/scale_attribute/jump_strength",append:".",append_position:-4}
 function parse:score_append {score:scale_modifier,function:"echoes:stats/scale_attribute/interaction_range",append:".",append_position:-3}
