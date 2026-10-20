@@ -7,18 +7,18 @@ function ss_lib:fetch/attack_speed {s:"@a[tag=InCombat]",scale:100,bypass_check:
 
 execute as @a[tag=InCombat] run scoreboard players operation @s generic_t = @s AttackDamage
     execute as @a[tag=InCombat] run scoreboard players operation @s generic_t *= @s AttackSpeed
-    execute as @a[tag=InCombat] run function math:round {score:generic_t,round:10000,reduce:true}
+    execute as @a[tag=InCombat] run function math:divide/int {score:generic_t,div:10000}
 
 # residuals
 execute as @a[tag=InCombat] run scoreboard players operation @s generic_a = @s AttackDamage
 execute as @a[tag=InCombat] run scoreboard players operation @s generic_b = @s generic_a
 execute as @a[tag=InCombat] run scoreboard players operation @s generic_b %= #const.100 value
-execute as @a[tag=InCombat] run function math:round {score:generic_a,round:100,reduce:true}
+execute as @a[tag=InCombat] run function math:divide/int {score:generic_a,div:100}
 
 execute as @a[tag=InCombat] run scoreboard players operation @s generic_s = @s AttackSpeed
 execute as @a[tag=InCombat] run scoreboard players operation @s generic_p = @s AttackSpeed
 execute as @a[tag=InCombat] run scoreboard players operation @s generic_p %= #const.100 value
-execute as @a[tag=InCombat] run function math:round {score:generic_s,round:100,reduce:true}
+execute as @a[tag=InCombat] run function math:divide/int {score:generic_s,div:100}
 
 # combat bar display
 execute as @a if score @s pause_actionbars matches 1.. run return fail

@@ -34,7 +34,7 @@ execute as @a[scores={xp_stored=..0,xp_stored_reserve=1..}] if score @s xp_level
 scoreboard players set @a generic_m 30
     execute as @a run scoreboard players operation @s generic_m += @s xp_cap
 execute as @a[scores={TimeSinceDeath=1,generic_m=..99}] run scoreboard players operation @s xp_stored *= @s generic_m
-execute as @a[scores={TimeSinceDeath=1,generic_m=..99}] run function math:round {score:xp_stored,round:100,reduce:true}
+execute as @a[scores={TimeSinceDeath=1,generic_m=..99}] run function math:divide/int {score:xp_stored,div:100}
 
 # stored xp overall cap
 scoreboard players set @a[scores={xp_level=50000..}] xp_stored 0

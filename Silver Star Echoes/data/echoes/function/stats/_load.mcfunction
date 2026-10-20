@@ -27,8 +27,8 @@ scoreboard objectives add sse.Passion dummy
 scoreboard objectives add sse.Knowledge dummy
 
 # secondary stats
+scoreboard objectives add sse.Charm dummy
 scoreboard objectives add Initiative dummy
-scoreboard objectives add Charm dummy
 scoreboard objectives add Tenacity dummy
 scoreboard objectives add Fortitude dummy
 

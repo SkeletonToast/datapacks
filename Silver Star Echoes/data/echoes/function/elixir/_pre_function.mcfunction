@@ -4,3 +4,4 @@ function elixir:custom/tick_status {source:sse,status:vitalized,status_function:
 function elixir:custom/tick_status {source:sse,status:mindful,status_function:"echoes:elixir/stats/mindful",expire_function:"elixir:status/null_expire"}
 function elixir:custom/tick_status {source:sse,status:tactful,status_function:"echoes:elixir/stats/tactful",expire_function:"elixir:status/null_expire"}
 function elixir:custom/tick_status {source:sse,status:soulful,status_function:"echoes:elixir/stats/soulful",expire_function:"elixir:status/null_expire"}
+function elixir:custom/tick_status {source:sse,status:resilient,status_function:"echoes:elixir/resilient",expire_function:"elixir:status/null_expire"}

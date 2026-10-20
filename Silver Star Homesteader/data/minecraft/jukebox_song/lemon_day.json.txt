@@ -1,0 +1,12 @@
+{
+    "description":
+    {
+        "text":"Nils Frahm - Lemon Day"
+    },
+    "comparator_output":0,
+    "length_in_seconds":1112.0,
+    "sound_event":
+    {
+        "sound_id":"minecraft:music_disc.lemon_day"
+    }
+}

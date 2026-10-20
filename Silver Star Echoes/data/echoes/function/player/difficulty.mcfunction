@@ -11,7 +11,7 @@ scoreboard players set @s[scores={sse.difficulty=1}] sse.difficulty.exhaustion_m
 scoreboard players set @s[scores={sse.difficulty=1}] sse.difficulty.radiation_multiplier 200
 scoreboard players set @s[scores={sse.difficulty=1}] sse.difficulty.leveling_multiplier 33
 
-execute as @s[scores={sse.difficulty=1}] run function ss_lib:fetch/health {s:"@s"}
+function ss_lib:fetch/health {s:"@s[scores={sse.difficulty=1}]"}
 execute if score @s[scores={sse.difficulty=1}] Health >= @s BaseMaxHealth run effect give @s saturation 1 0 true
 
 # 2: Pilgrim

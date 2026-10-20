@@ -4,18 +4,18 @@ execute as @a[tag=InCombat] run function echoes:player/combat/proficiency/normal
 # every 1,000 normalized proficiency is +1 damage
 # every 100 base proficiency is +1% damage
 
-execute as @a[scores={WeaponType=1..6,proficiency_normalized=1..},tag=InCombat] run function parse:score_append \
-        {score:proficiency_normalized,append:".",append_position:3,function:"echoes:player/combat/proficiency/apply_damage"}
+execute as @a[scores={WeaponType=1..6,proficiency_normalized=1..},tag=InCombat] run function parse:decimal \
+        {score:proficiency_normalized,scale:0.001,function:"echoes:player/combat/proficiency/apply_damage"}
 
-execute as @a[scores={WeaponType=0,proficiency_normalized=1..},tag=InCombat] run function ss_lib:fetch/item_selected {s:"@s"}
-execute as @a[scores={ItemSelected=0,proficiency_normalized=1..},tag=InCombat] run function parse:score_append \
-        {score:proficiency_normalized,append:".",append_position:3,function:"echoes:player/combat/proficiency/apply_damage"}
+function ss_lib:fetch/item_selected {s:"@a[scores={WeaponType=0,proficiency_normalized=1..},tag=InCombat]"}
+execute as @a[scores={ItemSelected=0,proficiency_normalized=1..},tag=InCombat] run function parse:decimal \
+        {score:proficiency_normalized,scale:0.001,function:"echoes:player/combat/proficiency/apply_damage"}
 
 scoreboard players operation @a[scores={WeaponType=1..6,proficiency=1..},tag=InCombat,tag=Dexterity_feat_2] generic_d = @s proficiency_dex
 
 execute as @a[scores={WeaponType=1..6,proficiency=1..},tag=InCombat,tag=Dexterity_feat_2] unless score @s sse.difficulty matches 2 run \
-        function math:round {score:generic_d,round:100,reduce:true}
+        function math:divide/int {score:generic_d,div:100}
 execute as @a[scores={WeaponType=1..6,proficiency=1..},tag=InCombat,tag=Dexterity_feat_2] unless score @s sse.difficulty matches 2 run \
-        function math:round {score:generic_d,round:10,reduce:true}
-execute as @a[scores={WeaponType=1..6,proficiency=1..},tag=InCombat,tag=Dexterity_feat_2] unless score @s sse.difficulty matches 2 run function parse:score_append \
-        {score:generic_d,append:".",append_position:2,function:"echoes:player/combat/proficiency/apply_speed"}
+        function math:divide/int {score:generic_d,div:10}
+execute as @a[scores={WeaponType=1..6,proficiency=1..},tag=InCombat,tag=Dexterity_feat_2] unless score @s sse.difficulty matches 2 run function parse:decimal \
+        {score:generic_d,scale:0.01,function:"echoes:player/combat/proficiency/apply_speed"}

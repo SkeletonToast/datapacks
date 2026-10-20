@@ -6,6 +6,7 @@ $execute as @a[scores={elixir.clear_statuses=1..,$(source).$(status).duration=0.
 # generic amplifier score set
 $scoreboard players set @a[scores={$(source).$(status).duration=1..}] elixir.generic.amplifier 1
 $execute as @a[scores={$(source).$(status).duration=1..}] run scoreboard players operation @s elixir.generic.amplifier += @s $(source).$(status).amplifier
+$scoreboard players add @a[scores={$(source).$(status).duration=1..}] elixir.active_statuses 1
 $execute as @a[scores={$(source).$(status).duration=1..}] run function $(status_function)
 
 # expiration

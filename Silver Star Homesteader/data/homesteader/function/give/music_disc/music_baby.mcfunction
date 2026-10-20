@@ -1,0 +1,1 @@
+give @s music_disc_stal[jukebox_playable="music_baby"]

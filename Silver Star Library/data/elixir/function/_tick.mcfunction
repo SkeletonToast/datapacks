@@ -10,3 +10,4 @@ function elixir:custom/tick_status {status:vulnerability,status_function:"elixir
 function elixir:custom/tick_status {status:enlargement,status_function:"elixir:status/enlargement/main",expire_function:"elixir:status/enlargement/expire",source:elixir}
 function elixir:custom/tick_status {status:reduction,status_function:"elixir:status/reduction/main",expire_function:"elixir:status/reduction/expire",source:elixir}
 function elixir:custom/monolevel/tick_status {status:occlusion,status_function:"elixir:status/occlusion",expire_function:"elixir:status/null_expire",source:elixir}
+function elixir:custom/monolevel/tick_status {status:immunity,status_function:"elixir:status/immunity",expire_function:"elixir:status/null_expire",source:elixir}

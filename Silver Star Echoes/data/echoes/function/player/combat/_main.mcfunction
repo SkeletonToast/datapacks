@@ -1,7 +1,7 @@
 scoreboard players set @a[scores={TimeSinceDeath=1}] in_combat 0
 scoreboard players set @a[scores={in_combat=..-2}] in_combat 0
 
-execute as @a[tag=InCombat] run function ss_lib:fetch/item_selected {s:"@s"}
+function ss_lib:fetch/item_selected {s:"@a[tag=InCombat]"}
 execute as @a[tag=InCombat,scores={ItemSelected=0}] run attribute @s attack_damage modifier add echoes:unarmed.attack_damage 1 add_value
 execute as @a[tag=!InCombat] run attribute @s attack_damage modifier remove echoes:unarmed.attack_damage
 execute as @a[scores={ItemSelected=1}] run attribute @s attack_damage modifier remove echoes:unarmed.attack_damage

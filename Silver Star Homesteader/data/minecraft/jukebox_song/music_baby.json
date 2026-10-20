@@ -1,0 +1,12 @@
+{
+    "description":
+    {
+        "text":"Jane Remover - Music Baby"
+    },
+    "comparator_output":0,
+    "length_in_seconds":320.0,
+    "sound_event":
+    {
+        "sound_id":"minecraft:music_disc.music_baby"
+    }
+}

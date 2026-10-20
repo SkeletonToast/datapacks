@@ -1,6 +1,3 @@
-# execute as @a unless score @s sse.settings.aegis_self_visibility matches 0 run function ss_lib:fetch/fall_flying {s:"@s","macros":""}
-    # fallflying is already fetched every tick
-
 tag @a[gamemode=spectator] add aegis_ineligible
 tag @a[predicate=ss_lib:is/hiding] add aegis_ineligible
 function ss_lib:fetch/absorption {s:"@a[scores={aegis_theme=0..},tag=!aegis_ineligible]",bypass_check:false}

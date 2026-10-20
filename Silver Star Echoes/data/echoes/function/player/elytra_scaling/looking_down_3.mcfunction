@@ -1,2 +1,2 @@
 scoreboard players operation @s generic_a *= #const.20 value
-function math:round {score:generic_a,round:3,reduce:true}
+function math:divide/int {score:generic_a,div:3}

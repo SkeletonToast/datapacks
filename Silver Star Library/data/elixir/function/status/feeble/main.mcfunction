@@ -19,9 +19,9 @@ execute as @s[scores={UsingShield=1..}] run function parse:score_with_macros {sc
 attribute @s[scores={UsingShield=0}] minecraft:movement_speed modifier remove elixir.feeble.movement_speed.shield
 
 # jump strength
-execute as @s[scores={UsingShield=1..}] run function parse:score_append {score:elixir.generic.amplifier,function:"elixir:status/feeble/jump_strength",append:".",append_position:2}
-execute as @s[scores={WeaponWeight=3..}] run function parse:score_append {score:elixir.generic.amplifier,function:"elixir:status/feeble/jump_strength",append:".",append_position:2}
-execute as @s[scores={Armor=20..}] run function parse:score_append {score:elixir.generic.amplifier,function:"elixir:status/feeble/jump_strength",append:".",append_position:2}
-execute as @s[scores={Armor=16..19}] if score @s Armor > @s Food run function parse:score_append {score:elixir.generic.amplifier,function:"elixir:status/feeble/jump_strength",append:".",append_position:2}
+execute as @s[scores={UsingShield=1..}] run function parse:decimal {score:elixir.generic.amplifier,function:"elixir:status/feeble/jump_strength",scale:0.01}
+execute as @s[scores={WeaponWeight=3..}] run function parse:decimal {score:elixir.generic.amplifier,function:"elixir:status/feeble/jump_strength",scale:0.01}
+execute as @s[scores={Armor=20..}] run function parse:decimal {score:elixir.generic.amplifier,function:"elixir:status/feeble/jump_strength",scale:0.01}
+execute as @s[scores={Armor=16..19}] if score @s Armor > @s Food run function parse:decimal {score:elixir.generic.amplifier,function:"elixir:status/feeble/jump_strength",scale:0.01}
 
 execute if score @s[scores={WeaponWeight=..2,UsingShield=0}] Armor <= @s Food run attribute @s minecraft:jump_strength modifier remove elixir.feeble.jump_strength

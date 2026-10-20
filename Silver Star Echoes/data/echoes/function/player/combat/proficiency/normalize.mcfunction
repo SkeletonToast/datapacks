@@ -10,4 +10,4 @@ scoreboard players set @s[scores={generic_a=..99}] generic_a 100
 
 scoreboard players operation @s proficiency_normalized = @s proficiency
 scoreboard players operation @s proficiency_normalized *= @s generic_a
-function math:round {score:proficiency_normalized,round:1000,reduce:true}
+function math:divide/int {score:proficiency_normalized,div:1000}

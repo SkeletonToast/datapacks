@@ -4,6 +4,7 @@ $execute as @a[scores={$(source).$(status).duration=1..}] run function ssid:assi
 $execute as @a[scores={elixir.clear_statuses=1..,$(source).$(status).duration=0..}] run scoreboard players set @s $(source).$(status).duration 0
 
 # status functions
+$scoreboard players add @a[scores={$(source).$(status).duration=1..}] elixir.active_statuses 1
 $execute as @a[scores={$(source).$(status).duration=1..}] run function $(status_function)
 $execute as @a[scores={$(source).$(status).duration=0}] run function $(expire_function)
 $execute as @a[scores={$(source).$(status).duration=0}] run tag @s remove $(source).$(status).active

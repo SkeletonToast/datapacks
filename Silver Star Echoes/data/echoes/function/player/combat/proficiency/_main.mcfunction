@@ -89,13 +89,13 @@ scoreboard players operation @s[tag=hexblade_enchantment,scores={xp_level=31..10
 scoreboard players add @s[tag=hexblade_enchantment,scores={xp_level=101..}] proficiency_mind 70
 
 scoreboard players operation @s[scores={xp_level=100..1000}] generic_m = @s xp_level
-    execute as @s[scores={xp_level=100..1000}] run function math:round {score:generic_m,round:100,reduce:true}
+    execute as @s[scores={xp_level=100..1000}] run function math:divide/int {score:generic_m,div:100}
     # scoreboard players operation @s[scores={xp_level=200..1000}] generic_m *= @s generic_m
 scoreboard players operation @s[tag=hexblade_enchantment,scores={xp_level=200..1000}] proficiency_mind += @s generic_m
 
 scoreboard players operation @s[scores={xp_level=1000..}] generic_m = @s xp_level
-    execute as @s[scores={xp_level=1000..}] run function math:round {score:generic_m,round:100,reduce:true}
-        execute as @s[scores={xp_level=1000..}] run function math:round {score:generic_m,round:100,reduce:true}
+    execute as @s[scores={xp_level=1000..}] run function math:divide/int {score:generic_m,div:100}
+        execute as @s[scores={xp_level=1000..}] run function math:divide/int {score:generic_m,div:100}
     # scoreboard players operation @s[scores={xp_level=1000..}] generic_m *= @s generic_m
 scoreboard players operation @s[tag=hexblade_enchantment,scores={xp_level=1000..}] proficiency_mind += @s generic_m
 tag @s remove hexblade_enchantment
