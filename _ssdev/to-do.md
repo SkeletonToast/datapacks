@@ -47,6 +47,7 @@
 - add "hunger" score that's used for like sprinting and encumbrance, calculate it with vitality methinks
 - change totems somehow
     - maybe make them so that you still die, you just don't lose anything?
+    - i don't really remember why i thought it was so necessary to change totems
 - CHECK ON BIOME PREDICATES REFERENCES!!!
     - at LEAST temperature is affected, probably more.
     - if you have to get rid of the terralith biomes, maybe just have an auxiliary datapack that has a bunch of updated function definitions including other worldgen biomes. you can set them to replace:true so that they override the default echoes tags
@@ -64,20 +65,6 @@
     - consider this: you're running mainly a dexterity build. you want some mined materials, but you don't really want to do it yourself. however, somebody who's running mainly a strength build is able to mine really fast, so they sell things like that for decent prices, so you buy from them.
         - you could gather materials yourself, but it becomes worthwhile to pay somebody specialized to do it instead.
 
-# Echoes Concentration Stats
-- The Concentration system would be a system that adds additional effects based on which of the player's stats is the HIGHEST (excluding resolve). This would grant an effective feat, regardless of their actual level in that stat (though it might be wise to say you have to have at least 30 or something in the concentration stat). This would better reward people who are pursuing focused builds.
-    - Strength: Greatly increased mining speed
-    - Dexterity: 
-    - Vitality: Greatly increased overall endurance
-    - Mind: Gain experience when using specially enchanted gear?
-    - Tact: Your proficiency is shifted to match a better profile?
-    - Soul: Extra maximum aegis?
-- An alternative would just be to say that players get a flat bonus to their concentration stat. This would be less interesting, but could better achieve the goal of closing the gap between low-level focused players, and high-level players with spread-out stats.
-    - For example, if a player who has 40 strength is focused on strength, maybe they'd just be given enough of a boost to get to 50, so they can get the benefits of having a higher stat without actually being there yet.
-- THE CONCENTRATION SYSTEM ONLY WORKS IF THEIR CONCENTRATION STAT IS SIGNIFICANTLY HIGHER THAN THEIR OTHER STATS.
-
-# Echoes Economy
-
 exhaustion
 - sources:
     - not sleeping for a while
@@ -94,9 +81,21 @@ exhaustion
     - being in a sanctuary location
 - think of exhaustion as actually pretty similar to Fear in SS6. it doesn't outright discourage exploration, but it does punish carelessness while exploring.
     - if you find that exhaustion punishes exploration too heavily, and might actually discourage players from exploring, scrap it altogether.
-
+    
 funsies
 - cook up some starting loadouts (see new armor section on doc)
+
+## Echoes Concentration Stats
+- The Concentration system would be a system that adds additional effects based on which of the player's stats is the HIGHEST (excluding resolve). This would grant an effective feat, regardless of their actual level in that stat (though it might be wise to say you have to have at least 30 or something in the concentration stat). This would better reward people who are pursuing focused builds.
+    - Strength: Greatly increased mining speed
+    - Dexterity: 
+    - Vitality: Greatly increased overall endurance
+    - Mind: Gain experience when using specially enchanted gear?
+    - Tact: Your proficiency is shifted to match a better profile?
+    - Soul: Extra maximum aegis?
+- An alternative would just be to say that players get a flat bonus to their concentration stat. This would be less interesting, but could better achieve the goal of closing the gap between low-level focused players, and high-level players with spread-out stats.
+    - For example, if a player who has 40 strength is focused on strength, maybe they'd just be given enough of a boost to get to 50, so they can get the benefits of having a higher stat without actually being there yet.
+- THE CONCENTRATION SYSTEM ONLY WORKS IF THEIR CONCENTRATION STAT IS SIGNIFICANTLY HIGHER THAN THEIR OTHER STATS.
 
 ## Armory
 - rename to "arsenal" that sounds way cooler
@@ -173,19 +172,7 @@ funsies
 - figure out why the pack is running so slow
     - turns out it was just disoriented lol, that's so bizarre
 - add actionbar system to github feature breakdown
-- unsupport round functions, add new "divide" function that works as reduced rounding DONE
 
 NOTE ABOUT THE CIRCLE PROBLEM!!!! it appears to be specifically related to running the function through other functions! invoking a circle by calling a function works fine, but NOT when calling it through a parse function, even if the final circle does not even use the parsed score. calling it through multiple functions also works fine, so either it's something with the parse function specifically, or maybe just something else about passing macros. no idea. LOOK INTO THIS!!!
 
 Another note: It seems to be something with the nodes. Running multiple instances of circle draw doesn't give any error unless the node counts are DIFFERENT. maybe the nodes are just not getting cleared between instances?
-
-## library update
-- IMPORTANT: added round/ and divide/ math functions
-- fixed round_up functions
-- add something in the github readme about how to actually reference gamerules
-- health fetch now always rounds up to match visual display
-- various small optimizations to fetch functions
-- spm updated LMFAOOO
-    - parse:decimal now exists, just use this for all of your decimal calculations
-    - the others still work the same, use them for if you need to pass macros
-    - eventually they will be updated

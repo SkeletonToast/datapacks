@@ -33,7 +33,7 @@ execute store result score @s generic_h run attribute @s scale get 100
         scoreboard players operation @s[scores={res_armor=1..}] generic_attribute -= @s res_armor
 
 # max_health: +Res (health)
-    function math:even {score:generic_attribute,sign:"-"}
+    function math:round/down/int {score:generic_attribute,round:2}
         # this will round generic_attribute down to an even number if generic_a is an odd number,
         # because the modulus remainder will subtract 1 if it's odd, and 0 if it's even
     execute if score @s generic_attribute < @s Tenacity run scoreboard players operation @s generic_attribute = @s Tenacity

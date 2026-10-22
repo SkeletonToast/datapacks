@@ -103,6 +103,7 @@ Maybe a few basic talismans?
 Armor set bonuses?
 - probably not lowk, kind of gets in the way of the intentional armor setups that Echoes has
     - although that's what the gamerule is for! honestly yeah probably still have it exist, just disable it for echoes
+- 
 
 Add back in the automatic replanting thing that you had for Fawns in crow's keep
 - either as an always-enabled feature, or maybe a talisman or something
@@ -136,3 +137,4 @@ Dig up deathcoords function, move to homesteader
 - character_limit
     - default: 3
         - this makes more sense to be a global gamerule, as opposed to being a per-player modifiable value
+        - although we might want it to be a per-player situation for echoes

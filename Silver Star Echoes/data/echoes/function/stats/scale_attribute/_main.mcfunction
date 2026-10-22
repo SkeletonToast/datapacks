@@ -1,5 +1,5 @@
 $scoreboard players operation @s scale_modifier = @s $(score)
-function math:even {score:scale_modifier,sign:"-"}
+function math:round/down/int {score:scale_modifier,round:2}
 function parse:decimal {score:scale_modifier,function:"echoes:stats/scale_attribute/max_health",scale:0.001}
 function parse:decimal {score:scale_modifier,function:"echoes:stats/scale_attribute/step_height",scale:0.001}
 function parse:decimal {score:scale_modifier,function:"echoes:stats/scale_attribute/interaction_range",scale:0.001}
