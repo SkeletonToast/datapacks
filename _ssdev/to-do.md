@@ -55,6 +55,9 @@
     - if you have to get rid of the terralith biomes, maybe just have an auxiliary datapack that has a bunch of updated function definitions including other worldgen biomes. you can set them to replace:true so that they override the default echoes tags
 - add some way to store xp, maybe in knowledge books? even though you can store xp between characters, you do still lose that extra xp when you die, so having a way to intentionally store xp might be good
     - there would have to be some amount of cost involved. maybe you could just craft knowledge books with lapis or something, and that would let you store however much
+- add custom functional blocks
+    - heater for hot springs
+    - cultivator?
 - exhaustion?
     - when night falls, you start accruing stored exhaustion if you're not in bed. this stored exhaustion continues increasing throughout nights, and is only applied when you wake up (or if you just reach a certain amount, where you pass out.)
         - this just means that, the later you go to bed, the more exhausted you become in the morning.
@@ -92,7 +95,7 @@ funsies
 ## Echoes Concentration Stats
 - The Concentration system would be a system that adds additional effects based on which of the player's stats is the HIGHEST (excluding resolve). This would grant an effective feat, regardless of their actual level in that stat (though it might be wise to say you have to have at least 30 or something in the concentration stat). This would better reward people who are pursuing focused builds.
     - Strength: Greatly increased mining speed
-    - Dexterity: 
+    - Dexterity: enhanced movement? idk
     - Vitality: Greatly increased overall endurance
     - Mind: Gain experience when using specially enchanted gear?
     - Tact: Your proficiency is shifted to match a better profile?
@@ -170,7 +173,6 @@ funsies
   - you can pretty easily do this just by using sqrt and finding hypotenuse between two sets of coordinates
 - add some kind of pulse healing? could just be neat, idk if i'd ever use it
     - i mean a function that instantly heals a certain amount, but it'd allow increments less than instant_health
-- change health fetch so that it always rounds up? idk
 - add some way to clear elixir statuses, which fits with the milk gamerule
 - add some kind of way to cap effective amplifiers?
     - this probably isn't an issue, because almost certainly anybody who's applying custom statuses knows what the effective cap is
@@ -181,5 +183,4 @@ funsies
 - add actionbar system to github feature breakdown
 
 NOTE ABOUT THE CIRCLE PROBLEM!!!! it appears to be specifically related to running the function through other functions! invoking a circle by calling a function works fine, but NOT when calling it through a parse function, even if the final circle does not even use the parsed score. calling it through multiple functions also works fine, so either it's something with the parse function specifically, or maybe just something else about passing macros. no idea. LOOK INTO THIS!!!
-
-Another note: It seems to be something with the nodes. Running multiple instances of circle draw doesn't give any error unless the node counts are DIFFERENT. maybe the nodes are just not getting cleared between instances?
+    Another note: It seems to be something with the nodes. Running multiple instances of circle draw doesn't give any error unless the node counts are DIFFERENT. maybe the nodes are just not getting cleared between instances?
