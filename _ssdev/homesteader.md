@@ -1,4 +1,24 @@
-# "Homesteader" / "Petrichor"(?)
+# The Homestead
+
+Individual Modules
+- The Homestead
+    - Pyres
+        - Scouring Stones
+        - Starlight Lanterns?
+        - Temperature?
+        - Settlements / Nature(?)
+    - Armory
+    - Characters & Companions
+        - Cosmetics
+        - Familiars
+        - Particle sprites
+            - Spore Sprite
+            - Starlight Sprite
+            - Scribe Sprite
+            - Soot Sprite
+            - Great Ember Sprite
+            - Heart Sprite
+    - New recipes
 
 Character switching
 - would let you have up to X characters (maybe like 3 by default?) and switch between them
@@ -16,7 +36,7 @@ Familiars module (pet rework)
 
 Various cosmetic immersion things
 - at-will height changing!
-    - probably still with some drawback, or just capped at +/- 10% or whatever
+    - probably still with some drawback, or just capped at +/-10% or whatever
 - maybe move wetness to be here
 - new clothing cosmetics
     - flower crowns teehee
@@ -29,27 +49,17 @@ Various cosmetic immersion things
     - unlike maybe other packs, adding a weapon trim wouldn't change the way the weapon itself looks; it would change the actual shape / texture.
     - this could be a fun way to add new textures that aren't that different from base game textures, for weapons and tools.
 - cute little sprites that add cosmetic particles in the area! like ember sprites but for more things
+    - you would have sprites in bottles, be able to take them out and place them wherever you want, and then anyone can bottle them up
+- best friend bracelet: lets you designate someone as your best friend when you both use it on each other
+    - Literally no idea what that would actually do
 
 Settlement establishment?
 - idk what this would do?
 - maybe just designate an area as protected
     - the founder would be allowed to designate specific people as allies
 - potentially just a sanctuary system? and this would let you intentionally designate sanctuaries
+    - frankly i like the idea better of just linked campfires creating sanctuaries.
 - this all already exists with plugins though. do something unique with it
-
-Portal stones?
-- you could use portal stones to "open rifts"
-- set your frequency to whatever you want, and then crouch with the stone in your main/offhand to interact with rifts
-- mainhand would be teleporter, offhand would be teleportee
-    - you would have to first confirm that the player you want was teleporting to you, before letting them teleport
-- could be a good vanilla-ish solution to the whole player teleporting situation
-    - you could also use it to set a home rift!
-- it would have to cost XP or something though.
-
-Portal stones (alternatively)
-- alternatively! maybe you could just open a rift and set a specific passcode/passkey item?
-- players would have to hold that item or enter that passcode to be allowed to teleport to your rift
-- it could also be a lodestone compass type situation, where you have a blank portal stone that you can connect to an existing rift
 
 Natural events?
 - bring back ash rain! but make it easier to deal with
@@ -67,11 +77,12 @@ Starlight lanterns?
 
 Move over campfire system
 - add scouring stones
-- make kindling objects data driven
+- make kindling objects more data driven
     - "type": acts as id, determines what function to run
         - alternatively just "function", then run kindling with your offhand storage, and reference the function from there
     - "consume": integer, determines how many should be taken up when you kindle
         - would probably really only be 1 or 0 but that's fine. maybe you would have to use more ingots to smith stronger weapons or something
+        - probably have some way to designate "requires this number" vs "consumes a batch of up to this number"
 - move weaponsmithing back to campfires
     - the new armory system is basically done, so it should be pretty easy
     - just figure out how to make the ingots again
@@ -103,13 +114,14 @@ Maybe a few basic talismans?
 Armor set bonuses?
 - probably not lowk, kind of gets in the way of the intentional armor setups that Echoes has
     - although that's what the gamerule is for! honestly yeah probably still have it exist, just disable it for echoes
-- 
+    - candidly though I can't think of a lot of situations where this would really add anything, unless you also had other obtainable armors
 
 Add back in the automatic replanting thing that you had for Fawns in crow's keep
 - either as an always-enabled feature, or maybe a talisman or something
 
 Maybe move morning and nightfall titles / timestops over to homesteader
 - have fun different titles you can optionally sort thru for titlecard themes
+
 BUT!!!
 - figure out where Homesteader ends and Echoes begins. homesteader should just be overall friendly changes. Echoes is where you can make evil aggressive changes, or maybe just add systems that interact with homesteader differently than in "vanilla" homesteader.
 - Homesteader should only add BENEFITS. Echoes will add drawbacks and penalties, such as encumbrance.
@@ -117,6 +129,35 @@ BUT!!!
     - except maybe staggering? something that could just be easily disabled by Echoes
 
 Dig up deathcoords function, move to homesteader
+
+### Portal Stones
+Overall
+- have a considerable xp penalty for teleporting
+    - if possible, make this higher the further away they are from you?
+        - track this just with their coords, it'd be easiest. if you make a distance module, just use that
+- have some way to set up a field that prevents teleportation, so prisons can still actually work
+- definitely make them interruptable, and make it so you can't use them while in combat
+
+Portal stones - option 1
+- you could use portal stones to "open rifts"
+- set your frequency to whatever you want, and then crouch with the stone in your main/offhand to interact with rifts
+- mainhand would be teleporter, offhand would be teleportee
+    - you would have to first confirm that the player you want was teleporting to you, before letting them teleport
+- could be a good vanilla-ish solution to the whole player teleporting situation
+    - you could also use it to set a home rift!
+- i kind of lean away from this one? it could definitely be cool in just a homesteader setting, but i'd like to have some way to make it more restricted. it feels a little bit too free to just be able to teleport anywhere you want, in the world, as long as you know somebody who's there.
+    - a good solution to this would just be to have some way to either prevent players from teleporting, or track them through teleportation. especially if you could track them, that means a tracked player would have an incentive not to teleport, instead of just being prevented from teleporting.
+
+Portal stones - option 2
+- alternatively! maybe you could just open a rift and set a specific passcode/passkey item?
+- players would have to hold that item or enter that passcode to be allowed to teleport to your rift
+- it could also be a lodestone compass type situation, where you have a blank portal stone that you can connect to an existing rift
+
+Portal stones - option 3
+- Portal stones can only be used to teleport between players.
+- players will both use an inactive portal stone on each other to bind the stones. mainhand is teleporter, offhand is teleportee. if you hold the stone open for long enough as the receiver, the sender can do the same, and teleport to you.
+- you can only do this with two linked stones. this means that stones are useful, but if you have a huge party, you can't carry stones for everyone. you have to be a little tactical about whose stone you personally carry
+- either stones would be linked stone-to-stone, or player-to-player, and you could just use any stone.
 
 ## Homesteader gamerules
 - light_campfires_when_placed

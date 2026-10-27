@@ -19,7 +19,7 @@ effect give @a[scores={killed_mob=1..,aegis_amplifier_max=0..}] absorption 5 0 t
 effect give @a[scores={killed_player=1..,aegis_amplifier_max=0}] absorption 15 0 true
 effect give @a[scores={killed_player=1..,aegis_amplifier_max=1..}] absorption 15 1 true
 effect give @a[scores={killed_mob=1..,Vitality=0}] regeneration 1 2 true
-effect give @a[scores={killed_player=1..,Vitality=0}] absorption 1 3 true
+effect give @a[scores={killed_player=1..,Vitality=0}] absorption 1 2 true
 
 execute as @a[scores={aegis_timer=0}] run function echoes:player/aegis/apply
 
@@ -45,7 +45,7 @@ execute as @a[tag=InCombat] run scoreboard players operation @s aegis_timer_max 
 execute as @a[tag=AegisApplied] run scoreboard players operation @s aegis_timer = @s aegis_timer_max
 
 scoreboard players remove @a[scores={aegis_timer=1..}] aegis_timer 1
-scoreboard players remove @a[scores={aegis_timer=1..,Food=20}] aegis_timer 1
+scoreboard players remove @a[scores={aegis_timer=1..,sse.Hunger=0}] aegis_timer 1
 execute as @a[scores={TimeSinceRest=0,aegis_timer=1..}] run scoreboard players remove @s aegis_timer 1
 
 scoreboard players set @a[scores={used_golden_apple=1..}] used_golden_apple 0

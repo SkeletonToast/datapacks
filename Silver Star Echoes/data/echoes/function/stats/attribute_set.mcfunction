@@ -64,7 +64,7 @@ execute store result score @s generic_h run attribute @s scale get 100
     scoreboard players operation @s generic_attribute = @s dex_attributes
         scoreboard players set @s[scores={generic_attribute=101..}] generic_attribute 100
             function math:percentage {base_score:generic_attribute,percentage:50}
-            # lowk just here so that i can adjust it more easily on the fly
+            # lowk just here so that i can adjust it more easily on the fly. that's why it's not just division
         scoreboard players operation @s generic_attribute *= @s generic_h
         function math:divide/int {score:generic_attribute,div:90}
     scoreboard players operation @s generic_c = @s SprintTime
@@ -81,13 +81,13 @@ execute store result score @s generic_h run attribute @s scale get 100
 
             # super sprinting
             execute as @s[tag=SurgeSprintEligible] if score @s SuperSprintTime >= @s SurgeSprintThreshold if predicate ss_lib:input/forward unless predicate ss_lib:input/sprint run function echoes:stats/movement/super_sprint
-            execute as @s[scores={SprintTime=40..,Food=7..,SneakTime=0}] if predicate ss_lib:input/sprint run function echoes:stats/movement/super_sprint
-            execute as @s[scores={StrafeTime=20..,SprintTime=0,Food=7..,SneakTime=0}] if predicate ss_lib:input/sprint run function echoes:stats/movement/super_sprint
+            execute as @s[scores={SprintTime=40..,sse.Hunger=10..,SneakTime=0}] if predicate ss_lib:input/sprint run function echoes:stats/movement/super_sprint
+            execute as @s[scores={StrafeTime=20..,SprintTime=0,sse.Hunger=..16,SneakTime=0}] if predicate ss_lib:input/sprint run function echoes:stats/movement/super_sprint
             scoreboard players set @s[tag=!SuperSprinting] SuperSprintTime 0
         
         # diseligibility
         scoreboard players set @s[scores={SprintTime=..0,StrafeTime=..0}] generic_attribute 0
-        scoreboard players set @s[scores={Food=..6}] generic_attribute 0
+        scoreboard players set @s[scores={sse.Hunger=17..}] generic_attribute 0
         scoreboard players set @s[scores={SneakTime=1..}] generic_attribute 0
 
         execute if score @s sse.gamerule.smooth_sprinting matches 0 run scoreboard players remove @s generic_attribute 10
@@ -122,7 +122,7 @@ execute store result score @s generic_h run attribute @s scale get 100
     scoreboard players set @s[scores={generic_attribute=76..}] generic_attribute 75
     scoreboard players remove @s generic_attribute 20
     function math:divide/int {score:generic_attribute,div:2}
-    scoreboard players set @s[scores={Food=..6}] generic_attribute 0
+    scoreboard players set @s[scores={sse.Hunger=10..}] generic_attribute 0
         scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
         # scoreboard players set @s[scores={SprintTime=0,StrafeTime=0,SneakTime=0}] generic_attribute 0
         scoreboard players set @s[tag=!InCombat,predicate=!ss_lib:input/sprint,predicate=!ss_lib:input/sneak] generic_attribute 0

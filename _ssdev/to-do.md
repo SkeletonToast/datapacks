@@ -11,7 +11,7 @@
         - maybe scary style, it says like "you have survived X days" or whatever
     - "citrus" - cutie, slice-of-life style
     - "majora" - majora's mask style
-    - "hardwire" - cyberpunk?
+    - "hardwire" - cyberpunk style?
     - "local" - weather channel style, little forecast for the day maybe
     - "overgrowth" - very planty and worn-down
     - "meadow" - flowery but cutesy instead
@@ -43,20 +43,24 @@
         - using the circle
     - maybe execute as everyone, and then terminate if their SSID matches your SSID
 - also tact camera distance doesn't work | FIXED im pretty sure
-- add new movement mechanics?
+- add new movement mechanics? idk what
+- make it so that when you use coal on a campfire, it also creates a trail to all nearby linked campfires
 - add "hunger" score that's used for like sprinting and encumbrance, calculate it with vitality methinks
 - change totems somehow
     - maybe make them so that you still die, you just don't lose anything?
     - i don't really remember why i thought it was so necessary to change totems
+        - probably just because i think totems are cheap and lame in pvp
 - CHECK ON BIOME PREDICATES REFERENCES!!!
     - at LEAST temperature is affected, probably more.
     - if you have to get rid of the terralith biomes, maybe just have an auxiliary datapack that has a bunch of updated function definitions including other worldgen biomes. you can set them to replace:true so that they override the default echoes tags
 - add some way to store xp, maybe in knowledge books? even though you can store xp between characters, you do still lose that extra xp when you die, so having a way to intentionally store xp might be good
+    - there would have to be some amount of cost involved. maybe you could just craft knowledge books with lapis or something, and that would let you store however much
 - exhaustion?
     - when night falls, you start accruing stored exhaustion if you're not in bed. this stored exhaustion continues increasing throughout nights, and is only applied when you wake up (or if you just reach a certain amount, where you pass out.)
         - this just means that, the later you go to bed, the more exhausted you become in the morning.
         - sleeping will still decrease exhaustion, but 
     - exhaustion can't make you pass out in combat, but you'll pass out basically instantly afterward
+    - passing out is essentially the same as dying, but you have a period of like 30 seconds before you "die" for real. if you aren't killed in those 30 seconds, you respawn, but keep most (or all) of your items.
 - add "Regalia" enchantment, and just slap all the special per-item effects for regalia gear on there
     - maybe make this into split enchantments for the different item groups
     - obviously, this should not be obtainable in survival. even if you could obtain it, it wouldn't matter because you wouldn't be able to just create regalia items
@@ -109,16 +113,18 @@ funsies
                 - no idea if it would actually be any more efficient but it might look slightly cleaner? who knows
 
 ## Library
+- add general scores that store ssids, that allow you to store entity relationships beyond what is stored in vanilla (like player targets) (maybe call these urids? come up with some name for it)
+    - target
+        - when the player deals damage, execute as all players on attacker. if attack has ssid equal to damage dealer ssid, then damage dealer gets that person's ssid as their target ssid
+    - (homesteader) best friend awww
+    - (homesteader) town leader?
+- see if you can find some places where advancements made more sense than tags
 - make sure all called actionbars still work with the changes i made to the quotation marks
 - add contingency for making sure ssl doesn't run twice in one tick / doesnt reload twice
     - most subfunctions already have contingencies in place for this
     - this is really just so that it's easier to distribute datapacks like Homesteader without installing SSL as well
         - just remember that all datapacks have dependency functions now, so if you don't have SSL installed, it's really easy to figure out how to do it. it literally links you to the download page if you try to run any other pack without SSL
         - you can probably also just set it so that downloading a version downloads that version and its dependencies, and you just drop them both in datapacks
-- maybe make status functionality for boolean statuses?
-    - that's very easy to do on your own though, so not super necessary to write a library for it.
-    - if you only have one amplifier and duration, you can just directly compare scores. no need to do data storage
-        - honestly it could be nice to just be able to have all statuses in the same place, though
 - REMAKE STATUSES IN ELIXIR
     - disorientation
         - jesus fucking christ
@@ -127,6 +133,7 @@ funsies
     - fragile DONE
     - vulnerability DONE
     - bleeding
+        - rework this one a lil bit
     - frenzied
     - unnerved / frightened / terrified
     - hesitant

@@ -17,7 +17,7 @@ scoreboard players set @s[scores={sse.difficulty=2,aegis_amplifier_max=5..}] aeg
 execute as @s[scores={aegis_amplifier_max=0..}] if score @s aegis_amplifier <= @s aegis_amplifier_max run function parse:score_unended {score:aegis_amplifier,function:"echoes:player/aegis/absorption"}
 execute as @s[scores={aegis_amplifier_max=0..}] if score @s aegis_amplifier > @s aegis_amplifier_max run function parse:score_unended {score:aegis_amplifier_max,function:"echoes:player/aegis/absorption"}
 
-execute as @s[scores={Food=20},tag=!InCombat] if score @s aegis_amplifier >= @s aegis_amplifier_max run function echoes:player/aegis/overheal
+execute as @s[scores={sse.Hunger=0},tag=!InCombat] if score @s aegis_amplifier >= @s aegis_amplifier_max run function echoes:player/aegis/overheal
 execute as @s[scores={TimeSinceRest=..0}] if score @s aegis_amplifier >= @s aegis_amplifier_max run function echoes:player/aegis/overheal
 
 tag @s add AegisApplied

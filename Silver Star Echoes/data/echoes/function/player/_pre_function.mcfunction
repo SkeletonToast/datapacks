@@ -48,6 +48,6 @@ execute as @a[scores={in_combat=0},tag=InCombat] run function echoes:player/comb
 tag @a[scores={in_combat=0}] remove InCombat
 
 # homesteader compatibility
-scoreboard players set @a[tag=InCombat] homesteader.day_title_eligible 0
+scoreboard players set @a[tag=InCombat] homestead.day_title_eligible 0
 
 # scoreboard players set $strength player_motion.api.launch 10000

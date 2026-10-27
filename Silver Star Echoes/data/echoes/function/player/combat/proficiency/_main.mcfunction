@@ -136,7 +136,7 @@ execute as @s[tag=Strength_feat_2,tag=Dexterity_feat_2] unless items entity @s w
 # execute as @s[tag=Strength_feat_2,tag=Dexterity_feat_2] unless items entity @s weapon.offhand * run function echoes:player/combat/proficiency/two_handing {"stat":"_dex"}
 
 # hungry damage reduction
-scoreboard players set @s generic_a 18
+scoreboard players set @s generic_a 20
 scoreboard players operation @s generic_a -= @s Food
     scoreboard players operation @s generic_b = @s Vitality
     scoreboard players operation @s generic_b /= #const.7 value

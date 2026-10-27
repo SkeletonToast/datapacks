@@ -1,0 +1,1 @@
+$execute as @a[scores={ssid=$(value)}] $(run)
