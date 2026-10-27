@@ -16,7 +16,7 @@ scoreboard objectives add fear_eligible dummy
 
 scoreboard objectives add used_glow_berries minecraft.used:minecraft.glow_berries
 
-gamerule natural_health_regeneration false
+scoreboard objectives add sse.respawn.retention_level dummy
 
 # aegis
     scoreboard objectives add aegis_timer dummy

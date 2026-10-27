@@ -7,12 +7,14 @@ execute as @a[scores={DamageDealt=1..}] run scoreboard players operation @s Init
 # Unsigning Stats
 execute as @a run scoreboard players operation @s Strength = @s BaseStrength
 execute as @a run scoreboard players operation @s Dexterity = @s BaseDexterity
-execute as @a run scoreboard players operation @s MindSigned = @s BaseMind
 execute as @a run scoreboard players operation @s Resolve = @s BaseResolve
-execute as @a run scoreboard players operation @s Vitality = @s BaseVitality
+execute as @a run scoreboard players operation @s VitalitySigned = @s BaseVitality
+execute as @a run scoreboard players operation @s MindSigned = @s BaseMind
 execute as @a run scoreboard players operation @s Tact = @s BaseTact
 execute as @a run scoreboard players operation @s SoulSigned = @s BaseSoul
 
+execute as @a run scoreboard players operation @s Vitality = @s VitalitySigned
+execute as @a[scores={Vitality=..-1}] run scoreboard players operation @s Vitality *= #const.-1 value
 execute as @a run scoreboard players operation @s Mind = @s MindSigned
 execute as @a[scores={Mind=..-1}] run scoreboard players operation @s Mind *= #const.-1 value
 execute as @a run scoreboard players operation @s Soul = @s SoulSigned
@@ -21,17 +23,17 @@ execute as @a[scores={Soul=..-1}] run scoreboard players operation @s Soul *= #c
     # here if attribute limits actually directly change stats after all
     execute as @a[scores={sse.difficulty.attribute_limit=0..}] if score @s Strength > @s sse.difficulty.attribute_limit run scoreboard players operation @s Strength = @s sse.difficulty.attribute_limit
     execute as @a[scores={sse.difficulty.attribute_limit=0..}] if score @s Dexterity > @s sse.difficulty.attribute_limit run scoreboard players operation @s Dexterity = @s sse.difficulty.attribute_limit
-    execute as @a[scores={sse.difficulty.attribute_limit=0..}] if score @s MindSigned > @s sse.difficulty.attribute_limit run scoreboard players operation @s MindSigned = @s sse.difficulty.attribute_limit
     execute as @a[scores={sse.difficulty.attribute_limit=0..}] if score @s Vitality > @s sse.difficulty.attribute_limit run scoreboard players operation @s Vitality = @s sse.difficulty.attribute_limit
+    execute as @a[scores={sse.difficulty.attribute_limit=0..}] if score @s Mind > @s sse.difficulty.attribute_limit run scoreboard players operation @s Mind = @s sse.difficulty.attribute_limit
     execute as @a[scores={sse.difficulty.attribute_limit=0..}] if score @s Tact > @s sse.difficulty.attribute_limit run scoreboard players operation @s Tact = @s sse.difficulty.attribute_limit
-    execute as @a[scores={sse.difficulty.attribute_limit=0..}] if score @s SoulSigned > @s sse.difficulty.attribute_limit run scoreboard players operation @s SoulSigned = @s sse.difficulty.attribute_limit
+    execute as @a[scores={sse.difficulty.attribute_limit=0..}] if score @s Soul > @s sse.difficulty.attribute_limit run scoreboard players operation @s Soul = @s sse.difficulty.attribute_limit
 
 # setting stats for the first time
 scoreboard players set @a[scores={Age=1}] BaseStrength 7
 scoreboard players set @a[scores={Age=1}] BaseDexterity 7
-scoreboard players set @a[scores={Age=1}] BaseMind 7
 scoreboard players set @a[scores={Age=1}] BaseResolve 7
 scoreboard players set @a[scores={Age=1}] BaseVitality 7
+scoreboard players set @a[scores={Age=1}] BaseMind 7
 scoreboard players set @a[scores={Age=1}] BaseTact 7
 scoreboard players set @a[scores={Age=1}] BaseSoul 7
 

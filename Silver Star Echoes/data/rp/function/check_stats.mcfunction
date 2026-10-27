@@ -5,7 +5,7 @@ execute as @a run function echoes:stats/echo_level
 tellraw @s [""]
 tellraw @s [{"text":"❖ Level ","color":"gray"},{"score":{"name":"@s","objective":"EchoLevel"},"color":"white"}]
 # tellraw @s [{"text":"❖ You have ","color":"gray"},{"score":{"name":"@s","objective":"EchoLevelsUnspent"},"color":"white"},{"text":" unspent levels","color":"gray"}]
-tellraw @s [{"text":"Stats listed as [Effective / Real]","color":"gray","italic":true}]
+tellraw @s [{"text":"Stats listed as [Effective / Base]","color":"gray","italic":true}]
 tellraw @s [""]
 
 tellraw @s [{"text":"❖ You have ","color":"gray"},{"score":{"name":"@s","objective":"Strength"},"color":"red"}, \

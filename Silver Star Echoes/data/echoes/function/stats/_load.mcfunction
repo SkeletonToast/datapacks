@@ -18,6 +18,7 @@ scoreboard objectives add Mind dummy
 scoreboard objectives add Tact dummy
 scoreboard objectives add Resolve dummy
 scoreboard objectives add Vitality dummy
+    scoreboard objectives add VitalitySigned dummy
 scoreboard objectives add Soul dummy
     scoreboard objectives add SoulSigned dummy
 
