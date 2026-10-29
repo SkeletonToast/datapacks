@@ -74,8 +74,8 @@ scoreboard players set $false true 0
 scoreboard objectives add Age dummy
 
 # circle module
-scoreboard objectives add circle_nodes dummy
-scoreboard objectives add circle_angle dummy
+scoreboard objectives add circle.angle dummy
+scoreboard objectives add circle.node dummy
 
 # parse
 scoreboard objectives add parse_score_recursions dummy

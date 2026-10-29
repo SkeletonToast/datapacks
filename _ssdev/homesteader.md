@@ -52,6 +52,7 @@ Various cosmetic immersion things
     - you would have sprites in bottles, be able to take them out and place them wherever you want, and then anyone can bottle them up
 - best friend bracelet: lets you designate someone as your best friend when you both use it on each other
     - Literally no idea what that would actually do
+- add in some sort of contingency for if items are accidentally thrown into the void
 
 Settlement establishment?
 - idk what this would do?
@@ -62,7 +63,7 @@ Settlement establishment?
 - this all already exists with plugins though. do something unique with it
 
 Natural events?
-- bring back ash rain! but make it easier to deal with
+- bring back ash rain! but make it easier to deal with, you no longer just die if you don't have a mask
 - heavy wind? idk what this would do but i wrote it down so
 - sandstorms?
     - heavily slows you in deserts, causes reduced vision, maybe moves you a certain direction?
@@ -70,6 +71,7 @@ Natural events?
 - storms at sea?
 - eclipses / deep nights
 - moon phase effects!!
+- meteor showers?
 
 Starlight lanterns?
 - would be a way to passively gather xp that was very easy to set up and use

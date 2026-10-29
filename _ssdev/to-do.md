@@ -18,34 +18,34 @@
     - "wayfarer" - depends on player's biome location!!! could be super fun!
 
 ## Echoes
+Priority
+- talismans
+- elixir effects
+- rallying
+- oath effects
+- radiation
+- exhaustion
+
+Changes
 - make sure combination stats actually calculate as intended, i changed around the multipliers
 - rename items
     - rename cocoa beans to something else
-    - rename nether star to Fleeting Echo
-        - imitations of a real Vestige soul
     - rename mending to frail mending or something
-    - rename fire protection to cindershield
 - make some sort of mechanic or item that makes you immune to void damage
+    - astyrian shadowshield
 - make sure luck chance function actually works
-- finish oath effects
 - finish the creaking changes you were working on once upon a time
 - FINISH NEW ELIXIR EFFECTS
 - RADIATION!!!
-- having zero vitality also gives you full inventory regen
-    - usually you'd have to get 50 vitality to do this
-    - but this is fine because it means you have to have advanced enough to get a Reaver
-- maybe reavers require a certain level in their respective combination stat before you're able to use them?
-    - i think they should require at least 50 in the combination stat before you're allowed to use the associated reaver
 - have some sort of settings menu where you can more easily trigger things without having to know the variable names
     - also add in a way to change your aegis theme thru there
+- finish oath effects
+    - FIXED KIND OF: aegis nodes now only render if you're more than a certain distance away
+        - this does have the side effect of also not rendering for other people who are very near to you
+    - once circle module is polished, try with that. it now has capability to run things based on which node you're at, so you could actually do an effective multicolored theme
 - why doesn't aegis self visibility work when it's disabled?
-    - it's offset to display the particles themselves, so you have to find a way to go around that
-        - using the circle
-    - maybe execute as everyone, and then terminate if their SSID matches your SSID
-- also tact camera distance doesn't work | FIXED im pretty sure
-- add new movement mechanics? idk what
 - make it so that when you use coal on a campfire, it also creates a trail to all nearby linked campfires
-- add "hunger" score that's used for like sprinting and encumbrance, calculate it with vitality methinks
+    - also just let campfires link lol
 - change totems somehow
     - maybe make them so that you still die, you just don't lose anything?
     - i don't really remember why i thought it was so necessary to change totems
@@ -58,12 +58,14 @@
 - add custom functional blocks
     - heater for hot springs
     - cultivator?
+    - crucible?
 - exhaustion?
     - when night falls, you start accruing stored exhaustion if you're not in bed. this stored exhaustion continues increasing throughout nights, and is only applied when you wake up (or if you just reach a certain amount, where you pass out.)
         - this just means that, the later you go to bed, the more exhausted you become in the morning.
         - sleeping will still decrease exhaustion, but 
     - exhaustion can't make you pass out in combat, but you'll pass out basically instantly afterward
     - passing out is essentially the same as dying, but you have a period of like 30 seconds before you "die" for real. if you aren't killed in those 30 seconds, you respawn, but keep most (or all) of your items.
+- add new movement mechanics? idk what
 - add "Regalia" enchantment, and just slap all the special per-item effects for regalia gear on there
     - maybe make this into split enchantments for the different item groups
     - obviously, this should not be obtainable in survival. even if you could obtain it, it wouldn't matter because you wouldn't be able to just create regalia items
@@ -71,6 +73,9 @@
 - consider having a "disciplined" stat. this could just be your highest stat, and since it's your highest, it gives you extra effective attributes with that stat or whatever. this would help decrease the gap between people who are focused on a certain build, and people who are just strong enough that they can have high scores in every stat.
     - consider this: you're running mainly a dexterity build. you want some mined materials, but you don't really want to do it yourself. however, somebody who's running mainly a strength build is able to mine really fast, so they sell things like that for decent prices, so you buy from them.
         - you could gather materials yourself, but it becomes worthwhile to pay somebody specialized to do it instead.
+    - i think this would be better done by having some sort of more-permanent equivalent to Emblems, which lets you actually class into multiple professions
+        - damn i really kind of made a perfect class system in cedarfell huh
+- also tact camera distance doesn't work | FIXED im pretty sure
 
 exhaustion
 - sources:
@@ -178,8 +183,6 @@ funsies
     - this probably isn't an issue, because almost certainly anybody who's applying custom statuses knows what the effective cap is
     - the code exists, just decide whether or not to incorporate it
 - make sure that health and health_attributes fetch functions are used appropriately
-- figure out why the pack is running so slow
-    - turns out it was just disoriented lol, that's so bizarre
 - add actionbar system to github feature breakdown
 
 NOTE ABOUT THE CIRCLE PROBLEM!!!! it appears to be specifically related to running the function through other functions! invoking a circle by calling a function works fine, but NOT when calling it through a parse function, even if the final circle does not even use the parsed score. calling it through multiple functions also works fine, so either it's something with the parse function specifically, or maybe just something else about passing macros. no idea. LOOK INTO THIS!!!

@@ -8,8 +8,8 @@ scoreboard objectives add elixir.storage.current_amplifier dummy
 scoreboard objectives add elixir.storage.current_duration dummy
 scoreboard objectives add elixir.generic.amplifier dummy
 scoreboard objectives add elixir.clear_statuses dummy
-scoreboard objectives remove elixir.total_statuses
 scoreboard objectives add elixir.total_statuses dummy
+scoreboard objectives remove elixir.total_statuses
 scoreboard objectives add elixir.active_statuses dummy
 
 scoreboard objectives add elixir.drink_milk used:milk_bucket

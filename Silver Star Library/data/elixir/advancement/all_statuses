@@ -1,0 +1,20 @@
+{
+  "parent": "minecraft:nether/brew_potion",
+  "criteria": {},
+  "display": {
+    "description": {
+      "translate": "Have all Elixir statuses applied at the same time"
+    },
+    "frame": "challenge",
+    "icon": {
+      "id": "minecraft:milk_bucket"
+    },
+    "title": {
+      "text": "Where The Hell Am I"
+    }
+  },
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,1 @@
+$function parse:phantom/decimal {target:"$(target)",score:"$(score)",scale:1,function:"$(function)"}

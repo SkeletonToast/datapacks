@@ -14,11 +14,11 @@ execute as @a run scoreboard players operation @s Tact = @s BaseTact
 execute as @a run scoreboard players operation @s SoulSigned = @s BaseSoul
 
 execute as @a run scoreboard players operation @s Vitality = @s VitalitySigned
-execute as @a[scores={Vitality=..-1}] run scoreboard players operation @s Vitality *= #const.-1 value
+function math:absolute_value {score:Vitality}
 execute as @a run scoreboard players operation @s Mind = @s MindSigned
-execute as @a[scores={Mind=..-1}] run scoreboard players operation @s Mind *= #const.-1 value
+function math:absolute_value {score:Mind}
 execute as @a run scoreboard players operation @s Soul = @s SoulSigned
-execute as @a[scores={Soul=..-1}] run scoreboard players operation @s Soul *= #const.-1 value
+function math:absolute_value {score:Soul}
 
     # here if attribute limits actually directly change stats after all
     execute as @a[scores={sse.difficulty.attribute_limit=0..}] if score @s Strength > @s sse.difficulty.attribute_limit run scoreboard players operation @s Strength = @s sse.difficulty.attribute_limit

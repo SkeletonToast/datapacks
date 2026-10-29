@@ -34,7 +34,8 @@ execute as @s[scores={WeaponType=5}] run function echoes:player/combat/proficien
 execute as @s[scores={WeaponType=6}] run function echoes:player/combat/proficiency/profile/heavy_2
 
 # whips
-execute as @s[scores={WeaponType=10}] run function echoes:player/combat/proficiency/profile/agile_3
+scoreboard players add @s[scores={WeaponType=10}] proficiency_dex 300
+    # much higher because whips have that percentage attack damage reduction
 
 # guns
 scoreboard players add @s[scores={WeaponType=9}] proficiency_dex 30
@@ -44,18 +45,18 @@ scoreboard players add @s[scores={WeaponType=9}] proficiency_tact 120
 execute as @s[scores={ItemSelected=0}] run function echoes:player/combat/proficiency/profile/balanced {value:50}
 
 # golden weapons
-    execute as @s[scores={WeaponType=1..4}] if items entity @s weapon.mainhand #echoes:golden_weapon run scoreboard players remove @s proficiency_str 10
-    execute as @s[scores={WeaponType=1..4}] if items entity @s weapon.mainhand #echoes:golden_weapon run scoreboard players remove @s proficiency_dex 10
-    execute as @s[scores={WeaponType=1..4}] if items entity @s weapon.mainhand #echoes:golden_weapon run scoreboard players add @s proficiency_soul 40
+    scoreboard players remove @s[scores={WeaponType=1..4,WeaponMaterial=5}] proficiency_str 10
+    scoreboard players remove @s[scores={WeaponType=1..4,WeaponMaterial=5}] proficiency_dex 10
+    scoreboard players add @s[scores={WeaponType=1..4,WeaponMaterial=5}] proficiency_soul 40
 
 # copper weapons
-    execute as @s[scores={WeaponType=1..4}] if items entity @s weapon.mainhand #echoes:copper_weapon run scoreboard players remove @s proficiency_str 10
-    execute as @s[scores={WeaponType=1..4}] if items entity @s weapon.mainhand #echoes:copper_weapon run scoreboard players remove @s proficiency_dex 10
-    execute as @s[scores={WeaponType=1..4}] if items entity @s weapon.mainhand #echoes:copper_weapon run scoreboard players add @s proficiency_mind 20
+    scoreboard players remove @s[scores={WeaponType=1..4,WeaponMaterial=3}] proficiency_str 10
+    scoreboard players remove @s[scores={WeaponType=1..4,WeaponMaterial=3}] proficiency_dex 10
+    scoreboard players add @s[scores={WeaponType=1..4,WeaponMaterial=3}] proficiency_soul 20
 
 # netherite weapons
-    execute as @s[scores={WeaponType=1..4}] if items entity @s weapon.mainhand #echoes:netherite_weapon run scoreboard players add @s proficiency_str 10
-    execute as @s[scores={WeaponType=1..4}] if items entity @s weapon.mainhand #echoes:netherite_weapon run scoreboard players remove @s proficiency_dex 10
+    scoreboard players remove @s[scores={WeaponType=1..4,WeaponMaterial=7}] proficiency_dex 10
+    scoreboard players add @s[scores={WeaponType=1..4,WeaponMaterial=7}] proficiency_str 10
 
 # mounted - tact feat 2
 execute as @s[tag=Tact_feat_2] on vehicle on passengers if entity @s[tag=Tact_feat_2] run scoreboard players add @s proficiency_tact 35
