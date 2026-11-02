@@ -1,3 +1,3 @@
 $execute align y unless block ~ ~0.5 ~ #ss_lib:nonsolidblocks run $(run)
-execute align y unless block ~ ~0.5 ~ #ss_lib:nonsolidblocks run scoreboard players set $execute.positioned_lifetime value 0
-$execute unless score $execute.positioned_lifetime value > $execute.gamerule.positioned_lifetime value align y positioned ~ ~1 ~ if block ~ ~0.5 ~ #ss_lib:nonsolidblocks run function execute:positioned/under/ceiling {run:"$(run)"}
+execute align y unless block ~ ~0.5 ~ #ss_lib:nonsolidblocks run scoreboard players set $execute.positioned_range value 0
+$execute unless score $execute.positioned_range value > $execute.gamerule.positioned_range value align y positioned ~ ~1 ~ if block ~ ~0.5 ~ #ss_lib:nonsolidblocks run function execute:positioned/under/ceiling {run:"$(run)"}

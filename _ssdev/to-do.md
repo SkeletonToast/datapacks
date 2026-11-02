@@ -27,6 +27,7 @@ Priority
 - exhaustion
 
 Changes
+- ensure tact camera distance works
 - make sure combination stats actually calculate as intended, i changed around the multipliers
 - rename items
     - rename cocoa beans to something else
@@ -40,10 +41,10 @@ Changes
 - have some sort of settings menu where you can more easily trigger things without having to know the variable names
     - also add in a way to change your aegis theme thru there
 - finish oath effects
+- why doesn't aegis self visibility work when it's disabled?
     - FIXED KIND OF: aegis nodes now only render if you're more than a certain distance away
         - this does have the side effect of also not rendering for other people who are very near to you
     - once circle module is polished, try with that. it now has capability to run things based on which node you're at, so you could actually do an effective multicolored theme
-- why doesn't aegis self visibility work when it's disabled?
 - make it so that when you use coal on a campfire, it also creates a trail to all nearby linked campfires
     - also just let campfires link lol
 - change totems somehow
@@ -57,8 +58,13 @@ Changes
     - there would have to be some amount of cost involved. maybe you could just craft knowledge books with lapis or something, and that would let you store however much
 - add custom functional blocks
     - heater for hot springs
+        - could just be a campfire tbh
+            - though probably don't do this because that would make healing too easy when exploring
+        - water that's detected to be a hot spring heals you better or something, think of botw
     - cultivator?
+    - fermenter?
     - crucible?
+        - used to make draughts
 - exhaustion?
     - when night falls, you start accruing stored exhaustion if you're not in bed. this stored exhaustion continues increasing throughout nights, and is only applied when you wake up (or if you just reach a certain amount, where you pass out.)
         - this just means that, the later you go to bed, the more exhausted you become in the morning.
@@ -75,7 +81,6 @@ Changes
         - you could gather materials yourself, but it becomes worthwhile to pay somebody specialized to do it instead.
     - i think this would be better done by having some sort of more-permanent equivalent to Emblems, which lets you actually class into multiple professions
         - damn i really kind of made a perfect class system in cedarfell huh
-- also tact camera distance doesn't work | FIXED im pretty sure
 
 exhaustion
 - sources:
@@ -111,8 +116,7 @@ funsies
 
 ## Armory
 - rename to "arsenal" that sounds way cooler
-- update attack speed cap lmfao that thing is extremely outdated
-    - should be updated to use SPM! I didn't see any other major issues, but still needs testing
+- test attack speed cap to ensure functionality
 - come up with more efficient properties system
     - actually the nbt format is basically as efficient as i could hope for
         - maybe the only change would be just get rid of the properties sub-heading?
@@ -136,10 +140,6 @@ funsies
 - REMAKE STATUSES IN ELIXIR
     - disorientation
         - jesus fucking christ
-    - enshrouded DONE
-    - feeble DONE
-    - fragile DONE
-    - vulnerability DONE
     - bleeding
         - rework this one a lil bit
     - frenzied
@@ -169,8 +169,6 @@ funsies
         - bounciness - makes you bouncy
         - slippery - gives you really low friction
         - something that gives you high air drag
-        - enlargement - makes you bigger (cap of 2x scale) DONE
-        - reduction - makes you smaller (cap of 0.33x scale) DONE
 - Circle calculation module
 - Collisions obv
 - more math functions that just use the built in storage math functions, but for scores
@@ -178,12 +176,30 @@ funsies
   - you can pretty easily do this just by using sqrt and finding hypotenuse between two sets of coordinates
 - add some kind of pulse healing? could just be neat, idk if i'd ever use it
     - i mean a function that instantly heals a certain amount, but it'd allow increments less than instant_health
-- add some way to clear elixir statuses, which fits with the milk gamerule
-- add some kind of way to cap effective amplifiers?
-    - this probably isn't an issue, because almost certainly anybody who's applying custom statuses knows what the effective cap is
-    - the code exists, just decide whether or not to incorporate it
-- make sure that health and health_attributes fetch functions are used appropriately
 - add actionbar system to github feature breakdown
 
 NOTE ABOUT THE CIRCLE PROBLEM!!!! it appears to be specifically related to running the function through other functions! invoking a circle by calling a function works fine, but NOT when calling it through a parse function, even if the final circle does not even use the parsed score. calling it through multiple functions also works fine, so either it's something with the parse function specifically, or maybe just something else about passing macros. no idea. LOOK INTO THIS!!!
     Another note: It seems to be something with the nodes. Running multiple instances of circle draw doesn't give any error unless the node counts are DIFFERENT. maybe the nodes are just not getting cleared between instances?
+
+## Library Update
+- execute module (not done yet)
+    - target urid
+    - positioned_range gamerule
+- phantom parsing
+- circle node counting change
+- elixir advancement added
+
+### Execute Module
+SSL now has the Execute module, which is intended to expand on the vanilla capabilities of the /execute command, allowing for more complex command execution. It has four sub-modules:
+- `execute:anchored/`
+- `execute:from/`
+- `execute:on/`
+- `execute:positioned/`
+
+All functions take `$(run)` as an input parameter. This should be the FULL command that is run after being put through the execute module.
+
+
+**Subfunctions**\
+`execute:anchored/body` executes the specified command anchored at a position halfway between the executor's eyes, and feet.\
+`execute:from/body` executes the specified command, rotated so that it matches the rotation of the executing player's body. This is different from just executing a function based on where the player is facing, because it is dependent upon which way the player's body is facing, not their head. This function only works on players.\
+`execute:on/target` executes the specified command AS the 

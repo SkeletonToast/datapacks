@@ -1,4 +1,4 @@
-function ss_lib:fetch/health {s:"@s"}
+function ss_lib:fetch/health {s:"@s",bypass_check:false}
 
 # execute at @s[scores={Absorption=..19}] unless entity @s[predicate=ss_lib:is/hiding] run particle minecraft:trial_spawner_detection ~ ~1 ~ 0.3 0.3 0.3 0 3 normal @a[distance=..10]
 # execute at @s[scores={Absorption=..19}] unless entity @s[predicate=ss_lib:is/hiding] run particle minecraft:dust{color:[1.00,0.50,0.00],scale:1} ~ ~1 ~ 0.4 0.4 0.4 0 10 normal @a[distance=..10]
