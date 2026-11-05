@@ -18,6 +18,7 @@ scoreboard objectives add Mind dummy
 scoreboard objectives add Tact dummy
 scoreboard objectives add Resolve dummy
 scoreboard objectives add Vitality dummy
+    scoreboard objectives add VitalitySigned dummy
 scoreboard objectives add Soul dummy
     scoreboard objectives add SoulSigned dummy
 
@@ -27,14 +28,15 @@ scoreboard objectives add sse.Passion dummy
 scoreboard objectives add sse.Knowledge dummy
 
 # secondary stats
+scoreboard objectives add sse.Charm dummy
+scoreboard objectives add sse.Hunger dummy
 scoreboard objectives add Initiative dummy
-scoreboard objectives add Charm dummy
 scoreboard objectives add Tenacity dummy
 scoreboard objectives add Fortitude dummy
 
 # universal stats
-scoreboard objectives add Potential dummy
-scoreboard objectives add Prowess dummy
+# scoreboard objectives add Potential dummy
+# scoreboard objectives add Prowess dummy
     # modify universal stats in echoes:stats/_tick
 
 # attribute stats

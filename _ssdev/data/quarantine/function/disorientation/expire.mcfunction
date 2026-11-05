@@ -1,0 +1,1 @@
+attribute @s movement_speed modifier remove elixir.disorientation.movement_seed

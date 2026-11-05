@@ -1,0 +1,1 @@
+$execute as @e[type=!#ss_lib:not_alive,type=!player,scores={execute.attacker=$(value)}] run $(run)

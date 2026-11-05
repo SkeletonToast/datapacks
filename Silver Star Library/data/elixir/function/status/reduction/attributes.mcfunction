@@ -1,0 +1,1 @@
+$attribute @s scale modifier add elixir.reduction.scale -$(value) add_multiplied_total

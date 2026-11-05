@@ -1,0 +1,12 @@
+{
+    "description":
+    {
+        "text":"Unknown - To Whoever Remains"
+    },
+    "comparator_output":0,
+    "length_in_seconds":255.0,
+    "sound_event":
+    {
+        "sound_id":"minecraft:music_disc.to_whoever_remains"
+    }
+}

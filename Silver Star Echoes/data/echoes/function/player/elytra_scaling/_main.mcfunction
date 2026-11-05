@@ -52,7 +52,7 @@ execute as @a[scores={flight_level=1..}] run attribute @s minecraft:gravity modi
     execute as @a[scores={flight_level=1..,FallFlying=1,slipstream=1..,elytra_boost_cooldown=-200..},x_rotation=155..172] run function echoes:player/elytra_scaling/looking_down_5
 
     scoreboard players set @a[scores={generic_a=251..}] generic_a 250
-    execute as @a[scores={flight_level=1..,FallFlying=1,slipstream=1..,elytra_boost_cooldown=-200..},predicate=!ss_lib:input/sneak] run function parse:score {score:generic_a,prepend:"",append:".",prepend_position:0,append_position:2,function:"echoes:player/elytra_scaling/apply_gravity"}
+    execute as @a[scores={flight_level=1..,FallFlying=1,slipstream=1..,elytra_boost_cooldown=-200..},predicate=!ss_lib:input/sneak] run function parse:decimal {score:generic_a,scale:0.01,function:"echoes:player/elytra_scaling/apply_gravity"}
 
     # looking up
     execute as @a[scores={flight_level=34..,FallFlying=1,slipstream=1..,elytra_boost_cooldown=-200..,flight_level=20..},x_rotation=250..] run attribute @s minecraft:gravity modifier add mind.elytra_gravity -0.04 add_multiplied_base
@@ -102,8 +102,8 @@ execute as @a[scores={flight_level=4..,boosts_stored=1..}] if score @s boosts_st
     execute as @a[scores={flight_level=1..,FallFlying=1},predicate=!ss_lib:input/sprint] run scoreboard players add @s boost_fuel 1
     execute as @a[scores={flight_level=1..,OnGround=1}] run scoreboard players add @s boost_fuel 1
 
-    execute if score $sse.gamerule.elytra_boosting true matches 1 as @a[scores={FallFlying=1,flight_level=1..,boost_fuel=1..},gamemode=!spectator,gamemode=!creative] if score @s boost_fuel <= @s generic_f run function ss_lib:actionbar {"title":"\"Boost: \",{\"score\":{\"name\":\"*\",\"objective\":\"boost_fuel\"},\"color\":\"aqua\"},{\"text\":\"/\",\"color\":\"white\"},{\"score\":{\"name\":\"*\",\"objective\":\"generic_f\"},\"color\":\"aqua\"}","duration":1}
-    execute if score $sse.gamerule.elytra_boosting true matches 1 as @a[scores={FallFlying=1,flight_level=1..,boost_fuel=..0},gamemode=!spectator,gamemode=!creative] if score @s boost_fuel <= @s generic_f run function ss_lib:actionbar {"title":"\"Boost: \",{\"text\":\"0\",\"color\":\"red\"},{\"text\":\"/\",\"color\":\"white\"},{\"score\":{\"name\":\"*\",\"objective\":\"generic_f\"},\"color\":\"aqua\"}","duration":1}
+    execute if score $sse.gamerule.elytra_boosting true matches 1 as @a[scores={FallFlying=1,flight_level=1..,boost_fuel=1..},gamemode=!spectator,gamemode=!creative] if score @s boost_fuel <= @s generic_f run function ss_lib:actionbar {title:"'Boost: ',{score:{name:'*',objective:'boost_fuel'},color:aqua},{text:'/',color:white},{score:{name:'*',objective:'generic_f'},color:aqua}",duration:1}
+    execute if score $sse.gamerule.elytra_boosting true matches 1 as @a[scores={FallFlying=1,flight_level=1..,boost_fuel=..0},gamemode=!spectator,gamemode=!creative] if score @s boost_fuel <= @s generic_f run function ss_lib:actionbar {title:"'Boost: ',{text:'0',color:red},{text:'/',color:white},{score:{name:'*',objective:'generic_f'},color:aqua}",duration:1}
     # execute as @a[scores={FallFlying=1}] unless score @s boost_fuel = @s generic_f run title @s actionbar ["Boost: ",{"score":{"name":"*","objective":"boost_fuel"},"color":"yellow"},{"text":"/","color":"white"},{"score":{"name":"*","objective":"generic_f"},"color":"yellow"}]
     # execute as @a[scores={FallFlying=1}] unless score @s boost_fuel = @s generic_f run scoreboard players set @s pause_actionbars 5
 
@@ -123,7 +123,7 @@ effect give @a[scores={flight_level=4..,FallFlying=1,flight_level=30..}] minecra
 scoreboard players set @a[scores={flight_level=4..,slipstream=1..,DamageTaken=1..}] slipstream 1
 scoreboard players set @a[scores={flight_level=4..,slipstream=1..,DamageResisted=1..}] slipstream 1
 # scoreboard players remove @a[scores={flight_level=4..,flight_level=..9,slipstream=11..,trait002-01=1..}] slipstream 10
-execute as @a[scores={flight_level=4..,FallFlying=1,slipstream=1}] run function ss_lib:actionbar {"title":"{\"text\":\"- Slipstream Lost -\",\"color\":\"#999999\"}","duration":3}
+execute as @a[scores={flight_level=4..,FallFlying=1,slipstream=1}] run function ss_lib:actionbar {title:"{text:'- Slipstream Lost -',color:'#999999'}",duration:3}
 scoreboard players remove @a[scores={flight_level=4..,slipstream=1..}] slipstream 1
 scoreboard players set @a[scores={flight_level=4..,FallFlying=0}] slipstream 0
 

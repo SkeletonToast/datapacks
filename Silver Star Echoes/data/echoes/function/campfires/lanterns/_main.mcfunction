@@ -4,11 +4,11 @@
 scoreboard players remove @s[scores={lantern_cooldown=1..}] lantern_cooldown 1
 execute unless score @s lantern_cooldown matches 1.. run scoreboard players set @s lantern_cooldown 0
 
-# failure conditions
+# failure conditions - ember lantern raycast triggers otherwise
 execute if score @s lantern_cooldown matches 1.. run return fail
 execute unless entity @s[advancements={echoes:using_clock=true}] run return fail
-execute unless items entity @s weapon.* clock[custom_data={ember_lantern:true}] run return fail
-execute if items entity @s weapon.mainhand clock unless items entity @s weapon.mainhand clock[custom_data={ember_lantern:true}] run return fail
+execute unless items entity @s weapon.* clock[custom_data~{ember_lantern:true}] run return fail
+# execute if items entity @s weapon.mainhand clock unless items entity @s weapon.mainhand clock[custom_data={ember_lantern:true}] run return fail
 
 scoreboard players set @s generic_a 60
 scoreboard players operation @s generic_a += @s sse.Passion

@@ -1,6 +1,6 @@
 # these are necessary to run the functions that instantiate the rest of the constants
 scoreboard players set #const.-1 value -1
-scoreboard players set #const.10 value -1
+scoreboard players set #const.10 value 10
 
 execute unless entity @a run schedule function ss_lib:load_constants 10s
 execute unless entity @a run return fail

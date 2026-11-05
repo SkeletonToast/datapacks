@@ -34,7 +34,8 @@ execute as @s[scores={WeaponType=5}] run function echoes:player/combat/proficien
 execute as @s[scores={WeaponType=6}] run function echoes:player/combat/proficiency/profile/heavy_2
 
 # whips
-execute as @s[scores={WeaponType=10}] run function echoes:player/combat/proficiency/profile/agile_3
+scoreboard players add @s[scores={WeaponType=10}] proficiency_dex 300
+    # much higher because whips have that percentage attack damage reduction
 
 # guns
 scoreboard players add @s[scores={WeaponType=9}] proficiency_dex 30
@@ -44,18 +45,18 @@ scoreboard players add @s[scores={WeaponType=9}] proficiency_tact 120
 execute as @s[scores={ItemSelected=0}] run function echoes:player/combat/proficiency/profile/balanced {value:50}
 
 # golden weapons
-    execute as @s[scores={WeaponType=1..4}] if items entity @s weapon.mainhand #echoes:golden_weapon run scoreboard players remove @s proficiency_str 10
-    execute as @s[scores={WeaponType=1..4}] if items entity @s weapon.mainhand #echoes:golden_weapon run scoreboard players remove @s proficiency_dex 10
-    execute as @s[scores={WeaponType=1..4}] if items entity @s weapon.mainhand #echoes:golden_weapon run scoreboard players add @s proficiency_soul 40
+    scoreboard players remove @s[scores={WeaponType=1..4,WeaponMaterial=5}] proficiency_str 10
+    scoreboard players remove @s[scores={WeaponType=1..4,WeaponMaterial=5}] proficiency_dex 10
+    scoreboard players add @s[scores={WeaponType=1..4,WeaponMaterial=5}] proficiency_soul 40
 
 # copper weapons
-    execute as @s[scores={WeaponType=1..4}] if items entity @s weapon.mainhand #echoes:copper_weapon run scoreboard players remove @s proficiency_str 10
-    execute as @s[scores={WeaponType=1..4}] if items entity @s weapon.mainhand #echoes:copper_weapon run scoreboard players remove @s proficiency_dex 10
-    execute as @s[scores={WeaponType=1..4}] if items entity @s weapon.mainhand #echoes:copper_weapon run scoreboard players add @s proficiency_mind 20
+    scoreboard players remove @s[scores={WeaponType=1..4,WeaponMaterial=3}] proficiency_str 10
+    scoreboard players remove @s[scores={WeaponType=1..4,WeaponMaterial=3}] proficiency_dex 10
+    scoreboard players add @s[scores={WeaponType=1..4,WeaponMaterial=3}] proficiency_soul 20
 
 # netherite weapons
-    execute as @s[scores={WeaponType=1..4}] if items entity @s weapon.mainhand #echoes:netherite_weapon run scoreboard players add @s proficiency_str 10
-    execute as @s[scores={WeaponType=1..4}] if items entity @s weapon.mainhand #echoes:netherite_weapon run scoreboard players remove @s proficiency_dex 10
+    scoreboard players remove @s[scores={WeaponType=1..4,WeaponMaterial=7}] proficiency_dex 10
+    scoreboard players add @s[scores={WeaponType=1..4,WeaponMaterial=7}] proficiency_str 10
 
 # mounted - tact feat 2
 execute as @s[tag=Tact_feat_2] on vehicle on passengers if entity @s[tag=Tact_feat_2] run scoreboard players add @s proficiency_tact 35
@@ -89,13 +90,13 @@ scoreboard players operation @s[tag=hexblade_enchantment,scores={xp_level=31..10
 scoreboard players add @s[tag=hexblade_enchantment,scores={xp_level=101..}] proficiency_mind 70
 
 scoreboard players operation @s[scores={xp_level=100..1000}] generic_m = @s xp_level
-    execute as @s[scores={xp_level=100..1000}] run function math:round {score:generic_m,round:100,reduce:true}
+    execute as @s[scores={xp_level=100..1000}] run function math:divide/int {score:generic_m,div:100}
     # scoreboard players operation @s[scores={xp_level=200..1000}] generic_m *= @s generic_m
 scoreboard players operation @s[tag=hexblade_enchantment,scores={xp_level=200..1000}] proficiency_mind += @s generic_m
 
 scoreboard players operation @s[scores={xp_level=1000..}] generic_m = @s xp_level
-    execute as @s[scores={xp_level=1000..}] run function math:round {score:generic_m,round:100,reduce:true}
-        execute as @s[scores={xp_level=1000..}] run function math:round {score:generic_m,round:100,reduce:true}
+    execute as @s[scores={xp_level=1000..}] run function math:divide/int {score:generic_m,div:100}
+        execute as @s[scores={xp_level=1000..}] run function math:divide/int {score:generic_m,div:100}
     # scoreboard players operation @s[scores={xp_level=1000..}] generic_m *= @s generic_m
 scoreboard players operation @s[tag=hexblade_enchantment,scores={xp_level=1000..}] proficiency_mind += @s generic_m
 tag @s remove hexblade_enchantment
@@ -136,7 +137,7 @@ execute as @s[tag=Strength_feat_2,tag=Dexterity_feat_2] unless items entity @s w
 # execute as @s[tag=Strength_feat_2,tag=Dexterity_feat_2] unless items entity @s weapon.offhand * run function echoes:player/combat/proficiency/two_handing {"stat":"_dex"}
 
 # hungry damage reduction
-scoreboard players set @s generic_a 18
+scoreboard players set @s generic_a 20
 scoreboard players operation @s generic_a -= @s Food
     scoreboard players operation @s generic_b = @s Vitality
     scoreboard players operation @s generic_b /= #const.7 value

@@ -1,6 +1,6 @@
 scoreboard players operation @s overheal_limit = @s Resolve
 scoreboard players operation @s overheal_limit *= @s sse.difficulty.health_regeneration_limit
-function math:round {score:overheal_limit,round:100,reduce:true}
+function math:divide/int {score:overheal_limit,div:100}
 
 execute if score @s overheal_limit < @s Tenacity run scoreboard players operation @s overheal_limit = @s Tenacity
 

@@ -1,0 +1,41 @@
+{
+    "type": "minecraft:all_of",
+    "terms": [
+      {
+        "type": "minecraft:location_check",
+        "predicate": {
+          "position": {
+            "y": {
+              "max": 63
+            }
+          }
+        }
+      },
+      {
+        "type": "minecraft:any_of",
+        "terms": [
+          {
+            "type": "minecraft:location_check",
+            "predicate": {
+              "biomes": [
+                "minecraft:lush_caves",
+                "minecraft:dripstone_caves",
+                "minecraft:deep_dark",
+                "minecraft:sulfur_caves"]
+            }
+          },
+          {
+            "type": "minecraft:location_check",
+            "predicate": {
+              "position": {
+                "y": {
+                  "max": 16
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+  

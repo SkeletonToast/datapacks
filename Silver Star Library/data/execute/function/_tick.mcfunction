@@ -1,0 +1,1 @@
+function gamerule:custom/tick_range {source:execute,gamerule:positioned_range,lower_limit:1,upper_limit:1000}

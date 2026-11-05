@@ -3,6 +3,15 @@ scoreboard players set @a[team=vestige] sse.oath 1
 scoreboard players set @a[team=cerulean_court] sse.oath 1
 scoreboard players set @a[team=cerulean_sentinel] sse.oath 1
 
+    # court - all around buffs
+    scoreboard players add @a[scores={sse.oath=1}] Strength 1
+    scoreboard players add @a[scores={sse.oath=1}] Dexterity 1
+    scoreboard players add @a[scores={sse.oath=1}] Resolve 1
+    scoreboard players add @a[scores={sse.oath=1}] Vitality 1
+    scoreboard players add @a[scores={sse.oath=1}] Mind 1
+    scoreboard players add @a[scores={sse.oath=1}] Tact 1
+    scoreboard players add @a[scores={sse.oath=1}] Soul 1
+
 # haligsect
 scoreboard players set @a[team=haligsundr] sse.oath 2
 scoreboard players set @a[team=ritesmaiden] sse.oath 2
@@ -42,11 +51,33 @@ scoreboard players set @a[team=arcanist] sse.oath 6
 scoreboard players set @a[team=queenshriven] sse.oath 7
 scoreboard players set @a[team=ardent] sse.oath 7
 
+    # rasaya: extra aegis
+    scoreboard players add @a[scores={sse.oath=7}] aegis_amplifier_max 1
+
 # students
 scoreboard players set @a[team=student_artist] sse.oath 8
 scoreboard players set @a[team=student_entropy] sse.oath 8
-scoreboard players set @a[team=student_artist] sse.oath 8
+scoreboard players set @a[team=student_stellography] sse.oath 8
+scoreboard players set @a[team=student_vital] sse.oath 8
 scoreboard players set @a[team=student_scribe] sse.oath 8
+
+    # students
+    scoreboard players add @a[scores={sse.oath=8}] Strength 1
+    scoreboard players add @a[scores={sse.oath=8}] Dexterity 1
+    scoreboard players add @a[scores={sse.oath=8}] Resolve 1
+    scoreboard players add @a[scores={sse.oath=8}] Vitality 1
+    scoreboard players add @a[scores={sse.oath=8}] Tact 1
+    scoreboard players add @a[scores={sse.oath=8}] Mind 1
+    scoreboard players add @a[scores={sse.oath=8}] Soul 1
+    scoreboard players add @a[team=student_artist] Dexterity 1
+    scoreboard players add @a[team=student_artist] Soul 1
+    scoreboard players add @a[team=student_entropy] Strength 1
+    scoreboard players add @a[team=student_entropy] Mind 1
+    scoreboard players add @a[team=student_vital] Vitality 1
+    scoreboard players add @a[team=student_vital] Resolve 1
+    scoreboard players add @a[team=student_scribe] xp_cap 10
+    scoreboard players add @a[team=student_stellography] Soul 1
+    scoreboard players add @a[team=student_stellography] Mind 1
 
 # ashengard
 scoreboard players set @a[team=ashengard] sse.oath 9
@@ -83,13 +114,3 @@ scoreboard players set @a[team=nightbrand] sse.oath 18
 scoreboard players set @a[team=silverseeker] sse.oath 19
 scoreboard players set @a[team=nightjar] sse.oath 20
 scoreboard players set @a[team=heron] sse.oath 21
-
-# very basic oath effects
-# court - all around buffs
-scoreboard players add @a[scores={sse.oath=1}] Strength 1
-scoreboard players add @a[scores={sse.oath=1}] Dexterity 1
-scoreboard players add @a[scores={sse.oath=1}] Resolve 1
-scoreboard players add @a[scores={sse.oath=1}] Vitality 1
-scoreboard players add @a[scores={sse.oath=1}] Mind 1
-scoreboard players add @a[scores={sse.oath=1}] Tact 1
-scoreboard players add @a[scores={sse.oath=1}] Soul 1

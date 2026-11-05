@@ -1,0 +1,1 @@
+function ss_lib:actionbar {title:"{text:'[⚔] You have entered combat.',color:red}",duration:40}

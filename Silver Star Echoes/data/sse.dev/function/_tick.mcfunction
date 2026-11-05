@@ -13,6 +13,7 @@ scoreboard players enable @a[scores={ssl.permissions_level=4..}] sse.gamerule.co
 scoreboard players enable @a[scores={ssl.permissions_level=4..}] sse.gamerule.ambient_particles
 scoreboard players enable @a[scores={ssl.permissions_level=4..}] sse.gamerule.hungry_damage_reduction
 scoreboard players enable @a[scores={ssl.permissions_level=4..}] sse.gamerule.elytra_boosting
+scoreboard players enable @a[scores={ssl.permissions_level=4..}] sse.gamerule.scale_attributes
 scoreboard players enable @a[scores={ssl.permissions_level=1..}] sse.settings.aegis_self_visibility
 scoreboard players enable @a[scores={ssl.permissions_level=1..}] sse.settings.aegis_visibility
 scoreboard players enable @a[scores={ssl.permissions_level=1..}] sse.settings.attack_buff_visibility
@@ -29,6 +30,7 @@ function gamerule:custom/tick_bool {source:sse,gamerule:combat_jump_scaling}
 function gamerule:custom/tick_bool {source:sse,gamerule:ambient_particles}
 function gamerule:custom/tick_bool {source:sse,gamerule:hungry_damage_reduction}
 function gamerule:custom/tick_bool {source:sse,gamerule:elytra_boosting}
+function gamerule:custom/tick_bool {source:sse,gamerule:scale_attributes}
 # function gamerule:custom/tick_bool {source:sse,gamerule:aegis_self_visibility}
 # function gamerule:custom/tick_bool {source:sse,gamerule:aegis_visibility}
 # function gamerule:custom/tick_bool {source:sse,gamerule:attack_buff_visibility}
@@ -75,8 +77,7 @@ execute as @a unless score @s settings matches 0 run scoreboard players set @s s
 # execute as SkeletonToast at @s run function sse.dev:witch_aura {value:10}
 # execute as SkeletonToast at @s run function sse.dev:witch_aura {value:15}
 
-execute as @a[scores={ssid=528,observatory=1..}] at @s run function parse:score_unended {score:observatory,function:"sse.dev:observatory"}
-execute as @a[scores={ssid=528},tag=witches] at @s run function circle:draw_at_entity {nodes:10,radius:10,run_at_node:"particle end_rod ~ ~ ~ 0.1 0.1 0.1 0 3"}
+# execute as @a[scores={ssid=528,observatory=1..}] at @s run function parse:score_unended {score:observatory,function:"sse.dev:observatory"}
+# execute as @a[scores={ssid=528},tag=witches] at @s run function circle:draw_at_entity {nodes:10,radius:10,run_at_node:"particle end_rod ~ ~ ~ 0.1 0.1 0.1 0 3"}
 # execute as @a[scores={ssid=528,observatory=1..}] unless predicate ss_lib:is/moving at @s run function parse:score_unended {score:observatory,function:"sse.dev:witch_aura"}
-scoreboard players add @a[scores={ssid=528,observatory=1..}] observatory 1
-# scoreboard players set @a[scores={observatory=361..}] observatory 1
+# scoreboard players add @a[scores={ssid=528,observatory=1..}] observatory 1

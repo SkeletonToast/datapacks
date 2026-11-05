@@ -3,15 +3,14 @@ execute as @s[scores={sse.difficulty=1}] run return fail
 
 execute as @s[tag=!InCombat] run function echoes:player/combat/proficiency/_main
 execute as @s[tag=!InCombat] run function echoes:player/combat/proficiency/apply
-# function parse:score {score:proficiency_normalized",prepend:"",append:".",prepend_position:0,append_position:3,function:"echoes:player/combat/proficiency/apply_damage"}
 
 tellraw @s [""]
 tellraw @s [{"text":"❖ Proficiency: ","color":"gray"},{"score":{"name":"@s","objective":"proficiency"},"color":"white"}]
-function parse:score {prepend:"",append:".",prepend_position:0,append_position:2,score:proficiency,function:"sse.dev:proficiency_output_1"}
+function parse:decimal {score:proficiency,scale:0.01,function:"sse.dev:proficiency_output_1"}
 
 function ss_lib:fetch/attack_damage {s:"@s",scale:1000,bypass_check:true}
-function math:round {score:AttackDamage,round:10,reduce:true}
-function parse:score {prepend:"",append:".",prepend_position:0,append_position:2,score:AttackDamage,function:"sse.dev:proficiency_output_2"}
+function math:divide/int {score:AttackDamage,div:10}
+function parse:decimal {score:AttackDamage,scale:0.01,function:"sse.dev:proficiency_output_2"}
 
 tellraw @s [""]
 tellraw @s [{"text":"❖ Unadjusted Strength: ","color":"gray"},{"score":{"name":"@s","objective":"prof_str_unadj"},"color":"red"}]

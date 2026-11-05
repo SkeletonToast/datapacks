@@ -16,7 +16,8 @@ function echoes:elixir/_load
 function echoes:player/_load
 # function echoes:artifacts/_load
 
-execute unless score $homesteader.gamerule.character_limit value matches 7.. run scoreboard players set $homesteader.gamerule.character_limit value 7
+execute unless score $homestead.gamerule.character_limit value matches 7.. run scoreboard players set $homestead.gamerule.character_limit value 7
+gamerule natural_health_regeneration false
 gamerule players_sleeping_percentage 101
 gamerule keep_inventory true
 

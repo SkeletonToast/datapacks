@@ -63,5 +63,5 @@ scoreboard players operation @s generic_a += @s LeggingsType
 
 scoreboard players operation @s generic_a += @s BootsType
 
-function math:round {score:generic_a,round:4,reduce:true}
+function math:divide/int {score:generic_a,div:4}
 scoreboard players operation @s ArmorType = @s generic_a

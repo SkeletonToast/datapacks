@@ -1,0 +1,1 @@
+$execute at @s on attacker run function run:recur {r:$(value),f:"function elixir:status/beeful/summon_bee with entity @s"}

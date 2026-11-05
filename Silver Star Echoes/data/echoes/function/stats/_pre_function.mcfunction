@@ -7,28 +7,33 @@ execute as @a[scores={DamageDealt=1..}] run scoreboard players operation @s Init
 # Unsigning Stats
 execute as @a run scoreboard players operation @s Strength = @s BaseStrength
 execute as @a run scoreboard players operation @s Dexterity = @s BaseDexterity
-execute as @a run scoreboard players operation @s MindSigned = @s BaseMind
 execute as @a run scoreboard players operation @s Resolve = @s BaseResolve
-execute as @a run scoreboard players operation @s Vitality = @s BaseVitality
+execute as @a run scoreboard players operation @s VitalitySigned = @s BaseVitality
+execute as @a run scoreboard players operation @s MindSigned = @s BaseMind
 execute as @a run scoreboard players operation @s Tact = @s BaseTact
 execute as @a run scoreboard players operation @s SoulSigned = @s BaseSoul
 
-execute as @a run scoreboard players operation @s Soul = @s SoulSigned
-execute as @a[scores={Soul=..-1}] run scoreboard players operation @s Soul *= #const.-1 value
+execute as @a run scoreboard players operation @s Vitality = @s VitalitySigned
+function math:absolute_value {score:Vitality}
 execute as @a run scoreboard players operation @s Mind = @s MindSigned
-execute as @a[scores={Mind=..-1}] run scoreboard players operation @s Mind *= #const.-1 value
+function math:absolute_value {score:Mind}
+execute as @a run scoreboard players operation @s Soul = @s SoulSigned
+function math:absolute_value {score:Soul}
 
-# Charm - modifier for persuasion (only used in rp probably)
-execute as @a run scoreboard players operation @s Charm = @s Soul
-execute as @a run scoreboard players operation @s Charm += @s Tact
-execute as @a run scoreboard players operation @s Charm /= #const.2 value
+    # here if attribute limits actually directly change stats after all
+    execute as @a[scores={sse.difficulty.attribute_limit=0..}] if score @s Strength > @s sse.difficulty.attribute_limit run scoreboard players operation @s Strength = @s sse.difficulty.attribute_limit
+    execute as @a[scores={sse.difficulty.attribute_limit=0..}] if score @s Dexterity > @s sse.difficulty.attribute_limit run scoreboard players operation @s Dexterity = @s sse.difficulty.attribute_limit
+    execute as @a[scores={sse.difficulty.attribute_limit=0..}] if score @s Vitality > @s sse.difficulty.attribute_limit run scoreboard players operation @s Vitality = @s sse.difficulty.attribute_limit
+    execute as @a[scores={sse.difficulty.attribute_limit=0..}] if score @s Mind > @s sse.difficulty.attribute_limit run scoreboard players operation @s Mind = @s sse.difficulty.attribute_limit
+    execute as @a[scores={sse.difficulty.attribute_limit=0..}] if score @s Tact > @s sse.difficulty.attribute_limit run scoreboard players operation @s Tact = @s sse.difficulty.attribute_limit
+    execute as @a[scores={sse.difficulty.attribute_limit=0..}] if score @s Soul > @s sse.difficulty.attribute_limit run scoreboard players operation @s Soul = @s sse.difficulty.attribute_limit
 
 # setting stats for the first time
 scoreboard players set @a[scores={Age=1}] BaseStrength 7
 scoreboard players set @a[scores={Age=1}] BaseDexterity 7
-scoreboard players set @a[scores={Age=1}] BaseMind 7
 scoreboard players set @a[scores={Age=1}] BaseResolve 7
 scoreboard players set @a[scores={Age=1}] BaseVitality 7
+scoreboard players set @a[scores={Age=1}] BaseMind 7
 scoreboard players set @a[scores={Age=1}] BaseTact 7
 scoreboard players set @a[scores={Age=1}] BaseSoul 7
 
@@ -37,6 +42,9 @@ execute as @a run function echoes:stats/combination_stat {stat1:Strength,stat2:D
 execute as @a run function echoes:stats/combination_stat {stat1:Vitality,stat2:Soul,result:sse.Passion}
 execute as @a run function echoes:stats/combination_stat {stat1:Mind,stat2:Tact,result:sse.Knowledge}
 
+# tertiary stats
+execute as @a run function echoes:stats/combination_stat {stat1:Soul,stat2:Tact,result:sse.Charm}
+
 # Tenacity & Fortitude
 execute as @a run scoreboard players operation @s Tenacity = @s Vitality
     execute as @a run scoreboard players remove @s Tenacity 10
@@ -44,17 +52,30 @@ execute as @a run scoreboard players operation @s Tenacity = @s Vitality
             execute as @a run scoreboard players set @s[scores={Tenacity=..-1}] Tenacity 0
         scoreboard players add @a Tenacity 12
             execute as @a run scoreboard players operation @s[tag=Vitality_feat_3] Tenacity *= #const.3 value
-            execute as @a[tag=Vitality_feat_3] run function math:round {score:Tenacity,round:2,reduce:true}
+            execute as @a[tag=Vitality_feat_3] run function math:divide/int {score:Tenacity,div:2}
 
 execute as @a[tag=Vitality_feat_1] run scoreboard players operation @s Fortitude = @s Tenacity
     execute as @a run scoreboard players operation @s Fortitude /= #const.2 value
     scoreboard players remove @a Fortitude 2
-    
+
+# Hunger - if you're under 7 shanks, you're hungry no matter how high this stat is
+scoreboard players set @a[scores={SoulSigned=1..}] sse.Hunger 20
+execute as @a[scores={SoulSigned=1..,Food=7..}] run scoreboard players operation @s sse.Hunger -= @s Food
+    # execute as @a[scores={SoulSigned=1..,Food=..6}] run scoreboard players operation @s sse.Hunger += @s Food
+execute as @a[scores={SoulSigned=1..}] run scoreboard players operation @s generic_h = @s Soul
+    scoreboard players remove @a[scores={SoulSigned=1..}] generic_h 15
+    execute as @a[scores={SoulSigned=1..}] run scoreboard players set @s[scores={generic_h=..-1}] generic_h 0
+    execute as @a[scores={SoulSigned=1..}] run scoreboard players operation @s generic_h /= #const.6 value
+    scoreboard players add @a[scores={SoulSigned=1..}] generic_h 1
+    scoreboard players set @a[scores={SoulSigned=1..,generic_h=11..}] generic_h 10
+execute as @a[scores={SoulSigned=1..}] run scoreboard players operation @s sse.Hunger -= @s generic_h
+    scoreboard players set @a[scores={sse.Hunger=..-1}] sse.Hunger 0
+
 # scoreboard players set @a[tag=!Vitality_feat_1] Tenacity 0
 scoreboard players set @a[tag=!Vitality_feat_1] Fortitude 0
 
-scoreboard players set @a Potential 300
-scoreboard players set @a Prowess 40
+# scoreboard players set @a Potential 300
+# scoreboard players set @a Prowess 40
 execute as @a run function echoes:stats/attribute_set
 
 # attribute default / attribute set
@@ -81,10 +102,10 @@ execute as @a run attribute @s movement_speed modifier remove scale.movement_spe
 
 execute as @a store result score @s generic_h run attribute @s scale get 1000
 execute as @a run scoreboard players remove @s generic_h 1000
-execute as @a unless score @s generic_h matches -150..150 run function echoes:stats/scale_attribute/_main {score:generic_h}
+execute if score $sse.gamerule.scale_attributes true matches 1 as @a unless score @s generic_h matches -150..150 run function echoes:stats/scale_attribute/_main {score:generic_h}
 
 execute as @a run scoreboard players operation @s generic_h /= #const.5 value
-execute as @a run function math:round {score:generic_h,round:10,reduce:true}
+execute as @a run function math:divide/int {score:generic_h,div:10}
 execute as @a run scoreboard players operation @s Strength += @s generic_h
 execute as @a run scoreboard players operation @s Dexterity += @s generic_h
 

@@ -1,0 +1,1 @@
+$attribute @s movement_speed modifier add elixir.disorientation.movement_speed -$(value) add_multiplied_total

@@ -3,7 +3,7 @@ scoreboard players add @a InfinitePowderslingAmmo 0
 scoreboard players set @a[gamemode=creative,scores={InfinitePowderslingAmmo=0}] InfinitePowderslingAmmo 1
 
 # gun damage downscale - every 1000 points before this is 1 point of damage
-function math:round {score:gun_base_damage,round:100,reduce:true}
+function math:divide/int {score:gun_base_damage,div:100}
 
 # gun type
 execute as @a[scores={GunType=0}] if items entity @s weapon.mainhand *[minecraft:custom_data~{weapon:{gun:{type:"bolt_action"}}}] run scoreboard players set @s GunType 1

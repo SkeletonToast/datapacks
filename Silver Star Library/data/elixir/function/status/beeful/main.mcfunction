@@ -1,2 +1,2 @@
 # give your effects, change attributes, etc
-execute at @s[scores={DamageTaken=1..}] on attacker run function run:recur {r:10,f:"function elixir:status/beeful/summon_bee with entity @s"}
+execute as @a[scores={DamageTaken=1..}] run function parse:score_unended {score:elixir.beeful.amplifier,function:"elixir:status/beeful/begin_summon"}

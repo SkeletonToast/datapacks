@@ -1,5 +1,7 @@
 # $score, $append_position, $prepend_position, $prepend, $append, $function, $macros
 
+# $execute if score @s $(score) = @s ssid run say swm $(score) $(function) $(macros)
+
 scoreboard players set @s parse_score_recursions -1
 scoreboard players set @s parse_score_append_position 0
 scoreboard players set @s parse_score_digits 0

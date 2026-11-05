@@ -7,3 +7,6 @@ playsound block.fire.ambient block @a ~ ~ ~ 1 0.5
 kill @e[type=interaction,tag=campfire,distance=0.5]
 execute if block ~ ~ ~ campfire align xyz run summon interaction ~0.5 ~ ~0.5 {width:1.01f,height:0.5f,response:1b,Tags:["campfire"]}
 execute if block ~ ~ ~ soul_campfire align xyz run summon interaction ~0.5 ~ ~0.5 {width:1.01f,height:0.5f,response:1b,Tags:["soul_campfire","campfire"]}
+
+scoreboard players set @s placed_campfire 0
+scoreboard players set @s placed_soul_campfire 0

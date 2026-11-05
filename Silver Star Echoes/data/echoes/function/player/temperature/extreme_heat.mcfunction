@@ -3,7 +3,7 @@ scoreboard players set @s[scores={temp_dangerous=..-1}] temp_dangerous 0
 
 execute if predicate ss_lib:random_10_percent if predicate ss_lib:random_50_percent run damage @s[scores={temp_dangerous=20..}] 3 minecraft:on_fire
 execute if predicate ss_lib:random_1_percent run damage @s[scores={temp_dangerous=40..}] 6 minecraft:on_fire
-execute as @s[scores={temp_dangerous=20..}] run function ss_lib:actionbar {"title":"{\"text\":\"[△] You are dying from heat.\",\"color\":\"#ff7b00\"}","duration":20}
+execute as @s[scores={temp_dangerous=20..}] run function ss_lib:actionbar {title:"{text:'[△] You are dying from heat.',color:'#ff7b00'}",duration:20}
 # damage @s[scores={temp_dangerous=80..}] 1 minecraft:on_fire
 
 # execute if predicate ss_lib:random_1_percent run effect give @s[scores={temp_dangerous=40..}] darkness 3 0 true

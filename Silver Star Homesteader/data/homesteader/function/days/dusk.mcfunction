@@ -1,5 +1,5 @@
 title @a times 1t 60t 20t
-execute as @a[tag=!InCombat,scores={Dimension=1}] run function homesteader:days/dusk_monarch
+execute as @a[tag=!InCombat,scores={Dimension=1}] run function homesteader:days/titles/dusk_monarch
 function ss_lib:fetch/moon_phase
 
 # title @a[scores={in_combat=1..}] title [""]

@@ -28,7 +28,7 @@ function talisman:_tick
 # campfires
 function echoes:campfires/_tick
 
-function ss_lib:fetch/health {s:"@a"}
+# function ss_lib:fetch/health {s:"@a",bypass_check:true}
 
 # death coords
 function ss_lib:deathcoords

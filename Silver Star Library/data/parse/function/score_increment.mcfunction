@@ -1,4 +1,7 @@
-$execute if score @s ssid = @s $(score) run say swm $(score)
+# $say si $(function) $(value)
+# say hi
+
+# scoreboard players operation @s Test = @s parse_score_input
 
 # calculating
 scoreboard players operation @s generic_b = @s parse_score_input
@@ -6,8 +9,6 @@ scoreboard players operation @s generic_b %= #const.10 value
 scoreboard players operation @s parse_score_input /= #const.10 value
 
 scoreboard players add @s parse_score_recursions 1
-
-# $say si $(function) $(macros)
 
 # finalize - nonnegative
 $execute if score @s parse_score_recursions = @s parse_score_digits \

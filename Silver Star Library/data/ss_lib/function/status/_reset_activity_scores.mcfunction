@@ -4,7 +4,7 @@ scoreboard objectives remove alert_active
 # scoreboard objectives remove bouncy_active
 # scoreboard objectives remove disabled_active
 # scoreboard objectives remove disarmed_active
-# scoreboard objectives remove disoriented_active
+# scoreboard objectives remove disorientation_active
 # scoreboard objectives remove encumbered_active
 # scoreboard objectives remove enshrouded_active
 # scoreboard objectives remove fortified_active

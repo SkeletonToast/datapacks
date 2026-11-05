@@ -1,0 +1,7 @@
+$execute as @e[type=!#ss_lib:not_alive,type=!player,distance=$(prev)..$(value)] unless score @s execute.attacker matches $(ssid) at @s on attacker if entity @s[scores={ssid=$(ssid)}] run scoreboard players set @s execute.targeted_timer 100
+$execute as @e[type=!#ss_lib:not_alive,type=!player,distance=$(prev)..$(value),scores={execute.targeted_timer=100}] at @s on attacker if score @s ssid matches $(ssid) run scoreboard players set @n[type=!#ss_lib:not_alive,type=!player,distance=0,scores={execute.targeted_timer=100}] execute.attacker $(ssid)
+$execute as @e[type=!#ss_lib:not_alive,type=!player,distance=$(prev)..$(value),scores={execute.targeted_timer=100,execute.attacker=$(ssid)}] on attacker run scoreboard players set @s execute.targeting_timer 100
+
+$scoreboard players set @s generic_a $(value)
+scoreboard players add @s generic_a 5
+$execute unless entity @e[type=!#ss_lib:not_alive,type=!player,distance=$(prev)..$(value),scores={execute.targeted_timer=100,execute.attacker=$(ssid)}] run function parse:score_unended_with_macros {score:generic_a,function:"execute:internal/on/targeting",macros:"prev:$(value),ssid:$(ssid)"}

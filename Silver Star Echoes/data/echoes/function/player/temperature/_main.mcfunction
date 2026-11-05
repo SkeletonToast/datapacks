@@ -4,8 +4,8 @@ scoreboard players set @a[scores={RestOrRespawn=1}] temp_modifier 0
 # temperature resistance
 execute as @a if score @s Health >= @s BaseMaxHealth run scoreboard players add @s heat_resistance 5
 execute as @a if score @s Health >= @s BaseMaxHealth run scoreboard players add @s cold_resistance 5
-execute as @a if score @s Health >= @s BaseMaxHealth run scoreboard players add @s[scores={Food=20}] heat_resistance 5
-execute as @a if score @s Health >= @s BaseMaxHealth run scoreboard players add @s[scores={Food=20}] cold_resistance 5
+execute as @a if score @s Health >= @s BaseMaxHealth run scoreboard players add @s[scores={sse.Hunger=0}] heat_resistance 5
+execute as @a if score @s Health >= @s BaseMaxHealth run scoreboard players add @s[scores={sse.Hunger=0}] cold_resistance 5
     # fire resistance
     execute as @a if predicate {"type":"minecraft:entity_properties","entity":"this","predicate":{"effects":{"minecraft:fire_resistance":{}}}} run \
         scoreboard players add @s heat_resistance 100

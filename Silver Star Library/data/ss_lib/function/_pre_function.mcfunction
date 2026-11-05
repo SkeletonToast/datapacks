@@ -4,10 +4,11 @@
 execute as @a[scores={GameTime=1}] run function ss_lib:first_join
 
 # health
-scoreboard players set @a Health 0
-scoreboard players set @a TotalHealth 0
+scoreboard players set @a Health -1
+scoreboard players set @a TotalHealth -1
 scoreboard players set @a Absorption -1
-scoreboard players set @a BaseMaxHealth 0
+scoreboard players set @a BaseMaxHealth -1
+scoreboard players set @a MaxHealth -1
 
 # damage
 execute as @a run scoreboard players operation @s DamageTaken += @s DamageAbsorbed
@@ -36,10 +37,11 @@ scoreboard players set @a ChestplateType -1
 scoreboard players set @a LeggingsType -1
 scoreboard players set @a BootsType -1
 
-scoreboard players set @a Armorless 0
+scoreboard players set @a Armorless -1
+scoreboard players set @a ArmorToughness -1
 
-scoreboard players set @a OnGround 0
-scoreboard players set @a FallFlying 0
+scoreboard players set @a OnGround -1
+scoreboard players set @a FallFlying -1
 
 scoreboard players set @a InWater -1
     # Most of these scores are set to -1. OnGround and FallFlying are untouched because, by default, they're run every tick.
@@ -95,3 +97,6 @@ tag @a[tag=ssl.action.negate_fall_damage] remove ssl.action.negate_fall_damage
     # to zero, will prevent fall damage, but will be removed when the player touches the ground.
 
 scoreboard players add @e Age 1
+
+function elixir:_pre_function
+function execute:_pre_function

@@ -1,0 +1,1 @@
+$attribute @s jump_strength modifier add elixir.feeble.jump_strength -$(value)

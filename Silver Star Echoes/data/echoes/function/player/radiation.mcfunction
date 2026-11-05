@@ -14,6 +14,6 @@ execute as @a[scores={Dimension=4}] run scoreboard players add @s sse.radiation.
 execute as @a[scores={Dimension=7}] run scoreboard players add @s sse.radiation.add 5
 execute as @a[scores={Dimension=3}] run scoreboard players add @s sse.radiation.add 18
 
-function math:percentage_score {base:sse.radiation.add,percentage:sse.difficulty.radiation_multiplier}
+function math:percentage_score {base_score:sse.radiation.add,percentage_score:sse.difficulty.radiation_multiplier}
 scoreboard players operation @s sse.radiation.add -= @s sse.radiation.resistance
 scoreboard players operation @s sse.radiation.resistance = @s Vitality
