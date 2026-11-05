@@ -1,0 +1,1 @@
+$execute as @a[scores={ssid=$(value)}] run function parse:score_unended_with_macros {score:execute.attacker,function:"execute:internal/on/target",macros:"ssid:$(value),run:'$(run)'"}

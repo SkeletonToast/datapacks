@@ -1,4 +1,5 @@
 function elixir:_tick
+function execute:_tick
 
 scoreboard players set @a DamageDealt 0
 scoreboard players set @a DamageDealtAbsorbed 0

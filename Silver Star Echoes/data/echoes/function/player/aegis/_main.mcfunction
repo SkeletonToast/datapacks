@@ -4,11 +4,14 @@ execute as @a run function echoes:player/aegis/overheal_calculate
 
 # execute as @a if score @s aegis_timer > @s aegis_timer_max run scoreboard players operation @s aegis_timer = @s aegis_timer_max
 
-scoreboard players set @a[scores={aegis_timer=201..}] aegis_timer 200
+execute as @a run scoreboard players operation @s generic_t = @s aegis_timer_max
+scoreboard players operation @a generic_t *= #const.2 value
+execute as @a if score @s aegis_timer > @s generic_t run scoreboard players operation @s aegis_timer = @s generic_t
 scoreboard players add @a[scores={DamageTaken=1..}] aegis_timer 50
 scoreboard players add @a aegis_timer 0
 
 # golden apples
+scoreboard players add @a[scores={used_enchanted_golden_apple=1..}] used_golden_apple 1
 scoreboard players set @a[scores={used_golden_apple=1..}] aegis_timer 0
 effect give @a[scores={used_enchanted_golden_apple=1..}] absorption infinite 4 true
 

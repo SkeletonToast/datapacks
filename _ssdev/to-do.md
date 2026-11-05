@@ -3,6 +3,7 @@
 - this could let you add some basic talismans for homesteader maybe
 
 ## Homesteader
+- fix scouring stones so that they actually get consumed and do kindling effects
 - add different day titlecard styles. everything below is JUST ideas
     - default: "monarch", echoes-style
     - "modernist" - sleek and whatnot
@@ -27,7 +28,6 @@ Priority
 - exhaustion
 
 Changes
-- ensure tact camera distance works
 - make sure combination stats actually calculate as intended, i changed around the multipliers
 - rename items
     - rename cocoa beans to something else

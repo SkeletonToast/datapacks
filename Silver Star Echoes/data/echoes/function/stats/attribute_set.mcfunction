@@ -81,8 +81,8 @@ execute store result score @s generic_h run attribute @s scale get 100
 
             # super sprinting
             execute as @s[tag=SurgeSprintEligible] if score @s SuperSprintTime >= @s SurgeSprintThreshold if predicate ss_lib:input/forward unless predicate ss_lib:input/sprint run function echoes:stats/movement/super_sprint
-            execute as @s[scores={SprintTime=40..,sse.Hunger=10..,SneakTime=0}] if predicate ss_lib:input/sprint run function echoes:stats/movement/super_sprint
-            execute as @s[scores={StrafeTime=20..,SprintTime=0,sse.Hunger=..16,SneakTime=0}] if predicate ss_lib:input/sprint run function echoes:stats/movement/super_sprint
+            execute as @s[scores={SprintTime=40..,sse.Hunger=..10,SneakTime=0}] if predicate ss_lib:input/sprint run function echoes:stats/movement/super_sprint
+            execute as @s[scores={StrafeTime=20..,SprintTime=0,SneakTime=0}] if predicate ss_lib:input/sprint run function echoes:stats/movement/super_sprint
             scoreboard players set @s[tag=!SuperSprinting] SuperSprintTime 0
         
         # diseligibility

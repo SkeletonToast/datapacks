@@ -1,4 +1,4 @@
-# spirit-parasite
+# soul-parasite
 
 function talisman:talismans/bank_1/parasite_trinkets {stat:Strength,sign:"-"}
 function talisman:talismans/bank_1/parasite_trinkets {stat:Dexterity,sign:"-"}

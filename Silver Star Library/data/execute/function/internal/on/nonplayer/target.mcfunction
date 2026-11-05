@@ -1,0 +1,1 @@
+$execute as @e[type=!#ss_lib:not_alive,type=!player,scores={execute.targeted_timer=$(value),execute.attacker=$(ssid)}] run $(run)

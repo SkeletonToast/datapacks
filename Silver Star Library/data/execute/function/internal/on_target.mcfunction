@@ -1,1 +1,0 @@
-$execute as @a[scores={ssid=$(value)}] run function parse:score_unended_with_macros {score:ssid,function:"$(function)",macros:"ssid:$(value),run:'$(run)'"}
