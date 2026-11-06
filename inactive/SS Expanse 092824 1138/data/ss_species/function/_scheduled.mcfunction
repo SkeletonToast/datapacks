@@ -1,5 +1,0 @@
-schedule clear ss_species:s_007f_cobwebdetection
-schedule clear ss_species:s_028f_isolation
-
-schedule function ss_species:s_007f_cobwebdetection 10t
-schedule function ss_species:s_028f_isolation 20t

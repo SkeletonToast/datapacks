@@ -1,3 +1,0 @@
-$execute if items entity @s weapon.$(hand)hand clock[custom_data~{certification:{type:1b}}] run scoreboard players set @s artifact_type 1
-$execute if items entity @s weapon.$(hand)hand clock[custom_data~{certification:{type:2b}}] run scoreboard players set @s artifact_type 2
-$execute if items entity @s weapon.$(hand)hand clock[custom_data~{certification:{type:3b}}] run scoreboard players set @s artifact_type 3

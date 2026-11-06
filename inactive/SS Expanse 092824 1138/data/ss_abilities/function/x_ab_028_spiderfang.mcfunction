@@ -1,2 +1,0 @@
-execute as @a[scores={ability028=1..}] at @s anchored eyes run function ss_abilities:ab_028f_raycast
-execute as @a[scores={ability028=1..},predicate=ss_library:is_sneaking] run function ss_abilities:ab_028f_clear_spider_fang

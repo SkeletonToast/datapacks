@@ -1,1 +1,0 @@
-$scoreboard players set @r[nbt={UUID:$(UUID)}] hysterical_timer 2400

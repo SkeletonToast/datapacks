@@ -1,4 +1,0 @@
-$execute at @a[scores={of_origin=2,of_job=2},distance=..$(distance)] run scoreboard players add @s conscript_phalanx $(score)
-$scoreboard players operation @e[type=!#ss_lib:not_alive,type=!#ss_lib:hostile,distance=..$(distance)] conscript_phalanx += @s conscript_phalanx
-$execute if entity @e[type=!#ss_lib:not_alive,type=!#ss_lib:hostile,distance=..$(distance)] if predicate ss_lib:random_50_percent run particle minecraft:small_gust ^ ^ ^ $(delta) $(delta) $(delta) 0 1 normal @a
-$execute if entity @e[type=!#ss_lib:not_alive,type=!#ss_lib:hostile,distance=..$(distance)] if predicate ss_lib:random_50_percent run particle minecraft:end_rod ^ ^ ^ $(delta) $(delta) $(delta) 0 1 normal @a

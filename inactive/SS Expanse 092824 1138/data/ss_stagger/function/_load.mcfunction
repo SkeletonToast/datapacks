@@ -1,7 +1,0 @@
-scoreboard objectives add StaggerDamageTaken minecraft.custom:minecraft.damage_taken
-scoreboard objectives add StaggerRevivalTimer dummy
-scoreboard objectives add StaggerDeathTimer dummy
-scoreboard objectives add StaggerEligible dummy
-scoreboard objectives add StaggerRechargeTimer dummy
-scoreboard objectives add Staggered dummy
-scoreboard objectives remove StaggerHealth

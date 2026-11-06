@@ -1,2 +1,0 @@
-particle explosion_emitter
-summon bat ~ ~ ~ {attributes:[{id:"minecraft:generic.armor",base:0},{id:"minecraft:generic.armor_toughness",base:0},{id:"minecraft:generic.max_health",base:100},{id:"minecraft:generic.scale",base:5}]}

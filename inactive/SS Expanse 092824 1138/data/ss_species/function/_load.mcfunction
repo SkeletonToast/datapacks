@@ -1,4 +1,0 @@
-function ss_species:_createscores
-function ss_species:_scheduled
-
-scoreboard objectives add GuidebookTimer dummy

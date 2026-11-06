@@ -1,5 +1,0 @@
-$execute as @s[scores={trait002=5}] run $(format) elytra[custom_name='{"color":"#ff8e24","italic":false,"text":"Racing Wings"}',lore=['{"color":"gray","italic":false,"text":"Can only be used by a winged creature."}'],unbreakable={},repair_cost=250,custom_data={wing_trait:true,wing_type:5},enchantments={levels:{"minecraft:vanishing_curse":1},show_in_tooltip:false}]
-$execute as @s[scores={trait002=6}] run $(format) elytra[custom_name='{"color":"#9b4bc9","italic":false,"text":"Kamikaze Wings"}',lore=['{"color":"gray","italic":false,"text":"Can only be used by a winged creature."}'],unbreakable={},repair_cost=250,custom_data={wing_trait:true,wing_type:6},enchantments={levels:{"minecraft:vanishing_curse":1},show_in_tooltip:false}]
-$execute as @s[scores={trait002=7}] run $(format) elytra[custom_name='{"color":"#4b86c9","italic":false,"text":"Cruising Wings"}',lore=['{"color":"gray","italic":false,"text":"Can only be used by a winged creature."}'],unbreakable={},repair_cost=250,custom_data={wing_trait:true,wing_type:7},enchantments={levels:{"minecraft:vanishing_curse":1},show_in_tooltip:false}]
-
-tag @s add GivenWings

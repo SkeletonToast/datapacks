@@ -1,9 +1,0 @@
-execute as @a[scores={species=016}] run attribute @s minecraft:generic.scale base set 2
-execute as @a[scores={species=016}] run attribute @s minecraft:generic.movement_speed base set 0.2
-execute as @a[scores={species=016}] run attribute @s minecraft:player.entity_interaction_range base set 6
-execute as @a[scores={species=016}] run attribute @s minecraft:player.block_interaction_range base set 9
-execute as @a[scores={species=016}] run attribute @s minecraft:player.block_break_speed base set 4
-execute as @a[scores={species=016}] run attribute @s minecraft:generic.jump_strength base set 0.8
-execute as @a[scores={species=016}] run attribute @s minecraft:generic.step_height base set 1
-execute as @a[scores={species=016}] run attribute @s minecraft:generic.safe_fall_distance base set 6
-execute as @a[scores={species=016}] run attribute @s minecraft:generic.gravity base set 0.12

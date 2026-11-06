@@ -1,2 +1,0 @@
-$execute positioned .0 0 .0 positioned ^ ^ ^1 summon area_effect_cloud at @n[type=area_effect_cloud,distance=.1..,nbt={Duration:0}] run function ss_species:s_025f_midair_attack_3 {"projectile":"$(projectile)"}
-kill @s

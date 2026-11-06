@@ -1,1 +1,0 @@
-scoreboard players set @a[scores={species=027}] ability023 1

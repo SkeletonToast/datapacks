@@ -1,1 +1,0 @@
-$particle dolphin ~ ~ ~ 0.35 0.35 0.35 0 $(count) normal $(visibility)

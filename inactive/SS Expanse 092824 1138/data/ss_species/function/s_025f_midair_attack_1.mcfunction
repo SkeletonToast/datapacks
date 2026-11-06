@@ -1,2 +1,0 @@
-$execute summon $(projectile) summon area_effect_cloud run function ss_species:s_025f_midair_attack_2 {"projectile":"$(projectile)"}
-# $clear @s firework_rocket[custom_data={Tags:["species025"]}] $(cost)

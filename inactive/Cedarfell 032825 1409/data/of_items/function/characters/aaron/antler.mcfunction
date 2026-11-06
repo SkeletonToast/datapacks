@@ -1,1 +1,0 @@
-give @s stick[custom_model_data={strings:['aaron_antler']},item_name='"Aaron\'s Antler"',max_stack_size=1]

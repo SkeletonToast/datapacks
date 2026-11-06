@@ -1,6 +1,0 @@
-function ss_library:_pre_function
-function crowskeep:_pre_function
-
-function crowskeep:_characters
-
-function crowskeep:_post_function

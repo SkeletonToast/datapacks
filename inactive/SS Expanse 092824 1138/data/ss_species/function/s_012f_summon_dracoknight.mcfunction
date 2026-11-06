@@ -1,1 +1,0 @@
-particle dragon_breath ~ ~1.5 ~ 0.15 1 0.12 0.02 10

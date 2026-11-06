@@ -1,3 +1,0 @@
-execute as @a[scores={class009=1..}] unless entity @s[scores={Dimension=1}] run scoreboard players operation @s class009-species = @s species
-execute as @a[scores={class009=1..,Dimension=1}] if score @s species = @s class009-species run scoreboard players set @s species 22
-execute as @a[scores={class009=1..}] unless entity @s[scores={Dimension=1}] unless score @s species = @s class009-species run scoreboard players operation @s class009-species = @s species

@@ -1,2 +1,0 @@
-execute as @a[scores={ability028=1..}] run attribute @s minecraft:player.block_break_speed modifier remove ability028_block_break_speed
-execute as @a[scores={ability028=1..,ItemSelected=0}] at @s anchored eyes run function ss_raycast:block_specific {"block":"cobweb","particle":"snowflake","particle_visibility":"none","increment_distance":"0.25","max_lifetime":"20","run_on_success":"attribute @s minecraft:player.block_break_speed modifier add ability028_block_break_speed 1000 add_multiplied_total"}

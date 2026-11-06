@@ -1,1 +1,0 @@
-$scoreboard players add @s of_encumbrance_items $(value)
