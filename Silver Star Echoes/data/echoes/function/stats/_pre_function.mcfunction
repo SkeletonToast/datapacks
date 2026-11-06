@@ -59,17 +59,18 @@ execute as @a[tag=Vitality_feat_1] run scoreboard players operation @s Fortitude
     scoreboard players remove @a Fortitude 2
 
 # Hunger - if you're under 7 shanks, you're hungry no matter how high this stat is
-scoreboard players set @a[scores={SoulSigned=1..}] sse.Hunger 20
-execute as @a[scores={SoulSigned=1..,Food=7..}] run scoreboard players operation @s sse.Hunger -= @s Food
+scoreboard players set @a sse.Hunger 20
+execute as @a[scores={Food=7..}] run scoreboard players operation @s sse.Hunger -= @s Food
     # execute as @a[scores={SoulSigned=1..,Food=..6}] run scoreboard players operation @s sse.Hunger += @s Food
-execute as @a[scores={SoulSigned=1..}] run scoreboard players operation @s generic_h = @s Soul
-    scoreboard players remove @a[scores={SoulSigned=1..}] generic_h 15
-    execute as @a[scores={SoulSigned=1..}] run scoreboard players set @s[scores={generic_h=..-1}] generic_h 0
-    execute as @a[scores={SoulSigned=1..}] run scoreboard players operation @s generic_h /= #const.6 value
-    scoreboard players add @a[scores={SoulSigned=1..}] generic_h 1
-    scoreboard players set @a[scores={SoulSigned=1..,generic_h=11..}] generic_h 10
-execute as @a[scores={SoulSigned=1..}] run scoreboard players operation @s sse.Hunger -= @s generic_h
+execute as @a run scoreboard players operation @s generic_h = @s Soul
+    scoreboard players remove @a generic_h 15
+    execute as @a run scoreboard players set @s[scores={generic_h=..-1}] generic_h 0
+    execute as @a run scoreboard players operation @s generic_h /= #const.6 value
+    scoreboard players add @a generic_h 1
+    scoreboard players set @a[scores={generic_h=11..}] generic_h 10
+execute as @a run scoreboard players operation @s sse.Hunger -= @s generic_h
     scoreboard players set @a[scores={sse.Hunger=..-1}] sse.Hunger 0
+scoreboard players set @a[scores={Soul=0}] sse.Hunger 0
 
 # scoreboard players set @a[tag=!Vitality_feat_1] Tenacity 0
 scoreboard players set @a[tag=!Vitality_feat_1] Fortitude 0
@@ -115,6 +116,7 @@ execute as @a run scoreboard players operation @s Dexterity += @s generic_h
 # execute as @a run scoreboard players operation @s generic_a /= #const.2 value
 # execute as @a run scoreboard players operation @s SurgeSprintThreshold -= @s Dexterity
 
-scoreboard players set @a SurgeSprintThreshold 200
+scoreboard players operation @a SurgeSprintThreshold = $sse.super_sprint.threshold_default value
+scoreboard players operation @a SurgeSprintThreshold *= #const.2 value
 execute as @a run scoreboard players operation @s SurgeSprintThreshold -= @s Dexterity
 scoreboard players set @a[scores={SurgeSprintThreshold=..59}] SurgeSprintThreshold 60

@@ -1,4 +1,4 @@
-execute if score $day_time value matches 0 run scoreboard players add $day value 1
+scoreboard players add $day value 1
 
 # days
 scoreboard players add $homestead.calendar.total_days value 1

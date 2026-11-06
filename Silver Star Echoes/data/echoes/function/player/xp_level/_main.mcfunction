@@ -27,8 +27,8 @@ execute as @a[scores={xp_level=1..,BootsType=4}] if score @s xp_level > @s Mind 
 
 # cap and restore
 execute as @a[scores={xp_level=1..}] if score @s xp_level > @s xp_cap run function parse:score_unended {score:xp_increment,function:"echoes:player/xp_level/cap"}
-execute as @a[scores={xp_stored=1..,xp_level=2..}] if score @s xp_level < @s xp_cap run function parse:score_unended {score:xp_increment,function:"echoes:player/xp_level/restore"}
-execute as @a[scores={xp_stored=..0,xp_stored_reserve=1..}] if score @s xp_level < @s xp_cap run function parse:score_unended {score:xp_increment,function:"echoes:player/xp_level/restore"}
+execute as @a[scores={xp_stored=1..,xp_level=2..,TimeSinceRest=0}] if score @s xp_level < @s xp_cap run function parse:score_unended {score:xp_increment,function:"echoes:player/xp_level/restore"}
+execute as @a[scores={xp_stored=..0,xp_stored_reserve=1..,TimeSinceRest=0}] if score @s xp_level < @s xp_cap run function parse:score_unended {score:xp_increment,function:"echoes:player/xp_level/restore"}
 
 # stored xp death reset
 scoreboard players set @a generic_m 30

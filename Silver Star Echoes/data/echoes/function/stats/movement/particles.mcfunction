@@ -2,6 +2,8 @@ $execute at @s[scores={$(condition)}] run particle small_gust ~ ~0.3 ~ 0.1 0.1 0
 $execute at @s[scores={$(condition),Dexterity=20..}] run particle small_gust ~ ~0.3 ~ 0.1 0.1 0.1 0.1 1 normal @a
 $execute if score @s SuperSprintTime >= @s SurgeSprintThreshold at @s[scores={$(condition),Dexterity=20..}] run particle cloud ~ ~0.3 ~ 0.2 0.1 0.2 0.1 1 normal @a
 # $execute if score @s SuperSprintTime >= @s SurgeSprintThreshold at @s[scores={$(condition),Dexterity=20..}] rotated ~90 ~ positioned ^-1.5 ^ ^ run particle small_gust ~ ~0.4 ~ 0.2 0.2 0.2 0.1 5 normal @a
+
+execute unless entity @s[tag=SurgeSprintEligible] run return fail
 execute if score @s SuperSprintTime >= @s SurgeSprintThreshold at @s[scores={OnGround=1,sse.Physique=..49,Dexterity=40..},predicate=!ss_lib:is/swimming] rotated ~90 ~ positioned ^-1 ^ ^ run particle minecraft:explosion ~ ~0.6 ~ 0.2 0.2 0.2 0.1 1 normal @a
 execute if score @s SuperSprintTime >= @s SurgeSprintThreshold at @s[scores={OnGround=1,sse.Physique=50..},predicate=!ss_lib:is/swimming] rotated ~90 ~ positioned ^-1 ^ ^ run particle minecraft:explosion ~ ~0.6 ~ 0.2 0.2 0.2 0.1 1 normal @a
 

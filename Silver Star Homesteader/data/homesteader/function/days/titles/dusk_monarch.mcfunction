@@ -1,2 +1,2 @@
 title @s title ["𝔑 𝔦 𝔤 𝔥 𝔱 𝔣 𝔞 𝔩 𝔩"]
-title @s subtitle ["- Night ",{"score":{"name":"$day","objective":"value"}}," -"]
+title @s subtitle ["- Year ",{"score":{"name":"$homestead.calendar.year","objective":"value"}},", Month ",{"score":{"name":"$homestead.calendar.month","objective":"value"}},", Night ",{"score":{"name":"$homestead.calendar.day","objective":"value"}}," -"]

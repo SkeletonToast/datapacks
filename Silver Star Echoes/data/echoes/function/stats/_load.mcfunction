@@ -57,6 +57,8 @@ scoreboard objectives add res_armor dummy
 
 scoreboard objectives add smooth_sprint_multiplier dummy
 scoreboard objectives add dex_movement_speed dummy
+scoreboard objectives add dex_friction_modifier dummy
+scoreboard objectives add dex_air_drag_modifier dummy
 scoreboard objectives add dex_jump_strength dummy
 scoreboard objectives add dex_step_height dummy
 scoreboard objectives add tact_sneaking_speed dummy
@@ -84,4 +86,5 @@ scoreboard objectives add soul_luck dummy
 # movement
 scoreboard objectives add StrafeTime dummy
 scoreboard objectives add SuperSprintTime dummy
+    scoreboard players set $sse.super_sprint.threshold_default value 140
 scoreboard objectives add SurgeSprintThreshold dummy

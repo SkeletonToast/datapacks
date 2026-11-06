@@ -21,6 +21,8 @@ scoreboard objectives add sse.respawn.retention_level dummy
 # aegis
     scoreboard objectives add aegis_timer dummy
     scoreboard objectives add aegis_timer_max dummy
+        scoreboard players set $sse.aegis.timer_default value 140
+        scoreboard players set $sse.aegis.timer_cap value 400
     scoreboard objectives add aegis_timer_reduction dummy
     scoreboard objectives add used_golden_apple minecraft.used:minecraft.golden_apple
     scoreboard objectives add used_enchanted_golden_apple minecraft.used:minecraft.enchanted_golden_apple

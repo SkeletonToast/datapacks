@@ -2,7 +2,7 @@
 
 execute as @a run function echoes:player/aegis/overheal_calculate
 
-# execute as @a if score @s aegis_timer > @s aegis_timer_max run scoreboard players operation @s aegis_timer = @s aegis_timer_max
+execute as @a if score @s aegis_timer > $sse.aegis.timer_cap value run scoreboard players operation @s aegis_timer = $sse.aegis.timer_cap value
 
 execute as @a run scoreboard players operation @s generic_t = @s aegis_timer_max
 scoreboard players operation @a generic_t *= #const.2 value
@@ -26,7 +26,9 @@ effect give @a[scores={killed_player=1..,Vitality=0}] absorption 1 2 true
 
 execute as @a[scores={aegis_timer=0}] run function echoes:player/aegis/apply
 
-scoreboard players set @a[tag=AegisApplied] aegis_timer_max 100
+# timer reset
+scoreboard players operation @a[tag=AegisApplied] aegis_timer_max = $sse.aegis.timer_default value
+execute as @a[tag=AegisApplied,tag=InCombat] run scoreboard players operation @s aegis_timer_max *= #const.2 value
 
 execute as @a[tag=AegisApplied,scores={Soul=..79}] run scoreboard players operation @s aegis_timer_max -= @s Soul
 execute as @a[tag=AegisApplied,scores={Soul=80..}] run scoreboard players remove @s aegis_timer_max 80
@@ -39,12 +41,11 @@ execute as @a[tag=AegisApplied,scores={aegis_timer_max=1..,BootsType=2}] run sco
 
 scoreboard players set @a[scores={aegis_timer_max=..0}] aegis_timer_max 1
 
-execute as @a[tag=AegisApplied,scores={aegis_timer_max=..16}] if score @s aegis_amplifier >= @s aegis_amplifier_max run scoreboard players set @s aegis_timer_max 17
+execute as @a[tag=AegisApplied,scores={aegis_timer_max=..19}] if score @s aegis_amplifier >= @s aegis_amplifier_max run scoreboard players set @s aegis_timer_max 20
     # for now, this limiter exists because regeneration 1 2 can't apply any faster than once every 0.85 seconds.
     # if regeneration 1 3 is enabled, it can be applied once every 0.25 seconds
 # execute as @a[tag=AegisApplied,scores={aegis_timer_max=..9}] if score @s aegis_amplifier >= @s aegis_amplifier_max run scoreboard players set @s aegis_timer_max 10
 
-execute as @a[tag=InCombat] run scoreboard players operation @s aegis_timer_max *= #const.2 value
 execute as @a[tag=AegisApplied] run scoreboard players operation @s aegis_timer = @s aegis_timer_max
 
 scoreboard players remove @a[scores={aegis_timer=1..}] aegis_timer 1
