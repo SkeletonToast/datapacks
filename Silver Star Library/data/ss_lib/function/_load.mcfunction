@@ -1,4 +1,5 @@
 function elixir:_load
+function execute:_load
 
 scoreboard objectives add ssl.permissions_level dummy
 # If you don't want to use these permissions, then just ignore this. All players will just have permissions level of 1, which does not allow them to do literally anything (that you don't intentionally allow).

@@ -1,5 +1,5 @@
-# this is just here to fully disable surge sprinting. i don't really like it as is
-scoreboard players set @a SurgeSprintThreshold -1
+# all this is just disabled for now.
+                return fail
 
 execute if score @s encumbrance_unadjusted matches 30.. run title @s actionbar {"text":"!! You are too encumbered to move any faster. !!","color":"red"}
 execute if score @s encumbrance_unadjusted matches 30.. run scoreboard players set @s pause_actionbars 40
@@ -26,7 +26,7 @@ execute if score @s sse.gamerule.smooth_sprinting matches 0 run scoreboard playe
     tag @s[scores={sse.Physique=50..},predicate=!ss_lib:is/swimming] add SurgeSprintEligible
     tag @s[scores={EchoLevel=80..},predicate=!ss_lib:is/swimming] add SurgeSprintEligible
     tag @s[scores={SurgeSprintThreshold=-1}] remove SurgeSprintEligible
-    execute if score @s SuperSprintTime >= @s SurgeSprintThreshold run xp add @s[tag=SurgeSprintEligible] -1 points
+    execute if score @s SuperSprintTime >= @s SurgeSprintThreshold as @s[tag=SurgeSprintEligible] run function run:interval {ticks:10,run:"xp add @s -1 points"}
 
     execute if score @s SuperSprintTime = @s SurgeSprintThreshold as @s[tag=SurgeSprintEligible,scores={OnGround=1}] at @s anchored eyes positioned ^ ^ ^ run playsound entity.breeze.wind_burst master @s ~ ~ ~ 0.3 0.7
     execute if score @s SuperSprintTime = @s SurgeSprintThreshold as @s[tag=SurgeSprintEligible,scores={OnGround=1}] at @s anchored eyes positioned ^ ^ ^ run playsound entity.player.splash.high_speed master @s ~ ~ ~ 0.3 0.7
