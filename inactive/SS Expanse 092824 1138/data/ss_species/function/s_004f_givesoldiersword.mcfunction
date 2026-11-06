@@ -1,0 +1,1 @@
+give @s stone_sword[custom_name='{"italic":false,"text":"Soldier\'s Sword"}',lore=['[{"color":"gray","italic":true,"text":"This item will be automatically"}]','[{"color":"gray","italic":true,"text":"destroyed if dropped on the ground."}]'],custom_data={quick_destroy:true},enchantments={levels:{"minecraft:mending":1,"minecraft:vanishing_curse":1},show_in_tooltip:false}] 1

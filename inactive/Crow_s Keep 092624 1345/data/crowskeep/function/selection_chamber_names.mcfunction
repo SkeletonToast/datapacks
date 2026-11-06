@@ -1,0 +1,7 @@
+$execute align xyz positioned ~0.5 ~1 ~0.5 if entity @s[scores={Characters=1..}] run summon text_display ~ ~3 ~-3 {Tags:["Chamber_Names"],text:'{"text":"$(chr1)"}',billboard:"center"}
+$execute align xyz positioned ~0.5 ~1 ~0.5 if entity @s[scores={Characters=2..}] run summon text_display ~1.5 ~3 ~-2.6 {Tags:["Chamber_Names"],text:'{"text":"$(chr2)"}',billboard:"center"}
+$execute align xyz positioned ~0.5 ~1 ~0.5 if entity @s[scores={Characters=3..}] run summon text_display ~2.6 ~3 ~-1.5 {Tags:["Chamber_Names"],text:'{"text":"$(chr3)"}',billboard:"center"}
+$execute align xyz positioned ~0.5 ~1 ~0.5 if entity @s[scores={Characters=4..}] run summon text_display ~3 ~3 ~ {Tags:["Chamber_Names"],text:'{"text":"$(chr4)"}',billboard:"center"}
+$execute align xyz positioned ~0.5 ~1 ~0.5 if entity @s[scores={Characters=5..}] run summon text_display ~2.6 ~3 ~1.5 {Tags:["Chamber_Names"],text:'{"text":"$(chr5)"}',billboard:"center"}
+$execute align xyz positioned ~0.5 ~1 ~0.5 if entity @s[scores={Characters=6..}] run summon text_display ~1.5 ~3 ~2.6 {Tags:["Chamber_Names"],text:'{"text":"$(chr6)"}',billboard:"center"}
+$execute align xyz positioned ~0.5 ~1 ~0.5 if entity @s[scores={Characters=7..}] run summon text_display ~ ~3 ~3 {Tags:["Chamber_Names"],text:'{"text":"$(chr7)"}',billboard:"center"}

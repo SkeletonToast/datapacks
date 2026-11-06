@@ -1,0 +1,11 @@
+scoreboard players remove @a[scores={class001=1..}] class001 1
+scoreboard players remove @a[scores={class002=1..}] class002 1
+scoreboard players remove @a[scores={class003=1..}] class003 1
+scoreboard players remove @a[scores={class004=1..}] class004 1
+scoreboard players remove @a[scores={class005=1..}] class005 1
+scoreboard players remove @a[scores={class006=1..}] class006 1
+scoreboard players remove @a[scores={class007=1..}] class007 1
+scoreboard players remove @a[scores={class008=1..}] class008 1
+scoreboard players remove @a[scores={class009=1..}] class009 1
+scoreboard players remove @a[scores={class010=1..}] class010 1
+scoreboard players remove @a[scores={class011=1..}] class011 1

@@ -1,0 +1,1 @@
+execute at @s run summon minecraft:item_display ~ ~0.5 ~ {Tags:["MyconidNode"],item:{id:"minecraft:crimson_fungus",Count:1},item_display:"fixed"}

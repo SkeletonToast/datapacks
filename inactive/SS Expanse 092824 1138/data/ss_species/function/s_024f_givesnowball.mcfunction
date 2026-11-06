@@ -1,0 +1,1 @@
+# item replace entity @s weapon.offhand with snowball{Tags:["species024"],display:{Name:'[{"text":"Glacian Snowball","italic":false,"color":"#ccffff"}]'}}

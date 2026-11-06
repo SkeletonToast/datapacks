@@ -1,0 +1,1 @@
+$execute at @e[type=!player,distance=..100] unless entity @n[distance=0,nbt={UUID:$(UUID)}] if score @n[distance=0] urid = @s urid anchored eyes positioned ^ ^ ^-2 if block ~ ~ ~ #ss_library:nonsolidblocks run function ss_species:s_019f_distantcounter

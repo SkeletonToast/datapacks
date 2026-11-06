@@ -1,0 +1,1 @@
+tellraw @a [{"text":"\nAbility ID Key:\n001: Grace\n002: "},{"text":"[NULL]","color":"red"},{"text":"\n003: Nestling\n004: Mineral Magic "},{"text":"(Inactive)","color":"red"},{"text":"\n005: Seaskin\n006: Luckiness\n007: Void Immunity\n008: Healthy Stagger\n009: Carnivore\n010: Herbivore\n011: Piscivore\n "}]

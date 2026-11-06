@@ -1,0 +1,13 @@
+advancement grant @s only nether/all_effects
+advancement grant @s only adventure/fall_from_world_height
+advancement grant @s only husbandry/balanced_diet
+advancement grant @s only story/shiny_gear
+advancement grant @s only story/enchant_item
+advancement grant @s only story/obtain_armor
+advancement grant @s only adventure/kill_all_mobs
+advancement grant @s only husbandry/breed_an_animal
+advancement grant @s only husbandry/tame_an_animal
+advancement grant @s only adventure/totem_of_undying
+advancement grant @s only adventure/adventuring_time
+advancement grant @s only nether/explore_nether
+advancement grant @s only end/find_end_city

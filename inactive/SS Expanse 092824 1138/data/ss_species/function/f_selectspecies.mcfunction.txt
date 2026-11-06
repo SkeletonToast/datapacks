@@ -1,0 +1,9 @@
+# species are switched by holding a certain item in the offhand and another item in the main hand. the main hand items will determine what species you switch to.
+# upon respawn, you're given a species-changing tome. this time will allow you to change species anytime, but only once per life.
+    # this tome is what's used to unlock new species during your lifetime.
+    # once you've unlocked a new species using the valuable unlock item, you can switch to that species anytime by holding the non-valuable switch item.
+    # to unlock a new species, you hold the tome in your main hand and first slot, the species item in your offhand, and keep an ore "catalyst" in your second slot.
+    # you then crouch for ten seconds, while you undergo transformation.
+    # if you're a ghost, or you've used up your one transformation per life, holding the tome will display "Unable to transform."
+        # maybe you also need some XP to transform?
+    # you can't voluntarily transform into a ghost.

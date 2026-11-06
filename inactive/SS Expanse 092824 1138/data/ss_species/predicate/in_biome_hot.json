@@ -1,0 +1,41 @@
+{
+    "condition": "minecraft:any_of",
+    "terms": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "biomes": "minecraft:desert"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "biomes": "minecraft:badlands"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "biomes": "minecraft:eroded_badlands"
+        }
+      }
+    },
+    {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "location": {
+            "dimension": "minecraft:the_nether"
+          }
+        }
+    }
+  ]
+  }

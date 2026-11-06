@@ -1,0 +1,5 @@
+execute as @e[scores={ability014=1..}] on vehicle if entity @s[type=#ss_abilities:cavalry_rideable_1] on passengers run attribute @s minecraft:generic.attack_damage modifier add ability014_riding_damage 3 add_value
+execute as @e[scores={ability014=1..}] on vehicle if entity @s[type=#ss_abilities:cavalry_rideable_2] on passengers run attribute @s minecraft:generic.attack_damage modifier add ability014_riding_damage 6 add_value
+execute as @e[scores={ability014=1..}] on vehicle if entity @s[type=#ss_abilities:cavalry_rideable_3] on passengers run attribute @s minecraft:generic.attack_damage modifier add ability014_riding_damage 9 add_value
+
+execute as @e[type=#minecraft:arrows] at @s on origin if entity @s[scores={ability014=1..}] on vehicle if entity @s[type=#ss_abilities:cavalry_rideable] as @n[type=#minecraft:arrows,distance=0] run data merge entity @s {PierceLevel:100b}

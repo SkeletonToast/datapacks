@@ -1,0 +1,3 @@
+execute as @s[nbt={SelectedItem:{id:"minecraft:poppy"}}] as @e[type=minecraft:iron_golem,distance=..10] run data merge entity @s {PlayerCreated:1b}
+execute as @s[nbt={SelectedItem:{id:"minecraft:wither_rose"}}] as @e[type=minecraft:iron_golem,distance=..10] run data merge entity @s {PlayerCreated:0b}
+$execute as @e[type=minecraft:iron_golem,distance=..10,nbt={AngryAt:$(UUID)}] run tag @s add Pacified

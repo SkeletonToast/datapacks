@@ -1,0 +1,4 @@
+execute as @a[scores={ability002=1..},predicate=ss_library:is_sprinting] run attribute @s minecraft:generic.jump_strength modifier add ability002_sprint_jump 0.75 add_multiplied_base
+execute as @a[scores={ability002=1..},predicate=ss_library:is_sneaking] run attribute @s minecraft:generic.jump_strength modifier add ability002_sneak_jump 1.5 add_multiplied_base
+execute as @a[scores={ability002=1..}] unless entity @s[predicate=ss_library:is_sprinting] run attribute @s minecraft:generic.jump_strength modifier remove ability002_sprint_jump
+execute as @a[scores={ability002=1..}] unless entity @s[predicate=ss_library:is_sneaking] run attribute @s minecraft:generic.jump_strength modifier remove ability002_sneak_jump

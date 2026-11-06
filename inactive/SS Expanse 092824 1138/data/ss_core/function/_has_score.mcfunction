@@ -1,0 +1,4 @@
+function ss_species:_has_species
+function ss_classes:_has_class
+function ss_abilities:_has_ability
+# function ss_statuses:_has_status

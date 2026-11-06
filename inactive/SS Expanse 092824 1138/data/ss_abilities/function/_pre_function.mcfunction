@@ -1,0 +1,1 @@
+scoreboard players set @a[scores={ability030=1..}] ability030-01 0

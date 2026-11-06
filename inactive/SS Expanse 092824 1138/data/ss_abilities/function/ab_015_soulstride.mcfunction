@@ -1,0 +1,2 @@
+execute as @a[scores={ability015=1..,OnGround=1},predicate=ss_abilities:on_soul_sand] run attribute @s minecraft:generic.movement_efficiency modifier add ability015_movement_efficiency 1 add_value
+execute as @a[scores={ability015=1..,OnGround=1}] unless entity @s[predicate=ss_abilities:on_soul_sand] run attribute @s minecraft:generic.movement_efficiency modifier remove ability015_movement_efficiency

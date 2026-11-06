@@ -1,0 +1,3 @@
+execute as @p[distance=..5] unless entity @s[nbt={attributes:[{base:0.5d,id:"minecraft:generic.scale"}]}] unless entity @s[nbt={attributes:[{base:0.1d,id:"minecraft:generic.scale"}]}] run function ss_workshop:size_double
+execute as @p[distance=..5,nbt={attributes:[{base:0.5d,id:"minecraft:generic.scale"}]}] run function ss_workshop:size_reset
+execute as @p[distance=..5,nbt={attributes:[{base:0.1d,id:"minecraft:generic.scale"}]}] run function ss_workshop:size_half

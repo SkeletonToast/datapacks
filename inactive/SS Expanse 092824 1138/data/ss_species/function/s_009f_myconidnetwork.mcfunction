@@ -1,0 +1,4 @@
+execute as @a[scores={species=009,SingleSneakTime=40},distance=..1] at @s anchored eyes positioned ^ ^ ^20 at @n[tag=MyconidNode,distance=..19] run function ss_species:s_009f_nodeteleport
+execute as @a[scores={species=009},distance=..1,predicate=ss_library:is_sneaking] at @s anchored eyes positioned ^ ^ ^20 at @n[tag=MyconidNode,distance=..19] positioned ~ ~-0.5 ~ run function ss_particles:composter_ring
+execute as @a[scores={species=009},distance=..1,predicate=ss_library:is_sneaking] run particle crimson_spore ~ ~ ~
+execute as @a[scores={species=009},distance=..1] at @s anchored eyes facing entity @e[tag=MyconidNode,distance=..39] feet run particle composter ^ ^ ^1 0 0 0 0 1 normal @s

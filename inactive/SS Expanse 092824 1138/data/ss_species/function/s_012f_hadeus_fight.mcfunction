@@ -1,0 +1,1 @@
+execute at @s as @e[type=enderman,distance=..200,scores={Age=1}] run data modify entity @s AngryAt set from entity @r UUID

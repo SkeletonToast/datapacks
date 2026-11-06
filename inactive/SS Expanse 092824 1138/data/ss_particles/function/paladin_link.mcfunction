@@ -1,0 +1,1 @@
+particle dripping_lava ~ ~1 ~ 0.35 0.35 0.35 0 40 normal @a

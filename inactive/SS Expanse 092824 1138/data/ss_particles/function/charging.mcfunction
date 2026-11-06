@@ -1,0 +1,1 @@
+particle minecraft:ominous_spawning ~ ~ ~ 0 0 0 3 5 normal @a
