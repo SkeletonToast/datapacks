@@ -196,6 +196,7 @@ NOTE ABOUT THE CIRCLE PROBLEM!!!! it appears to be specifically related to runni
 - phantom parsing
 - circle node counting change
 - elixir advancement added
+- update to gamerule defaults
 
 ### Execute Module
 SSL now has the Execute module, which is intended to expand on the vanilla capabilities of the /execute command, allowing for more complex command execution. It has four sub-modules:

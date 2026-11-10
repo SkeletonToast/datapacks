@@ -1,5 +1,5 @@
-function gamerule:custom/tick_range {source:homesteader,gamerule:character_limit,default:3}
-function gamerule:custom/tick_range {source:homesteader,gamerule:starlight_lantern_rate,default:200}
+function gamerule:custom/tick_range {source:homesteader,gamerule:character_limit,lower_limit:1,upper_limit:100}
+function gamerule:custom/tick_range {source:homesteader,gamerule:starlight_lantern_rate,lower_limit:1,upper_limit:1200}
 function gamerule:custom/tick_bool {source:homesteader,gamerule:light_campfires_when_placed,default:true}
 function gamerule:custom/tick_bool {source:homesteader,gamerule:do_natural_events,default:true}
 function gamerule:custom/tick_bool {source:homesteader,gamerule:do_armor_set_bonuses}

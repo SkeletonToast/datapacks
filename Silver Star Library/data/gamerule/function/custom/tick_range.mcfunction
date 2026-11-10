@@ -7,3 +7,4 @@ $scoreboard players set @a $(source).gamerule.$(gamerule) $(lower_limit)
 $scoreboard players remove @a $(source).gamerule.$(gamerule) 1
 
 scoreboard players enable @a[scores={ssl.permissions_level=4..}] ssl.gamerule.query
+$scoreboard players enable @a[scores={ssl.permissions_level=5..}] $(source).gamerule.$(gamerule)

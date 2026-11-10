@@ -3,5 +3,6 @@ $execute at @s as @e[type=!#ss_lib:not_alive,type=!player,distance=$(prev)..$(va
 $execute at @s as @e[type=!#ss_lib:not_alive,type=!player,distance=$(prev)..$(value),scores={execute.targeted_timer=100,execute.attacker=$(ssid)}] on attacker run scoreboard players set @s execute.targeting_timer 100
 
 $scoreboard players set @s generic_a $(value)
+    execute if score @s generic_a >= @s execute.gamerule.targeting_range run return fail
 scoreboard players add @s generic_a 5
 $execute unless entity @e[type=!#ss_lib:not_alive,type=!player,distance=$(prev)..$(value),scores={execute.targeted_timer=100,execute.attacker=$(ssid)}] run function parse:score_unended_with_macros {score:generic_a,function:"execute:internal/on/nonplayer/targeting",macros:"prev:$(value),ssid:$(ssid)"}

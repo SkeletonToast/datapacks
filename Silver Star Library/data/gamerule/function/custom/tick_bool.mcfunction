@@ -6,3 +6,4 @@ $execute as @a[scores={$(source).gamerule.$(gamerule)=-1..}] run function gameru
 $scoreboard players set @a $(source).gamerule.$(gamerule) -2
 
 scoreboard players enable @a[scores={ssl.permissions_level=4..}] ssl.gamerule.query
+$scoreboard players enable @a[scores={ssl.permissions_level=5..}] $(source).gamerule.$(gamerule)

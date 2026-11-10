@@ -1,1 +1,1 @@
-$function parse:score_with_macros {function:"$(function)",prepend:"",append:"",prepend_position:0,append_position:0,score:"$(score)",macros:"$(macros)"}
+$function parse:decimal_with_macros {score:"$(score)",scale:1,function:"$(function)",macros:"$(macros)"}

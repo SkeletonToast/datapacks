@@ -21,3 +21,6 @@ scoreboard objectives add elixir.disorientation.amplifier dummy
 scoreboard objectives add elixir.feeble.amplifier dummy
 scoreboard objectives add elixir.vulnerability.amplifier dummy
 scoreboard objectives add elixir.enlargement.amplifier dummy
+
+scoreboard objectives add execute.gamerule.positioned_range dummy
+scoreboard objectives add execute.gamerule.targeting_range dummy

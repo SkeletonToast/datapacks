@@ -1,0 +1,56 @@
+vestiges
+cerulean court
+cerulean sentinels
+retainers
+
+haligsundri
+ritesmaidens
+
+ichor imperya
+inquisitors
+praetors
+draese anferina
+
+order of red gold
+black gold angel hunters
+
+lonwood
+arborknights
+kestrels
+
+arcanists
+
+queenshriven
+ardents
+
+students
+    entropy
+    vitalism
+    artistry
+    stellography
+    script
+
+ashengard
+ashen revenants
+
+entertainers
+
+orderkeepers
+
+firekeepers
+kindled knights
+
+house of elkwyn
+
+draesir anordonna
+draesir anphaera
+
+proscripts
+
+havoc allegiants
+
+nightbrands
+
+silverseekers
+nightjars
+herons

@@ -1,4 +1,5 @@
 function gamerule:custom/load {source:execute,gamerule:positioned_range,default:300}
+function gamerule:custom/load {source:execute,gamerule:targeting_range,default:50}
 
 scoreboard objectives add execute.target dummy
 scoreboard objectives add execute.attacker dummy

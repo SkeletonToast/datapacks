@@ -7,4 +7,4 @@ scoreboard players operation @s generic_a *= #const.100 value
     scoreboard players operation @s generic_a *= #const.10 value
 scoreboard players operation @s generic_a /= @s generic_b
 
-$function parse:score_with_macros {score:generic_a,function:"math:chance/percentage",append:".",append_position:3,macros:"run:'$(run)'",prepend:"",prepend_position:0}
+$function parse:decimal_with_macros {score:generic_a,function:"math:chance/percentage",scale:0.001,macros:"run:'$(run)'"}

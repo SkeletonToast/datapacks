@@ -6,16 +6,20 @@ scoreboard players set @s[scores={elixir.generic.amplifier=76..}] elixir.generic
 function ss_lib:fetch/gear/weapon_weight
 
 # armor
-execute as @s[scores={Armor=20..}] run function parse:score_with_macros {score:elixir.generic.amplifier,function:"elixir:status/feeble/movement_speed",append:".",append_position:2,macros:"type:armor",prepend:"",prepend_position:0}
-execute as @s[scores={Armor=16..19}] if score @s Armor > @s Food run function parse:score_with_macros {score:elixir.generic.amplifier,function:"elixir:status/feeble/movement_speed",append:".",append_position:2,macros:"type:armor",prepend:"",prepend_position:0}
+execute as @s[scores={Armor=20..}] run function parse:decimal_with_macros {score:elixir.generic.amplifier,function:"elixir:status/feeble/movement_speed",scale:0.01,macros:"type:armor"}
+    # 0.01
+execute as @s[scores={Armor=16..19}] if score @s Armor > @s Food run function parse:decimal_with_macros {score:elixir.generic.amplifier,function:"elixir:status/feeble/movement_speed",scale:0.01,macros:"type:armor"}
+    # 0.01
 execute as @s[scores={Armor=..19}] if score @s Armor <= @s Food run attribute @s minecraft:movement_speed modifier remove elixir.feeble.movement_speed.armor
 
 # weapon
-execute as @s[scores={WeaponWeight=3..}] run function parse:score_with_macros {score:elixir.generic.amplifier,function:"elixir:status/feeble/movement_speed",append:".",append_position:2,macros:"type:weapon",prepend:"",prepend_position:0}
+execute as @s[scores={WeaponWeight=3..}] run function parse:decimal_with_macros {score:elixir.generic.amplifier,function:"elixir:status/feeble/movement_speed",scale:0.01,macros:"type:weapon"}
+    # 0.01
 attribute @s[scores={WeaponWeight=..2}] minecraft:movement_speed modifier remove elixir.feeble.movement_speed.weapon
 
 # shield
-execute as @s[scores={UsingShield=1..}] run function parse:score_with_macros {score:elixir.generic.amplifier,function:"elixir:status/feeble/movement_speed",append:".",append_position:2,macros:"type:shield",prepend:"",prepend_position:0}
+execute as @s[scores={UsingShield=1..}] run function parse:decimal_with_macros {score:elixir.generic.amplifier,function:"elixir:status/feeble/movement_speed",scale:0.01,macros:"type:shield"}
+    # 0.01
 attribute @s[scores={UsingShield=0}] minecraft:movement_speed modifier remove elixir.feeble.movement_speed.shield
 
 # jump strength

@@ -1,5 +1,6 @@
 # execute unless score #sse.allegiances value matches 16 run return fail
     # why was this here?? for other pack compatibility???
+scoreboard objectives add sse.oath dummy
 scoreboard objectives add sse.allegiance dummy
 
 # there are level 1, level 2, and level 3 oaths.
@@ -28,7 +29,7 @@ scoreboard objectives add sse.allegiance dummy
 
     # ichor imperya
     team add imperyal "Ichor Imperya"
-    team modify imperyal prefix "[Imperyal] "
+    team modify imperyal prefix [{text:"["},{text:"Imperyal",color:"#F5B027"},{text:"] "}]
         team add inquisitor "Inquisitors"
         team modify inquisitor prefix "[Inquisitor] "
             team add praetor "Praetors"
@@ -58,7 +59,7 @@ scoreboard objectives add sse.allegiance dummy
         team add ardent "Ardents"
         team modify ardent prefix "[Ardent] "
 
-# Allegiance: Neutral (oaths 100-199)
+# Allegiance: Neutral
     # students
         team add student_entropy "Student (Entropy)"
         team add student_vital "Student (Vitalism)"
@@ -101,11 +102,11 @@ scoreboard objectives add sse.allegiance dummy
         team add draesir_ferina "Draese Anferina"
         team add draesir_ordonna "Draese Anordonna"
         team add draesir_phaera "Draese Anphaera"
-        team modify draesir_ferina prefix "[Draesir Anferina] "
-        team modify draesir_ordonna prefix "[Draesir Anordonna] "
-        team modify draesir_phaera prefix "[Draesir Anphaera] "
+        team modify draesir_ferina prefix "[Ichordraese] "
+        team modify draesir_ordonna prefix "[Lightdraese] "
+        team modify draesir_phaera prefix "[Stormdraese] "
 
-# Allegiance: Runahl / Havoc (oaths 200-299)
+# Allegiance: Runahl / Havoc
     # proscripts
     team add proscript "Proscripts"
     team modify proscript prefix "[Proscript] "

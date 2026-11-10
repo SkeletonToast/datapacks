@@ -1,6 +1,5 @@
 execute as @s[scores={aggressive_active=-1}] run function ss_lib:status/_display_status {"type":"+","color":"#ff7424","status":"Aggressive",append:""}
 
-# function parse:score {"score":"aggressive_amount","function":"ss_lib:status/aggressive_apply",prepend_position:"0",prepend:"",append_position:"2",append:"."}
 scoreboard players operation @s generic_a = @s aggressive_amount
 
 execute as @s[scores={generic_a=90..99}] run function ss_lib:status/aggressive_increment {"multiplier":"0.9"}

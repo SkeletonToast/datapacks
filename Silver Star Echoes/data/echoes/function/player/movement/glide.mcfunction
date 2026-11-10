@@ -14,5 +14,4 @@ execute as @a[predicate=!ss_lib:input/jump] run scoreboard players set @s GlideT
 execute as @a[predicate=!ss_lib:is/descending] run scoreboard players set @s GlideTime 0
 execute as @a[scores={GlideEligible=0}] run scoreboard players set @s GlideTime 0
 
-execute as @a[scores={GlideTime=1..}] run function parse:score {score:GlideTime,function:"echoes:player/movement/glide_gravity_apply",\
-    prepend:"-",append:".",prepend_position:0,append_position:2}
+execute as @a[scores={GlideTime=1..}] run function parse:decimal {score:GlideTime,function:"echoes:player/movement/glide_gravity_apply",scale:-0.01}

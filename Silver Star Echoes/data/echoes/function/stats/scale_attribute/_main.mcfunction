@@ -9,7 +9,7 @@ execute if score @s scale_modifier matches ..-1 run function parse:decimal \
 execute if score @s scale_modifier matches ..-1 run function parse:decimal \
     {score:scale_modifier,function:"echoes:stats/scale_attribute/fall_damage_multiplier",scale:0.001}
 execute if score @s scale_modifier matches 1.. run function parse:score \
-    {score:scale_modifier,function:"echoes:stats/scale_attribute/fall_damage_multiplier",prepend:"-",append:".",prepend_position:0,append_position:-3}
+    {score:scale_modifier,function:"echoes:stats/scale_attribute/fall_damage_multiplier",scale:-0.001}
 
 # keep this at the end of the file so that it doesn't mess up any other calculations
 scoreboard players operation @s scale_modifier *= #const.3 value
