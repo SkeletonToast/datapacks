@@ -1,4 +1,5 @@
 function echoes:player/oaths/_load
+function echoes:player/rally/_load
 
 scoreboard objectives add in_combat dummy
 

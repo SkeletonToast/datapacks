@@ -1,6 +1,5 @@
-# execute unless score #sse.oaths value matches 16 run return fail
-    # why was this here??
-scoreboard objectives add sse.oath dummy
+# execute unless score #sse.allegiances value matches 16 run return fail
+    # why was this here?? for other pack compatibility???
 scoreboard objectives add sse.allegiance dummy
 
 # there are level 1, level 2, and level 3 oaths.

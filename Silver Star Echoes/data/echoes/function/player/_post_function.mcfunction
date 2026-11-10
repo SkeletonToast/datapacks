@@ -33,10 +33,12 @@ execute as @a[scores={sse.difficulty.default_aegis_amplifier=-1..}] run scoreboa
 # execute as @a run attribute @s armor modifier add echoes.armor_reduction -0.5 add_multiplied_total
     # ArmorType doesn't actually take your armor points value into account so this is fine to keep w/out further modification to like encumbrance
 
+# xp level
+function echoes:player/xp_level/_main
 
 # ichor damage
         # if anything grants ichor damage immunity, put it here, before the below function
-execute as @s[scores={sse.oath=3}] run scoreboard players operation @s ichor_damage /= #const.2 value
+execute as @s[scores={sse.allegiance=3}] run scoreboard players operation @s ichor_damage /= #const.2 value
 
 execute as @a[scores={ichor_damage=1..}] run function parse:score_unended {score:ichor_damage,function:"echoes:player/combat/ichor_damage"}
 scoreboard players set @a ichor_damage 0

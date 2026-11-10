@@ -21,14 +21,16 @@
 ## Echoes
 Priority
 - talismans
-- elixir effects
 - rallying
+- elixir effects
 - oath effects
 - radiation
 - exhaustion
 
 Changes
-- make sure combination stats actually calculate as intended, i changed around the multipliers
+- look for opportunities to move things to post functions
+- figure out what to do to replace elytra
+- figure out a system for oath relations / rallying
 - rename items
     - rename cocoa beans to something else
     - rename mending to frail mending or something
@@ -125,6 +127,12 @@ funsies
                 - no idea if it would actually be any more efficient but it might look slightly cleaner? who knows
 
 ## Library
+- maybe overhaul to use return more
+- change all instances of return fail to return a success if applicable
+- add decimal multiplication function
+    - scale must be the same for all inputs
+    - inputs: base, factor, and "e" (10e(e)), so 0 means it's a scale of 1, 1 means a scale of 10, -1 means a scale of 0.1
+    - formula would be: base * factor * 10e$(e)
 - add general scores that store ssids, that allow you to store entity relationships beyond what is stored in vanilla (like player targets) (maybe call these urids? come up with some name for it)
     - target
         - when the player deals damage, execute as all players on attacker. if attack has ssid equal to damage dealer ssid, then damage dealer gets that person's ssid as their target ssid
