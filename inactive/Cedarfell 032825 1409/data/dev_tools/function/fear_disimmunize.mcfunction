@@ -1,1 +1,0 @@
-$scoreboard players set @r[nbt={UUID:$(UUID)}] of_fear_eligible 0

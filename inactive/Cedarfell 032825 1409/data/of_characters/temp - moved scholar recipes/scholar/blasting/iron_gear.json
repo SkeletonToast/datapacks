@@ -1,8 +1,0 @@
-{
-    "type": "minecraft:blasting",
-    "ingredient": "#of_characters:iron_gear",
-    "result": {
-      "id": "minecraft:iron_ingot"
-    }
-  }
-  

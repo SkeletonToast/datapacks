@@ -1,1 +1,0 @@
-$execute as @e[distance=..30,type=#ss_lib:hostile] unless entity @s[scores={trait004-02=1..}] at @s on target if entity @s[type=player,nbt={UUID:$(UUID)}] as @n[type=#ss_lib:hostile,distance=0] run function ss_lib:pacify

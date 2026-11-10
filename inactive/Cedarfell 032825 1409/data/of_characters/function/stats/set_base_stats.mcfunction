@@ -1,5 +1,0 @@
-$scoreboard players set @s BaseBody $(Body)
-$scoreboard players set @s BaseMind $(Mind)
-$scoreboard players set @s BaseSoul $(Soul)
-$scoreboard players set @s BaseWit $(Wit)
-$scoreboard players set @s BaseWill $(Will)

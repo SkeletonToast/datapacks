@@ -1,1 +1,0 @@
-execute as @a[scores={Class=1}] if score @s Dexterity > @s Strength run scoreboard players operation @s encumbrance_reduction = @s Dexterity

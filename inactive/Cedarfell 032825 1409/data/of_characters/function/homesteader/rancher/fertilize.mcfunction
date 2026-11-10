@@ -1,6 +1,0 @@
-execute if block ~ ~ ~ wheat unless block ~ ~ ~ wheat[age=7] run setblock ~ ~ ~ wheat[age=7]
-execute if block ~ ~ ~ carrots unless block ~ ~ ~ carrots[age=7] run setblock ~ ~ ~ carrots[age=7]
-execute if block ~ ~ ~ potatoes unless block ~ ~ ~ potatoes[age=7] run setblock ~ ~ ~ potatoes[age=7]
-execute if block ~ ~ ~ beetroots unless block ~ ~ ~ beetroots[age=3] run setblock ~ ~ ~ beetroots[age=3]
-execute if block ~ ~ ~ melon_stem unless block ~ ~ ~ melon_stem[age=7] run setblock ~ ~ ~ melon_stem[age=7]
-execute if block ~ ~ ~ pumpkin_stem unless block ~ ~ ~ pumpkin_stem[age=7] run setblock ~ ~ ~ pumpkin_stem[age=7]

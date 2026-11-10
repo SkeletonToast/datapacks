@@ -1,1 +1,0 @@
-$execute as @r[nbt={UUID:$(UUID)}] run function of_items:characters/aaron/paintball_gun

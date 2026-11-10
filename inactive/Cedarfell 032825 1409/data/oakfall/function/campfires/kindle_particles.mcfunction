@@ -1,2 +1,0 @@
-execute if block ~ ~ ~ campfire at @s anchored eyes positioned ^ ^ ^ positioned ~ ~-0.5 ~ run function of_particles:campfire
-execute if block ~ ~ ~ soul_campfire at @s anchored eyes positioned ^ ^ ^ positioned ~ ~-0.5 ~ run function of_particles:soul_campfire

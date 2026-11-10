@@ -1,3 +1,0 @@
-execute as @a unless entity @s[scores={of_update=1..}] run give @s iron_ingot[item_model=gold_ingot,item_name='"Advanced Smithing Alloy"',rarity=uncommon,enchantment_glint_override=true,custom_data={weapon:{smithing:{soul_campfire:true,type:"advanced"}}},lore=['[{"text":"Used for smithing Artisan Weapons.","italic":false,"color":"gray"}]']] 10
-
-execute as @a unless entity @s[scores={of_update=1..}] run scoreboard players add @a of_update 1

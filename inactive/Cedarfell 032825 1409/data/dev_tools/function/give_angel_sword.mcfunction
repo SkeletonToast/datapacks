@@ -1,1 +1,0 @@
-$execute as @r[nbt={UUID:$(UUID)}] run function of_items:angel_weapons/lucifer_item
