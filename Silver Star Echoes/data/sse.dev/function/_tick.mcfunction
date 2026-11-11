@@ -77,7 +77,7 @@ execute as @a unless score @s settings matches 0 run scoreboard players set @s s
 # execute as SkeletonToast at @s run function sse.dev:witch_aura {value:10}
 # execute as SkeletonToast at @s run function sse.dev:witch_aura {value:15}
 
-# execute as @a[scores={ssid=528,observatory=1..}] at @s run function parse:score_unended {score:observatory,function:"sse.dev:observatory"}
+# execute as @a[scores={ssid=528,observatory=1..}] at @s run function parse:simple {score:observatory,function:"sse.dev:observatory"}
 # execute as @a[scores={ssid=528},tag=witches] at @s run function circle:draw_at_entity {nodes:10,radius:10,run_at_node:"particle end_rod ~ ~ ~ 0.1 0.1 0.1 0 3"}
-# execute as @a[scores={ssid=528,observatory=1..}] unless predicate ss_lib:is/moving at @s run function parse:score_unended {score:observatory,function:"sse.dev:witch_aura"}
+# execute as @a[scores={ssid=528,observatory=1..}] unless predicate ss_lib:is/moving at @s run function parse:simple {score:observatory,function:"sse.dev:witch_aura"}
 # scoreboard players add @a[scores={ssid=528,observatory=1..}] observatory 1

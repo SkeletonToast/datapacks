@@ -36,21 +36,9 @@ execute store result score @s generic_h run attribute @s scale get 100
         # because the modulus remainder will subtract 1 if it's odd, and 0 if it's even
     execute if score @s generic_attribute < @s Tenacity run scoreboard players operation @s generic_attribute = @s Tenacity
     execute if score @s generic_attribute > @s sse.difficulty.health_limit run scoreboard players operation @s generic_attribute = @s sse.difficulty.health_limit
-    execute unless score @s generic_attribute = @s res_max_health run function parse:score_unended \
+    execute unless score @s generic_attribute = @s res_max_health run function parse:simple \
         {score:generic_attribute,function:"echoes:stats/set/max_health"}
             # this sets base max health, so don't worry about subtracting Tenacity or anything
-
-# armor: -Res
-    # scoreboard players operation @s generic_attribute = @s res_armor
-    #     scoreboard players operation @s generic_a = @s generic_attribute
-    #     scoreboard players operation @s generic_a %= #const.2 value
-    #     scoreboard players operation @s generic_attribute -= @s generic_a
-    # execute unless score @s generic_attribute = @s res_armor run function parse:score \
-    #     {score:generic_attribute,prepend:"-",append:"",prepend_position:0,append_position:0,function:"echoes:stats/set/armor_health"}
-
-    # function ss_lib:fetch/armor {s:"@s[scores={Tact=30..}]"}
-        # armor (if armorless): +Tact / 2 (If Tact ≥ 30, caps at 68 Tact)
-        # armor_toughness (if armorless): +Tact / 5 (If Tact ≥ 30, caps at 68 Tact)
 
 # movement_speed: +Dex / 1000
     scoreboard players operation @s smooth_sprint_multiplier = @s Food
@@ -118,7 +106,7 @@ execute store result score @s generic_h run attribute @s scale get 100
         scoreboard players remove @s generic_attribute 20
     function math:divide/int {score:generic_attribute,div:3}
         scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
-    execute unless score @s generic_attribute = @s dex_tact_safe_fall_distance run function parse:score_unended \
+    execute unless score @s generic_attribute = @s dex_tact_safe_fall_distance run function parse:simple \
         {score:generic_attribute,function:"echoes:stats/set/safe_fall_distance"}
 
 # jump_strength: +Dex
@@ -250,5 +238,5 @@ execute store result score @s generic_h run attribute @s scale get 100
     scoreboard players operation @s generic_attribute = @s soul_attributes
     scoreboard players remove @s generic_attribute 15
         scoreboard players set @s[scores={generic_attribute=..-1}] generic_attribute 0
-    execute unless score @s generic_attribute = @s soul_luck run function parse:score_unended \
+    execute unless score @s generic_attribute = @s soul_luck run function parse:simple \
         {score:generic_attribute,function:"echoes:stats/set/luck"}

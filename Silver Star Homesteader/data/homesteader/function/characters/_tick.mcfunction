@@ -1,1 +1,1 @@
-execute as @a run function parse:score_unended {function:"homesteader:characters/character/switch",score:ssid}
+execute as @a run function parse:simple {function:"homesteader:characters/character/switch",score:ssid}

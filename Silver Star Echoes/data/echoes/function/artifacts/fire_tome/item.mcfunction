@@ -3,10 +3,10 @@ $item replace entity @s weapon.$(hand) with blaze_powder[item_name="Tome of Flam
 scoreboard players set @s generic_b 60
 scoreboard players operation @s generic_b -= @s Mind
 scoreboard players operation @s generic_b /= #const.10 value
-function parse:score_unended {score:generic_b,function:"echoes:artifacts/drain_xp"}
+function parse:simple {score:generic_b,function:"echoes:artifacts/drain_xp"}
 
 effect give @s fire_resistance 3 0 false
 
-execute at @s anchored eyes run function parse:score_unended {score:Mind,function:"echoes:artifacts/fire_tome/flame"}
+execute at @s anchored eyes run function parse:simple {score:Mind,function:"echoes:artifacts/fire_tome/flame"}
 
 scoreboard players set @s used_blaze_powder 0

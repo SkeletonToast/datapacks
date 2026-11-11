@@ -19,9 +19,9 @@ $execute store result score @s[scores={$(source).$(status).duration=1..}] elixir
 
 # comparing stored values, switching stored data if necessary
 $execute if score @s elixir.storage.current_amplifier < @s elixir.storage.stored_amplifier if score @s elixir.storage.current_duration > @s elixir.storage.stored_duration run \
-    function parse:score_unended_with_macros {function:"elixir:storage/write_amplifier",score:elixir.storage.current_amplifier,macros:"ssid:$(ssid),source:$(source),status:$(status),stack:stored"}
+    function parse:macros/complex_unended {function:"elixir:storage/write_amplifier",score:elixir.storage.current_amplifier,macros:"ssid:$(ssid),source:$(source),status:$(status),stack:stored"}
 $execute if score @s elixir.storage.current_amplifier < @s elixir.storage.stored_amplifier if score @s elixir.storage.current_duration > @s elixir.storage.stored_duration run \
-    function parse:score_unended_with_macros {function:"elixir:storage/write_duration",score:elixir.storage.current_duration,macros:"ssid:$(ssid),source:$(source),status:$(status),stack:stored"}
+    function parse:macros/complex_unended {function:"elixir:storage/write_duration",score:elixir.storage.current_duration,macros:"ssid:$(ssid),source:$(source),status:$(status),stack:stored"}
 
 # edge case - changing current duration
 $execute if score @s elixir.storage.stored_amplifier >= @s elixir.storage.current_amplifier if score @s elixir.storage.current_duration < @s elixir.storage.stored_duration run \
@@ -33,9 +33,9 @@ execute if score @s elixir.storage.stored_amplifier >= @s elixir.storage.current
 
 # writing new values - ONLY if incoming amplifier is HIGHER. otherwise it just stayed stored or changed current duration
 $execute if score @s elixir.storage.current_amplifier < @s elixir.storage.stored_amplifier run \
-    function parse:score_unended_with_macros {function:"elixir:storage/write_amplifier",score:elixir.storage.stored_amplifier,macros:"ssid:$(ssid),source:$(source),status:$(status),stack:$(value)"}
+    function parse:macros/complex_unended {function:"elixir:storage/write_amplifier",score:elixir.storage.stored_amplifier,macros:"ssid:$(ssid),source:$(source),status:$(status),stack:$(value)"}
 $execute if score @s elixir.storage.current_amplifier < @s elixir.storage.stored_amplifier run \
-    function parse:score_unended_with_macros {function:"elixir:storage/write_duration",score:elixir.storage.stored_duration,macros:"ssid:$(ssid),source:$(source),status:$(status),stack:$(value)"}
+    function parse:macros/complex_unended {function:"elixir:storage/write_duration",score:elixir.storage.stored_duration,macros:"ssid:$(ssid),source:$(source),status:$(status),stack:$(value)"}
 
 # writing new scores - has to be this way otherwise the two comparisons don't work
 execute if score @s elixir.storage.current_amplifier < @s elixir.storage.stored_amplifier run \

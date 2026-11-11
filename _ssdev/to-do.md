@@ -198,6 +198,34 @@ NOTE ABOUT THE CIRCLE PROBLEM!!!! it appears to be specifically related to runni
 - elixir advancement added
 - update to gamerule defaults
 
+
+## Major Changes
+**Score Parse Module**
+- ALL FUNCTIONS HAVE BEEN RENAMED. This change is intended to make SPM more legible, more clear in its functionality, and generally better-organized. Summary:
+    - Functions ending in "_with_macros" are now contained in their own `parse:macros/` directory, and no longer end with "_with_macros".
+    - I would imagine nobody was referencing them directly, but the "internal" functions have been partitioned as well, into `parse:internal/`.
+    - Functions no longer have "score" in their name. It's a bit redundant, and does nothing but make the function names longer. I am assuming that everybody who uses SPM knows that they're parsing a score.
+    - `parse:score_unended` and sister functions have been renamed to follow the convention of `parse:simple`.
+    - `parse:score` and sister functions have been renamed to follow the convention of `parse:complex`.
+- A full list of changed function names is below:
+    - `parse:score_unended` -> `parse:simple`
+    - `parse:score_unended_with_macros` -> `parse:macros/simple`
+    - `parse:score_append` -> `parse:append`
+    - `parse:score_prepend` -> `parse:prepend`
+    - `parse:score` -> `parse:complex`
+    - `parse:score_with_macros` -> `parse:macros/complex`
+    - `parse:score_increment` -> `parse:internal/increment`
+    - `parse:score_recur` -> `parse:internal/recur`
+- The old functions are no longer supported, but will be included in THIS PATCH ONLY in order to facilitate a smooth transition. This means, they're still in the code, they will just be removed next patch.
+
+### Score Parse Module
+**Please see the Major Changes section if you haven't already.**
+Relatedly to last patch, another massive change has been made to SPM: The introduction of the `parse:macros/decimal` function. This function allows you to effectively pass macros through the `parse:decimal` function. As well as covering most use cases for `parse:macros/simple`, `parse:complex`, and `parse:macros/complex`, this also means that `parse:macros/simple` is DRASTICALLY more performance-intensive. `parse:macros/decimal` functions the same way as `parse:decimal`, it just now takes the `$(macros)` input parameter, which is the same as it's always been.
+
+This also means means that basically the only use case I had left for the original SPM code is gone. Which is good! This new code is significantly more flexible and performance-intensive. It is a bit sad to see that code, which was really the first notable datapack project I ever worked on, become mostly obsolete, though.
+
+Of course, the other functions will still be maintained. Even if I personally don't currently use them, they still definitely have use cases that aren't covered just by `parse:decimal` and `parse:macros/decimal`.
+
 ### Execute Module
 SSL now has the Execute module, which is intended to expand on the vanilla capabilities of the /execute command, allowing for more complex command execution. It has four sub-modules:
 - `execute:anchored/`
@@ -205,10 +233,10 @@ SSL now has the Execute module, which is intended to expand on the vanilla capab
 - `execute:on/`
 - `execute:positioned/`
 
-All functions take `$(run)` as an input parameter. This should be the FULL command that is run after being put through the execute module.
-
+All functions take `$(run)` as an input parameter (along with others, dependent on the function). This should be the FULL command that is run after being put through the execute module.
 
 **Subfunctions**\
 `execute:anchored/body` executes the specified command anchored at a position halfway between the executor's eyes, and feet.\
 `execute:from/body` executes the specified command, rotated so that it matches the rotation of the executing player's body. This is different from just executing a function based on where the player is facing, because it is dependent upon which way the player's body is facing, not their head. This function only works on players.\
-`execute:on/target` executes the specified command AS the 
+`execute:on/target` executes the specified command AS the player most recently damaged by the player executing the function. `execute:on/targets` executes the specified command as ALL eligible players that have been damaged by the executor. `execute:on/nonplayer/target` and `execute:on/nonplayer/targets` do the same, but are able to target non-player entities.\
+All of the "execute on target" functions ONLY target entities that the executor has damaged in the last five seconds. This five-second limit is meant to help achieve parity with vanilla, as executing a command `on attacker` will only target entities that have attacked the executor in the last five seconds.

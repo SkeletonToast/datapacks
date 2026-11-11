@@ -19,7 +19,7 @@ execute if score @s ssa.attack_speed_cap.attack_speed <= @s ssa.attack_speed_cap
 scoreboard players operation @s ssa.attack_speed_cap.attack_speed -= @s ssa.attack_speed_cap
     # otherwise, gets value over the cap
 
-$function parse:decimal_with_macros {score:ssa.attack_speed_cap.attack_speed,function:"ss_armory:attack_speed_cap/apply",scale:0.1,macros:"sign:$(sign)"}
+$function parse:macros/decimal {score:ssa.attack_speed_cap.attack_speed,function:"ss_armory:attack_speed_cap/apply",scale:0.1,macros:"sign:$(sign)"}
 
 # scoreboard players operation @s generic_a = @s ssa.attack_speed_cap.attack_speed
 # scoreboard players operation @s generic_a %= #const.10 value

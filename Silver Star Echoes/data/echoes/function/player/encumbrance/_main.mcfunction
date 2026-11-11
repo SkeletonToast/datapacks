@@ -61,8 +61,6 @@ execute as @a if score @s encumbrance <= @s encumbrance_hard run scoreboard play
 execute if score $sse.gamerule.creative_encumbrance true matches 0 run scoreboard players set @a[gamemode=creative] encumbrance 0
 scoreboard players set @a[gamemode=spectator] encumbrance 0
     
-# execute as @a[scores={encumbrance=1..}] run function parse:score \
-        {score:encumbrance,prepend:"-",append:".",prepend_position:0,append_position:2,function:"echoes:player/encumbrance/speed_apply"}
 execute as @a[scores={encumbrance=1..}] run function parse:decimal {score:encumbrance,scale:-0.01,function:"echoes:player/encumbrance/speed_apply"}
 execute as @a[scores={encumbrance=1..}] run function parse:decimal {score:encumbrance,scale:-0.01,function:"echoes:player/encumbrance/swim_apply"}
 execute as @a[scores={encumbrance_jump=1..,SneakTime=0}] run function parse:decimal {score:encumbrance_jump,scale:-0.01,function:"echoes:player/encumbrance/jump_apply"}

@@ -4,7 +4,7 @@
 # safe fall distance + plus 1 block per level
 # say lightweight
 
-execute as @s[scores={elixir.generic.amplifier=1..9}] run function parse:score_unended \
+execute as @s[scores={elixir.generic.amplifier=1..9}] run function parse:simple \
     {function:"elixir:status/lightweight/attributes",score:elixir.generic.amplifier}
 
 execute unless score @s elixir.generic.amplifier matches 10.. run return fail

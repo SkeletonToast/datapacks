@@ -40,7 +40,7 @@ function echoes:player/xp_level/_main
         # if anything grants ichor damage immunity, put it here, before the below function
 execute as @s[scores={sse.allegiance=3}] run scoreboard players operation @s ichor_damage /= #const.2 value
 
-execute as @a[scores={ichor_damage=1..}] run function parse:score_unended {score:ichor_damage,function:"echoes:player/combat/ichor_damage"}
+execute as @a[scores={ichor_damage=1..}] run function parse:simple {score:ichor_damage,function:"echoes:player/combat/ichor_damage"}
 scoreboard players set @a ichor_damage 0
 
 advancement revoke @a only echoes:using_clock

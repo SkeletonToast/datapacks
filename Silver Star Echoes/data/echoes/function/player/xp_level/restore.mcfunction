@@ -1,4 +1,4 @@
-execute as @s[tag=xp_stall_prevention] run function parse:score_unended {score:xp_cap,function:"echoes:player/xp_level/set"}
+execute as @s[tag=xp_stall_prevention] run function parse:simple {score:xp_cap,function:"echoes:player/xp_level/set"}
 execute as @s[tag=xp_stall_prevention] run scoreboard players operation @s xp_level = @s xp_cap
 execute as @s[tag=xp_stall_prevention] run return fail
 

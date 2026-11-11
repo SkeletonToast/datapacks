@@ -7,7 +7,7 @@ GitHub: https://github.com/SkeletonToast
 
 GUIDE
 - Required input macros: $function, $score, (optional)[$prepend, $prepend_position, $append, $append_position]
-    + $append, $prepend, and $append_position are only required if using parse:score. They can be bypassed with parse:score_unended
+    + $append, $prepend, and $append_position are only required if using parse:complex. They can be bypassed with parse:simple.
 - $function: enter the address of the function that will be run with the FINAL output value (e.g. test:function)
 - $score: the name of the scoreboard objective that is being parsed.
 - $prepend: characters that are prepended to the ENTIRE output value. for example, an input of 123 and a $prepend of +0. will result in output: +0.123

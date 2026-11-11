@@ -3,7 +3,7 @@ $item replace entity @s weapon.$(hand) with iron_sword[item_name="Tome of Sharpn
 scoreboard players set @s generic_b 60
 scoreboard players operation @s generic_b -= @s Mind
 scoreboard players operation @s generic_b /= #const.10 value
-function parse:score_unended {score:generic_b,function:"echoes:artifacts/drain_xp"}
+function parse:simple {score:generic_b,function:"echoes:artifacts/drain_xp"}
 
 function echoes:artifacts/slashing_tome/slash
 

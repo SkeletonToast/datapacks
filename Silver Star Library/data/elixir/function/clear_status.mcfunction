@@ -1,1 +1,1 @@
-$function parse:score_unended_with_macros {score:ssid,function:"elixir:internal/status_nullify",macros:"source:'$(source)',status:'$(status)'"}
+$function parse:macros/complex_unended {score:ssid,function:"elixir:internal/status_nullify",macros:"source:'$(source)',status:'$(status)'"}

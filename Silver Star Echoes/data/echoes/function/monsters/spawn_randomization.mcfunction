@@ -6,11 +6,11 @@ scoreboard players operation @s generic_attribute = @r[distance=..100,scores={Re
 scoreboard players operation @s generic_b = @s generic_attribute
     scoreboard players operation @s generic_b /= @r 10
     scoreboard players set @s[scores={generic_b=100..}] generic_b 99
-execute as @s[scores={generic_b=1..}] run function parse:score_unended \
+execute as @s[scores={generic_b=1..}] run function parse:simple \
     {score:generic_b,function:"echoes:monsters/spawn_max_health"}
-execute as @s[scores={generic_b=1..}] run function parse:score_unended \
+execute as @s[scores={generic_b=1..}] run function parse:simple \
     {score:generic_b,function:"echoes:monsters/spawn_armor"}
-execute as @s[scores={generic_b=1..}] run function parse:score_unended \
+execute as @s[scores={generic_b=1..}] run function parse:simple \
     {score:generic_b,function:"echoes:monsters/spawn_attack_damage"}
-execute as @s[scores={generic_b=1..}] run function parse:score_unended \
+execute as @s[scores={generic_b=1..}] run function parse:simple \
     {score:generic_b,function:"echoes:monsters/spawn_scale"}

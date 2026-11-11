@@ -1,2 +1,2 @@
-# $execute as @a[scores={ssid=$(value)}] run function parse:score_unended_with_macros {score:execute.targeted_timer,function:"$(function)",macros:"ssid:$(ssid),run:'$(run)'"}
+# $execute as @a[scores={ssid=$(value)}] run function parse:macros/complex_unended {score:execute.targeted_timer,function:"$(function)",macros:"ssid:$(ssid),run:'$(run)'"}
 $execute as @a[scores={ssid=$(value)}] run $(run)

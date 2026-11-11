@@ -7,4 +7,4 @@ execute if score @s generic_a matches 1 run item modify entity @s weapon.mainhan
 execute if score @s generic_a matches 1 run return fail
 
 scoreboard players remove @s generic_a 1
-function parse:score_unended {function:"homesteader:campfires/scouring_stones/modify_weapon",score:generic_a}
+function parse:simple {function:"homesteader:campfires/scouring_stones/modify_weapon",score:generic_a}

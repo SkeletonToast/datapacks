@@ -1,0 +1,1 @@
+$function parse:decimal {score:"$(score)",scale:1,function:"$(function)"}

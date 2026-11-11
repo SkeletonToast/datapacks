@@ -6,6 +6,6 @@ scoreboard players set @s circle.angle 3600
 $function math:divide/int {score:circle.angle,div:$(nodes)}
 $scoreboard players set @s circle.nodes $(nodes)
 
-$function parse:decimal_with_macros {score:circle.angle,function:"circle:internal/draw",scale:0.1,macros:"radius:$(radius),nodes:$(nodes),run_at_node:'$(run_at_node)'"}
+$function parse:macros/decimal {score:circle.angle,function:"circle:internal/draw",scale:0.1,macros:"radius:$(radius),nodes:$(nodes),run_at_node:'$(run_at_node)'"}
 
 kill @s[type=!player]

@@ -16,7 +16,7 @@ scoreboard players operation @s[scores={generic_d=2..}] safety_value *= @s gener
 scoreboard players operation @s[scores={generic_e=2..}] safety_value += @s generic_e
 scoreboard players operation @s[scores={RestOrRespawn=2..}] safety_value /= @s RestOrRespawn
 
-function parse:score_unended {score:safety_value,function:"ss_lib:keepmesafe"}
+function parse:simple {score:safety_value,function:"ss_lib:keepmesafe"}
 
 scoreboard objectives remove safety_value
 scoreboard objectives remove safety_value_1

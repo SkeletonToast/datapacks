@@ -10,4 +10,4 @@ scoreboard players set @s talisman.active_talismans.8 0
 scoreboard players set @s talisman.active_talismans.9 0
 scoreboard players set @s talisman.active_talismans 0
 
-# execute as @r run function parse:score_unended {score:talisman.total_talismans,function:"talisman:macro_directory/clear_equipped"}
+# execute as @r run function parse:simple {score:talisman.total_talismans,function:"talisman:macro_directory/clear_equipped"}

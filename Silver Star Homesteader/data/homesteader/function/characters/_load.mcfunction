@@ -9,4 +9,4 @@ scoreboard objectives add character.gender dummy
     # 3 - other
 
 execute as @a run scoreboard players operation @s generic_a = $homestead.gamerule.character_limit value
-execute as @a run function parse:score_unended {function:"homesteader:characters/create_character_scores",score:generic_a}
+execute as @a run function parse:simple {function:"homesteader:characters/create_character_scores",score:generic_a}

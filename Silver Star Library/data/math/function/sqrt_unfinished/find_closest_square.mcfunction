@@ -1,6 +1,6 @@
-# function parse:score_unended {score:generic_b",function:"ss_lib:output_test"}
-# function parse:score_unended {score:generic_d",function:"ss_lib:output_test"}
-# function parse:score_unended {score:generic_c",function:"ss_lib:output_test"}
+# function parse:simple {score:generic_b",function:"ss_lib:output_test"}
+# function parse:simple {score:generic_d",function:"ss_lib:output_test"}
+# function parse:simple {score:generic_c",function:"ss_lib:output_test"}
 
 scoreboard players operation @s generic_a = @s generic_b
 scoreboard players operation @s generic_a *= @s generic_b

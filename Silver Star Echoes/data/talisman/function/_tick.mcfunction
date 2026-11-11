@@ -9,4 +9,4 @@ execute as @r run function run:recur_macro {function:"talisman:talismans/_main",
 
 # execute as SkeletonToast run say yeah
 
-# execute as @r run function parse:score_unended {score:talisman.total_talismans,function:"talisman:macro_directory/talismans/_main"}
+# execute as @r run function parse:simple {score:talisman.total_talismans,function:"talisman:macro_directory/talismans/_main"}

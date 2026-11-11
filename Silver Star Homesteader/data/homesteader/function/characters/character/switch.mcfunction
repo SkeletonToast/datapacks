@@ -1,2 +1,2 @@
 # run store_character from here, parsing current character into it so you can access storage
-$execute as @s[scores={switch_character=1..}] run function parse:score_unended_with_macros {function:"homesteader:characters/character/store",score:character.current,macros:"ssid:$(ssid)"}
+$execute as @s[scores={switch_character=1..}] run function parse:macros/complex_unended {function:"homesteader:characters/character/store",score:character.current,macros:"ssid:$(ssid)"}
