@@ -12,7 +12,7 @@ $execute as @e[tag=$(source).$(status).active,scores={$(source).$(status).durati
 # expiration
 $execute as @e[tag=$(source).$(status).active,scores={$(source).$(status).duration=1..}] unless score @s $(source).$(status).stored_amplifier = @s $(source).$(status).amplifier run function $(expire_function)
 $execute as @e[tag=$(source).$(status).active,scores={$(source).$(status).duration=0}] run function $(expire_function)
-$execute as @e[tag=$(source).$(status).active,scores={$(source).$(status).duration=0}] run function parse:macros/complex_unended {function:"elixir:internal/expiration",score:ssid,macros:"source:$(source),status:$(status)"}
+$execute as @e[tag=$(source).$(status).active,scores={$(source).$(status).duration=0}] run function parse:macros/simple {function:"elixir:internal/expiration",score:ssid,macros:"source:$(source),status:$(status)"}
 $execute as @e[tag=$(source).$(status).active,scores={$(source).$(status).duration=1..}] run scoreboard players operation @s $(source).$(status).stored_amplifier = @s $(source).$(status).amplifier
 
 $scoreboard players remove @e[tag=$(source).$(status).active,scores={$(source).$(status).duration=1..}] $(source).$(status).duration 1

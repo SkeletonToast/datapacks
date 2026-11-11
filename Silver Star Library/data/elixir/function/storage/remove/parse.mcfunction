@@ -1,1 +1,1 @@
-$function parse:macros/complex_unended {function:"elixir:storage/remove/remove",score:elixir.storage.increment_2,macros:"source:$(source),status:$(status),ssid:$(ssid),value0:$(value)"}
+$function parse:macros/simple {function:"elixir:storage/remove/remove",score:elixir.storage.increment_2,macros:"source:$(source),status:$(status),ssid:$(ssid),value0:$(value)"}

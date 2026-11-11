@@ -1,3 +1,8 @@
+## Supplemental / Standalone Packs
+Echo Alchemy
+    - bunch of new potion effects / ways to obtain them?
+    - this could be the thing that removes milk clearing effects
+
 ## Talisman
 - Maybe rework talisman so that it also takes inputs for a source, and make it more compatible with any other datapack?
 - this could let you add some basic talismans for homesteader maybe
@@ -17,6 +22,12 @@
     - "overgrowth" - very planty and worn-down
     - "meadow" - flowery but cutesy instead
     - "wayfarer" - depends on player's biome location!!! could be super fun!
+    - "sunfall" and "moonfall"?
+- add "advents", regular intervals where you can expect something to happen
+    - natural events will probably happen at these intervals
+
+## Armory
+- maybe create some mathematical way to decrease effective armor? it would calculate how effective armor should actually be and just give you a flat reduction based on it
 
 ## Echoes
 Priority
@@ -29,6 +40,8 @@ Priority
 
 Changes
 - look for opportunities to move things to post functions
+    - as a general rule: things should be in post function if they do not affect other parts of the datapack. if any sort of attribute or anything is applied, and it doesn't feed into something else, put the whole calculation into post function
+    - think of proficiency
 - figure out what to do to replace elytra
 - figure out a system for oath relations / rallying
 - rename items
@@ -58,11 +71,12 @@ Changes
     - if you have to get rid of the terralith biomes, maybe just have an auxiliary datapack that has a bunch of updated function definitions including other worldgen biomes. you can set them to replace:true so that they override the default echoes tags
 - add some way to store xp, maybe in knowledge books? even though you can store xp between characters, you do still lose that extra xp when you die, so having a way to intentionally store xp might be good
     - there would have to be some amount of cost involved. maybe you could just craft knowledge books with lapis or something, and that would let you store however much
+    - lossless xp storage would just trivialize the whole dilemma
 - add custom functional blocks
     - heater for hot springs
+        - water that's detected to be a hot spring heals you better or something, think of botw
         - could just be a campfire tbh
             - though probably don't do this because that would make healing too easy when exploring
-        - water that's detected to be a hot spring heals you better or something, think of botw
     - cultivator?
     - fermenter?
     - crucible?
@@ -132,7 +146,8 @@ funsies
 - add decimal multiplication function
     - scale must be the same for all inputs
     - inputs: base, factor, and "e" (10e(e)), so 0 means it's a scale of 1, 1 means a scale of 10, -1 means a scale of 0.1
-    - formula would be: base * factor * 10e$(e)
+        - this is the scale at which the scores are represented. if the score value is 15 and it represents 1.5, the scale is 10, so e is 1
+    - formula would be: base * factor / 10e$(e)
 - add general scores that store ssids, that allow you to store entity relationships beyond what is stored in vanilla (like player targets) (maybe call these urids? come up with some name for it)
     - target
         - when the player deals damage, execute as all players on attacker. if attack has ssid equal to damage dealer ssid, then damage dealer gets that person's ssid as their target ssid
@@ -220,11 +235,26 @@ NOTE ABOUT THE CIRCLE PROBLEM!!!! it appears to be specifically related to runni
 
 ### Score Parse Module
 **Please see the Major Changes section if you haven't already.**
-Relatedly to last patch, another massive change has been made to SPM: The introduction of the `parse:macros/decimal` function. This function allows you to effectively pass macros through the `parse:decimal` function. As well as covering most use cases for `parse:macros/simple`, `parse:complex`, and `parse:macros/complex`, this also means that `parse:macros/simple` is DRASTICALLY more performance-intensive. `parse:macros/decimal` functions the same way as `parse:decimal`, it just now takes the `$(macros)` input parameter, which is the same as it's always been.
 
-This also means means that basically the only use case I had left for the original SPM code is gone. Which is good! This new code is significantly more flexible and performance-intensive. It is a bit sad to see that code, which was really the first notable datapack project I ever worked on, become mostly obsolete, though.
+Decimal with Macros
+- Relatedly to last patch, another massive change has been made to SPM: The introduction of the `parse:macros/decimal` function. This function allows you to effectively pass macros through the `parse:decimal` function.
+- As well as covering most use cases for `parse:macros/simple`, `parse:complex`, and `parse:macros/complex`, this also means that `parse:macros/simple` is DRASTICALLY more performance-intensive.
+- `parse:macros/decimal` functions the same way as `parse:decimal`, it just now takes the `$(macros)` input parameter, which is the same as it's always been.
+- This also means means that basically the only use case I had left for the original SPM code is gone. Which is good! This new code is significantly more flexible and performance-intensive. It is a bit sad to see that code, which was really the first notable datapack project I ever worked on, become mostly obsolete, though.
+- Of course, the other functions will still be maintained. Even if I personally don't currently use them, they still definitely have use cases that aren't covered just by `parse:decimal` and `parse:macros/decimal`.
 
-Of course, the other functions will still be maintained. Even if I personally don't currently use them, they still definitely have use cases that aren't covered just by `parse:decimal` and `parse:macros/decimal`.
+Phantom Player Parsing
+- Equivalent functions now exist for parsing scores from "phantom players", as in, fake player usernames that don't refer to real players, that are just used to store scores. A good example for this is the `$moon_phase` phantom player. No player is named `$moon_phase` (since you can't start a valid Minecraft username with a dollar sign), so this "phantom player" just stores the value of the current moon phase.
+- These functions are stored in a separate `parse:phantom/` directory. All new functions are below:
+    - `parse:phantom/simple`
+    - `parse:phantom/macros/simple`
+    - `parse:phantom/complex`
+    - `parse:phantom/macros/complex`
+    - `parse:phantom/decimal`
+    - `parse:phantom/macros/decimal`
+    - `parse:phantom/prepend`
+    - `parse:phantom/append`
+- All of these functions take the same input parameters as their non-phantom counterparts, as well as `$(target)`. This is the "name" of the phantom player you want to draw from, for example, "`$moon_phase`".
 
 ### Execute Module
 SSL now has the Execute module, which is intended to expand on the vanilla capabilities of the /execute command, allowing for more complex command execution. It has four sub-modules:
@@ -236,7 +266,25 @@ SSL now has the Execute module, which is intended to expand on the vanilla capab
 All functions take `$(run)` as an input parameter (along with others, dependent on the function). This should be the FULL command that is run after being put through the execute module.
 
 **Subfunctions**\
-`execute:anchored/body` executes the specified command anchored at a position halfway between the executor's eyes, and feet.\
-`execute:from/body` executes the specified command, rotated so that it matches the rotation of the executing player's body. This is different from just executing a function based on where the player is facing, because it is dependent upon which way the player's body is facing, not their head. This function only works on players.\
-`execute:on/target` executes the specified command AS the player most recently damaged by the player executing the function. `execute:on/targets` executes the specified command as ALL eligible players that have been damaged by the executor. `execute:on/nonplayer/target` and `execute:on/nonplayer/targets` do the same, but are able to target non-player entities.\
-All of the "execute on target" functions ONLY target entities that the executor has damaged in the last five seconds. This five-second limit is meant to help achieve parity with vanilla, as executing a command `on attacker` will only target entities that have attacked the executor in the last five seconds.
+Anchored
+- `execute:anchored/body` executes the specified command anchored at a position halfway between the executor's eyes, and feet.
+
+From
+- `execute:from/body` executes the specified command, rotated so that it matches the rotation of the executing player's body. This is different from just executing a function based on where the player is facing, because it is dependent upon which way the player's body is facing, not their head. This function only works on players.
+
+On
+- `execute:on/target` executes the specified command AS the player most recently damaged by the player executing the function.
+- `execute:on/targets` executes the specified command as ALL eligible players that have been damaged by the executor.
+- `execute:on/nonplayer/target` and `execute:on/nonplayer/targets` do the same, but ONLY target non-player entities.
+    - The reason it's split up between player and nonplayer is that it's more performance-intensive to calculate the target if it's not a player.
+
+All of the "on" functions ONLY target entities that the executor has damaged in the last five seconds. This five-second limit is meant to help achieve parity with vanilla, as executing a command `on attacker` will only target entities that have attacked the executor in the last five seconds.
+
+Positioned
+- `execute:positioned/over/floor` executes the function at the y-value just above the closest solid block below the executing position. In other words, it finds the "floor" of wherever it's being executed from and executes on top of it.
+- `execute:positioned/under/ceiling` executes the function, you guessed it, just below the "ceiling". It checks for the closest solid block above the executing position, and executes right under it.
+
+### Gamerules
+- The value of custom gamerules can now be changed by those with SSL permissions levels of 5 or higher.
+    - This means that the ssl.permissions.level score now does have actually potentially dangerous effects if it's unregulated. By default, players never receive a permissions level score of any higher than 1, so if none of your datapacks change it, you should still be fine. Just MAKE SURE that it remains unchanged.
+- Fixed an issue where range-based gamerules were not being initialized with the correct default value. They now initialize the phantom player `$<source>.gamerule.<gamerule>`'s `value` score with the value specified by `$(default)` in `gamerule:custom/load`.

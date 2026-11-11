@@ -1,1 +1,1 @@
-$function parse:macros/complex_unended {score:execute.targeting_timer,function:"execute:internal/on/nonplayer/target",macros:"ssid:$(value),run:'$(run)'"}
+$function parse:macros/simple {score:execute.targeting_timer,function:"execute:internal/on/nonplayer/target",macros:"ssid:$(value),run:'$(run)'"}

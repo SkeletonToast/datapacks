@@ -1,7 +1,7 @@
 # dependency failures
 execute unless data storage silver_star_library installed run return fail
 execute unless data storage silver_star_armory installed run return fail
-execute unless data storage silver_star_homesteader installed run return fail
+execute unless data storage silver_star_homestead installed run return fail
 
 scoreboard players set @a luck_chance -1
 

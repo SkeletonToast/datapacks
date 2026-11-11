@@ -1,13 +1,16 @@
-# The Homestead
+# Homesteader
 
 Individual Modules
-- The Homestead
-    - Pyres
+- Homesteader
+    - Pyres (Firekeepers)
         - Scouring Stones
         - Starlight Lanterns?
         - Temperature?
         - Settlements / Nature(?)
-    - Armory
+        - Incenses
+    - Armory (Echo Arsenal)
+        - New weapons
+        - New enchantments
     - Characters & Companions
         - Cosmetics
         - Familiars
@@ -18,6 +21,8 @@ Individual Modules
             - Soot Sprite
             - Great Ember Sprite
             - Heart Sprite
+    - Alchemy (Echo Alchemy)
+        - Potion effects
     - New recipes
 
 Character switching

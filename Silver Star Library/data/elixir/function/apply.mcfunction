@@ -11,7 +11,7 @@ $execute if score @s generic_t matches 1 unless score @s generic_d < @s $(source
 
 # polylevel status
 execute unless score @s generic_t matches 0 run return fail
-$execute unless data storage elixir:$(source) $(status).max_amplifier run function parse:macros/complex_unended {function:"elixir:storage/store",score:ssid,macros:"source:$(source),status:$(status),duration:$(duration),amplifier:$(amplifier)"}
+$execute unless data storage elixir:$(source) $(status).max_amplifier run function parse:macros/simple {function:"elixir:storage/store",score:ssid,macros:"source:$(source),status:$(status),duration:$(duration),amplifier:$(amplifier)"}
 $execute unless data storage elixir:$(source) $(status).max_amplifier run return fail
 
 # BELOW: Code that should only be executed if you decide to have some sort of maximum amplifier system
@@ -19,4 +19,4 @@ $execute unless data storage elixir:$(source) $(status).max_amplifier run return
 $execute store result score @s generic_b run data get storage elixir:$(source) $(status).max_amplifier
 $scoreboard players set @s generic_a $(amplifier)
 execute if score @s generic_a > @s generic_b run scoreboard players operation @s generic_a = @s generic_b
-$function parse:macros/complex_unended {score:generic_a,function:"elixir:storage",macros:"source:'$(source)',status:'$(status)',duration:$(duration)"}
+$function parse:macros/simple {score:generic_a,function:"elixir:storage",macros:"source:'$(source)',status:'$(status)',duration:$(duration)"}

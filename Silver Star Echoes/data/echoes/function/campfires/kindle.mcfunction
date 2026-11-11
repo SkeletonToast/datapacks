@@ -39,7 +39,7 @@ execute as @s[scores={ItemSelected=1},tag=!campfireUpdatedItem] unless entity @s
 execute as @s[scores={ItemSelected=1},tag=!campfireUpdatedItem] unless entity @s[predicate=ss_lib:is/sneaking] if items entity @s weapon.offhand *[custom_data~{weapon:{smithing:{type:"siege",soul_campfire:true}}}] unless items entity @s weapon.mainhand *[custom_data~{weapon:{special:true}}] if block ~ ~ ~ soul_campfire run function echoes:campfires/smith {"type":"siege"}
 
 # scouring stones
-execute if items entity @s weapon.offhand *[minecraft:custom_data~{kindling:{type:scouring_stone}}] run function homesteader:campfires/scouring_stones/_main
+execute if items entity @s weapon.offhand *[minecraft:custom_data~{kindling:{type:scouring_stone}}] run function homestead:campfires/scouring_stones/_main
 
 # rift creation (disabled)
     # execute as @s[scores={ItemSelected=1},tag=!campfireUpdatedItem] if items entity @s weapon.mainhand nether_wart run function echoes:nether/create_rift

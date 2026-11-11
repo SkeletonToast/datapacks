@@ -1,0 +1,2 @@
+# run store_character from here, parsing current character into it so you can access storage
+$execute as @s[scores={switch_character=1..}] run function parse:macros/simple {function:"homestead:characters/character/store",score:character.current,macros:"ssid:$(ssid)"}

@@ -1,0 +1,1 @@
+execute unless score $homestead.gamerule.do_armor_set_bonuses true matches 0 run function homestead:gear/armor/set_bonus

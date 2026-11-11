@@ -1,0 +1,1 @@
+data modify storage silver_star_homestead installed set value true

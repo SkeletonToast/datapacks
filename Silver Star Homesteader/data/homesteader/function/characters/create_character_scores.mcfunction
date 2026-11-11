@@ -1,1 +1,0 @@
-$function run:recur_macro {function:"homesteader:characters/character_scores",r:$(value)}

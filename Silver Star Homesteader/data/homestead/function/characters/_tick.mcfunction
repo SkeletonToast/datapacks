@@ -1,0 +1,1 @@
+execute as @a run function parse:simple {function:"homestead:characters/character/switch",score:ssid}

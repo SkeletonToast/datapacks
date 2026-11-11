@@ -16,11 +16,11 @@ execute if score @s elixir.storage.stored_amplifier < @s elixir.storage.current_
             # remember that if this application is going to overwrite application 1, it will just do so in the storage function
 
 # rewriting current duration
-$function parse:macros/complex_unended {function:"elixir:storage/write_duration",score:$(source).$(status).duration,macros:"ssid:$(value),source:$(source),status:$(status),stack:1"}
+$function parse:macros/simple {function:"elixir:storage/write_duration",score:$(source).$(status).duration,macros:"ssid:$(value),source:$(source),status:$(status),stack:1"}
 
 # re-storing duration if this application is viable
 $execute as @s[scores={$(source).$(status).duration=1..,elixir.storage.stored_duration=1..}] if score @s elixir.storage.stored_amplifier < @s elixir.storage.current_amplifier run \
-    function parse:macros/complex_unended {function:"elixir:storage/write_duration",score:elixir.storage.stored_duration,macros:"ssid:$(value),source:$(source),status:$(status),stack:stored"}
+    function parse:macros/simple {function:"elixir:storage/write_duration",score:elixir.storage.stored_duration,macros:"ssid:$(value),source:$(source),status:$(status),stack:stored"}
 
 # applying
 $function elixir:storage/increment {ssid:$(value),source:$(source),status:$(status)}

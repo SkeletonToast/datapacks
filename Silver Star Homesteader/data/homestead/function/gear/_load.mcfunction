@@ -1,0 +1,1 @@
+scoreboard objectives add homestead.armor_set dummy

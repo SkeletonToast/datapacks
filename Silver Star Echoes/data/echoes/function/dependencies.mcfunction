@@ -1,15 +1,15 @@
 data remove storage silver_star_library installed
 data remove storage silver_star_armory installed
-data remove storage silver_star_homesteader installed
+data remove storage silver_star_homestead installed
 
 function ssa.dev:install
-function homesteader:install
+function homestead:install
 function ss_lib:install
 
 execute unless data storage silver_star_library installed run tellraw @a [{"text":"Silver Star Echoes requires "},{"text":"Silver Star Library","underlined":true,"color":blue,"click_event":{"action":"open_url","url":"https://modrinth.com/datapack/silver-star-library/versions"},"hover_event":{"action":"show_text","value":"https://modrinth.com/datapack/silver-star-library/versions"}},{"text":" to be installed in order to function properly."}]
 execute unless data storage silver_star_armory installed run tellraw @a [{"text":"Silver Star Echoes requires "},{"text":"Silver Star Armory","underlined":true,"color":blue,"click_event":{"action":"open_url","url":"https://modrinth.com/datapack/silver-star-armory/versions"},"hover_event":{"action":"show_text","value":"https://modrinth.com/datapack/silver-star-armory/versions"}},{"text":" to be installed in order to function properly."}]
-execute unless data storage silver_star_homesteader installed run tellraw @a [{"text":"Silver Star Echoes requires "},{"text":"Homesteader","underlined":true,"color":blue,"click_event":{"action":"open_url","url":"https://modrinth.com/datapack/homesteader/versions"},"hover_event":{"action":"show_text","value":"https://modrinth.com/datapack/homesteader/versions"}},{"text":" to be installed in order to function properly."}]
+execute unless data storage silver_star_homestead installed run tellraw @a [{"text":"Silver Star Echoes requires "},{"text":"Homesteader","underlined":true,"color":blue,"click_event":{"action":"open_url","url":"https://modrinth.com/datapack/homestead/versions"},"hover_event":{"action":"show_text","value":"https://modrinth.com/datapack/homestead/versions"}},{"text":" to be installed in order to function properly."}]
 
-execute unless data storage silver_star_library installed run schedule function sse.dev:dependencies 60s
-execute unless data storage silver_star_armory installed run schedule function sse.dev:dependencies 60s
-execute unless data storage silver_star_homesteader installed run schedule function sse.dev:dependencies 60s
+execute unless data storage silver_star_library installed run schedule function echoes:dependencies 60s
+execute unless data storage silver_star_armory installed run schedule function echoes:dependencies 60s
+execute unless data storage silver_star_homestead installed run schedule function echoes:dependencies 60s
