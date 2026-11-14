@@ -1,56 +1,152 @@
-vestiges
-cerulean court
-cerulean sentinels
-retainers
+Greater Eochrin
+    Court-Aligned (all friendly)
+        Court
+            vestiges
+            cerulean court
+            retainers
 
-haligsundri
-ritesmaidens
+        friendly with:
+            rasaya
+            eigengrau
 
-ichor imperya
-inquisitors
-praetors
-draese anferina
+        Nira
+            cerulean sentinels
 
-order of red gold
-black gold angel hunters
+        friendly with:
+            black gold angel hunters
 
-lonwood
-arborknights
-kestrels
+        Haligsect
+            haligsundri
+            ritesmaidens
 
-arcanists
+        friendly with:
+            rasaya
+            eigengrau
 
-queenshriven
-ardents
+        Ichor Imperya
+            ichor imperya
+            inquisitors
+            praetors
+            draese anferina
+            order of red gold
 
-students
-    entropy
-    vitalism
-    artistry
-    stellography
-    script
+        friendly with:
+            black gold angel hunters
+            rasaya
+            eigengrau
+            firekeepers
 
-ashengard
-ashen revenants
+        Lonwood
+            lonwood
+            arborknights
+            kestrels
 
-entertainers
+        friendly with:
+            court
+            haligsect
+            imperya
+            arcanists
+            rasaya
+            eigengrau
 
-orderkeepers
+        Arcanists
+            arcanists
 
-firekeepers
-kindled knights
+        friendly with:
+            court
+            haligsect
+            imperya
+            lonwood
+            rasaya
+            eigengrau
 
-house of elkwyn
+    Rasaya
+        queenshriven
+        ardents
 
-draesir anordonna
-draesir anphaera
+    friendly with:
+        court
+        haligsect
+        imperya
+        angel hunters
+        lonwood
+        arcanists
+        order
+        firekeepers
+        eigengrau
 
-proscripts
+    Eigengrau
+        students
+            entropy
+            vitalism
+            artistry
+            stellography
+            script
+        ashengard
+        ashen revenants
 
-havoc allegiants
+    friendly with:
+        court
+        haligsect
+        imperya
+        angel hunters
+        lonwood
+        arcanists
+        rasaya
+        firekeepers
+        order
 
-nightbrands
+    Order
+        orderkeepers
 
-silverseekers
-nightjars
-herons
+    friendly with:
+        rasaya
+        eigengrau
+
+Court Dissidents
+    Runahl
+        proscripts
+
+    friendly with:
+        black gold angel hunters
+        firekeepers
+    
+    Havoc
+        havoc allegiants
+
+Independent
+    Firekeepers
+        firekeepers
+        kindled knights
+        house of elkwyn
+
+    friendly with:
+        imperya
+        black gold angel hunters
+        rasaya
+        eigengrau
+        runahl
+    
+    Black Gold Angel Hunters
+
+    friendly with:
+        imperya
+        firekeepers
+        runahl
+
+    Draesir
+        draesir anordonna
+        draesir anphaera
+
+    Noctis Caliphate
+        nightbrands
+
+    friendly with: none
+
+    Solo
+        entertainers
+        silverseekers
+        nightjars
+        herons
+
+    friendly with: all

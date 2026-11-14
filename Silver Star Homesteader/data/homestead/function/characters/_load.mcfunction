@@ -1,8 +1,12 @@
 scoreboard objectives add switch_character trigger
 scoreboard objectives add character.current dummy
 scoreboard objectives add character.age dummy
-scoreboard objectives add character.birthday dummy
 scoreboard objectives add character.height dummy
+
+scoreboard objectives add character.birthday.day dummy
+scoreboard objectives add character.birthday.month dummy
+    # 183 - 338 days (6/2)
+
 scoreboard objectives add character.gender dummy
     # 1 - female
     # 2 - male

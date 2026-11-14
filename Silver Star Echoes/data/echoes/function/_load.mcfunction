@@ -21,10 +21,17 @@ gamerule natural_health_regeneration false
 gamerule players_sleeping_percentage 101
 gamerule keep_inventory true
 
-schedule function echoes:scheduled/10t 10t
-schedule function echoes:scheduled/20t 20t
-schedule function echoes:scheduled/40t 40t
-schedule function echoes:scheduled/10s 10s
+# calendar stuff
+execute unless score $homestead.calendar.total_days value matches 465028.. run scoreboard players set $homestead.calendar.total_days value 465028
+# 3/6/1205: 472084
+function gamerule:set_range {source:homestead,gamerule:month_length,value:56}
+function gamerule:set_range {source:homestead,gamerule:year_length,value:7}
+
+function echoes:scheduled/10t
+function echoes:scheduled/20t
+function echoes:scheduled/40t
+function echoes:scheduled/10s
+function echoes:scheduled/heartbeat
 
 scoreboard objectives add luck_chance dummy
 

@@ -1,0 +1,3 @@
+$execute store result score $sse.oaths.verify.1 value run data get storage echoes:oaths.$(value0) allies[$(value)]
+$execute store result score $sse.oaths.verify.2 value run data get storage echoes:oaths.$(value) allies[$(value0)]
+$execute unless score $sse.oaths.verify.1 value = $sse.oaths.verify.2 value store result storage echoes:oaths.$(value) allies[$(value0)] run scoreboard players get $sse.oaths.verify.1 value

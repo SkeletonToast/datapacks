@@ -12,6 +12,10 @@ function ss_lib:fetch/armor {s:"@a"}
 
 # remove old attributes here
 execute as @a[scores={homestead.armor_set=2}] run attribute @s movement_speed modifier remove homestead.armor.gold.movement_speed
+execute as @a[scores={homestead.armor_set=3}] run attribute @s jump_strength modifier remove homestead.armor.chain.jump_strength
+execute as @a[scores={homestead.armor_set=3}] run attribute @s fall_damage_multiplier modifier remove homestead.armor.chain.fall_damage_multiplier
+execute as @a[scores={homestead.armor_set=3}] run attribute @s movement_efficiency modifier remove homestead.armor.chain.movement_efficiency
+execute as @a[scores={homestead.armor_set=3}] run attribute @s water_movement_efficiency modifier remove homestead.armor.chain.water_movement_efficiency
 
 execute as @a[scores={ArmorType=1..}] if score @s ArmorType = @s HelmetType \
     if score @s ArmorType = @s ChestplateType \

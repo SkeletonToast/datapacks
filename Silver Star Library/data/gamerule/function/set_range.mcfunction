@@ -1,5 +1,5 @@
 # manually enable/disable
-$execute store result storage $(source):gamerule $(gamerule) int 1 run scoreboard players get @s $(source).gamerule.$(gamerule)
+$data modify storage $(source):gamerule $(gamerule) set value $(value)
 
 # setting phantom player
-$execute store result score $$(source).gamerule.$(gamerule) value run data get storage $(source):gamerule $(gamerule)
+$scoreboard players set $$(source).gamerule.$(gamerule) value $(value)

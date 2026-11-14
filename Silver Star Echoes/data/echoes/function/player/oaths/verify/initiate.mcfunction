@@ -1,0 +1,1 @@
+function run:recur_macro {function:"echoes:player/oaths/verify/target",r:20}

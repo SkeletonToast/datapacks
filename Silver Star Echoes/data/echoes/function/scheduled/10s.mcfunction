@@ -1,4 +1,4 @@
-title @a times 1t 1s 10t
+# title @a times 1t 1s 10t
 
 execute as @a run function echoes:stats/attribute_scores_reset
 

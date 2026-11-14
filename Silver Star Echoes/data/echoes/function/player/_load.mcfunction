@@ -1,3 +1,4 @@
+function echoes:player/economy/_load
 function echoes:player/oaths/_load
 function echoes:player/rally/_load
 

@@ -20,5 +20,9 @@ scoreboard objectives add homestead.raids_won custom:raid_win
     scoreboard objectives add homestead.distance_by_nautilus custom:nautilus_one_cm
     scoreboard objectives add homestead.distance_mounted dummy
 
-scoreboard players set $homestead.calendar.month_length value 56
-scoreboard players set $homestead.calendar.year_length value 7
+function gamerule:custom/load {source:homestead,gamerule:month_length,default:56}
+function gamerule:custom/load {source:homestead,gamerule:year_length,default:7}
+
+    # one year is 392 days by default
+# scoreboard players set $homestead.gamerule.month_length value 56
+# scoreboard players set $homestead.gamerule.year_length value 7

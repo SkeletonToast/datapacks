@@ -1,0 +1,1 @@
+$function parse:phantom/macros/simple {target:"$sse.oath.verify",score:value,function:"echoes:player/oaths/verify/verify",macros:"value0:$(value)"}

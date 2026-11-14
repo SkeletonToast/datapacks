@@ -25,6 +25,8 @@ Echo Alchemy
     - "sunfall" and "moonfall"?
 - add "advents", regular intervals where you can expect something to happen
     - natural events will probably happen at these intervals
+- add some kind of "vendetta" system? you can designate specific other players as friends or foes, and that value would be taken over your oath relationship to them when testing if somebody is an ally
+- let players set their birthdays
 
 ## Armory
 - maybe create some mathematical way to decrease effective armor? it would calculate how effective armor should actually be and just give you a flat reduction based on it
