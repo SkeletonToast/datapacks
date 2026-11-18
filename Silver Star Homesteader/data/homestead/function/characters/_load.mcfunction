@@ -12,5 +12,5 @@ scoreboard objectives add character.gender dummy
     # 2 - male
     # 3 - other
 
-execute as @a run scoreboard players operation @s generic_a = $homestead.gamerule.character_limit value
-execute as @a run function parse:simple {function:"homestead:characters/create_character_scores",score:generic_a}
+# function parse:phantom/simple {target:"$homestead.gamerule.character_limit",score:value,function:"homestead:characters/create_character_scores"}
+    # i don't even need to do this. just store the relevant info in ssid storage when you switch. way easier and then you don't have to create a billion scores

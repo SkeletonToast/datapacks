@@ -1,0 +1,1 @@
+attribute @s max_health modifier remove elixir.deep_wounds.max_health

@@ -1,0 +1,1 @@
+$attribute @s max_health modifier add elixir.deep_wounds.max_health $(result) add_multiplied_total

@@ -1,3 +1,5 @@
+This file may be outdated. Please refer to the Modrinth page for up-to-date information.
+
 # Elixir Framework
 
 Elixir is a module that sets up the framework necessary for fully custom potion effects, including stacking applications, which is difficult to do with just scores. The Elixir Framework lets you apply an effect at any time, and intelligently orders the active applications so that they match vanilla potion effects, e.g., the application with the highest amplifier is the one that's prioritized.
@@ -11,6 +13,8 @@ Elixir is written in a way so that it can be easily accessed and used by other d
 For example, one of the preset effects, or "statuses" for clarity, is called Lightweight. The active function applies attributes that reduce gravity and knockback resistance, and the expire function removes these attributes.
 
 YOU WILL ALSO NEED TO RUN TWO PREMADE FUNCTIONS: `elixir:custom/load_status` and `elixir:custom/tick_status`. As the names indicate, `load_status` only needs to be run once, and it creates all the scores necessary to run your custom effect, and `tick_status` MUST be run on every tick (or the status timer will be inaccurate).
+
+There are different versions of `tick_status`, depending on your needs: `elixir:custom/tick_status`, `elixir:custom/tick_status_nonplayer`, `elixir:custom/monolevel/tick_status`, and `elixir:custom/monolevel/tick_status_nonplayer`. The "nonplayer" functions should be run if you plan on your effect being able to affect non-player entities. The "monolevel" functions should be run for effects that only have one level (like Night Vision in vanilla).
 
 `elixir:custom/load_status` takes two input parameters: `source` and `status`. `source` should be the name of YOUR datapack, or a nickname, anything that will identify where the status is defined. For example, the premade statuses use `elixir` as the input for `source`. `status`, on the other hand, should be the name of the effect itself; for example, `lightweight` or `frostbite` or whatever.
 

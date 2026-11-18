@@ -11,3 +11,4 @@ function elixir:custom/tick_status {status:enlargement,status_function:"elixir:s
 function elixir:custom/tick_status {status:reduction,status_function:"elixir:status/reduction/main",expire_function:"elixir:status/reduction/expire",source:elixir}
 function elixir:custom/monolevel/tick_status {status:occlusion,status_function:"elixir:status/occlusion",expire_function:"elixir:status/null_expire",source:elixir}
 function elixir:custom/monolevel/tick_status {status:immunity,status_function:"elixir:status/immunity",expire_function:"elixir:status/null_expire",source:elixir}
+function elixir:custom/monolevel/tick_status {status:deep_wounds,status_function:"elixir:status/deep_wounds/main",expire_function:"elixir:status/null_expire",source:elixir}

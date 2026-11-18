@@ -1,17 +1,23 @@
 # Homesteader
 
+Modules to release individually
+- alchemy
+- recipes
+- calendar
+- pyres
+
 Individual Modules
 - Homesteader
     - Pyres (Firekeepers)
         - Scouring Stones
-        - Starlight Lanterns?
-        - Temperature?
-        - Settlements / Nature(?)
         - Incenses
     - Armory (Echo Arsenal)
         - New weapons
         - New enchantments
     - Characters & Companions
+        - Temperature?
+        - Settlements / Nature(?)
+        - Starlight Lanterns?
         - Cosmetics
         - Familiars
         - Particle sprites

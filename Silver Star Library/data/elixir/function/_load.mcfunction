@@ -35,3 +35,5 @@ function elixir:custom/load_status_max_amplifier {source:elixir,status:enlargeme
 # monolevel
 function elixir:custom/monolevel/load_status {source:elixir,status:occlusion}
 function elixir:custom/monolevel/load_status {source:elixir,status:immunity}
+function elixir:custom/monolevel/load_status {source:elixir,status:deep_wounds}
+    scoreboard objectives add elixir.deep_wounds.health dummy

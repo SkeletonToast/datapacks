@@ -1,1 +1,0 @@
-# remove attributes, effects, etc.

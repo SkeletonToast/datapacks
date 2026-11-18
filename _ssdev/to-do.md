@@ -5,6 +5,7 @@ Echo Alchemy
 
 ## Talisman
 - Maybe rework talisman so that it also takes inputs for a source, and make it more compatible with any other datapack?
+    - set it to use storage instead of a score
 - this could let you add some basic talismans for homesteader maybe
 
 ## Homesteader
@@ -22,6 +23,9 @@ Echo Alchemy
     - "overgrowth" - very planty and worn-down
     - "meadow" - flowery but cutesy instead
     - "wayfarer" - depends on player's biome location!!! could be super fun!
+        - Day 1 - Barrens
+        - Day 35 - Wilds
+        - Day 14 - Marsh
     - "sunfall" and "moonfall"?
 - add "advents", regular intervals where you can expect something to happen
     - natural events will probably happen at these intervals
@@ -54,6 +58,7 @@ Changes
 - make sure luck chance function actually works
 - finish the creaking changes you were working on once upon a time
 - FINISH NEW ELIXIR EFFECTS
+    - honeyed: slows you if you aren't an Ardent, increases healing if you are
 - RADIATION!!!
 - have some sort of settings menu where you can more easily trigger things without having to know the variable names
     - also add in a way to change your aegis theme thru there
@@ -143,6 +148,16 @@ funsies
                 - no idea if it would actually be any more efficient but it might look slightly cleaner? who knows
 
 ## Library
+- test to see if "null" works as an invalid function, or if it will cause compilation errors
+
+- NEW PARSE FUNCTION!!!
+    - lets you specify the amount of inputs, and will recur and output those one by one into the final function as "value1", "value2", etc.
+    - the input of amount of inputs will recur upon itself and append
+    - or. i mean. if it's unended you could just assign scores to data storage and run the function with that. but that wouldn't let you use macros super easily
+        - until you find a use for this new function, probably just do that
+- have some equivalent function that lets you compute accurate attribute multipliers, instead of adding flat values
+
+- make interval function, that you run every tick, and will run your specified command if GameTime is on a certain interval
 - maybe overhaul to use return more
 - change all instances of return fail to return a success if applicable
 - add decimal multiplication function
@@ -174,15 +189,17 @@ funsies
     - incendiary (monolevel)
     - invigorated
     - rooted / webbed (monolevel)
+        - you could just have a unified "stuck" function and then pass the particle macro to the function with each of the individual status definitions
     - tormented
     - wet is not needed. status covers that still
         - could move it over and just make it monolevel!
         - i would say avoid this, because it's really not a potion effect. it's kind of just a non-potion status. if you moved it over, it means that "clearing" statuses would also dry you off, which might be cool if wet every does anything more than cosmetics, but until then just keep it as is
+        - plus, then it would be more annoying to cleanly apply.
     - ideas for new statuses
         - curserot - some kind of wither-esque effect? honestly maybe just rename wither to curserot at that point
         - blossoming - you spread flowers and mushrooms around you (monolevel)
             - could just be cosmetic, but maybe also heals you? or heals others around you?
-        - immunity - you're cleared of all potion effects (monolevel)
+        - immunity - you're cleared of all potion effects (monolevel) DONE
             - this is possible now! you just have to clear all vanilla effects, and apply the elixir.clear_statuses tag, which will clear everything else
             - have some sort of cool effect when you actually clear anything
         - enlightened - you gain xp at a much higher rate
@@ -194,6 +211,8 @@ funsies
         - bounciness - makes you bouncy
         - slippery - gives you really low friction
         - something that gives you high air drag
+- maybe add functionality to elixir to let you have status "buildup"? souls-style?
+    - you could just run a separate function along with the original custom status function, and that would just automatically apply it / increase the amplifier when the player surpassed a certain amount of buildup
 - Circle calculation module
 - Collisions obv
 - more math functions that just use the built in storage math functions, but for scores

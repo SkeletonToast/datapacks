@@ -1,0 +1,1 @@
+$damage @s $(value) ss_lib:true
